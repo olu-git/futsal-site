@@ -1,36 +1,159 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Futsal League
+
+A polished, modern futsal competition website with league tables, fixtures, results, and automatic standings calculation.
+
+## Tech Stack
+
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion** (subtle animations)
+- **Lucide React** (icons)
+- Local data files (no external database)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20+ (Node 24 recommended)
+
+### Install
+
+```bash
+cd futsal-league
+npm install
+```
+
+### Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/
+    page.tsx              # Home page
+    layout.tsx            # Root layout (nav + footer)
+    globals.css           # Global styles & Tailwind theme
+    monday-night/
+      page.tsx            # Monday Night page
+    wednesday-night/
+      page.tsx            # Wednesday Night page
+  components/
+    Navbar.tsx            # Sticky navigation
+    Footer.tsx            # Footer
+    LeagueTable.tsx       # League standings table
+    MatchCard.tsx         # Match result/fixture card
+    NightCard.tsx         # Competition night link card
+    SectionHeading.tsx    # Reusable section header
+  lib/
+    data.ts              # All teams, fixtures, and helper functions
+    standings.ts         # Standings calculation from results
+    types.ts             # TypeScript types
+    utils.ts             # Formatting utilities
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Edit Data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All data lives in **`src/lib/data.ts`**.
 
-## Deploy on Vercel
+### Edit Teams
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Find the `teams` array at the top. Each team has:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```ts
+{ id: "mon-afg", name: "AFG", night: "monday", division: "A" }
+```
+
+- `id` must be unique and match fixture references
+- `name` is the display name
+- `night` is `"monday"` or `"wednesday"`
+- `division` is `"A"` or `"B"`
+
+### Edit Fixtures & Results
+
+Find the `fixtures` array. Each fixture looks like:
+
+```ts
+{
+  id: "mon-r1-1",
+  night: "monday",
+  division: "A",
+  round: 1,
+  date: "2026-03-23",
+  time: "19:00",
+  court: 1,
+  homeTeam: "mon-wildcats",
+  awayTeam: "mon-afg",
+  homeScore: 9,        // Add when complete
+  awayScore: 7,        // Add when complete
+  status: "completed"  // Change from "scheduled"
+}
+```
+
+**To enter a result:**
+
+1. Find the fixture
+2. Add `homeScore` and `awayScore`
+3. Change `status` from `"scheduled"` to `"completed"`
+4. The standings table will update automatically
+
+**To add a new fixture:**
+
+Add a new entry to the `fixtures` array with status `"scheduled"`.
+
+### Fixture Schedule
+
+- **Monday:** Court 1 (7pm, 7:40pm, 8:20pm) + Court 2 (7:40pm) = 4 games/night
+- **Wednesday:** Court 1 (7pm, 7:40pm, 8:20pm) + Court 2 (7:40pm, 8:20pm) = 5 games/night
+- **Constraint:** Goldlink Up is scheduled at 7pm or 8:20pm on Monday (never at 7:40pm when 2 games overlap)
+
+## How Standings Work
+
+Standings are calculated automatically in `src/lib/standings.ts` from completed fixtures:
+
+- **Win** = 3 points
+- **Draw** = 1 point
+- **Loss** = 0 points
+
+**Sorting order:**
+
+1. Points (descending)
+2. Goal difference (descending)
+3. Goals for (descending)
+4. Team name (alphabetical)
+
+Change a result in `data.ts` and the table updates on next page load.
+
+## Pages
+
+| Page | URL | Description |
+|------|-----|-------------|
+| Home | `/` | Hero, night links, standings preview, results, fixtures, about |
+| Monday Night | `/monday-night` | Full table, teams, results, fixtures, Div B coming soon |
+| Wednesday Night | `/wednesday-night` | Full table, teams, results, fixtures, Div B coming soon |
+
+## Competition Details
+
+- **Monday Night:** 8 teams, Division A, 14-round season
+- **Wednesday Night:** 10 teams, Division A, 18-round season
+- **Division B:** Coming soon for both nights
+
+## Design
+
+- Dark theme: black background with red (#DC2626) and white accents
+- Mobile responsive
+- Subtle animations via Framer Motion
+- Premium sports aesthetic
