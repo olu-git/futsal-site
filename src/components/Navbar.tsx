@@ -21,8 +21,12 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="w-1.5 h-6 bg-red-600 rounded-sm" />
-          <span className="font-[family-name:var(--font-heading)] text-xl uppercase tracking-wider text-white">
-            Futsal<span className="text-red-500">League</span>
+          <span
+            className="text-xl uppercase tracking-wider leading-none text-white"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            Endeavour Hills{" "}
+            <span className="text-red-500" style={{ fontFamily: "var(--font-heading)", fontSize: "inherit" }}>Futsal</span>
           </span>
         </Link>
 

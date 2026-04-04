@@ -41,22 +41,10 @@ export default function WednesdayNightPage() {
             transition={{ duration: 0.6 }}
             className="flex flex-col items-center"
           >
-            {/* Eyebrow badge */}
-            <span className="inline-flex items-center rounded-full border border-red-500/40 bg-red-500/20 px-4 py-1.5 mb-8">
-              <span className="font-[family-name:var(--font-geist-mono)] text-xs uppercase tracking-[0.15em] text-red-500 font-semibold">
-                Every Wednesday Night
-              </span>
-            </span>
-
             {/* Main heading */}
             <h1 className="font-[family-name:var(--font-heading)] text-6xl sm:text-7xl lg:text-8xl uppercase tracking-wider text-white leading-none">
               Wednesday Night
             </h1>
-
-            {/* Tagline */}
-            <p className="mt-6 text-lg sm:text-xl text-white/50 max-w-xl font-[family-name:var(--font-sans)]">
-              10 teams competing in Division A. Court 1 runs 3 games, Court 2 runs 2 games per night.
-            </p>
 
             {/* Stats row */}
             <div className="mt-10 flex flex-wrap justify-center gap-4">

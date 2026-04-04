@@ -11,6 +11,7 @@ import { getCompletedFixtures, getUpcomingFixtures } from "@/lib/data";
 
 export default function HomePage() {
   const mondayStandings = calculateStandings("monday");
+  const wednesdayStandings = calculateStandings("wednesday");
 
   const mondayResults = getCompletedFixtures("monday").slice(0, 3);
   const wednesdayResults = getCompletedFixtures("wednesday").slice(0, 3);
@@ -45,22 +46,14 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="flex flex-col items-center"
           >
-            {/* Eyebrow badge */}
-            <span className="inline-flex items-center rounded-full border border-red-500/40 bg-red-500/20 px-4 py-1.5 mb-8">
-              <span className="font-[family-name:var(--font-geist-mono)] text-xs uppercase tracking-[0.15em] text-red-500">
-                Monday & Wednesday Nights
-              </span>
-            </span>
-
             {/* Main heading */}
             <h1 className="font-[family-name:var(--font-heading)] text-7xl sm:text-8xl lg:text-[96px] uppercase tracking-wider text-white leading-none">
-              Futsal League
+              Endeavour Hills Futsal
             </h1>
 
             {/* Tagline */}
             <p className="mt-6 text-lg sm:text-xl text-white/50 max-w-xl font-[family-name:var(--font-sans)]">
-              Your local futsal competition. League tables, fixtures,
-              results, and standings.
+              The home of competitive futsal.<br/> Mondays & Wednesdays at Endeavour Hills Leisure Centre.
             </p>
 
             {/* CTAs */}
@@ -89,19 +82,50 @@ export default function HomePage() {
       <section className="bg-[#0A0A0A] py-20 sm:py-[120px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            title="Monday Night League"
-            subtitle="Current Division A standings"
+            title="League Tables"
+            subtitle="Current Division A standings for both nights"
           />
-          <div className="mt-10">
-            <LeagueTable standings={mondayStandings} compact />
-          </div>
-          <div className="mt-6 text-center">
-            <Link
-              href="/monday-night"
-              className="inline-flex items-center text-sm text-red-500 hover:text-red-400 transition-colors font-[family-name:var(--font-geist-mono)] uppercase tracking-wider"
-            >
-              View Full Table &rarr;
-            </Link>
+
+          <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-10">
+            <div>
+              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-1 sm:gap-4 mb-5">
+                <div>
+                  <h3 className="font-[family-name:var(--font-heading)] text-2xl uppercase tracking-wider text-white">
+                    Monday Night
+                  </h3>
+                  <p className="mt-1 text-sm text-white/45">
+                    Current Division A standings
+                  </p>
+                </div>
+                <Link
+                  href="/monday-night"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-red-500/40 bg-red-500/10 px-4 py-2 text-sm text-red-500 hover:bg-red-500/20 hover:border-red-500/60 transition-colors font-[family-name:var(--font-geist-mono)] uppercase tracking-wider shrink-0"
+                >
+                  View Full Table &rarr;
+                </Link>
+              </div>
+              <LeagueTable standings={mondayStandings} compact />
+            </div>
+
+            <div>
+              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-1 sm:gap-4 mb-5">
+                <div>
+                  <h3 className="font-[family-name:var(--font-heading)] text-2xl uppercase tracking-wider text-white">
+                    Wednesday Night
+                  </h3>
+                  <p className="mt-1 text-sm text-white/45">
+                    Current Division A standings
+                  </p>
+                </div>
+                <Link
+                  href="/wednesday-night"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-red-500/40 bg-red-500/10 px-4 py-2 text-sm text-red-500 hover:bg-red-500/20 hover:border-red-500/60 transition-colors font-[family-name:var(--font-geist-mono)] uppercase tracking-wider shrink-0"
+                >
+                  View Full Table &rarr;
+                </Link>
+              </div>
+              <LeagueTable standings={wednesdayStandings} compact />
+            </div>
           </div>
         </div>
       </section>
@@ -152,18 +176,13 @@ export default function HomePage() {
               <div className="w-[60px] h-[3px] bg-red-600 mt-4" />
               <div className="mt-8 space-y-5 text-white/50 text-base leading-relaxed font-[family-name:var(--font-sans)]">
                 <p>
-                  Our futsal league brings together teams from across the community for
-                  fast-paced, competitive indoor football. With matches running on both
-                  Monday and Wednesday nights, there&apos;s always action on the court.
+                  Endeavour Hills Futsal brings together teams from across the community for fast-paced, competitive indoor football.
+                  Monday and Wednesday nights run as separate leagues, giving players more opportunities to compete, stay active, 
+                  and build momentum across the season.
                 </p>
                 <p>
-                  Division A is currently in full swing with 8 teams on Monday and 10 on
-                  Wednesday. Division B is coming soon as we continue to grow. Whether
-                  you&apos;re here to play, watch, or support — welcome to the league.
-                </p>
-                <p>
-                  Tables are calculated automatically from match results using the standard
-                  futsal points system: 3 for a win, 1 for a draw, 0 for a loss.
+                  As the league grows, Division B will be introduced — 
+                  creating a full league structure with promotion, relegation, and something always on the line. 
                 </p>
               </div>
             </div>
@@ -173,13 +192,13 @@ export default function HomePage() {
               <NightCard
                 title="Monday Night"
                 href="/monday-night"
-                description="8 teams battle it out every Monday. Division A in full swing."
+                description="View standings, fixtures, and latest results →"
                 index={0}
               />
               <NightCard
                 title="Wednesday Night"
                 href="/wednesday-night"
-                description="10 teams compete every Wednesday. Fast-paced action."
+                description="View standings, fixtures, and latest results →"
                 index={1}
               />
             </div>

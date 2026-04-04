@@ -24,9 +24,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Futsal League | Monday & Wednesday Night Competition",
+  title: "Endeavour Hills Futsal | Monday & Wednesday Night Competition",
   description:
-    "Your local futsal competition. League tables, fixtures, results, and standings for Monday and Wednesday night divisions.",
+    "Endeavour Hills Futsal — league tables, fixtures, results, and standings for Monday and Wednesday night divisions at Endeavour Hills Leisure Centre.",
 };
 
 export default function RootLayout({
