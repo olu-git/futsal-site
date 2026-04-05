@@ -10,6 +10,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/monday-night", label: "Monday Night" },
   { href: "/wednesday-night", label: "Wednesday Night" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
