@@ -51,7 +51,9 @@
     "court": 1,
     "homeTeam": "mon-buckle-city",
     "awayTeam": "mon-samen",
-    "status": "scheduled"
+    "homeScore": 5,
+    "awayScore": 0,
+    "status": "completed"
   },
   {
     "id": "mon-r2-1",
