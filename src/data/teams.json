@@ -1,0 +1,21 @@
+[
+  { "id": "mon-afg",         "name": "AFG",         "night": "monday",    "division": "A" },
+  { "id": "mon-blue-dragons","name": "Blue Dragons","night": "monday",    "division": "A" },
+  { "id": "mon-buckle-city", "name": "Buckle City", "night": "monday",    "division": "A" },
+  { "id": "mon-goldlink-up", "name": "Goldlink Up", "night": "monday",    "division": "A" },
+  { "id": "mon-misfits",     "name": "Misfits",     "night": "monday",    "division": "A" },
+  { "id": "mon-persepolis",  "name": "Persepolis",  "night": "monday",    "division": "A" },
+  { "id": "mon-samen",       "name": "Samen",        "night": "monday",    "division": "A" },
+  { "id": "mon-wildcats",    "name": "Wildcats",    "night": "monday",    "division": "A" },
+
+  { "id": "wed-afg",         "name": "AFG",         "night": "wednesday", "division": "A" },
+  { "id": "wed-buckle-city", "name": "Buckle City", "night": "wednesday", "division": "A" },
+  { "id": "wed-goldlink-up", "name": "Goldlink Up", "night": "wednesday", "division": "A" },
+  { "id": "wed-misfits",     "name": "Misfits",     "night": "wednesday", "division": "A" },
+  { "id": "wed-persepolis",  "name": "Persepolis",  "night": "wednesday", "division": "A" },
+  { "id": "wed-pops",        "name": "Pops",        "night": "wednesday", "division": "A" },
+  { "id": "wed-rinnai",      "name": "Rinnai",      "night": "wednesday", "division": "A" },
+  { "id": "wed-samen",       "name": "Samen",        "night": "wednesday", "division": "A" },
+  { "id": "wed-unathletico", "name": "Unathletico", "night": "wednesday", "division": "A" },
+  { "id": "wed-wildcats",    "name": "Wildcats",    "night": "wednesday", "division": "A" }
+]
