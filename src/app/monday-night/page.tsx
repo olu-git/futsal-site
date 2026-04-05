@@ -4,10 +4,10 @@ import { Lock } from "lucide-react";
 import { motion } from "framer-motion";
 import LeagueTable from "@/components/LeagueTable";
 import MatchCard from "@/components/MatchCard";
+import RoundAccordion from "@/components/RoundAccordion";
 import SectionHeading from "@/components/SectionHeading";
 import { calculateStandings } from "@/lib/standings";
 import {
-  getCompletedFixtures,
   getTeamsByNight,
   getAllRounds,
   getFixturesByRound,
@@ -16,9 +16,23 @@ import { formatDate } from "@/lib/utils";
 
 export default function MondayNightPage() {
   const standings = calculateStandings("monday");
-  const results = getCompletedFixtures("monday");
   const mondayTeams = getTeamsByNight("monday");
   const rounds = getAllRounds("monday");
+
+  // Group completed rounds descending (most recent first)
+  const completedRounds = rounds
+    .filter((r) => getFixturesByRound("monday", r).some((f) => f.status === "completed"))
+    .reverse();
+
+  // Upcoming rounds ascending (no completed fixtures)
+  const upcomingRounds = rounds.filter((r) =>
+    getFixturesByRound("monday", r).every((f) => f.status === "scheduled")
+  );
+
+  const totalResults = completedRounds.reduce(
+    (sum, r) => sum + getFixturesByRound("monday", r).filter((f) => f.status === "completed").length,
+    0
+  );
 
   return (
     <div>
@@ -102,57 +116,70 @@ export default function MondayNightPage() {
       </section>
 
       {/* Results */}
-      {results.length > 0 && (
+      {completedRounds.length > 0 && (
         <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
               title="Results"
-              subtitle={`${results.length} completed matches`}
+              subtitle={`${totalResults} completed match${totalResults !== 1 ? "es" : ""} across ${completedRounds.length} round${completedRounds.length !== 1 ? "s" : ""}`}
             />
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {results.map((fixture, i) => (
-                <MatchCard key={fixture.id} fixture={fixture} index={i} />
-              ))}
+            <div className="mt-10 space-y-3">
+              {completedRounds.map((round, i) => {
+                const roundFixtures = getFixturesByRound("monday", round).filter(
+                  (f) => f.status === "completed"
+                );
+                return (
+                  <RoundAccordion
+                    key={round}
+                    round={round}
+                    date={formatDate(roundFixtures[0]?.date ?? "")}
+                    count={roundFixtures.length}
+                    defaultOpen={i === 0}
+                  >
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {roundFixtures.map((fixture, j) => (
+                        <MatchCard key={fixture.id} fixture={fixture} index={j} />
+                      ))}
+                    </div>
+                  </RoundAccordion>
+                );
+              })}
             </div>
           </div>
         </section>
       )}
 
       {/* Fixtures by Round */}
-      <section className="bg-[#111111] py-20 sm:py-[80px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            title="Fixtures"
-            subtitle="Full season schedule by round"
-          />
-          <div className="mt-10 space-y-10">
-            {rounds.map((round) => {
-              const roundFixtures = getFixturesByRound("monday", round);
-              const hasResults = roundFixtures.some((f) => f.status === "completed");
-              if (hasResults) return null;
-
-              return (
-                <div key={round}>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="font-[family-name:var(--font-heading)] text-lg uppercase tracking-wider text-white">
-                      Round {round}
-                    </span>
-                    <div className="w-[30px] h-[2px] bg-red-600" />
-                    <span className="text-xs text-white/40 font-[family-name:var(--font-geist-mono)]">
-                      {formatDate(roundFixtures[0]?.date ?? "")}
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {roundFixtures.map((fixture, i) => (
-                      <MatchCard key={fixture.id} fixture={fixture} index={i} />
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
+      {upcomingRounds.length > 0 && (
+        <section className="bg-[#111111] py-20 sm:py-[80px]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              title="Fixtures"
+              subtitle={`${upcomingRounds.length} round${upcomingRounds.length !== 1 ? "s" : ""} remaining`}
+            />
+            <div className="mt-10 space-y-3">
+              {upcomingRounds.map((round, i) => {
+                const roundFixtures = getFixturesByRound("monday", round);
+                return (
+                  <RoundAccordion
+                    key={round}
+                    round={round}
+                    date={formatDate(roundFixtures[0]?.date ?? "")}
+                    count={roundFixtures.length}
+                    defaultOpen={i === 0}
+                  >
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {roundFixtures.map((fixture, j) => (
+                        <MatchCard key={fixture.id} fixture={fixture} index={j} />
+                      ))}
+                    </div>
+                  </RoundAccordion>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Division B Coming Soon */}
       <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
