@@ -61,6 +61,11 @@ export default function Footer() {
                   Standings
                 </Link>
               </li>
+              <li>
+                <Link href="/rules" className="text-sm text-white/40 hover:text-red-400 transition-colors font-[family-name:var(--font-sans)]">
+                  Rules
+                </Link>
+              </li>
             </ul>
           </div>
 
