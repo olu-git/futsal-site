@@ -258,6 +258,7 @@ export default function ContactPage() {
                         <option value="Individual / Free Agent">Individual / Free Agent</option>
                         <option value="Monday Night">Monday Night Competition</option>
                         <option value="Wednesday Night">Wednesday Night Competition</option>
+                        <option value="Refer a Team">Refer a Team</option>
                         <option value="General Enquiry">General Enquiry</option>
                       </select>
                     </div>

@@ -78,6 +78,45 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600" />
       </section>
 
+      {/* Refer a Team Promo */}
+      <section className="bg-[#111111] py-10 sm:py-14 border-b border-white/[0.06]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="rounded-xl border border-red-500/20 bg-red-500/[0.06] px-6 py-7 sm:px-10 sm:py-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6"
+          >
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-md bg-red-600/20 border border-red-500/30 flex items-center justify-center shrink-0 mt-0.5">
+                <span className="text-red-400 text-lg leading-none">🏆</span>
+              </div>
+              <div>
+                <div className="flex items-center gap-3 mb-1 flex-wrap">
+                  <p className="font-[family-name:var(--font-heading)] text-xl uppercase tracking-wider text-white">
+                    Refer a Team
+                  </p>
+                  <span className="text-[10px] font-[family-name:var(--font-geist-mono)] uppercase tracking-wider bg-red-500/15 text-red-400 border border-red-500/20 rounded px-2 py-0.5">
+                    Offer ends 15 June
+                  </span>
+                </div>
+                <p className="text-sm text-white/55 leading-relaxed font-[family-name:var(--font-sans)] max-w-xl">
+                  Know a team looking to play? Refer them to Endeavour Hills Futsal and get{" "}
+                  <span className="text-white font-medium">1 free game per week</span> for every week that new team plays —
+                  up to <span className="text-white font-medium">3 free weeks</span>. Just get in touch and mention your team name.
+                </p>
+              </div>
+            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-lg bg-red-600 px-6 py-3 text-sm font-semibold text-white hover:bg-red-500 transition-colors font-[family-name:var(--font-geist-mono)] uppercase tracking-wider shrink-0"
+            >
+              Get in Touch &rarr;
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Standings Section */}
       <section className="bg-[#0A0A0A] py-20 sm:py-[120px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
