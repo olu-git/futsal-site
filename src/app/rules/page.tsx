@@ -6,6 +6,7 @@ import {
   Disc,
   ArrowLeftRight,
   Clock,
+  Play,
   Footprints,
   Ban,
   Shield,
@@ -66,6 +67,12 @@ const fifaGroups: RuleGroup[] = [
         title: "Match Duration",
         description:
           "Two 18-minute halves with a 1-minute break. Running clock — no pauses except for exceptional circumstances.",
+      },
+      {
+        icon: Play,
+        title: "Kick-off",
+        description:
+          "At kick-off, the ball must move back into the kicking team's own half. The opposing team must remain behind their yellow line until the ball is played.",
       },
       {
         icon: Footprints,
