@@ -119,8 +119,8 @@
     "date": "2026-04-13",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-wildcats",
-    "awayTeam": "mon-persepolis",
+    "homeTeam": "mon-buckle-city",
+    "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -132,7 +132,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "mon-afg",
-    "awayTeam": "mon-samen",
+    "awayTeam": "mon-blue-dragons",
     "status": "scheduled"
   },
   {
@@ -143,8 +143,8 @@
     "date": "2026-04-13",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-misfits",
+    "homeTeam": "mon-misfits",
+    "awayTeam": "mon-samen",
     "status": "scheduled"
   },
   {
@@ -155,8 +155,8 @@
     "date": "2026-04-13",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-buckle-city",
-    "awayTeam": "mon-goldlink-up",
+    "homeTeam": "mon-persepolis",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -168,7 +168,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "mon-afg",
-    "awayTeam": "mon-misfits",
+    "awayTeam": "mon-buckle-city",
     "status": "scheduled"
   },
   {
@@ -179,8 +179,8 @@
     "date": "2026-04-20",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-samen",
-    "awayTeam": "mon-buckle-city",
+    "homeTeam": "mon-blue-dragons",
+    "awayTeam": "mon-misfits",
     "status": "scheduled"
   },
   {
@@ -191,8 +191,8 @@
     "date": "2026-04-20",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-wildcats",
-    "awayTeam": "mon-blue-dragons",
+    "homeTeam": "mon-goldlink-up",
+    "awayTeam": "mon-persepolis",
     "status": "scheduled"
   },
   {
@@ -203,8 +203,8 @@
     "date": "2026-04-20",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-persepolis",
-    "awayTeam": "mon-goldlink-up",
+    "homeTeam": "mon-samen",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -227,7 +227,7 @@
     "date": "2026-04-27",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-misfits",
+    "homeTeam": "mon-blue-dragons",
     "awayTeam": "mon-buckle-city",
     "status": "scheduled"
   },
@@ -239,8 +239,8 @@
     "date": "2026-04-27",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-persepolis",
-    "awayTeam": "mon-blue-dragons",
+    "homeTeam": "mon-misfits",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -251,8 +251,8 @@
     "date": "2026-04-27",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-samen",
-    "awayTeam": "mon-wildcats",
+    "homeTeam": "mon-persepolis",
+    "awayTeam": "mon-samen",
     "status": "scheduled"
   },
   {
@@ -264,7 +264,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "mon-afg",
-    "awayTeam": "mon-buckle-city",
+    "awayTeam": "mon-persepolis",
     "status": "scheduled"
   },
   {
@@ -275,7 +275,7 @@
     "date": "2026-05-04",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-misfits",
+    "homeTeam": "mon-blue-dragons",
     "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
@@ -287,8 +287,8 @@
     "date": "2026-05-04",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-persepolis",
-    "awayTeam": "mon-samen",
+    "homeTeam": "mon-buckle-city",
+    "awayTeam": "mon-misfits",
     "status": "scheduled"
   },
   {
@@ -300,7 +300,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "mon-goldlink-up",
-    "awayTeam": "mon-blue-dragons",
+    "awayTeam": "mon-samen",
     "status": "scheduled"
   },
   {
@@ -311,7 +311,7 @@
     "date": "2026-05-11",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-goldlink-up",
+    "homeTeam": "mon-afg",
     "awayTeam": "mon-samen",
     "status": "scheduled"
   },
@@ -323,8 +323,8 @@
     "date": "2026-05-11",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-afg",
-    "awayTeam": "mon-blue-dragons",
+    "homeTeam": "mon-blue-dragons",
+    "awayTeam": "mon-persepolis",
     "status": "scheduled"
   },
   {
@@ -347,8 +347,8 @@
     "date": "2026-05-11",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-misfits",
-    "awayTeam": "mon-persepolis",
+    "homeTeam": "mon-goldlink-up",
+    "awayTeam": "mon-misfits",
     "status": "scheduled"
   },
   {
