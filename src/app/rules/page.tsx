@@ -15,6 +15,7 @@ import {
   Hourglass,
   BellOff,
   CircleX,
+  Banknote,
   UserX,
   UserPlus,
   Trophy,
@@ -133,6 +134,12 @@ const leagueGroups: RuleGroup[] = [
         title: "Forfeits",
         description:
           "Forfeits are recorded as 5-0 losses. Teams that do not arrive before half-time automatically forfeit the game.",
+      },
+      {
+        icon: Banknote,
+        title: "Forfeit Bond",
+        description:
+          "If a forfeit occurs, the forfeiting team forfeits their bond for that week to cover the cost of not showing up. The team is unable to play again until the bond is paid.",
       },
     ],
   },

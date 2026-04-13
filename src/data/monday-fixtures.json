@@ -121,7 +121,9 @@
     "court": 1,
     "homeTeam": "mon-buckle-city",
     "awayTeam": "mon-goldlink-up",
-    "status": "scheduled"
+    "homeScore": 6,
+    "awayScore": 7,
+    "status": "completed"
   },
   {
     "id": "mon-r3-2",
@@ -133,7 +135,9 @@
     "court": 1,
     "homeTeam": "mon-afg",
     "awayTeam": "mon-blue-dragons",
-    "status": "scheduled"
+    "homeScore": 0,
+    "awayScore": 5,
+    "status": "completed"
   },
   {
     "id": "mon-r3-3",
@@ -145,7 +149,9 @@
     "court": 2,
     "homeTeam": "mon-misfits",
     "awayTeam": "mon-samen",
-    "status": "scheduled"
+    "homeScore": 4,
+    "awayScore": 5,
+    "status": "completed"
   },
   {
     "id": "mon-r3-4",
@@ -157,7 +163,9 @@
     "court": 1,
     "homeTeam": "mon-persepolis",
     "awayTeam": "mon-wildcats",
-    "status": "scheduled"
+    "homeScore": 6,
+    "awayScore": 4,
+    "status": "completed"
   },
   {
     "id": "mon-r4-1",

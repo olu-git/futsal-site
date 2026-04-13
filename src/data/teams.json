@@ -1,7 +1,7 @@
 [
   { "id": "mon-afg",         "name": "AFG",         "night": "monday",    "division": "A" },
   { "id": "mon-blue-dragons","name": "Blue Dragons","night": "monday",    "division": "A" },
-  { "id": "mon-buckle-city", "name": "Buckle City", "night": "monday",    "division": "A" },
+  { "id": "mon-buckle-city", "name": "Moza Mama",   "night": "monday",    "division": "A" },
   { "id": "mon-goldlink-up", "name": "Goldlink Up", "night": "monday",    "division": "A" },
   { "id": "mon-misfits",     "name": "Misfits",     "night": "monday",    "division": "A" },
   { "id": "mon-persepolis",  "name": "Persepolis",  "night": "monday",    "division": "A" },
