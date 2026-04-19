@@ -1,7 +1,8 @@
-import { Team, Fixture, CompetitionNight } from "./types";
+import { Team, Fixture, CompetitionNight, StandingAdjustment } from "./types";
 import teamsData from "@/data/teams.json";
 import mondayFixturesData from "@/data/monday-fixtures.json";
 import wednesdayFixturesData from "@/data/wednesday-fixtures.json";
+import standingsAdjustmentsData from "@/data/standings-adjustments.json";
 
 // ============================================================
 // Core data — edit the JSON files in src/data/ directly:
@@ -24,6 +25,9 @@ export const fixtures: Fixture[] = [
   ...(mondayFixturesData as unknown as Fixture[]),
   ...(wednesdayFixturesData as unknown as Fixture[]),
 ];
+
+export const standingsAdjustments: StandingAdjustment[] =
+  standingsAdjustmentsData as StandingAdjustment[];
 
 // ============================================================
 // Helper functions

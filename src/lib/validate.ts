@@ -25,16 +25,26 @@ export interface ValidationIssue {
 // ============================================================
 export function validateFixtures(
   fixtures: Fixture[],
-  _teams: Team[]
+  teams: Team[]
 ): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
+  const wednesdayTeamIds = new Set(
+    teams
+      .filter((team) => team.night === "wednesday" && team.division === "A")
+      .map((team) => team.id)
+  );
 
   // Index fixtures by night+date for slot-level checks
   const byNightDate = new Map<string, Fixture[]>();
+  const byNightRound = new Map<string, Fixture[]>();
   for (const f of fixtures) {
     const key = `${f.night}::${f.date}`;
     if (!byNightDate.has(key)) byNightDate.set(key, []);
     byNightDate.get(key)!.push(f);
+
+    const roundKey = `${f.night}::${f.round}`;
+    if (!byNightRound.has(roundKey)) byNightRound.set(roundKey, []);
+    byNightRound.get(roundKey)!.push(f);
   }
 
   // ── Per-fixture checks ──────────────────────────────────────
@@ -116,11 +126,59 @@ export function validateFixtures(
   }
 
   // ── Per-slot checks (same night + same date + same time) ────
+  for (const [roundKey, roundFixtures] of byNightRound) {
+    const [night, roundValue] = roundKey.split("::");
+    const round = Number(roundValue);
+
+    if (night !== "wednesday" || round < 4) {
+      continue;
+    }
+
+    if (roundFixtures.length !== 6) {
+      issues.push({
+        type: "hard",
+        rule: "wednesday-expansion-round-size",
+        fixtureId: roundFixtures[0]?.id ?? `wed-r${round}`,
+        message: `Wednesday round ${round} should contain 6 fixtures after expansion, found ${roundFixtures.length}`,
+      });
+    }
+
+    const teamsInRound = new Set<string>();
+    for (const fixture of roundFixtures) {
+      teamsInRound.add(fixture.homeTeam);
+      teamsInRound.add(fixture.awayTeam);
+    }
+
+    if (teamsInRound.size !== wednesdayTeamIds.size) {
+      issues.push({
+        type: "hard",
+        rule: "wednesday-expansion-team-coverage",
+        fixtureId: roundFixtures[0]?.id ?? `wed-r${round}`,
+        message: `Wednesday round ${round} should include all ${wednesdayTeamIds.size} active teams exactly once`,
+      });
+    }
+  }
+
   for (const nightDateFixtures of byNightDate.values()) {
+    const sampleFixture = nightDateFixtures[0];
     const byTime = new Map<string, Fixture[]>();
     for (const f of nightDateFixtures) {
       if (!byTime.has(f.time)) byTime.set(f.time, []);
       byTime.get(f.time)!.push(f);
+    }
+
+    if (sampleFixture?.night === "wednesday" && sampleFixture.round >= 4) {
+      for (const time of ["19:00", "19:40", "20:20"]) {
+        const count = byTime.get(time)?.length ?? 0;
+        if (count !== 2) {
+          issues.push({
+            type: "hard",
+            rule: "wednesday-slot-balance",
+            fixtureId: sampleFixture.id,
+            message: `Wednesday ${sampleFixture.date} should have exactly 2 games at ${time}, found ${count}`,
+          });
+        }
+      }
     }
 
     for (const [time, slotFixtures] of byTime) {

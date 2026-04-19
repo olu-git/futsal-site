@@ -1,5 +1,5 @@
 import { Fixture, Standing, CompetitionNight } from "./types";
-import { fixtures, teams } from "./data";
+import { fixtures, standingsAdjustments, teams } from "./data";
 
 /**
  * Calculate league standings from completed fixture results.
@@ -11,6 +11,9 @@ export function calculateStandings(night: CompetitionNight, division: "A" | "B" 
   const nightTeams = teams.filter((t) => t.night === night && t.division === division);
   const completedFixtures = fixtures.filter(
     (f) => f.night === night && f.division === division && f.status === "completed"
+  );
+  const nightAdjustments = standingsAdjustments.filter(
+    (a) => a.night === night && a.division === division
   );
 
   const standingsMap = new Map<string, Standing>();
@@ -69,6 +72,20 @@ export function calculateStandings(night: CompetitionNight, division: "A" | "B" 
       home.points += 1;
       away.points += 1;
     }
+  }
+
+  for (const adjustment of nightAdjustments) {
+    const standing = standingsMap.get(adjustment.teamId);
+
+    if (!standing) continue;
+
+    standing.played += adjustment.played;
+    standing.won += adjustment.won;
+    standing.drawn += adjustment.drawn;
+    standing.lost += adjustment.lost;
+    standing.goalsFor += adjustment.goalsFor;
+    standing.goalsAgainst += adjustment.goalsAgainst;
+    standing.points += adjustment.points;
   }
 
   // Calculate goal difference

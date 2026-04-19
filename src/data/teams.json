@@ -12,6 +12,8 @@
   { "id": "wed-buckle-city", "name": "Buckle City", "night": "wednesday", "division": "A" },
   { "id": "wed-goldlink-up", "name": "Goldlink Up", "night": "wednesday", "division": "A" },
   { "id": "wed-misfits",     "name": "Misfits",     "night": "wednesday", "division": "A" },
+  { "id": "wed-moza-mama",   "name": "Moza Mama",   "night": "wednesday", "division": "A" },
+  { "id": "wed-hazara-united","name": "Hazara United","night": "wednesday", "division": "A" },
   { "id": "wed-persepolis",  "name": "Persepolis",  "night": "wednesday", "division": "A" },
   { "id": "wed-pops",        "name": "Pops",        "night": "wednesday", "division": "A" },
   { "id": "wed-rinnai",      "name": "Rinnai",      "night": "wednesday", "division": "A" },
