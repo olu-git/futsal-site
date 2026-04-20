@@ -1,0 +1,58 @@
+[
+  {
+    "id": "wed-admin-moza-hazara-draw",
+    "night": "wednesday",
+    "division": "A",
+    "teamId": "wed-moza-mama",
+    "played": 1,
+    "won": 0,
+    "drawn": 1,
+    "lost": 0,
+    "goalsFor": 3,
+    "goalsAgainst": 3,
+    "points": 1,
+    "note": "Administrative pre-entry 3-3 draw with Hazara United"
+  },
+  {
+    "id": "wed-admin-hazara-moza-draw",
+    "night": "wednesday",
+    "division": "A",
+    "teamId": "wed-hazara-united",
+    "played": 1,
+    "won": 0,
+    "drawn": 1,
+    "lost": 0,
+    "goalsFor": 3,
+    "goalsAgainst": 3,
+    "points": 1,
+    "note": "Administrative pre-entry 3-3 draw with Moza Mama"
+  },
+  {
+    "id": "wed-admin-moza-entry-losses",
+    "night": "wednesday",
+    "division": "A",
+    "teamId": "wed-moza-mama",
+    "played": 2,
+    "won": 0,
+    "drawn": 0,
+    "lost": 2,
+    "goalsFor": 0,
+    "goalsAgainst": 6,
+    "points": 0,
+    "note": "Administrative 3-0 losses for pre-entry missed rounds"
+  },
+  {
+    "id": "wed-admin-hazara-entry-losses",
+    "night": "wednesday",
+    "division": "A",
+    "teamId": "wed-hazara-united",
+    "played": 2,
+    "won": 0,
+    "drawn": 0,
+    "lost": 2,
+    "goalsFor": 0,
+    "goalsAgainst": 6,
+    "points": 0,
+    "note": "Administrative 3-0 losses for pre-entry missed rounds"
+  }
+]

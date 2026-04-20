@@ -26,6 +26,21 @@ export interface Fixture {
   status: FixtureStatus;
 }
 
+export interface StandingAdjustment {
+  id: string;
+  night: CompetitionNight;
+  division: Division;
+  teamId: string;
+  played: number;
+  won: number;
+  drawn: number;
+  lost: number;
+  goalsFor: number;
+  goalsAgainst: number;
+  points: number;
+  note?: string;
+}
+
 export interface Standing {
   teamId: string;
   teamName: string;

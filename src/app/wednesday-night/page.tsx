@@ -18,6 +18,10 @@ export default function WednesdayNightPage() {
   const standings = calculateStandings("wednesday");
   const wednesdayTeams = getTeamsByNight("wednesday");
   const rounds = getAllRounds("wednesday");
+  const maxGamesPerRound = Math.max(
+    0,
+    ...rounds.map((round) => getFixturesByRound("wednesday", round).length)
+  );
 
   // Group completed rounds descending (most recent first)
   const completedRounds = rounds
@@ -66,10 +70,10 @@ export default function WednesdayNightPage() {
                 <span className="text-red-500 font-bold">{wednesdayTeams.length}</span> Teams
               </div>
               <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.05] px-5 py-3 text-sm text-white/60 font-[family-name:var(--font-geist-mono)]">
-                <span className="text-red-500 font-bold">18</span> Rounds
+                <span className="text-red-500 font-bold">{rounds.length}</span> Rounds
               </div>
               <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.05] px-5 py-3 text-sm text-white/60 font-[family-name:var(--font-geist-mono)]">
-                <span className="text-red-500 font-bold">5</span> Games / Night
+                <span className="text-red-500 font-bold">{maxGamesPerRound}</span> Games / Night
               </div>
             </div>
           </motion.div>
@@ -77,6 +81,17 @@ export default function WednesdayNightPage() {
 
         {/* Red accent line at bottom */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600" />
+      </section>
+
+      <section className="bg-[#111111] border-y border-white/5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+          <p className="text-sm text-white/60 leading-relaxed">
+            Note: Moza Mama and Hazara United joined the Wednesday competition after Round 3. <br></br>
+            Their 3 unplayed entry-round matches are handled as administrative
+            standings adjustments: One 3-3 draw between the two new teams and two
+            3-0 losses each.
+          </p>
+        </div>
       </section>
 
       {/* Division A Table */}
