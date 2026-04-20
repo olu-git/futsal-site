@@ -8,6 +8,10 @@ const VIC_PUBLIC_HOLIDAYS = new Set([
   "2026-06-08", // Queen's Birthday (Victoria)
 ]);
 
+const WEDNESDAY_LEGACY_REPEAT_EXCEPTION = new Set([
+  "wed-buckle-city::wed-persepolis",
+]);
+
 // ============================================================
 // Types
 // ============================================================
@@ -156,6 +160,36 @@ export function validateFixtures(
         fixtureId: roundFixtures[0]?.id ?? `wed-r${round}`,
         message: `Wednesday round ${round} should include all ${wednesdayTeamIds.size} active teams exactly once`,
       });
+    }
+  }
+
+  // 10. Wednesday pair frequency guard:
+  // Teams should not meet more than twice in a season, except one locked legacy pair.
+  const wednesdayPairFixtures = new Map<string, Fixture[]>();
+  for (const fixture of fixtures) {
+    if (fixture.night !== "wednesday") {
+      continue;
+    }
+    const [a, b] = [fixture.homeTeam, fixture.awayTeam].sort();
+    const key = `${a}::${b}`;
+    if (!wednesdayPairFixtures.has(key)) wednesdayPairFixtures.set(key, []);
+    wednesdayPairFixtures.get(key)!.push(fixture);
+  }
+
+  for (const [pairKey, pairFixtures] of wednesdayPairFixtures) {
+    const count = pairFixtures.length;
+    const [teamA, teamB] = pairKey.split("::");
+    const isLegacyException = WEDNESDAY_LEGACY_REPEAT_EXCEPTION.has(pairKey);
+
+    if (count > 2 && !isLegacyException) {
+      for (const fixture of pairFixtures) {
+        issues.push({
+          type: "hard",
+          rule: "wednesday-pair-overplayed",
+          fixtureId: fixture.id,
+          message: `Pair ${teamA} vs ${teamB} appears ${count} times in Wednesday fixtures (max 2)`,
+        });
+      }
     }
   }
 

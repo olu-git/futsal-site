@@ -1,15 +1,15 @@
 # Futsal League
 
-A polished, modern futsal competition website with league tables, fixtures, results, and automatic standings calculation.
+Modern league site for Monday and Wednesday futsal competitions, with fixtures, results, standings, and rule pages.
 
 ## Tech Stack
 
-- **Next.js 16** (App Router)
-- **TypeScript**
-- **Tailwind CSS**
-- **Framer Motion** (subtle animations)
-- **Lucide React** (icons)
-- Local data files (no external database)
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Local JSON data files (no database)
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ A polished, modern futsal competition website with league tables, fixtures, resu
 ### Install
 
 ```bash
-cd futsal-league
+cd futsal_site
 npm install
 ```
 
@@ -30,7 +30,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open `http://localhost:3000`.
 
 ### Build for Production
 
@@ -44,116 +44,122 @@ npm start
 ```
 src/
   app/
-    page.tsx              # Home page
-    layout.tsx            # Root layout (nav + footer)
-    globals.css           # Global styles & Tailwind theme
-    monday-night/
-      page.tsx            # Monday Night page
-    wednesday-night/
-      page.tsx            # Wednesday Night page
+    page.tsx
+    monday-night/page.tsx
+    wednesday-night/page.tsx
+    rules/page.tsx
   components/
-    Navbar.tsx            # Sticky navigation
-    Footer.tsx            # Footer
-    LeagueTable.tsx       # League standings table
-    MatchCard.tsx         # Match result/fixture card
-    NightCard.tsx         # Competition night link card
-    SectionHeading.tsx    # Reusable section header
+    LeagueTable.tsx
+    MatchCard.tsx
+    RoundAccordion.tsx
+  data/
+    teams.json
+    monday-fixtures.json
+    wednesday-fixtures.json
+    standings-adjustments.json
   lib/
-    data.ts              # All teams, fixtures, and helper functions
-    standings.ts         # Standings calculation from results
-    types.ts             # TypeScript types
-    utils.ts             # Formatting utilities
+    data.ts
+    standings.ts
+    validate.ts
+    types.ts
 ```
 
-## How to Edit Data
+## Data Model
 
-All data lives in **`src/lib/data.ts`**.
+League data is maintained in `src/data/*.json` and imported via `src/lib/data.ts`.
 
-### Edit Teams
+- `teams.json`: team master list
+- `monday-fixtures.json`: Monday schedule/results
+- `wednesday-fixtures.json`: Wednesday schedule/results
+- `standings-adjustments.json`: admin-only standings adjustments (no opponent-side fixture stats)
 
-Find the `teams` array at the top. Each team has:
+## Editing Teams, Fixtures, Results
 
-```ts
-{ id: "mon-afg", name: "AFG", night: "monday", division: "A" }
+### Teams
+
+Edit `src/data/teams.json`.
+
+Each team includes:
+
+```json
+{ "id": "wed-afg", "name": "AFG", "night": "wednesday", "division": "A" }
 ```
 
-- `id` must be unique and match fixture references
-- `name` is the display name
-- `night` is `"monday"` or `"wednesday"`
-- `division` is `"A"` or `"B"`
+### Fixtures
 
-### Edit Fixtures & Results
+Edit `src/data/monday-fixtures.json` or `src/data/wednesday-fixtures.json`.
 
-Find the `fixtures` array. Each fixture looks like:
+Fixture shape:
 
-```ts
+```json
 {
-  id: "mon-r1-1",
-  night: "monday",
-  division: "A",
-  round: 1,
-  date: "2026-03-23",
-  time: "19:00",
-  court: 1,
-  homeTeam: "mon-wildcats",
-  awayTeam: "mon-afg",
-  homeScore: 9,        // Add when complete
-  awayScore: 7,        // Add when complete
-  status: "completed"  // Change from "scheduled"
+  "id": "wed-r10-1",
+  "night": "wednesday",
+  "division": "A",
+  "round": 10,
+  "date": "2026-05-27",
+  "time": "19:00",
+  "court": 1,
+  "homeTeam": "wed-afg",
+  "awayTeam": "wed-pops",
+  "status": "scheduled"
 }
 ```
 
-**To enter a result:**
+To record a completed game, add `homeScore`, `awayScore`, and set `status` to `"completed"`.
 
-1. Find the fixture
-2. Add `homeScore` and `awayScore`
-3. Change `status` from `"scheduled"` to `"completed"`
-4. The standings table will update automatically
+### Standings Adjustments
 
-**To add a new fixture:**
+Edit `src/data/standings-adjustments.json` for administrative outcomes (for example, entry-round adjustments).  
+These affect standings directly in `src/lib/standings.ts` and do not create synthetic opponent fixture records.
 
-Add a new entry to the `fixtures` array with status `"scheduled"`.
+## Schedule Rules and Validation
 
-### Fixture Schedule
+Validation lives in `src/lib/validate.ts`.
 
-- **Monday:** Court 1 (7pm, 7:40pm, 8:20pm) + Court 2 (7:40pm) = 4 games/night
-- **Wednesday:** Court 1 (7pm, 7:40pm, 8:20pm) + Court 2 (7:40pm, 8:20pm) = 5 games/night
-- **Constraint:** Goldlink Up is scheduled at 7pm or 8:20pm on Monday (never at 7:40pm when 2 games overlap)
+Hard constraints currently include:
 
-## How Standings Work
+- `wed-rinnai` never at `19:00`
+- `mon-blue-dragons` never at `19:00`
+- No games on configured public holidays
+- Night/day consistency (Monday on Monday, Wednesday on Wednesday)
+- No court collision per time slot
+- No team double-booked in the same slot
+- `buckle-city` and `goldlink-up` not simultaneous unless head-to-head
+- Wednesday expansion checks (round 4 onward):
+- 6 fixtures per round
+- all Wednesday teams represented each round
+- exactly 2 fixtures at each slot (`19:00`, `19:40`, `20:20`)
+- Wednesday pair-frequency check:
+- max 2 meetings per pair
+- one documented legacy exception: `wed-buckle-city::wed-persepolis`
 
-Standings are calculated automatically in `src/lib/standings.ts` from completed fixtures:
+Soft warning:
 
-- **Win** = 3 points
-- **Draw** = 1 point
-- **Loss** = 0 points
+- `Samen` at `19:00` (allowed but flagged as avoidable)
 
-**Sorting order:**
+## Standings Logic
 
-1. Points (descending)
-2. Goal difference (descending)
-3. Goals for (descending)
-4. Team name (alphabetical)
+Standings are calculated from:
 
-Change a result in `data.ts` and the table updates on next page load.
+1. Completed fixtures
+2. Admin adjustments
 
-## Pages
+Points:
 
-| Page | URL | Description |
-|------|-----|-------------|
-| Home | `/` | Hero, night links, standings preview, results, fixtures, about |
-| Monday Night | `/monday-night` | Full table, teams, results, fixtures, Div B coming soon |
-| Wednesday Night | `/wednesday-night` | Full table, teams, results, fixtures, Div B coming soon |
+- Win = 3
+- Draw = 1
+- Loss = 0
 
-## Competition Details
+Sort order:
 
-- **Monday Night:** 8 teams, Division A, 14-round season
-- **Wednesday Night:** 10 teams, Division A, 18-round season
-- **Division B:** Coming soon for both nights
+1. Points desc
+2. Goal difference desc
+3. Goals for desc
+4. Team name asc
 
-## Design
+## Competition Snapshot
 
-- Dark theme: black background with red (#DC2626) and white accents
-- Mobile responsive
-- Subtle animations via Framer Motion
-- Premium sports aesthetic
+- Monday Night: 8 teams, Division A
+- Wednesday Night: 12 teams, Division A, 22 rounds
+- Division B: placeholder only
