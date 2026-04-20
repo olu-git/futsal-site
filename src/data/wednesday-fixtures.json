@@ -302,7 +302,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-goldlink-up",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -314,7 +314,7 @@
     "time": "19:00",
     "court": 2,
     "homeTeam": "wed-afg",
-    "awayTeam": "wed-unathletico",
+    "awayTeam": "wed-hazara-united",
     "status": "scheduled"
   },
   {
@@ -325,8 +325,8 @@
     "date": "2026-04-22",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-persepolis",
     "status": "scheduled"
   },
   {
@@ -338,7 +338,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "wed-misfits",
-    "awayTeam": "wed-wildcats",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
@@ -350,7 +350,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
   {
