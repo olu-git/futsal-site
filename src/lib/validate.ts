@@ -135,32 +135,55 @@ export function validateFixtures(
     const [night, roundValue] = roundKey.split("::");
     const round = Number(roundValue);
 
-    if (night !== "wednesday" || round < 4) {
-      continue;
+    if (night === "wednesday" && round >= 4) {
+      if (roundFixtures.length !== 6) {
+        issues.push({
+          type: "hard",
+          rule: "wednesday-expansion-round-size",
+          fixtureId: roundFixtures[0]?.id ?? `wed-r${round}`,
+          message: `Wednesday round ${round} should contain 6 fixtures after expansion, found ${roundFixtures.length}`,
+        });
+      }
+
+      const teamsInRound = new Set<string>();
+      for (const fixture of roundFixtures) {
+        teamsInRound.add(fixture.homeTeam);
+        teamsInRound.add(fixture.awayTeam);
+      }
+
+      if (teamsInRound.size !== wednesdayTeamIds.size) {
+        issues.push({
+          type: "hard",
+          rule: "wednesday-expansion-team-coverage",
+          fixtureId: roundFixtures[0]?.id ?? `wed-r${round}`,
+          message: `Wednesday round ${round} should include all ${wednesdayTeamIds.size} active teams exactly once`,
+        });
+      }
     }
 
-    if (roundFixtures.length !== 6) {
-      issues.push({
-        type: "hard",
-        rule: "wednesday-expansion-round-size",
-        fixtureId: roundFixtures[0]?.id ?? `wed-r${round}`,
-        message: `Wednesday round ${round} should contain 6 fixtures after expansion, found ${roundFixtures.length}`,
-      });
-    }
+    if (night === "monday" && round >= 4) {
+      if (roundFixtures.length !== 5) {
+        issues.push({
+          type: "hard",
+          rule: "monday-expanded-round-size",
+          fixtureId: roundFixtures[0]?.id ?? `mon-r${round}`,
+          message: `Monday round ${round} should contain 5 fixtures after expansion, found ${roundFixtures.length}`,
+        });
+      }
 
-    const teamsInRound = new Set<string>();
-    for (const fixture of roundFixtures) {
-      teamsInRound.add(fixture.homeTeam);
-      teamsInRound.add(fixture.awayTeam);
-    }
-
-    if (teamsInRound.size !== wednesdayTeamIds.size) {
-      issues.push({
-        type: "hard",
-        rule: "wednesday-expansion-team-coverage",
-        fixtureId: roundFixtures[0]?.id ?? `wed-r${round}`,
-        message: `Wednesday round ${round} should include all ${wednesdayTeamIds.size} active teams exactly once`,
-      });
+      const teamsInRound = new Set<string>();
+      for (const fixture of roundFixtures) {
+        teamsInRound.add(fixture.homeTeam);
+        teamsInRound.add(fixture.awayTeam);
+      }
+      if (teamsInRound.size !== mondayTeamIds.size) {
+        issues.push({
+          type: "hard",
+          rule: "monday-expanded-team-coverage",
+          fixtureId: roundFixtures[0]?.id ?? `mon-r${round}`,
+          message: `Monday round ${round} should include all ${mondayTeamIds.size} active teams exactly once`,
+        });
+      }
     }
   }
 
@@ -428,31 +451,6 @@ export function validateFixtures(
             message: `Wednesday ${sampleFixture.date} should have exactly 2 games at ${time}, found ${count}`,
           });
         }
-      }
-    }
-
-    if (sampleFixture?.night === "monday" && sampleFixture.round >= 4) {
-      if (roundFixtures.length !== 5) {
-        issues.push({
-          type: "hard",
-          rule: "monday-expanded-round-size",
-          fixtureId: sampleFixture.id,
-          message: `Monday round ${sampleFixture.round} should contain 5 fixtures after expansion, found ${roundFixtures.length}`,
-        });
-      }
-
-      const teamsInRound = new Set<string>();
-      for (const fixture of roundFixtures) {
-        teamsInRound.add(fixture.homeTeam);
-        teamsInRound.add(fixture.awayTeam);
-      }
-      if (teamsInRound.size !== mondayTeamIds.size) {
-        issues.push({
-          type: "hard",
-          rule: "monday-expanded-team-coverage",
-          fixtureId: sampleFixture.id,
-          message: `Monday round ${sampleFixture.round} should include all ${mondayTeamIds.size} active teams exactly once`,
-        });
       }
     }
 
