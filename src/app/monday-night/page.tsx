@@ -18,6 +18,11 @@ export default function MondayNightPage() {
   const standings = calculateStandings("monday");
   const mondayTeams = getTeamsByNight("monday");
   const rounds = getAllRounds("monday");
+  const totalRounds = rounds.length;
+  const gamesPerNight = Math.max(
+    0,
+    ...rounds.map((round) => getFixturesByRound("monday", round).length)
+  );
 
   // Group completed rounds descending (most recent first)
   const completedRounds = rounds
@@ -66,10 +71,10 @@ export default function MondayNightPage() {
                 <span className="text-red-500 font-bold">{mondayTeams.length}</span> Teams
               </div>
               <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.05] px-5 py-3 text-sm text-white/60 font-[family-name:var(--font-geist-mono)]">
-                <span className="text-red-500 font-bold">14</span> Rounds
+                <span className="text-red-500 font-bold">{totalRounds}</span> Rounds
               </div>
               <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.05] px-5 py-3 text-sm text-white/60 font-[family-name:var(--font-geist-mono)]">
-                <span className="text-red-500 font-bold">4</span> Games / Night
+                <span className="text-red-500 font-bold">{gamesPerNight}</span> Games / Night
               </div>
             </div>
           </motion.div>

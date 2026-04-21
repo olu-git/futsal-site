@@ -8,10 +8,6 @@ const VIC_PUBLIC_HOLIDAYS = new Set([
   "2026-06-08", // Queen's Birthday (Victoria)
 ]);
 
-const WEDNESDAY_LEGACY_REPEAT_EXCEPTION = new Set([
-  "wed-buckle-city::wed-persepolis",
-]);
-
 // ============================================================
 // Types
 // ============================================================
@@ -35,6 +31,11 @@ export function validateFixtures(
   const wednesdayTeamIds = new Set(
     teams
       .filter((team) => team.night === "wednesday" && team.division === "A")
+      .map((team) => team.id)
+  );
+  const mondayTeamIds = new Set(
+    teams
+      .filter((team) => team.night === "monday" && team.division === "A")
       .map((team) => team.id)
   );
 
@@ -163,31 +164,246 @@ export function validateFixtures(
     }
   }
 
-  // 10. Wednesday pair frequency guard:
-  // Teams should not meet more than twice in a season, except one locked legacy pair.
+  // 10. Wednesday pair frequency guard
   const wednesdayPairFixtures = new Map<string, Fixture[]>();
+  const mondayPairFixtures = new Map<string, Fixture[]>();
+  const wednesdayFirstHalfPairFixtures = new Map<string, Fixture[]>();
+  const wednesdaySecondHalfPairFixtures = new Map<string, Fixture[]>();
+  const mondayFirstHalfPairFixtures = new Map<string, Fixture[]>();
+  const mondaySecondHalfPairFixtures = new Map<string, Fixture[]>();
   for (const fixture of fixtures) {
-    if (fixture.night !== "wednesday") {
-      continue;
+    if (fixture.night === "wednesday") {
+      const [a, b] = [fixture.homeTeam, fixture.awayTeam].sort();
+      const key = `${a}::${b}`;
+      if (!wednesdayPairFixtures.has(key)) wednesdayPairFixtures.set(key, []);
+      wednesdayPairFixtures.get(key)!.push(fixture);
+
+      if (fixture.round <= 11) {
+        if (!wednesdayFirstHalfPairFixtures.has(key)) {
+          wednesdayFirstHalfPairFixtures.set(key, []);
+        }
+        wednesdayFirstHalfPairFixtures.get(key)!.push(fixture);
+      } else {
+        if (!wednesdaySecondHalfPairFixtures.has(key)) {
+          wednesdaySecondHalfPairFixtures.set(key, []);
+        }
+        wednesdaySecondHalfPairFixtures.get(key)!.push(fixture);
+      }
     }
-    const [a, b] = [fixture.homeTeam, fixture.awayTeam].sort();
-    const key = `${a}::${b}`;
-    if (!wednesdayPairFixtures.has(key)) wednesdayPairFixtures.set(key, []);
-    wednesdayPairFixtures.get(key)!.push(fixture);
+    if (fixture.night === "monday") {
+      const [a, b] = [fixture.homeTeam, fixture.awayTeam].sort();
+      const key = `${a}::${b}`;
+      if (!mondayPairFixtures.has(key)) mondayPairFixtures.set(key, []);
+      mondayPairFixtures.get(key)!.push(fixture);
+
+      if (fixture.round <= 9) {
+        if (!mondayFirstHalfPairFixtures.has(key)) {
+          mondayFirstHalfPairFixtures.set(key, []);
+        }
+        mondayFirstHalfPairFixtures.get(key)!.push(fixture);
+      } else {
+        if (!mondaySecondHalfPairFixtures.has(key)) {
+          mondaySecondHalfPairFixtures.set(key, []);
+        }
+        mondaySecondHalfPairFixtures.get(key)!.push(fixture);
+      }
+    }
   }
+
+  // 10a. Wednesday second half should be unique pairings (at most once per pair).
+  for (const [pairKey, pairFixtures] of wednesdaySecondHalfPairFixtures) {
+    if (pairFixtures.length > 1) {
+      const [teamA, teamB] = pairKey.split("::");
+      for (const fixture of pairFixtures) {
+        issues.push({
+          type: "hard",
+          rule: "wednesday-second-half-repeat",
+          fixtureId: fixture.id,
+          message: `Pair ${teamA} vs ${teamB} repeats in second half rounds (${pairFixtures
+            .map((f) => f.round)
+            .sort((a, b) => a - b)
+            .join(", ")})`,
+        });
+      }
+    }
+  }
+
+  const wednesdayOverplayedPairs: Array<{
+    pairKey: string;
+    teamA: string;
+    teamB: string;
+    count: number;
+    fixtures: Fixture[];
+  }> = [];
 
   for (const [pairKey, pairFixtures] of wednesdayPairFixtures) {
     const count = pairFixtures.length;
     const [teamA, teamB] = pairKey.split("::");
-    const isLegacyException = WEDNESDAY_LEGACY_REPEAT_EXCEPTION.has(pairKey);
 
-    if (count > 2 && !isLegacyException) {
+    if (count > 2) {
+      wednesdayOverplayedPairs.push({
+        pairKey,
+        teamA,
+        teamB,
+        count,
+        fixtures: pairFixtures,
+      });
+    }
+  }
+
+  // Wednesday pair-frequency rule:
+  // - Preferred: every pair appears at most 2 times.
+  // - Tolerance: at most one pair may appear 3 times if schedule constraints force it.
+  // - Never allow any pair above 3.
+  const overThree = wednesdayOverplayedPairs.filter((pair) => pair.count > 3);
+  for (const pair of overThree) {
+    for (const fixture of pair.fixtures) {
+      issues.push({
+        type: "hard",
+        rule: "wednesday-pair-overplayed",
+        fixtureId: fixture.id,
+        message: `Pair ${pair.teamA} vs ${pair.teamB} appears ${pair.count} times in Wednesday fixtures (max 3, with only one pair allowed at 3)`,
+      });
+    }
+  }
+
+  const exactlyThree = wednesdayOverplayedPairs.filter((pair) => pair.count === 3);
+  if (exactlyThree.length > 1) {
+    const repeatedFirstHalfPairs = [...wednesdayFirstHalfPairFixtures.entries()]
+      .filter(([, pairFixtures]) => pairFixtures.length > 1)
+      .map(([pairKey]) => pairKey);
+
+    const exactlyThreePairs = exactlyThree.map((pair) => pair.pairKey);
+    const feasibilityHint =
+      repeatedFirstHalfPairs.length > 1
+        ? `Likely unavoidable with current locked first-half repeats (${repeatedFirstHalfPairs.join(
+            "; "
+          )}) unless first-half fixtures are changed.`
+        : "May require a schedule rebuild to reduce to one 3x pair.";
+
+    for (const pair of exactlyThree) {
+      for (const fixture of pair.fixtures) {
+        issues.push({
+          type: "soft",
+          rule: "wednesday-too-many-overplayed-pairs",
+          fixtureId: fixture.id,
+          message: `More than one Wednesday pair appears 3 times (${exactlyThreePairs.join(
+            "; "
+          )}). ${feasibilityHint}`,
+        });
+      }
+    }
+  } else if (exactlyThree.length === 1) {
+    const pair = exactlyThree[0];
+    for (const fixture of pair.fixtures) {
+      issues.push({
+        type: "soft",
+        rule: "wednesday-single-overplayed-pair",
+        fixtureId: fixture.id,
+        message: `Single allowed exception: ${pair.teamA} vs ${pair.teamB} appears 3 times`,
+      });
+    }
+  }
+
+  // 10b. Monday pair-frequency and half split checks (18-round model).
+  const mondayOverThree: Array<{
+    pairKey: string;
+    teamA: string;
+    teamB: string;
+    count: number;
+    fixtures: Fixture[];
+  }> = [];
+  const mondayExactlyThree: Array<{
+    pairKey: string;
+    teamA: string;
+    teamB: string;
+    count: number;
+    fixtures: Fixture[];
+  }> = [];
+
+  for (const [pairKey, pairFixtures] of mondayPairFixtures) {
+    const count = pairFixtures.length;
+    const [teamA, teamB] = pairKey.split("::");
+
+    if (count > 3) {
+      mondayOverThree.push({
+        pairKey,
+        teamA,
+        teamB,
+        count,
+        fixtures: pairFixtures,
+      });
+    } else if (count === 3) {
+      mondayExactlyThree.push({
+        pairKey,
+        teamA,
+        teamB,
+        count,
+        fixtures: pairFixtures,
+      });
+    }
+
+    if (count === 1) {
       for (const fixture of pairFixtures) {
         issues.push({
-          type: "hard",
-          rule: "wednesday-pair-overplayed",
+          type: "soft",
+          rule: "monday-single-meeting",
           fixtureId: fixture.id,
-          message: `Pair ${teamA} vs ${teamB} appears ${count} times in Wednesday fixtures (max 2)`,
+          message: `Monday pair ${teamA} vs ${teamB} currently meets once in the season`,
+        });
+      }
+    }
+
+    if (count === 2) {
+      const homes = new Set(pairFixtures.map((fixture) => fixture.homeTeam));
+      if (homes.size === 1) {
+        for (const fixture of pairFixtures) {
+          issues.push({
+            type: "soft",
+            rule: "monday-home-away-balance",
+            fixtureId: fixture.id,
+            message: `Monday pair ${teamA} vs ${teamB} is not split home/away`,
+          });
+        }
+      }
+    }
+
+    const firstHalfCount = mondayFirstHalfPairFixtures.get(pairKey)?.length ?? 0;
+    const secondHalfCount = mondaySecondHalfPairFixtures.get(pairKey)?.length ?? 0;
+    if (!(firstHalfCount === 1 && secondHalfCount === 1) && count > 0) {
+      for (const fixture of pairFixtures) {
+        issues.push({
+          type: "soft",
+          rule: "monday-half-split",
+          fixtureId: fixture.id,
+          message: `Monday pair ${teamA} vs ${teamB} split is first-9=${firstHalfCount}, last-9=${secondHalfCount}`,
+        });
+      }
+    }
+  }
+
+  for (const pair of mondayOverThree) {
+    for (const fixture of pair.fixtures) {
+      issues.push({
+        type: "hard",
+        rule: "monday-pair-overplayed",
+        fixtureId: fixture.id,
+        message: `Monday pair ${pair.teamA} vs ${pair.teamB} appears ${pair.count} times (max 3 tolerated)` ,
+      });
+    }
+  }
+
+  if (mondayExactlyThree.length > 0) {
+    const names = mondayExactlyThree
+      .map((pair) => `${pair.teamA} vs ${pair.teamB}`)
+      .join("; ");
+    for (const pair of mondayExactlyThree) {
+      for (const fixture of pair.fixtures) {
+        issues.push({
+          type: "soft",
+          rule: "monday-triple-meeting",
+          fixtureId: fixture.id,
+          message: `Monday triple-meeting pair(s): ${names}. Keep only if unavoidable.`,
         });
       }
     }
@@ -212,6 +428,31 @@ export function validateFixtures(
             message: `Wednesday ${sampleFixture.date} should have exactly 2 games at ${time}, found ${count}`,
           });
         }
+      }
+    }
+
+    if (sampleFixture?.night === "monday" && sampleFixture.round >= 4) {
+      if (roundFixtures.length !== 5) {
+        issues.push({
+          type: "hard",
+          rule: "monday-expanded-round-size",
+          fixtureId: sampleFixture.id,
+          message: `Monday round ${sampleFixture.round} should contain 5 fixtures after expansion, found ${roundFixtures.length}`,
+        });
+      }
+
+      const teamsInRound = new Set<string>();
+      for (const fixture of roundFixtures) {
+        teamsInRound.add(fixture.homeTeam);
+        teamsInRound.add(fixture.awayTeam);
+      }
+      if (teamsInRound.size !== mondayTeamIds.size) {
+        issues.push({
+          type: "hard",
+          rule: "monday-expanded-team-coverage",
+          fixtureId: sampleFixture.id,
+          message: `Monday round ${sampleFixture.round} should include all ${mondayTeamIds.size} active teams exactly once`,
+        });
       }
     }
 

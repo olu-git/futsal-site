@@ -130,9 +130,17 @@ Hard constraints currently include:
 - 6 fixtures per round
 - all Wednesday teams represented each round
 - exactly 2 fixtures at each slot (`19:00`, `19:40`, `20:20`)
-- Wednesday pair-frequency check:
-- max 2 meetings per pair
-- one documented legacy exception: `wed-buckle-city::wed-persepolis`
+- Monday expansion checks (round 4 onward):
+- 5 fixtures per round
+- all Monday teams represented each round
+- Wednesday pair-frequency checks:
+- pairs above 3 meetings are hard-fail
+- one 3-meeting pair is tolerated as a soft exception
+- multiple 3-meeting pairs are soft-flagged with feasibility guidance
+- Monday pair-frequency and split checks:
+- pairs above 3 meetings are hard-fail
+- 3-meeting Monday pairs are soft-flagged as constrained exceptions
+- second-half split and once-only pairings are soft-flagged for review
 
 Soft warning:
 
@@ -160,6 +168,13 @@ Sort order:
 
 ## Competition Snapshot
 
-- Monday Night: 8 teams, Division A
+- Monday Night: 10 teams, Division A, 18 rounds
 - Wednesday Night: 12 teams, Division A, 22 rounds
 - Division B: placeholder only
+
+## Finalized Exception Notes (Current Season)
+
+- Monday is finalized at 18 rounds with no extra matchdays and no same-night double headers.
+- Monday late-entry handling is applied for `mon-buckle-city` and `mon-tolaka-group` via `standings-adjustments.json` plus the completed head-to-head fixture.
+- Wednesday late-entry handling is applied for `wed-moza-mama` and `wed-hazara-united` via `standings-adjustments.json`.
+- Because completed fixtures are locked, some pair-frequency exceptions remain and are intentionally surfaced by validator soft warnings.
