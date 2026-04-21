@@ -313,8 +313,8 @@
     "date": "2026-04-22",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-hazara-united",
+    "homeTeam": "wed-pops",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
@@ -325,7 +325,7 @@
     "date": "2026-04-22",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-goldlink-up",
+    "homeTeam": "wed-afg",
     "awayTeam": "wed-persepolis",
     "status": "scheduled"
   },
@@ -338,7 +338,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "wed-misfits",
-    "awayTeam": "wed-unathletico",
+    "awayTeam": "wed-samen",
     "status": "scheduled"
   },
   {
@@ -349,8 +349,8 @@
     "date": "2026-04-22",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-hazara-united",
+    "awayTeam": "wed-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -361,8 +361,8 @@
     "date": "2026-04-22",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-pops",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-moza-mama",
+    "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
   {
@@ -373,8 +373,8 @@
     "date": "2026-04-29",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-persepolis",
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
   {
@@ -385,8 +385,8 @@
     "date": "2026-04-29",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-hazara-united",
+    "homeTeam": "wed-hazara-united",
+    "awayTeam": "wed-samen",
     "status": "scheduled"
   },
   {
@@ -397,8 +397,8 @@
     "date": "2026-04-29",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-unathletico",
+    "homeTeam": "wed-afg",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -409,8 +409,8 @@
     "date": "2026-04-29",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-misfits",
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -421,8 +421,8 @@
     "date": "2026-04-29",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-buckle-city",
+    "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
   {
@@ -433,8 +433,8 @@
     "date": "2026-04-29",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-pops",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-persepolis",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
@@ -445,8 +445,8 @@
     "date": "2026-05-06",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-pops",
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -457,8 +457,8 @@
     "date": "2026-05-06",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-hazara-united",
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
@@ -469,8 +469,8 @@
     "date": "2026-05-06",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-misfits",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-afg",
+    "awayTeam": "wed-buckle-city",
     "status": "scheduled"
   },
   {
@@ -481,8 +481,8 @@
     "date": "2026-05-06",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-persepolis",
+    "homeTeam": "wed-hazara-united",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -494,7 +494,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-wildcats",
+    "awayTeam": "wed-persepolis",
     "status": "scheduled"
   },
   {
@@ -505,8 +505,8 @@
     "date": "2026-05-06",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-samen",
-    "awayTeam": "wed-unathletico",
+    "homeTeam": "wed-rinnai",
+    "awayTeam": "wed-samen",
     "status": "scheduled"
   },
   {
@@ -517,8 +517,8 @@
     "date": "2026-05-13",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-persepolis",
     "status": "scheduled"
   },
   {
@@ -529,8 +529,8 @@
     "date": "2026-05-13",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-misfits",
-    "awayTeam": "wed-pops",
+    "homeTeam": "wed-samen",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -541,8 +541,8 @@
     "date": "2026-05-13",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-buckle-city",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -553,8 +553,8 @@
     "date": "2026-05-13",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-hazara-united",
+    "homeTeam": "wed-hazara-united",
+    "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
   {
@@ -565,7 +565,7 @@
     "date": "2026-05-13",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-moza-mama",
+    "homeTeam": "wed-afg",
     "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
@@ -577,8 +577,8 @@
     "date": "2026-05-13",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-persepolis",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
   {
@@ -589,8 +589,8 @@
     "date": "2026-05-20",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
@@ -601,8 +601,8 @@
     "date": "2026-05-20",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-pops",
+    "homeTeam": "wed-persepolis",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -613,7 +613,7 @@
     "date": "2026-05-20",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-rinnai",
+    "homeTeam": "wed-buckle-city",
     "awayTeam": "wed-samen",
     "status": "scheduled"
   },
@@ -625,8 +625,8 @@
     "date": "2026-05-20",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-hazara-united",
+    "homeTeam": "wed-pops",
+    "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
   {
@@ -637,8 +637,8 @@
     "date": "2026-05-20",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-misfits",
-    "awayTeam": "wed-persepolis",
+    "homeTeam": "wed-afg",
+    "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
   {
@@ -649,8 +649,8 @@
     "date": "2026-05-20",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-unathletico",
+    "homeTeam": "wed-hazara-united",
+    "awayTeam": "wed-misfits",
     "status": "scheduled"
   },
   {
@@ -673,8 +673,8 @@
     "date": "2026-05-27",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-persepolis",
     "status": "scheduled"
   },
   {
@@ -685,8 +685,8 @@
     "date": "2026-05-27",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-afg",
+    "awayTeam": "wed-hazara-united",
     "status": "scheduled"
   },
   {
@@ -697,8 +697,8 @@
     "date": "2026-05-27",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-pops",
+    "homeTeam": "wed-pops",
+    "awayTeam": "wed-samen",
     "status": "scheduled"
   },
   {
@@ -709,8 +709,8 @@
     "date": "2026-05-27",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-misfits",
-    "awayTeam": "wed-moza-mama",
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
   {
@@ -721,7 +721,7 @@
     "date": "2026-05-27",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-moza-mama",
     "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
@@ -734,7 +734,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-hazara-united",
+    "awayTeam": "wed-misfits",
     "status": "scheduled"
   },
   {
@@ -745,8 +745,8 @@
     "date": "2026-06-03",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-persepolis",
+    "homeTeam": "wed-samen",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
@@ -757,8 +757,8 @@
     "date": "2026-06-03",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-pops",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-afg",
+    "awayTeam": "wed-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -769,8 +769,8 @@
     "date": "2026-06-03",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-unathletico",
+    "homeTeam": "wed-persepolis",
+    "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
   {
@@ -781,8 +781,8 @@
     "date": "2026-06-03",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-misfits",
-    "awayTeam": "wed-moza-mama",
+    "homeTeam": "wed-hazara-united",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -793,8 +793,8 @@
     "date": "2026-06-03",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-samen",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-moza-mama",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -805,8 +805,8 @@
     "date": "2026-06-10",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-afg",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -817,8 +817,8 @@
     "date": "2026-06-10",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-pops",
+    "homeTeam": "wed-buckle-city",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
@@ -829,8 +829,8 @@
     "date": "2026-06-10",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-samen",
     "status": "scheduled"
   },
   {
@@ -841,8 +841,8 @@
     "date": "2026-06-10",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-persepolis",
+    "homeTeam": "wed-hazara-united",
+    "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
   {
@@ -853,8 +853,8 @@
     "date": "2026-06-10",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -865,8 +865,8 @@
     "date": "2026-06-10",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-misfits",
-    "awayTeam": "wed-unathletico",
+    "homeTeam": "wed-moza-mama",
+    "awayTeam": "wed-persepolis",
     "status": "scheduled"
   },
   {
@@ -877,8 +877,8 @@
     "date": "2026-06-17",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-pops",
+    "homeTeam": "wed-afg",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
@@ -889,8 +889,8 @@
     "date": "2026-06-17",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-wildcats",
+    "awayTeam": "wed-samen",
     "status": "scheduled"
   },
   {
@@ -901,7 +901,7 @@
     "date": "2026-06-17",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-goldlink-up",
+    "homeTeam": "wed-buckle-city",
     "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
@@ -914,7 +914,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-persepolis",
     "status": "scheduled"
   },
   {
@@ -925,8 +925,8 @@
     "date": "2026-06-17",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-misfits",
-    "awayTeam": "wed-unathletico",
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -937,8 +937,8 @@
     "date": "2026-06-17",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-persepolis",
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
   {
@@ -949,7 +949,7 @@
     "date": "2026-06-24",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-goldlink-up",
+    "homeTeam": "wed-afg",
     "awayTeam": "wed-samen",
     "status": "scheduled"
   },
@@ -961,8 +961,8 @@
     "date": "2026-06-24",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-unathletico",
+    "homeTeam": "wed-wildcats",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -973,7 +973,7 @@
     "date": "2026-06-24",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-buckle-city",
+    "homeTeam": "wed-unathletico",
     "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
@@ -985,8 +985,8 @@
     "date": "2026-06-24",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-buckle-city",
+    "awayTeam": "wed-persepolis",
     "status": "scheduled"
   },
   {
@@ -997,8 +997,8 @@
     "date": "2026-06-24",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-misfits",
-    "awayTeam": "wed-persepolis",
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
   {
@@ -1009,8 +1009,8 @@
     "date": "2026-06-24",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-pops",
+    "homeTeam": "wed-hazara-united",
+    "awayTeam": "wed-misfits",
     "status": "scheduled"
   },
   {
@@ -1021,8 +1021,8 @@
     "date": "2026-07-01",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-misfits",
+    "homeTeam": "wed-samen",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -1033,8 +1033,8 @@
     "date": "2026-07-01",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-moza-mama",
+    "homeTeam": "wed-unathletico",
+    "awayTeam": "wed-persepolis",
     "status": "scheduled"
   },
   {
@@ -1045,7 +1045,7 @@
     "date": "2026-07-01",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-afg",
     "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
@@ -1057,8 +1057,8 @@
     "date": "2026-07-01",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-buckle-city",
+    "awayTeam": "wed-misfits",
     "status": "scheduled"
   },
   {
@@ -1069,8 +1069,8 @@
     "date": "2026-07-01",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-unathletico",
+    "homeTeam": "wed-wildcats",
+    "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
   {
@@ -1081,8 +1081,8 @@
     "date": "2026-07-01",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-pops",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-hazara-united",
     "status": "scheduled"
   },
   {
@@ -1093,8 +1093,8 @@
     "date": "2026-07-08",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-hazara-united",
+    "homeTeam": "wed-afg",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -1105,8 +1105,8 @@
     "date": "2026-07-08",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-persepolis",
+    "homeTeam": "wed-samen",
+    "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
   {
@@ -1117,8 +1117,8 @@
     "date": "2026-07-08",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-pops",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-rinnai",
+    "awayTeam": "wed-persepolis",
     "status": "scheduled"
   },
   {
@@ -1129,8 +1129,8 @@
     "date": "2026-07-08",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-unathletico",
+    "homeTeam": "wed-unathletico",
+    "awayTeam": "wed-misfits",
     "status": "scheduled"
   },
   {
@@ -1141,8 +1141,8 @@
     "date": "2026-07-08",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-misfits",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-wildcats",
+    "awayTeam": "wed-hazara-united",
     "status": "scheduled"
   },
   {
@@ -1153,8 +1153,8 @@
     "date": "2026-07-08",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-buckle-city",
+    "awayTeam": "wed-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -1166,7 +1166,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "wed-afg",
-    "awayTeam": "wed-goldlink-up",
+    "awayTeam": "wed-persepolis",
     "status": "scheduled"
   },
   {
@@ -1177,8 +1177,8 @@
     "date": "2026-07-15",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-persepolis",
+    "homeTeam": "wed-pops",
+    "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
   {
@@ -1190,7 +1190,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-wildcats",
+    "awayTeam": "wed-misfits",
     "status": "scheduled"
   },
   {
@@ -1201,8 +1201,8 @@
     "date": "2026-07-15",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-unathletico",
+    "homeTeam": "wed-unathletico",
+    "awayTeam": "wed-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -1213,8 +1213,8 @@
     "date": "2026-07-15",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-misfits",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-samen",
+    "awayTeam": "wed-hazara-united",
     "status": "scheduled"
   },
   {
@@ -1225,8 +1225,8 @@
     "date": "2026-07-15",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-pops",
+    "homeTeam": "wed-wildcats",
+    "awayTeam": "wed-buckle-city",
     "status": "scheduled"
   },
   {
@@ -1237,7 +1237,7 @@
     "date": "2026-07-22",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-goldlink-up",
+    "homeTeam": "wed-afg",
     "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
@@ -1249,7 +1249,7 @@
     "date": "2026-07-22",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
+    "homeTeam": "wed-persepolis",
     "awayTeam": "wed-misfits",
     "status": "scheduled"
   },
@@ -1261,8 +1261,8 @@
     "date": "2026-07-22",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-pops",
+    "awayTeam": "wed-hazara-united",
     "status": "scheduled"
   },
   {
@@ -1273,8 +1273,8 @@
     "date": "2026-07-22",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-rinnai",
+    "awayTeam": "wed-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -1285,8 +1285,8 @@
     "date": "2026-07-22",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-persepolis",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-samen",
+    "awayTeam": "wed-buckle-city",
     "status": "scheduled"
   },
   {
@@ -1297,8 +1297,8 @@
     "date": "2026-07-22",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-pops",
-    "awayTeam": "wed-unathletico",
+    "homeTeam": "wed-unathletico",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -1310,7 +1310,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "wed-afg",
-    "awayTeam": "wed-goldlink-up",
+    "awayTeam": "wed-misfits",
     "status": "scheduled"
   },
   {
@@ -1321,8 +1321,8 @@
     "date": "2026-07-29",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-pops",
+    "homeTeam": "wed-moza-mama",
+    "awayTeam": "wed-hazara-united",
     "status": "scheduled"
   },
   {
@@ -1333,8 +1333,8 @@
     "date": "2026-07-29",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-persepolis",
+    "awayTeam": "wed-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -1345,8 +1345,8 @@
     "date": "2026-07-29",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-misfits",
+    "homeTeam": "wed-rinnai",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -1357,8 +1357,8 @@
     "date": "2026-07-29",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-pops",
+    "awayTeam": "wed-buckle-city",
     "status": "scheduled"
   },
   {
@@ -1369,7 +1369,7 @@
     "date": "2026-07-29",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-samen",
     "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
@@ -1382,7 +1382,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "wed-afg",
-    "awayTeam": "wed-buckle-city",
+    "awayTeam": "wed-hazara-united",
     "status": "scheduled"
   },
   {
@@ -1393,8 +1393,8 @@
     "date": "2026-08-05",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-misfits",
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -1405,8 +1405,8 @@
     "date": "2026-08-05",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-persepolis",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-moza-mama",
+    "awayTeam": "wed-buckle-city",
     "status": "scheduled"
   },
   {
@@ -1417,8 +1417,8 @@
     "date": "2026-08-05",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-moza-mama",
+    "homeTeam": "wed-persepolis",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -1441,8 +1441,8 @@
     "date": "2026-08-05",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-samen",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-rinnai",
+    "awayTeam": "wed-samen",
     "status": "scheduled"
   },
   {
@@ -1453,8 +1453,8 @@
     "date": "2026-08-12",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-afg",
+    "awayTeam": "wed-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -1465,8 +1465,8 @@
     "date": "2026-08-12",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-moza-mama",
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -1477,8 +1477,8 @@
     "date": "2026-08-12",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-hazara-united",
+    "awayTeam": "wed-buckle-city",
     "status": "scheduled"
   },
   {
@@ -1489,8 +1489,8 @@
     "date": "2026-08-12",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-misfits",
+    "homeTeam": "wed-moza-mama",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
@@ -1502,7 +1502,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-persepolis",
-    "awayTeam": "wed-pops",
+    "awayTeam": "wed-samen",
     "status": "scheduled"
   },
   {
@@ -1513,8 +1513,8 @@
     "date": "2026-08-12",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-unathletico",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-pops",
+    "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
   {
@@ -1538,7 +1538,7 @@
     "time": "19:00",
     "court": 2,
     "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-pops",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
@@ -1549,8 +1549,8 @@
     "date": "2026-08-19",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -1561,8 +1561,8 @@
     "date": "2026-08-19",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-samen",
     "status": "scheduled"
   },
   {
@@ -1573,8 +1573,8 @@
     "date": "2026-08-19",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-misfits",
-    "awayTeam": "wed-samen",
+    "homeTeam": "wed-moza-mama",
+    "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
   {
@@ -1586,7 +1586,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "wed-persepolis",
-    "awayTeam": "wed-unathletico",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   }
 ]

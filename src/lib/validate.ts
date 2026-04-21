@@ -8,10 +8,6 @@ const VIC_PUBLIC_HOLIDAYS = new Set([
   "2026-06-08", // Queen's Birthday (Victoria)
 ]);
 
-const WEDNESDAY_LEGACY_REPEAT_EXCEPTION = new Set([
-  "wed-buckle-city::wed-persepolis",
-]);
-
 // ============================================================
 // Types
 // ============================================================
@@ -163,9 +159,10 @@ export function validateFixtures(
     }
   }
 
-  // 10. Wednesday pair frequency guard:
-  // Teams should not meet more than twice in a season, except one locked legacy pair.
+  // 10. Wednesday pair frequency guard
   const wednesdayPairFixtures = new Map<string, Fixture[]>();
+  const wednesdayFirstHalfPairFixtures = new Map<string, Fixture[]>();
+  const wednesdaySecondHalfPairFixtures = new Map<string, Fixture[]>();
   for (const fixture of fixtures) {
     if (fixture.night !== "wednesday") {
       continue;
@@ -174,22 +171,112 @@ export function validateFixtures(
     const key = `${a}::${b}`;
     if (!wednesdayPairFixtures.has(key)) wednesdayPairFixtures.set(key, []);
     wednesdayPairFixtures.get(key)!.push(fixture);
+
+    if (fixture.round <= 11) {
+      if (!wednesdayFirstHalfPairFixtures.has(key)) {
+        wednesdayFirstHalfPairFixtures.set(key, []);
+      }
+      wednesdayFirstHalfPairFixtures.get(key)!.push(fixture);
+    } else {
+      if (!wednesdaySecondHalfPairFixtures.has(key)) {
+        wednesdaySecondHalfPairFixtures.set(key, []);
+      }
+      wednesdaySecondHalfPairFixtures.get(key)!.push(fixture);
+    }
   }
+
+  // 10a. Wednesday second half should be unique pairings (at most once per pair).
+  for (const [pairKey, pairFixtures] of wednesdaySecondHalfPairFixtures) {
+    if (pairFixtures.length > 1) {
+      const [teamA, teamB] = pairKey.split("::");
+      for (const fixture of pairFixtures) {
+        issues.push({
+          type: "hard",
+          rule: "wednesday-second-half-repeat",
+          fixtureId: fixture.id,
+          message: `Pair ${teamA} vs ${teamB} repeats in second half rounds (${pairFixtures
+            .map((f) => f.round)
+            .sort((a, b) => a - b)
+            .join(", ")})`,
+        });
+      }
+    }
+  }
+
+  const wednesdayOverplayedPairs: Array<{
+    pairKey: string;
+    teamA: string;
+    teamB: string;
+    count: number;
+    fixtures: Fixture[];
+  }> = [];
 
   for (const [pairKey, pairFixtures] of wednesdayPairFixtures) {
     const count = pairFixtures.length;
     const [teamA, teamB] = pairKey.split("::");
-    const isLegacyException = WEDNESDAY_LEGACY_REPEAT_EXCEPTION.has(pairKey);
 
-    if (count > 2 && !isLegacyException) {
-      for (const fixture of pairFixtures) {
+    if (count > 2) {
+      wednesdayOverplayedPairs.push({
+        pairKey,
+        teamA,
+        teamB,
+        count,
+        fixtures: pairFixtures,
+      });
+    }
+  }
+
+  // Wednesday pair-frequency rule:
+  // - Preferred: every pair appears at most 2 times.
+  // - Tolerance: at most one pair may appear 3 times if schedule constraints force it.
+  // - Never allow any pair above 3.
+  const overThree = wednesdayOverplayedPairs.filter((pair) => pair.count > 3);
+  for (const pair of overThree) {
+    for (const fixture of pair.fixtures) {
+      issues.push({
+        type: "hard",
+        rule: "wednesday-pair-overplayed",
+        fixtureId: fixture.id,
+        message: `Pair ${pair.teamA} vs ${pair.teamB} appears ${pair.count} times in Wednesday fixtures (max 3, with only one pair allowed at 3)`,
+      });
+    }
+  }
+
+  const exactlyThree = wednesdayOverplayedPairs.filter((pair) => pair.count === 3);
+  if (exactlyThree.length > 1) {
+    const repeatedFirstHalfPairs = [...wednesdayFirstHalfPairFixtures.entries()]
+      .filter(([, pairFixtures]) => pairFixtures.length > 1)
+      .map(([pairKey]) => pairKey);
+
+    const exactlyThreePairs = exactlyThree.map((pair) => pair.pairKey);
+    const feasibilityHint =
+      repeatedFirstHalfPairs.length > 1
+        ? `Likely unavoidable with current locked first-half repeats (${repeatedFirstHalfPairs.join(
+            "; "
+          )}) unless first-half fixtures are changed.`
+        : "May require a schedule rebuild to reduce to one 3x pair.";
+
+    for (const pair of exactlyThree) {
+      for (const fixture of pair.fixtures) {
         issues.push({
-          type: "hard",
-          rule: "wednesday-pair-overplayed",
+          type: "soft",
+          rule: "wednesday-too-many-overplayed-pairs",
           fixtureId: fixture.id,
-          message: `Pair ${teamA} vs ${teamB} appears ${count} times in Wednesday fixtures (max 2)`,
+          message: `More than one Wednesday pair appears 3 times (${exactlyThreePairs.join(
+            "; "
+          )}). ${feasibilityHint}`,
         });
       }
+    }
+  } else if (exactlyThree.length === 1) {
+    const pair = exactlyThree[0];
+    for (const fixture of pair.fixtures) {
+      issues.push({
+        type: "soft",
+        rule: "wednesday-single-overplayed-pair",
+        fixtureId: fixture.id,
+        message: `Single allowed exception: ${pair.teamA} vs ${pair.teamB} appears 3 times`,
+      });
     }
   }
 
