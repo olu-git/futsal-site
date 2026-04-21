@@ -33,6 +33,11 @@ export function validateFixtures(
       .filter((team) => team.night === "wednesday" && team.division === "A")
       .map((team) => team.id)
   );
+  const mondayTeamIds = new Set(
+    teams
+      .filter((team) => team.night === "monday" && team.division === "A")
+      .map((team) => team.id)
+  );
 
   // Index fixtures by night+date for slot-level checks
   const byNightDate = new Map<string, Fixture[]>();
@@ -161,27 +166,47 @@ export function validateFixtures(
 
   // 10. Wednesday pair frequency guard
   const wednesdayPairFixtures = new Map<string, Fixture[]>();
+  const mondayPairFixtures = new Map<string, Fixture[]>();
   const wednesdayFirstHalfPairFixtures = new Map<string, Fixture[]>();
   const wednesdaySecondHalfPairFixtures = new Map<string, Fixture[]>();
+  const mondayFirstHalfPairFixtures = new Map<string, Fixture[]>();
+  const mondaySecondHalfPairFixtures = new Map<string, Fixture[]>();
   for (const fixture of fixtures) {
-    if (fixture.night !== "wednesday") {
-      continue;
-    }
-    const [a, b] = [fixture.homeTeam, fixture.awayTeam].sort();
-    const key = `${a}::${b}`;
-    if (!wednesdayPairFixtures.has(key)) wednesdayPairFixtures.set(key, []);
-    wednesdayPairFixtures.get(key)!.push(fixture);
+    if (fixture.night === "wednesday") {
+      const [a, b] = [fixture.homeTeam, fixture.awayTeam].sort();
+      const key = `${a}::${b}`;
+      if (!wednesdayPairFixtures.has(key)) wednesdayPairFixtures.set(key, []);
+      wednesdayPairFixtures.get(key)!.push(fixture);
 
-    if (fixture.round <= 11) {
-      if (!wednesdayFirstHalfPairFixtures.has(key)) {
-        wednesdayFirstHalfPairFixtures.set(key, []);
+      if (fixture.round <= 11) {
+        if (!wednesdayFirstHalfPairFixtures.has(key)) {
+          wednesdayFirstHalfPairFixtures.set(key, []);
+        }
+        wednesdayFirstHalfPairFixtures.get(key)!.push(fixture);
+      } else {
+        if (!wednesdaySecondHalfPairFixtures.has(key)) {
+          wednesdaySecondHalfPairFixtures.set(key, []);
+        }
+        wednesdaySecondHalfPairFixtures.get(key)!.push(fixture);
       }
-      wednesdayFirstHalfPairFixtures.get(key)!.push(fixture);
-    } else {
-      if (!wednesdaySecondHalfPairFixtures.has(key)) {
-        wednesdaySecondHalfPairFixtures.set(key, []);
+    }
+    if (fixture.night === "monday") {
+      const [a, b] = [fixture.homeTeam, fixture.awayTeam].sort();
+      const key = `${a}::${b}`;
+      if (!mondayPairFixtures.has(key)) mondayPairFixtures.set(key, []);
+      mondayPairFixtures.get(key)!.push(fixture);
+
+      if (fixture.round <= 9) {
+        if (!mondayFirstHalfPairFixtures.has(key)) {
+          mondayFirstHalfPairFixtures.set(key, []);
+        }
+        mondayFirstHalfPairFixtures.get(key)!.push(fixture);
+      } else {
+        if (!mondaySecondHalfPairFixtures.has(key)) {
+          mondaySecondHalfPairFixtures.set(key, []);
+        }
+        mondaySecondHalfPairFixtures.get(key)!.push(fixture);
       }
-      wednesdaySecondHalfPairFixtures.get(key)!.push(fixture);
     }
   }
 
@@ -280,6 +305,110 @@ export function validateFixtures(
     }
   }
 
+  // 10b. Monday pair-frequency and half split checks (18-round model).
+  const mondayOverThree: Array<{
+    pairKey: string;
+    teamA: string;
+    teamB: string;
+    count: number;
+    fixtures: Fixture[];
+  }> = [];
+  const mondayExactlyThree: Array<{
+    pairKey: string;
+    teamA: string;
+    teamB: string;
+    count: number;
+    fixtures: Fixture[];
+  }> = [];
+
+  for (const [pairKey, pairFixtures] of mondayPairFixtures) {
+    const count = pairFixtures.length;
+    const [teamA, teamB] = pairKey.split("::");
+
+    if (count > 3) {
+      mondayOverThree.push({
+        pairKey,
+        teamA,
+        teamB,
+        count,
+        fixtures: pairFixtures,
+      });
+    } else if (count === 3) {
+      mondayExactlyThree.push({
+        pairKey,
+        teamA,
+        teamB,
+        count,
+        fixtures: pairFixtures,
+      });
+    }
+
+    if (count === 1) {
+      for (const fixture of pairFixtures) {
+        issues.push({
+          type: "soft",
+          rule: "monday-single-meeting",
+          fixtureId: fixture.id,
+          message: `Monday pair ${teamA} vs ${teamB} currently meets once in the season`,
+        });
+      }
+    }
+
+    if (count === 2) {
+      const homes = new Set(pairFixtures.map((fixture) => fixture.homeTeam));
+      if (homes.size === 1) {
+        for (const fixture of pairFixtures) {
+          issues.push({
+            type: "soft",
+            rule: "monday-home-away-balance",
+            fixtureId: fixture.id,
+            message: `Monday pair ${teamA} vs ${teamB} is not split home/away`,
+          });
+        }
+      }
+    }
+
+    const firstHalfCount = mondayFirstHalfPairFixtures.get(pairKey)?.length ?? 0;
+    const secondHalfCount = mondaySecondHalfPairFixtures.get(pairKey)?.length ?? 0;
+    if (!(firstHalfCount === 1 && secondHalfCount === 1) && count > 0) {
+      for (const fixture of pairFixtures) {
+        issues.push({
+          type: "soft",
+          rule: "monday-half-split",
+          fixtureId: fixture.id,
+          message: `Monday pair ${teamA} vs ${teamB} split is first-9=${firstHalfCount}, last-9=${secondHalfCount}`,
+        });
+      }
+    }
+  }
+
+  for (const pair of mondayOverThree) {
+    for (const fixture of pair.fixtures) {
+      issues.push({
+        type: "hard",
+        rule: "monday-pair-overplayed",
+        fixtureId: fixture.id,
+        message: `Monday pair ${pair.teamA} vs ${pair.teamB} appears ${pair.count} times (max 3 tolerated)` ,
+      });
+    }
+  }
+
+  if (mondayExactlyThree.length > 0) {
+    const names = mondayExactlyThree
+      .map((pair) => `${pair.teamA} vs ${pair.teamB}`)
+      .join("; ");
+    for (const pair of mondayExactlyThree) {
+      for (const fixture of pair.fixtures) {
+        issues.push({
+          type: "soft",
+          rule: "monday-triple-meeting",
+          fixtureId: fixture.id,
+          message: `Monday triple-meeting pair(s): ${names}. Keep only if unavoidable.`,
+        });
+      }
+    }
+  }
+
   for (const nightDateFixtures of byNightDate.values()) {
     const sampleFixture = nightDateFixtures[0];
     const byTime = new Map<string, Fixture[]>();
@@ -299,6 +428,31 @@ export function validateFixtures(
             message: `Wednesday ${sampleFixture.date} should have exactly 2 games at ${time}, found ${count}`,
           });
         }
+      }
+    }
+
+    if (sampleFixture?.night === "monday" && sampleFixture.round >= 4) {
+      if (roundFixtures.length !== 5) {
+        issues.push({
+          type: "hard",
+          rule: "monday-expanded-round-size",
+          fixtureId: sampleFixture.id,
+          message: `Monday round ${sampleFixture.round} should contain 5 fixtures after expansion, found ${roundFixtures.length}`,
+        });
+      }
+
+      const teamsInRound = new Set<string>();
+      for (const fixture of roundFixtures) {
+        teamsInRound.add(fixture.homeTeam);
+        teamsInRound.add(fixture.awayTeam);
+      }
+      if (teamsInRound.size !== mondayTeamIds.size) {
+        issues.push({
+          type: "hard",
+          rule: "monday-expanded-team-coverage",
+          fixtureId: sampleFixture.id,
+          message: `Monday round ${sampleFixture.round} should include all ${mondayTeamIds.size} active teams exactly once`,
+        });
       }
     }
 

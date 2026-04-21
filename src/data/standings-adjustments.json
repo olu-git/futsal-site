@@ -54,5 +54,61 @@
     "goalsAgainst": 6,
     "points": 0,
     "note": "Administrative 3-0 losses for pre-entry missed rounds"
+  },
+  {
+    "id": "mon-admin-buckle-tolaka-draw",
+    "night": "monday",
+    "division": "A",
+    "teamId": "mon-buckle-city",
+    "played": 1,
+    "won": 0,
+    "drawn": 1,
+    "lost": 0,
+    "goalsFor": 3,
+    "goalsAgainst": 3,
+    "points": 1,
+    "note": "Administrative pre-entry 3-3 draw with Tolaka Group"
+  },
+  {
+    "id": "mon-admin-tolaka-buckle-draw",
+    "night": "monday",
+    "division": "A",
+    "teamId": "mon-tolaka-group",
+    "played": 1,
+    "won": 0,
+    "drawn": 1,
+    "lost": 0,
+    "goalsFor": 3,
+    "goalsAgainst": 3,
+    "points": 1,
+    "note": "Administrative pre-entry 3-3 draw with Buckle City"
+  },
+  {
+    "id": "mon-admin-buckle-entry-losses",
+    "night": "monday",
+    "division": "A",
+    "teamId": "mon-buckle-city",
+    "played": 2,
+    "won": 0,
+    "drawn": 0,
+    "lost": 2,
+    "goalsFor": 0,
+    "goalsAgainst": 6,
+    "points": 0,
+    "note": "Administrative 3-0 losses for pre-entry missed rounds"
+  },
+  {
+    "id": "mon-admin-tolaka-entry-losses",
+    "night": "monday",
+    "division": "A",
+    "teamId": "mon-tolaka-group",
+    "played": 2,
+    "won": 0,
+    "drawn": 0,
+    "lost": 2,
+    "goalsFor": 0,
+    "goalsAgainst": 6,
+    "points": 0,
+    "note": "Administrative 3-0 losses for pre-entry missed rounds"
   }
 ]
