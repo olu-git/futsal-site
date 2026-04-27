@@ -245,9 +245,11 @@
     "date": "2026-04-27",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-persepolis",
-    "awayTeam": "mon-afg",
-    "status": "scheduled"
+    "homeTeam": "mon-afg",
+    "awayTeam": "mon-persepolis",
+    "homeScore": 1,
+    "awayScore": 3,
+    "status": "completed"
   },
   {
     "id": "mon-r5-2",
@@ -259,7 +261,9 @@
     "court": 1,
     "homeTeam": "mon-buckle-city",
     "awayTeam": "mon-blue-dragons",
-    "status": "scheduled"
+    "homeScore": 2,
+    "awayScore": 4,
+    "status": "completed"
   },
   {
     "id": "mon-r5-3",
@@ -267,11 +271,13 @@
     "division": "A",
     "round": 5,
     "date": "2026-04-27",
-    "time": "19:40",
+    "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-misfits",
-    "awayTeam": "mon-goldlink-up",
-    "status": "scheduled"
+    "homeTeam": "mon-wildcats",
+    "awayTeam": "mon-misfits",
+    "homeScore": 4,
+    "awayScore": 5,
+    "status": "completed"
   },
   {
     "id": "mon-r5-4",
@@ -281,9 +287,11 @@
     "date": "2026-04-27",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-wildcats",
-    "awayTeam": "mon-moza-mama",
-    "status": "scheduled"
+    "homeTeam": "mon-goldlink-up",
+    "awayTeam": "mon-samen",
+    "homeScore": 4,
+    "awayScore": 7,
+    "status": "completed"
   },
   {
     "id": "mon-r5-5",
@@ -294,8 +302,10 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "mon-tolaka-group",
-    "awayTeam": "mon-samen",
-    "status": "scheduled"
+    "awayTeam": "mon-moza-mama",
+    "homeScore": 8,
+    "awayScore": 6,
+    "status": "completed"
   },
   {
     "id": "mon-r6-1",
@@ -387,8 +397,8 @@
     "division": "A",
     "round": 7,
     "date": "2026-05-11",
-    "time": "19:40",
-    "court": 2,
+    "time": "20:20",
+    "court": 1,
     "homeTeam": "mon-moza-mama",
     "awayTeam": "mon-buckle-city",
     "status": "scheduled"
@@ -399,8 +409,8 @@
     "division": "A",
     "round": 7,
     "date": "2026-05-11",
-    "time": "20:20",
-    "court": 1,
+    "time": "19:40",
+    "court": 2,
     "homeTeam": "mon-samen",
     "awayTeam": "mon-persepolis",
     "status": "scheduled"
@@ -555,7 +565,7 @@
     "division": "A",
     "round": 10,
     "date": "2026-06-01",
-    "time": "19:40",
+    "time": "20:20",
     "court": 1,
     "homeTeam": "mon-blue-dragons",
     "awayTeam": "mon-buckle-city",
@@ -579,7 +589,7 @@
     "division": "A",
     "round": 10,
     "date": "2026-06-01",
-    "time": "20:20",
+    "time": "19:40",
     "court": 1,
     "homeTeam": "mon-tolaka-group",
     "awayTeam": "mon-misfits",
@@ -867,8 +877,8 @@
     "division": "A",
     "round": 15,
     "date": "2026-07-13",
-    "time": "19:40",
-    "court": 2,
+    "time": "20:20",
+    "court": 1,
     "homeTeam": "mon-wildcats",
     "awayTeam": "mon-buckle-city",
     "status": "scheduled"
@@ -879,8 +889,8 @@
     "division": "A",
     "round": 15,
     "date": "2026-07-13",
-    "time": "20:20",
-    "court": 1,
+    "time": "19:40",
+    "court": 2,
     "homeTeam": "mon-misfits",
     "awayTeam": "mon-persepolis",
     "status": "scheduled"
