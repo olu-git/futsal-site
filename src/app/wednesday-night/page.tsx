@@ -33,11 +33,6 @@ export default function WednesdayNightPage() {
     getFixturesByRound("wednesday", r).every((f) => f.status === "scheduled")
   );
 
-  const totalResults = completedRounds.reduce(
-    (sum, r) => sum + getFixturesByRound("wednesday", r).filter((f) => f.status === "completed").length,
-    0
-  );
-
   return (
     <div>
       {/* Hero Section — full-bleed image style */}
@@ -136,7 +131,7 @@ export default function WednesdayNightPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
               title="Results"
-              subtitle={`${totalResults} completed match${totalResults !== 1 ? "es" : ""} across ${completedRounds.length} round${completedRounds.length !== 1 ? "s" : ""}`}
+              subtitle={`${completedRounds.length} round${completedRounds.length !== 1 ? "s" : ""} played`}
             />
             <div className="mt-10 space-y-3">
               {completedRounds.map((round, i) => {
