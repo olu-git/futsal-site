@@ -9,6 +9,8 @@
   { "id": "mon-samen",          "name": "Samen",        "night": "monday",    "division": "A" },
   { "id": "mon-tolaka-group",   "name": "Tolaka Group", "night": "monday",    "division": "A" },
   { "id": "mon-wildcats",       "name": "Wildcats",     "night": "monday",    "division": "A" },
+  { "id": "mon-premiers-fc",    "name": "Premiers FC",  "night": "monday",    "division": "A" },
+  { "id": "mon-salvos",         "name": "Salvos",       "night": "monday",    "division": "A" },
 
   { "id": "wed-afg",         "name": "AFG",         "night": "wednesday", "division": "A" },
   { "id": "wed-buckle-city", "name": "Buckle City", "night": "wednesday", "division": "A" },

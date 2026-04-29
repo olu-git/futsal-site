@@ -42,6 +42,10 @@ export function validateFixtures(
   // Index fixtures by night+date for slot-level checks
   const byNightDate = new Map<string, Fixture[]>();
   const byNightRound = new Map<string, Fixture[]>();
+  const mondayMaxRound = fixtures
+    .filter((fixture) => fixture.night === "monday")
+    .reduce((maxRound, fixture) => Math.max(maxRound, fixture.round), 0);
+  const mondayHalfRound = Math.floor(mondayMaxRound / 2);
   for (const f of fixtures) {
     const key = `${f.night}::${f.date}`;
     if (!byNightDate.has(key)) byNightDate.set(key, []);
@@ -161,13 +165,13 @@ export function validateFixtures(
       }
     }
 
-    if (night === "monday" && round >= 4) {
-      if (roundFixtures.length !== 5) {
+    if (night === "monday" && round >= 6) {
+      if (roundFixtures.length !== 6) {
         issues.push({
           type: "hard",
           rule: "monday-expanded-round-size",
           fixtureId: roundFixtures[0]?.id ?? `mon-r${round}`,
-          message: `Monday round ${round} should contain 5 fixtures after expansion, found ${roundFixtures.length}`,
+          message: `Monday round ${round} should contain 6 fixtures after expansion, found ${roundFixtures.length}`,
         });
       }
 
@@ -219,7 +223,7 @@ export function validateFixtures(
       if (!mondayPairFixtures.has(key)) mondayPairFixtures.set(key, []);
       mondayPairFixtures.get(key)!.push(fixture);
 
-      if (fixture.round <= 9) {
+      if (fixture.round <= mondayHalfRound) {
         if (!mondayFirstHalfPairFixtures.has(key)) {
           mondayFirstHalfPairFixtures.set(key, []);
         }
@@ -399,7 +403,9 @@ export function validateFixtures(
           type: "soft",
           rule: "monday-half-split",
           fixtureId: fixture.id,
-          message: `Monday pair ${teamA} vs ${teamB} split is first-9=${firstHalfCount}, last-9=${secondHalfCount}`,
+          message: `Monday pair ${teamA} vs ${teamB} split is first-${mondayHalfRound}=${firstHalfCount}, last-${
+            mondayMaxRound - mondayHalfRound
+          }=${secondHalfCount}`,
         });
       }
     }
@@ -449,6 +455,19 @@ export function validateFixtures(
             rule: "wednesday-slot-balance",
             fixtureId: sampleFixture.id,
             message: `Wednesday ${sampleFixture.date} should have exactly 2 games at ${time}, found ${count}`,
+          });
+        }
+      }
+    }
+    if (sampleFixture?.night === "monday" && sampleFixture.round >= 6) {
+      for (const time of ["19:00", "19:40", "20:20"]) {
+        const count = byTime.get(time)?.length ?? 0;
+        if (count !== 2) {
+          issues.push({
+            type: "hard",
+            rule: "monday-slot-balance",
+            fixtureId: sampleFixture.id,
+            message: `Monday ${sampleFixture.date} should have exactly 2 games at ${time}, found ${count}`,
           });
         }
       }
