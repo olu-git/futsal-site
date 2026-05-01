@@ -387,7 +387,9 @@
     "court": 1,
     "homeTeam": "wed-goldlink-up",
     "awayTeam": "wed-moza-mama",
-    "status": "scheduled"
+    "homeScore": 5,
+    "awayScore": 2,
+    "status": "completed"
   },
   {
     "id": "wed-r6-2",
@@ -399,7 +401,9 @@
     "court": 2,
     "homeTeam": "wed-hazara-united",
     "awayTeam": "wed-samen",
-    "status": "scheduled"
+    "homeScore": 2,
+    "awayScore": 4,
+    "status": "completed"
   },
   {
     "id": "wed-r6-3",
@@ -411,7 +415,9 @@
     "court": 1,
     "homeTeam": "wed-afg",
     "awayTeam": "wed-pops",
-    "status": "scheduled"
+    "homeScore": 3,
+    "awayScore": 5,
+    "status": "completed"
   },
   {
     "id": "wed-r6-4",
@@ -423,7 +429,9 @@
     "court": 2,
     "homeTeam": "wed-misfits",
     "awayTeam": "wed-wildcats",
-    "status": "scheduled"
+    "homeScore": 4,
+    "awayScore": 4,
+    "status": "completed"
   },
   {
     "id": "wed-r6-5",
@@ -435,7 +443,9 @@
     "court": 1,
     "homeTeam": "wed-buckle-city",
     "awayTeam": "wed-rinnai",
-    "status": "scheduled"
+    "homeScore": 2,
+    "awayScore": 4,
+    "status": "completed"
   },
   {
     "id": "wed-r6-6",
@@ -447,7 +457,9 @@
     "court": 2,
     "homeTeam": "wed-persepolis",
     "awayTeam": "wed-unathletico",
-    "status": "scheduled"
+    "homeScore": 5,
+    "awayScore": 3,
+    "status": "completed"
   },
   {
     "id": "wed-r7-1",
