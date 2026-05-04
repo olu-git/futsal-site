@@ -84,16 +84,40 @@ export function validateFixtures(
       });
     }
 
-    // 3. Samen ideally not at 19:00 (soft)
+    // 3. Samen never at 19:00 for scheduled fixtures, and prefer 20:20 over 19:40
     if (
+      f.status === "scheduled" &&
       f.time === "19:00" &&
       (f.homeTeam.endsWith("-samen") || f.awayTeam.endsWith("-samen"))
     ) {
       issues.push({
-        type: "soft",
-        rule: "samen-avoid-19:00",
+        type: "hard",
+        rule: "samen-no-19:00",
         fixtureId: f.id,
-        message: `Samen is at 19:00 in fixture ${f.id} (${f.date}) — try to move to a later slot`,
+        message:
+          "Samen is scheduled at 19:00 in fixture " +
+          f.id +
+          " (" +
+          f.date +
+          ")",
+      });
+    }
+
+    if (
+      f.status === "scheduled" &&
+      f.time === "19:40" &&
+      (f.homeTeam.endsWith("-samen") || f.awayTeam.endsWith("-samen"))
+    ) {
+      issues.push({
+        type: "soft",
+        rule: "samen-prefer-20:20",
+        fixtureId: f.id,
+        message:
+          "Samen is scheduled at 19:40 in fixture " +
+          f.id +
+          " (" +
+          f.date +
+          "); use only if needed to reduce fixture redundancy",
       });
     }
 
