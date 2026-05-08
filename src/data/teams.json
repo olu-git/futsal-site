@@ -13,7 +13,7 @@
   { "id": "mon-salvos",         "name": "Salvos",       "night": "monday",    "division": "A" },
 
   { "id": "wed-afg",         "name": "AFG",         "night": "wednesday", "division": "A" },
-  { "id": "wed-buckle-city", "name": "Buckle City", "night": "wednesday", "division": "A" },
+  { "id": "wed-buckle-city", "name": "Black Lock", "night": "wednesday", "division": "A" },
   { "id": "wed-goldlink-up", "name": "Goldlink Up", "night": "wednesday", "division": "A" },
   { "id": "wed-misfits",     "name": "Misfits",     "night": "wednesday", "division": "A" },
   { "id": "wed-moza-mama",   "name": "Moza Mama",   "night": "wednesday", "division": "A" },
