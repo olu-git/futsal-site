@@ -58,7 +58,14 @@ export function getUpcomingFixtures(night: CompetitionNight): Fixture[] {
 }
 
 export function getFixturesByRound(night: CompetitionNight, round: number): Fixture[] {
-  return fixtures.filter((f) => f.night === night && f.round === round);
+  return fixtures
+    .filter((f) => f.night === night && f.round === round)
+    .sort(
+      (a, b) =>
+        a.date.localeCompare(b.date) ||
+        a.time.localeCompare(b.time) ||
+        a.court - b.court
+    );
 }
 
 export function getAllRounds(night: CompetitionNight): number[] {
