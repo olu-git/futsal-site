@@ -1,27 +1,158 @@
 [
-  { "id": "mon-afg",            "name": "AFG",          "night": "monday",    "division": "A" },
-  { "id": "mon-blue-dragons",   "name": "Blue Dragons", "night": "monday",    "division": "A" },
-  { "id": "mon-moza-mama",      "name": "Moza Mama",    "night": "monday",    "division": "A" },
-  { "id": "mon-buckle-city",    "name": "Buckle City",  "night": "monday",    "division": "A" },
-  { "id": "mon-goldlink-up",    "name": "Goldlink Up",  "night": "monday",    "division": "A" },
-  { "id": "mon-misfits",        "name": "Misfits",      "night": "monday",    "division": "A" },
-  { "id": "mon-persepolis",     "name": "Persepolis",   "night": "monday",    "division": "A" },
-  { "id": "mon-samen",          "name": "Samen",        "night": "monday",    "division": "A" },
-  { "id": "mon-tolaka-group",   "name": "Tolaka Group", "night": "monday",    "division": "A" },
-  { "id": "mon-wildcats",       "name": "Wildcats",     "night": "monday",    "division": "A" },
-  { "id": "mon-premiers-fc",    "name": "Premiers FC",  "night": "monday",    "division": "A" },
-  { "id": "mon-salvos",         "name": "Salvos",       "night": "monday",    "division": "A" },
-
-  { "id": "wed-afg",         "name": "AFG",         "night": "wednesday", "division": "A" },
-  { "id": "wed-buckle-city", "name": "Black Lock", "night": "wednesday", "division": "A" },
-  { "id": "wed-goldlink-up", "name": "Goldlink Up", "night": "wednesday", "division": "A" },
-  { "id": "wed-misfits",     "name": "Misfits",     "night": "wednesday", "division": "A" },
-  { "id": "wed-moza-mama",   "name": "Moza Mama",   "night": "wednesday", "division": "A" },
-  { "id": "wed-hazara-united","name": "Hazara United","night": "wednesday", "division": "A" },
-  { "id": "wed-persepolis",  "name": "Persepolis",  "night": "wednesday", "division": "A" },
-  { "id": "wed-pops",        "name": "Pops",        "night": "wednesday", "division": "A" },
-  { "id": "wed-rinnai",      "name": "Rinnai",      "night": "wednesday", "division": "A" },
-  { "id": "wed-samen",       "name": "Samen",        "night": "wednesday", "division": "A" },
-  { "id": "wed-unathletico", "name": "Unathletico", "night": "wednesday", "division": "A" },
-  { "id": "wed-wildcats",    "name": "Wildcats",    "night": "wednesday", "division": "A" }
+  {
+    "id": "mon-afg",
+    "name": "AFG",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-blue-dragons",
+    "name": "Blue Dragons",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-moza-mama",
+    "name": "Moza Mama",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-buckle-city",
+    "name": "Buckle City",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-goldlink-up",
+    "name": "Goldlink Up",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-misfits",
+    "name": "Misfits",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-persepolis",
+    "name": "Persepolis",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-samen",
+    "name": "Samen",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-tolaka-group",
+    "name": "Tolaka Group",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-wildcats",
+    "name": "Wildcats",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-premiers-fc",
+    "name": "Premiers FC",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-salvos",
+    "name": "Salvos",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "wed-afg",
+    "name": "AFG",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-buckle-city",
+    "name": "Buckle City",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-goldlink-up",
+    "name": "Goldlink Up",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-misfits",
+    "name": "Misfits",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-moza-mama",
+    "name": "Moza Mama",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-hazara-united",
+    "name": "Hazara United",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-persepolis",
+    "name": "Persepolis",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-pops",
+    "name": "Pops",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-rinnai",
+    "name": "Rinnai",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-samen",
+    "name": "Samen",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-unathletico",
+    "name": "Unathletico",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-wildcats",
+    "name": "Wildcats",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-black-lock",
+    "name": "Black Lock",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-toss",
+    "name": "Toss",
+    "night": "wednesday",
+    "division": "A"
+  }
 ]

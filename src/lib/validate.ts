@@ -33,6 +33,11 @@ export function validateFixtures(
       .filter((team) => team.night === "wednesday" && team.division === "A")
       .map((team) => team.id)
   );
+  const wednesdayPreRound8TeamIds = new Set(
+    [...wednesdayTeamIds].filter(
+      (teamId) => teamId !== "wed-black-lock" && teamId !== "wed-toss"
+    )
+  );
   const mondayTeamIds = new Set(
     teams
       .filter((team) => team.night === "monday" && team.division === "A")
@@ -58,7 +63,7 @@ export function validateFixtures(
 
   // ── Per-fixture checks ──────────────────────────────────────
   for (const f of fixtures) {
-    // 1. Rinnai never at 19:00
+    // 1. Blue Dragons/Rinnai never at 19:00
     if (
       f.time === "19:00" &&
       (f.homeTeam === "wed-rinnai" || f.awayTeam === "wed-rinnai")
@@ -67,14 +72,17 @@ export function validateFixtures(
         type: "hard",
         rule: "rinnai-no-19:00",
         fixtureId: f.id,
-        message: `Rinnai is scheduled at 19:00 in fixture ${f.id} (${f.date})`,
+        message: `Blue Dragons/Rinnai is scheduled at 19:00 in fixture ${f.id} (${f.date})`,
       });
     }
 
     // 2. Blue Dragons never at 19:00
     if (
       f.time === "19:00" &&
-      (f.homeTeam === "mon-blue-dragons" || f.awayTeam === "mon-blue-dragons")
+      (f.homeTeam === "mon-blue-dragons" ||
+        f.awayTeam === "mon-blue-dragons" ||
+        f.homeTeam === "wed-rinnai" ||
+        f.awayTeam === "wed-rinnai")
     ) {
       issues.push({
         type: "hard",
@@ -164,12 +172,16 @@ export function validateFixtures(
     const round = Number(roundValue);
 
     if (night === "wednesday" && round >= 4) {
-      if (roundFixtures.length !== 6) {
+      const expectedFixtureCount = round >= 8 ? 7 : 6;
+      const expectedTeamIds =
+        round >= 8 ? wednesdayTeamIds : wednesdayPreRound8TeamIds;
+
+      if (roundFixtures.length !== expectedFixtureCount) {
         issues.push({
           type: "hard",
           rule: "wednesday-expansion-round-size",
           fixtureId: roundFixtures[0]?.id ?? `wed-r${round}`,
-          message: `Wednesday round ${round} should contain 6 fixtures after expansion, found ${roundFixtures.length}`,
+          message: `Wednesday round ${round} should contain ${expectedFixtureCount} fixtures after expansion, found ${roundFixtures.length}`,
         });
       }
 
@@ -179,12 +191,12 @@ export function validateFixtures(
         teamsInRound.add(fixture.awayTeam);
       }
 
-      if (teamsInRound.size !== wednesdayTeamIds.size) {
+      if (teamsInRound.size !== expectedTeamIds.size) {
         issues.push({
           type: "hard",
           rule: "wednesday-expansion-team-coverage",
           fixtureId: roundFixtures[0]?.id ?? `wed-r${round}`,
-          message: `Wednesday round ${round} should include all ${wednesdayTeamIds.size} active teams exactly once`,
+          message: `Wednesday round ${round} should include all ${expectedTeamIds.size} active teams exactly once`,
         });
       }
     }
@@ -229,7 +241,7 @@ export function validateFixtures(
       if (!wednesdayPairFixtures.has(key)) wednesdayPairFixtures.set(key, []);
       wednesdayPairFixtures.get(key)!.push(fixture);
 
-      if (fixture.round <= 11) {
+      if (fixture.round <= 13) {
         if (!wednesdayFirstHalfPairFixtures.has(key)) {
           wednesdayFirstHalfPairFixtures.set(key, []);
         }
@@ -261,19 +273,19 @@ export function validateFixtures(
     }
   }
 
-  // 10a. Wednesday second half should be unique pairings (at most once per pair).
+  // 10a. Wednesday second half should ideally avoid repeat pairings.
   for (const [pairKey, pairFixtures] of wednesdaySecondHalfPairFixtures) {
     if (pairFixtures.length > 1) {
       const [teamA, teamB] = pairKey.split("::");
       for (const fixture of pairFixtures) {
         issues.push({
-          type: "hard",
+          type: "soft",
           rule: "wednesday-second-half-repeat",
           fixtureId: fixture.id,
           message: `Pair ${teamA} vs ${teamB} repeats in second half rounds (${pairFixtures
             .map((f) => f.round)
             .sort((a, b) => a - b)
-            .join(", ")})`,
+            .join(", ")}); keep only if needed after preserving completed fixtures`,
         });
       }
     }
@@ -479,6 +491,18 @@ export function validateFixtures(
             rule: "wednesday-slot-balance",
             fixtureId: sampleFixture.id,
             message: `Wednesday ${sampleFixture.date} should have exactly 2 games at ${time}, found ${count}`,
+          });
+        }
+      }
+
+      if (sampleFixture.round >= 8) {
+        const count = byTime.get("21:00")?.length ?? 0;
+        if (count !== 1) {
+          issues.push({
+            type: "hard",
+            rule: "wednesday-slot-balance",
+            fixtureId: sampleFixture.id,
+            message: `Wednesday ${sampleFixture.date} should have exactly 1 game at 21:00, found ${count}`,
           });
         }
       }
