@@ -485,7 +485,9 @@
     "court": 1,
     "homeTeam": "mon-misfits",
     "awayTeam": "mon-moza-mama",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 9,
+    "awayScore": 5
   },
   {
     "id": "mon-r8-2",
@@ -497,7 +499,9 @@
     "court": 2,
     "homeTeam": "mon-tolaka-group",
     "awayTeam": "mon-wildcats",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 0,
+    "awayScore": 5
   },
   {
     "id": "mon-r8-3",
@@ -509,7 +513,9 @@
     "court": 1,
     "homeTeam": "mon-samen",
     "awayTeam": "mon-premiers-fc",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 6,
+    "awayScore": 7
   },
   {
     "id": "mon-r8-1",
@@ -521,7 +527,9 @@
     "court": 2,
     "homeTeam": "mon-afg",
     "awayTeam": "mon-buckle-city",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 5,
+    "awayScore": 10
   },
   {
     "id": "mon-r8-4",
@@ -533,7 +541,9 @@
     "court": 1,
     "homeTeam": "mon-persepolis",
     "awayTeam": "mon-blue-dragons",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 11,
+    "awayScore": 3
   },
   {
     "id": "mon-r8-6",
@@ -545,7 +555,9 @@
     "court": 2,
     "homeTeam": "mon-goldlink-up",
     "awayTeam": "mon-salvos",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 10,
+    "awayScore": 6
   },
   {
     "id": "mon-r9-3",
