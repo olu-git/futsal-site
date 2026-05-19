@@ -604,7 +604,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "mon-persepolis",
-    "awayTeam": "mon-premiers-fc",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -616,7 +616,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-wildcats",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -1024,7 +1024,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "mon-moza-mama",
-    "awayTeam": "mon-afg",
+    "awayTeam": "mon-buckle-city",
     "status": "scheduled"
   },
   {
@@ -1036,7 +1036,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "mon-misfits",
-    "awayTeam": "mon-buckle-city",
+    "awayTeam": "mon-afg",
     "status": "scheduled"
   },
   {
@@ -1216,7 +1216,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "mon-buckle-city",
-    "awayTeam": "mon-goldlink-up",
+    "awayTeam": "mon-misfits",
     "status": "scheduled"
   },
   {
@@ -1252,7 +1252,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "mon-moza-mama",
-    "awayTeam": "mon-misfits",
+    "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -1324,7 +1324,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "mon-afg",
-    "awayTeam": "mon-wildcats",
+    "awayTeam": "mon-tolaka-group",
     "status": "scheduled"
   },
   {
@@ -1348,7 +1348,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "mon-samen",
-    "awayTeam": "mon-tolaka-group",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -1456,7 +1456,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-premiers-fc",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -1492,7 +1492,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "mon-buckle-city",
-    "awayTeam": "mon-wildcats",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -1527,8 +1527,8 @@
     "date": "2026-08-24",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-tolaka-group",
-    "awayTeam": "mon-afg",
+    "homeTeam": "mon-afg",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -1564,7 +1564,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "mon-samen",
-    "awayTeam": "mon-wildcats",
+    "awayTeam": "mon-tolaka-group",
     "status": "scheduled"
   }
 ]
