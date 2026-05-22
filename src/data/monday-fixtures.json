@@ -580,7 +580,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "mon-goldlink-up",
-    "awayTeam": "mon-premiers-fc",
+    "awayTeam": "mon-buckle-city",
     "status": "scheduled"
   },
   {
@@ -592,7 +592,7 @@
     "time": "19:00",
     "court": 2,
     "homeTeam": "mon-moza-mama",
-    "awayTeam": "mon-buckle-city",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -712,7 +712,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "mon-afg",
-    "awayTeam": "mon-premiers-fc",
+    "awayTeam": "mon-buckle-city",
     "status": "scheduled"
   },
   {
@@ -747,8 +747,8 @@
     "date": "2026-06-08",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-buckle-city",
-    "awayTeam": "mon-goldlink-up",
+    "homeTeam": "mon-goldlink-up",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -880,7 +880,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "mon-afg",
-    "awayTeam": "mon-blue-dragons",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -904,7 +904,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "mon-moza-mama",
-    "awayTeam": "mon-premiers-fc",
+    "awayTeam": "mon-blue-dragons",
     "status": "scheduled"
   },
   {
