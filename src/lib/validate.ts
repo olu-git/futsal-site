@@ -43,6 +43,9 @@ export function validateFixtures(
       .filter((team) => team.night === "monday" && team.division === "A")
       .map((team) => team.id)
   );
+  const teamNameById = new Map(teams.map((team) => [team.id, team.name]));
+  const isBuckleCityTeam = (teamId: string) =>
+    teamId.endsWith("-buckle-city") || teamNameById.get(teamId) === "Buckle City";
 
   // Index fixtures by night+date for slot-level checks
   const byNightDate = new Map<string, Fixture[]>();
@@ -564,8 +567,7 @@ export function validateFixtures(
       // 9. Buckle City and Goldlink Up never simultaneous unless playing each other
       const buckleFx = slotFixtures.find(
         (f) =>
-          f.homeTeam.endsWith("-buckle-city") ||
-          f.awayTeam.endsWith("-buckle-city")
+          isBuckleCityTeam(f.homeTeam) || isBuckleCityTeam(f.awayTeam)
       );
       const goldlinkFx = slotFixtures.find(
         (f) =>

@@ -49,7 +49,7 @@
     "date": "2026-03-25",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-buckle-city",
     "homeScore": 5,
     "awayScore": 4,
@@ -133,7 +133,7 @@
     "date": "2026-04-01",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-samen",
     "homeScore": 5,
     "awayScore": 0,
@@ -190,7 +190,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-buckle-city",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "homeScore": 6,
     "awayScore": 13,
     "status": "completed"
@@ -245,7 +245,7 @@
     "date": "2026-04-15",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-pops",
     "homeScore": 14,
     "awayScore": 4,
@@ -330,7 +330,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "wed-afg",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "homeScore": 4,
     "awayScore": 3,
     "status": "completed"
@@ -455,7 +455,7 @@
     "date": "2026-04-29",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-unathletico",
     "homeScore": 5,
     "awayScore": 3,
@@ -526,7 +526,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "completed",
     "homeScore": 4,
     "awayScore": 12
@@ -554,7 +554,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "completed",
     "homeScore": 11,
     "awayScore": 4
@@ -735,7 +735,7 @@
     "date": "2026-05-20",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-wildcats",
     "status": "completed",
     "homeScore": 7,
@@ -822,7 +822,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "wed-misfits",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -846,7 +846,7 @@
     "time": "19:00",
     "court": 2,
     "homeTeam": "wed-black-lock",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -978,7 +978,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1074,7 +1074,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "wed-wildcats",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1121,7 +1121,7 @@
     "date": "2026-06-24",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-toss",
     "status": "scheduled"
   },
@@ -1241,7 +1241,7 @@
     "date": "2026-07-01",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-hazara-united",
     "status": "scheduled"
   },
@@ -1314,7 +1314,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1374,7 +1374,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "wed-misfits",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1457,7 +1457,7 @@
     "date": "2026-07-22",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
@@ -1578,7 +1578,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "wed-unathletico",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1601,7 +1601,7 @@
     "date": "2026-08-05",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-afg",
     "status": "scheduled"
   },
@@ -1745,7 +1745,7 @@
     "date": "2026-08-12",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-pops",
     "status": "scheduled"
   },
@@ -1794,7 +1794,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1842,7 +1842,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1997,7 +1997,7 @@
     "date": "2026-09-02",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-samen",
     "status": "scheduled"
   },
@@ -2010,7 +2010,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "wed-afg",
-    "awayTeam": "wed-persepolis",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -2129,7 +2129,7 @@
     "date": "2026-09-16",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-persepolis",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-black-lock",
     "status": "scheduled"
   },

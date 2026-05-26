@@ -36,8 +36,8 @@
     "division": "A"
   },
   {
-    "id": "mon-persepolis",
-    "name": "Persepolis",
+    "id": "mon-ghazni-united",
+    "name": "Ghazni United",
     "night": "monday",
     "division": "A"
   },
@@ -49,7 +49,7 @@
   },
   {
     "id": "mon-tolaka-group",
-    "name": "Tolaka Group",
+    "name": "Buckle City",
     "night": "monday",
     "division": "A"
   },
@@ -108,8 +108,8 @@
     "division": "A"
   },
   {
-    "id": "wed-persepolis",
-    "name": "Persepolis",
+    "id": "wed-ghazni-united",
+    "name": "Ghazni United",
     "night": "wednesday",
     "division": "A"
   },
