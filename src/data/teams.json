@@ -18,7 +18,7 @@
     "division": "A"
   },
   {
-    "id": "mon-buckle-city",
+    "id": "mon-hunger-fc",
     "name": "Hunger FC",
     "night": "monday",
     "division": "A"
@@ -48,8 +48,8 @@
     "division": "A"
   },
   {
-    "id": "mon-tolaka-group",
-    "name": "Buckle City",
+    "id": "mon-toss",
+    "name": "Toss",
     "night": "monday",
     "division": "A"
   },

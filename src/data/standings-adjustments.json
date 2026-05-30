@@ -199,7 +199,7 @@
     "id": "mon-admin-buckle-tolaka-draw",
     "night": "monday",
     "division": "A",
-    "teamId": "mon-buckle-city",
+    "teamId": "mon-hunger-fc",
     "played": 1,
     "won": 0,
     "drawn": 1,
@@ -207,13 +207,13 @@
     "goalsFor": 3,
     "goalsAgainst": 3,
     "points": 1,
-    "note": "Administrative pre-entry 3-3 draw with Buckle City"
+    "note": "Administrative pre-entry 3-3 draw with Toss"
   },
   {
     "id": "mon-admin-tolaka-buckle-draw",
     "night": "monday",
     "division": "A",
-    "teamId": "mon-tolaka-group",
+    "teamId": "mon-toss",
     "played": 1,
     "won": 0,
     "drawn": 1,
@@ -221,13 +221,13 @@
     "goalsFor": 3,
     "goalsAgainst": 3,
     "points": 1,
-    "note": "Administrative pre-entry 3-3 draw with Buckle City"
+    "note": "Administrative pre-entry 3-3 draw with Toss"
   },
   {
     "id": "mon-admin-buckle-entry-losses",
     "night": "monday",
     "division": "A",
-    "teamId": "mon-buckle-city",
+    "teamId": "mon-hunger-fc",
     "played": 2,
     "won": 0,
     "drawn": 0,
@@ -241,7 +241,7 @@
     "id": "mon-admin-tolaka-entry-losses",
     "night": "monday",
     "division": "A",
-    "teamId": "mon-tolaka-group",
+    "teamId": "mon-toss",
     "played": 2,
     "won": 0,
     "drawn": 0,

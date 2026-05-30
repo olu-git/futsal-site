@@ -45,7 +45,7 @@ export function validateFixtures(
   );
   const teamNameById = new Map(teams.map((team) => [team.id, team.name]));
   const isBuckleCityTeam = (teamId: string) =>
-    teamId.endsWith("-buckle-city") || teamNameById.get(teamId) === "Buckle City";
+    teamNameById.get(teamId) === "Buckle City";
 
   // Index fixtures by night+date for slot-level checks
   const byNightDate = new Map<string, Fixture[]>();
