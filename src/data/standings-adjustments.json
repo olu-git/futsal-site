@@ -334,5 +334,61 @@
     "goalsAgainst": 9,
     "points": 0,
     "note": "Administrative 3-0 losses for remaining pre-entry missed rounds"
+  },
+  {
+    "id": "mon-admin-all-stars-buckle-draw",
+    "night": "monday",
+    "division": "A",
+    "teamId": "mon-all-stars",
+    "played": 1,
+    "won": 0,
+    "drawn": 1,
+    "lost": 0,
+    "goalsFor": 3,
+    "goalsAgainst": 3,
+    "points": 1,
+    "note": "Administrative R1-R9 pre-entry 3-3 draw with Buckle City"
+  },
+  {
+    "id": "mon-admin-buckle-all-stars-draw",
+    "night": "monday",
+    "division": "A",
+    "teamId": "mon-buckle-city",
+    "played": 1,
+    "won": 0,
+    "drawn": 1,
+    "lost": 0,
+    "goalsFor": 3,
+    "goalsAgainst": 3,
+    "points": 1,
+    "note": "Administrative R1-R9 pre-entry 3-3 draw with All Stars"
+  },
+  {
+    "id": "mon-admin-all-stars-entry-losses",
+    "night": "monday",
+    "division": "A",
+    "teamId": "mon-all-stars",
+    "played": 8,
+    "won": 0,
+    "drawn": 0,
+    "lost": 8,
+    "goalsFor": 0,
+    "goalsAgainst": 24,
+    "points": 0,
+    "note": "Administrative 3-0 losses for remaining R1-R9 pre-entry missed rounds"
+  },
+  {
+    "id": "mon-admin-buckle-city-entry-losses",
+    "night": "monday",
+    "division": "A",
+    "teamId": "mon-buckle-city",
+    "played": 8,
+    "won": 0,
+    "drawn": 0,
+    "lost": 8,
+    "goalsFor": 0,
+    "goalsAgainst": 24,
+    "points": 0,
+    "note": "Administrative 3-0 losses for remaining R1-R9 pre-entry missed rounds"
   }
 ]

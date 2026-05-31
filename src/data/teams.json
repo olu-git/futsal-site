@@ -154,5 +154,17 @@
     "name": "Toss",
     "night": "wednesday",
     "division": "A"
+  },
+  {
+    "id": "mon-all-stars",
+    "name": "All Stars",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-buckle-city",
+    "name": "Buckle City",
+    "night": "monday",
+    "division": "A"
   }
 ]
