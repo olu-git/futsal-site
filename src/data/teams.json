@@ -78,8 +78,8 @@
     "division": "A"
   },
   {
-    "id": "wed-buckle-city",
-    "name": "Buckle City",
+    "id": "wed-eagles-fc",
+    "name": "Eagles FC",
     "night": "wednesday",
     "division": "A"
   },
@@ -127,7 +127,7 @@
   },
   {
     "id": "wed-samen",
-    "name": "Samen",
+    "name": "Al Ihya FC",
     "night": "wednesday",
     "division": "A"
   },
@@ -144,8 +144,8 @@
     "division": "A"
   },
   {
-    "id": "wed-black-lock",
-    "name": "Black Lock",
+    "id": "wed-dwell-fc",
+    "name": "Dwell FC",
     "night": "wednesday",
     "division": "A"
   },

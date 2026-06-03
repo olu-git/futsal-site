@@ -56,7 +56,7 @@
     "note": "Administrative pre-entry 3-3 draw with Moza Mama"
   },
   {
-    "id": "wed-admin-moza-black-lock-draw",
+    "id": "wed-admin-moza-dwell-fc-draw",
     "night": "wednesday",
     "division": "A",
     "teamId": "wed-moza-mama",
@@ -67,13 +67,13 @@
     "goalsFor": 3,
     "goalsAgainst": 3,
     "points": 1,
-    "note": "Administrative pre-entry 3-3 draw with Black Lock"
+    "note": "Administrative pre-entry 3-3 draw with Dwell FC"
   },
   {
-    "id": "wed-admin-black-lock-moza-draw",
+    "id": "wed-admin-dwell-fc-moza-draw",
     "night": "wednesday",
     "division": "A",
-    "teamId": "wed-black-lock",
+    "teamId": "wed-dwell-fc",
     "played": 1,
     "won": 0,
     "drawn": 1,
@@ -112,7 +112,7 @@
     "note": "Administrative pre-entry 3-3 draw with Hazara United"
   },
   {
-    "id": "wed-admin-hazara-black-lock-draw",
+    "id": "wed-admin-hazara-dwell-fc-draw",
     "night": "wednesday",
     "division": "A",
     "teamId": "wed-hazara-united",
@@ -123,13 +123,13 @@
     "goalsFor": 3,
     "goalsAgainst": 3,
     "points": 1,
-    "note": "Administrative pre-entry 3-3 draw with Black Lock"
+    "note": "Administrative pre-entry 3-3 draw with Dwell FC"
   },
   {
-    "id": "wed-admin-black-lock-hazara-draw",
+    "id": "wed-admin-dwell-fc-hazara-draw",
     "night": "wednesday",
     "division": "A",
-    "teamId": "wed-black-lock",
+    "teamId": "wed-dwell-fc",
     "played": 1,
     "won": 0,
     "drawn": 1,
@@ -140,7 +140,7 @@
     "note": "Administrative pre-entry 3-3 draw with Hazara United"
   },
   {
-    "id": "wed-admin-toss-black-lock-draw",
+    "id": "wed-admin-toss-dwell-fc-draw",
     "night": "wednesday",
     "division": "A",
     "teamId": "wed-toss",
@@ -151,13 +151,13 @@
     "goalsFor": 3,
     "goalsAgainst": 3,
     "points": 1,
-    "note": "Administrative pre-entry 3-3 draw with Black Lock"
+    "note": "Administrative pre-entry 3-3 draw with Dwell FC"
   },
   {
-    "id": "wed-admin-black-lock-toss-draw",
+    "id": "wed-admin-dwell-fc-toss-draw",
     "night": "wednesday",
     "division": "A",
-    "teamId": "wed-black-lock",
+    "teamId": "wed-dwell-fc",
     "played": 1,
     "won": 0,
     "drawn": 1,
@@ -182,10 +182,10 @@
     "note": "Administrative 3-0 losses for remaining pre-entry missed rounds"
   },
   {
-    "id": "wed-admin-black-lock-entry-losses",
+    "id": "wed-admin-dwell-fc-entry-losses",
     "night": "wednesday",
     "division": "A",
-    "teamId": "wed-black-lock",
+    "teamId": "wed-dwell-fc",
     "played": 4,
     "won": 0,
     "drawn": 0,
