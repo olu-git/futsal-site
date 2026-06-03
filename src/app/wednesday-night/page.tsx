@@ -78,17 +78,6 @@ export default function WednesdayNightPage() {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600" />
       </section>
 
-      <section className="bg-[#111111] border-y border-white/5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-          <p className="text-sm text-white/60 leading-relaxed">
-            Note: Moza Mama and Hazara United joined the Wednesday competition after Round 3. <br></br>
-            Their 3 unplayed entry-round matches are handled as administrative
-            standings adjustments: One 3-3 draw between the two new teams and two
-            3-0 losses each.
-          </p>
-        </div>
-      </section>
-
       {/* Division A Table */}
       <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -125,19 +114,17 @@ export default function WednesdayNightPage() {
         </div>
       </section>
 
-      {/* Results */}
-      {completedRounds.length > 0 && (
-        <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
+      {/* Fixtures by Round */}
+      {upcomingRounds.length > 0 && (
+        <section className="bg-[#111111] py-20 sm:py-[80px]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
-              title="Results"
-              subtitle={`${completedRounds.length} round${completedRounds.length !== 1 ? "s" : ""} played`}
+              title="Fixtures"
+              subtitle={`${upcomingRounds.length} round${upcomingRounds.length !== 1 ? "s" : ""} remaining`}
             />
             <div className="mt-10 space-y-3">
-              {completedRounds.map((round, i) => {
-                const roundFixtures = getFixturesByRound("wednesday", round).filter(
-                  (f) => f.status === "completed"
-                );
+              {upcomingRounds.map((round, i) => {
+                const roundFixtures = getFixturesByRound("wednesday", round);
                 return (
                   <RoundAccordion
                     key={round}
@@ -159,17 +146,19 @@ export default function WednesdayNightPage() {
         </section>
       )}
 
-      {/* Fixtures by Round */}
-      {upcomingRounds.length > 0 && (
-        <section className="bg-[#111111] py-20 sm:py-[80px]">
+      {/* Results */}
+      {completedRounds.length > 0 && (
+        <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
-              title="Fixtures"
-              subtitle={`${upcomingRounds.length} round${upcomingRounds.length !== 1 ? "s" : ""} remaining`}
+              title="Results"
+              subtitle={`${completedRounds.length} round${completedRounds.length !== 1 ? "s" : ""} played`}
             />
             <div className="mt-10 space-y-3">
-              {upcomingRounds.map((round, i) => {
-                const roundFixtures = getFixturesByRound("wednesday", round);
+              {completedRounds.map((round, i) => {
+                const roundFixtures = getFixturesByRound("wednesday", round).filter(
+                  (f) => f.status === "completed"
+                );
                 return (
                   <RoundAccordion
                     key={round}
