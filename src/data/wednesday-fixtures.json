@@ -945,7 +945,7 @@
     "date": "2026-06-10",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-misfits",
+    "homeTeam": "wed-moza-mama",
     "awayTeam": "wed-hazara-united",
     "status": "scheduled"
   },
@@ -1018,7 +1018,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "wed-samen",
-    "awayTeam": "wed-moza-mama",
+    "awayTeam": "wed-misfits",
     "status": "scheduled"
   },
   {
@@ -1138,7 +1138,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "wed-misfits",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
   {
@@ -1149,8 +1149,8 @@
     "date": "2026-06-24",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-wildcats",
-    "awayTeam": "wed-moza-mama",
+    "homeTeam": "wed-samen",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -1377,7 +1377,7 @@
     "date": "2026-07-15",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-misfits",
+    "homeTeam": "wed-moza-mama",
     "awayTeam": "wed-toss",
     "status": "scheduled"
   },
@@ -1390,7 +1390,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-moza-mama",
+    "awayTeam": "wed-misfits",
     "status": "scheduled"
   },
   {

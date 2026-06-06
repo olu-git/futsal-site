@@ -16,6 +16,7 @@ import {
   BellOff,
   CircleX,
   Banknote,
+  CreditCard,
   UserX,
   UserPlus,
   Trophy,
@@ -118,6 +119,13 @@ const leagueGroups: RuleGroup[] = [
     label: "Before the Match",
     cards: [
       {
+        icon: CreditCard,
+        title: "Payment Before Kick-Off",
+        description:
+          "All match payments must be made before the game begins. This keeps league administration manageable and ensures fixtures can run smoothly for every team.",
+        badge: "Required",
+      },
+      {
         icon: Hourglass,
         title: "Late Penalty",
         description:
@@ -139,7 +147,7 @@ const leagueGroups: RuleGroup[] = [
         icon: Banknote,
         title: "Forfeit Bond",
         description:
-          "If a forfeit occurs, the forfeiting team forfeits their bond for that week to cover the cost of not showing up. The team is unable to play again until the bond is paid.",
+          "Same-day cancellations and no-shows result in the team forfeiting its bond. Venue and staff costs still apply, and the team cannot play again until the bond is repaid.",
       },
     ],
   },
@@ -157,7 +165,7 @@ const leagueGroups: RuleGroup[] = [
         icon: UserPlus,
         title: "Fill-in Players",
         description:
-          "Teams short on players may use fill-ins from other teams to reach a maximum of 5 players. No substitutions are allowed when using fill-ins. The team concedes 1 goal for each fill-in player used.",
+          "Fill-ins from another team are allowed only when a team is short. The team concedes 1 goal for each fill-in used, may field a maximum of 5 players, and cannot use substitutes. Fill-ins must not be used to significantly strengthen the team.",
       },
     ],
   },
