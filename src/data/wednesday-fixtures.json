@@ -50,7 +50,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-ghazni-united",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "homeScore": 5,
     "awayScore": 4,
     "status": "completed"
@@ -120,7 +120,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "homeScore": 5,
     "awayScore": 5,
     "status": "completed"
@@ -189,7 +189,7 @@
     "date": "2026-04-08",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-ghazni-united",
     "homeScore": 6,
     "awayScore": 13,
@@ -217,7 +217,7 @@
     "date": "2026-04-15",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-moza-mama",
     "homeScore": 5,
     "awayScore": 7,
@@ -301,7 +301,7 @@
     "date": "2026-04-22",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-wildcats",
     "homeScore": 12,
     "awayScore": 10,
@@ -441,7 +441,7 @@
     "date": "2026-04-29",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-rinnai",
     "homeScore": 2,
     "awayScore": 4,
@@ -498,7 +498,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "wed-afg",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "status": "completed",
     "homeScore": 10,
     "awayScore": 3
@@ -638,7 +638,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "wed-toss",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "status": "completed",
     "homeScore": 4,
     "awayScore": 4
@@ -707,7 +707,7 @@
     "date": "2026-05-20",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-pops",
     "status": "completed",
     "homeScore": 6,
@@ -806,7 +806,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "status": "completed",
     "homeScore": 5,
     "awayScore": 5
@@ -903,7 +903,7 @@
     "date": "2026-06-03",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-misfits",
     "status": "completed",
     "homeScore": 9,
@@ -993,7 +993,7 @@
     "date": "2026-06-10",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
@@ -1090,7 +1090,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "status": "scheduled"
   },
   {
@@ -1161,7 +1161,7 @@
     "date": "2026-06-24",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-afg",
     "status": "scheduled"
   },
@@ -1269,7 +1269,7 @@
     "date": "2026-07-01",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-toss",
     "status": "scheduled"
   },
@@ -1329,7 +1329,7 @@
     "date": "2026-07-08",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
@@ -1438,7 +1438,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "wed-samen",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "status": "scheduled"
   },
   {
@@ -1522,7 +1522,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "wed-unathletico",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "status": "scheduled"
   },
   {
@@ -1582,7 +1582,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "status": "scheduled"
   },
   {
@@ -1678,7 +1678,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "wed-dwell-fc",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "status": "scheduled"
   },
   {
@@ -1761,7 +1761,7 @@
     "date": "2026-08-12",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-pops",
     "status": "scheduled"
   },
@@ -1857,7 +1857,7 @@
     "date": "2026-08-19",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-samen",
     "status": "scheduled"
   },
@@ -1941,7 +1941,7 @@
     "date": "2026-08-26",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-misfits",
     "status": "scheduled"
   },
@@ -2002,7 +2002,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "status": "scheduled"
   },
   {
@@ -2109,7 +2109,7 @@
     "date": "2026-09-09",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-eagles-fc",
+    "homeTeam": "wed-ibiza",
     "awayTeam": "wed-dwell-fc",
     "status": "scheduled"
   },
@@ -2194,7 +2194,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-eagles-fc",
+    "awayTeam": "wed-ibiza",
     "status": "scheduled"
   }
 ]
