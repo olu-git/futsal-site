@@ -994,7 +994,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-ibiza",
-    "awayTeam": "wed-unathletico",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1006,7 +1006,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-ghazni-united",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
@@ -1281,8 +1281,8 @@
     "date": "2026-07-08",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-ghazni-united",
-    "awayTeam": "wed-goldlink-up",
+    "homeTeam": "wed-unathletico",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -1330,7 +1330,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-ibiza",
-    "awayTeam": "wed-wildcats",
+    "awayTeam": "wed-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -1341,8 +1341,8 @@
     "date": "2026-07-08",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-unathletico",
-    "awayTeam": "wed-rinnai",
+    "homeTeam": "wed-rinnai",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1401,7 +1401,7 @@
     "date": "2026-07-15",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-pops",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
@@ -1414,7 +1414,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-ghazni-united",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -1954,7 +1954,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "wed-pops",
-    "awayTeam": "wed-moza-mama",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -1989,7 +1989,7 @@
     "date": "2026-09-02",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-wildcats",
+    "homeTeam": "wed-moza-mama",
     "awayTeam": "wed-samen",
     "status": "scheduled"
   },
@@ -2037,7 +2037,7 @@
     "date": "2026-09-09",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-unathletico",
+    "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-afg",
     "status": "scheduled"
   },
@@ -2073,7 +2073,7 @@
     "date": "2026-09-09",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-ghazni-united",
+    "homeTeam": "wed-dwell-fc",
     "awayTeam": "wed-rinnai",
     "status": "scheduled"
   },
@@ -2110,7 +2110,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "wed-ibiza",
-    "awayTeam": "wed-dwell-fc",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
