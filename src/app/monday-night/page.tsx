@@ -29,9 +29,16 @@ export default function MondayNightPage() {
     .filter((r) => getFixturesByRound("monday", r).some((f) => f.status === "completed"))
     .reverse();
 
-  // Upcoming rounds ascending (no completed fixtures)
+  // Upcoming rounds ascending, including partially completed rounds.
   const upcomingRounds = rounds.filter((r) =>
-    getFixturesByRound("monday", r).every((f) => f.status === "scheduled")
+    getFixturesByRound("monday", r).some((f) => f.status === "scheduled")
+  );
+  const fixturesRemaining = upcomingRounds.reduce(
+    (total, round) =>
+      total +
+      getFixturesByRound("monday", round).filter((fixture) => fixture.status === "scheduled")
+        .length,
+    0
   );
 
   return (
@@ -121,11 +128,13 @@ export default function MondayNightPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
               title="Fixtures"
-              subtitle={`${upcomingRounds.length} round${upcomingRounds.length !== 1 ? "s" : ""} remaining`}
+              subtitle={`${fixturesRemaining} fixture${fixturesRemaining !== 1 ? "s" : ""} remaining`}
             />
             <div className="mt-10 space-y-3">
               {upcomingRounds.map((round, i) => {
-                const roundFixtures = getFixturesByRound("monday", round);
+                const roundFixtures = getFixturesByRound("monday", round).filter(
+                  (fixture) => fixture.status === "scheduled"
+                );
                 return (
                   <RoundAccordion
                     key={round}

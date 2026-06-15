@@ -40,12 +40,22 @@ export function validateFixtures(
   );
   const mondayTeamIds = new Set(
     teams
-      .filter((team) => team.night === "monday" && team.division === "A")
+      .filter(
+        (team) =>
+          team.night === "monday" &&
+          team.division === "A" &&
+          team.active !== false
+      )
       .map((team) => team.id)
   );
   const teamNameById = new Map(teams.map((team) => [team.id, team.name]));
+  const activeTeamIds = new Set(
+    teams.filter((team) => team.active !== false).map((team) => team.id)
+  );
+  const isSamenTeam = (teamId: string) =>
+    activeTeamIds.has(teamId) && teamNameById.get(teamId) === "Samen";
   const isBuckleCityTeam = (teamId: string) =>
-    teamNameById.get(teamId) === "Buckle City";
+    activeTeamIds.has(teamId) && teamNameById.get(teamId) === "Buckle City";
 
   // Index fixtures by night+date for slot-level checks
   const byNightDate = new Map<string, Fixture[]>();
@@ -99,7 +109,7 @@ export function validateFixtures(
     if (
       f.status === "scheduled" &&
       f.time === "19:00" &&
-      (f.homeTeam.endsWith("-samen") || f.awayTeam.endsWith("-samen"))
+      (isSamenTeam(f.homeTeam) || isSamenTeam(f.awayTeam))
     ) {
       issues.push({
         type: "hard",
@@ -117,7 +127,7 @@ export function validateFixtures(
     if (
       f.status === "scheduled" &&
       f.time === "19:40" &&
-      (f.homeTeam.endsWith("-samen") || f.awayTeam.endsWith("-samen"))
+      (isSamenTeam(f.homeTeam) || isSamenTeam(f.awayTeam))
     ) {
       issues.push({
         type: "soft",

@@ -45,7 +45,8 @@
     "id": "mon-samen",
     "name": "Samen",
     "night": "monday",
-    "division": "A"
+    "division": "A",
+    "active": false
   },
   {
     "id": "mon-toss",
@@ -165,6 +166,7 @@
     "id": "mon-buckle-city",
     "name": "Buckle City",
     "night": "monday",
-    "division": "A"
+    "division": "A",
+    "active": false
   }
 ]

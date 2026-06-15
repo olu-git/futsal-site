@@ -33,8 +33,19 @@ export const standingsAdjustments: StandingAdjustment[] =
 // Helper functions
 // ============================================================
 
+export function isTeamActive(teamId: string): boolean {
+  return teams.find((team) => team.id === teamId)?.active !== false;
+}
+
+function isVisibleFixture(fixture: Fixture): boolean {
+  return (
+    fixture.status === "completed" ||
+    (isTeamActive(fixture.homeTeam) && isTeamActive(fixture.awayTeam))
+  );
+}
+
 export function getTeamsByNight(night: CompetitionNight): Team[] {
-  return teams.filter((t) => t.night === night);
+  return teams.filter((t) => t.night === night && t.active !== false);
 }
 
 export function getFixturesByNight(night: CompetitionNight): Fixture[] {
@@ -53,13 +64,19 @@ export function getCompletedFixtures(night: CompetitionNight): Fixture[] {
 
 export function getUpcomingFixtures(night: CompetitionNight): Fixture[] {
   return fixtures
-    .filter((f) => f.night === night && f.status === "scheduled")
+    .filter(
+      (f) =>
+        f.night === night &&
+        f.status === "scheduled" &&
+        isTeamActive(f.homeTeam) &&
+        isTeamActive(f.awayTeam)
+    )
     .sort((a, b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time));
 }
 
 export function getFixturesByRound(night: CompetitionNight, round: number): Fixture[] {
   return fixtures
-    .filter((f) => f.night === night && f.round === round)
+    .filter((f) => f.night === night && f.round === round && isVisibleFixture(f))
     .sort(
       (a, b) =>
         a.date.localeCompare(b.date) ||
@@ -69,6 +86,10 @@ export function getFixturesByRound(night: CompetitionNight, round: number): Fixt
 }
 
 export function getAllRounds(night: CompetitionNight): number[] {
-  const rounds = new Set(fixtures.filter((f) => f.night === night).map((f) => f.round));
+  const rounds = new Set(
+    fixtures
+      .filter((f) => f.night === night && isVisibleFixture(f))
+      .map((f) => f.round)
+  );
   return Array.from(rounds).sort((a, b) => a - b);
 }

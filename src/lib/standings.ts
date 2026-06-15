@@ -1,4 +1,4 @@
-import { Fixture, Standing, CompetitionNight } from "./types";
+import { Standing, CompetitionNight } from "./types";
 import { fixtures, standingsAdjustments, teams } from "./data";
 
 /**
@@ -9,6 +9,9 @@ import { fixtures, standingsAdjustments, teams } from "./data";
  */
 export function calculateStandings(night: CompetitionNight, division: "A" | "B" = "A"): Standing[] {
   const nightTeams = teams.filter((t) => t.night === night && t.division === division);
+  const activeTeamIds = new Set(
+    nightTeams.filter((team) => team.active !== false).map((team) => team.id)
+  );
   const completedFixtures = fixtures.filter(
     (f) => f.night === night && f.division === division && f.status === "completed"
   );
@@ -89,10 +92,12 @@ export function calculateStandings(night: CompetitionNight, division: "A" | "B" 
   }
 
   // Calculate goal difference
-  const standings = Array.from(standingsMap.values()).map((s) => ({
-    ...s,
-    goalDifference: s.goalsFor - s.goalsAgainst,
-  }));
+  const standings = Array.from(standingsMap.values())
+    .filter((standing) => activeTeamIds.has(standing.teamId))
+    .map((s) => ({
+      ...s,
+      goalDifference: s.goalsFor - s.goalsAgainst,
+    }));
 
   // Sort: Points DESC → GD DESC → GF DESC → Name ASC
   standings.sort((a, b) => {

@@ -7,6 +7,7 @@ export interface Team {
   name: string;
   night: CompetitionNight;
   division: Division;
+  active?: boolean;
 }
 
 export type FixtureStatus = "scheduled" | "completed";
