@@ -1045,7 +1045,9 @@
     "court": 1,
     "homeTeam": "wed-misfits",
     "awayTeam": "wed-wildcats",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 8,
+    "awayScore": 9
   },
   {
     "id": "wed-r13-2",
@@ -1057,7 +1059,9 @@
     "court": 2,
     "homeTeam": "wed-pops",
     "awayTeam": "wed-goldlink-up",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 8,
+    "awayScore": 10
   },
   {
     "id": "wed-r13-3",
@@ -1069,7 +1073,9 @@
     "court": 1,
     "homeTeam": "wed-afg",
     "awayTeam": "wed-dwell-fc",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 8,
+    "awayScore": 4
   },
   {
     "id": "wed-r13-4",
@@ -1081,7 +1087,9 @@
     "court": 2,
     "homeTeam": "wed-rinnai",
     "awayTeam": "wed-moza-mama",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 3,
+    "awayScore": 12
   },
   {
     "id": "wed-r13-5",
@@ -1093,7 +1101,9 @@
     "court": 1,
     "homeTeam": "wed-samen",
     "awayTeam": "wed-unathletico",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 11,
+    "awayScore": 1
   },
   {
     "id": "wed-r13-6",
@@ -1105,7 +1115,9 @@
     "court": 2,
     "homeTeam": "wed-hazara-united",
     "awayTeam": "wed-ibiza",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 4,
+    "awayScore": 7
   },
   {
     "id": "wed-r13-7",
@@ -1117,7 +1129,9 @@
     "court": 1,
     "homeTeam": "wed-toss",
     "awayTeam": "wed-ghazni-united",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 0,
+    "awayScore": 9
   },
   {
     "id": "wed-r14-1",
