@@ -32,14 +32,7 @@ export default function WednesdayNightPage() {
   const upcomingRounds = rounds.filter((r) =>
     getFixturesByRound("wednesday", r).some((f) => f.status === "scheduled")
   );
-  const fixturesRemaining = upcomingRounds.reduce(
-    (total, round) =>
-      total +
-      getFixturesByRound("wednesday", round).filter(
-        (fixture) => fixture.status === "scheduled"
-      ).length,
-    0
-  );
+  const roundsRemaining = upcomingRounds.length;
 
   return (
     <div>
@@ -128,7 +121,7 @@ export default function WednesdayNightPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
               title="Fixtures"
-              subtitle={`${fixturesRemaining} fixture${fixturesRemaining !== 1 ? "s" : ""} remaining`}
+              subtitle={`${roundsRemaining} round${roundsRemaining !== 1 ? "s" : ""} remaining`}
             />
             <div className="mt-10 space-y-3">
               {upcomingRounds.map((round, i) => {
