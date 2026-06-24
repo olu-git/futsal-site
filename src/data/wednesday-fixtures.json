@@ -63,7 +63,7 @@
     "date": "2026-03-25",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-samen",
+    "homeTeam": "wed-al-ihya-fc",
     "awayTeam": "wed-unathletico",
     "homeScore": 9,
     "awayScore": 3,
@@ -134,7 +134,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "wed-ghazni-united",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "homeScore": 5,
     "awayScore": 0,
     "status": "completed"
@@ -204,7 +204,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "wed-afg",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "homeScore": 7,
     "awayScore": 7,
     "status": "completed"
@@ -274,7 +274,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-goldlink-up",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "homeScore": 5,
     "awayScore": 9,
     "status": "completed"
@@ -344,7 +344,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "wed-misfits",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "homeScore": 2,
     "awayScore": 4,
     "status": "completed"
@@ -400,7 +400,7 @@
     "time": "19:00",
     "court": 2,
     "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "homeScore": 2,
     "awayScore": 4,
     "status": "completed"
@@ -540,7 +540,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "status": "completed",
     "homeScore": 2,
     "awayScore": 7
@@ -610,7 +610,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-wildcats",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "status": "completed",
     "homeScore": 6,
     "awayScore": 4
@@ -722,7 +722,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "wed-dwell-fc",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "status": "completed",
     "homeScore": 4,
     "awayScore": 9
@@ -819,7 +819,7 @@
     "date": "2026-05-27",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-samen",
+    "homeTeam": "wed-al-ihya-fc",
     "awayTeam": "wed-pops",
     "status": "completed",
     "homeScore": 0,
@@ -917,7 +917,7 @@
     "date": "2026-06-03",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-samen",
+    "homeTeam": "wed-al-ihya-fc",
     "awayTeam": "wed-hazara-united",
     "status": "completed",
     "homeScore": 3,
@@ -1029,7 +1029,7 @@
     "date": "2026-06-10",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-samen",
+    "homeTeam": "wed-al-ihya-fc",
     "awayTeam": "wed-misfits",
     "status": "completed",
     "homeScore": 7,
@@ -1099,7 +1099,7 @@
     "date": "2026-06-17",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-samen",
+    "homeTeam": "wed-al-ihya-fc",
     "awayTeam": "wed-unathletico",
     "status": "completed",
     "homeScore": 11,
@@ -1183,7 +1183,7 @@
     "date": "2026-06-24",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-samen",
+    "homeTeam": "wed-al-ihya-fc",
     "awayTeam": "wed-wildcats",
     "homeScore": 5,
     "awayScore": 0,
@@ -1288,7 +1288,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-ghazni-united",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "status": "scheduled"
   },
   {
@@ -1396,7 +1396,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "wed-afg",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "status": "scheduled"
   },
   {
@@ -1479,7 +1479,7 @@
     "date": "2026-07-15",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-samen",
+    "homeTeam": "wed-al-ihya-fc",
     "awayTeam": "wed-ibiza",
     "status": "scheduled"
   },
@@ -1540,7 +1540,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "status": "scheduled"
   },
   {
@@ -1612,7 +1612,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "wed-toss",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "status": "scheduled"
   },
   {
@@ -1683,7 +1683,7 @@
     "date": "2026-08-05",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-samen",
+    "homeTeam": "wed-al-ihya-fc",
     "awayTeam": "wed-pops",
     "status": "scheduled"
   },
@@ -1768,7 +1768,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "status": "scheduled"
   },
   {
@@ -1900,7 +1900,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "wed-ibiza",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "status": "scheduled"
   },
   {
@@ -1971,7 +1971,7 @@
     "date": "2026-08-26",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-samen",
+    "homeTeam": "wed-al-ihya-fc",
     "awayTeam": "wed-goldlink-up",
     "status": "scheduled"
   },
@@ -2032,7 +2032,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-samen",
+    "awayTeam": "wed-al-ihya-fc",
     "status": "scheduled"
   },
   {
@@ -2103,7 +2103,7 @@
     "date": "2026-09-09",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-samen",
+    "homeTeam": "wed-al-ihya-fc",
     "awayTeam": "wed-toss",
     "status": "scheduled"
   },
@@ -2187,7 +2187,7 @@
     "date": "2026-09-16",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-samen",
+    "homeTeam": "wed-al-ihya-fc",
     "awayTeam": "wed-dwell-fc",
     "status": "scheduled"
   },
