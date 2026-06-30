@@ -144,6 +144,12 @@ const leagueGroups: RuleGroup[] = [
           "Forfeits are recorded as 5-0 losses. Teams that do not arrive before half-time automatically forfeit the game.",
       },
       {
+        icon: Trophy,
+        title: "Opponent No-Show",
+        description:
+          "If your scheduled opponent does not show up, your team automatically wins 5-0. You may choose to still play and pay 50% of the match fee, or choose not to play at all.",
+      },
+      {
         icon: Banknote,
         title: "Forfeit Bond",
         description:

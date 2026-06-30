@@ -163,6 +163,18 @@
     "division": "A"
   },
   {
+    "id": "mon-hazara-united",
+    "name": "Hazara United",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-xaywan",
+    "name": "Xaywan",
+    "night": "monday",
+    "division": "A"
+  },
+  {
     "id": "mon-buckle-city",
     "name": "Buckle City",
     "night": "monday",
