@@ -1073,8 +1073,8 @@
     "division": "A",
     "round": 14,
     "date": "2026-07-06",
-    "time": "20:20",
-    "court": 2,
+    "time": "21:00",
+    "court": 1,
     "homeTeam": "mon-moza-mama",
     "awayTeam": "mon-hazara-united",
     "status": "scheduled"
@@ -1085,8 +1085,8 @@
     "division": "A",
     "round": 14,
     "date": "2026-07-06",
-    "time": "21:00",
-    "court": 1,
+    "time": "20:20",
+    "court": 2,
     "homeTeam": "mon-hunger-fc",
     "awayTeam": "mon-xaywan",
     "status": "scheduled"
