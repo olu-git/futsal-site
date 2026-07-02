@@ -1241,7 +1241,9 @@
     "court": 1,
     "homeTeam": "wed-misfits",
     "awayTeam": "wed-unathletico",
-    "status": "scheduled"
+    "homeScore": 6,
+    "awayScore": 2,
+    "status": "completed"
   },
   {
     "id": "wed-r15-2",
@@ -1253,7 +1255,9 @@
     "court": 2,
     "homeTeam": "wed-hazara-united",
     "awayTeam": "wed-wildcats",
-    "status": "scheduled"
+    "homeScore": 7,
+    "awayScore": 6,
+    "status": "completed"
   },
   {
     "id": "wed-r15-3",
@@ -1265,7 +1269,9 @@
     "court": 1,
     "homeTeam": "wed-dwell-fc",
     "awayTeam": "wed-pops",
-    "status": "scheduled"
+    "homeScore": 0,
+    "awayScore": 8,
+    "status": "completed"
   },
   {
     "id": "wed-r15-4",
@@ -1277,7 +1283,9 @@
     "court": 2,
     "homeTeam": "wed-rinnai",
     "awayTeam": "wed-afg",
-    "status": "scheduled"
+    "homeScore": 3,
+    "awayScore": 5,
+    "status": "completed"
   },
   {
     "id": "wed-r15-5",
@@ -1289,7 +1297,9 @@
     "court": 1,
     "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-al-ihya-fc",
-    "status": "scheduled"
+    "homeScore": 5,
+    "awayScore": 0,
+    "status": "completed"
   },
   {
     "id": "wed-r15-6",
@@ -1301,7 +1311,9 @@
     "court": 2,
     "homeTeam": "wed-goldlink-up",
     "awayTeam": "wed-moza-mama",
-    "status": "scheduled"
+    "homeScore": 8,
+    "awayScore": 3,
+    "status": "completed"
   },
   {
     "id": "wed-r15-7",
@@ -1313,7 +1325,9 @@
     "court": 1,
     "homeTeam": "wed-ibiza",
     "awayTeam": "wed-toss",
-    "status": "scheduled"
+    "homeScore": 5,
+    "awayScore": 0,
+    "status": "completed"
   },
   {
     "id": "wed-r16-1",
