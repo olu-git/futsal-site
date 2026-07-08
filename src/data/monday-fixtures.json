@@ -1092,18 +1092,6 @@
     "status": "completed"
   },
   {
-    "id": "mon-r14-7",
-    "night": "monday",
-    "division": "A",
-    "round": 14,
-    "date": "2026-07-06",
-    "time": "20:20",
-    "court": 2,
-    "homeTeam": "mon-toss",
-    "awayTeam": "mon-xaywan",
-    "status": "scheduled"
-  },
-  {
     "id": "mon-r15-1",
     "night": "monday",
     "division": "A",
@@ -1111,7 +1099,7 @@
     "date": "2026-07-13",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-all-stars",
+    "homeTeam": "mon-wildcats",
     "awayTeam": "mon-salvos",
     "status": "scheduled"
   },
@@ -1123,8 +1111,8 @@
     "date": "2026-07-13",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-moza-mama",
-    "awayTeam": "mon-goldlink-up",
+    "homeTeam": "mon-misfits",
+    "awayTeam": "mon-moza-mama",
     "status": "scheduled"
   },
   {
@@ -1135,8 +1123,8 @@
     "date": "2026-07-13",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-misfits",
+    "homeTeam": "mon-afg",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -1148,7 +1136,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "mon-hazara-united",
-    "awayTeam": "mon-premiers-fc",
+    "awayTeam": "mon-blue-dragons",
     "status": "scheduled"
   },
   {
@@ -1159,8 +1147,8 @@
     "date": "2026-07-13",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-xaywan",
-    "awayTeam": "mon-wildcats",
+    "homeTeam": "mon-goldlink-up",
+    "awayTeam": "mon-hunger-fc",
     "status": "scheduled"
   },
   {
@@ -1171,20 +1159,8 @@
     "date": "2026-07-13",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "mon-toss",
-    "awayTeam": "mon-ghazni-united",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r15-7",
-    "night": "monday",
-    "division": "A",
-    "round": 15,
-    "date": "2026-07-13",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-hunger-fc",
-    "awayTeam": "mon-afg",
+    "homeTeam": "mon-ghazni-united",
+    "awayTeam": "mon-all-stars",
     "status": "scheduled"
   },
   {
@@ -1195,7 +1171,7 @@
     "date": "2026-07-20",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-misfits",
+    "homeTeam": "mon-moza-mama",
     "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
   },
@@ -1207,8 +1183,8 @@
     "date": "2026-07-20",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-wildcats",
-    "awayTeam": "mon-salvos",
+    "homeTeam": "mon-all-stars",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -1219,8 +1195,8 @@
     "date": "2026-07-20",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-hazara-united",
+    "homeTeam": "mon-salvos",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -1231,8 +1207,8 @@
     "date": "2026-07-20",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-afg",
-    "awayTeam": "mon-premiers-fc",
+    "homeTeam": "mon-blue-dragons",
+    "awayTeam": "mon-misfits",
     "status": "scheduled"
   },
   {
@@ -1243,8 +1219,8 @@
     "date": "2026-07-20",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-toss",
-    "awayTeam": "mon-all-stars",
+    "homeTeam": "mon-hunger-fc",
+    "awayTeam": "mon-afg",
     "status": "scheduled"
   },
   {
@@ -1255,20 +1231,8 @@
     "date": "2026-07-20",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "mon-xaywan",
-    "awayTeam": "mon-moza-mama",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r16-7",
-    "night": "monday",
-    "division": "A",
-    "round": 16,
-    "date": "2026-07-20",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-ghazni-united",
-    "awayTeam": "mon-hunger-fc",
+    "homeTeam": "mon-hazara-united",
+    "awayTeam": "mon-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1280,7 +1244,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "mon-afg",
-    "awayTeam": "mon-toss",
+    "awayTeam": "mon-salvos",
     "status": "scheduled"
   },
   {
@@ -1291,8 +1255,8 @@
     "date": "2026-07-27",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-xaywan",
-    "awayTeam": "mon-ghazni-united",
+    "homeTeam": "mon-wildcats",
+    "awayTeam": "mon-hazara-united",
     "status": "scheduled"
   },
   {
@@ -1303,8 +1267,8 @@
     "date": "2026-07-27",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-wildcats",
+    "homeTeam": "mon-premiers-fc",
+    "awayTeam": "mon-all-stars",
     "status": "scheduled"
   },
   {
@@ -1315,8 +1279,8 @@
     "date": "2026-07-27",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-moza-mama",
-    "awayTeam": "mon-premiers-fc",
+    "homeTeam": "mon-goldlink-up",
+    "awayTeam": "mon-blue-dragons",
     "status": "scheduled"
   },
   {
@@ -1327,8 +1291,8 @@
     "date": "2026-07-27",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-hazara-united",
-    "awayTeam": "mon-misfits",
+    "homeTeam": "mon-hunger-fc",
+    "awayTeam": "mon-moza-mama",
     "status": "scheduled"
   },
   {
@@ -1339,20 +1303,8 @@
     "date": "2026-07-27",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "mon-all-stars",
-    "awayTeam": "mon-goldlink-up",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r17-7",
-    "night": "monday",
-    "division": "A",
-    "round": 17,
-    "date": "2026-07-27",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-hunger-fc",
-    "awayTeam": "mon-salvos",
+    "homeTeam": "mon-misfits",
+    "awayTeam": "mon-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1375,8 +1327,8 @@
     "date": "2026-08-03",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-ghazni-united",
-    "awayTeam": "mon-misfits",
+    "homeTeam": "mon-misfits",
+    "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -1387,8 +1339,8 @@
     "date": "2026-08-03",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-salvos",
+    "homeTeam": "mon-ghazni-united",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -1399,8 +1351,8 @@
     "date": "2026-08-03",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-toss",
-    "awayTeam": "mon-premiers-fc",
+    "homeTeam": "mon-blue-dragons",
+    "awayTeam": "mon-salvos",
     "status": "scheduled"
   },
   {
@@ -1411,8 +1363,8 @@
     "date": "2026-08-03",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-xaywan",
-    "awayTeam": "mon-goldlink-up",
+    "homeTeam": "mon-hazara-united",
+    "awayTeam": "mon-hunger-fc",
     "status": "scheduled"
   },
   {
@@ -1423,20 +1375,8 @@
     "date": "2026-08-03",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "mon-moza-mama",
-    "awayTeam": "mon-all-stars",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r18-7",
-    "night": "monday",
-    "division": "A",
-    "round": 18,
-    "date": "2026-08-03",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-hazara-united",
-    "awayTeam": "mon-hunger-fc",
+    "homeTeam": "mon-all-stars",
+    "awayTeam": "mon-moza-mama",
     "status": "scheduled"
   },
   {
@@ -1459,8 +1399,8 @@
     "date": "2026-08-10",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-all-stars",
-    "awayTeam": "mon-wildcats",
+    "homeTeam": "mon-salvos",
+    "awayTeam": "mon-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1471,8 +1411,8 @@
     "date": "2026-08-10",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-xaywan",
+    "homeTeam": "mon-premiers-fc",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -1483,8 +1423,8 @@
     "date": "2026-08-10",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-salvos",
-    "awayTeam": "mon-premiers-fc",
+    "homeTeam": "mon-all-stars",
+    "awayTeam": "mon-blue-dragons",
     "status": "scheduled"
   },
   {
@@ -1495,8 +1435,8 @@
     "date": "2026-08-10",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-moza-mama",
-    "awayTeam": "mon-ghazni-united",
+    "homeTeam": "mon-hunger-fc",
+    "awayTeam": "mon-misfits",
     "status": "scheduled"
   },
   {
@@ -1507,20 +1447,8 @@
     "date": "2026-08-10",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "mon-hazara-united",
-    "awayTeam": "mon-toss",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r19-7",
-    "night": "monday",
-    "division": "A",
-    "round": 19,
-    "date": "2026-08-10",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-hunger-fc",
-    "awayTeam": "mon-misfits",
+    "homeTeam": "mon-moza-mama",
+    "awayTeam": "mon-hazara-united",
     "status": "scheduled"
   },
   {
@@ -1532,7 +1460,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "mon-afg",
-    "awayTeam": "mon-hazara-united",
+    "awayTeam": "mon-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1543,8 +1471,8 @@
     "date": "2026-08-17",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-all-stars",
-    "awayTeam": "mon-xaywan",
+    "homeTeam": "mon-hazara-united",
+    "awayTeam": "mon-misfits",
     "status": "scheduled"
   },
   {
@@ -1555,8 +1483,8 @@
     "date": "2026-08-17",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-moza-mama",
-    "awayTeam": "mon-blue-dragons",
+    "homeTeam": "mon-blue-dragons",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -1567,8 +1495,8 @@
     "date": "2026-08-17",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-premiers-fc",
-    "awayTeam": "mon-misfits",
+    "homeTeam": "mon-moza-mama",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -1580,7 +1508,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "mon-salvos",
-    "awayTeam": "mon-ghazni-united",
+    "awayTeam": "mon-hunger-fc",
     "status": "scheduled"
   },
   {
@@ -1591,20 +1519,8 @@
     "date": "2026-08-17",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "mon-goldlink-up",
-    "awayTeam": "mon-wildcats",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r20-7",
-    "night": "monday",
-    "division": "A",
-    "round": 20,
-    "date": "2026-08-17",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-hunger-fc",
-    "awayTeam": "mon-toss",
+    "homeTeam": "mon-all-stars",
+    "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -1615,8 +1531,8 @@
     "date": "2026-08-24",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-afg",
-    "awayTeam": "mon-all-stars",
+    "homeTeam": "mon-misfits",
+    "awayTeam": "mon-afg",
     "status": "scheduled"
   },
   {
@@ -1627,8 +1543,8 @@
     "date": "2026-08-24",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-salvos",
-    "awayTeam": "mon-hazara-united",
+    "homeTeam": "mon-wildcats",
+    "awayTeam": "mon-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1639,7 +1555,7 @@
     "date": "2026-08-24",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-goldlink-up",
+    "homeTeam": "mon-premiers-fc",
     "awayTeam": "mon-blue-dragons",
     "status": "scheduled"
   },
@@ -1651,8 +1567,8 @@
     "date": "2026-08-24",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-premiers-fc",
-    "awayTeam": "mon-xaywan",
+    "homeTeam": "mon-goldlink-up",
+    "awayTeam": "mon-hazara-united",
     "status": "scheduled"
   },
   {
@@ -1663,8 +1579,8 @@
     "date": "2026-08-24",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-misfits",
-    "awayTeam": "mon-toss",
+    "homeTeam": "mon-hunger-fc",
+    "awayTeam": "mon-all-stars",
     "status": "scheduled"
   },
   {
@@ -1675,19 +1591,7 @@
     "date": "2026-08-24",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "mon-wildcats",
-    "awayTeam": "mon-ghazni-united",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r21-7",
-    "night": "monday",
-    "division": "A",
-    "round": 21,
-    "date": "2026-08-24",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-hunger-fc",
+    "homeTeam": "mon-salvos",
     "awayTeam": "mon-moza-mama",
     "status": "scheduled"
   },
@@ -1700,7 +1604,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "mon-afg",
-    "awayTeam": "mon-salvos",
+    "awayTeam": "mon-all-stars",
     "status": "scheduled"
   },
   {
@@ -1711,8 +1615,8 @@
     "date": "2026-08-31",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-misfits",
-    "awayTeam": "mon-moza-mama",
+    "homeTeam": "mon-salvos",
+    "awayTeam": "mon-hazara-united",
     "status": "scheduled"
   },
   {
@@ -1723,7 +1627,7 @@
     "date": "2026-08-31",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-ghazni-united",
+    "homeTeam": "mon-moza-mama",
     "awayTeam": "mon-blue-dragons",
     "status": "scheduled"
   },
@@ -1736,7 +1640,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "mon-premiers-fc",
-    "awayTeam": "mon-all-stars",
+    "awayTeam": "mon-misfits",
     "status": "scheduled"
   },
   {
@@ -1747,8 +1651,8 @@
     "date": "2026-08-31",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-wildcats",
-    "awayTeam": "mon-hazara-united",
+    "homeTeam": "mon-hunger-fc",
+    "awayTeam": "mon-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1759,20 +1663,8 @@
     "date": "2026-08-31",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "mon-toss",
-    "awayTeam": "mon-xaywan",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r22-7",
-    "night": "monday",
-    "division": "A",
-    "round": 22,
-    "date": "2026-08-31",
-    "time": "21:00",
-    "court": 1,
     "homeTeam": "mon-goldlink-up",
-    "awayTeam": "mon-hunger-fc",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -1783,8 +1675,8 @@
     "date": "2026-09-07",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-afg",
-    "awayTeam": "mon-xaywan",
+    "homeTeam": "mon-hazara-united",
+    "awayTeam": "mon-all-stars",
     "status": "scheduled"
   },
   {
@@ -1795,8 +1687,8 @@
     "date": "2026-09-07",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-hazara-united",
-    "awayTeam": "mon-ghazni-united",
+    "homeTeam": "mon-ghazni-united",
+    "awayTeam": "mon-moza-mama",
     "status": "scheduled"
   },
   {
@@ -1808,7 +1700,7 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-toss",
+    "awayTeam": "mon-afg",
     "status": "scheduled"
   },
   {
@@ -1819,8 +1711,8 @@
     "date": "2026-09-07",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-moza-mama",
-    "awayTeam": "mon-wildcats",
+    "homeTeam": "mon-goldlink-up",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -1831,8 +1723,8 @@
     "date": "2026-09-07",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-all-stars",
-    "awayTeam": "mon-misfits",
+    "homeTeam": "mon-wildcats",
+    "awayTeam": "mon-hunger-fc",
     "status": "scheduled"
   },
   {
@@ -1843,20 +1735,8 @@
     "date": "2026-09-07",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "mon-salvos",
-    "awayTeam": "mon-goldlink-up",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r23-7",
-    "night": "monday",
-    "division": "A",
-    "round": 23,
-    "date": "2026-09-07",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-hunger-fc",
-    "awayTeam": "mon-premiers-fc",
+    "homeTeam": "mon-misfits",
+    "awayTeam": "mon-salvos",
     "status": "scheduled"
   },
   {
@@ -1867,8 +1747,8 @@
     "date": "2026-09-14",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-xaywan",
-    "awayTeam": "mon-hazara-united",
+    "homeTeam": "mon-moza-mama",
+    "awayTeam": "mon-afg",
     "status": "scheduled"
   },
   {
@@ -1879,8 +1759,8 @@
     "date": "2026-09-14",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-toss",
-    "awayTeam": "mon-moza-mama",
+    "homeTeam": "mon-all-stars",
+    "awayTeam": "mon-salvos",
     "status": "scheduled"
   },
   {
@@ -1891,8 +1771,8 @@
     "date": "2026-09-14",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-afg",
+    "homeTeam": "mon-hazara-united",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -1903,7 +1783,7 @@
     "date": "2026-09-14",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-premiers-fc",
+    "homeTeam": "mon-ghazni-united",
     "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
   },
@@ -1915,8 +1795,8 @@
     "date": "2026-09-14",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-ghazni-united",
-    "awayTeam": "mon-all-stars",
+    "homeTeam": "mon-blue-dragons",
+    "awayTeam": "mon-hunger-fc",
     "status": "scheduled"
   },
   {
@@ -1928,19 +1808,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "mon-misfits",
-    "awayTeam": "mon-salvos",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r24-7",
-    "night": "monday",
-    "division": "A",
-    "round": 24,
-    "date": "2026-09-14",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-wildcats",
-    "awayTeam": "mon-hunger-fc",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -1951,8 +1819,8 @@
     "date": "2026-09-21",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-ghazni-united",
-    "awayTeam": "mon-afg",
+    "homeTeam": "mon-afg",
+    "awayTeam": "mon-hazara-united",
     "status": "scheduled"
   },
   {
@@ -1963,8 +1831,8 @@
     "date": "2026-09-21",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-wildcats",
-    "awayTeam": "mon-toss",
+    "homeTeam": "mon-all-stars",
+    "awayTeam": "mon-misfits",
     "status": "scheduled"
   },
   {
@@ -1975,8 +1843,8 @@
     "date": "2026-09-21",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-premiers-fc",
-    "awayTeam": "mon-blue-dragons",
+    "homeTeam": "mon-blue-dragons",
+    "awayTeam": "mon-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -1987,8 +1855,8 @@
     "date": "2026-09-21",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-misfits",
-    "awayTeam": "mon-xaywan",
+    "homeTeam": "mon-moza-mama",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -1999,8 +1867,8 @@
     "date": "2026-09-21",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-goldlink-up",
-    "awayTeam": "mon-hazara-united",
+    "homeTeam": "mon-hunger-fc",
+    "awayTeam": "mon-premiers-fc",
     "status": "scheduled"
   },
   {
@@ -2012,19 +1880,7 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "mon-salvos",
-    "awayTeam": "mon-moza-mama",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r25-7",
-    "night": "monday",
-    "division": "A",
-    "round": 25,
-    "date": "2026-09-21",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-hunger-fc",
-    "awayTeam": "mon-all-stars",
+    "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -2035,8 +1891,8 @@
     "date": "2026-09-28",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-moza-mama",
-    "awayTeam": "mon-afg",
+    "homeTeam": "mon-afg",
+    "awayTeam": "mon-moza-mama",
     "status": "scheduled"
   },
   {
@@ -2047,8 +1903,8 @@
     "date": "2026-09-28",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-hazara-united",
-    "awayTeam": "mon-all-stars",
+    "homeTeam": "mon-ghazni-united",
+    "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },
   {
@@ -2059,8 +1915,8 @@
     "date": "2026-09-28",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-ghazni-united",
-    "awayTeam": "mon-premiers-fc",
+    "homeTeam": "mon-blue-dragons",
+    "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -2071,7 +1927,7 @@
     "date": "2026-09-28",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-xaywan",
+    "homeTeam": "mon-premiers-fc",
     "awayTeam": "mon-salvos",
     "status": "scheduled"
   },
@@ -2083,8 +1939,8 @@
     "date": "2026-09-28",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-toss",
-    "awayTeam": "mon-goldlink-up",
+    "homeTeam": "mon-hunger-fc",
+    "awayTeam": "mon-misfits",
     "status": "scheduled"
   },
   {
@@ -2095,20 +1951,8 @@
     "date": "2026-09-28",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "mon-wildcats",
-    "awayTeam": "mon-misfits",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r26-7",
-    "night": "monday",
-    "division": "A",
-    "round": 26,
-    "date": "2026-09-28",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-hunger-fc",
+    "homeTeam": "mon-all-stars",
+    "awayTeam": "mon-hazara-united",
     "status": "scheduled"
   }
 ]

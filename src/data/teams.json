@@ -52,7 +52,8 @@
     "id": "mon-toss",
     "name": "Toss",
     "night": "monday",
-    "division": "A"
+    "division": "A",
+    "active": false
   },
   {
     "id": "mon-wildcats",
@@ -151,8 +152,8 @@
     "division": "A"
   },
   {
-    "id": "wed-toss",
-    "name": "Toss",
+    "id": "wed-umoja-stars",
+    "name": "Umoja Stars",
     "night": "wednesday",
     "division": "A"
   },
@@ -172,7 +173,8 @@
     "id": "mon-xaywan",
     "name": "Xaywan",
     "night": "monday",
-    "division": "A"
+    "division": "A",
+    "active": false
   },
   {
     "id": "mon-buckle-city",
