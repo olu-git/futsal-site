@@ -49,8 +49,8 @@
     "active": false
   },
   {
-    "id": "mon-toss",
-    "name": "Toss",
+    "id": "mon-toss-legacy",
+    "name": "Toss (Previous Entry)",
     "night": "monday",
     "division": "A",
     "active": false
@@ -62,8 +62,8 @@
     "division": "A"
   },
   {
-    "id": "mon-premiers-fc",
-    "name": "Premiers FC",
+    "id": "mon-toss",
+    "name": "Toss",
     "night": "monday",
     "division": "A"
   },
