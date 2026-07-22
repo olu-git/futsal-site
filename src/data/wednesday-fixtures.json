@@ -1533,9 +1533,11 @@
     "date": "2026-07-22",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-ghazni-united",
-    "awayTeam": "wed-misfits",
-    "status": "scheduled"
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-ghazni-united",
+    "status": "completed",
+    "homeScore": 6,
+    "awayScore": 8
   },
   {
     "id": "wed-r18-2",
@@ -1547,7 +1549,9 @@
     "court": 2,
     "homeTeam": "wed-dwell-fc",
     "awayTeam": "wed-afg",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 3,
+    "awayScore": 7
   },
   {
     "id": "wed-r18-3",
@@ -1557,9 +1561,11 @@
     "date": "2026-07-22",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-wildcats",
-    "awayTeam": "wed-goldlink-up",
-    "status": "scheduled"
+    "homeTeam": "wed-goldlink-up",
+    "awayTeam": "wed-wildcats",
+    "status": "completed",
+    "homeScore": 8,
+    "awayScore": 6
   },
   {
     "id": "wed-r18-7",
@@ -1569,9 +1575,11 @@
     "date": "2026-07-22",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-unathletico",
-    "awayTeam": "wed-ibiza",
-    "status": "scheduled"
+    "homeTeam": "wed-ibiza",
+    "awayTeam": "wed-unathletico",
+    "status": "completed",
+    "homeScore": 3,
+    "awayScore": 2
   },
   {
     "id": "wed-r18-5",
@@ -1583,7 +1591,9 @@
     "court": 1,
     "homeTeam": "wed-moza-mama",
     "awayTeam": "wed-toss",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 10,
+    "awayScore": 4
   },
   {
     "id": "wed-r18-6",
@@ -1595,7 +1605,9 @@
     "court": 2,
     "homeTeam": "wed-pops",
     "awayTeam": "wed-hazara-united",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 6,
+    "awayScore": 5
   },
   {
     "id": "wed-r18-4",
@@ -1605,9 +1617,11 @@
     "date": "2026-07-22",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-umoja-stars",
-    "status": "scheduled"
+    "homeTeam": "wed-umoja-stars",
+    "awayTeam": "wed-rinnai",
+    "status": "completed",
+    "homeScore": 8,
+    "awayScore": 7
   },
   {
     "id": "wed-r19-1",
