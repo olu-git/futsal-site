@@ -35,7 +35,7 @@ export function validateFixtures(
   );
   const wednesdayPreRound8TeamIds = new Set(
     [...wednesdayTeamIds].filter(
-      (teamId) => teamId !== "wed-black-lock" && teamId !== "wed-toss"
+      (teamId) => teamId !== "wed-dwell-fc" && teamId !== "wed-umoja-stars"
     )
   );
   const mondayTeamIds = new Set(
