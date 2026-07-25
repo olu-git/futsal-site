@@ -49,11 +49,10 @@
     "active": false
   },
   {
-    "id": "mon-toss-legacy",
-    "name": "Toss (Previous Entry)",
+    "id": "mon-goal-diggers",
+    "name": "Goal Diggers",
     "night": "monday",
-    "division": "A",
-    "active": false
+    "division": "A"
   },
   {
     "id": "mon-wildcats",
@@ -173,8 +172,7 @@
     "id": "mon-xaywan",
     "name": "Xaywan",
     "night": "monday",
-    "division": "A",
-    "active": false
+    "division": "A"
   },
   {
     "id": "mon-buckle-city",
