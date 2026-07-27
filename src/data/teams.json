@@ -61,8 +61,8 @@
     "division": "A"
   },
   {
-    "id": "mon-toss",
-    "name": "Toss",
+    "id": "mon-hope",
+    "name": "Hope",
     "night": "monday",
     "division": "A"
   },
@@ -157,8 +157,8 @@
     "division": "A"
   },
   {
-    "id": "mon-all-stars",
-    "name": "All Stars",
+    "id": "mon-toss",
+    "name": "Toss",
     "night": "monday",
     "division": "A"
   },
