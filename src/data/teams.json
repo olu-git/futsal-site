@@ -180,5 +180,17 @@
     "night": "monday",
     "division": "A",
     "active": false
+  },
+  {
+    "id": "wed-mts-fc",
+    "name": "MTS FC",
+    "night": "wednesday",
+    "division": "A"
+  },
+  {
+    "id": "wed-xaywan",
+    "name": "Xaywan",
+    "night": "wednesday",
+    "division": "A"
   }
 ]

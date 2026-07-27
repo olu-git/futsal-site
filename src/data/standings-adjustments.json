@@ -446,5 +446,33 @@
     "goalsAgainst": 9,
     "points": 2,
     "note": "Entry padding: two administrative 3-3 draws and one administrative 0-3 loss"
+  },
+  {
+    "id": "wed-admin-mts-fc-r1-r18-entry-record",
+    "night": "wednesday",
+    "division": "A",
+    "teamId": "wed-mts-fc",
+    "played": 18,
+    "won": 4,
+    "drawn": 0,
+    "lost": 14,
+    "goalsFor": 12,
+    "goalsAgainst": 42,
+    "points": 12,
+    "note": "Administrative R1-R18 entry record: 4 wins and 14 losses, including one 3-0 win and one 0-3 loss against Xaywan"
+  },
+  {
+    "id": "wed-admin-xaywan-r1-r18-entry-record",
+    "night": "wednesday",
+    "division": "A",
+    "teamId": "wed-xaywan",
+    "played": 18,
+    "won": 1,
+    "drawn": 0,
+    "lost": 17,
+    "goalsFor": 3,
+    "goalsAgainst": 51,
+    "points": 3,
+    "note": "Administrative R1-R18 entry record: 1 win and 17 losses, including one 3-0 win and one 0-3 loss against MTS FC"
   }
 ]
