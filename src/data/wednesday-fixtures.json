@@ -1633,7 +1633,9 @@
     "court": 1,
     "homeTeam": "wed-goldlink-up",
     "awayTeam": "wed-misfits",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 7,
+    "awayScore": 9
   },
   {
     "id": "wed-r19-2",
@@ -1645,7 +1647,9 @@
     "court": 2,
     "homeTeam": "wed-dwell-fc",
     "awayTeam": "wed-unathletico",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 5,
+    "awayScore": 0
   },
   {
     "id": "wed-r19-3",
@@ -1657,7 +1661,9 @@
     "court": 1,
     "homeTeam": "wed-pops",
     "awayTeam": "wed-afg",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 7,
+    "awayScore": 8
   },
   {
     "id": "wed-r19-7",
@@ -1667,9 +1673,11 @@
     "date": "2026-07-29",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-umoja-stars",
-    "awayTeam": "wed-toss",
-    "status": "scheduled"
+    "homeTeam": "wed-toss",
+    "awayTeam": "wed-xaywan",
+    "status": "completed",
+    "homeScore": 5,
+    "awayScore": 0
   },
   {
     "id": "wed-r19-5",
@@ -1681,7 +1689,9 @@
     "court": 1,
     "homeTeam": "wed-moza-mama",
     "awayTeam": "wed-ibiza",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 6,
+    "awayScore": 3
   },
   {
     "id": "wed-r19-6",
@@ -1693,7 +1703,9 @@
     "court": 2,
     "homeTeam": "wed-wildcats",
     "awayTeam": "wed-rinnai",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 13,
+    "awayScore": 8
   },
   {
     "id": "wed-r19-4",
@@ -1705,7 +1717,9 @@
     "court": 1,
     "homeTeam": "wed-mts-fc",
     "awayTeam": "wed-hazara-united",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 2,
+    "awayScore": 6
   },
   {
     "id": "wed-r19-8",
@@ -1715,9 +1729,11 @@
     "date": "2026-07-29",
     "time": "21:00",
     "court": 2,
-    "homeTeam": "wed-xaywan",
+    "homeTeam": "wed-umoja-stars",
     "awayTeam": "wed-ghazni-united",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 7,
+    "awayScore": 5
   },
   {
     "id": "wed-r20-1",
@@ -1727,8 +1743,8 @@
     "date": "2026-08-05",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-xaywan",
-    "awayTeam": "wed-pops",
+    "homeTeam": "wed-ghazni-united",
+    "awayTeam": "wed-xaywan",
     "status": "scheduled"
   },
   {
@@ -1799,8 +1815,8 @@
     "date": "2026-08-05",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-ghazni-united",
-    "awayTeam": "wed-umoja-stars",
+    "homeTeam": "wed-umoja-stars",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -1948,15 +1964,15 @@
     "status": "scheduled"
   },
   {
-    "id": "wed-r22-4",
+    "id": "wed-r22-8",
     "night": "wednesday",
     "division": "A",
     "round": 22,
     "date": "2026-08-19",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-mts-fc",
-    "awayTeam": "wed-toss",
+    "homeTeam": "wed-ghazni-united",
+    "awayTeam": "wed-moza-mama",
     "status": "scheduled"
   },
   {
@@ -1996,15 +2012,15 @@
     "status": "scheduled"
   },
   {
-    "id": "wed-r22-8",
+    "id": "wed-r22-4",
     "night": "wednesday",
     "division": "A",
     "round": 22,
     "date": "2026-08-19",
     "time": "21:00",
     "court": 2,
-    "homeTeam": "wed-ghazni-united",
-    "awayTeam": "wed-moza-mama",
+    "homeTeam": "wed-mts-fc",
+    "awayTeam": "wed-toss",
     "status": "scheduled"
   },
   {
@@ -2320,15 +2336,15 @@
     "status": "scheduled"
   },
   {
-    "id": "wed-r26-3",
+    "id": "wed-r26-8",
     "night": "wednesday",
     "division": "A",
     "round": 26,
     "date": "2026-09-16",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-xaywan",
-    "awayTeam": "wed-wildcats",
+    "homeTeam": "wed-mts-fc",
+    "awayTeam": "wed-ghazni-united",
     "status": "scheduled"
   },
   {
@@ -2380,15 +2396,15 @@
     "status": "scheduled"
   },
   {
-    "id": "wed-r26-8",
+    "id": "wed-r26-3",
     "night": "wednesday",
     "division": "A",
     "round": 26,
     "date": "2026-09-16",
     "time": "21:00",
     "court": 2,
-    "homeTeam": "wed-mts-fc",
-    "awayTeam": "wed-ghazni-united",
+    "homeTeam": "wed-xaywan",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   }
 ]
