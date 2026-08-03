@@ -1497,8 +1497,8 @@
     "division": "A",
     "round": 19,
     "date": "2026-08-10",
-    "time": "19:40",
-    "court": 2,
+    "time": "21:00",
+    "court": 1,
     "homeTeam": "mon-hope",
     "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
@@ -1533,8 +1533,8 @@
     "division": "A",
     "round": 19,
     "date": "2026-08-10",
-    "time": "21:00",
-    "court": 1,
+    "time": "19:40",
+    "court": 2,
     "homeTeam": "mon-salvos",
     "awayTeam": "mon-ghazni-united",
     "status": "scheduled"
@@ -1893,8 +1893,8 @@
     "division": "A",
     "round": 24,
     "date": "2026-09-14",
-    "time": "19:00",
-    "court": 2,
+    "time": "21:00",
+    "court": 1,
     "homeTeam": "mon-hope",
     "awayTeam": "mon-goal-diggers",
     "status": "scheduled"
@@ -1953,8 +1953,8 @@
     "division": "A",
     "round": 24,
     "date": "2026-09-14",
-    "time": "21:00",
-    "court": 1,
+    "time": "19:00",
+    "court": 2,
     "homeTeam": "mon-ghazni-united",
     "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
