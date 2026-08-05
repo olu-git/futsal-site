@@ -1777,10 +1777,10 @@
     "division": "A",
     "round": 20,
     "date": "2026-08-05",
-    "time": "19:40",
+    "time": "21:00",
     "court": 2,
     "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-unathletico",
+    "awayTeam": "wed-afg",
     "status": "scheduled"
   },
   {
@@ -1825,10 +1825,10 @@
     "division": "A",
     "round": 20,
     "date": "2026-08-05",
-    "time": "21:00",
+    "time": "19:40",
     "court": 2,
     "homeTeam": "wed-xaywan",
-    "awayTeam": "wed-afg",
+    "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
   {
