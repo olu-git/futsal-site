@@ -1744,7 +1744,7 @@
     "time": "19:00",
     "court": 1,
     "homeTeam": "wed-ghazni-united",
-    "awayTeam": "wed-xaywan",
+    "awayTeam": "wed-dwell-fc",
     "status": "scheduled"
   },
   {
@@ -1756,7 +1756,7 @@
     "time": "19:00",
     "court": 2,
     "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-dwell-fc",
+    "awayTeam": "wed-wildcats",
     "status": "scheduled"
   },
   {
@@ -1827,7 +1827,7 @@
     "date": "2026-08-05",
     "time": "21:00",
     "court": 2,
-    "homeTeam": "wed-wildcats",
+    "homeTeam": "wed-xaywan",
     "awayTeam": "wed-afg",
     "status": "scheduled"
   },
