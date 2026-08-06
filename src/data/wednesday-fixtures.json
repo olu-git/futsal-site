@@ -1745,7 +1745,9 @@
     "court": 1,
     "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-dwell-fc",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 9,
+    "awayScore": 1
   },
   {
     "id": "wed-r20-2",
@@ -1755,9 +1757,11 @@
     "date": "2026-08-05",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-wildcats",
-    "status": "scheduled"
+    "homeTeam": "wed-xaywan",
+    "awayTeam": "wed-moza-mama",
+    "status": "completed",
+    "homeScore": 0,
+    "awayScore": 5
   },
   {
     "id": "wed-r20-3",
@@ -1769,7 +1773,9 @@
     "court": 1,
     "homeTeam": "wed-mts-fc",
     "awayTeam": "wed-misfits",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 6,
+    "awayScore": 12
   },
   {
     "id": "wed-r20-4",
@@ -1779,9 +1785,11 @@
     "date": "2026-08-05",
     "time": "21:00",
     "court": 2,
-    "homeTeam": "wed-hazara-united",
-    "awayTeam": "wed-afg",
-    "status": "scheduled"
+    "homeTeam": "wed-afg",
+    "awayTeam": "wed-hazara-united",
+    "status": "completed",
+    "homeScore": 7,
+    "awayScore": 2
   },
   {
     "id": "wed-r20-5",
@@ -1793,7 +1801,9 @@
     "court": 1,
     "homeTeam": "wed-rinnai",
     "awayTeam": "wed-ibiza",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 6,
+    "awayScore": 4
   },
   {
     "id": "wed-r20-6",
@@ -1805,7 +1815,9 @@
     "court": 2,
     "homeTeam": "wed-toss",
     "awayTeam": "wed-goldlink-up",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 4,
+    "awayScore": 9
   },
   {
     "id": "wed-r20-7",
@@ -1817,7 +1829,9 @@
     "court": 1,
     "homeTeam": "wed-umoja-stars",
     "awayTeam": "wed-pops",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 5,
+    "awayScore": 9
   },
   {
     "id": "wed-r20-8",
@@ -1827,9 +1841,11 @@
     "date": "2026-08-05",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-xaywan",
+    "homeTeam": "wed-wildcats",
     "awayTeam": "wed-unathletico",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 9,
+    "awayScore": 4
   },
   {
     "id": "wed-r21-1",
