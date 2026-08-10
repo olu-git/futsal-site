@@ -1465,7 +1465,9 @@
     "court": 1,
     "homeTeam": "mon-xaywan",
     "awayTeam": "mon-misfits",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 5,
+    "awayScore": 0
   },
   {
     "id": "mon-r19-2",
@@ -1477,7 +1479,9 @@
     "court": 2,
     "homeTeam": "mon-afg",
     "awayTeam": "mon-wildcats",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 8,
+    "awayScore": 6
   },
   {
     "id": "mon-r19-3",
@@ -1489,7 +1493,9 @@
     "court": 1,
     "homeTeam": "mon-hazara-united",
     "awayTeam": "mon-blue-dragons",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 2,
+    "awayScore": 4
   },
   {
     "id": "mon-r19-4",
@@ -1501,7 +1507,9 @@
     "court": 1,
     "homeTeam": "mon-hope",
     "awayTeam": "mon-goldlink-up",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 8,
+    "awayScore": 8
   },
   {
     "id": "mon-r19-5",
@@ -1513,7 +1521,9 @@
     "court": 1,
     "homeTeam": "mon-goal-diggers",
     "awayTeam": "mon-hunger-fc",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 3,
+    "awayScore": 6
   },
   {
     "id": "mon-r19-6",
@@ -1525,7 +1535,9 @@
     "court": 2,
     "homeTeam": "mon-moza-mama",
     "awayTeam": "mon-toss",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 5,
+    "awayScore": 0
   },
   {
     "id": "mon-r19-7",
@@ -1537,7 +1549,9 @@
     "court": 2,
     "homeTeam": "mon-salvos",
     "awayTeam": "mon-ghazni-united",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 3,
+    "awayScore": 8
   },
   {
     "id": "mon-r20-1",
