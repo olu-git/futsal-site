@@ -1002,7 +1002,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "mon-hazara-united",
-    "awayTeam": "mon-xaywan",
+    "awayTeam": "mon-top-up-fc",
     "status": "completed",
     "homeScore": 5,
     "awayScore": 0
@@ -1352,7 +1352,7 @@
     "time": "21:00",
     "court": 1,
     "homeTeam": "mon-goal-diggers",
-    "awayTeam": "mon-xaywan",
+    "awayTeam": "mon-top-up-fc",
     "status": "completed",
     "homeScore": 2,
     "awayScore": 8
@@ -1408,7 +1408,7 @@
     "time": "19:40",
     "court": 2,
     "homeTeam": "mon-hope",
-    "awayTeam": "mon-xaywan",
+    "awayTeam": "mon-top-up-fc",
     "status": "completed",
     "homeScore": 8,
     "awayScore": 5
@@ -1463,7 +1463,7 @@
     "date": "2026-08-10",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-xaywan",
+    "homeTeam": "mon-top-up-fc",
     "awayTeam": "mon-misfits",
     "status": "completed",
     "homeScore": 5,
@@ -1585,7 +1585,7 @@
     "date": "2026-08-17",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "mon-xaywan",
+    "homeTeam": "mon-top-up-fc",
     "awayTeam": "mon-blue-dragons",
     "status": "scheduled"
   },
@@ -1693,7 +1693,7 @@
     "date": "2026-08-24",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-xaywan",
+    "homeTeam": "mon-top-up-fc",
     "awayTeam": "mon-hunger-fc",
     "status": "scheduled"
   },
@@ -1742,7 +1742,7 @@
     "time": "19:00",
     "court": 2,
     "homeTeam": "mon-ghazni-united",
-    "awayTeam": "mon-xaywan",
+    "awayTeam": "mon-top-up-fc",
     "status": "scheduled"
   },
   {
@@ -1813,7 +1813,7 @@
     "date": "2026-09-07",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-xaywan",
+    "homeTeam": "mon-top-up-fc",
     "awayTeam": "mon-hope",
     "status": "scheduled"
   },
@@ -1933,7 +1933,7 @@
     "date": "2026-09-14",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-xaywan",
+    "homeTeam": "mon-top-up-fc",
     "awayTeam": "mon-moza-mama",
     "status": "scheduled"
   },
@@ -2053,7 +2053,7 @@
     "date": "2026-09-21",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "mon-xaywan",
+    "homeTeam": "mon-top-up-fc",
     "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
   },
@@ -2101,7 +2101,7 @@
     "date": "2026-09-28",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-xaywan",
+    "homeTeam": "mon-top-up-fc",
     "awayTeam": "mon-wildcats",
     "status": "scheduled"
   },

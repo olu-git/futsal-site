@@ -406,10 +406,10 @@
     "note": "Administrative R1-R12 entry record for Hazara United: 4 wins, 4 draws, 4 losses"
   },
   {
-    "id": "mon-admin-xaywan-r1-r12-record",
+    "id": "mon-admin-top-up-fc-r1-r12-record",
     "night": "monday",
     "division": "A",
-    "teamId": "mon-xaywan",
+    "teamId": "mon-top-up-fc",
     "played": 12,
     "won": 1,
     "drawn": 1,
@@ -417,13 +417,13 @@
     "goalsFor": 6,
     "goalsAgainst": 33,
     "points": 4,
-    "note": "Administrative R1-R12 entry record for Xaywan: 1 win, 1 draw, 10 losses"
+    "note": "Administrative R1-R12 entry record inherited by Top Up FC: 1 win, 1 draw, 10 losses"
   },
   {
-    "id": "mon-admin-xaywan-r13-r16-padding",
+    "id": "mon-admin-top-up-fc-r13-r16-padding",
     "night": "monday",
     "division": "A",
-    "teamId": "mon-xaywan",
+    "teamId": "mon-top-up-fc",
     "played": 3,
     "won": 0,
     "drawn": 2,
