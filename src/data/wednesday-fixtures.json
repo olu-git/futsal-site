@@ -1855,9 +1855,11 @@
     "date": "2026-08-12",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-xaywan",
+    "homeTeam": "wed-wildcats",
     "awayTeam": "wed-moza-mama",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 0,
+    "awayScore": 5
   },
   {
     "id": "wed-r21-2",
@@ -1867,9 +1869,11 @@
     "date": "2026-08-12",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-pops",
-    "awayTeam": "wed-toss",
-    "status": "scheduled"
+    "homeTeam": "wed-toss",
+    "awayTeam": "wed-pops",
+    "status": "completed",
+    "homeScore": 4,
+    "awayScore": 6
   },
   {
     "id": "wed-r21-3",
@@ -1879,9 +1883,11 @@
     "date": "2026-08-12",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-unathletico",
-    "awayTeam": "wed-ghazni-united",
-    "status": "scheduled"
+    "homeTeam": "wed-ghazni-united",
+    "awayTeam": "wed-unathletico",
+    "status": "completed",
+    "homeScore": 11,
+    "awayScore": 3
   },
   {
     "id": "wed-r21-4",
@@ -1891,9 +1897,11 @@
     "date": "2026-08-12",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-afg",
-    "awayTeam": "wed-misfits",
-    "status": "scheduled"
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-afg",
+    "status": "completed",
+    "homeScore": 4,
+    "awayScore": 7
   },
   {
     "id": "wed-r21-5",
@@ -1905,7 +1913,9 @@
     "court": 1,
     "homeTeam": "wed-goldlink-up",
     "awayTeam": "wed-rinnai",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 7,
+    "awayScore": 5
   },
   {
     "id": "wed-r21-6",
@@ -1917,7 +1927,9 @@
     "court": 2,
     "homeTeam": "wed-wildcats",
     "awayTeam": "wed-ibiza",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 5,
+    "awayScore": 4
   },
   {
     "id": "wed-r21-7",
@@ -1927,9 +1939,11 @@
     "date": "2026-08-12",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-mts-fc",
-    "awayTeam": "wed-umoja-stars",
-    "status": "scheduled"
+    "homeTeam": "wed-umoja-stars",
+    "awayTeam": "wed-mts-fc",
+    "status": "completed",
+    "homeScore": 13,
+    "awayScore": 5
   },
   {
     "id": "wed-r21-8",
@@ -1939,9 +1953,11 @@
     "date": "2026-08-12",
     "time": "21:00",
     "court": 2,
-    "homeTeam": "wed-dwell-fc",
-    "awayTeam": "wed-hazara-united",
-    "status": "scheduled"
+    "homeTeam": "wed-hazara-united",
+    "awayTeam": "wed-dwell-fc",
+    "status": "completed",
+    "homeScore": 7,
+    "awayScore": 3
   },
   {
     "id": "wed-r22-1",
