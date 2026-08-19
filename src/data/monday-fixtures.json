@@ -1561,9 +1561,11 @@
     "date": "2026-08-17",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-goal-diggers",
-    "awayTeam": "mon-ghazni-united",
-    "status": "scheduled"
+    "homeTeam": "mon-ghazni-united",
+    "awayTeam": "mon-goal-diggers",
+    "status": "completed",
+    "homeScore": 10,
+    "awayScore": 10
   },
   {
     "id": "mon-r20-2",
@@ -1573,9 +1575,11 @@
     "date": "2026-08-17",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "mon-hope",
-    "awayTeam": "mon-moza-mama",
-    "status": "scheduled"
+    "homeTeam": "mon-moza-mama",
+    "awayTeam": "mon-hope",
+    "status": "completed",
+    "homeScore": 5,
+    "awayScore": 7
   },
   {
     "id": "mon-r20-3",
@@ -1587,7 +1591,9 @@
     "court": 1,
     "homeTeam": "mon-top-up-fc",
     "awayTeam": "mon-blue-dragons",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 12,
+    "awayScore": 0
   },
   {
     "id": "mon-r20-4",
@@ -1597,9 +1603,11 @@
     "date": "2026-08-17",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "mon-goldlink-up",
-    "awayTeam": "mon-toss",
-    "status": "scheduled"
+    "homeTeam": "mon-toss",
+    "awayTeam": "mon-goldlink-up",
+    "status": "completed",
+    "homeScore": 6,
+    "awayScore": 5
   },
   {
     "id": "mon-r20-5",
@@ -1609,9 +1617,11 @@
     "date": "2026-08-17",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "mon-hazara-united",
-    "awayTeam": "mon-hunger-fc",
-    "status": "scheduled"
+    "homeTeam": "mon-hunger-fc",
+    "awayTeam": "mon-hazara-united",
+    "status": "completed",
+    "homeScore": 7,
+    "awayScore": 3
   },
   {
     "id": "mon-r20-6",
@@ -1621,9 +1631,11 @@
     "date": "2026-08-17",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "mon-afg",
-    "awayTeam": "mon-misfits",
-    "status": "scheduled"
+    "homeTeam": "mon-misfits",
+    "awayTeam": "mon-afg",
+    "status": "completed",
+    "homeScore": 0,
+    "awayScore": 5
   },
   {
     "id": "mon-r20-7",
@@ -1633,9 +1645,11 @@
     "date": "2026-08-17",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "mon-salvos",
-    "awayTeam": "mon-wildcats",
-    "status": "scheduled"
+    "homeTeam": "mon-wildcats",
+    "awayTeam": "mon-salvos",
+    "status": "completed",
+    "homeScore": 6,
+    "awayScore": 1
   },
   {
     "id": "mon-r21-1",
