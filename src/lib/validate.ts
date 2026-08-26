@@ -142,7 +142,24 @@ export function validateFixtures(
       });
     }
 
-    // 4. No games on public holidays
+    // 4. Monday Ghazni United only at 20:20 or 21:00 for scheduled fixtures
+    if (
+      f.status === "scheduled" &&
+      f.night === "monday" &&
+      (f.homeTeam === "mon-ghazni-united" ||
+        f.awayTeam === "mon-ghazni-united") &&
+      f.time !== "20:20" &&
+      f.time !== "21:00"
+    ) {
+      issues.push({
+        type: "hard",
+        rule: "monday-ghazni-late-slot",
+        fixtureId: f.id,
+        message: `Monday Ghazni United must play at 20:20 or 21:00 in fixture ${f.id} (${f.date})`,
+      });
+    }
+
+    // 5. No games on public holidays
     if (VIC_PUBLIC_HOLIDAYS.has(f.date)) {
       issues.push({
         type: "hard",
@@ -152,7 +169,7 @@ export function validateFixtures(
       });
     }
 
-    // 5. Monday fixtures must be on a Monday
+    // 6. Monday fixtures must be on a Monday
     if (f.night === "monday") {
       const day = new Date(f.date + "T00:00:00").getDay();
       if (day !== 1) {
@@ -165,7 +182,7 @@ export function validateFixtures(
       }
     }
 
-    // 6. Wednesday fixtures must be on a Wednesday
+    // 7. Wednesday fixtures must be on a Wednesday
     if (f.night === "wednesday") {
       const day = new Date(f.date + "T00:00:00").getDay();
       if (day !== 3) {
