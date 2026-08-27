@@ -2081,7 +2081,9 @@
     "court": 1,
     "homeTeam": "wed-wildcats",
     "awayTeam": "wed-dwell-fc",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 7,
+    "awayScore": 4
   },
   {
     "id": "wed-r23-2",
@@ -2093,7 +2095,9 @@
     "court": 2,
     "homeTeam": "wed-pops",
     "awayTeam": "wed-ghazni-united",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 5,
+    "awayScore": 8
   },
   {
     "id": "wed-r23-3",
@@ -2103,9 +2107,11 @@
     "date": "2026-08-26",
     "time": "19:40",
     "court": 1,
-    "homeTeam": "wed-xaywan",
+    "homeTeam": "wed-afg",
     "awayTeam": "wed-misfits",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 8,
+    "awayScore": 6
   },
   {
     "id": "wed-r23-4",
@@ -2115,9 +2121,11 @@
     "date": "2026-08-26",
     "time": "19:40",
     "court": 2,
-    "homeTeam": "wed-hazara-united",
+    "homeTeam": "wed-moza-mama",
     "awayTeam": "wed-unathletico",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 6,
+    "awayScore": 2
   },
   {
     "id": "wed-r23-5",
@@ -2129,7 +2137,9 @@
     "court": 1,
     "homeTeam": "wed-toss",
     "awayTeam": "wed-rinnai",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 3,
+    "awayScore": 9
   },
   {
     "id": "wed-r23-6",
@@ -2141,7 +2151,9 @@
     "court": 2,
     "homeTeam": "wed-mts-fc",
     "awayTeam": "wed-ibiza",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 2,
+    "awayScore": 9
   },
   {
     "id": "wed-r23-7",
@@ -2153,7 +2165,9 @@
     "court": 1,
     "homeTeam": "wed-goldlink-up",
     "awayTeam": "wed-umoja-stars",
-    "status": "scheduled"
+    "status": "completed",
+    "homeScore": 8,
+    "awayScore": 8
   },
   {
     "id": "wed-r23-8",
@@ -2163,9 +2177,11 @@
     "date": "2026-08-26",
     "time": "21:00",
     "court": 2,
-    "homeTeam": "wed-moza-mama",
-    "awayTeam": "wed-afg",
-    "status": "scheduled"
+    "homeTeam": "wed-hazara-united",
+    "awayTeam": "wed-xaywan",
+    "status": "completed",
+    "homeScore": 5,
+    "awayScore": 0
   },
   {
     "id": "wed-r24-1",
@@ -2367,7 +2383,7 @@
     "date": "2026-09-16",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "wed-moza-mama",
+    "homeTeam": "wed-hazara-united",
     "awayTeam": "wed-unathletico",
     "status": "scheduled"
   },
@@ -2379,7 +2395,7 @@
     "date": "2026-09-16",
     "time": "19:00",
     "court": 2,
-    "homeTeam": "wed-misfits",
+    "homeTeam": "wed-moza-mama",
     "awayTeam": "wed-dwell-fc",
     "status": "scheduled"
   },
@@ -2416,7 +2432,7 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "wed-rinnai",
-    "awayTeam": "wed-hazara-united",
+    "awayTeam": "wed-xaywan",
     "status": "scheduled"
   },
   {
@@ -2439,8 +2455,8 @@
     "date": "2026-09-16",
     "time": "21:00",
     "court": 1,
-    "homeTeam": "wed-pops",
-    "awayTeam": "wed-umoja-stars",
+    "homeTeam": "wed-misfits",
+    "awayTeam": "wed-pops",
     "status": "scheduled"
   },
   {
@@ -2451,7 +2467,7 @@
     "date": "2026-09-16",
     "time": "21:00",
     "court": 2,
-    "homeTeam": "wed-xaywan",
+    "homeTeam": "wed-umoja-stars",
     "awayTeam": "wed-wildcats",
     "status": "scheduled"
   }
