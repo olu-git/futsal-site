@@ -102,7 +102,7 @@ const fifaGroups: RuleGroup[] = [
         icon: TriangleAlert,
         title: "Accumulated Fouls",
         description:
-          "5+ team fouls per half result in a direct penalty kick with no wall.",
+          "Team fouls accumulate throughout the entire match and do not reset at half-time. From the fifth team foul onward, each additional foul results in a direct penalty kick with no wall.",
       },
       {
         icon: Square,
@@ -133,9 +133,9 @@ const leagueGroups: RuleGroup[] = [
       },
       {
         icon: BellOff,
-        title: "Team Absence",
+        title: "Absence & Forfeit",
         description:
-          "Teams must notify Futsal Admin staff at least 24 hours before kick-off. Failure to notify within this window results in an automatic forfeit and the team must pay their weekly match fee.",
+          "Teams must notify Futsal Admin staff at least 24 hours before kick-off if they cannot attend. Failure to provide notice results in an automatic forfeit, and the team must either pay its weekly match fee or forfeit its bond.",
       },
       {
         icon: CircleX,
@@ -151,9 +151,9 @@ const leagueGroups: RuleGroup[] = [
       },
       {
         icon: Banknote,
-        title: "Forfeit Bond",
+        title: "Team Bond",
         description:
-          "Same-day cancellations and no-shows result in the team forfeiting its bond. Venue and staff costs still apply, and the team cannot play again until the bond is repaid.",
+          "Teams cannot play unless Futsal Admin holds an active bond for them. Venue and staff costs still apply when a team does not attend, and any forfeited bond must be replaced before the team can play again.",
       },
     ],
   },
