@@ -147,7 +147,7 @@ const leagueGroups: RuleGroup[] = [
         icon: Trophy,
         title: "Opponent No-Show",
         description:
-          "If your scheduled opponent does not show up, your team automatically wins 5-0. You may choose to still play and pay 50% of the match fee, or choose not to play at all.",
+          "If your scheduled opponent does not show up, your team automatically wins 5-0. You may choose to still play and pay the full match fee, or choose not to play at all.",
       },
       {
         icon: Banknote,
