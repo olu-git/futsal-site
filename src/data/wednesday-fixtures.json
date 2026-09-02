@@ -2193,7 +2193,9 @@
     "court": 1,
     "homeTeam": "wed-toss",
     "awayTeam": "wed-dwell-fc",
-    "status": "scheduled"
+    "homeScore": 2,
+    "awayScore": 3,
+    "status": "completed"
   },
   {
     "id": "wed-r24-2",
@@ -2205,7 +2207,9 @@
     "court": 2,
     "homeTeam": "wed-mts-fc",
     "awayTeam": "wed-wildcats",
-    "status": "scheduled"
+    "homeScore": 5,
+    "awayScore": 10,
+    "status": "completed"
   },
   {
     "id": "wed-r24-3",
@@ -2217,7 +2221,9 @@
     "court": 1,
     "homeTeam": "wed-unathletico",
     "awayTeam": "wed-goldlink-up",
-    "status": "scheduled"
+    "homeScore": 11,
+    "awayScore": 15,
+    "status": "completed"
   },
   {
     "id": "wed-r24-4",
@@ -2229,7 +2235,10 @@
     "court": 2,
     "homeTeam": "wed-pops",
     "awayTeam": "wed-moza-mama",
-    "status": "scheduled"
+    "homeScore": 5,
+    "awayScore": 0,
+    "note": "Forfeited match by Moza as they played another team's player when it wasn't allowed. Actual score was Moza (11) - Pops (10)",
+    "status": "completed"
   },
   {
     "id": "wed-r24-5",
@@ -2241,7 +2250,9 @@
     "court": 1,
     "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-rinnai",
-    "status": "scheduled"
+    "homeScore": 15,
+    "awayScore": 10,
+    "status": "completed"
   },
   {
     "id": "wed-r24-6",
@@ -2253,7 +2264,9 @@
     "court": 2,
     "homeTeam": "wed-misfits",
     "awayTeam": "wed-ibiza",
-    "status": "scheduled"
+    "homeScore": 5,
+    "awayScore": 4,
+    "status": "completed"
   },
   {
     "id": "wed-r24-7",
@@ -2265,7 +2278,9 @@
     "court": 1,
     "homeTeam": "wed-umoja-stars",
     "awayTeam": "wed-hazara-united",
-    "status": "scheduled"
+    "homeScore": 1,
+    "awayScore": 2,
+    "status": "completed"
   },
   {
     "id": "wed-r24-8",
@@ -2277,7 +2292,9 @@
     "court": 2,
     "homeTeam": "wed-xaywan",
     "awayTeam": "wed-afg",
-    "status": "scheduled"
+    "homeScore": 0,
+    "awayScore": 5,
+    "status": "completed"
   },
   {
     "id": "wed-r25-1",

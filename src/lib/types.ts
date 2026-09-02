@@ -24,6 +24,7 @@ export interface Fixture {
   awayTeam: string; // team id
   homeScore?: number;
   awayScore?: number;
+  note?: string;
   status: FixtureStatus;
 }
 

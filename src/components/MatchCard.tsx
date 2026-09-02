@@ -68,11 +68,16 @@ export default function MatchCard({ fixture, index = 0 }: MatchCardProps) {
       </div>
 
       {/* Footer */}
-      <div className="flex justify-center bg-white/[0.03] px-6 py-2.5">
+      <div className="flex flex-col items-center justify-center bg-white/[0.03] px-6 py-2.5">
         <span className="font-[family-name:var(--font-mono)] text-[11px] text-white/40 tracking-wide">
           {formatDate(fixture.date)} &middot; {formatTime(fixture.time)} &middot; Court{" "}
           {fixture.court}
         </span>
+        {fixture.note && (
+          <span className="mt-1 text-center font-[family-name:var(--font-mono)] text-[10px] leading-relaxed text-white/55">
+            {fixture.note}
+          </span>
+        )}
       </div>
     </motion.div>
   );
