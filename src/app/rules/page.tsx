@@ -141,7 +141,7 @@ const leagueGroups: RuleGroup[] = [
         icon: CircleX,
         title: "Forfeits",
         description:
-          "Forfeits are recorded as 5-0 losses. Teams that do not arrive before half-time automatically forfeit the game.",
+          "Forfeits are recorded as 5-0 losses. Teams that do not arrive before half-time automatically forfeit the game. A team also forfeits if it uses a player from another team when it already has five players available.",
       },
       {
         icon: Trophy,
