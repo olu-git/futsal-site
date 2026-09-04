@@ -87,10 +87,10 @@ export default function ContactPage() {
                   <div>
                     <p className="text-xs text-white/30 font-[family-name:var(--font-geist-mono)] uppercase tracking-wider mb-1">Email</p>
                     <a
-                      href="mailto:olumideykehinde@gmail.com"
+                      href="mailto:contact@futsalindoorsoccer.com.au"
                       className="text-sm text-white hover:text-red-400 transition-colors"
                     >
-                      olumideykehinde@gmail.com
+                      contact@futsalindoorsoccer.com.au
                     </a>
                   </div>
                 </div>
