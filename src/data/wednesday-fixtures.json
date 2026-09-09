@@ -2306,7 +2306,9 @@
     "court": 1,
     "homeTeam": "wed-ghazni-united",
     "awayTeam": "wed-goldlink-up",
-    "status": "scheduled"
+    "homeScore": 4,
+    "awayScore": 5,
+    "status": "completed"
   },
   {
     "id": "wed-r25-2",
@@ -2318,7 +2320,9 @@
     "court": 2,
     "homeTeam": "wed-misfits",
     "awayTeam": "wed-hazara-united",
-    "status": "scheduled"
+    "homeScore": 6,
+    "awayScore": 6,
+    "status": "completed"
   },
   {
     "id": "wed-r25-3",
@@ -2330,7 +2334,9 @@
     "court": 1,
     "homeTeam": "wed-xaywan",
     "awayTeam": "wed-toss",
-    "status": "scheduled"
+    "homeScore": 9,
+    "awayScore": 8,
+    "status": "completed"
   },
   {
     "id": "wed-r25-4",
@@ -2342,7 +2348,9 @@
     "court": 2,
     "homeTeam": "wed-mts-fc",
     "awayTeam": "wed-unathletico",
-    "status": "scheduled"
+    "homeScore": 1,
+    "awayScore": 7,
+    "status": "completed"
   },
   {
     "id": "wed-r25-5",
@@ -2352,9 +2360,11 @@
     "date": "2026-09-09",
     "time": "20:20",
     "court": 1,
-    "homeTeam": "wed-dwell-fc",
+    "homeTeam": "wed-moza-mama",
     "awayTeam": "wed-rinnai",
-    "status": "scheduled"
+    "homeScore": 5,
+    "awayScore": 0,
+    "status": "completed"
   },
   {
     "id": "wed-r25-6",
@@ -2364,9 +2374,11 @@
     "date": "2026-09-09",
     "time": "20:20",
     "court": 2,
-    "homeTeam": "wed-pops",
-    "awayTeam": "wed-ibiza",
-    "status": "scheduled"
+    "homeTeam": "wed-dwell-fc",
+    "awayTeam": "wed-pops",
+    "homeScore": 7,
+    "awayScore": 5,
+    "status": "completed"
   },
   {
     "id": "wed-r25-7",
@@ -2378,7 +2390,9 @@
     "court": 1,
     "homeTeam": "wed-umoja-stars",
     "awayTeam": "wed-afg",
-    "status": "scheduled"
+    "homeScore": 4,
+    "awayScore": 8,
+    "status": "completed"
   },
   {
     "id": "wed-r25-8",
@@ -2388,9 +2402,11 @@
     "date": "2026-09-09",
     "time": "21:00",
     "court": 2,
-    "homeTeam": "wed-wildcats",
-    "awayTeam": "wed-moza-mama",
-    "status": "scheduled"
+    "homeTeam": "wed-ibiza",
+    "awayTeam": "wed-wildcats",
+    "homeScore": 6,
+    "awayScore": 9,
+    "status": "completed"
   },
   {
     "id": "wed-r26-1",
