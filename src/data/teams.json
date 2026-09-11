@@ -192,5 +192,17 @@
     "name": "Xaywan",
     "night": "wednesday",
     "division": "A"
+  },
+  {
+    "id": "mon-xaywan-fc",
+    "name": "Xaywan",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-buckle-city-fc",
+    "name": "Buckle City",
+    "night": "monday",
+    "division": "A"
   }
 ]

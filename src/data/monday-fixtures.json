@@ -1953,7 +1953,7 @@
     "date": "2026-09-14",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-hazara-united",
+    "homeTeam": "mon-xaywan-fc",
     "awayTeam": "mon-misfits",
     "status": "scheduled"
   },
@@ -1967,6 +1967,18 @@
     "court": 1,
     "homeTeam": "mon-hope",
     "awayTeam": "mon-goal-diggers",
+    "status": "scheduled"
+  },
+  {
+    "id": "mon-r24-8",
+    "night": "monday",
+    "division": "A",
+    "round": 24,
+    "date": "2026-09-14",
+    "time": "21:00",
+    "court": 2,
+    "homeTeam": "mon-hazara-united",
+    "awayTeam": "mon-buckle-city-fc",
     "status": "scheduled"
   },
   {
