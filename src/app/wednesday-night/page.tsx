@@ -1,8 +1,8 @@
 "use client";
 
 import { Lock } from "lucide-react";
-import { motion } from "framer-motion";
 import LeagueTable from "@/components/LeagueTable";
+import KnockoutBracket from "@/components/KnockoutBracket";
 import MatchCard from "@/components/MatchCard";
 import RoundAccordion from "@/components/RoundAccordion";
 import SectionHeading from "@/components/SectionHeading";
@@ -49,12 +49,7 @@ export default function WednesdayNightPage() {
 
         {/* Content */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col items-center"
-          >
+          <div className="flex flex-col items-center">
             {/* Main heading */}
             <h1 className="font-[family-name:var(--font-heading)] text-6xl sm:text-7xl lg:text-8xl uppercase tracking-wider text-white leading-none">
               Wednesday Night
@@ -72,12 +67,14 @@ export default function WednesdayNightPage() {
                 <span className="text-red-500 font-bold">{maxGamesPerRound}</span> Games / Night
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Red accent line at bottom */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600" />
       </section>
+
+      <KnockoutBracket night="wednesday" />
 
       {/* Division A Table */}
       <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
@@ -100,16 +97,13 @@ export default function WednesdayNightPage() {
             subtitle={`${wednesdayTeams.length} teams in Division A`}
           />
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {wednesdayTeams.map((team, i) => (
-              <motion.div
+            {wednesdayTeams.map((team) => (
+              <div
                 key={team.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.04 }}
                 className="rounded-lg border border-white/10 bg-[#1A1A1A] p-5 text-center hover:border-red-500/30 transition-colors"
               >
                 <div className="text-sm font-semibold text-white">{team.name}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

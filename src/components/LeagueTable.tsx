@@ -1,7 +1,4 @@
-"use client";
-
 import { Standing } from "@/lib/types";
-import { motion } from "framer-motion";
 
 interface LeagueTableProps {
   standings: Standing[];
@@ -54,11 +51,8 @@ export default function LeagueTable({ standings, compact = false }: LeagueTableP
         </thead>
         <tbody>
           {displayStandings.map((row, i) => (
-            <motion.tr
+            <tr
               key={row.teamId}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: i * 0.03 }}
               className={`hover:bg-white/[0.03] transition-colors ${
                 i < displayStandings.length - 1 ? "border-b border-white/[0.05]" : ""
               }`}
@@ -116,7 +110,7 @@ export default function LeagueTable({ standings, compact = false }: LeagueTableP
               <td className="px-4 py-3.5 text-center font-[family-name:var(--font-mono)] text-sm font-bold text-white">
                 {row.points}
               </td>
-            </motion.tr>
+            </tr>
           ))}
         </tbody>
       </table>
