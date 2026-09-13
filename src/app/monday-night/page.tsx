@@ -1,7 +1,6 @@
 "use client";
 
 import { Lock } from "lucide-react";
-import { motion } from "framer-motion";
 import LeagueTable from "@/components/LeagueTable";
 import MatchCard from "@/components/MatchCard";
 import RoundAccordion from "@/components/RoundAccordion";
@@ -50,12 +49,7 @@ export default function MondayNightPage() {
 
         {/* Content */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col items-center"
-          >
+          <div className="flex flex-col items-center">
             {/* Main heading */}
             <h1 className="font-[family-name:var(--font-heading)] text-6xl sm:text-7xl lg:text-8xl uppercase tracking-wider text-white leading-none">
               Monday Night
@@ -73,7 +67,7 @@ export default function MondayNightPage() {
                 <span className="text-red-500 font-bold">{gamesPerNight}</span> Games / Night
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Red accent line at bottom */}
@@ -101,16 +95,13 @@ export default function MondayNightPage() {
             subtitle={`${mondayTeams.length} teams in Division A`}
           />
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-            {mondayTeams.map((team, i) => (
-              <motion.div
+            {mondayTeams.map((team) => (
+              <div
                 key={team.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.04 }}
                 className="rounded-lg border border-white/10 bg-[#1A1A1A] p-5 text-center hover:border-red-500/30 transition-colors"
               >
                 <div className="text-sm font-semibold text-white">{team.name}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

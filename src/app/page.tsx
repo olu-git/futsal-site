@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import LeagueTable from "@/components/LeagueTable";
 import MatchCard from "@/components/MatchCard";
@@ -50,12 +49,7 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col items-center"
-          >
+          <div className="flex flex-col items-center">
             {/* Main heading */}
             <h1 className="font-[family-name:var(--font-heading)] text-7xl sm:text-8xl lg:text-[96px] uppercase tracking-wider text-white leading-none">
               Endeavour Hills Futsal
@@ -81,7 +75,7 @@ export default function HomePage() {
                 Wednesday Night
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Red accent line at bottom */}

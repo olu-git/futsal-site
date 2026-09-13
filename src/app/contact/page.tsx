@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, CheckCircle, AlertCircle } from "lucide-react";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
@@ -44,19 +43,14 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0AEE] via-[#0A0A0A99] to-[#0A0A0ACC]" />
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col items-center"
-          >
+          <div className="flex flex-col items-center">
             <h1 className="font-[family-name:var(--font-heading)] text-6xl sm:text-7xl lg:text-8xl uppercase tracking-wider text-white leading-none">
               Contact Us
             </h1>
             <p className="mt-5 text-white/50 text-sm font-[family-name:var(--font-geist-mono)] max-w-md">
               Questions about registering, joining a team, or anything else — we&apos;re happy to help.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600" />
@@ -74,7 +68,7 @@ export default function ContactPage() {
                   Get in touch
                 </h2>
                 <p className="mt-3 text-sm text-white/50 leading-relaxed">
-                  Want to join the league or don&apos;t have a full team? <br/><br/> We want everyone to have the opportunity to play so whether you're short on players, a new team
+                  Want to join the league or don&apos;t have a full team? <br/><br/> We want everyone to have the opportunity to play so whether you&apos;re short on players, a new team
                   or you want to join as an individual, fill out the form!
                 </p>
               </div>
@@ -160,11 +154,7 @@ export default function ContactPage() {
             <div className="lg:col-span-3">
               <div className="rounded-xl border border-white/10 bg-[#111111] p-6 sm:p-8">
                 {status === "success" ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="flex flex-col items-center justify-center py-16 text-center gap-4"
-                  >
+                  <div className="flex flex-col items-center justify-center py-16 text-center gap-4">
                     <CheckCircle className="h-12 w-12 text-green-500" />
                     <h3 className="font-[family-name:var(--font-heading)] text-xl uppercase tracking-wider text-white">
                       Message Sent!
@@ -178,7 +168,7 @@ export default function ContactPage() {
                     >
                       Send Another
                     </button>
-                  </motion.div>
+                  </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
                     {/* Web3Forms access key */}

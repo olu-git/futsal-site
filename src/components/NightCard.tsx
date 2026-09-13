@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 interface NightCardProps {
   title: string;
@@ -10,13 +9,9 @@ interface NightCardProps {
   index?: number;
 }
 
-export default function NightCard({ title, href, description, index = 0 }: NightCardProps) {
+export default function NightCard({ title, href, description }: NightCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 }}
-    >
+    <div>
       <Link
         href={href}
         className="group block rounded-lg border border-white/10 bg-[#1A1A1A] p-6 hover:border-red-500/30 transition-all"
@@ -31,6 +26,6 @@ export default function NightCard({ title, href, description, index = 0 }: Night
           {description}
         </p>
       </Link>
-    </motion.div>
+    </div>
   );
 }
