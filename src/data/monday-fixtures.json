@@ -2012,9 +2012,9 @@
     "round": 24,
     "date": "2026-09-14",
     "time": "20:20",
-    "court": 2,
+    "court": 1,
     "homeTeam": "mon-hunger-fc",
-    "awayTeam": "mon-afg",
+    "awayTeam": "mon-goldlink-up",
     "status": "scheduled"
   },
   {
@@ -2024,9 +2024,9 @@
     "round": 24,
     "date": "2026-09-14",
     "time": "20:20",
-    "court": 1,
+    "court": 2,
     "homeTeam": "mon-ghazni-united",
-    "awayTeam": "mon-goldlink-up",
+    "awayTeam": "mon-afg",
     "status": "scheduled"
   }
 ]
