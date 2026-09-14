@@ -474,5 +474,47 @@
     "goalsAgainst": 51,
     "points": 3,
     "note": "Administrative R1-R18 entry record: 1 win and 17 losses, including one 3-0 win and one 0-3 loss against MTS FC"
+  },
+  {
+    "id": "mon-admin-salvos-r24-forfeit",
+    "night": "monday",
+    "division": "A",
+    "teamId": "mon-salvos",
+    "played": 1,
+    "won": 0,
+    "drawn": 0,
+    "lost": 1,
+    "goalsFor": 0,
+    "goalsAgainst": 5,
+    "points": 0,
+    "note": "Administrative 5-0 loss for missed Round 24 fixture"
+  },
+  {
+    "id": "mon-admin-buckle-city-final-record",
+    "night": "monday",
+    "division": "A",
+    "teamId": "mon-buckle-city-fc",
+    "played": 24,
+    "won": 5,
+    "drawn": 1,
+    "lost": 18,
+    "goalsFor": 16,
+    "goalsAgainst": 54,
+    "points": 16,
+    "note": "Administrative final-season record"
+  },
+  {
+    "id": "mon-admin-bunyip-final-record",
+    "night": "monday",
+    "division": "A",
+    "teamId": "mon-xaywan-fc",
+    "played": 23,
+    "won": 5,
+    "drawn": 0,
+    "lost": 18,
+    "goalsFor": 15,
+    "goalsAgainst": 54,
+    "points": 15,
+    "note": "Administrative final-season record; excludes completed Round 24 fixture"
   }
 ]
