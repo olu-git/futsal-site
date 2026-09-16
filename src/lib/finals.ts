@@ -51,8 +51,8 @@ const eliminationTemplate: FinalsMatch[] = [
   { id: "fr-2", round: "Friendly", label: "Friendly", week: 1, time: "19:00", court: 2, a: loser("r16-m3"), b: loser("r16-m4") },
   { id: "fr-3", round: "Friendly", label: "Friendly", week: 1, time: "21:00", court: 1, a: loser("r16-m5"), b: loser("r16-m6") },
   { id: "fr-4", round: "Friendly", label: "Friendly", week: 1, time: "21:00", court: 2, a: loser("r16-m7"), b: loser("r16-m8") },
-  { id: "sf-1", round: "SF", label: "SF1", week: 2, time: "19:40", court: 1, a: winner("qf-1"), b: winner("qf-2") },
-  { id: "sf-2", round: "SF", label: "SF2", week: 2, time: "19:40", court: 2, a: winner("qf-3"), b: winner("qf-4") },
+  { id: "sf-1", round: "SF", label: "SF1", week: 2, time: "19:30", court: 1, a: winner("qf-1"), b: winner("qf-2") },
+  { id: "sf-2", round: "SF", label: "SF2", week: 2, time: "19:30", court: 2, a: winner("qf-3"), b: winner("qf-4") },
   { id: "gf", round: "GF", label: "Grand Final", week: 2, time: "20:30", court: 1, a: winner("sf-1"), b: winner("sf-2") },
 ];
 
