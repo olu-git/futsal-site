@@ -2,6 +2,7 @@
 
 import { Lock } from "lucide-react";
 import LeagueTable from "@/components/LeagueTable";
+import KnockoutBracket from "@/components/KnockoutBracket";
 import MatchCard from "@/components/MatchCard";
 import RoundAccordion from "@/components/RoundAccordion";
 import SectionHeading from "@/components/SectionHeading";
@@ -73,6 +74,8 @@ export default function MondayNightPage() {
         {/* Red accent line at bottom */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600" />
       </section>
+
+      <KnockoutBracket night="monday" />
 
       {/* Division A Table */}
       <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">

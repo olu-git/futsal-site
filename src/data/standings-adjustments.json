@@ -476,6 +476,20 @@
     "note": "Administrative R1-R18 entry record: 1 win and 17 losses, including one 3-0 win and one 0-3 loss against MTS FC"
   },
   {
+    "id": "wed-admin-kuq-e-zi-final-loss",
+    "night": "wednesday",
+    "division": "A",
+    "teamId": "wed-xaywan",
+    "played": 1,
+    "won": 0,
+    "drawn": 0,
+    "lost": 1,
+    "goalsFor": 0,
+    "goalsAgainst": 3,
+    "points": 0,
+    "note": "Administrative final-season loss"
+  },
+  {
     "id": "mon-admin-salvos-r24-forfeit",
     "night": "monday",
     "division": "A",
@@ -493,7 +507,7 @@
     "id": "mon-admin-buckle-city-final-record",
     "night": "monday",
     "division": "A",
-    "teamId": "mon-buckle-city-fc",
+    "teamId": "mon-xaywan",
     "played": 24,
     "won": 5,
     "drawn": 1,
@@ -507,7 +521,7 @@
     "id": "mon-admin-bunyip-final-record",
     "night": "monday",
     "division": "A",
-    "teamId": "mon-xaywan-fc",
+    "teamId": "mon-bunyip",
     "played": 23,
     "won": 5,
     "drawn": 0,

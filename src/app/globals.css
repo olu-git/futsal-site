@@ -39,6 +39,12 @@ body {
   color: var(--color-foreground);
 }
 
+html {
+  background: var(--color-background);
+  scroll-behavior: smooth;
+  scrollbar-color: #27272a var(--color-background);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
@@ -46,7 +52,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -58,7 +64,3 @@ body {
   background: #3f3f46;
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}

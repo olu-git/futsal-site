@@ -194,8 +194,14 @@
     "division": "A"
   },
   {
-    "id": "mon-xaywan-fc",
+    "id": "mon-bunyip",
     "name": "Bunyip",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-xaywan",
+    "name": "Xaywan",
     "night": "monday",
     "division": "A"
   },
@@ -203,6 +209,7 @@
     "id": "mon-buckle-city-fc",
     "name": "Buckle City",
     "night": "monday",
-    "division": "A"
+    "division": "A",
+    "active": false
   }
 ]
