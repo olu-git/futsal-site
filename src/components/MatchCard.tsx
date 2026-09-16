@@ -3,23 +3,17 @@
 import { Fixture } from "@/lib/types";
 import { getTeamName } from "@/lib/data";
 import { formatDate, formatTime } from "@/lib/utils";
-import { motion } from "framer-motion";
 
 interface MatchCardProps {
   fixture: Fixture;
   index?: number;
 }
 
-export default function MatchCard({ fixture, index = 0 }: MatchCardProps) {
+export default function MatchCard({ fixture }: MatchCardProps) {
   const isCompleted = fixture.status === "completed";
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.05 }}
-      className="overflow-hidden rounded-lg border border-white/10 bg-[#1A1A1A]"
-    >
+    <div className="overflow-hidden rounded-lg border border-white/10 bg-[#1A1A1A]">
       {/* Top bar */}
       <div
         className={`flex items-center justify-between px-4 py-2 ${
@@ -79,7 +73,7 @@ export default function MatchCard({ fixture, index = 0 }: MatchCardProps) {
           </span>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 }
 

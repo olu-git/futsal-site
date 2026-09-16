@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import {
   Users,
   Disc,
@@ -68,7 +65,7 @@ const fifaGroups: RuleGroup[] = [
         icon: Clock,
         title: "Match Duration",
         description:
-          "Two 18-minute halves with a 1-minute break. Running clock — no pauses except for exceptional circumstances.",
+          "Two 18-minute halves with a 1-minute break. The running clock is stopped only in exceptional circumstances at the referee's discretion. Deliberate time-wasting may be carded; during the final minute, the referee may stop the clock depending on its severity.",
       },
       {
         icon: Play,
@@ -129,7 +126,7 @@ const leagueGroups: RuleGroup[] = [
         icon: Hourglass,
         title: "Late Penalty",
         description:
-          "Teams are deducted 1 goal for every 2 minutes they are late, up to a maximum deficit of 5-0.",
+          "Teams must be ready at their scheduled kick-off time. A team concedes 1 goal for every 2 minutes it is late.",
       },
       {
         icon: BellOff,
@@ -171,19 +168,13 @@ const leagueGroups: RuleGroup[] = [
         icon: UserPlus,
         title: "Fill-in Players",
         description:
-          "Fill-ins from another team are allowed only when a team is short. The team concedes 1 goal for each fill-in used, may field a maximum of 5 players, and cannot use substitutes. Fill-ins must not be used to significantly strengthen the team.",
+          "During regular-season matches, fill-ins from another team are allowed only when a team is short. The team concedes 1 goal for each fill-in used, may field a maximum of 5 players, and cannot use substitutes. Fill-ins must not be used to significantly strengthen the team.",
       },
     ],
   },
   {
-    label: "Eligibility & Finals",
+    label: "Discipline",
     cards: [
-      {
-        icon: Trophy,
-        title: "Semi-Finals & Finals",
-        description:
-          "To play in the semi-finals and finals, players must have appeared in at least 5 games for their team across the regular season.",
-      },
       {
         icon: Gavel,
         title: "Suspensions",
@@ -194,21 +185,58 @@ const leagueGroups: RuleGroup[] = [
   },
 ];
 
+const knockoutGroups: RuleGroup[] = [
+  {
+    label: "Fees & Eligibility",
+    cards: [
+      {
+        icon: Banknote,
+        title: "Knockout Match Fees",
+        description:
+          "Each knockout match costs $65 per team and must be paid before kick-off. The Semi Finals and Grand Final are played on the same night; a team that advances must pay a separate $65 fee for each match.",
+        badge: "$65 per match",
+      },
+      {
+        icon: UserPlus,
+        title: "Player Eligibility",
+        description:
+          "Players must have played at least 5 regular-season games for that team. Fill-ins from other teams cannot be used. A team without enough eligible players must contact league admin privately; this may result in an automatic forfeit. Final eligibility decisions are made by the referee and league admin team.",
+      },
+      {
+        icon: CircleX,
+        title: "Knockout No-Shows",
+        description:
+          "Existing no-show rules also apply during knockout matches. Teams may lose their bond for a no-show or late cancellation under the Absence & Forfeit and Team Bond rules above.",
+      },
+    ],
+  },
+  {
+    label: "Deciding Drawn Matches",
+    cards: [
+      {
+        icon: Clock,
+        title: "Golden Goal Extra Time",
+        description:
+          "If a knockout match is drawn at full-time, 3 minutes of Golden Goal extra time is played. The referee determines which team kicks off, and the first goal scored immediately ends the match.",
+      },
+      {
+        icon: Disc,
+        title: "Penalty Shootouts",
+        description:
+          "If still tied, each team takes 3 penalties alternately. Only players on the court when the shootout begins may take penalties. If scores remain tied, sudden death continues with one penalty per team until one scores and the other misses. No eligible player may take a second penalty until every other eligible teammate has taken one.",
+      },
+    ],
+  },
+];
+
 function RuleCardComponent({
   card,
-  index,
 }: {
   card: RuleCard;
-  index: number;
 }) {
   const Icon = card.icon;
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.05 }}
-      className="rounded-lg border border-white/10 bg-[#1A1A1A] p-5 flex flex-col gap-3"
-    >
+    <div className="rounded-lg border border-white/10 bg-[#1A1A1A] p-5 flex flex-col gap-3">
       <div className="flex items-start justify-between gap-2">
         <div className="w-9 h-9 rounded-md bg-red-500/10 flex items-center justify-center shrink-0">
           <Icon className="w-5 h-5 text-red-500" />
@@ -225,25 +253,19 @@ function RuleCardComponent({
           {card.description}
         </p>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
-function RuleGroupSection({
-  group,
-  baseIndex,
-}: {
-  group: RuleGroup;
-  baseIndex: number;
-}) {
+function RuleGroupSection({ group }: { group: RuleGroup }) {
   return (
     <div className="mb-10 last:mb-0">
       <p className="font-[family-name:var(--font-geist-mono)] text-xs tracking-widest text-white/35 uppercase mb-4">
         {group.label}
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {group.cards.map((card, i) => (
-          <RuleCardComponent key={card.title} card={card} index={baseIndex + i} />
+        {group.cards.map((card) => (
+          <RuleCardComponent key={card.title} card={card} />
         ))}
       </div>
     </div>
@@ -262,12 +284,7 @@ export default function RulesPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0AEE] via-[#0A0A0A99] to-[#0A0A0ACC]" />
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col items-center"
-          >
+          <div className="flex flex-col items-center">
             <h1
               className="font-[family-name:var(--font-heading)] text-6xl sm:text-7xl lg:text-8xl uppercase tracking-wider text-white leading-none"
             >
@@ -276,27 +293,23 @@ export default function RulesPage() {
             <p className="mt-5 text-white/50 text-sm font-[family-name:var(--font-geist-mono)] max-w-md">
               Based on official FIFA Futsal rules, with some league-specific variations.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600" />
       </section>
 
-      {/* FIFA Futsal Rules */}
+      {/* General Futsal Rules */}
       <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-14">
             <SectionHeading
-              title="FIFA Futsal Rules"
-              subtitle="Key rules from the official FIFA Futsal Laws of the Game"
+              title="General Futsal Rules"
+              subtitle="Key rules inspired by the official FIFA Futsal Laws of the Game"
             />
           </div>
-          {fifaGroups.map((group, gi) => (
-            <RuleGroupSection
-              key={group.label}
-              group={group}
-              baseIndex={gi * 3}
-            />
+          {fifaGroups.map((group) => (
+            <RuleGroupSection key={group.label} group={group} />
           ))}
         </div>
       </section>
@@ -310,12 +323,23 @@ export default function RulesPage() {
               subtitle="Specific rules that apply to all Endeavour Hills Futsal competitions"
             />
           </div>
-          {leagueGroups.map((group, gi) => (
-            <RuleGroupSection
-              key={group.label}
-              group={group}
-              baseIndex={gi * 3}
+          {leagueGroups.map((group) => (
+            <RuleGroupSection key={group.label} group={group} />
+          ))}
+        </div>
+      </section>
+
+      {/* Knockout & Finals Rules */}
+      <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-14">
+            <SectionHeading
+              title="Knockout & Finals Rules"
+              subtitle="Additional rules for every knockout-stage match"
             />
+          </div>
+          {knockoutGroups.map((group) => (
+            <RuleGroupSection key={group.label} group={group} />
           ))}
         </div>
       </section>

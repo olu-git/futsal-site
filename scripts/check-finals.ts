@@ -52,7 +52,7 @@ for (const night of nights) {
       }
       if (teams.includes("Blue Dragons")) assert.notEqual(match.time, "19:00");
     }
-    const buckle = firstRound.find(({ teams }) => teams.includes("Buckle City"));
+    const buckle = firstRound.find(({ teams }) => teams.includes("Bunyip"));
     const goldlink = firstRound.find(({ teams }) => teams.includes("Goldlink Up"));
     assert(buckle && goldlink);
     assert.notEqual(buckle.match.time, goldlink.match.time);

@@ -189,12 +189,18 @@
   },
   {
     "id": "wed-xaywan",
-    "name": "Xaywan",
+    "name": "Kuq E Zi",
     "night": "wednesday",
     "division": "A"
   },
   {
-    "id": "mon-xaywan-fc",
+    "id": "mon-bunyip",
+    "name": "Bunyip",
+    "night": "monday",
+    "division": "A"
+  },
+  {
+    "id": "mon-xaywan",
     "name": "Xaywan",
     "night": "monday",
     "division": "A"

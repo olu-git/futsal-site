@@ -1953,9 +1953,11 @@
     "date": "2026-09-14",
     "time": "19:00",
     "court": 1,
-    "homeTeam": "mon-xaywan-fc",
-    "awayTeam": "mon-misfits",
-    "status": "scheduled"
+    "homeTeam": "mon-bunyip",
+    "awayTeam": "mon-toss",
+    "homeScore": 6,
+    "awayScore": 10,
+    "status": "completed"
   },
   {
     "id": "mon-r24-2",
@@ -1963,11 +1965,13 @@
     "division": "A",
     "round": 24,
     "date": "2026-09-14",
-    "time": "21:00",
-    "court": 1,
-    "homeTeam": "mon-hope",
+    "time": "19:00",
+    "court": 2,
+    "homeTeam": "mon-wildcats",
     "awayTeam": "mon-goal-diggers",
-    "status": "scheduled"
+    "homeScore": 9,
+    "awayScore": 4,
+    "status": "completed"
   },
   {
     "id": "mon-r24-8",
@@ -1978,8 +1982,10 @@
     "time": "21:00",
     "court": 2,
     "homeTeam": "mon-hazara-united",
-    "awayTeam": "mon-buckle-city-fc",
-    "status": "scheduled"
+    "awayTeam": "mon-hope",
+    "homeScore": 2,
+    "awayScore": 6,
+    "status": "completed"
   },
   {
     "id": "mon-r24-3",
@@ -1990,8 +1996,10 @@
     "time": "19:40",
     "court": 1,
     "homeTeam": "mon-blue-dragons",
-    "awayTeam": "mon-afg",
-    "status": "scheduled"
+    "awayTeam": "mon-misfits",
+    "homeScore": 5,
+    "awayScore": 12,
+    "status": "completed"
   },
   {
     "id": "mon-r24-4",
@@ -2003,7 +2011,9 @@
     "court": 2,
     "homeTeam": "mon-top-up-fc",
     "awayTeam": "mon-moza-mama",
-    "status": "scheduled"
+    "homeScore": 10,
+    "awayScore": 4,
+    "status": "completed"
   },
   {
     "id": "mon-r24-5",
@@ -2014,20 +2024,10 @@
     "time": "20:20",
     "court": 1,
     "homeTeam": "mon-hunger-fc",
-    "awayTeam": "mon-salvos",
-    "status": "scheduled"
-  },
-  {
-    "id": "mon-r24-6",
-    "night": "monday",
-    "division": "A",
-    "round": 24,
-    "date": "2026-09-14",
-    "time": "19:00",
-    "court": 2,
-    "homeTeam": "mon-wildcats",
-    "awayTeam": "mon-toss",
-    "status": "scheduled"
+    "awayTeam": "mon-goldlink-up",
+    "homeScore": 5,
+    "awayScore": 10,
+    "status": "completed"
   },
   {
     "id": "mon-r24-7",
@@ -2038,7 +2038,9 @@
     "time": "20:20",
     "court": 2,
     "homeTeam": "mon-ghazni-united",
-    "awayTeam": "mon-goldlink-up",
-    "status": "scheduled"
+    "awayTeam": "mon-afg",
+    "homeScore": 3,
+    "awayScore": 1,
+    "status": "completed"
   }
 ]

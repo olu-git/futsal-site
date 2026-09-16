@@ -33,13 +33,13 @@ for (const night of nights) {
           ...standings
             .filter(
               (team) =>
-                team.teamId !== "mon-xaywan-fc" &&
-                team.teamId !== "mon-buckle-city-fc"
+                team.teamId !== "mon-xaywan" &&
+                team.teamId !== "mon-bunyip"
             )
             .slice(0, 14)
             .map((team) => team.teamName),
           "Xaywan",
-          "Buckle City",
+          "Bunyip",
         ]
       : standings.slice(0, 16).map((team) => team.teamName);
 
@@ -116,6 +116,9 @@ function validateFirstRoundTimes(night: CompetitionNight, seeds: string[]) {
     }
     if (night === "wednesday" && teams.includes("Rinnai") && match.time === "19:00") {
       errors.push(`Rinnai cannot play at ${match.time}.`);
+    }
+    if (night === "wednesday" && teams.includes("Kuq E Zi") && match.time === "21:00") {
+      errors.push(`Kuq E Zi cannot play at ${match.time}.`);
     }
     if (
       night === "wednesday" &&
