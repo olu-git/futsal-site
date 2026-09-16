@@ -209,6 +209,7 @@
     "id": "mon-buckle-city-fc",
     "name": "Buckle City",
     "night": "monday",
-    "division": "A"
+    "division": "A",
+    "active": false
   }
 ]
