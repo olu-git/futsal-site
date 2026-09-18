@@ -35,12 +35,12 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden min-h-[360px] flex items-center justify-center">
+      <section className="relative overflow-hidden min-h-[360px] flex items-center justify-center border-b-4 border-[var(--fis-red)]">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero-bg.png')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0AEE] via-[#0A0A0A99] to-[#0A0A0ACC]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#001744ee] via-[#002469c4] to-[#001132ee]" />
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <div className="flex flex-col items-center">
@@ -53,21 +53,20 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600" />
       </section>
 
       {/* Main content */}
-      <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
+      <section className="bg-[var(--fis-cream)] py-20 sm:py-[80px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
 
             {/* Left — contact info */}
             <div className="lg:col-span-2 space-y-8">
               <div>
-                <h2 className="font-[family-name:var(--font-heading)] text-2xl uppercase tracking-wider text-white">
+                <h2 className="text-2xl font-black uppercase tracking-wider text-[var(--fis-blue)]">
                   Get in touch
                 </h2>
-                <p className="mt-3 text-sm text-white/50 leading-relaxed">
+                <p className="mt-3 text-sm leading-relaxed text-[var(--fis-blue)]/75">
                   Want to join the league or don&apos;t have a full team? <br/><br/> We want everyone to have the opportunity to play so whether you&apos;re short on players, a new team
                   or you want to join as an individual, fill out the form!
                 </p>
@@ -75,14 +74,14 @@ export default function ContactPage() {
 
               <div className="space-y-5">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-red-600/10 border border-red-600/20 flex items-center justify-center">
-                    <Mail className="h-4 w-4 text-red-500" />
+                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-[var(--fis-blue)]/10 border border-[var(--fis-blue)]/20 flex items-center justify-center">
+                    <Mail className="h-4 w-4 text-[var(--fis-red)]" />
                   </div>
                   <div>
-                    <p className="text-xs text-white/30 font-[family-name:var(--font-geist-mono)] uppercase tracking-wider mb-1">Email</p>
+                    <p className="text-xs text-[var(--fis-blue)]/55 uppercase tracking-wider mb-1">Email</p>
                     <a
                       href="mailto:contact@futsalindoorsoccer.com.au"
-                      className="text-sm text-white hover:text-red-400 transition-colors"
+                      className="text-sm text-[var(--fis-blue)] hover:text-[var(--fis-red)] transition-colors"
                     >
                       contact@futsalindoorsoccer.com.au
                     </a>
@@ -94,10 +93,10 @@ export default function ContactPage() {
                     <Phone className="h-4 w-4 text-red-500" />
                   </div>
                   <div>
-                    <p className="text-xs text-white/30 font-[family-name:var(--font-geist-mono)] uppercase tracking-wider mb-1">Phone</p>
+                    <p className="text-xs text-[var(--fis-blue)]/55 uppercase tracking-wider mb-1">Phone</p>
                     <a
                       href="tel:+61402888767"
-                      className="text-sm text-white hover:text-red-400 transition-colors"
+                      className="text-sm text-[var(--fis-blue)] hover:text-[var(--fis-red)] transition-colors"
                     >
                       0402 888 767
                     </a>
@@ -109,9 +108,9 @@ export default function ContactPage() {
                     <MapPin className="h-4 w-4 text-red-500" />
                   </div>
                   <div>
-                    <p className="text-xs text-white/30 font-[family-name:var(--font-geist-mono)] uppercase tracking-wider mb-1">Venue</p>
-                    <p className="text-sm text-white">Endeavour Hills Leisure Centre</p>
-                    <p className="text-sm text-white/50">Heatherton Rd, Endeavour Hills VIC 3802</p>
+                    <p className="text-xs text-[var(--fis-blue)]/55 uppercase tracking-wider mb-1">Venue</p>
+                    <p className="text-sm text-[var(--fis-blue)]">Endeavour Hills Leisure Centre</p>
+                    <p className="text-sm text-[var(--fis-blue)]/65">Heatherton Rd, Endeavour Hills VIC 3802</p>
                   </div>
                 </div>
 
@@ -122,12 +121,12 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs text-white/30 font-[family-name:var(--font-geist-mono)] uppercase tracking-wider mb-1">Facebook</p>
+                    <p className="text-xs text-[var(--fis-blue)]/55 uppercase tracking-wider mb-1">Facebook</p>
                     <a
                       href="https://www.facebook.com/futsalis/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-white hover:text-red-400 transition-colors"
+                      className="text-sm text-[var(--fis-blue)] hover:text-[var(--fis-red)] transition-colors"
                     >
                       Endeavour Hills Futsal
                     </a>
@@ -135,31 +134,18 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Game nights info */}
-              <div className="rounded-xl border border-white/10 bg-[#111111] p-5 space-y-3">
-                <p className="text-xs text-white/30 font-[family-name:var(--font-geist-mono)] uppercase tracking-wider">Game Nights</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-white">Monday Night</span>
-                  <span className="text-xs text-white/40 font-[family-name:var(--font-geist-mono)]">from 7:00 PM</span>
-                </div>
-                <div className="h-px bg-white/[0.06]" />
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-white">Wednesday Night</span>
-                  <span className="text-xs text-white/40 font-[family-name:var(--font-geist-mono)]">from 7:00 PM</span>
-                </div>
-              </div>
             </div>
 
             {/* Right — form */}
             <div className="lg:col-span-3">
-              <div className="rounded-xl border border-white/10 bg-[#111111] p-6 sm:p-8">
+              <div className="rounded-xl border border-[var(--fis-blue)]/15 bg-white p-6 sm:p-8 shadow-sm">
                 {status === "success" ? (
                   <div className="flex flex-col items-center justify-center py-16 text-center gap-4">
                     <CheckCircle className="h-12 w-12 text-green-500" />
-                    <h3 className="font-[family-name:var(--font-heading)] text-xl uppercase tracking-wider text-white">
+                    <h3 className="text-xl font-black uppercase tracking-wider text-[var(--fis-blue)]">
                       Message Sent!
                     </h3>
-                    <p className="text-sm text-white/50 max-w-xs">
+                    <p className="text-sm text-[var(--fis-blue)]/70 max-w-xs">
                       Thanks for reaching out. We&apos;ll get back to you as soon as possible.
                     </p>
                     <button
