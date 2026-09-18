@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -18,70 +18,99 @@ export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0A0A0A]/95 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-1.5 h-6 bg-red-600 rounded-sm" />
+    <header className="sticky top-0 z-50 border-b-4 border-[var(--fis-red)] bg-[var(--fis-blue)] text-white">
+      <nav className="fis-container flex min-h-20 items-center justify-between gap-6" aria-label="Primary navigation">
+        <Link
+          href="/"
+          className="group flex min-w-0 items-center gap-3 py-4"
+          aria-label="Futsal Indoor Soccer home"
+        >
           <span
-            className="text-xl uppercase tracking-wider leading-none text-white"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Endeavour Hills{" "}
-            <span className="text-red-500" style={{ fontFamily: "var(--font-heading)", fontSize: "inherit" }}>Futsal</span>
+            aria-hidden="true"
+            className="h-9 w-2 shrink-0 -skew-x-12 bg-[var(--fis-red)] transition-transform group-hover:skew-x-0"
+          />
+          <span className="min-w-0 text-sm font-black uppercase leading-tight tracking-[0.09em] sm:text-base">
+            Futsal Indoor Soccer
           </span>
         </Link>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-1">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "px-4 py-2 rounded-lg text-sm transition-colors font-[family-name:var(--font-geist-mono)] uppercase tracking-wider",
-                pathname === link.href
-                  ? "bg-red-600 text-white"
-                  : "text-white/50 hover:text-white hover:bg-white/5"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-white/50 hover:text-white p-2"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden border-t border-white/10 bg-[#0A0A0A]/95 backdrop-blur-md">
-          <div className="px-4 py-3 space-y-1">
-            {links.map((link) => (
+        <div className="hidden items-center gap-1 lg:flex">
+          {links.map((link) => {
+            const active = pathname === link.href;
+            return (
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={() => setOpen(false)}
+                aria-current={active ? "page" : undefined}
                 className={cn(
-                  "block px-4 py-2.5 rounded-lg text-sm transition-colors font-[family-name:var(--font-geist-mono)] uppercase tracking-wider",
-                  pathname === link.href
-                    ? "bg-red-600 text-white"
-                    : "text-white/50 hover:text-white hover:bg-white/5"
+                  "relative px-3 py-3 text-[0.72rem] font-bold uppercase tracking-[0.08em] transition-colors xl:px-4",
+                  active
+                    ? "text-white"
+                    : "text-white/70 hover:text-white"
                 )}
               >
                 {link.label}
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    "absolute inset-x-3 -bottom-0.5 h-1 bg-[var(--fis-red)] transition-transform",
+                    active ? "scale-x-100" : "scale-x-0"
+                  )}
+                />
               </Link>
-            ))}
+            );
+          })}
+        </div>
+
+        <button
+          type="button"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center border-2 border-white/70 text-white transition-colors hover:border-white hover:bg-white/10 lg:hidden"
+          onClick={() => setOpen((value) => !value)}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+        >
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </nav>
+
+      {open && (
+        <div
+          id="mobile-menu"
+          className="fixed inset-x-0 top-[84px] bottom-0 overflow-y-auto bg-[var(--fis-blue)] lg:hidden"
+        >
+          <div className="fis-container flex flex-col py-7">
+            {links.map((link, index) => {
+              const active = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={active ? "page" : undefined}
+                  className={cn(
+                    "flex items-center justify-between border-b border-white/20 py-5 text-lg font-bold uppercase tracking-[0.07em]",
+                    active ? "text-white" : "text-white/70"
+                  )}
+                >
+                  <span>{link.label}</span>
+                  <span className="fis-kicker text-[var(--fis-red)]" aria-hidden="true">
+                    0{index + 1}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       )}
-    </nav>
+    </header>
   );
 }

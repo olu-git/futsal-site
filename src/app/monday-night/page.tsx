@@ -1,6 +1,7 @@
 "use client";
 
 import { Lock } from "lucide-react";
+import CompetitionHero from "@/components/CompetitionHero";
 import LeagueTable from "@/components/LeagueTable";
 import KnockoutBracket from "@/components/KnockoutBracket";
 import MatchCard from "@/components/MatchCard";
@@ -18,11 +19,6 @@ export default function MondayNightPage() {
   const standings = calculateStandings("monday");
   const mondayTeams = getTeamsByNight("monday");
   const rounds = getAllRounds("monday");
-  const totalRounds = rounds.length;
-  const gamesPerNight = Math.max(
-    0,
-    ...rounds.map((round) => getFixturesByRound("monday", round).length)
-  );
 
   // Group completed rounds descending (most recent first)
   const completedRounds = rounds
@@ -37,48 +33,12 @@ export default function MondayNightPage() {
 
   return (
     <div>
-      {/* Hero Section — full-bleed image style */}
-      <section className="relative overflow-hidden min-h-[480px] flex items-center justify-center">
-        {/* Background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/hero-bg.png')" }}
-        />
-
-        {/* Dark overlay gradient matching design */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0AEE] via-[#0A0A0A99] to-[#0A0A0ACC]" />
-
-        {/* Content */}
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-          <div className="flex flex-col items-center">
-            {/* Main heading */}
-            <h1 className="font-[family-name:var(--font-heading)] text-6xl sm:text-7xl lg:text-8xl uppercase tracking-wider text-white leading-none">
-              Monday Night
-            </h1>
-
-            {/* Stats row */}
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.05] px-5 py-3 text-sm text-white/60 font-[family-name:var(--font-geist-mono)]">
-                <span className="text-red-500 font-bold">{mondayTeams.length}</span> Teams
-              </div>
-              <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.05] px-5 py-3 text-sm text-white/60 font-[family-name:var(--font-geist-mono)]">
-                <span className="text-red-500 font-bold">{totalRounds}</span> Rounds
-              </div>
-              <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.05] px-5 py-3 text-sm text-white/60 font-[family-name:var(--font-geist-mono)]">
-                <span className="text-red-500 font-bold">{gamesPerNight}</span> Games / Night
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Red accent line at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600" />
-      </section>
+      <CompetitionHero nightName="Monday Night" teamCount={mondayTeams.length} />
 
       <KnockoutBracket night="monday" />
 
       {/* Division A Table */}
-      <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
+      <section className="bg-[var(--fis-cream)] py-20 sm:py-[80px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Division A Standings"
@@ -90,29 +50,9 @@ export default function MondayNightPage() {
         </div>
       </section>
 
-      {/* Teams */}
-      <section className="bg-[#111111] py-20 sm:py-[80px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            title="Teams"
-            subtitle={`${mondayTeams.length} teams in Division A`}
-          />
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-            {mondayTeams.map((team) => (
-              <div
-                key={team.id}
-                className="rounded-lg border border-white/10 bg-[#1A1A1A] p-5 text-center hover:border-red-500/30 transition-colors"
-              >
-                <div className="text-sm font-semibold text-white">{team.name}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Fixtures by Round */}
       {upcomingRounds.length > 0 && (
-        <section className="bg-[#111111] py-20 sm:py-[80px]">
+        <section className="bg-[var(--fis-cream-light)] py-20 sm:py-[80px]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
               title="Fixtures"
@@ -146,7 +86,7 @@ export default function MondayNightPage() {
 
       {/* Results */}
       {completedRounds.length > 0 && (
-        <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
+        <section className="bg-[var(--fis-cream)] py-20 sm:py-[80px]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
               title="Results"
@@ -179,14 +119,14 @@ export default function MondayNightPage() {
       )}
 
       {/* Division B Coming Soon */}
-      <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
+      <section className="bg-[var(--fis-cream-light)] py-20 sm:py-[80px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-xl border border-dashed border-white/10 bg-[#111111] p-8 sm:p-12 text-center">
-            <Lock className="h-8 w-8 text-white/20 mx-auto mb-4" />
-            <h3 className="text-xl font-[family-name:var(--font-heading)] uppercase tracking-wider text-white/40">
+          <div className="border-2 border-dashed border-[var(--fis-blue)]/30 bg-[var(--fis-cream)] p-8 text-center sm:p-12">
+            <Lock className="mx-auto mb-4 h-8 w-8 text-[var(--fis-blue)]/35" />
+            <h3 className="font-[family-name:var(--font-heading)] text-xl font-black uppercase tracking-[-0.02em] text-[var(--fis-blue)]/55">
               Division B
             </h3>
-            <p className="mt-2 text-sm text-white/25">
+            <p className="mt-2 text-sm text-[var(--fis-blue)]/50">
               Coming Soon — Stay tuned for more teams and more action.
             </p>
           </div>

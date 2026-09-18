@@ -1,12 +1,31 @@
 import type { Metadata } from "next";
+import { Press_Start_2P, Unbounded } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const unbounded = Unbounded({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-unbounded",
+  fallback: ["Arial", "sans-serif"],
+});
+
+const pressStart = Press_Start_2P({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-press-start",
+  fallback: ["monospace"],
+});
+
 export const metadata: Metadata = {
-  title: "Endeavour Hills Futsal | Monday & Wednesday Night Competition",
+  title: {
+    default: "Futsal Indoor Soccer",
+    template: "%s | Futsal Indoor Soccer",
+  },
   description:
-    "Endeavour Hills Futsal — league tables, fixtures, results, and standings for Monday and Wednesday night divisions at Endeavour Hills Leisure Centre.",
+    "Futsal Indoor Soccer competitions, fixtures, results and standings at Endeavour Hills Leisure Centre.",
 };
 
 export default function RootLayout({
@@ -15,8 +34,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col bg-[#0a0a0a] text-zinc-50">
+    <html
+      lang="en"
+      className={`${unbounded.variable} ${pressStart.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-[var(--fis-cream)] text-[var(--fis-blue)]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

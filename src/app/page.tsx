@@ -1,214 +1,204 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import LeagueTable from "@/components/LeagueTable";
 import MatchCard from "@/components/MatchCard";
-import SectionHeading from "@/components/SectionHeading";
-import NightCard from "@/components/NightCard";
+import RegisterMenu from "@/components/RegisterMenu";
 import { calculateStandings } from "@/lib/standings";
-import { getCompletedFixtures, getUpcomingFixtures } from "@/lib/data";
+import { getUpcomingFixtures } from "@/lib/data";
+import { formatDate } from "@/lib/utils";
+
+const fillInsUrl = "https://www.facebook.com/groups/976002735537968/";
 
 export default function HomePage() {
   const mondayStandings = calculateStandings("monday");
   const wednesdayStandings = calculateStandings("wednesday");
 
-  const completedFixtures = [
-    ...getCompletedFixtures("monday"),
-    ...getCompletedFixtures("wednesday"),
-  ];
-  const latestResultDate = completedFixtures.sort((a, b) =>
-    b.date.localeCompare(a.date)
-  )[0]?.date;
-  const latestResults = completedFixtures
-    .filter((fixture) => fixture.date === latestResultDate)
-    .sort((a, b) => a.time.localeCompare(b.time) || a.court - b.court);
-
   const scheduledFixtures = [
     ...getUpcomingFixtures("monday"),
     ...getUpcomingFixtures("wednesday"),
-  ];
-  const nextFixtureDate = scheduledFixtures.sort((a, b) =>
-    a.date.localeCompare(b.date)
-  )[0]?.date;
-  const upcomingFixtures = scheduledFixtures
-    .filter((fixture) => fixture.date === nextFixtureDate)
-    .sort((a, b) => a.time.localeCompare(b.time) || a.court - b.court);
+  ].sort(
+    (a, b) =>
+      a.date.localeCompare(b.date) ||
+      a.time.localeCompare(b.time) ||
+      a.court - b.court
+  );
+
+  const nextFixture = scheduledFixtures[0];
+  const upcomingFixtures = nextFixture
+    ? scheduledFixtures.filter(
+        (fixture) =>
+          fixture.night === nextFixture.night &&
+          fixture.round === nextFixture.round
+      )
+    : [];
+
+  const nextNightLabel =
+    nextFixture?.night === "wednesday" ? "Wednesday Night" : "Monday Night";
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[600px] flex items-center justify-center">
-        {/* Background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/hero-bg.png')" }}
+      <section className="relative isolate min-h-[calc(100svh-5.25rem)] overflow-hidden border-b-4 border-[var(--fis-red)] text-white">
+        <Image
+          src="/hero-bg.png"
+          alt="Competitive futsal match"
+          fill
+          priority
+          sizes="100vw"
+          className="-z-20 object-cover object-center"
         />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,23,68,0.94)_0%,rgba(0,36,105,0.74)_55%,rgba(0,23,68,0.58)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.08)_0%,rgba(0,17,50,0.58)_100%)]" />
 
-        {/* Dark overlay gradient matching design */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0AEE] via-[#0A0A0A99] to-[#0A0A0ACC]" />
+        <div className="fis-container flex min-h-[calc(100svh-5.25rem)] flex-col justify-between py-8 sm:py-12">
+          <div className="flex justify-end">
+            <RegisterMenu />
+          </div>
 
-        {/* Content */}
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-          <div className="flex flex-col items-center">
-            {/* Main heading */}
-            <h1 className="font-[family-name:var(--font-heading)] text-7xl sm:text-8xl lg:text-[96px] uppercase tracking-wider text-white leading-none">
-              Endeavour Hills Futsal
+          <div className="max-w-5xl py-14 sm:py-20">
+            <p className="fis-kicker text-white/70">Competitive futsal. Built for the community.</p>
+            <h1 className="mt-6 max-w-5xl text-[clamp(3.8rem,10vw,8.75rem)] font-black uppercase leading-[0.84] tracking-[-0.07em] text-white">
+              Futsal Indoor Soccer
             </h1>
-
-            {/* Tagline */}
-            <p className="mt-6 text-lg sm:text-xl text-white/50 max-w-xl font-[family-name:var(--font-sans)]">
-              The home of competitive futsal.<br/> Mondays & Wednesdays at Endeavour Hills Leisure Centre.
-            </p>
-
-            {/* CTAs */}
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Link
-                href="/monday-night"
-                className="inline-flex items-center rounded-lg bg-red-600 px-6 py-3 text-sm font-semibold text-white hover:bg-red-700 transition-colors"
+            <div className="mt-10 flex flex-wrap gap-3">
+              <HeroLink href="/monday-night">Monday Night</HeroLink>
+              <HeroLink href="/wednesday-night">Wednesday Night</HeroLink>
+              <a
+                href={fillInsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-13 items-center border-2 border-[var(--fis-red)] bg-[var(--fis-red)] px-5 text-xs font-black uppercase tracking-[0.07em] text-white transition-colors hover:bg-[var(--fis-red-dark)]"
               >
-                Monday Night
-              </Link>
-              <Link
-                href="/wednesday-night"
-                className="inline-flex items-center rounded-lg border border-white/10 bg-white/[0.05] px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
-              >
-                Wednesday Night
-              </Link>
+                Fill-ins
+              </a>
             </div>
           </div>
-        </div>
 
-        {/* Red accent line at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600" />
+          <p className="fis-kicker max-w-lg text-white/55">
+            Fixtures, results and tables for FIS competitions
+          </p>
+        </div>
       </section>
 
-      {/* Standings Section */}
-      <section className="bg-[#0A0A0A] py-20 sm:py-[120px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
+      <section className="bg-[var(--fis-cream)] py-20 sm:py-28">
+        <div className="fis-container">
+          <SectionIntro
+            kicker="Standings"
             title="League Tables"
-            subtitle="Current Division A standings for both nights"
+            description="A quick look at both Endeavour Hills competitions."
           />
 
-          <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-10">
-            <div>
-              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-1 sm:gap-4 mb-5">
-                <div>
-                  <h3 className="font-[family-name:var(--font-heading)] text-2xl uppercase tracking-wider text-white">
-                    Monday Night
-                  </h3>
-                  <p className="mt-1 text-sm text-white/45">
-                    Current Division A standings
-                  </p>
-                </div>
-                <Link
-                  href="/monday-night"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-red-500/40 bg-red-500/10 px-4 py-2 text-sm text-red-500 hover:bg-red-500/20 hover:border-red-500/60 transition-colors font-[family-name:var(--font-geist-mono)] uppercase tracking-wider shrink-0"
-                >
-                  View Full Table &rarr;
-                </Link>
-              </div>
-              <LeagueTable standings={mondayStandings} compact />
-            </div>
-
-            <div>
-              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-1 sm:gap-4 mb-5">
-                <div>
-                  <h3 className="font-[family-name:var(--font-heading)] text-2xl uppercase tracking-wider text-white">
-                    Wednesday Night
-                  </h3>
-                  <p className="mt-1 text-sm text-white/45">
-                    Current Division A standings
-                  </p>
-                </div>
-                <Link
-                  href="/wednesday-night"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-red-500/40 bg-red-500/10 px-4 py-2 text-sm text-red-500 hover:bg-red-500/20 hover:border-red-500/60 transition-colors font-[family-name:var(--font-geist-mono)] uppercase tracking-wider shrink-0"
-                >
-                  View Full Table &rarr;
-                </Link>
-              </div>
-              <LeagueTable standings={wednesdayStandings} compact />
-            </div>
+          <div className="mt-12 grid gap-10 xl:grid-cols-2">
+            <StandingsPreview
+              title="Monday Night"
+              href="/monday-night"
+              standings={mondayStandings}
+            />
+            <StandingsPreview
+              title="Wednesday Night"
+              href="/wednesday-night"
+              standings={wednesdayStandings}
+            />
           </div>
         </div>
       </section>
 
-      {/* Upcoming Fixtures */}
-      {upcomingFixtures.length > 0 && (
-        <section className="bg-[#0A0A0A] py-20 sm:py-[120px]">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionHeading
-              title="Upcoming Fixtures"
-              subtitle="Next matches on the schedule"
-            />
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {upcomingFixtures.map((fixture, i) => (
-                <MatchCard key={fixture.id} fixture={fixture} index={i} />
+      {nextFixture && upcomingFixtures.length > 0 && (
+        <section className="border-y-4 border-[var(--fis-red)] bg-[var(--fis-blue)] py-20 text-white sm:py-24">
+          <div className="fis-container">
+            <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+              <SectionIntro
+                inverted
+                kicker="Next Scheduled Round"
+                title={nextNightLabel}
+                description={`Round ${nextFixture.round} · ${formatDate(nextFixture.date)}`}
+              />
+              <Link
+                href={`/${nextFixture.night}-night`}
+                className="inline-flex min-h-12 w-fit items-center border-2 border-white px-5 text-xs font-black uppercase tracking-[0.07em] text-white transition-colors hover:bg-white hover:text-[var(--fis-blue)]"
+              >
+                View Competition
+              </Link>
+            </div>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {upcomingFixtures.map((fixture, index) => (
+                <MatchCard key={fixture.id} fixture={fixture} index={index} />
               ))}
             </div>
           </div>
         </section>
       )}
+    </div>
+  );
+}
 
-      {/* Latest Results */}
-      {latestResults.length > 0 && (
-        <section className="bg-[#111111] py-20 sm:py-[120px]">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionHeading
-              title="Latest Results"
-              subtitle="Recent completed matches"
-            />
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {latestResults.map((fixture, i) => (
-                <MatchCard key={fixture.id} fixture={fixture} index={i} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+function HeroLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link
+      href={href}
+      className="inline-flex min-h-13 items-center border-2 border-white/70 bg-[var(--fis-blue)]/65 px-5 text-xs font-black uppercase tracking-[0.07em] text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-[var(--fis-blue)]"
+    >
+      {children}
+    </Link>
+  );
+}
 
-      {/* About Section */}
-      <section className="bg-[#111111] py-20 sm:py-[120px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            {/* Left: Text content */}
-            <div>
-              <h2 className="font-[family-name:var(--font-heading)] text-3xl sm:text-[40px] uppercase tracking-wider text-white leading-tight">
-                About the Competition
-              </h2>
-              <div className="w-[60px] h-[3px] bg-red-600 mt-4" />
-              <div className="mt-8 space-y-5 text-white/50 text-base leading-relaxed font-[family-name:var(--font-sans)]">
-                <p>
-                  Endeavour Hills Futsal brings together teams from across the community for fast-paced, competitive indoor football.
-                  Monday and Wednesday nights run as separate leagues, giving players more opportunities to compete, stay active, 
-                  and build momentum across the season.
-                </p>
-                <p>
-                  As the league grows, Division B will be introduced — 
-                  creating a full league structure with promotion, relegation, and something always on the line. 
-                </p>
-              </div>
-            </div>
-
-            {/* Right: Night cards */}
-            <div className="flex flex-col gap-4 justify-center">
-              <NightCard
-                title="Monday Night"
-                href="/monday-night"
-                description="View standings, fixtures, and latest results →"
-                index={0}
-              />
-              <NightCard
-                title="Wednesday Night"
-                href="/wednesday-night"
-                description="View standings, fixtures, and latest results →"
-                index={1}
-              />
-            </div>
-          </div>
+function StandingsPreview({
+  title,
+  href,
+  standings,
+}: {
+  title: string;
+  href: string;
+  standings: ReturnType<typeof calculateStandings>;
+}) {
+  return (
+    <article>
+      <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="fis-kicker text-[var(--fis-red)]">Division A</p>
+          <h3 className="mt-2 text-2xl font-black uppercase tracking-[-0.03em] text-[var(--fis-blue)]">
+            {title}
+          </h3>
         </div>
-      </section>
+        <Link
+          href={href}
+          className="text-xs font-black uppercase tracking-[0.06em] text-[var(--fis-blue)] underline decoration-[var(--fis-red)] decoration-2 underline-offset-4"
+        >
+          View full table
+        </Link>
+      </div>
+      <LeagueTable standings={standings} compact />
+    </article>
+  );
+}
+
+function SectionIntro({
+  kicker,
+  title,
+  description,
+  inverted = false,
+}: {
+  kicker: string;
+  title: string;
+  description: string;
+  inverted?: boolean;
+}) {
+  return (
+    <div className="max-w-3xl">
+      <p className={`fis-kicker ${inverted ? "text-white/65" : "text-[var(--fis-red)]"}`}>
+        {kicker}
+      </p>
+      <h2
+        className={`mt-3 text-4xl font-black uppercase tracking-[-0.04em] sm:text-6xl ${
+          inverted ? "text-white" : "text-[var(--fis-blue)]"
+        }`}
+      >
+        {title}
+      </h2>
+      <p className={`mt-4 text-sm font-light leading-7 ${inverted ? "text-white/65" : "text-[var(--fis-ink)]/75"}`}>
+        {description}
+      </p>
     </div>
   );
 }

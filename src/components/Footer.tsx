@@ -1,132 +1,163 @@
 import Link from "next/link";
+import { Mail, MapPin, Phone } from "lucide-react";
+
+const competitionLinks = [
+  { href: "/monday-night", label: "Monday Night" },
+  { href: "/wednesday-night", label: "Wednesday Night" },
+];
+
+const informationLinks = [
+  { href: "/rules", label: "Rules" },
+  { href: "/contact", label: "Contact" },
+];
+
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/futsalis/",
+    label: "Facebook",
+  },
+  {
+    href: "https://www.instagram.com/futsalindoorsoccer/",
+    label: "Instagram",
+  },
+  {
+    href: "https://www.youtube.com/@futsalindoorsoccer",
+    label: "YouTube",
+  },
+  {
+    href: "mailto:contact@futsalindoorsoccer.com.au",
+    label: "Email",
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#080808]">
-      {/* Red accent line */}
-      <div className="h-[3px] bg-red-600" />
-
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-1.5 h-6 bg-red-600 rounded-sm" />
-              <span
-                className="text-xl uppercase tracking-wider leading-none text-white"
-                style={{ fontFamily: "var(--font-heading)" }}
+    <footer className="border-t-4 border-[var(--fis-red)] bg-[var(--fis-blue)] text-white">
+      <div className="fis-container grid gap-12 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.9fr_1.3fr] lg:py-16">
+        <div>
+          <Link href="/" className="inline-flex items-center gap-3" aria-label="Futsal Indoor Soccer home">
+            <span aria-hidden="true" className="h-10 w-2 -skew-x-12 bg-[var(--fis-red)]" />
+            <span className="max-w-[15rem] text-xl font-black uppercase leading-tight tracking-[0.08em]">
+              Futsal Indoor Soccer
+            </span>
+          </Link>
+          <p className="mt-5 max-w-sm text-sm font-light leading-7 text-white/68">
+            Competitive community futsal, currently playing Monday and Wednesday nights at Endeavour Hills Leisure Centre.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-2">
+            {socialLinks.map(({ href, label }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                aria-label={label}
+                className="inline-flex h-11 w-11 items-center justify-center border-2 border-white/35 text-white transition-colors hover:border-[var(--fis-red)] hover:bg-[var(--fis-red)]"
               >
-                Endeavour Hills{" "}
-                <span className="text-red-500" style={{ fontFamily: "var(--font-heading)", fontSize: "inherit" }}>Futsal</span>
-              </span>
-            </div>
-            <p className="text-sm text-white/40 max-w-xs font-[family-name:var(--font-sans)] leading-relaxed">
-              Your local futsal competition. Monday and Wednesday nights.
-              Compete and play the beautiful game.
-            </p>
-          </div>
-
-          {/* Competition */}
-          <div>
-            <h3 className="font-[family-name:var(--font-geist-mono)] text-xs font-semibold text-white uppercase tracking-wider mb-4">
-              Competition
-            </h3>
-            <ul className="space-y-2.5">
-              <li>
-                <Link href="/monday-night" className="text-sm text-white/40 hover:text-red-400 transition-colors font-[family-name:var(--font-sans)]">
-                  Monday Night
-                </Link>
-              </li>
-              <li>
-                <Link href="/wednesday-night" className="text-sm text-white/40 hover:text-red-400 transition-colors font-[family-name:var(--font-sans)]">
-                  Wednesday Night
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-[family-name:var(--font-geist-mono)] text-xs font-semibold text-white uppercase tracking-wider mb-4">
-              Quick Links
-            </h3>
-            <ul className="space-y-2.5">
-              <li>
-                <Link href="/" className="text-sm text-white/40 hover:text-red-400 transition-colors font-[family-name:var(--font-sans)]">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/monday-night" className="text-sm text-white/40 hover:text-red-400 transition-colors font-[family-name:var(--font-sans)]">
-                  Standings
-                </Link>
-              </li>
-              <li>
-                <Link href="/rules" className="text-sm text-white/40 hover:text-red-400 transition-colors font-[family-name:var(--font-sans)]">
-                  Rules
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <p className="font-[family-name:var(--font-sans)] text-sm font-semibold text-white/70 mb-1">
-              Endeavour Hills Leisure Centre
-            </p>
-            <h3 className="font-[family-name:var(--font-geist-mono)] text-xs font-semibold text-white uppercase tracking-wider mb-4">
-              Contact Details
-            </h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2.5">
-                <svg className="w-4 h-4 text-red-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <a href="mailto:contact@futsalindoorsoccer.com.au" className="text-sm text-white/40 hover:text-red-400 transition-colors font-[family-name:var(--font-sans)] break-all">
-                  contact@futsalindoorsoccer.com.au
-                </a>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <svg className="w-4 h-4 text-red-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <a href="tel:0402888767" className="text-sm text-white/40 hover:text-red-400 transition-colors font-[family-name:var(--font-sans)]">
-                  0402 888 767
-                </a>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <svg className="w-4 h-4 text-red-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                  <a href="https://www.google.com/maps/place/Endeavour+Hills+Leisure+Centre/@-37.9780005,145.2550069,17z/data=!3m1!4b1!4m6!3m5!1s0x6ad616e54fb79f93:0x3dcee589e869c490!8m2!3d-37.9780006!4d145.2598724!16s%2Fg%2F1w1129vc?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D" className="text-sm text-white/40 hover:text-red-400 transition-colors font-[family-name:var(--font-sans)]">
-                  10 Raymond McMahon Blvd,<br />Endeavour Hills VIC 3802
-                </a>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <a
-                  href="https://www.facebook.com/futsalis/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-white/40 hover:text-red-400 transition-colors font-[family-name:var(--font-sans)]"
-                >
-                  <svg className="w-4 h-4 text-red-500 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
-                  </svg>
-                  Facebook
-                </a>
-              </li>
-            </ul>
+                <SocialIcon name={label} />
+              </a>
+            ))}
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-white/[0.05]">
-          <p className="text-xs text-white/25 text-center font-[family-name:var(--font-geist-mono)]">
-            &copy; {new Date().getFullYear()} Endeavour Hills Futsal. All rights reserved.
-          </p>
+        <FooterLinkColumn title="Competitions" links={competitionLinks} />
+        <FooterLinkColumn title="Information" links={informationLinks} />
+
+        <div>
+          <h2 className="fis-kicker text-white">Contact</h2>
+          <ul className="mt-5 space-y-4 text-sm leading-6 text-white/70">
+            <li>
+              <a
+                href="mailto:contact@futsalindoorsoccer.com.au"
+                className="flex items-start gap-3 transition-colors hover:text-white"
+              >
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[var(--fis-red)]" aria-hidden="true" />
+                <span className="break-all">contact@futsalindoorsoccer.com.au</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:0402888767" className="flex items-start gap-3 transition-colors hover:text-white">
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[var(--fis-red)]" aria-hidden="true" />
+                <span>0402 888 767</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.google.com/maps/place/Endeavour+Hills+Leisure+Centre/@-37.9780005,145.2550069,17z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 transition-colors hover:text-white"
+              >
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[var(--fis-red)]" aria-hidden="true" />
+                <span>10 Raymond McMahon Boulevard, Endeavour Hills VIC 3802</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/20">
+        <div className="fis-container flex flex-col gap-2 py-5 text-[0.66rem] uppercase tracking-[0.09em] text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <span>&copy; {new Date().getFullYear()} Futsal Indoor Soccer</span>
+          <span>All rights reserved</span>
         </div>
       </div>
     </footer>
+  );
+}
+
+function SocialIcon({ name }: { name: string }) {
+  if (name === "Email") {
+    return <Mail className="h-5 w-5" aria-hidden="true" />;
+  }
+
+  if (name === "Facebook") {
+    return (
+      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M13.5 22v-8h2.75l.41-3.12H13.5v-2c0-.9.25-1.52 1.58-1.52h1.69V4.57a22.6 22.6 0 0 0-2.46-.13c-2.43 0-4.1 1.49-4.1 4.22v2.22H7.46V14h2.75v8h3.29Z" />
+      </svg>
+    );
+  }
+
+  if (name === "Instagram") {
+    return (
+      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.65 4.6 12 4.6 12 4.6s-5.65 0-7.5.5a3 3 0 0 0-2.1 2.1C1.9 9.05 1.9 12 1.9 12s0 2.95.5 4.8a3 3 0 0 0 2.1 2.1c1.85.5 7.5.5 7.5.5s5.65 0 7.5-.5a3 3 0 0 0 2.1-2.1c.5-1.85.5-4.8.5-4.8s0-2.95-.5-4.8ZM10 15.4V8.6l6 3.4-6 3.4Z" />
+    </svg>
+  );
+}
+
+function FooterLinkColumn({
+  title,
+  links,
+}: {
+  title: string;
+  links: Array<{ href: string; label: string }>;
+}) {
+  return (
+    <div>
+      <h2 className="fis-kicker text-white">{title}</h2>
+      <ul className="mt-5 space-y-3">
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className="text-sm font-medium text-white/70 transition-colors hover:text-white"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

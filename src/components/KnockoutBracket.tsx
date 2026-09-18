@@ -34,11 +34,12 @@ export default function KnockoutBracket({ night }: KnockoutBracketProps) {
   const friendlies = matches.filter((match) => match.round === "Friendly");
 
   return (
-    <section id="finals" className="overflow-hidden bg-[#111111] py-20 sm:py-[80px]">
+    <section id="finals" className="overflow-hidden border-b-4 border-[var(--fis-red)] bg-[var(--fis-blue)] py-20 sm:py-[80px]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Road to the Final"
           subtitle="Straight knockout. 16 teams, 3 weeks, 1 trophy. Win and move on; lose and you're out."
+          inverted
         />
         <p className="mx-auto mt-5 max-w-3xl text-center text-sm leading-6 text-white/55">
           All players should read the competition{" "}
