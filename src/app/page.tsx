@@ -37,7 +37,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <section className="relative isolate min-h-[calc(100svh-5.25rem)] overflow-hidden border-b-4 border-[var(--fis-red)] text-white">
+      <section className="relative isolate min-h-[calc(100svh-5.25rem)] overflow-hidden border-b-4 border-[var(--fis-red)] font-[family-name:var(--font-mono)] text-white">
         <Image
           src="/hero-bg.png"
           alt="Competitive futsal match"
@@ -54,18 +54,21 @@ export default function HomePage() {
             <RegisterMenu />
           </div>
 
-          <div className="max-w-5xl py-14 sm:py-20">
-            <h1 className="max-w-5xl text-[clamp(3.8rem,10vw,8.75rem)] font-black uppercase leading-[0.84] tracking-[-0.07em] text-white">
+          <div className="max-w-5xl py-24 sm:py-20">
+            <h1 className="max-w-5xl text-[clamp(2.75rem,10vw,8.75rem)] font-black uppercase leading-[0.9] tracking-[-0.06em] text-white">
               Futsal Indoor Soccer
             </h1>
-            <div className="mt-10 flex flex-wrap gap-3">
+            <p className="mt-7 max-w-xl text-[0.68rem] leading-6 text-white/80 sm:text-sm">
+              Competitive and social futsal
+            </p>
+            <div className="mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:flex sm:flex-wrap">
               <HeroLink href="/monday-night">Monday Night</HeroLink>
               <HeroLink href="/wednesday-night">Wednesday Night</HeroLink>
               <a
                 href={fillInsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-13 items-center border-2 border-[var(--fis-red)] bg-[var(--fis-red)] px-5 text-xs font-black uppercase tracking-[0.07em] text-white transition-colors hover:bg-[var(--fis-red-dark)]"
+                className="col-span-2 inline-flex min-h-13 items-center justify-center border-2 border-[var(--fis-red)] bg-[var(--fis-red)] px-5 text-xs font-black uppercase tracking-[0.07em] text-white transition-colors hover:bg-[var(--fis-red-dark)] sm:col-span-1"
               >
                 Fill-ins
               </a>

@@ -38,7 +38,7 @@ export default function Navbar() {
             alt="Futsal Indoor Soccer"
             width={244}
             height={100}
-            className="h-12 w-auto brightness-0 invert transition-transform group-hover:scale-[1.02]"
+            className="h-9 w-auto brightness-0 invert transition-transform group-hover:scale-[1.02] sm:h-12"
             priority
           />
         </Link>
