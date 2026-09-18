@@ -49,19 +49,19 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,23,68,0.94)_0%,rgba(0,36,105,0.74)_55%,rgba(0,23,68,0.58)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.08)_0%,rgba(0,17,50,0.58)_100%)]" />
 
-        <div className="fis-container relative flex min-h-[calc(100svh-5.25rem)] flex-col justify-between py-8 sm:py-12">
+        <div className="fis-container relative flex min-h-[calc(100svh-5.25rem)] flex-col justify-center py-8 sm:py-12">
           <div className="absolute right-4 top-5 sm:right-8 sm:top-8">
             <RegisterMenu />
           </div>
 
-          <div className="max-w-5xl py-24 sm:py-20">
-            <h1 className="max-w-5xl text-[clamp(2.75rem,10vw,8.75rem)] font-black uppercase leading-[0.9] tracking-[-0.06em] text-white">
+          <div className="w-full max-w-5xl py-16 text-center sm:py-20 sm:text-left">
+            <h1 className="mx-auto max-w-5xl text-[clamp(2.2rem,8vw,7.25rem)] font-normal uppercase leading-[1.02] tracking-[-0.1em] text-white sm:mx-0">
               Futsal Indoor Soccer
             </h1>
-            <p className="mt-7 max-w-xl text-[0.68rem] leading-6 text-white/80 sm:text-sm">
-              Competitive and social futsal
+            <p className="mx-auto mt-7 max-w-xl text-[0.68rem] leading-6 text-white/80 sm:mx-0 sm:text-sm">
+              COMPETITIVE AND SOCIAL FUTSAL
             </p>
-            <div className="mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:flex sm:flex-wrap">
+            <div className="mx-auto mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:mx-0 sm:flex sm:flex-wrap">
               <HeroLink href="/monday-night">Monday Night</HeroLink>
               <HeroLink href="/wednesday-night">Wednesday Night</HeroLink>
               <a
@@ -75,6 +75,36 @@ export default function HomePage() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      <section className="bg-[var(--fis-cream)] py-16 sm:py-20">
+        <div className="fis-container">
+          <SectionIntro
+            kicker="Typography study"
+            title="Choose the title treatment"
+            description="Two treatments using the approved FIS type families. The Press Start 2P option is deliberately lighter and wider for a full-width arcade feel."
+          />
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+            <div className="border-2 border-[var(--fis-blue)] bg-white p-6 sm:p-8">
+              <p className="fis-kicker text-[var(--fis-red)]">Option A · Unbounded</p>
+              <p className="mt-7 text-[clamp(2.4rem,7vw,5.8rem)] font-black uppercase leading-[0.88] tracking-[-0.08em] text-[var(--fis-blue)]">
+                Futsal Indoor Soccer
+              </p>
+              <p className="mt-6 text-xs font-light uppercase tracking-[0.08em] text-[var(--fis-blue)]">
+                COMPETITIVE AND SOCIAL FUTSAL
+              </p>
+            </div>
+            <div className="border-2 border-[var(--fis-blue)] bg-white p-6 sm:p-8">
+              <p className="fis-kicker text-[var(--fis-red)]">Option B · Press Start 2P</p>
+              <p className="mt-7 font-[family-name:var(--font-mono)] text-[clamp(1.7rem,4.5vw,4.2rem)] font-normal uppercase leading-[1.05] tracking-[-0.1em] text-[var(--fis-blue)]">
+                Futsal Indoor Soccer
+              </p>
+              <p className="mt-6 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase leading-5 tracking-[-0.04em] text-[var(--fis-blue)] sm:text-xs">
+                COMPETITIVE AND SOCIAL FUTSAL
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
