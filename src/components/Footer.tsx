@@ -1,50 +1,45 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
-
-const competitionLinks = [
-  { href: "/monday-night", label: "Monday Night" },
-  { href: "/wednesday-night", label: "Wednesday Night" },
-];
+import { Mail } from "lucide-react";
 
 const informationLinks = [
   { href: "/rules", label: "Rules" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Contact Us" },
+  { href: "/about-us", label: "About Us" },
+];
+
+const legalLinks = [
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms & Conditions" },
 ];
 
 const socialLinks = [
-  {
-    href: "https://www.facebook.com/futsalis/",
-    label: "Facebook",
-  },
-  {
-    href: "https://www.instagram.com/futsalindoorsoccer/",
-    label: "Instagram",
-  },
-  {
-    href: "https://www.youtube.com/@futsalindoorsoccer",
-    label: "YouTube",
-  },
-  {
-    href: "mailto:contact@futsalindoorsoccer.com.au",
-    label: "Email",
-  },
+  { href: "https://www.facebook.com/futsalis/", label: "Facebook" },
+  { href: "https://www.instagram.com/futsalindoorsoccer/", label: "Instagram" },
+  { href: "https://www.youtube.com/@futsalindoorsoccer", label: "YouTube" },
+  { href: "mailto:contact@futsalindoorsoccer.com.au", label: "Email" },
 ];
 
 export default function Footer() {
   return (
     <footer className="border-t-4 border-[var(--fis-red)] bg-[var(--fis-blue)] text-white">
-      <div className="fis-container grid gap-12 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.9fr_1.3fr] lg:py-16">
+      <div className="fis-container grid gap-12 py-12 sm:py-14 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1fr] lg:py-16">
+        <Link href="/" className="inline-flex h-fit w-fit" aria-label="Futsal Indoor Soccer home">
+          <Image
+            src="/logos/FIS-01-Primary-Black.svg"
+            alt="Futsal Indoor Soccer"
+            width={280}
+            height={114}
+            className="h-16 w-auto brightness-0 invert"
+          />
+        </Link>
+
+        <FooterLinkColumn title="Information" links={informationLinks} />
+        <FooterLinkColumn title="Legal" links={legalLinks} />
+
         <div>
-          <Link href="/" className="inline-flex items-center gap-3" aria-label="Futsal Indoor Soccer home">
-            <span aria-hidden="true" className="h-10 w-2 -skew-x-12 bg-[var(--fis-red)]" />
-            <span className="max-w-[15rem] text-xl font-black uppercase leading-tight tracking-[0.08em]">
-              Futsal Indoor Soccer
-            </span>
-          </Link>
-          <p className="mt-5 max-w-sm text-sm font-light leading-7 text-white/68">
-            Competitive community futsal, currently playing Monday and Wednesday nights at Endeavour Hills Leisure Centre.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-2">
+          <h2 className="fis-kicker text-white">Social</h2>
+          <div className="mt-5 flex flex-wrap gap-2">
             {socialLinks.map(({ href, label }) => (
               <a
                 key={label}
@@ -59,45 +54,10 @@ export default function Footer() {
             ))}
           </div>
         </div>
-
-        <FooterLinkColumn title="Competitions" links={competitionLinks} />
-        <FooterLinkColumn title="Information" links={informationLinks} />
-
-        <div>
-          <h2 className="fis-kicker text-white">Contact</h2>
-          <ul className="mt-5 space-y-4 text-sm leading-6 text-white/70">
-            <li>
-              <a
-                href="mailto:contact@futsalindoorsoccer.com.au"
-                className="flex items-start gap-3 transition-colors hover:text-white"
-              >
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[var(--fis-red)]" aria-hidden="true" />
-                <span className="break-all">contact@futsalindoorsoccer.com.au</span>
-              </a>
-            </li>
-            <li>
-              <a href="tel:0402888767" className="flex items-start gap-3 transition-colors hover:text-white">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[var(--fis-red)]" aria-hidden="true" />
-                <span>0402 888 767</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.google.com/maps/place/Endeavour+Hills+Leisure+Centre/@-37.9780005,145.2550069,17z"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-3 transition-colors hover:text-white"
-              >
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[var(--fis-red)]" aria-hidden="true" />
-                <span>10 Raymond McMahon Boulevard, Endeavour Hills VIC 3802</span>
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
 
       <div className="border-t border-white/20">
-        <div className="fis-container flex flex-col gap-2 py-5 text-[0.66rem] uppercase tracking-[0.09em] text-white/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="fis-container flex flex-col gap-2 py-5 text-[0.66rem] uppercase tracking-[0.09em] text-white/65 sm:flex-row sm:items-center sm:justify-between">
           <span>&copy; {new Date().getFullYear()} Futsal Indoor Soccer</span>
           <span>All rights reserved</span>
         </div>
@@ -107,9 +67,7 @@ export default function Footer() {
 }
 
 function SocialIcon({ name }: { name: string }) {
-  if (name === "Email") {
-    return <Mail className="h-5 w-5" aria-hidden="true" />;
-  }
+  if (name === "Email") return <Mail className="h-5 w-5" aria-hidden="true" />;
 
   if (name === "Facebook") {
     return (
@@ -149,10 +107,7 @@ function FooterLinkColumn({
       <ul className="mt-5 space-y-3">
         {links.map((link) => (
           <li key={link.href}>
-            <Link
-              href={link.href}
-              className="text-sm font-medium text-white/70 transition-colors hover:text-white"
-            >
+            <Link href={link.href} className="text-sm font-medium text-white/75 transition-colors hover:text-white">
               {link.label}
             </Link>
           </li>

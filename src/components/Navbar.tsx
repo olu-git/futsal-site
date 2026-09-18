@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -11,7 +12,6 @@ const links = [
   { href: "/monday-night", label: "Monday Night" },
   { href: "/wednesday-night", label: "Wednesday Night" },
   { href: "/rules", label: "Rules" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -33,13 +33,14 @@ export default function Navbar() {
           className="group flex min-w-0 items-center gap-3 py-4"
           aria-label="Futsal Indoor Soccer home"
         >
-          <span
-            aria-hidden="true"
-            className="h-9 w-2 shrink-0 -skew-x-12 bg-[var(--fis-red)] transition-transform group-hover:skew-x-0"
+          <Image
+            src="/logos/FIS-01-Primary-Black.svg"
+            alt="Futsal Indoor Soccer"
+            width={244}
+            height={100}
+            className="h-12 w-auto brightness-0 invert transition-transform group-hover:scale-[1.02]"
+            priority
           />
-          <span className="min-w-0 text-sm font-black uppercase leading-tight tracking-[0.09em] sm:text-base">
-            Futsal Indoor Soccer
-          </span>
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">

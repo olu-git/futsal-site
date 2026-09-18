@@ -49,14 +49,13 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,23,68,0.94)_0%,rgba(0,36,105,0.74)_55%,rgba(0,23,68,0.58)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.08)_0%,rgba(0,17,50,0.58)_100%)]" />
 
-        <div className="fis-container flex min-h-[calc(100svh-5.25rem)] flex-col justify-between py-8 sm:py-12">
-          <div className="flex justify-end">
+        <div className="fis-container relative flex min-h-[calc(100svh-5.25rem)] flex-col justify-between py-8 sm:py-12">
+          <div className="absolute right-4 top-5 sm:right-8 sm:top-8">
             <RegisterMenu />
           </div>
 
           <div className="max-w-5xl py-14 sm:py-20">
-            <p className="fis-kicker text-white/70">Competitive futsal. Built for the community.</p>
-            <h1 className="mt-6 max-w-5xl text-[clamp(3.8rem,10vw,8.75rem)] font-black uppercase leading-[0.84] tracking-[-0.07em] text-white">
+            <h1 className="max-w-5xl text-[clamp(3.8rem,10vw,8.75rem)] font-black uppercase leading-[0.84] tracking-[-0.07em] text-white">
               Futsal Indoor Soccer
             </h1>
             <div className="mt-10 flex flex-wrap gap-3">
@@ -73,9 +72,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          <p className="fis-kicker max-w-lg text-white/55">
-            Fixtures, results and tables for FIS competitions
-          </p>
         </div>
       </section>
 
@@ -108,7 +104,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
               <SectionIntro
                 inverted
-                kicker="Next Scheduled Round"
+                kicker="Next Fixtures"
                 title={nextNightLabel}
                 description={`Round ${nextFixture.round} · ${formatDate(nextFixture.date)}`}
               />
