@@ -196,14 +196,7 @@ function FinalsTeamRow({ team, score, side, winningSide }: FinalsTeamRowProps) {
       } ${isWinner ? "bg-white/[0.04]" : ""}`}
     >
       <span
-        className={`w-5 shrink-0 text-right font-[family-name:var(--font-mono)] text-xs ${
-          isWinner ? "text-red-500" : "text-white/35"
-        }`}
-      >
-        {team?.seed ?? ""}
-      </span>
-      <span
-        className={`min-w-0 flex-1 truncate font-semibold ${
+        className={`min-w-0 flex-1 truncate pl-1 font-semibold ${
           !team
             ? "font-[family-name:var(--font-mono)] text-xs font-normal uppercase tracking-wider text-white/35"
             : isWinner
