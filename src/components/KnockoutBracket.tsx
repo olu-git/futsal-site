@@ -31,7 +31,7 @@ const season = seasonData as FinalsSeasonData;
 export default function KnockoutBracket({ night }: KnockoutBracketProps) {
   const data = season.finals[night];
   const matches = finalsMatches[night];
-  const friendlies = matches.filter((match) => match.round === "Friendly");
+  const gradingGames = matches.filter((match) => match.round === "Grading");
 
   return (
     <section id="finals" className="overflow-hidden bg-[#111111] py-20 sm:py-[80px]">
@@ -50,6 +50,27 @@ export default function KnockoutBracket({ night }: KnockoutBracketProps) {
           </Link>{" "}
           before the knockout stages. The referee has the final say.
         </p>
+
+        <div className="mt-10 rounded-lg border border-white/10 bg-[#151515] p-4 sm:p-6">
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h3 className="font-[family-name:var(--font-heading)] text-2xl uppercase tracking-wider text-white">
+                Grading Games
+              </h3>
+              <p className="mt-1 text-sm text-white/45">
+                Round of 16 teams continuing in grading matches
+              </p>
+            </div>
+            <p className="font-[family-name:var(--font-mono)] text-xs text-white/40">
+              {formatDate(finalsDates[night][1])}
+            </p>
+          </div>
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {gradingGames.map((match) => (
+              <FinalsMatchCard key={match.id} match={match} night={night} data={data} />
+            ))}
+          </div>
+        </div>
 
         <div
           className="mt-10 max-w-full overflow-x-auto overscroll-x-contain pb-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600"
@@ -72,20 +93,6 @@ export default function KnockoutBracket({ night }: KnockoutBracketProps) {
           </div>
         </div>
 
-        <div className="mt-6 border-t border-white/10 pt-4 font-[family-name:var(--font-mono)] text-xs leading-7 text-white/45">
-          <span className="mr-3 font-semibold uppercase tracking-wider text-white/80">
-            Friendlies, {formatDate(finalsDates[night][1])}:
-          </span>
-          {friendlies.map((match) => {
-            const teamA = resolveFinalsSlot(match.a, night, data);
-            const teamB = resolveFinalsSlot(match.b, night, data);
-            return (
-              <span key={match.id} className="mr-5 inline-block whitespace-nowrap">
-                {teamA?.name ?? "TBC"} vs {teamB?.name ?? "TBC"} &middot; {formatTime(match.time)} &middot; Court {match.court}
-              </span>
-            );
-          })}
-        </div>
       </div>
     </section>
   );
@@ -165,12 +172,14 @@ function FinalsMatchCard({ match, night, data }: FinalsMatchCardProps) {
       <FinalsTeamRow
         team={teamA}
         score={result?.scoreA}
+        penaltyScore={result?.penaltyScoreA}
         side="A"
         winningSide={winningSide}
       />
       <FinalsTeamRow
         team={teamB}
         score={result?.scoreB}
+        penaltyScore={result?.penaltyScoreB}
         side="B"
         winningSide={winningSide}
       />
@@ -181,11 +190,12 @@ function FinalsMatchCard({ match, night, data }: FinalsMatchCardProps) {
 interface FinalsTeamRowProps {
   team: ResolvedFinalsTeam | null;
   score?: number;
+  penaltyScore?: number;
   side: FinalsSide;
   winningSide: FinalsSide | null;
 }
 
-function FinalsTeamRow({ team, score, side, winningSide }: FinalsTeamRowProps) {
+function FinalsTeamRow({ team, score, penaltyScore, side, winningSide }: FinalsTeamRowProps) {
   const isWinner = winningSide === side;
   const isLoser = winningSide !== null && !isWinner;
 
@@ -209,11 +219,14 @@ function FinalsTeamRow({ team, score, side, winningSide }: FinalsTeamRowProps) {
         {team?.name ?? "TBC"}
       </span>
       <span
-        className={`w-5 shrink-0 text-right font-[family-name:var(--font-mono)] text-sm ${
+        className={`w-12 shrink-0 text-right font-[family-name:var(--font-mono)] text-sm ${
           isWinner ? "font-semibold text-red-500" : "text-white/45"
         }`}
       >
         {score ?? ""}
+        {penaltyScore !== undefined && (
+          <span className="ml-1 text-[9px] uppercase text-white/40">(P{penaltyScore})</span>
+        )}
       </span>
     </div>
   );

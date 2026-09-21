@@ -1,12 +1,14 @@
 import type { CompetitionNight } from "./types";
 
 export type FinalsSide = "A" | "B";
-export type FinalsRound = "R16" | "QF" | "SF" | "GF" | "Friendly";
+export type FinalsRound = "R16" | "QF" | "SF" | "GF" | "Grading";
 
 export interface FinalsResult {
   scoreA: number;
   scoreB: number;
   penaltyWinner?: FinalsSide;
+  penaltyScoreA?: number;
+  penaltyScoreB?: number;
 }
 
 export interface FinalsNightData {
@@ -42,15 +44,35 @@ const seed = (value: number): FinalsSlot => ({ type: "seed", value });
 const winner = (matchId: string): FinalsSlot => ({ type: "winner", matchId });
 const loser = (matchId: string): FinalsSlot => ({ type: "loser", matchId });
 
-const eliminationTemplate: FinalsMatch[] = [
+const mondayQuarterFinals: FinalsMatch[] = [
   { id: "qf-1", round: "QF", label: "QF1", week: 1, time: "19:40", court: 1, a: winner("r16-m1"), b: winner("r16-m2") },
-  { id: "qf-2", round: "QF", label: "QF2", week: 1, time: "19:40", court: 2, a: winner("r16-m3"), b: winner("r16-m4") },
+  { id: "qf-2", round: "QF", label: "QF2", week: 1, time: "20:20", court: 1, a: winner("r16-m7"), b: winner("r16-m3") },
+  { id: "qf-3", round: "QF", label: "QF3", week: 1, time: "20:20", court: 2, a: winner("r16-m4"), b: winner("r16-m5") },
+  { id: "qf-4", round: "QF", label: "QF4", week: 1, time: "21:00", court: 1, a: winner("r16-m6"), b: winner("r16-m8") },
+];
+
+const wednesdayQuarterFinals: FinalsMatch[] = [
+  { id: "qf-1", round: "QF", label: "QF1", week: 1, time: "19:40", court: 1, a: winner("r16-m1"), b: winner("r16-m2") },
+  { id: "qf-2", round: "QF", label: "QF2", week: 1, time: "20:20", court: 2, a: winner("r16-m3"), b: winner("r16-m4") },
   { id: "qf-3", round: "QF", label: "QF3", week: 1, time: "20:20", court: 1, a: winner("r16-m5"), b: winner("r16-m6") },
-  { id: "qf-4", round: "QF", label: "QF4", week: 1, time: "20:20", court: 2, a: winner("r16-m7"), b: winner("r16-m8") },
-  { id: "fr-1", round: "Friendly", label: "Friendly", week: 1, time: "19:00", court: 1, a: loser("r16-m1"), b: loser("r16-m2") },
-  { id: "fr-2", round: "Friendly", label: "Friendly", week: 1, time: "19:00", court: 2, a: loser("r16-m3"), b: loser("r16-m4") },
-  { id: "fr-3", round: "Friendly", label: "Friendly", week: 1, time: "21:00", court: 1, a: loser("r16-m5"), b: loser("r16-m6") },
-  { id: "fr-4", round: "Friendly", label: "Friendly", week: 1, time: "21:00", court: 2, a: loser("r16-m7"), b: loser("r16-m8") },
+  { id: "qf-4", round: "QF", label: "QF4", week: 1, time: "21:00", court: 1, a: winner("r16-m7"), b: winner("r16-m8") },
+];
+
+const mondayGradingGames: FinalsMatch[] = [
+  { id: "grading-1", round: "Grading", label: "G1", week: 1, time: "19:00", court: 1, a: loser("r16-m1"), b: loser("r16-m5") },
+  { id: "grading-2", round: "Grading", label: "G2", week: 1, time: "19:00", court: 2, a: loser("r16-m2"), b: loser("r16-m3") },
+  { id: "grading-3", round: "Grading", label: "G3", week: 1, time: "19:40", court: 2, a: loser("r16-m4"), b: loser("r16-m8") },
+  { id: "grading-4", round: "Grading", label: "G4", week: 1, time: "21:00", court: 2, a: loser("r16-m7"), b: loser("r16-m6") },
+];
+
+const wednesdayGradingGames: FinalsMatch[] = [
+  { id: "grading-1", round: "Grading", label: "G1", week: 1, time: "19:00", court: 1, a: loser("r16-m1"), b: loser("r16-m5") },
+  { id: "grading-2", round: "Grading", label: "G2", week: 1, time: "19:00", court: 2, a: loser("r16-m2"), b: loser("r16-m3") },
+  { id: "grading-3", round: "Grading", label: "G3", week: 1, time: "19:40", court: 2, a: loser("r16-m4"), b: loser("r16-m6") },
+  { id: "grading-4", round: "Grading", label: "G4", week: 1, time: "21:00", court: 2, a: loser("r16-m7"), b: loser("r16-m8") },
+];
+
+const finalRoundsTemplate: FinalsMatch[] = [
   { id: "sf-1", round: "SF", label: "SF1", week: 2, time: "19:30", court: 1, a: winner("qf-1"), b: winner("qf-2") },
   { id: "sf-2", round: "SF", label: "SF2", week: 2, time: "19:30", court: 2, a: winner("qf-3"), b: winner("qf-4") },
   { id: "gf", round: "GF", label: "Grand Final", week: 2, time: "20:30", court: 1, a: winner("sf-1"), b: winner("sf-2") },
@@ -84,8 +106,8 @@ export const finalsDates: Record<CompetitionNight, string[]> = {
 };
 
 export const finalsMatches: Record<CompetitionNight, FinalsMatch[]> = {
-  monday: [...mondayRoundOf16, ...eliminationTemplate],
-  wednesday: [...wednesdayRoundOf16, ...eliminationTemplate],
+  monday: [...mondayRoundOf16, ...mondayQuarterFinals, ...mondayGradingGames, ...finalRoundsTemplate],
+  wednesday: [...wednesdayRoundOf16, ...wednesdayQuarterFinals, ...wednesdayGradingGames, ...finalRoundsTemplate],
 };
 
 export function winnerSide(result?: FinalsResult): FinalsSide | null {

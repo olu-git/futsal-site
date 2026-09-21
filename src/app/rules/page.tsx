@@ -71,7 +71,7 @@ const fifaGroups: RuleGroup[] = [
         icon: Play,
         title: "Kick-off",
         description:
-          "At kick-off, the ball must move back into the kicking team's own half. The opposing team must remain behind their yellow line until the ball is played.",
+          "At kick-off, the ball must move back into the kicking team's own half. The defending team has 5 seconds to return behind the yellow line in its own half and must remain there until the ball is played. If every defending player is not behind the line when the referee completes the countdown, the kicking team is awarded an indirect free kick.",
       },
       {
         icon: Footprints,

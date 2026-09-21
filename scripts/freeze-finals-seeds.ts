@@ -33,12 +33,12 @@ for (const night of nights) {
           ...standings
             .filter(
               (team) =>
-                team.teamId !== "mon-xaywan" &&
+                team.teamId !== "mon-declans-team" &&
                 team.teamId !== "mon-bunyip"
             )
             .slice(0, 14)
             .map((team) => team.teamName),
-          "Xaywan",
+          "Declan's Team",
           "Bunyip",
         ]
       : standings.slice(0, 16).map((team) => team.teamName);
