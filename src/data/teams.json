@@ -2,48 +2,56 @@
   {
     "id": "mon-afg",
     "name": "AFG",
+    "kitColour": "#2F80ED",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-blue-dragons",
     "name": "Blue Dragons",
+    "kitColour": "#2F80ED",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-moza-mama",
     "name": "Moza Mama",
+    "kitColour": "#74C7E8",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-hunger-fc",
     "name": "Hunger FC",
+    "kitColour": "#111111",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-goldlink-up",
     "name": "Goldlink Up",
+    "kitColour": "#111111",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-misfits",
     "name": "Misfits",
+    "kitColour": "#2F80ED",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-ghazni-united",
     "name": "Ghazni United",
+    "kitColour": "#FFFFFF",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-samen",
     "name": "Samen",
+    "kitColour": "#111111",
     "night": "monday",
     "division": "A",
     "active": false
@@ -51,132 +59,154 @@
   {
     "id": "mon-goal-diggers",
     "name": "Goal Diggers",
+    "kitColour": "#FFFFFF",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-wildcats",
     "name": "Wildcats",
+    "kitColour": "#F2C94C",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-hope",
     "name": "Hope",
+    "kitColour": "#EB5757",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-salvos",
     "name": "Salvos",
+    "kitColour": "#2F80ED",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "wed-afg",
     "name": "AFG",
+    "kitColour": "#2F80ED",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-ibiza",
     "name": "Ibiza",
+    "kitColour": "#111111",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-goldlink-up",
     "name": "Goldlink Up",
+    "kitColour": "#111111",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-misfits",
     "name": "Misfits",
+    "kitColour": "#2F80ED",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-moza-mama",
     "name": "Moza Mama",
+    "kitColour": "#74C7E8",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-hazara-united",
     "name": "Hazara United",
+    "kitColour": "#FFFFFF",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-ghazni-united",
     "name": "Ghazni United",
+    "kitColour": "#FFFFFF",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-pops",
     "name": "Pops",
+    "kitColour": "#2F80ED",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-rinnai",
     "name": "Rinnai",
+    "kitColour": "#2F80ED",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-toss",
     "name": "Toss",
+    "kitColour": "#27AE60",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-unathletico",
     "name": "Unathletico",
+    "kitColour": "#F2994A",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-wildcats",
     "name": "Wildcats",
+    "kitColour": "#F2C94C",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-dwell-fc",
     "name": "Dwell FC",
+    "kitColour": "#EB5757",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-umoja-stars",
     "name": "Umoja Stars",
+    "kitColour": "#111111",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "mon-toss",
     "name": "Toss",
+    "kitColour": "#27AE60",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-hazara-united",
     "name": "Hazara United",
+    "kitColour": "#111111",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-top-up-fc",
     "name": "Top Up FC",
+    "kitColour": "#FFFFFF",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-buckle-city",
     "name": "Buckle City",
+    "kitColour": "#111111",
     "night": "monday",
     "division": "A",
     "active": false
@@ -184,30 +214,35 @@
   {
     "id": "wed-mts-fc",
     "name": "MTS FC",
+    "kitColour": "#111111",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "wed-xaywan",
     "name": "Kuq E Zi",
+    "kitColour": "#EB5757",
     "night": "wednesday",
     "division": "A"
   },
   {
     "id": "mon-bunyip",
     "name": "Bunyip",
+    "kitColour": "#111111",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-xaywan",
     "name": "Xaywan",
+    "kitColour": "#EB5757",
     "night": "monday",
     "division": "A"
   },
   {
     "id": "mon-buckle-city-fc",
     "name": "Buckle City",
+    "kitColour": "#111111",
     "night": "monday",
     "division": "A",
     "active": false
