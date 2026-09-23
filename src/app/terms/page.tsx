@@ -1,23 +1,14 @@
-export const metadata = {
-  title: "Terms & Conditions",
-  description: "Participation and website terms for Futsal Indoor Soccer.",
-};
+import PolicyPage from "@/components/PolicyPage";
 
+export const metadata = { title: "Terms & Conditions", description: "Participation and website terms for Futsal Indoor Soccer." };
 const sections = [
-  ["Joining and eligibility", "FIS accepts enquiries for teams and individuals; an enquiry is not a confirmed place. Competitions are for participants aged 18 and over. Captains provide an initial roster and pass on participation information to their team. Every participant must follow the FIS Rules, including fill-in players."],
-  ["Fixtures, results and fees", "An entire season may be published upfront, but match times, courts, opponents and results may change. Check the current published fixture and direct FIS notice before travelling. The Rules govern payment, bonds, late teams, no-shows, forfeits, eligibility and finals."],
-  ["Code of conduct", "Treat players, referees, organisers and venue staff with respect. Abusive, threatening, discriminatory or violent behaviour is not permitted. FIS may remove a player from a match or competition after considering the circumstances."],
-  ["Health, emergency response and cover", "Futsal carries physical injury risks. Each participant is responsible for assessing their own fitness and arranging suitable private health or personal accident cover. FIS does not provide player accident or injury insurance. In an emergency, a participant may be responsible for ambulance, treatment and related expenses. Nothing in these terms removes protections that cannot lawfully be excluded."],
-  ["Photography and video", "Players may opt out of appearing in FIS photography or video and still participate. Email contact@futsalindoorsoccer.com.au or identify yourself to FIS staff before fixtures so reasonable steps can be taken to honour the request."],
-  ["Website information and privacy", "Fixtures, scores and league tables are provided for information and may be corrected. Personal information is handled as described in the Privacy Policy. Optional marketing messages require a separate choice and can be stopped at any time."],
-  ["Questions and changes", "Email contact@futsalindoorsoccer.com.au with questions, concerns, privacy requests or a photography and video opt-out. Material changes to these Terms should be dated and communicated through normal FIS channels."],
+  { heading: "Joining and eligibility", paragraphs: ["FIS competitions are for participants aged 18 and over. A registration is an enquiry and does not confirm a competition place. Team captains provide an initial roster and must ensure their players understand these Terms and the FIS Rules."] },
+  { heading: "Competition participation", paragraphs: ["Participants agree to follow published fixtures, competition rules and reasonable directions from referees, FIS administrators and venue staff. Fixtures, times, courts, opponents and results may be corrected or changed; teams should check the current published information before travelling."] },
+  { heading: "Code of conduct", paragraphs: ["Treat players, referees, organisers and venue staff with respect. Abusive, threatening, discriminatory or violent behaviour is not permitted. FIS may remove a participant from a match or competition after considering the circumstances."] },
+  { heading: "Risk, fitness and medical treatment", paragraphs: ["Futsal involves physical exertion, contact and an inherent risk of injury. Each participant is responsible for assessing their fitness to play. Where a participant cannot provide instructions in an emergency, they authorise reasonable emergency medical assistance to be sought on their behalf."] },
+  { heading: "Insurance and costs", paragraphs: ["FIS does not provide player personal accident or injury insurance. Players should consider private health or personal accident cover and remain responsible for ambulance, medical and related costs. Public liability cover is different from personal injury benefits and does not guarantee reimbursement of medical expenses.", "Nothing in these Terms excludes or limits rights or liability where doing so would be unlawful."] },
+  { heading: "Photography and video", paragraphs: ["Photography and video may be captured during FIS competitions and used to document or promote the league. A player who does not consent should email FIS or identify themselves to FIS staff before their fixture so reasonable steps can be taken to respect that choice."] },
+  { heading: "Privacy", paragraphs: ["Personal information is handled in accordance with the FIS Privacy Policy. By registering or participating, you acknowledge that policy and the publication of competition information such as team names, fixtures, results and tables."] },
+  { heading: "Contact and changes", paragraphs: ["Email contact@futsalindoorsoccer.com.au with questions. Material updates to these Terms will include a revised date and may be communicated through normal FIS channels. Detailed legal wording remains subject to further review."] },
 ];
-
-export default function TermsPage() {
-  return (
-    <div className="bg-[var(--fis-cream)] text-[var(--fis-blue)]">
-      <section className="border-b-4 border-[var(--fis-red)] bg-[var(--fis-blue)] py-20 text-white sm:py-28"><div className="fis-container"><p className="fis-kicker text-[var(--fis-red)]">Futsal Indoor Soccer</p><h1 className="mt-5 text-5xl font-black uppercase tracking-[-0.05em] sm:text-7xl">Terms &amp; Conditions</h1></div></section>
-      <main className="fis-container max-w-4xl space-y-10 py-16 sm:py-24">{sections.map(([heading, body]) => <section key={heading}><h2 className="text-2xl font-black uppercase tracking-[-0.03em]">{heading}</h2><p className="mt-4 text-sm font-light leading-8 text-[var(--fis-ink)]">{body}</p></section>)}</main>
-    </div>
-  );
-}
+export default function TermsPage() { return <PolicyPage title="Terms & Conditions" updated="23 September 2026" sections={sections} />; }

@@ -1,119 +1,23 @@
-import { Standing } from "@/lib/types";
+import type { Standing, Team } from "@/lib/types";
+import TeamKit from "./TeamKit";
 
-interface LeagueTableProps {
-  standings: Standing[];
-  compact?: boolean;
-}
-
-export default function LeagueTable({ standings, compact = false }: LeagueTableProps) {
-  const displayStandings = compact ? standings.slice(0, 5) : standings;
-
-  return (
-    <div className="overflow-x-auto border-2 border-[var(--fis-blue)] bg-[var(--fis-cream-light)] shadow-[5px_5px_0_var(--fis-red)]">
-      <table className="w-full min-w-[480px] border-collapse">
-        <thead>
-          <tr className="bg-[var(--fis-blue)]">
-            <th className="px-4 py-3 text-left font-[family-name:var(--font-mono)] text-xs font-bold text-white uppercase tracking-wider w-10">
-              POS
-            </th>
-            <th className="px-2 py-3 text-left font-[family-name:var(--font-mono)] text-xs font-bold text-white uppercase tracking-wider">
-              TEAM
-            </th>
-            <th className="px-2 py-3 text-center font-[family-name:var(--font-mono)] text-xs font-bold text-white uppercase tracking-wider w-10">
-              P
-            </th>
-            <th className="px-2 py-3 text-center font-[family-name:var(--font-mono)] text-xs font-bold text-white uppercase tracking-wider w-10">
-              W
-            </th>
-            <th className="px-2 py-3 text-center font-[family-name:var(--font-mono)] text-xs font-bold text-white uppercase tracking-wider w-10">
-              D
-            </th>
-            <th className="px-2 py-3 text-center font-[family-name:var(--font-mono)] text-xs font-bold text-white uppercase tracking-wider w-10">
-              L
-            </th>
-            {!compact && (
-              <>
-                <th className="px-2 py-3 text-center font-[family-name:var(--font-mono)] text-xs font-bold text-white uppercase tracking-wider w-11">
-                  GF
-                </th>
-                <th className="px-2 py-3 text-center font-[family-name:var(--font-mono)] text-xs font-bold text-white uppercase tracking-wider w-11">
-                  GA
-                </th>
-              </>
-            )}
-            <th className="px-2 py-3 text-center font-[family-name:var(--font-mono)] text-xs font-bold text-white uppercase tracking-wider w-12">
-              GD
-            </th>
-            <th className="px-4 py-3 text-center font-[family-name:var(--font-mono)] text-xs font-bold text-white uppercase tracking-wider w-12">
-              PTS
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {displayStandings.map((row, i) => (
-            <tr
-              key={row.teamId}
-              className={`transition-colors hover:bg-[var(--fis-blue)]/[0.06] ${
-                i < displayStandings.length - 1 ? "border-b border-[var(--fis-blue)]/15" : ""
-              }`}
-            >
-              <td className="px-4 py-3.5">
-                <span
-                  className={`font-[family-name:var(--font-mono)] text-sm font-bold ${
-                    row.position === 1 ? "text-[var(--fis-red)]" : "text-[var(--fis-blue)]/55"
-                  }`}
-                >
-                  {row.position}
-                </span>
-              </td>
-              <td className="px-2 py-3.5">
-                <span className="font-[family-name:var(--font-sans)] text-sm font-bold text-[var(--fis-blue)]">
-                  {row.teamName}
-                </span>
-              </td>
-              <td className="px-2 py-3.5 text-center font-[family-name:var(--font-sans)] text-xs font-semibold text-[var(--fis-blue)]/80">
-                {row.played}
-              </td>
-              <td className="px-2 py-3.5 text-center font-[family-name:var(--font-sans)] text-xs font-semibold text-[var(--fis-blue)]/80">
-                {row.won}
-              </td>
-              <td className="px-2 py-3.5 text-center font-[family-name:var(--font-sans)] text-xs font-semibold text-[var(--fis-blue)]/80">
-                {row.drawn}
-              </td>
-              <td className="px-2 py-3.5 text-center font-[family-name:var(--font-sans)] text-xs font-semibold text-[var(--fis-blue)]/80">
-                {row.lost}
-              </td>
-              {!compact && (
-                <>
-                  <td className="px-2 py-3.5 text-center font-[family-name:var(--font-sans)] text-xs font-semibold text-[var(--fis-blue)]/80">
-                    {row.goalsFor}
-                  </td>
-                  <td className="px-2 py-3.5 text-center font-[family-name:var(--font-sans)] text-xs font-semibold text-[var(--fis-blue)]/80">
-                    {row.goalsAgainst}
-                  </td>
-                </>
-              )}
-              <td className="px-2 py-3.5 text-center font-[family-name:var(--font-sans)] text-xs font-semibold">
-                <span
-                  className={
-                    row.goalDifference > 0
-                      ? "text-green-400"
-                      : row.goalDifference < 0
-                      ? "text-red-400"
-                      : "text-[var(--fis-blue)]/50"
-                  }
-                >
-                  {row.goalDifference > 0 ? "+" : ""}
-                  {row.goalDifference}
-                </span>
-              </td>
-              <td className="px-4 py-3.5 text-center font-[family-name:var(--font-sans)] text-xs font-black text-[var(--fis-blue)]">
-                {row.points}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
+export default function LeagueTable({ standings, teams = [], compact = false, label = "League standings" }: {
+  standings: Standing[]; teams?: Team[]; compact?: boolean; label?: string;
+}) {
+  const rows = compact ? standings.slice(0, 5) : standings;
+  const colours = new Map(teams.map((team) => [team.id, team.kitColour]));
+  const columns = compact ? ["P", "GD", "PTS"] : ["P", "W", "D", "L", "GF", "GA", "GD", "PTS"];
+  return <div className="table-scroll" tabIndex={0} role="region" aria-label={label}>
+    <table className={`league-table ${compact ? "compact" : ""}`}>
+      <caption className="sr-only">{label}</caption>
+      <thead><tr><th scope="col">POS</th><th scope="col">TEAM</th>{columns.map((column) => <th className="number" scope="col" key={column}>{column}</th>)}</tr></thead>
+      <tbody>{rows.map((row) => <tr key={row.teamId}>
+        <td>{row.position}</td>
+        <th scope="row"><span className="table-team"><TeamKit colour={colours.get(row.teamId)} />{row.teamName}</span></th>
+        <td className="number">{row.played}</td>
+        {!compact && <><td className="number">{row.won}</td><td className="number">{row.drawn}</td><td className="number">{row.lost}</td><td className="number">{row.goalsFor}</td><td className="number">{row.goalsAgainst}</td></>}
+        <td className="number">{row.goalDifference > 0 ? "+" : ""}{row.goalDifference}</td><td className="number points">{row.points}</td>
+      </tr>)}</tbody>
+    </table>
+  </div>;
 }

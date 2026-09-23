@@ -1,5 +1,6 @@
 import { Standing, CompetitionNight } from "./types";
 import { fixtures, standingsAdjustments, teams } from "./data";
+import type { CompetitionDataset } from "./competition-repository";
 
 /**
  * Calculate league standings from completed fixture results.
@@ -7,7 +8,8 @@ import { fixtures, standingsAdjustments, teams } from "./data";
  * Points: Win = 3, Draw = 1, Loss = 0
  * Sorting: Points DESC → Goal Difference DESC → Goals For DESC → Team Name ASC
  */
-export function calculateStandings(night: CompetitionNight, division: "A" | "B" = "A"): Standing[] {
+export function calculateStandings(night: CompetitionNight, division: "A" | "B" = "A", data: CompetitionDataset = { teams, fixtures, standingsAdjustments }): Standing[] {
+  const { teams, fixtures, standingsAdjustments } = data;
   const nightTeams = teams.filter((t) => t.night === night && t.division === division);
   const activeTeamIds = new Set(
     nightTeams.filter((team) => team.active !== false).map((team) => team.id)

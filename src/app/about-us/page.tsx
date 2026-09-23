@@ -1,31 +1,16 @@
 import Image from "next/image";
-import SectionHeading from "@/components/SectionHeading";
+import PageHero from "@/components/PageHero";
+import { champions, site } from "@/lib/site-content";
 
-export const metadata = {
-  title: "About Us",
-  description: "Learn about Futsal Indoor Soccer and its community competitions.",
-};
+export const metadata = { title: "About Us", description: "About Futsal Indoor Soccer and its Endeavour Hills competitions." };
 
 export default function AboutUsPage() {
-  return (
-    <div className="bg-[var(--fis-cream)] text-[var(--fis-blue)]">
-      <section className="relative isolate overflow-hidden border-b-4 border-[var(--fis-red)] py-24 text-white sm:py-32">
-        <Image src="/hero-bg.png" alt="Futsal players competing indoors" fill sizes="100vw" className="-z-20 object-cover" />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,23,68,0.95),rgba(0,36,105,0.72))]" />
-        <div className="fis-container">
-          <p className="fis-kicker text-white/70">Futsal Indoor Soccer</p>
-          <h1 className="mt-5 max-w-4xl text-5xl font-black uppercase tracking-[-0.05em] sm:text-7xl">About Us</h1>
-        </div>
-      </section>
-
-      <section className="fis-container py-20 sm:py-28">
-        <SectionHeading title="Competitive and social futsal" subtitle="A league built for players, teams and the wider community." />
-        <div className="mx-auto mt-12 max-w-3xl space-y-6 text-sm font-light leading-8 text-[var(--fis-ink)]">
-          <p>Futsal Indoor Soccer is an adult futsal competition designed to give teams a reliable place to compete, stay active and enjoy the game.</p>
-          <p>Our current competitions run on Monday and Wednesday nights at Endeavour Hills Leisure Centre. We aim to keep the league competitive while making it welcoming for new teams, individual players and fill-in players.</p>
-          <p>FIS is starting in Endeavour Hills, with the structure designed to grow into additional locations, nights, divisions and competition formats as demand develops.</p>
-        </div>
-      </section>
-    </div>
-  );
+  return <><PageHero title="About Us" image={site.actionPhoto} />
+    <section className="fis-container prose"><h2>Competitive and social futsal</h2>
+      <p>Futsal Indoor Soccer runs organised adult competitions for teams who want a reliable place to compete, stay active and enjoy the game.</p>
+      <p>Our Monday and Wednesday competitions at Endeavour Hills Leisure Centre bring together competitive football and a welcoming local community. FIS is designed to grow into more locations, nights, divisions and competition formats as demand develops.</p>
+      {site.communityPhoto && <figure className="about-photo"><Image src={site.communityPhoto} alt={site.communityCaption ?? "The Futsal Indoor Soccer community"} width={1200} height={700} /><figcaption>{site.communityCaption}</figcaption></figure>}
+    </section>
+    {champions.length > 0 && <section className="fis-container fis-section"><p className="eyebrow">Current champions</p><h2 className="section-title">League Winners</h2><div className="champions">{champions.map((champion) => <figure key={champion.night}><Image src={champion.image} alt={`${champion.teamName}, ${champion.caption}`} width={900} height={600} /><figcaption><strong>{champion.teamName}</strong><br />{champion.caption}</figcaption></figure>)}</div></section>}
+  </>;
 }

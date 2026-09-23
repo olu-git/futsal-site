@@ -1,233 +1,35 @@
-import Image from "next/image";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 import LeagueTable from "@/components/LeagueTable";
-import MatchCard from "@/components/MatchCard";
-import RegisterMenu from "@/components/RegisterMenu";
-import { calculateStandings } from "@/lib/standings";
-import { getUpcomingFixtures } from "@/lib/data";
-import { formatDate } from "@/lib/utils";
+import FixtureList from "@/components/FixtureList";
+import { RegisterButton } from "@/components/RegistrationProvider";
+import { competitionService } from "@/lib/competition-service";
+import { site } from "@/lib/site-content";
+import { formatDate, nightLabel, nightPath } from "@/lib/utils";
 
-const fillInsUrl = "https://www.facebook.com/groups/976002735537968/";
-
-export default function HomePage() {
-  const mondayStandings = calculateStandings("monday");
-  const wednesdayStandings = calculateStandings("wednesday");
-
-  const scheduledFixtures = [
-    ...getUpcomingFixtures("monday"),
-    ...getUpcomingFixtures("wednesday"),
-  ].sort(
-    (a, b) =>
-      a.date.localeCompare(b.date) ||
-      a.time.localeCompare(b.time) ||
-      a.court - b.court
-  );
-
-  const nextFixture = scheduledFixtures[0];
-  const upcomingFixtures = nextFixture
-    ? scheduledFixtures.filter(
-        (fixture) =>
-          fixture.night === nextFixture.night &&
-          fixture.round === nextFixture.round
-      )
-    : [];
-
-  const nextNightLabel =
-    nextFixture?.night === "wednesday" ? "Wednesday Night" : "Monday Night";
-
-  return (
-    <div>
-      <section className="relative isolate min-h-[calc(100svh-5.25rem)] overflow-hidden border-b-4 border-[var(--fis-red)] font-[family-name:var(--font-mono)] text-white">
-        <Image
-          src="/hero-bg.png"
-          alt="Competitive futsal match"
-          fill
-          priority
-          sizes="100vw"
-          className="-z-20 object-cover object-center"
-        />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,23,68,0.94)_0%,rgba(0,36,105,0.74)_55%,rgba(0,23,68,0.58)_100%)]" />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.08)_0%,rgba(0,17,50,0.58)_100%)]" />
-
-        <div className="fis-container relative flex min-h-[calc(100svh-5.25rem)] flex-col justify-center py-8 sm:py-12">
-          <div className="absolute right-4 top-5 sm:right-8 sm:top-8">
-            <RegisterMenu />
-          </div>
-
-          <div className="w-full max-w-5xl py-16 text-center sm:py-20 sm:text-left">
-            <h1 className="mx-auto max-w-5xl text-[clamp(2.2rem,8vw,7.25rem)] font-normal uppercase leading-[1.02] tracking-[-0.1em] text-white sm:mx-0">
-              Futsal Indoor Soccer
-            </h1>
-            <p className="mx-auto mt-7 max-w-xl text-[0.68rem] leading-6 text-white/80 sm:mx-0 sm:text-sm">
-              COMPETITIVE AND SOCIAL FUTSAL
-            </p>
-            <div className="mx-auto mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:mx-0 sm:flex sm:flex-wrap">
-              <HeroLink href="/monday-night">Monday Night</HeroLink>
-              <HeroLink href="/wednesday-night">Wednesday Night</HeroLink>
-              <a
-                href={fillInsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="col-span-2 inline-flex min-h-13 items-center justify-center border-2 border-[var(--fis-red)] bg-[var(--fis-red)] px-5 text-xs font-black uppercase tracking-[0.07em] text-white transition-colors hover:bg-[var(--fis-red-dark)] sm:col-span-1"
-              >
-                Fill-ins
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section className="bg-[var(--fis-cream)] py-16 sm:py-20">
-        <div className="fis-container">
-          <SectionIntro
-            kicker="Typography study"
-            title="Choose the title treatment"
-            description="Two treatments using the approved FIS type families. The Press Start 2P option is deliberately lighter and wider for a full-width arcade feel."
-          />
-          <div className="mt-10 grid gap-5 lg:grid-cols-2">
-            <div className="border-2 border-[var(--fis-blue)] bg-white p-6 sm:p-8">
-              <p className="fis-kicker text-[var(--fis-red)]">Option A · Unbounded</p>
-              <p className="mt-7 text-[clamp(2.4rem,7vw,5.8rem)] font-black uppercase leading-[0.88] tracking-[-0.08em] text-[var(--fis-blue)]">
-                Futsal Indoor Soccer
-              </p>
-              <p className="mt-6 text-xs font-light uppercase tracking-[0.08em] text-[var(--fis-blue)]">
-                COMPETITIVE AND SOCIAL FUTSAL
-              </p>
-            </div>
-            <div className="border-2 border-[var(--fis-blue)] bg-white p-6 sm:p-8">
-              <p className="fis-kicker text-[var(--fis-red)]">Option B · Press Start 2P</p>
-              <p className="mt-7 font-[family-name:var(--font-mono)] text-[clamp(1.7rem,4.5vw,4.2rem)] font-normal uppercase leading-[1.05] tracking-[-0.1em] text-[var(--fis-blue)]">
-                Futsal Indoor Soccer
-              </p>
-              <p className="mt-6 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase leading-5 tracking-[-0.04em] text-[var(--fis-blue)] sm:text-xs">
-                COMPETITIVE AND SOCIAL FUTSAL
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[var(--fis-cream)] py-20 sm:py-28">
-        <div className="fis-container">
-          <SectionIntro
-            kicker="Standings"
-            title="League Tables"
-            description="A quick look at both Endeavour Hills competitions."
-          />
-
-          <div className="mt-12 grid gap-10 xl:grid-cols-2">
-            <StandingsPreview
-              title="Monday Night"
-              href="/monday-night"
-              standings={mondayStandings}
-            />
-            <StandingsPreview
-              title="Wednesday Night"
-              href="/wednesday-night"
-              standings={wednesdayStandings}
-            />
-          </div>
-        </div>
-      </section>
-
-      {nextFixture && upcomingFixtures.length > 0 && (
-        <section className="border-y-4 border-[var(--fis-red)] bg-[var(--fis-blue)] py-20 text-white sm:py-24">
-          <div className="fis-container">
-            <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-              <SectionIntro
-                inverted
-                kicker="Next Fixtures"
-                title={nextNightLabel}
-                description={`Round ${nextFixture.round} · ${formatDate(nextFixture.date)}`}
-              />
-              <Link
-                href={`/${nextFixture.night}-night`}
-                className="inline-flex min-h-12 w-fit items-center border-2 border-white px-5 text-xs font-black uppercase tracking-[0.07em] text-white transition-colors hover:bg-white hover:text-[var(--fis-blue)]"
-              >
-                View Competition
-              </Link>
-            </div>
-
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {upcomingFixtures.map((fixture, index) => (
-                <MatchCard key={fixture.id} fixture={fixture} index={index} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+export default async function HomePage() {
+  const [monday, wednesday, nextRound] = await Promise.all([
+    competitionService.getNight("monday"), competitionService.getNight("wednesday"), competitionService.getNextRound(),
+  ]);
+  return <>
+    <div className="home-hero-wrap">
+      <PageHero title="Futsal Indoor Soccer" image={site.actionPhoto} home>
+        <div className="hero-actions"><Link href="/monday-night">Monday Night</Link><Link href="/wednesday-night">Wednesday Night</Link><a className="fill-ins" href={site.fillIns} target="_blank" rel="noopener noreferrer">Fill-ins</a></div>
+      </PageHero>
+      <div className="hero-register fis-container"><RegisterButton className="register-hero-button" /></div>
     </div>
-  );
-}
-
-function HeroLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <Link
-      href={href}
-      className="inline-flex min-h-13 items-center border-2 border-white/70 bg-[var(--fis-blue)]/65 px-5 text-xs font-black uppercase tracking-[0.07em] text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-[var(--fis-blue)]"
-    >
-      {children}
-    </Link>
-  );
-}
-
-function StandingsPreview({
-  title,
-  href,
-  standings,
-}: {
-  title: string;
-  href: string;
-  standings: ReturnType<typeof calculateStandings>;
-}) {
-  return (
-    <article>
-      <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="fis-kicker text-[var(--fis-red)]">Division A</p>
-          <h3 className="mt-2 text-2xl font-black uppercase tracking-[-0.03em] text-[var(--fis-blue)]">
-            {title}
-          </h3>
-        </div>
-        <Link
-          href={href}
-          className="text-xs font-black uppercase tracking-[0.06em] text-[var(--fis-blue)] underline decoration-[var(--fis-red)] decoration-2 underline-offset-4"
-        >
-          View full table
+    <section className="fis-section fis-container" id="standings">
+      <p className="eyebrow">Current standings</p><h2 className="section-title">League Tables</h2>
+      <div className="standings-previews">{[monday, wednesday].flatMap((competition) => competition.divisions.map(({ division, standings, teams }) => <article key={`${competition.night}-${division}`}>
+        <Link className="league-head" href={`${nightPath(competition.night)}#standings`}>
+          <h3>{nightLabel(competition.night)}{competition.divisions.length > 1 && ` / Division ${division}`}</h3><span>View Table</span>
         </Link>
-      </div>
-      <LeagueTable standings={standings} compact />
-    </article>
-  );
-}
-
-function SectionIntro({
-  kicker,
-  title,
-  description,
-  inverted = false,
-}: {
-  kicker: string;
-  title: string;
-  description: string;
-  inverted?: boolean;
-}) {
-  return (
-    <div className="max-w-3xl">
-      <p className={`fis-kicker ${inverted ? "text-white/65" : "text-[var(--fis-red)]"}`}>
-        {kicker}
-      </p>
-      <h2
-        className={`mt-3 text-4xl font-black uppercase tracking-[-0.04em] sm:text-6xl ${
-          inverted ? "text-white" : "text-[var(--fis-blue)]"
-        }`}
-      >
-        {title}
-      </h2>
-      <p className={`mt-4 text-sm font-light leading-7 ${inverted ? "text-white/65" : "text-[var(--fis-ink)]/75"}`}>
-        {description}
-      </p>
-    </div>
-  );
+        <LeagueTable standings={standings} teams={teams} compact label={`${nightLabel(competition.night)} Division ${division} top five`} />
+      </article>))}</div>
+    </section>
+    <section className="fis-section fis-container" id="next-fixtures">
+      <div className="section-head"><div><p className="eyebrow">Next scheduled night</p><h2 className="section-title">Upcoming Fixtures</h2></div>{nextRound && <Link className="text-link" href={`${nightPath(nextRound.night)}#fixtures`}>View {nextRound.night}</Link>}</div>
+      {nextRound ? <div className="next-round"><div className="round-heading"><span>{nightLabel(nextRound.night)} / Round {nextRound.round}</span><span>{formatDate(nextRound.date)}</span></div><FixtureList fixtures={nextRound.fixtures} /></div> : <p className="empty-state">No upcoming regular-season fixtures are scheduled.</p>}
+    </section>
+  </>;
 }

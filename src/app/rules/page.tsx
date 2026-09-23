@@ -1,348 +1,63 @@
-import {
-  Users,
-  Disc,
-  ArrowLeftRight,
-  Clock,
-  Play,
-  Footprints,
-  Ban,
-  Shield,
-  TriangleAlert,
-  Square,
-  Hourglass,
-  BellOff,
-  CircleX,
-  Banknote,
-  CreditCard,
-  UserX,
-  UserPlus,
-  Trophy,
-  Gavel,
-} from "lucide-react";
+import { ChevronDown, Clock, CreditCard, Disc, Gavel, Hourglass, Play, Shield, Square, Trophy, TriangleAlert, UserPlus, UserX, Users } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import SectionHeading from "@/components/SectionHeading";
+import PageHero from "@/components/PageHero";
+import { site } from "@/lib/site-content";
 
-interface RuleCard {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-  badge?: string;
-}
+export const metadata = { title: "Rules", description: "Futsal Indoor Soccer competition rules." };
+type Rule = { title: string; body: string; icon: LucideIcon };
+type RuleGroup = { heading: string; rules: Rule[] };
 
-interface RuleGroup {
-  label: string;
-  cards: RuleCard[];
-}
-
-const fifaGroups: RuleGroup[] = [
-  {
-    label: "Players & Equipment",
-    cards: [
-      {
-        icon: Users,
-        title: "The Team",
-        description:
-          "5 players per side including goalkeeper. Minimum 3 players required to start a match.",
-      },
-      {
-        icon: Disc,
-        title: "The Ball",
-        description:
-          "Size 4 futsal ball with low bounce. Standard outdoor footballs are not used.",
-      },
-      {
-        icon: ArrowLeftRight,
-        title: "Substitutions",
-        description:
-          "Rolling subs, unlimited, made on the fly during play. No stoppage required.",
-      },
-    ],
-  },
-  {
-    label: "Match Rules",
-    cards: [
-      {
-        icon: Clock,
-        title: "Match Duration",
-        description:
-          "Two 18-minute halves with a 1-minute break. The running clock is stopped only in exceptional circumstances at the referee's discretion. Deliberate time-wasting may be carded; during the final minute, the referee may stop the clock depending on its severity.",
-      },
-      {
-        icon: Play,
-        title: "Kick-off",
-        description:
-          "At kick-off, the ball must move back into the kicking team's own half. The opposing team must remain behind their yellow line until the ball is played.",
-      },
-      {
-        icon: Footprints,
-        title: "Kick-ins",
-        description:
-          "No throw-ins. Ball is kicked in from the sideline within 4 seconds. Ball must be on the line. Failure to kick in time awards possession to the opposition.",
-      },
-      {
-        icon: Ban,
-        title: "No Offside",
-        description: "There is no offside rule in futsal.",
-      },
-    ],
-  },
-  {
-    label: "Goalkeeper & Fouls",
-    cards: [
-      {
-        icon: Shield,
-        title: "Goalkeeper",
-        description:
-          "Cannot hold the ball, from a goalkick, for more than 4 seconds. Releasing late awards the opposition an indirect free kick from the top of the penalty area.",
-      },
-      {
-        icon: TriangleAlert,
-        title: "Accumulated Fouls",
-        description:
-          "Team fouls accumulate throughout the entire match and do not reset at half-time. From the fifth team foul onward, each additional foul results in a direct penalty kick with no wall.",
-      },
-      {
-        icon: Square,
-        title: "Cards",
-        description:
-          "Yellow = caution. Red = dismissal. Player may be replaced after 2 minutes of playing time or after the opposition scores — whichever comes first.",
-      },
-    ],
-  },
+const groups: { title: string; intro: string; groups: RuleGroup[] }[] = [
+  { title: "General Futsal Rules", intro: "Key rules inspired by the official FIFA Futsal Laws of the Game.", groups: [
+    { heading: "Players & Equipment", rules: [
+      { icon: Users, title: "The Team", body: "Five players per side, including the goalkeeper. A minimum of three players is required to start a match." },
+      { icon: Disc, title: "The Ball", body: "A low-bounce size 4 futsal ball is used. Standard outdoor footballs are not used." },
+      { icon: UserPlus, title: "Substitutions", body: "Rolling substitutions are unlimited and may be made during play without a stoppage." },
+    ] },
+    { heading: "Match Rules", rules: [
+      { icon: Clock, title: "Match Duration", body: "Matches have two 18-minute halves and a one-minute break. Match time is stopped only in exceptional circumstances at the referee’s discretion. Deliberate time-wasting may be carded, and the referee may stop the clock during the final minute depending on its severity." },
+      { icon: Play, title: "Kick-off", body: "At kick-off, the ball must move back into the kicking team’s own half. All opposing players have five seconds to return behind the yellow line in their half. If they are not behind the line when the referee completes the countdown, the team taking the kick-off receives an indirect free kick." },
+      { icon: Disc, title: "Kick-ins", body: "There are no throw-ins. The ball must be on the sideline and kicked in within four seconds. Failing to restart in time awards possession to the opposition." },
+      { icon: Play, title: "No Offside", body: "There is no offside rule in futsal." },
+    ] },
+    { heading: "Goalkeeper & Fouls", rules: [
+      { icon: Shield, title: "Goalkeeper", body: "From a goal clearance, the goalkeeper cannot hold the ball for more than four seconds. Releasing it late awards the opposition an indirect free kick from the top of the penalty area." },
+      { icon: TriangleAlert, title: "Accumulated Fouls", body: "Team fouls accumulate throughout the match and do not reset at half-time. From the fifth team foul onward, each additional foul results in a direct penalty kick with no wall." },
+      { icon: Square, title: "Cards", body: "A yellow card is a caution. A red card is a dismissal. The dismissed player may be replaced after two minutes of playing time or after the opposition scores, whichever occurs first." },
+    ] },
+  ] },
+  { title: "League Rules", intro: "Rules that apply to all Endeavour Hills Futsal competitions.", groups: [
+    { heading: "Before the Match", rules: [
+      { icon: CreditCard, title: "Payment Before Kick-off", body: "All match payments must be made before the game begins." },
+      { icon: Hourglass, title: "Late Penalty", body: "Teams must be ready at their scheduled kick-off time. A team concedes one goal for every two minutes it is late." },
+      { icon: TriangleAlert, title: "Absence & Forfeit", body: "Teams must notify FIS administrators at least 24 hours before kick-off if they cannot attend. Failure to provide notice results in an automatic forfeit, and the team must either pay its weekly match fee or forfeit its bond." },
+      { icon: UserX, title: "Forfeits", body: "Forfeits are recorded as 5-0 losses. A team that does not arrive before half-time forfeits. A team also forfeits if it uses a player from another team when it already has five players available." },
+      { icon: Trophy, title: "Opponent No-show", body: "If your scheduled opponent does not attend, your team wins 5-0. You may still play and pay the full match fee, or choose not to play." },
+      { icon: Shield, title: "Team Bond", body: "Teams cannot play unless FIS holds an active bond for them. Venue and staff costs still apply when a team does not attend, and a forfeited bond must be replaced before the team can play again." },
+    ] },
+    { heading: "During the Match", rules: [
+      { icon: UserX, title: "No Tackle From Behind", body: "Players cannot challenge for the ball from behind, even when the ball is won cleanly. This is called as a foul." },
+      { icon: UserPlus, title: "Fill-in Players", body: "During regular-season matches, fill-ins from another team are allowed only when a team is short. The team concedes one goal for each fill-in, may field a maximum of five players and cannot use substitutes. Fill-ins must not be used to significantly strengthen a team." },
+    ] },
+    { heading: "Discipline", rules: [
+      { icon: Gavel, title: "Suspensions", body: "A player shown a red card is dismissed for the remainder of the match. The team may replace them after two minutes or when the opposition scores. Carry-over suspensions vary according to the severity of the offence." },
+    ] },
+  ] },
+  { title: "Knockout & Finals Rules", intro: "Additional rules for knockout-stage matches.", groups: [
+    { heading: "Eligibility & Attendance", rules: [
+      { icon: UserPlus, title: "Player Eligibility", body: "Players must have played at least five regular-season games for that team. Fill-ins from other teams cannot be used. A team without enough eligible players must contact FIS privately; this may result in a forfeit. Final eligibility decisions are made by the referee and FIS administrators." },
+      { icon: UserX, title: "Knockout No-shows", body: "The regular no-show, forfeit and bond rules also apply during knockout matches." },
+      { icon: Gavel, title: "Referee Authority", body: "The referee has final say on match decisions and discretion over timekeeping, including whether the clock is stopped in exceptional circumstances." },
+    ] },
+    { heading: "Deciding Drawn Matches", rules: [
+      { icon: Clock, title: "Golden Goal Extra Time", body: "A knockout match drawn at full-time moves to three minutes of Golden Goal extra time. The referee determines which team kicks off, and the first goal ends the match." },
+      { icon: Disc, title: "Penalty Shootouts", body: "If the match remains tied, each team takes three penalties alternately. Only players on the court when the shootout begins may take penalties. If scores remain tied, sudden death continues with one penalty per team until one scores and the other misses. No eligible player may take a second penalty until every other eligible teammate has taken one." },
+    ] },
+  ] },
 ];
-
-const leagueGroups: RuleGroup[] = [
-  {
-    label: "Before the Match",
-    cards: [
-      {
-        icon: CreditCard,
-        title: "Payment Before Kick-Off",
-        description:
-          "All match payments must be made before the game begins. This keeps league administration manageable and ensures fixtures can run smoothly for every team.",
-        badge: "Required",
-      },
-      {
-        icon: Hourglass,
-        title: "Late Penalty",
-        description:
-          "Teams must be ready at their scheduled kick-off time. A team concedes 1 goal for every 2 minutes it is late.",
-      },
-      {
-        icon: BellOff,
-        title: "Absence & Forfeit",
-        description:
-          "Teams must notify Futsal Admin staff at least 24 hours before kick-off if they cannot attend. Failure to provide notice results in an automatic forfeit, and the team must either pay its weekly match fee or forfeit its bond.",
-      },
-      {
-        icon: CircleX,
-        title: "Forfeits",
-        description:
-          "Forfeits are recorded as 5-0 losses. Teams that do not arrive before half-time automatically forfeit the game. A team also forfeits if it uses a player from another team when it already has five players available.",
-      },
-      {
-        icon: Trophy,
-        title: "Opponent No-Show",
-        description:
-          "If your scheduled opponent does not show up, your team automatically wins 5-0. You may choose to still play and pay the full match fee, or choose not to play at all.",
-      },
-      {
-        icon: Banknote,
-        title: "Team Bond",
-        description:
-          "Teams cannot play unless Futsal Admin holds an active bond for them. Venue and staff costs still apply when a team does not attend, and any forfeited bond must be replaced before the team can play again.",
-      },
-    ],
-  },
-  {
-    label: "During the Match",
-    cards: [
-      {
-        icon: UserX,
-        title: "No Tackle From Behind",
-        description:
-          "Players cannot challenge for the ball from behind — even if the ball is won cleanly. This will be called as a foul.",
-        badge: "League Rule",
-      },
-      {
-        icon: UserPlus,
-        title: "Fill-in Players",
-        description:
-          "During regular-season matches, fill-ins from another team are allowed only when a team is short. The team concedes 1 goal for each fill-in used, may field a maximum of 5 players, and cannot use substitutes. Fill-ins must not be used to significantly strengthen the team.",
-      },
-    ],
-  },
-  {
-    label: "Discipline",
-    cards: [
-      {
-        icon: Gavel,
-        title: "Suspensions",
-        description:
-          "In-game red card: player is out for the remainder of the match; team may replace after 2 minutes or when opposition scores. Between matches: carry-over bans vary in length depending on the severity of the offence.",
-      },
-    ],
-  },
-];
-
-const knockoutGroups: RuleGroup[] = [
-  {
-    label: "Fees & Eligibility",
-    cards: [
-      {
-        icon: Banknote,
-        title: "Knockout Match Fees",
-        description:
-          "Each knockout match costs $65 per team and must be paid before kick-off. The Semi Finals and Grand Final are played on the same night; a team that advances must pay a separate $65 fee for each match.",
-        badge: "$65 per match",
-      },
-      {
-        icon: UserPlus,
-        title: "Player Eligibility",
-        description:
-          "Players must have played at least 5 regular-season games for that team. Fill-ins from other teams cannot be used. A team without enough eligible players must contact league admin privately; this may result in an automatic forfeit. Final eligibility decisions are made by the referee and league admin team.",
-      },
-      {
-        icon: CircleX,
-        title: "Knockout No-Shows",
-        description:
-          "Existing no-show rules also apply during knockout matches. Teams may lose their bond for a no-show or late cancellation under the Absence & Forfeit and Team Bond rules above.",
-      },
-    ],
-  },
-  {
-    label: "Deciding Drawn Matches",
-    cards: [
-      {
-        icon: Clock,
-        title: "Golden Goal Extra Time",
-        description:
-          "If a knockout match is drawn at full-time, 3 minutes of Golden Goal extra time is played. The referee determines which team kicks off, and the first goal scored immediately ends the match.",
-      },
-      {
-        icon: Disc,
-        title: "Penalty Shootouts",
-        description:
-          "If still tied, each team takes 3 penalties alternately. Only players on the court when the shootout begins may take penalties. If scores remain tied, sudden death continues with one penalty per team until one scores and the other misses. No eligible player may take a second penalty until every other eligible teammate has taken one.",
-      },
-    ],
-  },
-];
-
-function RuleCardComponent({
-  card,
-}: {
-  card: RuleCard;
-}) {
-  const Icon = card.icon;
-  return (
-    <div className="rounded-lg border border-white/10 bg-[#1A1A1A] p-5 flex flex-col gap-3">
-      <div className="flex items-start justify-between gap-2">
-        <div className="w-9 h-9 rounded-md bg-red-500/10 flex items-center justify-center shrink-0">
-          <Icon className="w-5 h-5 text-red-500" />
-        </div>
-        {card.badge && (
-          <span className="text-[10px] font-[family-name:var(--font-geist-mono)] uppercase tracking-wider bg-blue-500/10 text-blue-400 rounded px-2 py-0.5 leading-tight mt-1">
-            {card.badge}
-          </span>
-        )}
-      </div>
-      <div>
-        <p className="text-sm font-semibold text-white mb-1">{card.title}</p>
-        <p className="text-sm text-white/55 leading-relaxed font-[family-name:var(--font-sans)]">
-          {card.description}
-        </p>
-      </div>
-    </div>
-  );
-}
-
-function RuleGroupSection({ group }: { group: RuleGroup }) {
-  return (
-    <div className="mb-10 last:mb-0">
-      <p className="font-[family-name:var(--font-geist-mono)] text-xs tracking-widest text-white/35 uppercase mb-4">
-        {group.label}
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {group.cards.map((card) => (
-          <RuleCardComponent key={card.title} card={card} />
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function RulesPage() {
-  return (
-    <div>
-      {/* Hero */}
-      <section className="relative overflow-hidden min-h-[360px] flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/hero-bg.png')" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0AEE] via-[#0A0A0A99] to-[#0A0A0ACC]" />
-
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <div className="flex flex-col items-center">
-            <h1
-              className="font-[family-name:var(--font-heading)] text-6xl sm:text-7xl lg:text-8xl uppercase tracking-wider text-white leading-none"
-            >
-              Rules &amp; Regulations
-            </h1>
-            <p className="mt-5 text-white/50 text-sm font-[family-name:var(--font-geist-mono)] max-w-md">
-              Based on official FIFA Futsal rules, with some league-specific variations.
-            </p>
-          </div>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600" />
-      </section>
-
-      {/* General Futsal Rules */}
-      <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-14">
-            <SectionHeading
-              title="General Futsal Rules"
-              subtitle="Key rules inspired by the official FIFA Futsal Laws of the Game"
-            />
-          </div>
-          {fifaGroups.map((group) => (
-            <RuleGroupSection key={group.label} group={group} />
-          ))}
-        </div>
-      </section>
-
-      {/* League Rules */}
-      <section className="bg-[#111111] py-20 sm:py-[80px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-14">
-            <SectionHeading
-              title="League Rules"
-              subtitle="Specific rules that apply to all Endeavour Hills Futsal competitions"
-            />
-          </div>
-          {leagueGroups.map((group) => (
-            <RuleGroupSection key={group.label} group={group} />
-          ))}
-        </div>
-      </section>
-
-      {/* Knockout & Finals Rules */}
-      <section className="bg-[#0A0A0A] py-20 sm:py-[80px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-14">
-            <SectionHeading
-              title="Knockout & Finals Rules"
-              subtitle="Additional rules for every knockout-stage match"
-            />
-          </div>
-          {knockoutGroups.map((group) => (
-            <RuleGroupSection key={group.label} group={group} />
-          ))}
-        </div>
-      </section>
-    </div>
-  );
+  return <><PageHero title="Rules & Regulations" image={site.actionPhoto}><p>Official futsal principles with FIS competition rules.</p></PageHero>
+    {groups.map((section) => <section className="fis-section fis-container" key={section.title}><h2 className="section-title">{section.title}</h2><p className="body-copy">{section.intro}</p><div className="rules-groups">{section.groups.map((group) => <div className="rule-group" key={group.heading}><h3>{group.heading}</h3><div className="rules-grid">{group.rules.map(({ icon: Icon, title, body }, index) => <details className="rule-card" key={title} open={index === 0}><summary><Icon aria-hidden="true" /><span>{title}</span><ChevronDown className="rule-chevron" aria-hidden="true" /></summary><p>{body}</p></details>)}</div></div>)}</div></section>)}
+  </>;
 }
