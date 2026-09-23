@@ -1,24 +1,24 @@
 import { ChevronDown, Clock, CreditCard, Disc, Gavel, Hourglass, Play, Shield, Square, Trophy, TriangleAlert, UserPlus, UserX, Users } from "lucide-react";
+import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import { site } from "@/lib/site-content";
 
 export const metadata = { title: "Rules", description: "Futsal Indoor Soccer competition rules." };
-type Rule = { title: string; body: string; icon: LucideIcon };
+type Rule = { title: string; body: string; icon?: LucideIcon; image?: string };
 type RuleGroup = { heading: string; rules: Rule[] };
 
 const groups: { title: string; intro: string; groups: RuleGroup[] }[] = [
   { title: "General Futsal Rules", intro: "Key rules inspired by the official FIFA Futsal Laws of the Game.", groups: [
     { heading: "Players & Equipment", rules: [
+      { image: "/logos/FIS-ball-rule.svg", title: "The Ball", body: "A low-bounce size 4 futsal ball is used. Standard outdoor footballs are not used." },
       { icon: Users, title: "The Team", body: "Five players per side, including the goalkeeper. A minimum of three players is required to start a match." },
-      { icon: Disc, title: "The Ball", body: "A low-bounce size 4 futsal ball is used. Standard outdoor footballs are not used." },
-      { icon: UserPlus, title: "Substitutions", body: "Rolling substitutions are unlimited and may be made during play without a stoppage." },
+      { icon: UserPlus, title: "Substitutions", body: "Rolling substitutions are unlimited and may be made during play without a stoppage. Teams must notify the referee of any goalkeeper substitutions." },
     ] },
     { heading: "Match Rules", rules: [
       { icon: Clock, title: "Match Duration", body: "Matches have two 18-minute halves and a one-minute break. Match time is stopped only in exceptional circumstances at the referee’s discretion. Deliberate time-wasting may be carded, and the referee may stop the clock during the final minute depending on its severity." },
       { icon: Play, title: "Kick-off", body: "At kick-off, the ball must move back into the kicking team’s own half. All opposing players have five seconds to return behind the yellow line in their half. If they are not behind the line when the referee completes the countdown, the team taking the kick-off receives an indirect free kick." },
       { icon: Disc, title: "Kick-ins", body: "There are no throw-ins. The ball must be on the sideline and kicked in within four seconds. Failing to restart in time awards possession to the opposition." },
-      { icon: Play, title: "No Offside", body: "There is no offside rule in futsal." },
     ] },
     { heading: "Goalkeeper & Fouls", rules: [
       { icon: Shield, title: "Goalkeeper", body: "From a goal clearance, the goalkeeper cannot hold the ball for more than four seconds. Releasing it late awards the opposition an indirect free kick from the top of the penalty area." },
@@ -58,6 +58,6 @@ const groups: { title: string; intro: string; groups: RuleGroup[] }[] = [
 
 export default function RulesPage() {
   return <><PageHero title="Rules & Regulations" image={site.actionPhoto}><p>Official futsal principles with FIS competition rules.</p></PageHero>
-    {groups.map((section) => <section className="fis-section fis-container" key={section.title}><h2 className="section-title">{section.title}</h2><p className="body-copy">{section.intro}</p><div className="rules-groups">{section.groups.map((group) => <div className="rule-group" key={group.heading}><h3>{group.heading}</h3><div className="rules-grid">{group.rules.map(({ icon: Icon, title, body }, index) => <details className="rule-card" key={title} open={index === 0}><summary><Icon aria-hidden="true" /><span>{title}</span><ChevronDown className="rule-chevron" aria-hidden="true" /></summary><p>{body}</p></details>)}</div></div>)}</div></section>)}
+    {groups.map((section) => <section className="rules-section fis-section fis-container" key={section.title}><h2 className="section-title">{section.title}</h2><p className="body-copy">{section.intro}</p><div className="rules-groups">{section.groups.map((group) => <div className="rule-group" key={group.heading}><h3>{group.heading}</h3><div className="rules-grid">{group.rules.map(({ icon: Icon, image, title, body }) => <details className="rule-card" key={title} open><summary>{image ? <Image src={image} alt="" width={20} height={20} aria-hidden="true" /> : Icon && <Icon aria-hidden="true" />}<span>{title}</span><ChevronDown className="rule-chevron" aria-hidden="true" /></summary><p>{body}</p></details>)}</div></div>)}</div></section>)}
   </>;
 }

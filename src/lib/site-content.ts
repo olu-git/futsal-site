@@ -9,10 +9,10 @@ export const site = {
   fillIns: "https://www.facebook.com/groups/1584889639197944",
   logo: "/logos/FIS-01-Primary-Black.svg",
   actionPhoto: "/hero-bg.png",
-  // Awaiting the approved community image and FIS-04 favicon assets.
+  // Awaiting the approved community image asset.
   communityPhoto: null as string | null,
   communityCaption: null as string | null,
-  favicon: null as string | null,
+  favicon: "/logos/FIS-04-Secondary-Profile-Colour.png",
   socials: [
     { name: "Facebook", href: "https://www.facebook.com/futsalis/" },
     { name: "Instagram", href: "https://www.instagram.com/futsalindoorsoccer/" },

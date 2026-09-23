@@ -189,12 +189,15 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .about-photo figcaption { margin-top: 10px; font-size: 11px; line-height: 1.8; }
 .champions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px; }
 .rules-groups { display: grid; gap: 30px; }
+.rules-section > .section-title { margin: 0 0 8px; }
+.rules-section > .body-copy { margin: 0; padding-bottom: 34px; line-height: 1.7; }
 .rule-group h3 { font: 10px/1.9 var(--font-mono); text-transform: uppercase; margin-bottom: 16px; }
 .rules-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; align-items: start; }
 .rule-card { border: 1px solid #a2b1c5; background: var(--fis-cream-light); }
 .rule-card summary { list-style: none; min-height: 64px; display: flex; align-items: center; gap: 14px; padding: 18px; font-size: 12px; line-height: 1.8; font-weight: 600; text-transform: uppercase; }
 .rule-card summary::-webkit-details-marker { display: none; }
 .rule-card summary svg { color: var(--fis-red-dark); width: 20px; flex: 0 0 20px; }
+.rule-card summary img { width: 20px; height: 20px; flex: 0 0 20px; }
 .rule-card summary .rule-chevron { margin-left: auto; }
 .rule-card[open] .rule-chevron { transform: rotate(180deg); }
 .rule-card p { padding: 0 18px 20px; font-size: 13px; line-height: 2; font-weight: 200; }
