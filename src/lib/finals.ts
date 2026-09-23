@@ -96,8 +96,8 @@ const wednesdayRoundOf16: FinalsMatch[] = [
   { id: "r16-m4", round: "R16", label: "M4", week: 0, time: "19:40", court: 2, a: seed(5), b: seed(12) },
   { id: "r16-m5", round: "R16", label: "M5", week: 0, time: "20:20", court: 1, a: seed(2), b: seed(15) },
   { id: "r16-m6", round: "R16", label: "M6", week: 0, time: "20:20", court: 2, a: seed(7), b: seed(10) },
-  { id: "r16-m7", round: "R16", label: "M7", week: 0, time: "21:00", court: 1, a: seed(3), b: seed(14) },
-  { id: "r16-m8", round: "R16", label: "M8", week: 0, time: "21:00", court: 2, a: seed(6), b: seed(11) },
+  { id: "r16-m7", round: "R16", label: "M7", week: 0, time: "21:00", court: 1, a: seed(3), b: seed(11) },
+  { id: "r16-m8", round: "R16", label: "M8", week: 0, time: "21:00", court: 2, a: seed(6), b: seed(14) },
 ];
 
 export const finalsDates: Record<CompetitionNight, string[]> = {
