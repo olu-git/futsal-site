@@ -67,9 +67,9 @@ const mondayGradingGames: FinalsMatch[] = [
 
 const wednesdayGradingGames: FinalsMatch[] = [
   { id: "grading-1", round: "Grading", label: "G1", week: 1, time: "19:00", court: 1, a: loser("r16-m1"), b: loser("r16-m4") },
-  { id: "grading-2", round: "Grading", label: "G2", week: 1, time: "19:00", court: 2, a: loser("r16-m2"), b: loser("r16-m6") },
-  { id: "grading-3", round: "Grading", label: "G3", week: 1, time: "21:00", court: 1, a: loser("r16-m5"), b: loser("r16-m3") },
-  { id: "grading-4", round: "Grading", label: "G4", week: 1, time: "21:00", court: 2, a: loser("r16-m8"), b: loser("r16-m7") },
+  { id: "grading-2", round: "Grading", label: "G2", week: 1, time: "21:00", court: 1, a: loser("r16-m7"), b: loser("r16-m2") },
+  { id: "grading-3", round: "Grading", label: "G3", week: 1, time: "19:00", court: 2, a: loser("r16-m5"), b: loser("r16-m3") },
+  { id: "grading-4", round: "Grading", label: "G4", week: 1, time: "21:00", court: 2, a: loser("r16-m6"), b: loser("r16-m8") },
 ];
 
 const finalRoundsTemplate: FinalsMatch[] = [
