@@ -53,7 +53,7 @@ const mondayQuarterFinals: FinalsMatch[] = [
 
 const wednesdayQuarterFinals: FinalsMatch[] = [
   { id: "qf-1", round: "QF", label: "QF1", week: 1, time: "19:40", court: 1, a: winner("r16-m1"), b: winner("r16-m2") },
-  { id: "qf-2", round: "QF", label: "QF2", week: 1, time: "20:20", court: 2, a: winner("r16-m3"), b: winner("r16-m4") },
+  { id: "qf-2", round: "QF", label: "QF2", week: 1, time: "19:40", court: 2, a: winner("r16-m3"), b: winner("r16-m4") },
   { id: "qf-3", round: "QF", label: "QF3", week: 1, time: "20:20", court: 1, a: winner("r16-m5"), b: winner("r16-m6") },
   { id: "qf-4", round: "QF", label: "QF4", week: 1, time: "20:20", court: 2, a: winner("r16-m7"), b: winner("r16-m8") },
 ];
