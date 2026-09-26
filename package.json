@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "season:import:validate": "tsx scripts/generate-current-season-import.ts --validate-only",
+    "season:import:generate": "tsx scripts/generate-current-season-import.ts",
+    "season:import:check": "tsx scripts/check-current-season-import.ts",
     "finals:check": "tsx scripts/check-finals.ts",
     "finals:freeze": "tsx scripts/freeze-finals-seeds.ts"
   },
