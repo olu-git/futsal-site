@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { site } from "@/lib/site-content";
 
 export default function Footer() {
@@ -10,7 +10,11 @@ export default function Footer() {
         ["/", "Home"], ["/monday-night", "Monday"], ["/wednesday-night", "Wednesday"], ["/rules", "Rules"], ["/contact", "Contact Us"], ["/about-us", "About Us"],
       ].map(([href, label]) => <Link href={href} key={href}>{label}</Link>)}</nav>
       <nav aria-label="Legal"><h2>Legal</h2><Link href="/privacy">Privacy Policy</Link><Link href="/terms">Terms &amp; Conditions</Link></nav>
-      <div><h2>Contact</h2><a href={site.directions} target="_blank" rel="noopener noreferrer">{site.venue}<br />{site.address}</a><a href={site.telephone}>{site.phone}</a><a href={`mailto:${site.email}`}>{site.email}</a></div>
+      <div className="footer-contact"><h2>Contact</h2>
+        <a href={`mailto:${site.email}`}><span className="footer-contact-icon"><Mail aria-hidden="true" /></span><span>{site.email}</span></a>
+        <a href={site.telephone}><span className="footer-contact-icon"><Phone aria-hidden="true" /></span><span>{site.phone}</span></a>
+        <a href={site.directions} target="_blank" rel="noopener noreferrer"><span className="footer-contact-icon"><MapPin aria-hidden="true" /></span><span>{site.venue}<br />{site.address}</span></a>
+      </div>
     </div>
     <nav className="social-links" aria-label="Social media">{site.socials.map(({ name, href }) => <a key={name} href={href} aria-label={name} title={name} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined}><SocialIcon name={name} /></a>)}</nav>
     <div className="footer-bottom"><p>&copy; 2026 Futsal Indoor Soccer. All rights reserved.</p><Link href="/" aria-label="Futsal Indoor Soccer home"><Image src={site.logo} alt="Futsal Indoor Soccer" width={106} height={44} /></Link></div>

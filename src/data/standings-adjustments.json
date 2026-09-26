@@ -504,10 +504,10 @@
     "note": "Administrative 5-0 loss for missed Round 24 fixture"
   },
   {
-    "id": "mon-admin-buckle-city-final-record",
+    "id": "mon-admin-declans-team-final-record",
     "night": "monday",
     "division": "A",
-    "teamId": "mon-xaywan",
+    "teamId": "mon-declans-team",
     "played": 24,
     "won": 5,
     "drawn": 1,
@@ -515,7 +515,7 @@
     "goalsFor": 16,
     "goalsAgainst": 54,
     "points": 16,
-    "note": "Administrative final-season record"
+    "note": "Administrative final-season record inherited by Declan's Team"
   },
   {
     "id": "mon-admin-bunyip-final-record",
