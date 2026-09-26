@@ -7,14 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "tsx --test tests/*.test.ts",
     "season:import:validate": "tsx scripts/generate-current-season-import.ts --validate-only",
     "season:import:generate": "tsx scripts/generate-current-season-import.ts",
     "season:import:check": "tsx scripts/check-current-season-import.ts",
+    "test:admin-results": "tsx --test tests/admin-results.test.ts",
     "finals:check": "tsx scripts/check-finals.ts",
     "finals:freeze": "tsx scripts/freeze-finals-seeds.ts"
   },
   "dependencies": {
-    "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.117.2",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.7.0",

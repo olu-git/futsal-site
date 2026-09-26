@@ -1,15 +1,32 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { useRouter } from "next/navigation";
+import { FormEvent, useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/browser";
+import { safeAdminReturnPath } from "@/lib/admin/auth";
 
 const INVALID_CREDENTIALS = "The email or password is incorrect.";
 
 export default function LoginForm() {
-  const router = useRouter();
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [checking, setChecking] = useState(true);
+
+  useEffect(() => {
+    let active = true;
+    async function checkExistingSession() {
+      try {
+        const supabase = createClient();
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session || !active) return;
+        const { data: isAdmin } = await supabase.rpc("is_fis_admin");
+        if (isAdmin && active) window.location.replace(getReturnPath());
+      } finally {
+        if (active) setChecking(false);
+      }
+    }
+    void checkExistingSession();
+    return () => { active = false; };
+  }, []);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -42,8 +59,7 @@ export default function LoginForm() {
         return;
       }
 
-      router.replace("/admin");
-      router.refresh();
+      window.location.replace(getReturnPath());
     } catch {
       setError("Unable to sign in right now. Check the local Supabase configuration.");
     } finally {
@@ -74,9 +90,14 @@ export default function LoginForm() {
         />
       </div>
       {error ? <p className="admin-auth-error" role="alert">{error}</p> : null}
-      <button className="admin-submit" type="submit" disabled={submitting}>
-        {submitting ? "Signing in..." : "Submit"}
+      <button className="admin-submit" type="submit" disabled={submitting || checking}>
+        {checking ? "Checking session..." : submitting ? "Signing in..." : "Submit"}
       </button>
     </form>
   );
+}
+
+function getReturnPath() {
+  const params = new URLSearchParams(window.location.search);
+  return safeAdminReturnPath(params.get("returnTo"));
 }
