@@ -37,7 +37,15 @@ The complete package was verified successfully in `fis-fixture-test`:
 - Concurrency cleanup returned all checks true, and the final zero-record check returned all counts zero and all checks true.
 - The disposable marker, disposable Auth user and administrator membership remained intact.
 
-These results verify the disposable installation only. The team-profile migration remains unapplied to production.
+These results verified the disposable installation before production application.
+
+## Completed production verification
+
+- The read-only production preflight passed with the expected baseline of 34 teams, zero kick-off preferences and zero fixture notes.
+- The reviewed migration was applied successfully and every production postflight check returned true.
+- A controlled save-and-restore test used the Wednesday AFG profile. A temporary private note survived reload and was then removed, restoring the original business state: name `AFG`, active status, kit colour `#2F80ED`, zero preferences and no fixture note.
+- The tested profile advanced from `profile_version = 1` to `3`, leaving exactly two expected `team_profile` audit records. The separate AFG profile in the other competition remained at version 1 and was untouched.
+- Snapshot automation remained inactive throughout this verification.
 
 ## Production application
 

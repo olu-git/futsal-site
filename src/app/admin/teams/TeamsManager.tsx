@@ -7,7 +7,7 @@ import { consequentialTeamChanges,filterAdminTeams,validateTeamDraft,type AdminT
 import { saveTeamProfile } from "@/lib/admin/teams-actions";
 import type { TeamsWorkspace } from "@/lib/admin/teams-data";
 
-const presets=[{name:"White",value:"#FFFFFF"},{name:"Black",value:"#111111"},{name:"Blue",value:"#1E66E5"},{name:"Light blue",value:"#62C5E8"},{name:"Red",value:"#ED1C24"},{name:"Yellow",value:"#F2D34F"},{name:"Green",value:"#1F9D55"},{name:"Orange",value:"#F28C28"}];
+const presets=[{name:"White",value:"#FFFFFF"},{name:"Black",value:"#111111"},{name:"Blue",value:"#1E66E5"},{name:"Light blue",value:"#62C5E8"},{name:"Red",value:"#ED1C24"},{name:"Yellow",value:"#F2D34F"},{name:"Green",value:"#1F9D55"}];
 const toDraft=(team:AdminTeam):TeamDraft=>({name:team.name,status:team.status,competitionSeasonId:team.competitionSeasonId,kitColour:team.kitColour??"",note:team.note,preferences:team.preferences.map(p=>({...p}))});
 
 export default function TeamsManager({workspace,onChanged}:{workspace:TeamsWorkspace;onChanged():Promise<void>}){

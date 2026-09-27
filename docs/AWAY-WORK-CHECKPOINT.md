@@ -25,6 +25,8 @@
 - Disposable testing then exposed PostgreSQL `42702` in `ON CONFLICT (team_id)`: the RPC's `RETURNS TABLE` output named `team_id` collided with the conflict-inference column. The migration now targets the named `team_fixture_notes_pkey` constraint, and a guarded disposable function-only patch preserves its signature, owner, grants, `SECURITY DEFINER` and safe `search_path`. Production never received this team-profile migration.
 - The complete corrected package passed in `fis-fixture-test`: schema preflight all true; RPC ambiguity patch all nine checks true; functional verifier true; functional and final zero-record checks all zero/true; and concurrency preparation began at `profile_version = 1`.
 - In the simultaneous concurrency test, Session A committed, Session B waited and was rejected with SQLSTATE `40001` (`Stale team profile: changed since the editor loaded it`). Verification returned `one_save_committed = true`, `session_a_won = true` and `one_profile_audit = true`; cleanup returned all true while preserving the disposable marker, Auth user and administrator membership.
+- Production preflight subsequently passed at the 34-team baseline with zero preferences and zero fixture notes. The team-profile migration was applied and every production postflight check returned true.
+- A controlled Wednesday AFG save-and-restore test passed: the temporary note survived reload and was removed, all original business values were restored, the other competition's AFG record was untouched, and exactly two expected profile audit records remain. Snapshot automation stayed inactive.
 
 ## Files changed
 
@@ -70,6 +72,6 @@
 
 ## Exact next action
 
-The disposable package is fully verified. Before any future production application, follow the separate read-only preflight, reviewed migration and read-only postflight sequence in `docs/TEAM-PROFILE-RPC-MIGRATION.md`. The team-profile migration is not marked as applied to production.
+The disposable and production team-profile verification is complete. Continue with the next reviewed admin module; do not activate snapshot automation or alter competition JSON.
 
-Supabase was not accessed or mutated during this task. The new migration was not applied. Competition, finals, grading and knockout JSON was unchanged. Nothing was committed, pushed, merged or deployed.
+Production Supabase was not accessed during this local follow-up. The previously completed migration and controlled save-and-restore are recorded above. Competition, finals, grading and knockout JSON was unchanged, and snapshot automation remains inactive.
