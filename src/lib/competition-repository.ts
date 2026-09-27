@@ -1,7 +1,4 @@
-import teamsData from "@/data/teams.json";
-import mondayData from "@/data/monday-fixtures.json";
-import wednesdayData from "@/data/wednesday-fixtures.json";
-import adjustmentsData from "@/data/standings-adjustments.json";
+import snapshotData from "@/data/public-competition-snapshot.json";
 import finalsData from "@/data/season-2026-s1.json";
 import type { Team, Fixture, StandingAdjustment } from "./types";
 import type { FinalsSeasonData } from "./finals";
@@ -19,9 +16,9 @@ export interface CompetitionRepository {
 
 // Legacy calculation scripts share this snapshot with the async public service.
 export const jsonCompetitionData: CompetitionDataset = {
-  teams: teamsData as Team[],
-  fixtures: [...mondayData, ...wednesdayData] as Fixture[],
-  standingsAdjustments: adjustmentsData as StandingAdjustment[],
+  teams: snapshotData.data.teams as Team[],
+  fixtures: snapshotData.data.fixtures as Fixture[],
+  standingsAdjustments: snapshotData.data.standingsAdjustments as StandingAdjustment[],
 };
 
 export const competitionRepository: CompetitionRepository = {

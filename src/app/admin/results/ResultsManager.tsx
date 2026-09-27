@@ -10,6 +10,7 @@ import { compareAdminFixtures } from "@/lib/admin/results-data";
 import type { ResultInput, ResultIntent, Side } from "@/lib/admin/results-rules";
 import { mutateResult } from "./actions";
 import { shouldCloseResultPanel, transitionResultPanel } from "@/lib/admin/mobile-interactions";
+import { invokeSnapshotRefresh, refreshAfterPublication, type RefreshOutcome } from "@/lib/admin/snapshot-refresh";
 
 type StatusFilter = "all" | "none" | "draft" | "pending_review" | "published";
 type FormState = ResultInput & { isCorrection: boolean };
@@ -42,6 +43,8 @@ export default function ResultsManager({ fixtures, onChanged }: { fixtures: Admi
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [form, setForm] = useState<FormState | null>(null);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
+  const [refreshStatus, setRefreshStatus] = useState<RefreshOutcome | "triggering" | "idle">("idle");
+  const refreshInFlight = useRef(false);
   const [pending, startTransition] = useTransition();
   const [isPhone, setIsPhone] = useState(false);
   const panelRef = useRef<HTMLElement>(null);
@@ -128,6 +131,14 @@ export default function ResultsManager({ fixtures, onChanged }: { fixtures: Admi
     setForm({ ...form, forfeitSide: side, homeScore: side === "home" ? 0 : side === "away" ? 5 : form.homeScore,
       awayScore: side === "home" ? 5 : side === "away" ? 0 : form.awayScore, forfeitExceptionReason: "" });
   }
+  async function queueSnapshotRefresh() {
+    if (refreshInFlight.current) return;
+    refreshInFlight.current = true;
+    setRefreshStatus("triggering");
+    const outcome = await refreshAfterPublication("publish", { ok: true, status: "published" }, invokeSnapshotRefresh);
+    setRefreshStatus(outcome);
+    refreshInFlight.current = false;
+  }
   function submit(intent: ResultIntent) {
     if (!form) return;
     if (intent === "publish" && !window.confirm("Publish this result now? It will immediately become the public result.")) return;
@@ -135,9 +146,12 @@ export default function ResultsManager({ fixtures, onChanged }: { fixtures: Admi
     startTransition(async () => {
       const input: ResultInput = form;
       const response = await mutateResult(input, intent);
-      setMessage({ type: response.ok ? "success" : "error", text: response.message });
+      setMessage({ type: response.ok ? "success" : "error", text: response.ok && intent === "publish" ? "Result published. Live data is updated." : response.message });
       if (response.ok) {
-        if (intent === "publish") requestClose();
+        if (intent === "publish") {
+          requestClose();
+          void queueSnapshotRefresh();
+        }
         else setForm((current) => current ? { ...current, resultId: response.id } : current);
         await onChanged();
       }
@@ -152,6 +166,9 @@ export default function ResultsManager({ fixtures, onChanged }: { fixtures: Admi
       </div>
       <div className="admin-finals-notice"><ShieldAlert aria-hidden="true" />Current finals remain managed through the existing JSON workflow.</div>
       {message && <p className={`admin-action-message ${message.type}`} role="status">{message.type === "success" && <CheckCircle2 />}{message.text}</p>}
+      {refreshStatus === "triggering" && <div className="admin-snapshot-warning" role="status"><p>Requesting fallback snapshot refresh...</p><button disabled>Retry Snapshot Refresh</button></div>}
+      {refreshStatus === "queued" && <p className="admin-action-message success" role="status">Fallback snapshot refresh queued.</p>}
+      {refreshStatus === "failed" && <div className="admin-snapshot-warning" role="status"><p>Live result is published. The fallback snapshot could not be refreshed yet.</p><button onClick={() => void queueSnapshotRefresh()}>Retry Snapshot Refresh</button></div>}
       <div className="admin-results-layout">
         <div className="admin-results-list">
           <div className="admin-night-tabs" aria-label="Competition night">

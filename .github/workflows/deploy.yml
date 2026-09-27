@@ -4,6 +4,10 @@ on:
   push:
     branches: ["master"]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Refresh Public Competition Snapshot"]
+    types: [completed]
+    branches: ["master"]
 
 permissions:
   contents: read
@@ -16,6 +20,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'master' && github.event.workflow_run.head_sha != github.sha)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

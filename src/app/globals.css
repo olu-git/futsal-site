@@ -319,6 +319,9 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .admin-action-message { display: flex; align-items: flex-start; gap: 8px; padding: 10px; font-size: 10px; line-height: 1.7; }
 .admin-action-message.success { background: #dcefe2; color: #125f36; }.admin-action-message.error { background: #f7dfe0; color: #8c1018; }
 .admin-action-message svg { width: 17px; flex: 0 0 17px; }
+.admin-snapshot-warning { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 12px; background: #f7e8d4; border-left: 4px solid var(--fis-red); color: var(--fis-ink); font-size: 10px; line-height: 1.7; }
+.admin-snapshot-warning button { min-height: 38px; border: 1px solid var(--fis-blue); padding: 8px 10px; background: white; color: var(--fis-blue); font: 7px/1.6 var(--font-mono); text-transform: uppercase; }
+.admin-snapshot-warning button:disabled { opacity: .5; cursor: wait; }
 .admin-published-summary { display: grid; justify-items: stretch; gap: 14px; margin-block: 0 24px; }
 .admin-published-summary > p { color: var(--fis-blue); font: 7px/1.6 var(--font-mono); text-transform: uppercase; }
 .admin-published-summary .admin-published-forfeit { color: var(--fis-red-dark); font-size: 10px; }

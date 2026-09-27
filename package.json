@@ -11,6 +11,9 @@
     "season:import:validate": "tsx scripts/generate-current-season-import.ts --validate-only",
     "season:import:generate": "tsx scripts/generate-current-season-import.ts",
     "season:import:check": "tsx scripts/check-current-season-import.ts",
+    "snapshot:generate": "tsx scripts/refresh-public-snapshot.ts generate",
+    "snapshot:validate": "tsx scripts/refresh-public-snapshot.ts validate",
+    "snapshot:check": "tsx scripts/refresh-public-snapshot.ts check",
     "test:admin-results": "tsx --test tests/admin-results.test.ts",
     "finals:check": "tsx scripts/check-finals.ts",
     "finals:freeze": "tsx scripts/freeze-finals-seeds.ts"

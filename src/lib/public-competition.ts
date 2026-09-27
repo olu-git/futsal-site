@@ -1,4 +1,5 @@
 import { createClient } from "./supabase/browser";
+import type { SupabaseClient } from "@supabase/supabase-js";
 import type { CompetitionDataset } from "./competition-repository";
 import type { CompetitionNight, Division, Fixture, StandingAdjustment, Team } from "./types";
 
@@ -56,6 +57,14 @@ export interface PublicAdjustmentRow {
   points_delta: number;
   reason: string;
   publication_state: string;
+}
+
+export interface PublishedCompetitionRows {
+  editions: PublicEditionRow[];
+  teams: PublicTeamRow[];
+  fixtures: PublicFixtureRow[];
+  results: PublicResultRow[];
+  adjustments: PublicAdjustmentRow[];
 }
 
 export async function preferPublished<T>(load: () => Promise<T>, snapshot: T, timeoutMs = 8000): Promise<{ value: T; source: "supabase" | "snapshot" }> {
@@ -141,8 +150,7 @@ export function mapPublishedCompetition(
   return { teams: mappedTeams, fixtures: mappedFixtures, standingsAdjustments: mappedAdjustments };
 }
 
-export async function loadPublishedCompetition(): Promise<CompetitionDataset> {
-  const supabase = createClient();
+export async function loadPublishedCompetitionRows(supabase: SupabaseClient): Promise<PublishedCompetitionRows> {
   const { data: editionRows, error: editionError } = await supabase.from("competition_seasons")
     .select("id, lifecycle, publication_state, competitions(weekday, division), seasons(ends_on)")
     .eq("publication_state", "published");
@@ -167,12 +175,18 @@ export async function loadPublishedCompetition(): Promise<CompetitionDataset> {
   const resultRows: PublicResultRow[] = [];
   for (let offset = 0; offset < fixtureRows.length; offset += 100) {
     const batch = fixtureRows.slice(offset, offset + 100);
-    const { data, error } = await supabase.from("result_versions")
-      .select("fixture_id, status, home_score, away_score, forfeit_side").eq("status", "published")
+    const { data, error, count } = await supabase.from("result_versions")
+      .select("fixture_id, status, home_score, away_score, forfeit_side", { count: "exact" }).eq("status", "published")
       .in("fixture_id", batch.map((row) => row.id));
     if (error) throw new Error(`Unable to load public results: ${error.message}`);
+    if (count !== (data ?? []).length) throw new Error("Public results were truncated by the database row limit.");
     resultRows.push(...(data ?? []) as PublicResultRow[]);
   }
-  return mapPublishedCompetition(editions, (teamResponse.data ?? []) as PublicTeamRow[], fixtureRows,
-    resultRows, (adjustmentResponse.data ?? []) as PublicAdjustmentRow[]);
+  return { editions, teams: (teamResponse.data ?? []) as PublicTeamRow[], fixtures: fixtureRows,
+    results: resultRows, adjustments: (adjustmentResponse.data ?? []) as PublicAdjustmentRow[] };
+}
+
+export async function loadPublishedCompetition(): Promise<CompetitionDataset> {
+  const rows = await loadPublishedCompetitionRows(createClient());
+  return mapPublishedCompetition(rows.editions, rows.teams, rows.fixtures, rows.results, rows.adjustments);
 }
