@@ -223,7 +223,7 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .admin-login-form { display: grid; gap: 18px; }
 .admin-auth-error { color: #a6121b; font-size: 12px; line-height: 1.8; }
 .admin-submit { justify-self: start; min-height: 48px; border: 0; padding: 12px 22px; background: var(--fis-red); color: white; box-shadow: 4px 4px 0 var(--fis-blue); font: 9px/1.8 var(--font-mono); text-transform: uppercase; }
-.admin-page { padding: 48px 0 72px; background: #e7e9e4; }
+.admin-page { padding: 48px 0 72px; overflow-x: clip; background: #e7e9e4; }
 .admin-shell { display: grid; grid-template-columns: 260px minmax(0,1fr); min-height: 650px; border: 2px solid var(--fis-blue); background: var(--fis-cream-light); box-shadow: var(--fis-shadow); }
 .admin-mobile-bar { display: none; }
 .admin-sidebar { display: flex; flex-direction: column; gap: 34px; padding: 28px 22px; background: var(--fis-navy); color: white; }
@@ -333,6 +333,50 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .admin-revision-history article > span:last-of-type { text-align: right; font-variant-numeric: tabular-nums; }
 .admin-revision-history article p { grid-column: 1/-1; }
 .admin-revision-history > p, .admin-empty, .admin-score-panel-empty { font-size: 11px; line-height: 1.8; }
+
+.admin-fixture-toolbar { display: flex; gap: 10px; align-items: stretch; margin-bottom: 18px; }
+.admin-fixture-toolbar .admin-night-tabs { flex: 1; margin: 0; }
+.admin-fixture-toolbar > button, .admin-fixture-panel button, .admin-json-upload button { border: 1px solid var(--fis-blue); border-radius: 0; background: var(--fis-cream-light); color: var(--fis-blue); padding: 10px 14px; font: 8px/1.5 var(--font-mono); text-transform: uppercase; }
+.admin-fixtures-grid { display: grid; grid-template-columns: minmax(430px,1.4fr) minmax(250px,.6fr); gap: 18px; align-items: start; }
+.admin-fixture-list, .admin-change-list { border: 1px solid #6d91ca; background: white; }
+.admin-fixture-filters { display: grid; grid-template-columns: .8fr 1fr 1.3fr; gap: 10px; padding: 14px; border-bottom: 4px solid var(--fis-red); }
+.admin-fixture-filters label, .admin-change-list label, .admin-fixture-editor label, .admin-change-fields label { display: grid; gap: 5px; color: var(--fis-blue); font: 7px/1.5 var(--font-mono); text-transform: uppercase; }
+.admin-fixture-filters input, .admin-fixture-filters select, .admin-change-list select, .admin-fixture-editor input, .admin-fixture-editor textarea, .admin-change-fields select, .admin-change-fields input, .admin-json-upload textarea { width: 100%; min-width: 0; border: 1px solid #6d91ca; border-radius: 0; background: var(--fis-cream-light); color: var(--fis-ink); padding: 9px; font: 12px/1.5 var(--font-sans); }
+.admin-fixture-round h3, .admin-change-list-head { margin: 0; padding: 11px 14px; background: var(--fis-blue); color: white; font: 8px/1.4 var(--font-mono); text-transform: uppercase; }
+.admin-fixture-row { width: 100%; display: grid; grid-template-columns: 105px minmax(0,1fr) auto; gap: 12px; align-items: center; padding: 12px 14px; border: 0; border-bottom: 1px solid #c8ced8; background: white; color: var(--fis-blue); text-align: left; }
+.admin-fixture-row:hover, .admin-fixture-row:focus-visible, .admin-change-list > button:hover, .admin-change-list > button:focus-visible { background: #edf3fc; outline: 2px solid var(--fis-red); outline-offset: -2px; }
+.admin-fixture-row time, .admin-fixture-row small, .admin-fixture-row em { display: block; font: 7px/1.6 var(--font-mono); font-style: normal; text-transform: uppercase; }
+.admin-fixture-row b { display: flex; gap: 8px; align-items: center; min-width: 0; margin-block: 3px; font-size: 11px; }
+.admin-fixture-row .team-kit { flex: 0 0 auto; }
+.admin-fixture-row b { overflow-wrap: anywhere; }
+.admin-change-list-head { display: flex; align-items: end; justify-content: space-between; gap: 8px; }
+.admin-change-list-head label { color: white; }
+.admin-change-list > button { display: grid; gap: 5px; width: 100%; padding: 14px; border: 0; border-bottom: 1px solid #c8ced8; background: white; color: var(--fis-blue); text-align: left; }
+.admin-change-list > button strong { font: 8px/1.5 var(--font-mono); text-transform: uppercase; }
+.admin-change-list > button span { font-size: 10px; text-transform: capitalize; }
+.admin-fixture-panel { grid-column: 1/-1; position: relative; border: 2px solid var(--fis-blue); border-top: 6px solid var(--fis-red); padding: 22px; background: var(--fis-cream-light); }
+.admin-fixture-panel > h3 { margin-bottom: 18px; }
+.admin-fixture-history { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px; margin-bottom: 18px; padding: 12px; border: 1px solid #aab5c5; background: white; }
+.admin-fixture-history span { display: grid; gap: 4px; min-width: 0; color: #52617b; font-size: 9px; }
+.admin-fixture-history b { color: var(--fis-blue); font: 7px/1.5 var(--font-mono); text-transform: uppercase; }
+.admin-add-existing { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: end; gap: 10px; }
+.admin-fixture-editor { display: grid; gap: 14px; }
+.admin-change-card { border-top: 2px solid var(--fis-blue); padding-top: 12px; }
+.admin-change-card header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; color: var(--fis-red); font: 8px/1.5 var(--font-mono); }
+.admin-change-fields { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; margin-top: 14px; }
+.admin-fixture-comparison { border: 1px solid #aab5c5; background: white; }
+.admin-fixture-comparison p { display: grid; grid-template-columns: 65px minmax(0,1fr) 18px minmax(0,1fr); gap: 8px; margin: 0; padding: 8px; border-bottom: 1px solid #d4d8df; font-size: 10px; }
+.admin-fixture-comparison p.changed { border-left: 4px solid var(--fis-red); background: #fff4ed; }
+.admin-fixture-comparison span, .admin-fixture-comparison i { color: #5b6473; font: 7px/1.6 var(--font-mono); font-style: normal; text-transform: uppercase; }
+.admin-validation { margin-top: 18px; }
+.admin-validation section { border-top: 3px solid var(--fis-blue); margin-top: 12px; }
+.admin-validation h4 { margin: 0; padding: 8px; font: 8px/1.4 var(--font-mono); text-transform: uppercase; }
+.admin-validation p { display: flex; justify-content: space-between; gap: 12px; margin: 0; padding: 8px; border-top: 1px solid #ccd2dc; font-size: 10px; }
+.admin-validation code { color: #5b6473; font-size: 8px; }
+.admin-warning-ack { display: flex; gap: 8px; margin: 14px 0; font-size: 11px; }
+.admin-fixture-actions { position: sticky; bottom: 0; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--fis-blue); background: var(--fis-cream-light); }
+.admin-fixture-actions .primary { background: var(--fis-red); color: white; border-color: var(--fis-red); }
+.admin-json-upload { display: grid; gap: 10px; border: 2px dashed #6d91ca; padding: 16px; }
 @media (max-width: 900px) {
   .primary-nav { gap: 18px; }
   .nav-cluster { gap: 20px; }
@@ -342,7 +386,11 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
   .fixture-row { gap: 10px; grid-template-columns: 90px minmax(0,1fr) 65px minmax(0,1fr) 34px; }
   .fixture-team { font-size: 9px; gap: 8px; }
 }
-@media (max-width: 760px) {
+@media (max-width: 1100px) {
+  .admin-fixtures-grid { grid-template-columns: 1fr; }
+  .admin-change-list { margin-top: 0; }
+}
+@media (max-width: 800px) {
   .fis-container { width: calc(100% - 32px); }
   .primary-nav { display: none; }
   .mobile-nav-links { display: block; }
@@ -403,6 +451,21 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
   .admin-score-sheet .admin-panel-close { position: sticky; z-index: 2; top: 0; float: right; margin: -8px 0 8px 12px; background: var(--fis-cream-light); }
   .admin-score-sheet .admin-result-actions { position: sticky; z-index: 3; left: 0; right: 0; bottom: 0; grid-template-columns: 1fr 1fr; margin: 20px calc(-1 * max(18px,env(safe-area-inset-right))) 0 calc(-1 * max(18px,env(safe-area-inset-left))); padding: 12px max(18px,env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left)); border-top: 1px solid var(--fis-blue); background: var(--fis-cream-light); box-shadow: 0 -4px 12px #001b4f1f; }
   .admin-score-sheet .admin-result-actions .primary { grid-column: 1/-1; }
+  .admin-fixture-toolbar { display: grid; grid-template-columns: 1fr 1fr; }
+  .admin-fixture-toolbar .admin-night-tabs { grid-column: 1/-1; }
+  .admin-fixtures-grid { display: block; }
+  .admin-change-list { margin-top: 18px; }
+  .admin-fixture-filters { grid-template-columns: 1fr; }
+  .admin-fixture-row { grid-template-columns: 82px minmax(0,1fr); }
+  .admin-fixture-row > em { grid-column: 2; }
+  .admin-fixture-sheet { position: fixed; inset: 0; z-index: 100; width: 100%; height: 100dvh; overflow-y: auto; overscroll-behavior: contain; border: 0; border-top: 6px solid var(--fis-red); padding: calc(18px + env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) calc(95px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left)); }
+  .admin-fixture-sheet .admin-panel-close { position: sticky; top: 0; z-index: 3; float: right; background: var(--fis-cream-light); }
+  .admin-fixture-sheet .admin-fixture-actions { z-index: 3; display: grid; grid-template-columns: 1fr 1fr; margin-inline: calc(-1 * max(18px,env(safe-area-inset-right))); padding: 10px max(18px,env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left)); box-shadow: 0 -4px 12px #001b4f1f; }
+  .admin-fixture-sheet .admin-fixture-actions button { min-height: 42px; padding-inline: 8px; }
+  .admin-change-fields { grid-template-columns: 1fr 1fr; }
+  .admin-fixture-comparison p { grid-template-columns: 55px minmax(0,1fr) 14px minmax(0,1fr); font-size: 9px; }
+  .admin-fixture-history { grid-template-columns: 1fr 1fr; }
+  .admin-add-existing { grid-template-columns: 1fr; }
 }
 @media (max-width: 540px) {
   .home-hero h1 { font-size: 23px; }
