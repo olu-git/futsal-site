@@ -1,14 +1,14 @@
 # FIS Supabase preparation
 
-This directory contains a schema migration only. It has not been applied to any Supabase project. The public website still reads local JSON and remains a GitHub Pages static export.
+The initial schema and administrator foundation have been applied to the FIS project. The public site remains a GitHub Pages static export. The fixture change-set migration in this directory is **local and unapplied**; see [ADMIN-FIXTURES-DESIGN.md](../docs/ADMIN-FIXTURES-DESIGN.md) for its review, verification and rollback steps.
 
 ## Apply later
 
-1. Review the migration and test it against a disposable/local Supabase database first. Confirm the project uses PostgreSQL 15 or newer (the standings view uses `security_invoker`). After applying it and enrolling the administrator, run `verification/verify_initial_fis_admin_schema.sql`; the verification data is wrapped in a transaction and rolled back.
-2. Create the single administrator through Supabase Auth with email/password, confirm the address `contact@futsalindoorsoccer.com.au`, then enrol that Auth user in `private.admin_users` using a privileged migration or SQL Editor session. Do not insert a user or password into this schema file. The singleton index and the confirmed-email check prevent a second initial administrator.
-3. Apply `supabase/migrations/202609250001_initial_fis_admin_schema.sql` through the Supabase migration workflow after approval. Do not run it against production as part of the current task.
-4. Use [SEASON_IMPORT.md](SEASON_IMPORT.md) to stage and reconcile regular-season data. Import all competition data as drafts, compare calculated standings with the JSON site, then publish deliberately. The in-progress 2026 knockout series remains JSON-managed for this release.
-5. Add the Supabase URL and publishable key to local environment configuration when the application integration is built. The service-role key must never be exposed in browser code or committed.
+1. The initial schema, administrator enrolment and current-season import are already applied and verified in the FIS project. Do not rerun those migrations or create another administrator for this fixture-change review.
+2. Review `migrations/202609270001_fixture_change_sets.sql` and test it against a disposable/local database with the existing schema and a confirmed FIS administrator. Run `verification/verify_fixture_change_sets.sql` there; its test records are wrapped in a transaction and rolled back.
+3. Only after separate approval, apply the fixture-change migration through the controlled Supabase migration workflow. Confirm its grants, RLS and fixture visibility before building an Admin Fixtures interface. Do not apply it as part of this task.
+4. Use [SEASON_IMPORT.md](SEASON_IMPORT.md) for the existing regular-season import procedure. The in-progress 2026 knockout series remains JSON-managed and is not part of this migration.
+5. Keep only the Supabase URL and publishable key in browser environment configuration. Never expose or commit a service-role key.
 
 The migration creates no Auth accounts, seasons, teams, fixtures, scores, or other live competition rows. The only initial administrator allowed by the database is the confirmed Auth account for the email above. Admin users are explicitly enrolled after account creation.
 

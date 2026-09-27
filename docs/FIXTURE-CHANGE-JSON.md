@@ -1,0 +1,11 @@
+# Codex fixture change-set JSON v1
+
+Use [the valid example](examples/fixture-changes-valid.json) as a template. [The invalid example](examples/fixture-changes-invalid.json) demonstrates version rejection. The upload is a *proposal*, never a publish command.
+
+Required top-level fields: `schemaVersion: 1`, `competition` (`night`, `season`, `competitionSeasonId`), non-empty `title`, and a non-empty `changes` array. `overallNote` is optional. The competition ID is the Supabase `competition_seasons.id` UUID. `night` is `monday` or `wednesday`; the season name must match the selected edition.
+
+Each change has an `operation` (`update`, `create`, `cancel`) and a non-empty item-specific `reason`. For `update`/`cancel`, provide the existing Supabase fixture UUID and its `expectedFixtureVersion`. For `create`, omit both. For `update`/`create`, provide `proposed` with positive `roundNumber` and `court`, ISO `date` (`YYYY-MM-DD`), 24-hour `kickoffTime` (`HH:mm`), UUID `homeTeamId` and `awayTeamId`, and `publicationState: "published"`. For `cancel`, omit `proposed`. Optional `homeTeamName` and `awayTeamName` aid review only; IDs win on a mismatch and a warning is raised. Do not use legacy fixture IDs or name-only team matching.
+
+Unknown fields, unsupported versions, malformed dates/times, missing reasons and incompatible operation fields are rejected. The plan may contain several rounds and different reasons within one round. Only regular-season fixtures from the identified competition season can be changed. An upload is parsed and validated as a draft; the administrator must review warnings, submit for review, and explicitly publish through the database RPC. The existing public fixture remains unchanged until that final step. Current grading, semi-finals and knockout fixtures must stay in the separate JSON workflow.
+
+Do not add a `locationId` to any change item. The selected competition season resolves its venue through the competition record. Before previewing an upload, the Admin Fixtures loader must include published fixture occupancy from all relevant competitions and divisions at that venue. Court conflicts are checked against the final schedule after all updates and cancellations in the upload, so an atomic slot swap is valid but a cross-division double booking is not.
