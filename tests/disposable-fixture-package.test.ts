@@ -14,6 +14,14 @@ const scripts = [
   "fixture_concurrency_session_b.sql",
   "fixture_concurrency_verify.sql",
   "fixture_concurrency_cleanup.sql",
+  "disposable_team_profile_schema_preflight.sql",
+  "disposable_team_profile_zero_check.sql",
+  "disposable_team_profile_rpc_patch.sql",
+  "team_profile_concurrency_prepare.sql",
+  "team_profile_concurrency_session_a.sql",
+  "team_profile_concurrency_session_b.sql",
+  "team_profile_concurrency_verify.sql",
+  "team_profile_concurrency_cleanup.sql",
 ];
 
 test("disposable SQL package has explicit guards and no Auth-user insertion", () => {
@@ -32,6 +40,7 @@ test("migration order and rollback-only verification remain explicit", () => {
     "202609250001_initial_fis_admin_schema.sql",
     "202609260001_expose_fis_admin_check.sql",
     "202609270001_fixture_change_sets.sql",
+    "202609280001_transactional_team_profile_save.sql",
   ]);
   const verification = readFileSync("supabase/verification/verify_fixture_change_sets.sql", "utf8");
   assert.match(verification, /^-- DISPOSABLE TEST PROJECT ONLY — DO NOT RUN IN PRODUCTION/m);
@@ -40,6 +49,60 @@ test("migration order and rollback-only verification remain explicit", () => {
   assert.match(verification, /rollback;\s*$/i);
   assert.doesNotMatch(verification, /^commit;/im);
   assert.doesNotMatch(verification, /insert\s+into\s+auth\.users/i);
+});
+
+test("team-profile verification owns its hierarchy and rolls it all back", () => {
+  const verification = readFileSync("supabase/verification/verify_team_profile_save.sql", "utf8");
+  const zero = readFileSync(`${directory}/disposable_team_profile_zero_check.sql`, "utf8");
+  for (const table of ["seasons", "categories", "locations", "competitions", "competition_seasons", "teams", "team_kickoff_preferences", "team_fixture_notes"])
+    assert.match(verification, new RegExp(`insert into public\\.${table}`));
+  assert.match(verification, /00000000-0000-4000-8000-00000000b801/);
+  assert.match(verification, /00000000-0000-4000-8000-00000000b812/);
+  assert.doesNotMatch(verification, /from public\.competition_seasons cs where cs\.lifecycle <> 'archived' order by/);
+  assert.equal((verification.match(/^begin;$/gim) ?? []).length, 1);
+  assert.equal((verification.match(/^rollback;$/gim) ?? []).length, 1);
+  assert.match(verification, /select true as team_profile_verification_passed;\s*rollback;\s*$/i);
+  assert.doesNotMatch(verification, /on commit drop/i);
+  assert.match(zero, /00000000-0000-4000-8000-00000000b801/);
+  assert.match(zero, /00000000-0000-4000-8000-00000000b812/);
+  for (const table of ["seasons", "categories", "locations", "competitions", "competition_seasons", "teams", "team_kickoff_preferences", "team_fixture_notes", "admin_audit_log"])
+    assert.match(zero, new RegExp(`public\\.${table}`));
+});
+
+test("team-profile concurrency setup and cleanup are self-contained and preserve disposable identity", () => {
+  const prepare = readFileSync(`${directory}/team_profile_concurrency_prepare.sql`, "utf8");
+  const cleanup = readFileSync(`${directory}/team_profile_concurrency_cleanup.sql`, "utf8");
+  for (const table of ["seasons", "categories", "locations", "competitions", "competition_seasons", "teams"])
+    assert.match(prepare, new RegExp(`insert into public\\.${table}`));
+  assert.match(prepare, /00000000-0000-4000-8000-00000000c801/);
+  assert.match(prepare, /00000000-0000-4000-8000-00000000c806/);
+  assert.doesNotMatch(prepare, /order by cs\.created_at limit 1/);
+  assert.match(cleanup, /fis_fixture_test\.assert_disposable\(\)/);
+  assert.match(cleanup, /administrator_membership_preserved/);
+  assert.match(cleanup, /marker_admin_preserved/);
+  assert.doesNotMatch(cleanup, /delete from private\.admin_users|delete from auth\.users|update fis_fixture_test\.project_marker/i);
+});
+
+test("team-profile RPC uses an unambiguous named conflict constraint and patch preserves security", () => {
+  const migration = readFileSync("supabase/migrations/202609280001_transactional_team_profile_save.sql", "utf8");
+  const patch = readFileSync(`${directory}/disposable_team_profile_rpc_patch.sql`, "utf8");
+  const outputNames = [...migration.matchAll(/returns\s+table\(([^)]+)\)/gi)]
+    .flatMap((match) => match[1].split(",").map((column) => column.trim().split(/\s+/)[0]));
+  const conflictTargets = [...migration.matchAll(/on\s+conflict\s*\(([^)]+)\)/gi)]
+    .flatMap((match) => match[1].split(",").map((column) => column.trim()));
+  assert.deepEqual(outputNames, ["team_id", "profile_version", "updated_at"]);
+  assert.equal(conflictTargets.some((column) => outputNames.includes(column)), false);
+  assert.doesNotMatch(migration, /on\s+conflict\s*\(\s*team_id\s*\)/i);
+  assert.match(migration, /on conflict on constraint team_fixture_notes_pkey do update set notes = excluded\.notes/i);
+  assert.match(patch, /select fis_fixture_test\.assert_disposable\(\);/);
+  assert.match(patch, /public\.save_team_profile\(uuid,bigint,text,text,uuid,text,jsonb,text,text\)/);
+  assert.match(patch, /security_definer_preserved/);
+  assert.match(patch, /safe_search_path_preserved/);
+  assert.match(patch, /ownership_preserved/);
+  assert.match(patch, /grants_preserved/);
+  assert.match(patch, /authenticated_execute_preserved/);
+  assert.match(patch, /anonymous_execute_denied/);
+  assert.doesNotMatch(patch, /\b(insert|update|delete)\s+(into|from)?\s*public\.(teams|team_fixture_notes|team_kickoff_preferences)\b/i);
 });
 
 test("rollback verifier keeps its temporary assertion helper alive for one outer transaction", () => {

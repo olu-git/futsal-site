@@ -1,0 +1,10 @@
+"use client";
+import { useCallback, useEffect, useState } from "react";
+import AdminAuthGuard from "@/components/admin/AdminAuthGuard";
+import AdminShell from "@/components/admin/AdminShell";
+import { loadTeamsWorkspace, TeamsSetupUnavailableError, type TeamsWorkspace } from "@/lib/admin/teams-data";
+import TeamsManager from "./TeamsManager";
+
+export default function AdminTeamsPage(){return <AdminAuthGuard><AdminShell current="Teams"><TeamsData/></AdminShell></AdminAuthGuard>}
+function TeamsData(){const[data,setData]=useState<TeamsWorkspace|null>(null),[state,setState]=useState<"loading"|"ready"|"inactive"|"error">("loading"),[error,setError]=useState("");const load=useCallback(async()=>{setState("loading");setError("");try{setData(await loadTeamsWorkspace());setState("ready")}catch(e){if(e instanceof TeamsSetupUnavailableError)setState("inactive");else{setError(e instanceof Error?e.message:"Unable to load teams.");setState("error")}}},[]);useEffect(()=>{let active=true;void loadTeamsWorkspace().then(value=>{if(active){setData(value);setState("ready")}}).catch((e:unknown)=>{if(!active)return;if(e instanceof TeamsSetupUnavailableError)setState("inactive");else{setError(e instanceof Error?e.message:"Unable to load teams.");setState("error")}});return()=>{active=false}},[]);if(state==="loading")return <State eyebrow="Teams" title="Loading team management">Retrieving current team profiles...</State>;if(state==="inactive")return <State eyebrow="Setup required" title="Team management is unavailable">The required team profile tables are not available in this environment.</State>;if(state==="error")return <State eyebrow="Teams unavailable" title="Unable to load teams"><>{error}<button className="admin-submit" onClick={()=>void load()}>Try Again</button></></State>;return data?<TeamsManager workspace={data} onChanged={load}/>:null}
+function State({eyebrow,title,children}:{eyebrow:string;title:string;children:React.ReactNode}){return <div className="admin-data-state"><p className="eyebrow">{eyebrow}</p><h2>{title}</h2><div>{children}</div></div>}

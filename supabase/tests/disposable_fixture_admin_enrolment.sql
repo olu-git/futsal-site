@@ -6,7 +6,7 @@ select fis_fixture_test.assert_disposable();
 
 do $$
 declare
-  user_id_text text := 'REPLACE_WITH_DISPOSABLE_ADMIN_USER_UUID';
+  user_id_text text := 'd6dde812-02ce-438b-8d0d-e5262d6b93d8';
   disposable_user_id uuid;
 begin
   if user_id_text = 'REPLACE_WITH_DISPOSABLE_ADMIN_USER_UUID' then
