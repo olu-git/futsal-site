@@ -26,7 +26,7 @@ const groups: { title: string; intro: string; groups: RuleGroup[] }[] = [
       { icon: Square, title: "Cards", body: "A yellow card is a caution. A red card is a dismissal. The dismissed player may be replaced after two minutes of playing time or after the opposition scores, whichever occurs first." },
     ] },
   ] },
-  { title: "League Rules", intro: "Rules that apply to all Endeavour Hills Futsal competitions.", groups: [
+  { title: "League Rules", intro: "Rules that apply to all Futsal Indoor Soccer competitions.", groups: [
     { heading: "Before the Match", rules: [
       { icon: CreditCard, title: "Payment Before Kick-off", body: "All match payments must be made before the game begins." },
       { icon: Hourglass, title: "Late Penalty", body: "Teams must be ready at their scheduled kick-off time. A team concedes one goal for every two minutes it is late." },

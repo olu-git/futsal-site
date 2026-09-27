@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SectionHeading from "./SectionHeading";
+import FixtureTeam from "./FixtureTeam";
 import {
   finalsDates,
   finalsMatches,
@@ -16,6 +17,7 @@ import { formatDate, formatTime } from "@/lib/utils";
 interface KnockoutBracketProps {
   night: CompetitionNight;
   data: FinalsNightData;
+  kitColours: Record<string, string | undefined>;
 }
 
 const rounds = [
@@ -25,45 +27,46 @@ const rounds = [
   { key: "GF", title: "Grand Final", week: 2 },
 ] as const;
 
-export default function KnockoutBracket({ night, data }: KnockoutBracketProps) {
+export default function KnockoutBracket({ night, data, kitColours }: KnockoutBracketProps) {
   const matches = finalsMatches[night];
   const gradingGames = matches.filter((match) => match.round === "Grading");
 
   return (
-    <section id="finals" className="overflow-hidden bg-[#111111] py-20 sm:py-[80px]">
+    <section id="finals" className="bracket-section overflow-hidden py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Road to the Final"
           subtitle="Straight knockout. 16 teams, 3 weeks, 1 trophy. Win and move on; lose and you're out."
+          inverted
         />
-        <p className="mx-auto mt-5 max-w-3xl text-center text-sm leading-6 text-white/55">
+        <p className="mx-auto mt-5 max-w-3xl text-center text-sm leading-6 text-white/80">
           All players should read the competition{" "}
           <Link
             href="/rules"
-            className="font-semibold text-red-500 underline decoration-red-500/50 underline-offset-4 transition-colors hover:text-red-400"
+            className="font-semibold text-white underline decoration-red-500 underline-offset-4"
           >
             rules
           </Link>{" "}
           before the knockout stages. The referee has the final say.
         </p>
 
-        <div className="mt-10 rounded-lg border border-white/10 bg-[#151515] p-4 sm:p-6">
+        <div className="bracket-grading mt-10 border-2 p-4 sm:p-6">
           <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h3 className="font-[family-name:var(--font-heading)] text-2xl uppercase tracking-wider text-white">
+              <h3 className="font-[family-name:var(--font-heading)] text-2xl uppercase text-white">
                 Grading Games
               </h3>
-              <p className="mt-1 text-sm text-white/45">
+              <p className="mt-1 text-sm text-white/75">
                 Round of 16 teams continuing in grading matches
               </p>
             </div>
-            <p className="font-[family-name:var(--font-mono)] text-xs text-white/40">
+            <p className="font-[family-name:var(--font-mono)] text-[9px] leading-5 text-white/80">
               {formatDate(finalsDates[night][1])}
             </p>
           </div>
           <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {gradingGames.map((match) => (
-              <FinalsMatchCard key={match.id} match={match} night={night} data={data} />
+            {[...gradingGames].sort((a, b) => a.time.localeCompare(b.time) || a.court - b.court).map((match) => (
+              <FinalsMatchCard key={match.id} match={match} night={night} data={data} kitColours={kitColours} />
             ))}
           </div>
         </div>
@@ -84,6 +87,7 @@ export default function KnockoutBracket({ night, data }: KnockoutBracketProps) {
                 matches={matches.filter((match) => match.round === round.key)}
                 night={night}
                 data={data}
+                kitColours={kitColours}
               />
             ))}
           </div>
@@ -100,6 +104,7 @@ interface FinalsRoundColumnProps {
   matches: FinalsMatch[];
   night: CompetitionNight;
   data: FinalsNightData;
+  kitColours: Record<string, string | undefined>;
 }
 
 function FinalsRoundColumn({
@@ -109,6 +114,7 @@ function FinalsRoundColumn({
   matches,
   night,
   data,
+  kitColours,
 }: FinalsRoundColumnProps) {
   const stackClass =
     round === "R16"
@@ -121,16 +127,16 @@ function FinalsRoundColumn({
 
   return (
     <div className="min-w-0">
-      <h3 className="font-[family-name:var(--font-heading)] text-xl uppercase tracking-wider text-white">
+      <h3 className="font-[family-name:var(--font-heading)] text-xl uppercase text-white">
         {title}
       </h3>
-      <p className="mt-1 font-[family-name:var(--font-mono)] text-xs text-white/40">
+      <p className="mt-1 font-[family-name:var(--font-mono)] text-[9px] leading-5 text-white/80">
         {formatDate(date)}
       </p>
-      <div className={`mt-4 h-[960px] ${stackClass}`}>
-        {matches.map((match) => (
+      <div className={`mt-4 h-[1200px] ${stackClass}`}>
+        {[...matches].sort((a, b) => a.time.localeCompare(b.time) || a.court - b.court).map((match) => (
           <div key={match.id} className={round === "R16" ? "" : "self-center"}>
-            <FinalsMatchCard match={match} night={night} data={data} />
+            <FinalsMatchCard match={match} night={night} data={data} kitColours={kitColours} />
           </div>
         ))}
       </div>
@@ -142,27 +148,20 @@ interface FinalsMatchCardProps {
   match: FinalsMatch;
   night: CompetitionNight;
   data: FinalsNightData;
+  kitColours: Record<string, string | undefined>;
 }
 
-function FinalsMatchCard({ match, night, data }: FinalsMatchCardProps) {
+function FinalsMatchCard({ match, night, data, kitColours }: FinalsMatchCardProps) {
   const teamA = resolveFinalsSlot(match.a, night, data);
   const teamB = resolveFinalsSlot(match.b, night, data);
   const result = data.results[match.id];
   const winningSide = winnerSide(result);
 
   return (
-    <div
-      className={`overflow-hidden rounded-lg bg-[#1A1A1A] ${
-        match.id === "gf"
-          ? "border border-red-600"
-          : "border border-white/10 border-l-[3px] border-l-red-600"
-      }`}
-    >
-      <div className="flex items-center justify-between gap-3 border-b border-white/10 bg-white/[0.03] px-3 py-2 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-wider text-white/45">
-        <span className="font-semibold text-white/85">{match.label}</span>
-        <span className="whitespace-nowrap">
-          {formatTime(match.time)} &middot; Ct {match.court}
-        </span>
+    <div className={`bracket-match ${match.id === "gf" ? "bracket-match-final" : ""}`}>
+      <div className="bracket-match-head">
+        <span>{match.label}</span>
+        <span>{formatTime(match.time)} &middot; Court {match.court}</span>
       </div>
       <FinalsTeamRow
         team={teamA}
@@ -170,6 +169,8 @@ function FinalsMatchCard({ match, night, data }: FinalsMatchCardProps) {
         penaltyScore={result?.penaltyScoreA}
         side="A"
         winningSide={winningSide}
+        kitColour={teamA ? kitColours[teamA.name] : undefined}
+        placeholder={slotLabel(match.a, night)}
       />
       <FinalsTeamRow
         team={teamB}
@@ -177,6 +178,8 @@ function FinalsMatchCard({ match, night, data }: FinalsMatchCardProps) {
         penaltyScore={result?.penaltyScoreB}
         side="B"
         winningSide={winningSide}
+        kitColour={teamB ? kitColours[teamB.name] : undefined}
+        placeholder={slotLabel(match.b, night)}
       />
     </div>
   );
@@ -188,39 +191,29 @@ interface FinalsTeamRowProps {
   penaltyScore?: number;
   side: FinalsSide;
   winningSide: FinalsSide | null;
+  kitColour?: string;
+  placeholder: string;
 }
 
-function FinalsTeamRow({ team, score, penaltyScore, side, winningSide }: FinalsTeamRowProps) {
+function slotLabel(slot: FinalsMatch["a"], night: CompetitionNight) {
+  if (slot.type === "seed") return "TBC";
+  const feeder = finalsMatches[night].find((match) => match.id === slot.matchId);
+  return `${slot.type === "winner" ? "Winner" : "Loser"} ${feeder?.label ?? slot.matchId}`;
+}
+
+function FinalsTeamRow({ team, score, penaltyScore, side, winningSide, kitColour, placeholder }: FinalsTeamRowProps) {
   const isWinner = winningSide === side;
   const isLoser = winningSide !== null && !isWinner;
 
   return (
-    <div
-      className={`flex min-h-10 items-center gap-2 px-3 py-2 text-sm ${
-        side === "B" ? "border-t border-white/10" : ""
-      } ${isWinner ? "bg-white/[0.04]" : ""}`}
-    >
-      <span
-        className={`min-w-0 flex-1 truncate pl-1 font-semibold ${
-          !team
-            ? "font-[family-name:var(--font-mono)] text-xs font-normal uppercase tracking-wider text-white/35"
-            : isWinner
-              ? "text-red-500"
-              : isLoser
-                ? "text-white/40"
-                : "text-white"
-        }`}
-      >
-        {team?.name ?? "TBC"}
+    <div className={`bracket-team-row ${side === "B" ? "bracket-team-row-away" : ""} ${isWinner ? "is-winner" : ""} ${isLoser ? "is-loser" : ""}`}>
+      <span className={`bracket-team-name ${!team ? "is-placeholder" : ""}`}>
+        {team ? <FixtureTeam name={team.name} colour={kitColour} side={side === "A" ? "home" : "away"} /> : placeholder}
       </span>
-      <span
-        className={`w-12 shrink-0 text-right font-[family-name:var(--font-mono)] text-sm ${
-          isWinner ? "font-semibold text-red-500" : "text-white/45"
-        }`}
-      >
+      <span className="bracket-team-score" aria-label={score === undefined ? undefined : `${score} goals${penaltyScore === undefined ? "" : `, ${penaltyScore} penalties`}`}>
         {score ?? ""}
         {penaltyScore !== undefined && (
-          <span className="ml-1 text-[9px] uppercase text-white/40">(P{penaltyScore})</span>
+          <span className="bracket-penalty">(P{penaltyScore})</span>
         )}
       </span>
     </div>

@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import Link from "next/link";
 import { CheckCircle2, RotateCcw, ShieldAlert, X } from "lucide-react";
-import TeamKit from "@/components/TeamKit";
+import AdminResultMatchup from "@/components/admin/AdminResultMatchup";
+import { formatTime } from "@/lib/utils";
 import type { AdminFixture, AdminResultVersion } from "@/lib/admin/results-data";
 import { compareAdminFixtures } from "@/lib/admin/results-data";
 import type { ResultInput, ResultIntent, Side } from "@/lib/admin/results-rules";
@@ -169,12 +170,15 @@ export default function ResultsManager({ fixtures, onChanged }: { fixtures: Admi
               {items.map((fixture) => {
                 const current = published(fixture); const workflow = editable(fixture); const fixtureStatus = displayStatus(fixture);
                 return <button className="admin-result-row" aria-pressed={selectedId === fixture.id} key={fixture.id} onClick={(event) => choose(fixture, event.currentTarget)}>
-                  <span className="admin-result-date">{new Intl.DateTimeFormat("en-AU", { day: "numeric", month: "short" }).format(new Date(`${fixture.date}T00:00:00`))}<small>{fixture.time.slice(0, 5)} · Court {fixture.court}</small></span>
-                  <span className="admin-result-teams"><span><TeamKit colour={fixture.home.kitColour ?? "#003b9b"} />{fixture.home.name}</span><span><TeamKit colour={fixture.away.kitColour ?? "#003b9b"} />{fixture.away.name}</span></span>
-                  <span className="admin-result-score">{current?.homeScore ?? workflow?.homeScore ?? "-"}<br />{current?.awayScore ?? workflow?.awayScore ?? "-"}</span>
-                  <span className={`admin-status admin-status-${fixtureStatus}`}>{titleStatus(fixtureStatus)}</span>
-                  {(current?.forfeitSide || workflow?.forfeitSide) && <span className="admin-result-flag">Forfeit</span>}
-                  {fixture.results.some((result) => result.status === "superseded" || result.supersedesResultId) && <span className="admin-result-flag">Corrected</span>}
+                  <span className="admin-result-top">
+                    <span className="admin-result-schedule"><time dateTime={fixture.date}>{new Intl.DateTimeFormat("en-AU", { day: "numeric", month: "short", year: "numeric" }).format(new Date(`${fixture.date}T00:00:00`))}</time><span>{formatTime(fixture.time)} · Court {fixture.court}</span></span>
+                    <span className={`admin-status admin-status-${fixtureStatus}`}>{titleStatus(fixtureStatus)}</span>
+                  </span>
+                  <AdminResultMatchup fixture={fixture} homeScore={current?.homeScore ?? workflow?.homeScore} awayScore={current?.awayScore ?? workflow?.awayScore} />
+                  {(current?.forfeitSide || workflow?.forfeitSide || fixture.results.some((result) => result.status === "superseded" || result.supersedesResultId)) && <span className="admin-result-flags">
+                    {(current?.forfeitSide || workflow?.forfeitSide) && <span>Forfeit</span>}
+                    {fixture.results.some((result) => result.status === "superseded" || result.supersedesResultId) && <span>Corrected</span>}
+                  </span>}
                 </button>;
               })}
             </section>
@@ -183,11 +187,14 @@ export default function ResultsManager({ fixtures, onChanged }: { fixtures: Admi
         </div>
         {selected && form ? <aside className={`admin-score-panel${isPhone ? " admin-score-sheet" : ""}`} aria-label="Result management" aria-labelledby="result-panel-title" aria-modal={isPhone || undefined} role={isPhone ? "dialog" : undefined} ref={panelRef}>
           <button className="admin-panel-close" ref={closeButtonRef} onClick={requestClose} aria-label="Close result management"><X /></button>
-          <p className="eyebrow">Round {selected.round} · {selected.date}</p>
-          <h3 id="result-panel-title">{selected.home.name} <span>v</span> {selected.away.name}</h3>
-          <p>{selected.time.slice(0, 5)} · Court {selected.court}</p>
+          <div className="admin-panel-header">
+            <p className="admin-panel-round">Round {selected.round}</p>
+            <h3 id="result-panel-title" aria-label={`Match result: ${selected.home.name} versus ${selected.away.name}`}>Match result</h3>
+            <p><time dateTime={selected.date}>{new Intl.DateTimeFormat("en-AU", { weekday: "short", day: "numeric", month: "short", year: "numeric" }).format(new Date(`${selected.date}T00:00:00`))}</time><span>{formatTime(selected.time)} · Court {selected.court}</span></p>
+          </div>
           {published(selected) && !form.isCorrection && !editable(selected) ? <PublishedSummary fixture={selected} onCorrect={() => setForm(initialForm(selected, true))} /> : <>
             {form.isCorrection && <div className="admin-correction-banner"><RotateCcw />Correction draft</div>}
+            <AdminResultMatchup fixture={selected} prominent showScores={false} />
             <div className="admin-score-fields">
               <ScoreField label={selected.home.name} value={form.homeScore} onChange={(homeScore) => setForm({ ...form, homeScore })} />
               <span>–</span>
@@ -219,7 +226,7 @@ function TextField({ label, value, onChange }: { label: string; value: string; o
 }
 function PublishedSummary({ fixture, onCorrect }: { fixture: AdminFixture; onCorrect(): void }) {
   const result = published(fixture)!;
-  return <div className="admin-published-summary"><p>Published score</p><strong>{result.homeScore} – {result.awayScore}</strong>{result.forfeitSide && <span>Forfeit: {result.forfeitSide} team</span>}<button onClick={onCorrect}>Create Correction</button></div>;
+  return <div className="admin-published-summary"><p>Published result</p><AdminResultMatchup fixture={fixture} homeScore={result.homeScore} awayScore={result.awayScore} prominent />{result.forfeitSide && <span className="admin-published-forfeit">Forfeit: {result.forfeitSide} team</span>}<button onClick={onCorrect}>Create Correction</button></div>;
 }
 function RevisionHistory({ results }: { results: AdminResultVersion[] }) {
   return <section className="admin-revision-history"><h4>Revision history</h4>{results.length ? results.map((result) => <article key={result.id}><span>Revision {result.revision}</span><strong>{result.status.replace("_", " ")}</strong><span>{result.homeScore ?? "-"} – {result.awayScore ?? "-"}</span>{result.correctionReason && <p>{result.correctionReason}</p>}</article>) : <p>No revisions yet.</p>}</section>;

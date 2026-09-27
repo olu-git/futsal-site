@@ -33,11 +33,16 @@ export function createCompetitionService(repository: CompetitionRepository) {
     async getNight(night: CompetitionNight) {
       const data = await repository.readCompetition();
       const teams = data.teams.filter((team) => team.night === night && team.active !== false);
-      const divisions = [...new Set(teams.map((team) => team.division))].sort() as Division[];
+      const kitColours = Object.fromEntries([
+        ...data.teams.filter((team) => team.night !== night),
+        ...data.teams.filter((team) => team.night === night),
+      ].map((team) => [team.name, team.kitColour]));
+      const ladderTeams = data.teams.filter((team) => team.night === night && (team.standingsEligible ?? team.active !== false));
+      const divisions = [...new Set(ladderTeams.map((team) => team.division))].sort() as Division[];
       const fixtures = displayFixtures(data).filter((fixture) => fixture.night === night);
       return {
-        night, teams,
-        divisions: divisions.map((division) => ({ division, standings: calculateStandings(night, division, data), teams: teams.filter((team) => team.division === division) })),
+        night, teams, kitColours,
+        divisions: divisions.map((division) => ({ division, standings: calculateStandings(night, division, data), teams: ladderTeams.filter((team) => team.division === division) })),
         results: groupRounds(fixtures.filter((fixture) => fixture.status === "completed")).reverse(),
         upcoming: groupRounds(fixtures.filter((fixture) => fixture.status === "scheduled")),
       };

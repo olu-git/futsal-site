@@ -11,8 +11,8 @@ import type { CompetitionDataset } from "./competition-repository";
 export function calculateStandings(night: CompetitionNight, division: "A" | "B" = "A", data: CompetitionDataset = { teams, fixtures, standingsAdjustments }): Standing[] {
   const { teams, fixtures, standingsAdjustments } = data;
   const nightTeams = teams.filter((t) => t.night === night && t.division === division);
-  const activeTeamIds = new Set(
-    nightTeams.filter((team) => team.active !== false).map((team) => team.id)
+  const eligibleTeamIds = new Set(
+    nightTeams.filter((team) => team.standingsEligible ?? team.active !== false).map((team) => team.id)
   );
   const completedFixtures = fixtures.filter(
     (f) => f.night === night && f.division === division && f.status === "completed"
@@ -95,7 +95,7 @@ export function calculateStandings(night: CompetitionNight, division: "A" | "B" 
 
   // Calculate goal difference
   const standings = Array.from(standingsMap.values())
-    .filter((standing) => activeTeamIds.has(standing.teamId))
+    .filter((standing) => eligibleTeamIds.has(standing.teamId))
     .map((s) => ({
       ...s,
       goalDifference: s.goalsFor - s.goalsAgainst,

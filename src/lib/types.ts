@@ -8,6 +8,7 @@ export interface Team {
   night: CompetitionNight;
   division: Division;
   active?: boolean;
+  standingsEligible?: boolean;
   kitColour?: string; // Verified six-digit hex colour; omit if unknown.
   locationId?: string;
   category?: "men" | "women" | "mixed";
