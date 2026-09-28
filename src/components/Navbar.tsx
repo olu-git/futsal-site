@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRegistration } from "./RegistrationProvider";
 import { site } from "@/lib/site-content";
 
-const links = [{ href: "/", label: "Home" }, { href: "/monday-night", label: "Monday" }, { href: "/wednesday-night", label: "Wednesday" }, { href: "/rules", label: "Rules" }];
+const links = [{ href: "/", label: "Home" }, { href: "/monday-night", label: "Monday" }, { href: "/wednesday-night", label: "Wednesday" }, { href: "/rules", label: "Rules" }, { href: "/admin", label: "Admin" }];
 
 export default function Navbar() {
   const path = usePathname();

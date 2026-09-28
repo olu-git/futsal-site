@@ -1,5 +1,20 @@
 # Away-work checkpoint
 
+## Autonomous follow-up
+
+- Phase 1 was committed and pushed as `a45b57d83ff23e798c0105c03435a18eb75a494c`; local and remote hashes matched and the tree was clean before Phase 2 began.
+- The kit picker now presents seven presets plus an eighth `+` custom-colour control, with the hex input retained. Mobile team sheets reserve 150px plus the safe-area inset below content so the sticky actions cannot cover final review rows.
+- Phase 2 adds an uncommitted `/admin/standings` implementation, browser/RLS-backed loaders and mutations, signed-delta validation, projected standings, draft/immediate-publish actions, history data and published-only snapshot/public behavior tests.
+- Schema audit finding: the existing table supports played, wins, draws, losses, goals for, goals against and points deltas with required reasons and draft/published visibility. The uncommitted `202609290001_transactional_standing_adjustments.sql` package now adds pending review, immutable published history, linked correction/reversal drafts, one-follow-up enforcement, versioned stale-edit rejection and atomic lifecycle RPCs.
+- Added guarded disposable schema, rollback-only functional, zero-record and genuine two-session concurrency scripts; read-only production pre/postflight diagnostics; static SQL safety tests; and `docs/STANDING-ADJUSTMENTS-RPC-MIGRATION.md`. No script has been run remotely.
+- Standing-adjustment disposable verification passed in full: schema preflight, functional verification, zero-record check and genuine two-session concurrency. Session A committed; Session B waited and was rejected with SQLSTATE `40001`; concurrency verification, cleanup and the final zero-record check passed.
+- Production preflight recorded `teams_before = 34`, `adjustments_before = 38`, `published_adjustments_before = 38` and migration readiness true. The migration applied successfully, every postflight field returned true and no artificial production adjustment was created. This local UI follow-up did not access Supabase or mutate any adjustment.
+- Rebuilt `/admin/standings` presentation with a semantic, full-width desktop table, fixed column widths, aligned shirt/team cells, row separation, selected state and a complete unclipped Adjust column. At phone widths the list reduces to POS/TEAM/action and selection opens a scroll-locked, independently scrolling full-screen sheet with focus trap/restoration and Back/Escape close.
+- Removed the mobile standing editor's floating action block. Draft, review and publish actions now follow the adjustment fields, required reason and validation messages in document flow, with disabled styling and safe-area clearance before history and correction controls.
+- Phase 3 low-risk navigation work links dashboard cards, adds Standings consistently and adds a non-mutating Seasons placeholder so navigation no longer points to a missing route. The Seasons/Competitions implementation plan is in `docs/SEASONS-COMPETITIONS-IMPLEMENTATION-PLAN.md`.
+- No Supabase project was accessed, no SQL was run remotely, snapshot automation remains inactive, and no competition/finals/grading/knockout JSON changed during this follow-up. Phase 2 and Phase 3 remain uncommitted.
+- Estimated admin-system completion: 86%. Recommended next action: review the migration and UI, then execute the exact guarded disposable sequence in `docs/STANDING-ADJUSTMENTS-RPC-MIGRATION.md`.
+
 - Starting branch: `feature/new-website`
 - Starting commit: `6e60eeb1d733bd100410c01868f5a80518ec6184`
 - Work remains uncommitted for review.

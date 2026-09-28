@@ -16,7 +16,7 @@ function fixture(status: "scheduled" | "completed", note?: string): DisplayFixtu
   };
 }
 
-test("fixture team uses a hidden shirt before home and after away", () => {
+test("fixture team supports its established home and away alignment", () => {
   const home = renderToStaticMarkup(<FixtureTeam side="home" name="Ghazni United" colour="#FFFFFF" />);
   const away = renderToStaticMarkup(<FixtureTeam side="away" name="Extra Long Away Team Name" colour="#111111" />);
   assert.ok(home.indexOf("team-kit") < home.indexOf("Ghazni United"));
@@ -53,4 +53,5 @@ test("knockout feeder placeholders and result data stay visible", () => {
   assert.match(markup, /Team 1/);
   assert.match(markup, /Final score|5 goals/);
   assert.match(markup, /team-kit-light/);
+  assert.match(markup, /team-kit[^>]*>[\s\S]*?Team 1/);
 });

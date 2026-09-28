@@ -22,6 +22,13 @@ const scripts = [
   "team_profile_concurrency_session_b.sql",
   "team_profile_concurrency_verify.sql",
   "team_profile_concurrency_cleanup.sql",
+  "disposable_standing_adjustment_schema_preflight.sql",
+  "disposable_standing_adjustment_zero_check.sql",
+  "standing_adjustment_concurrency_prepare.sql",
+  "standing_adjustment_concurrency_session_a.sql",
+  "standing_adjustment_concurrency_session_b.sql",
+  "standing_adjustment_concurrency_verify.sql",
+  "standing_adjustment_concurrency_cleanup.sql",
 ];
 
 test("disposable SQL package has explicit guards and no Auth-user insertion", () => {
@@ -41,6 +48,7 @@ test("migration order and rollback-only verification remain explicit", () => {
     "202609260001_expose_fis_admin_check.sql",
     "202609270001_fixture_change_sets.sql",
     "202609280001_transactional_team_profile_save.sql",
+    "202609290001_transactional_standing_adjustments.sql",
   ]);
   const verification = readFileSync("supabase/verification/verify_fixture_change_sets.sql", "utf8");
   assert.match(verification, /^-- DISPOSABLE TEST PROJECT ONLY — DO NOT RUN IN PRODUCTION/m);

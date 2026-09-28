@@ -208,7 +208,7 @@ function FinalsTeamRow({ team, score, penaltyScore, side, winningSide, kitColour
   return (
     <div className={`bracket-team-row ${side === "B" ? "bracket-team-row-away" : ""} ${isWinner ? "is-winner" : ""} ${isLoser ? "is-loser" : ""}`}>
       <span className={`bracket-team-name ${!team ? "is-placeholder" : ""}`}>
-        {team ? <FixtureTeam name={team.name} colour={kitColour} side={side === "A" ? "home" : "away"} /> : placeholder}
+        {team ? <FixtureTeam name={team.name} colour={kitColour} side="home" /> : placeholder}
       </span>
       <span className="bracket-team-score" aria-label={score === undefined ? undefined : `${score} goals${penaltyScore === undefined ? "" : `, ${penaltyScore} penalties`}`}>
         {score ?? ""}

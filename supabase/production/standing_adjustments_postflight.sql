@@ -1,0 +1,3 @@
+-- Replace NULL placeholders with saved preflight counts. Read-only.
+with expected as(select null::bigint teams_before,null::bigint adjustments_before,null::bigint published_before)
+select (select count(*) from public.teams)=e.teams_before as teams_unchanged,(select count(*) from public.standing_adjustments)=e.adjustments_before as adjustments_unchanged,(select count(*) from public.standing_adjustments where publication_state='published')=e.published_before as published_unchanged,to_regprocedure('public.transition_standing_adjustment(uuid,bigint,text)') is not null as rpc_installed from expected e;
