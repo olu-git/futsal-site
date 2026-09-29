@@ -7,11 +7,11 @@ interface SectionHeadingProps {
 export default function SectionHeading({ title, subtitle, inverted = false }: SectionHeadingProps) {
   return (
     <div className="flex min-w-0 flex-col items-center gap-3">
-      <h2 className={`w-full max-w-full font-[family-name:var(--font-heading)] text-3xl font-black uppercase text-center sm:text-[40px] ${inverted ? "text-white" : "text-[var(--fis-blue)]"}`}>
+      <h2 className={`type-page-title w-full max-w-full uppercase text-center ${inverted ? "text-white" : "text-[var(--fis-blue)]"}`}>
         {title}
       </h2>
       {subtitle && (
-        <p className={`w-full max-w-full text-sm font-light leading-7 text-center font-[family-name:var(--font-sans)] ${inverted ? "text-white/65" : "text-[var(--fis-ink)]/70"}`}>
+        <p className={`type-body-compact w-full max-w-3xl text-center ${inverted ? "text-white/75" : "text-[var(--fis-ink)]/75"}`}>
           {subtitle}
         </p>
       )}

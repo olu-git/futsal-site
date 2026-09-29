@@ -39,7 +39,7 @@ export default function KnockoutBracket({ night, data, kitColours }: KnockoutBra
           subtitle="Straight knockout. 16 teams, 3 weeks, 1 trophy. Win and move on; lose and you're out."
           inverted
         />
-        <p className="mx-auto mt-5 max-w-3xl text-center text-sm leading-6 text-white/80">
+        <p className="type-body-compact mx-auto mt-5 max-w-3xl text-center text-white/80">
           All players should read the competition{" "}
           <Link
             href="/rules"
@@ -53,10 +53,10 @@ export default function KnockoutBracket({ night, data, kitColours }: KnockoutBra
         <div className="bracket-grading mt-10 border-2 p-4 sm:p-6">
           <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h3 className="font-[family-name:var(--font-heading)] text-2xl uppercase text-white">
+              <h3 className="type-section-title uppercase text-white">
                 Grading Games
               </h3>
-              <p className="mt-1 text-sm text-white/75">
+              <p className="type-body-compact mt-1 text-white/75">
                 Round of 16 teams continuing in grading matches
               </p>
             </div>
@@ -127,7 +127,7 @@ function FinalsRoundColumn({
 
   return (
     <div className="min-w-0">
-      <h3 className="font-[family-name:var(--font-heading)] text-xl uppercase text-white">
+      <h3 className="type-card-title uppercase text-white">
         {title}
       </h3>
       <p className="mt-1 font-[family-name:var(--font-mono)] text-[9px] leading-5 text-white/80">

@@ -7,7 +7,7 @@ export default function Footer() {
   return <footer className="site-footer"><div className="fis-container">
     <div className="footer-grid">
       <nav aria-label="Quick links"><h2>Quick Links</h2>{[
-        ["/", "Home"], ["/monday-night", "Monday"], ["/wednesday-night", "Wednesday"], ["/rules", "Rules"], ["/contact", "Contact Us"], ["/about-us", "About Us"],
+        ["/", "Home"], ["/monday-night", "Monday"], ["/wednesday-night", "Wednesday"], ["/rules", "Rules"], ["/admin/", "Admin"], ["/contact", "Contact Us"], ["/about-us", "About Us"],
       ].map(([href, label]) => <Link href={href} key={href}>{label}</Link>)}</nav>
       <nav aria-label="Legal"><h2>Legal</h2><Link href="/privacy">Privacy Policy</Link><Link href="/terms">Terms &amp; Conditions</Link></nav>
       <div className="footer-contact"><h2>Contact</h2>

@@ -151,3 +151,11 @@ Perform a full-site Unbounded typography audit and establish a consistent respon
 - Add more flexible scheduling and round generation.
 
 Exceptional changes will be planned and reviewed manually with Codex until those workflows are implemented.
+
+## Typography and interface checkpoint
+
+- Added a shared responsive type scale covering display, page, section, card and supporting headings; body and compact copy; labels, inputs, helpers, validation, actions, navigation, tables, badges and metadata.
+- Reaffirmed Unbounded as the reading and display family and Press Start 2P as the compact retro accent. Validation and helper text no longer inherit pixel-label typography.
+- Applied the scale across public heroes, shared section headings, registration/contact forms, policy prose, rules, footer copy, knockout supporting copy and every admin workspace/form state while preserving the approved league, fixture, result and table presentation.
+- Added `docs/TYPOGRAPHY-SYSTEM.md` and focused regression coverage. The change is visual-system-only: Supabase, migrations, RPCs, queries, JSON and snapshot automation are untouched.
+- Footer ADMIN navigation, outlined competition metadata, and Admin Fixtures and Seasons layout refinements are included. Review responsive typography and authenticated editor screens at 1440, 1254, 1024, 768, 390 and 360 pixels.

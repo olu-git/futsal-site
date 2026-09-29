@@ -17,6 +17,27 @@
   --font-mono: var(--font-press-start), Arial, sans-serif;
   --font-geist-sans: var(--font-sans);
   --font-geist-mono: var(--font-mono);
+  --type-display: clamp(2rem, 3.2vw + 1rem, 3rem);
+  --type-page-title: clamp(1.65rem, 2vw + 1rem, 2.5rem);
+  --type-section-title: clamp(1.25rem, 1.2vw + 1rem, 1.75rem);
+  --type-card-title: clamp(1rem, .45vw + .9rem, 1.25rem);
+  --type-subheading: clamp(.875rem, .25vw + .825rem, 1rem);
+  --type-body: clamp(.8125rem, .18vw + .775rem, .9rem);
+  --type-body-compact: clamp(.75rem, .12vw + .725rem, .8125rem);
+  --type-label: clamp(.5rem, .08vw + .48rem, .5625rem);
+  --type-input: clamp(.8125rem, .12vw + .785rem, .875rem);
+  --type-helper: clamp(.6875rem, .1vw + .665rem, .75rem);
+  --type-validation: clamp(.6875rem, .1vw + .665rem, .75rem);
+  --type-action: clamp(.5rem, .08vw + .48rem, .5625rem);
+  --type-nav: clamp(.5rem, .08vw + .48rem, .5625rem);
+  --type-table-heading: clamp(.4375rem, .06vw + .425rem, .5rem);
+  --type-table-value: clamp(.5rem, .08vw + .48rem, .625rem);
+  --type-status: clamp(.4375rem, .06vw + .425rem, .5rem);
+  --type-caption: clamp(.625rem, .1vw + .6rem, .6875rem);
+  --leading-display: 1.3;
+  --leading-heading: 1.45;
+  --leading-body: 1.85;
+  --leading-compact: 1.65;
 }
 @theme inline {
   --color-background: var(--fis-cream);
@@ -34,6 +55,18 @@ a, button { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 3px solid var(--fis-red); outline-offset: 4px; }
 ::selection { background: var(--fis-blue); color: white; }
 button, h1, h2, h3, p, span { letter-spacing: 0; }
+.type-display { font: 800 var(--type-display)/var(--leading-display) var(--font-sans); }
+.type-page-title { font: 700 var(--type-page-title)/var(--leading-heading) var(--font-sans); }
+.type-section-title { font: 700 var(--type-section-title)/var(--leading-heading) var(--font-sans); }
+.type-card-title { font: 650 var(--type-card-title)/var(--leading-heading) var(--font-sans); }
+.type-subheading { font: 600 var(--type-subheading)/var(--leading-heading) var(--font-sans); }
+.type-body { font: 300 var(--type-body)/var(--leading-body) var(--font-sans); }
+.type-body-compact { font: 300 var(--type-body-compact)/var(--leading-compact) var(--font-sans); }
+.type-helper { font: 300 var(--type-helper)/var(--leading-compact) var(--font-sans); }
+.type-validation { font: 300 var(--type-validation)/var(--leading-compact) var(--font-sans); }
+.type-label { font: 400 var(--type-label)/1.65 var(--font-mono); text-transform: uppercase; }
+.type-action { font: 400 var(--type-action)/1.65 var(--font-mono); text-transform: uppercase; }
+.type-caption { font: 300 var(--type-caption)/var(--leading-compact) var(--font-sans); }
 .fis-container { width: min(100% - 48px, 1152px); margin-inline: auto; min-width: 0; }
 .fis-section { padding-block: 48px 12px; }
 .fis-section:last-child { padding-bottom: 64px; }
@@ -72,7 +105,8 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .page-hero h1 { margin: 0; font-size: 48px; line-height: 1.35; font-weight: 800; text-transform: uppercase; overflow-wrap: anywhere; }
 .hero-content > p { margin: 20px auto 0; max-width: 650px; font-size: 13px; line-height: 1.9; }
 .competition-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 30px; font: 10px/1.9 var(--font-mono); text-transform: uppercase; margin-top: 30px; }
-.competition-stats span:last-child { flex-basis: 100%; }
+.competition-stats span { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; border: 1px solid #ffffff80; padding: 8px 12px; }
+.competition-stats span:last-child { width: fit-content; }
 .home-hero-wrap { position: relative; }
 .home-hero { min-height: 510px; }
 .home-hero .hero-content { text-align: left; padding-top: 26px; }
@@ -587,6 +621,7 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
   .hero-actions a { flex: 1 1 140px; }
   .hero-actions .fill-ins { flex-grow: 0; }
   .page-hero h1 { font-size: 28px; }
+  .competition-stats span:last-child { flex-basis: 100%; margin-inline: auto; }
   .home-hero h1 { font-size: 23px; }
   .fixture-row { grid-template-columns: minmax(0,1fr) 64px minmax(0,1fr); gap: 14px 8px; padding: 18px 12px; }
   .fixture-meta { grid-column: 1/3; display: flex; gap: 12px; font-size: 8px; }
@@ -712,4 +747,80 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Responsive typography system: Unbounded carries readable copy while Press Start 2P
+   remains a compact accent for navigation, labels, actions, tables and match data. */
+body { font-size: var(--type-body); line-height: var(--leading-body); }
+.page-hero h1 { font-size: var(--type-display); line-height: var(--leading-display); }
+.home-hero h1 { font-size: clamp(1.25rem, 3vw + .8rem, 3rem); line-height: 1.55; }
+.hero-content > p,.body-copy,.prose p { font-size: var(--type-body); line-height: var(--leading-body); }
+.section-title { font-size: clamp(1.125rem, 1.1vw + .9rem, 1.4375rem); line-height: 1.65; }
+.prose h2,.registration-body h3 { font-family: var(--font-sans); font-size: var(--type-section-title); line-height: var(--leading-heading); }
+.registration-banner p,.panel-copy,.registration-links,.fill-in-note,.rule-card p,.contact-details li,.footer-grid a { font-size: var(--type-body-compact); line-height: var(--leading-body); }
+.policy-date,.about-photo figcaption,.snapshot-notice,.fixture-note,.footer-bottom { font-size: var(--type-caption); line-height: var(--leading-compact); }
+.field label,.night-options legend { font-size: var(--type-body-compact); line-height: var(--leading-compact); }
+.field input,.field select,.field textarea { font-size: var(--type-input); line-height: 1.6; }
+.confirmation,.night-options label { font-size: var(--type-body-compact); line-height: var(--leading-body); }
+.form-status,.admin-auth-error,.admin-action-message,.admin-team-errors,.admin-team-warning,.admin-validation p { font-family: var(--font-sans); font-size: var(--type-validation); line-height: var(--leading-compact); text-transform: none; }
+.empty-state,.admin-auth-card > p:not(.eyebrow),.admin-workspace > p:not(.eyebrow),.admin-finals-notice,.admin-private-note,.admin-season-help { font-size: var(--type-body-compact); line-height: var(--leading-body); }
+.admin-workspace h2 { font-size: var(--type-page-title); line-height: var(--leading-heading); }
+.admin-placeholder-grid p,.admin-results-heading p,.admin-team-count,.admin-fixture-history span,.admin-season-summary article ul { font-size: var(--type-helper); line-height: var(--leading-compact); }
+.admin-field-error,.admin-season-create-errors,.admin-team-fields small,.admin-team-editor label small { font-family: var(--font-sans); font-size: var(--type-validation); line-height: var(--leading-compact); font-weight: 300; text-transform: none; letter-spacing: 0; }
+.admin-season-create-errors { max-width: 42rem; }
+.admin-result-filters select,.admin-text-field textarea,.admin-score-fields input,.admin-team-toolbar input,.admin-team-toolbar select,.admin-team-fields input,.admin-team-fields select,.admin-team-editor textarea,.admin-preference-row input,.admin-preference-row select,.admin-kit-picker input,.admin-standing-editor textarea,.admin-season-create input,.admin-season-panel input,.admin-season-cards input,.admin-season-cards select,.admin-season-teams select,.admin-season-profiles textarea { font-family: var(--font-sans); font-size: var(--type-input); line-height: 1.55; }
+.admin-standing-comparison p,.admin-fixture-comparison p,.admin-team-comparison p,.admin-adjustment-history p { font-family: var(--font-sans); font-size: var(--type-helper); line-height: var(--leading-compact); }
+.rule-card summary { font-size: var(--type-body-compact); line-height: var(--leading-compact); }
+.site-footer h2,.rule-group h3,.league-head h3,.round-accordion summary,.round-heading,.division-label { line-height: 1.65; }
+.primary-nav a,.menu-button,.menu-panel a,.menu-panel button,.admin-sidebar nav a,.admin-sidebar button { font-size: var(--type-nav); line-height: 1.7; }
+.submit-button,.admin-submit,.admin-season-create button,.admin-season-wizard button,.admin-preference-row button,.admin-preferences > button,.admin-team-actions button { font-size: var(--type-action); line-height: 1.65; }
+.fixture-status,.admin-lifecycle-badge { font-size: var(--type-status); line-height: 1.5; }
+.league-table,.fixture-team,.fixture-score { font-size: var(--type-table-value); }
+.league-table thead,.admin-standing-table thead th { font-size: var(--type-table-heading); }
+
+@media (max-width: 767px) {
+  .hero-content > p,.body-copy,.prose p { line-height: 1.75; }
+  .prose { max-width: 42rem; }
+  .registration-banner p,.panel-copy,.registration-links,.fill-in-note { line-height: 1.7; }
+  .admin-action-message,.admin-field-error,.admin-season-create-errors { line-height: 1.55; }
+}
+
+/* Admin fixture editor presentation */
+.admin-fixture-panel-header { display: grid; grid-template-columns: minmax(0,1fr) 42px; align-items: start; gap: 18px; margin: -4px 0 20px; padding-bottom: 14px; border-bottom: 1px solid #aab5c5; }
+.admin-fixture-panel-header h3 { min-width: 0; margin: 6px 0 0; color: var(--fis-blue); font: var(--type-subheading)/var(--leading-heading) var(--font-sans); text-transform: uppercase; overflow-wrap: anywhere; }
+.admin-fixture-panel-header .admin-panel-close { position: static; width: 42px; height: 42px; background: var(--fis-cream-light); }
+.admin-fixture-editor { gap: 18px; }
+.admin-fixture-editor > label { gap: 8px; }
+.admin-change-card { margin-top: 4px; padding-top: 16px; }
+.admin-change-fields { gap: 14px 10px; margin-top: 16px; }
+.admin-change-fields label { min-width: 0; gap: 7px; }
+.admin-change-fields input,.admin-change-fields select,.admin-add-existing select { min-height: 42px; line-height: 1.4; }
+.admin-change-fields select,.admin-add-existing select { padding-right: 34px; }
+.admin-fixture-workflow { display: grid; gap: 18px; margin-top: 22px; padding-top: 20px; border-top: 2px solid var(--fis-blue); }
+.admin-add-existing { gap: 12px; padding: 14px; border: 1px solid #aab5c5; background: white; }
+.admin-add-existing label { min-width: 0; gap: 8px; }
+.admin-add-existing button { min-height: 42px; }
+.admin-fixture-validation { display: grid; justify-items: start; gap: 12px; padding: 14px; border: 1px solid #aab5c5; background: white; }
+.admin-fixture-validation .admin-validation { width: 100%; margin-top: 0; }
+.admin-fixture-validation > .admin-empty { margin: 0; }
+.admin-fixture-validation .admin-warning-ack { margin: 0; }
+.admin-fixture-actions { margin-top: 22px; padding-block: 14px; }
+
+/* New-season form alignment and field rhythm */
+.admin-season-create > form { gap: 14px 12px; align-items: start; }
+.admin-season-create label { min-width: 0; gap: 8px; }
+.admin-season-create input { width: 100%; min-height: 44px; }
+.admin-season-create .admin-field-error { margin: 0; padding-top: 1px; }
+.admin-season-create button[type="submit"] { min-height: 44px; margin-top: 18px; white-space: nowrap; }
+
+@media (max-width: 620px) {
+  .admin-fixture-sheet .admin-fixture-panel-header { position: sticky; top: calc(-18px - env(safe-area-inset-top)); z-index: 4; margin: calc(-18px - env(safe-area-inset-top)) calc(-1 * max(18px,env(safe-area-inset-right))) 18px calc(-1 * max(18px,env(safe-area-inset-left))); padding: calc(18px + env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) 12px max(18px,env(safe-area-inset-left)); background: var(--fis-cream-light); }
+  .admin-fixture-sheet .admin-panel-close { position: static; float: none; }
+  .admin-fixture-workflow { gap: 14px; }
+  .admin-fixture-validation,.admin-add-existing { padding: 12px; }
+}
+
+@media (max-width: 767px) {
+  .admin-season-create > form { grid-template-columns: 1fr; gap: 14px; }
+  .admin-season-create button[type="submit"] { width: fit-content; margin-top: 2px; }
 }

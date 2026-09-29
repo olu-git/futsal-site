@@ -64,7 +64,7 @@ export default function MatchCard({ fixture }: MatchCardProps) {
           {fixture.court}
         </span>
         {fixture.note && (
-          <span className="mt-1 text-center font-[family-name:var(--font-sans)] text-[10px] leading-relaxed text-[var(--fis-blue)]/70">
+          <span className="type-caption mt-1 text-center text-[var(--fis-blue)]/70">
             {fixture.note}
           </span>
         )}
