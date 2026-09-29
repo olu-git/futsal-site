@@ -1,6 +1,7 @@
 import { createClient } from "./supabase/browser";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { CompetitionDataset } from "./competition-repository";
+import { teamDisplayName } from "./team-display-name";
 import type { CompetitionNight, Division, Fixture, StandingAdjustment, Team } from "./types";
 
 type Relation<T> = T | T[];
@@ -109,7 +110,7 @@ export function mapPublishedCompetition(
   }));
   const mappedTeams: Team[] = teams.filter((row) => editionMap.has(row.competition_season_id)).map((row) => {
     const edition = editionMap.get(row.competition_season_id)!;
-    return { id: row.id, name: row.name, night: edition.night, division: edition.division,
+    return { id: row.id, name: teamDisplayName(row.legacy_id, row.name), night: edition.night, division: edition.division,
       active: row.status === "active", standingsEligible: row.standings_eligible,
       kitColour: row.kit_colour ?? undefined };
   });

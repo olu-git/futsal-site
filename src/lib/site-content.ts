@@ -8,7 +8,8 @@ export const site = {
   directions: "https://www.google.com/maps/dir/?api=1&destination=Endeavour+Hills+Leisure+Centre+10+Raymond+McMahon+Blvd",
   fillIns: "https://www.facebook.com/groups/1584889639197944",
   logo: "/logos/FIS-01-Primary-Black.svg",
-  actionPhoto: "/hero-bg.png",
+  actionPhoto: "/images/fis-centre-circle-ball.webp",
+  homeHeroPhoto: "/images/fis-home-hero.webp",
   // Awaiting the approved community image asset.
   communityPhoto: null as string | null,
   communityCaption: null as string | null,

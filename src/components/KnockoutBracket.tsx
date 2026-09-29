@@ -18,6 +18,7 @@ interface KnockoutBracketProps {
   night: CompetitionNight;
   data: FinalsNightData;
   kitColours: Record<string, string | undefined>;
+  preview?: boolean;
 }
 
 const rounds = [
@@ -27,28 +28,30 @@ const rounds = [
   { key: "GF", title: "Grand Final", week: 2 },
 ] as const;
 
-export default function KnockoutBracket({ night, data, kitColours }: KnockoutBracketProps) {
+export default function KnockoutBracket({ night, data, kitColours, preview = false }: KnockoutBracketProps) {
   const matches = finalsMatches[night];
   const gradingGames = matches.filter((match) => match.round === "Grading");
 
   return (
-    <section id="finals" className="bracket-section overflow-hidden py-16 sm:py-20">
+    <section id={preview ? undefined : "finals"} className={`bracket-section overflow-hidden ${preview ? "home-bracket" : "py-16 sm:py-20"}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          title="Road to the Final"
-          subtitle="Straight knockout. 16 teams, 3 weeks, 1 trophy. Win and move on; lose and you're out."
-          inverted
-        />
-        <p className="type-body-compact mx-auto mt-5 max-w-3xl text-center text-white/80">
-          All players should read the competition{" "}
-          <Link
-            href="/rules"
-            className="font-semibold text-white underline decoration-red-500 underline-offset-4"
-          >
-            rules
-          </Link>{" "}
-          before the knockout stages. The referee has the final say.
-        </p>
+        {!preview && <>
+          <SectionHeading
+            title="Road to the Final"
+            subtitle="Straight knockout. 16 teams, 3 weeks, 1 trophy. Win and move on; lose and you're out."
+            inverted
+          />
+          <p className="type-body-compact mx-auto mt-5 max-w-3xl text-center text-white/80">
+            All players should read the competition{" "}
+            <Link
+              href="/rules"
+              className="font-semibold text-white underline decoration-red-500 underline-offset-4"
+            >
+              rules
+            </Link>{" "}
+            before the knockout stages. The referee has the final say.
+          </p>
+        </>}
 
         <div className="bracket-grading mt-10 border-2 p-4 sm:p-6">
           <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
@@ -77,8 +80,8 @@ export default function KnockoutBracket({ night, data, kitColours }: KnockoutBra
           aria-label={`${night} knockout bracket`}
           tabIndex={0}
         >
-          <div className="grid min-w-[1040px] grid-cols-4 gap-4 lg:gap-5">
-            {rounds.map((round) => (
+          <div className={`grid gap-4 lg:gap-5 ${preview ? "min-w-[780px] grid-cols-3" : "min-w-[1040px] grid-cols-4"}`}>
+            {rounds.filter((round) => !preview || round.key !== "R16").map((round) => (
               <FinalsRoundColumn
                 key={round.key}
                 title={round.title}
@@ -88,6 +91,7 @@ export default function KnockoutBracket({ night, data, kitColours }: KnockoutBra
                 night={night}
                 data={data}
                 kitColours={kitColours}
+                compact={preview}
               />
             ))}
           </div>
@@ -105,6 +109,7 @@ interface FinalsRoundColumnProps {
   night: CompetitionNight;
   data: FinalsNightData;
   kitColours: Record<string, string | undefined>;
+  compact?: boolean;
 }
 
 function FinalsRoundColumn({
@@ -115,6 +120,7 @@ function FinalsRoundColumn({
   night,
   data,
   kitColours,
+  compact = false,
 }: FinalsRoundColumnProps) {
   const stackClass =
     round === "R16"
@@ -133,7 +139,7 @@ function FinalsRoundColumn({
       <p className="mt-1 font-[family-name:var(--font-mono)] text-[9px] leading-5 text-white/80">
         {formatDate(date)}
       </p>
-      <div className={`mt-4 h-[1200px] ${stackClass}`}>
+      <div className={`mt-4 ${compact ? "h-[600px]" : "h-[1200px]"} ${stackClass}`}>
         {[...matches].sort((a, b) => a.time.localeCompare(b.time) || a.court - b.court).map((match) => (
           <div key={match.id} className={round === "R16" ? "" : "self-center"}>
             <FinalsMatchCard match={match} night={night} data={data} kitColours={kitColours} />
@@ -151,7 +157,7 @@ interface FinalsMatchCardProps {
   kitColours: Record<string, string | undefined>;
 }
 
-function FinalsMatchCard({ match, night, data, kitColours }: FinalsMatchCardProps) {
+export function FinalsMatchCard({ match, night, data, kitColours }: FinalsMatchCardProps) {
   const teamA = resolveFinalsSlot(match.a, night, data);
   const teamB = resolveFinalsSlot(match.b, night, data);
   const result = data.results[match.id];
@@ -181,6 +187,9 @@ function FinalsMatchCard({ match, night, data, kitColours }: FinalsMatchCardProp
         kitColour={teamB ? kitColours[teamB.name] : undefined}
         placeholder={slotLabel(match.b, night)}
       />
+      {result?.forfeitSide && <p className="bracket-match-note">
+        {result.forfeitSide === "A" ? teamA?.name ?? "Team A" : teamB?.name ?? "Team B"} forfeited
+      </p>}
     </div>
   );
 }

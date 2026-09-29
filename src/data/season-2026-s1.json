@@ -16,7 +16,7 @@
         "Blue Dragons",
         "Salvos",
         "Top Up FC",
-        "Declan's Team",
+        "Declan's Delinquents",
         "Bunyip"
       ],
       "results": {
@@ -33,7 +33,15 @@
         "r16-m5": { "scoreA": 8, "scoreB": 4 },
         "r16-m6": { "scoreA": 4, "scoreB": 1 },
         "r16-m7": { "scoreA": 7, "scoreB": 6 },
-        "r16-m8": { "scoreA": 0, "scoreB": 8 }
+        "r16-m8": { "scoreA": 0, "scoreB": 8 },
+        "grading-1": { "scoreA": 4, "scoreB": 9 },
+        "grading-2": { "scoreA": 5, "scoreB": 0, "forfeitSide": "B" },
+        "grading-3": { "scoreA": 5, "scoreB": 10 },
+        "grading-4": { "scoreA": 4, "scoreB": 7 },
+        "qf-1": { "scoreA": 7, "scoreB": 4 },
+        "qf-2": { "scoreA": 4, "scoreB": 5 },
+        "qf-3": { "scoreA": 5, "scoreB": 5, "penaltyWinner": "A", "penaltyScoreA": 3, "penaltyScoreB": 2 },
+        "qf-4": { "scoreA": 3, "scoreB": 7 }
       }
     },
     "wednesday": {

@@ -53,6 +53,11 @@ for (const night of nights) {
   for (const [matchId, result] of Object.entries(data.results)) {
     assert(ids.includes(matchId), `${night} result ${matchId} should reference a known match`);
     assert(Number.isFinite(result.scoreA) && Number.isFinite(result.scoreB));
+    if (result.forfeitSide !== undefined) {
+      assert(["A", "B"].includes(result.forfeitSide), `${night} ${matchId} has an invalid forfeit side`);
+      assert.equal(winnerSide(result), result.forfeitSide === "A" ? "B" : "A", `${night} ${matchId} forfeit winner should be the other team`);
+      assert.equal(result.penaltyWinner, undefined, `${night} ${matchId} forfeit cannot use penalties`);
+    }
     if (result.penaltyWinner) {
       assert.equal(result.scoreA, result.scoreB, `${night} ${matchId} penalties require a tied score`);
       assert(Number.isFinite(result.penaltyScoreA) && Number.isFinite(result.penaltyScoreB));

@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import snapshotFile from "../src/data/public-competition-snapshot.json";
 import finalsFile from "../src/data/season-2026-s1.json";
-import { competitionRepository } from "../src/lib/competition-repository";
+import { competitionRepository, jsonCompetitionData } from "../src/lib/competition-repository";
 import { buildPublicSnapshot, serializePublicSnapshot, validatePublicSnapshot } from "../src/lib/public-snapshot";
 import type { PublishedCompetitionRows } from "../src/lib/public-competition";
 import { calculateStandings } from "../src/lib/standings";
@@ -11,6 +11,7 @@ import mondayFixturesFile from "../src/data/monday-fixtures.json";
 import wednesdayFixturesFile from "../src/data/wednesday-fixtures.json";
 import adjustmentsFile from "../src/data/standings-adjustments.json";
 import type { CompetitionDataset } from "../src/lib/competition-repository";
+import { teamDisplayName } from "../src/lib/team-display-name";
 
 const rows: PublishedCompetitionRows = {
   editions: [
@@ -68,7 +69,10 @@ test("snapshot validation rejects incomplete or invalid public data", () => {
 
 test("checked-in snapshot is the regular-season fallback; finals stay separate", async () => {
   validatePublicSnapshot(snapshotFile);
-  assert.deepEqual(await competitionRepository.readCompetition(), snapshotFile.data);
+  assert.deepEqual(await competitionRepository.readCompetition(), {
+    ...snapshotFile.data,
+    teams: snapshotFile.data.teams.map((team) => ({ ...team, name: teamDisplayName(team.id, team.name) })),
+  });
   assert.deepEqual(await competitionRepository.readFinals(), finalsFile);
   assert.ok(snapshotFile.data.fixtures.every((fixture) => fixture.status === "completed"));
   assert.ok(!JSON.stringify(snapshotFile).includes("penaltyWinner"));
@@ -81,6 +85,6 @@ test("generated fallback preserves the existing published standings on both nigh
     standingsAdjustments: adjustmentsFile as CompetitionDataset["standingsAdjustments"],
   };
   for (const night of ["monday", "wednesday"] as const) {
-    assert.deepEqual(calculateStandings(night, "A", snapshotFile.data as CompetitionDataset), calculateStandings(night, "A", historical));
+    assert.deepEqual(calculateStandings(night, "A", jsonCompetitionData), calculateStandings(night, "A", historical));
   }
 });

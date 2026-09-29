@@ -8,7 +8,7 @@ export const metadata = { title: "Contact Us" };
 
 export default function ContactPage() {
   return <>
-    <PageHero title="Contact Us" image={site.communityPhoto ?? site.actionPhoto} imageAlt={site.communityPhoto ? "The FIS community" : "Indoor futsal match"} />
+    <PageHero title="Contact Us" image={site.communityPhoto ?? site.actionPhoto} imageAlt={site.communityPhoto ? "The FIS community" : "Futsal ball on the centre circle of an indoor court"} />
     <section className="fis-section fis-container contact-layout">
       <div><h2 className="section-title">Get in touch</h2><p className="body-copy">Questions about Futsal Indoor Soccer? We&apos;re happy to help.</p>
         <ul className="contact-details">
