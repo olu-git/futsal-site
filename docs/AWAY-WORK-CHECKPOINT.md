@@ -1,5 +1,23 @@
 # Away-work checkpoint
 
+## Seasons and competitions audit
+
+- Work started clean on `feature/new-website` at `7e91e4cb6cd1611a139bea7cd044a98027e361c5` after the approved Standing Adjustments follow-up was pushed and local/remote hashes matched.
+- The active invariant is one active `competition_seasons` row per reusable competition definition, enforced by `competition_seasons_one_active_per_competition`. Different nights, locations, categories and divisions may therefore be active concurrently.
+- `seasons` currently has dates but no lifecycle/version. `competition_seasons` owns lifecycle/publication, while public loaders select published editions and prefer active editions before the latest ending season. Draft rows are already excluded from anonymous competition output.
+- Competition identity is unique by category, location, weekday and division. Team names are case-insensitively unique within a competition season. Archived competition seasons and their dependent teams, fixtures, results and adjustments are protected by existing triggers.
+- Rollover must create new team IDs. A nullable `source_team_id` on draft rollover records is appropriate for traceability, but activated teams must reference the new competition season and copied preferences/notes must reference the new team ID.
+- Existing team preference and note tables are unsafe as editable draft storage because they require a real team. Dedicated administrator-only draft tables keep unactivated teams private and make abandonment safe.
+- The migration package will use season-level draft/version records plus draft competition/team/preference/note rows, then one atomic activation RPC to archive relevant active editions and materialise the new published editions and teams. Fixtures, result versions and standing adjustments are excluded.
+- No Supabase project was accessed and no competition/finals/grading/knockout/fallback JSON was changed during this audit.
+- Phase 2 added the uncommitted `202609300001_season_draft_management.sql` package with private RLS-protected draft tables, stale-version protection and administrator-only create/save/validate/abandon/activate RPCs. Activation is a single transaction and excludes fixtures, results and adjustments.
+- Phase 3 retains the existing public selection boundary: anonymous pages read published competition seasons only, so drafts remain invisible and the checked-in fallback remains unchanged.
+- Phase 4 replaced the Seasons placeholder with an authenticated five-stage browser-only workflow for season details, editable competition structure, returning-team selection, private preference/note review and activation confirmation.
+- Phase 6 added disposable preflight, rollback verification, zero-record, concurrency and cleanup scripts plus read-only production pre/postflight diagnostics. These files have not been executed remotely.
+- Local validation passed with 110 automated tests, ESLint, TypeScript, the static production build, finals validation, snapshot validation, season import validation/static checks and `git diff --check`. `/admin/seasons` remains statically exported.
+- Handover risk: the disposable functional and concurrency SQL still needs a line-by-line review before execution. In particular, the concurrency scripts are scaffolding and do not yet create and race a complete deterministic draft activation. Preference rows are displayed and can be opted out or cleared in the UI, but per-row add/edit controls and reset-to-source controls remain unfinished. Synthetic screenshot QA has not yet been performed.
+- The Seasons package is therefore uncommitted and not yet ready for disposable execution. Exact next work: complete preference editing/reset controls, replace concurrency scaffolding with a self-contained two-session activation race, expand rollback verification through activation/failure/non-admin assertions, then rerun the full local suite before asking the user to execute the disposable schema preflight.
+
 ## Autonomous follow-up
 
 - Phase 1 was committed and pushed as `a45b57d83ff23e798c0105c03435a18eb75a494c`; local and remote hashes matched and the tree was clean before Phase 2 began.
@@ -90,3 +108,46 @@
 The disposable and production team-profile verification is complete. Continue with the next reviewed admin module; do not activate snapshot automation or alter competition JSON.
 
 Production Supabase was not accessed during this local follow-up. The previously completed migration and controlled save-and-restore are recorded above. Competition, finals, grading and knockout JSON was unchanged, and snapshot automation remains inactive.
+# Seasons and Competitions completion checkpoint
+
+- Disposable status update (29 September 2026): `202609300001_season_draft_management.sql` was applied successfully to `fis-fixture-test`, and `disposable_season_draft_schema_preflight.sql` returned every field as true. The functional rollback verifier, zero-record check and two-session concurrency package still await manual execution. Production remains unchanged.
+- Completed synthetic `/admin/seasons` UI review at 1440, 1254, 1024, 768, 390 and 360 pixels. Every viewport stayed within the document width; no body-level horizontal overflow was found.
+- UI-only corrections: added explicit Previous/Next navigation, immediate date and workflow validation, active-competition details, lifecycle badges, clearer empty states, responsive competition/team/private-profile presentation, a mobile full-screen draft dialog, body scroll locking, Escape and browser-Back dismissal, focus trapping/restoration, visible focus styling and non-overlaying action sections.
+- Reviewed the main season list, multiple drafts, archived/current seasons, season details, competition structure, returning teams, preferences/private notes and activation review. Long competition/team names, long notes, empty preferences, opt-out state, copied preference strengths and activation warnings wrap without clipping.
+- Remaining manual review: run the functional/zero/concurrency SQL sequence in `fis-fixture-test`, then exercise successful Supabase-backed save/validate/activate failure messages with a real disposable administrator session. No SQL or RPC file was changed during this visual-QA phase.
+- Added immutable source snapshots plus complete preference/private-note add, edit, remove, clear, reset and opt-out controls.
+- Added client and SQL validation for malformed times, unsupported strengths and duplicate/conflicting kick-off times.
+- Replaced placeholder concurrency scripts with a deterministic same-version activation race; Session A holds the draft lock for 15 seconds and Session B must fail with SQLSTATE `40001`.
+- Corrected a disposable-only concurrency harness defect found before the race: the scripts referenced nonexistent `project_marker.singleton`. All Seasons verification and concurrency administrator lookups now use the marker's real primary key, `project_name = 'fis-fixture-test'`. The failed prepare stopped inside its explicit transaction before `commit`, so it could not persist partial test data. Preparation now removes only its reserved deterministic draft/source records before recreating them and is safely rerunnable without changing the marker, Auth user or administrator membership.
+- Corrected disposable rerun sequence: run `supabase/tests/season_draft_concurrency_prepare.sql`, then Session A and Session B as documented, followed by verify, cleanup and the zero-record check.
+- Corrected the disposable concurrency cleanup after the installed archive guard properly rejected its attempt to change the archived source edition back to `planned`. The cleanup now follows the established disposable fixture-cleanup pattern: after asserting the marker, one transaction disables only the four relevant archived-data trigger instances, deletes the reserved hierarchy child-to-parent, restores and verifies every trigger and protection function, and then commits. The failed cleanup transaction aborted before commit, so all earlier deletions were rolled back and the concurrency records should still be present. Rerun `supabase/tests/season_draft_concurrency_cleanup.sql`, require all six returned Booleans to be true, then run `supabase/tests/disposable_season_draft_zero_check.sql`.
+- Expanded the rollback-only verifier with its own fixtures, results and adjustment history, anonymous/non-admin rejection, stale validation, forced mid-activation failure, successful activation and exclusion assertions.
+- Expanded schema preflight, zero-record checks, and read-only production baseline/postflight diagnostics.
+- Final local checks pass: 114 automated tests, ESLint, TypeScript, static production build, finals validation, snapshot validation, current-season import validation/static check and `git diff --check`. `/admin/seasons` is present in the static export. No Supabase write occurred and the migration remains unapplied.
+- Synthetic desktop rendering showed no body-level horizontal overflow. The in-app browser did not apply requested viewport overrides or dispatch the synthetic wizard step controls reliably, so 1254/1024/768/390/360 interactive screenshots remain a manual-review item. The temporary visual route and hook were removed before final checks.
+
+## Future UI task
+
+Perform a full-site Unbounded typography audit and establish a consistent responsive type scale for body copy, form help text, validation messages, navigation, cards, tables, modal/sheet copy, headings and subheadings. Press Start 2P should remain reserved for compact labels, headings and actions. Unbounded should use smaller, consistent sizes for supporting text and validation.
+
+## Seasons release verification complete
+
+- Disposable migration and schema preflight passed with every field true. Functional verification passed, its rollback zero-check returned all counts zero, and the administrator and disposable marker remained intact.
+- In the genuine two-session activation race, Session A committed and Session B waited before being rejected with SQLSTATE `40001`. Every concurrency verification field passed.
+- The disposable administrator lookup and archived-record cleanup harness defects were corrected without changing the production migration or application RPCs. Corrected cleanup and the final zero-check passed with every count zero, `all_verification_rows_removed`, `administrator_preserved` and `marker_preserved` all true.
+- Production preflight recorded: 1 season; 2 competitions; 2 competition seasons; 2 active and public editions; 34 teams; 0 preferences; 0 notes; 326 fixtures; 326 result versions; 38 standing adjustments; 738 audit rows; and 1 administrator.
+- The production migration applied successfully. Every postflight field and `all_postflight_checks_passed` returned true. No production draft was created, and business-data counts, public visibility and administrator membership remained unchanged.
+- The production-applied migration remained unchanged through the later disposable and UI corrections. Checkpoint SHA-256: `CEDFCD560319F4C15479C21B7B502E903F4B754905C549480F163FEC55BB0623`.
+- Desktop and mobile Seasons landing pages were reviewed. The create button remains enabled until a valid request starts; invalid submissions show field-associated inline errors and one compact alert, focus the first invalid field, and never call Supabase. The request-only loading state prevents duplicates and recovers after failure.
+- Snapshot automation remains inactive. Competition, finals, grading, knockout and fallback JSON remain unchanged.
+
+### Non-blocking future enhancements
+
+- Return a team from any historical season rather than only the immediate source season.
+- Add a brand-new team during season setup.
+- Support mid-season team joining or withdrawal.
+- Support mid-season replacement while preserving historical results.
+- Regenerate only affected future fixtures.
+- Add more flexible scheduling and round generation.
+
+Exceptional changes will be planned and reviewed manually with Codex until those workflows are implemented.

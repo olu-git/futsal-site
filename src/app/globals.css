@@ -451,6 +451,7 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .admin-standing-editor .admin-team-actions { position: static; flex-wrap: wrap; }
 .admin-standing-editor .admin-team-actions button:disabled { opacity: .45; cursor: not-allowed; }
 .admin-adjustment-history { margin-top: 20px; }.admin-adjustment-history h4 { padding-bottom: 8px; border-bottom: 2px solid var(--fis-blue); font: 8px/1.4 var(--font-mono); text-transform: uppercase; }.admin-adjustment-history article { margin-top: 10px; border: 1px solid #aab5c5; padding: 10px; background: white; }.admin-adjustment-history article > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px; }.admin-adjustment-history b,.admin-adjustment-history em { font: 7px/1.4 var(--font-mono); font-style: normal; text-transform: uppercase; }.admin-adjustment-history em { color: #52617b; }.admin-adjustment-history em.is-published { color: #08783e; }.admin-adjustment-history em.is-pending_review { color: #9a6400; }.admin-adjustment-history p { margin: 8px 0; font-size: 10px; overflow-wrap: anywhere; }.admin-adjustment-history small { display: block; color: #52617b; font: 7px/1.6 var(--font-mono); }.admin-adjustment-history button { margin-top: 9px; border: 1px solid var(--fis-blue); padding: 7px; background: white; color: var(--fis-blue); font: 7px/1 var(--font-mono); text-transform: uppercase; }
+.admin-season-summary,.admin-season-create,.admin-season-list { margin-top: 20px; border-top: 5px solid var(--fis-red); padding: 18px; background: white; }.admin-season-summary h3,.admin-season-create h3,.admin-season-list h3,.admin-season-review h3 { margin-bottom: 14px; color: var(--fis-blue); font: 9px/1.5 var(--font-mono); text-transform: uppercase; }.admin-season-summary article,.admin-season-list article,.admin-season-list button { display: grid; gap: 5px; width: 100%; border: 1px solid #aab5c5; padding: 13px; text-align: left; background: var(--fis-cream-light); }.admin-season-summary small,.admin-season-list span { color: #52617b; font: 7px/1.6 var(--font-mono); text-transform: uppercase; }.admin-season-create>form { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 10px; align-items: start; }.admin-season-create label,.admin-season-panel label,.admin-season-cards label,.admin-season-profiles label { display: grid; gap: 6px; color: var(--fis-blue); font: 7px/1.5 var(--font-mono); text-transform: uppercase; }.admin-season-create input,.admin-season-panel input,.admin-season-cards input,.admin-season-cards select,.admin-season-teams select,.admin-season-profiles textarea { min-width: 0; border: 1px solid #6d91ca; padding: 10px; background: white; color: var(--fis-ink); }.admin-season-create button,.admin-season-wizard button { min-height: 42px; border: 1px solid var(--fis-blue); padding: 9px 12px; background: white; color: var(--fis-blue); font: 7px/1.5 var(--font-mono); text-transform: uppercase; }.admin-season-create button:not(:disabled) { cursor: pointer; }.admin-season-create button[aria-busy="true"] { cursor: progress; }.admin-season-create-errors { margin: 12px 0 0; border-left: 3px solid var(--fis-red); padding: 7px 9px; background: #f7dfe0; color: #8c1018; font-size: 11px; line-height: 1.45; }.admin-season-wizard>header { display: flex; justify-content: space-between; gap: 16px; }.admin-lifecycle-badge { color: #08783e; font: 7px/1.5 var(--font-mono); text-transform: uppercase; }.admin-season-wizard>nav { display: grid; grid-template-columns: repeat(5,1fr); margin: 22px 0; }.admin-season-wizard>nav button[aria-current="step"] { border-color: var(--fis-red); background: var(--fis-blue); color: white; }.admin-season-panel { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px; }.admin-season-cards,.admin-season-profiles { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }.admin-season-cards article,.admin-season-profiles article,.admin-season-teams section,.admin-season-review { border: 1px solid #aab5c5; padding: 14px; background: white; }.admin-season-cards article>div { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }.admin-season-teams section { margin-top: 12px; }.admin-season-teams section>label { display: grid; grid-template-columns: 24px 30px minmax(0,1fr) minmax(130px,220px); align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid #d6dce5; }.admin-season-teams .team-kit,.admin-season-profiles .team-kit { width: 26px; height: 28px; }.admin-bulk-actions { display: flex; gap: 8px; }.admin-season-profiles article header { display: grid; grid-template-columns: 30px minmax(0,1fr) auto; align-items: center; gap: 8px; }.admin-season-profiles textarea { width: 100%; min-height: 70px; margin-top: 10px; }.admin-season-review dl { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }.admin-season-review dl div { border: 1px solid #aab5c5; padding: 10px; }.admin-season-review dt { font: 7px/1.5 var(--font-mono); text-transform: uppercase; }.admin-season-review dd { margin: 5px 0 0; }.admin-season-wizard>footer { position: sticky; bottom: 0; display: flex; justify-content: flex-end; gap: 8px; margin-top: 18px; padding: 12px 0 calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid var(--fis-blue); background: var(--fis-cream-light); }
 @media (max-width: 900px) {
   .primary-nav { gap: 18px; }
   .nav-cluster { gap: 20px; }
@@ -571,6 +572,15 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
   .admin-standing-sheet .admin-field-error { margin-bottom: 10px; line-height: 1.6; }
   .admin-standing-sheet .admin-adjustment-history { padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
   .admin-delta-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .admin-season-create>form,.admin-season-panel,.admin-season-cards,.admin-season-profiles { grid-template-columns: 1fr; }
+  .admin-season-wizard>nav { display: flex; overflow-x: auto; }
+  .admin-season-wizard>nav button { flex: 0 0 150px; }
+  .admin-season-teams section>label { grid-template-columns: 24px 28px minmax(0,1fr); }
+  .admin-season-teams section>label select { grid-column: 3; width: 100%; }
+  .admin-season-profiles article header { grid-template-columns: 28px minmax(0,1fr); }
+  .admin-season-profiles article header label { grid-column: 1/-1; }
+  .admin-season-review dl { grid-template-columns: 1fr 1fr; }
+  .admin-season-wizard>footer { position: static; display: grid; grid-template-columns: 1fr; }
 }
 @media (max-width: 540px) {
   .home-hero h1 { font-size: 23px; }
@@ -600,6 +610,104 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
   .home-hero h1 { font-size: 20px; }
   .league-head { flex-wrap: wrap; gap: 8px; }
   .fixture-team { font-size: 8px; }
+}
+.admin-private-note { margin: 10px 0; color: #52617b; font-size: 13px; }
+.admin-preference-list { display: grid; gap: 8px; margin: 12px 0; }
+.admin-preference-list > span { color: var(--fis-blue); font: 7px/1.5 var(--font-mono); text-transform: uppercase; }
+.admin-preference-row { display: grid; grid-template-columns: minmax(110px,1fr) minmax(130px,1fr) auto; gap: 8px; align-items: end; }
+.admin-preference-row input,.admin-preference-row select { width: 100%; min-width: 0; border: 1px solid #6d91ca; padding: 9px; background: white; }
+.admin-profile-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 12px; }
+@media (max-width: 768px) {
+  .admin-preference-row { grid-template-columns: 1fr 1fr; }
+  .admin-preference-row button { grid-column: 1/-1; }
+}
+.admin-season-summary article { grid-template-columns: minmax(0,1fr) auto; align-items: start; gap: 8px 20px; }
+.admin-season-summary article > div { display: grid; gap: 4px; }
+.admin-season-summary article ul { grid-column: 1/-1; display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 4px 0 0; padding: 10px 0 0; border-top: 1px solid #d6dce5; list-style: none; font-size: 13px; }
+.admin-season-empty { margin: 0; padding: 14px; border: 1px dashed #9aa8bb; color: #52617b; }
+.admin-lifecycle-badge { width: fit-content; padding: 4px 6px; border: 1px solid currentColor; }
+.admin-lifecycle-badge.is-validated { color: #0b6099; }
+.admin-lifecycle-badge.is-abandoned { color: #7b3030; }
+.admin-season-wizard { width: 100%; min-width: 0; }
+.admin-season-dialog-open { overflow: hidden; }
+.admin-season-wizard > header { align-items: start; }
+.admin-season-close { flex: 0 0 auto; }
+.admin-season-wizard > nav button { display: flex; align-items: center; justify-content: center; gap: 7px; min-width: 0; }
+.admin-season-wizard > nav button span { color: var(--fis-red); }
+.admin-season-wizard > nav button[aria-current="step"] span { color: white; }
+.admin-season-step { min-width: 0; }
+.admin-season-step-heading { display: flex; align-items: end; justify-content: space-between; gap: 14px; margin-bottom: 12px; }
+.admin-season-step-heading h3 { margin: 0 0 4px; color: var(--fis-blue); font: 9px/1.5 var(--font-mono); text-transform: uppercase; }
+.admin-season-step-heading p { margin: 0; }
+.admin-season-cards > button { grid-column: 1/-1; justify-self: end; }
+.admin-season-cards article.is-removed { opacity: .62; background: #eef0f2; }
+.admin-season-retain { display: flex !important; grid-template-columns: none; align-items: center; }
+.admin-season-team-row { display: grid; grid-template-columns: minmax(0,1fr) minmax(180px,260px); gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid #d6dce5; }
+.admin-season-team-row > label:first-child { display: grid; grid-template-columns: 24px 30px minmax(0,1fr); align-items: center; gap: 8px; min-width: 0; }
+.admin-season-team-row > label:first-child span { min-width: 0; overflow-wrap: anywhere; }
+.admin-season-team-row > label:last-child { display: grid; gap: 5px; color: var(--fis-blue); font: 7px/1.5 var(--font-mono); text-transform: uppercase; }
+.admin-season-profile-card header > div { display: grid; gap: 3px; min-width: 0; }
+.admin-season-profile-card header strong { overflow-wrap: anywhere; }
+.admin-season-profile-card header small { color: #52617b; font: 7px/1.4 var(--font-mono); text-transform: uppercase; }
+.admin-season-copy-toggle { display: flex !important; grid-template-columns: none; align-items: center; }
+.admin-preference-list { min-width: 0; margin: 12px 0; padding: 0; border: 0; }
+.admin-preference-list legend { margin-bottom: 8px; color: var(--fis-blue); font: 7px/1.5 var(--font-mono); text-transform: uppercase; }
+.admin-season-warning { margin: 16px 0; border-left: 4px solid var(--fis-red); padding: 12px; background: #f3e5e2; }
+.admin-season-warning strong { color: var(--fis-red); font: 8px/1.5 var(--font-mono); text-transform: uppercase; }
+.admin-season-warning p { margin: 7px 0 0; }
+.admin-season-activate { border-color: var(--fis-red) !important; background: var(--fis-red) !important; color: white !important; }
+.admin-season-activate:disabled { opacity: .42; }
+.admin-season-help { margin: 8px 0 0; color: #52617b; font-size: 13px; }
+.admin-season-wizard > footer { align-items: center; justify-content: space-between; z-index: 2; }
+.admin-season-wizard > footer { position: static; }
+.admin-season-step-actions,.admin-season-save-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.admin-season-wizard button:focus-visible,.admin-season-wizard input:focus-visible,.admin-season-wizard select:focus-visible,.admin-season-wizard textarea:focus-visible { outline: 3px solid var(--fis-red); outline-offset: 2px; }
+@media (max-width: 1024px) {
+  .admin-season-create > form { grid-template-columns: 1fr 1fr; }
+  .admin-season-create > form label:first-child { grid-column: 1/-1; }
+  .admin-season-create > form button { justify-self: start; }
+  .admin-season-wizard > nav { grid-template-columns: repeat(5,minmax(120px,1fr)); overflow-x: auto; }
+  .admin-season-wizard > nav button { white-space: normal; }
+  .admin-season-cards,.admin-season-profiles { grid-template-columns: 1fr; }
+  .admin-season-review dl { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 767px) {
+  .admin-season-summary article { grid-template-columns: 1fr; }
+  .admin-season-summary article small,.admin-season-summary article ul { grid-column: 1; }
+  .admin-season-create > form,.admin-season-panel { grid-template-columns: 1fr; }
+  .admin-season-create > form { row-gap: 18px; }
+  .admin-season-create > form label:first-child { grid-column: auto; }
+  .admin-season-create > form button { margin-top: 4px; }
+  .admin-season-wizard { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; overflow: hidden; padding: max(14px,env(safe-area-inset-top)) 14px max(14px,env(safe-area-inset-bottom)); background: var(--fis-cream-light); }
+  .admin-season-wizard > header { flex: 0 0 auto; padding-bottom: 10px; border-bottom: 4px solid var(--fis-red); background: var(--fis-cream-light); }
+  .admin-season-wizard > header h2 { font-size: 19px; overflow-wrap: anywhere; }
+  .admin-season-close { min-width: 72px; }
+  .admin-season-wizard > nav { flex: 0 0 auto; display: flex; gap: 5px; margin: 10px 0; padding: 0 0 5px; overflow-x: auto; scroll-snap-type: x proximity; }
+  .admin-season-wizard > nav button { flex: 0 0 132px; min-height: 48px; padding: 7px; scroll-snap-align: start; }
+  .admin-season-step { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 4px 2px 24px; }
+  .admin-season-step-heading { align-items: stretch; flex-direction: column; }
+  .admin-season-step-heading > button { align-self: start; }
+  .admin-season-cards > button { justify-self: stretch; }
+  .admin-season-cards article > div { grid-template-columns: 1fr; }
+  .admin-season-team-row { grid-template-columns: 1fr; }
+  .admin-season-team-row > label:last-child { padding-left: 62px; }
+  .admin-season-profiles article { padding: 12px; }
+  .admin-season-profile-card header { grid-template-columns: 28px minmax(0,1fr) !important; }
+  .admin-season-copy-toggle { grid-column: 1/-1 !important; }
+  .admin-preference-row { grid-template-columns: 1fr 1fr; }
+  .admin-preference-row button { grid-column: 1/-1; width: 100%; }
+  .admin-season-review dl { grid-template-columns: 1fr 1fr; }
+  .admin-season-wizard > footer { position: static; flex: 0 0 auto; display: grid; gap: 8px; margin: 0; padding: 10px 0 0; border-top: 1px solid var(--fis-blue); background: var(--fis-cream-light); }
+  .admin-season-step-actions,.admin-season-save-actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .admin-season-save-actions button:last-child { grid-column: 1/-1; }
+}
+@media (max-width: 390px) {
+  .admin-season-wizard { padding-left: 10px; padding-right: 10px; }
+  .admin-season-review dl,.admin-preference-row { grid-template-columns: 1fr; }
+  .admin-preference-row button { grid-column: 1; }
+  .admin-season-team-row > label:last-child { padding-left: 0; }
+  .admin-season-step-actions,.admin-season-save-actions { grid-template-columns: 1fr; }
+  .admin-season-save-actions button:last-child { grid-column: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

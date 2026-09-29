@@ -1,0 +1,26 @@
+-- DISPOSABLE TEST PROJECT ONLY — DO NOT RUN IN PRODUCTION
+select fis_fixture_test.assert_disposable();
+begin;
+delete from public.season_drafts d where d.name='__FIS season concurrency target__';
+delete from public.team_fixture_notes n where n.team_id='00000000-0000-4000-8000-00000000ea06';
+delete from public.team_kickoff_preferences p where p.team_id='00000000-0000-4000-8000-00000000ea06';
+delete from public.teams t where t.id='00000000-0000-4000-8000-00000000ea06';
+delete from public.competition_seasons cs where cs.id='00000000-0000-4000-8000-00000000ea05';
+delete from public.competitions c where c.id='00000000-0000-4000-8000-00000000ea04';
+delete from public.seasons s where s.id='00000000-0000-4000-8000-00000000ea01';
+delete from public.categories c where c.id='00000000-0000-4000-8000-00000000ea02';
+delete from public.locations l where l.id='00000000-0000-4000-8000-00000000ea03';
+insert into public.seasons(id,name,starts_on,ends_on) values('00000000-0000-4000-8000-00000000ea01','__FIS season concurrency source__','2098-01-01','2098-06-30');
+insert into public.categories(id,code,name) values('00000000-0000-4000-8000-00000000ea02','__fis_season_concurrency__','__FIS season concurrency category__');
+insert into public.locations(id,name,address,active) values('00000000-0000-4000-8000-00000000ea03','__FIS season concurrency venue__','Disposable verification only',true);
+insert into public.competitions(id,category_id,location_id,weekday,division,name) values('00000000-0000-4000-8000-00000000ea04','00000000-0000-4000-8000-00000000ea02','00000000-0000-4000-8000-00000000ea03',1,'VERIFY','__FIS season concurrency competition__');
+insert into public.competition_seasons(id,competition_id,season_id,lifecycle,publication_state) values('00000000-0000-4000-8000-00000000ea05','00000000-0000-4000-8000-00000000ea04','00000000-0000-4000-8000-00000000ea01','active','published');
+insert into public.teams(id,competition_season_id,name,status,standings_eligible,kit_colour) values('00000000-0000-4000-8000-00000000ea06','00000000-0000-4000-8000-00000000ea05','__FIS season concurrency team__','active',true,'#112233');
+insert into public.team_kickoff_preferences(team_id,kickoff_time,classification) values('00000000-0000-4000-8000-00000000ea06','19:00','preferred');
+insert into public.team_fixture_notes(team_id,notes) values('00000000-0000-4000-8000-00000000ea06','Concurrency source note');
+select set_config('request.jwt.claim.sub',(select m.disposable_admin_user_id::text from fis_fixture_test.project_marker m where m.project_name='fis-fixture-test'),true);
+select set_config('request.jwt.claim.role','authenticated',true);
+select * from public.create_season_draft('__FIS season concurrency target__','2098-07-01','2098-12-31','00000000-0000-4000-8000-00000000ea01');
+select * from public.validate_season_draft((select d.id from public.season_drafts d where d.name='__FIS season concurrency target__'),1);
+commit;
+select d.id as draft_id,d.version as expected_version from public.season_drafts d where d.name='__FIS season concurrency target__';

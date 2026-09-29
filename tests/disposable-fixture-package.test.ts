@@ -29,6 +29,13 @@ const scripts = [
   "standing_adjustment_concurrency_session_b.sql",
   "standing_adjustment_concurrency_verify.sql",
   "standing_adjustment_concurrency_cleanup.sql",
+  "disposable_season_draft_schema_preflight.sql",
+  "disposable_season_draft_zero_check.sql",
+  "season_draft_concurrency_prepare.sql",
+  "season_draft_concurrency_session_a.sql",
+  "season_draft_concurrency_session_b.sql",
+  "season_draft_concurrency_verify.sql",
+  "season_draft_concurrency_cleanup.sql",
 ];
 
 test("disposable SQL package has explicit guards and no Auth-user insertion", () => {
@@ -49,6 +56,7 @@ test("migration order and rollback-only verification remain explicit", () => {
     "202609270001_fixture_change_sets.sql",
     "202609280001_transactional_team_profile_save.sql",
     "202609290001_transactional_standing_adjustments.sql",
+    "202609300001_season_draft_management.sql",
   ]);
   const verification = readFileSync("supabase/verification/verify_fixture_change_sets.sql", "utf8");
   assert.match(verification, /^-- DISPOSABLE TEST PROJECT ONLY — DO NOT RUN IN PRODUCTION/m);
@@ -232,4 +240,58 @@ test("fixture-change PL/pgSQL locals and parameters use explicit prefixes", () =
 
   assert.ok(inspected >= 7, "expected every fixture-change PL/pgSQL function to be inspected");
   assert.doesNotMatch(migration, /returns\s+table\s*\(/i);
+});
+
+test("season activation concurrency package performs a genuine stale-version race", () => {
+  const prepare = readFileSync(`${directory}/season_draft_concurrency_prepare.sql`, "utf8");
+  const sessionA = readFileSync(`${directory}/season_draft_concurrency_session_a.sql`, "utf8");
+  const sessionB = readFileSync(`${directory}/season_draft_concurrency_session_b.sql`, "utf8");
+  const verify = readFileSync(`${directory}/season_draft_concurrency_verify.sql`, "utf8");
+  const cleanup = readFileSync(`${directory}/season_draft_concurrency_cleanup.sql`, "utf8");
+  assert.match(prepare, /create_season_draft/);
+  assert.match(prepare, /validate_season_draft/);
+  assert.match(prepare, /expected_version/);
+  assert.match(prepare, /delete from public\.season_drafts[\s\S]*insert into public\.seasons/);
+  assert.match(sessionA, /activate_season_draft[\s\S]*,2,'ACTIVATE'/);
+  assert.match(sessionA, /pg_sleep\(15\)/);
+  assert.match(sessionB, /activate_season_draft[\s\S]*,2,'ACTIVATE'/);
+  assert.doesNotMatch(`${sessionA}${sessionB}`, /pg_advisory/);
+  for (const result of ["one_activation_committed", "one_active_edition", "one_team_created", "one_preference_created", "one_note_created", "session_a_won"]) assert.match(verify, new RegExp(result));
+  assert.match(cleanup, /private\.admin_users/);
+  assert.match(cleanup, /disposable_admin_user_id is not null/);
+  assert.doesNotMatch(cleanup, /delete\s+from\s+(?:private\.admin_users|auth\.users)/i);
+  assert.doesNotMatch(cleanup, /update\s+fis_fixture_test\.project_marker/i);
+  assert.doesNotMatch(cleanup, /update\s+public\.competition_seasons[\s\S]*set\s+lifecycle/i);
+  assert.match(cleanup, /^begin;[\s\S]*select fis_fixture_test\.assert_disposable\(\);/m);
+  assert.equal((cleanup.match(/^begin;/gim) ?? []).length, 1);
+  assert.equal((cleanup.match(/^commit;/gim) ?? []).length, 1);
+  for (const trigger of ["protect_archived_competition_season", "protect_archived_data"]) {
+    assert.match(cleanup, new RegExp(`disable trigger ${trigger}`));
+    assert.match(cleanup, new RegExp(`enable trigger ${trigger}`));
+  }
+  assert.match(cleanup, /delete from public\.season_drafts[\s\S]*delete from public\.team_fixture_notes[\s\S]*delete from public\.team_kickoff_preferences[\s\S]*delete from public\.teams[\s\S]*delete from public\.competition_seasons[\s\S]*delete from public\.seasons/);
+  assert.match(cleanup, /competition_season_guard_enabled/);
+  assert.match(cleanup, /competition_data_guards_enabled/);
+  assert.match(cleanup, /protection_functions_preserved/);
+  assert.match(cleanup, /commit;[\s\S]*competition_season_guard_enabled/);
+
+  const seasonPackage = `${prepare}${sessionA}${sessionB}${verify}${cleanup}${readFileSync("supabase/verification/verify_season_drafts.sql", "utf8")}`;
+  assert.doesNotMatch(seasonPackage, /\b(?:m\.)?singleton\b/i);
+  assert.equal(
+    [...seasonPackage.matchAll(/select m\.disposable_admin_user_id(?:::text)?(?: into v_admin)? from fis_fixture_test\.project_marker m where m\.project_name='fis-fixture-test'/g)].length,
+    5,
+    "every Seasons administrator lookup must use the deterministic disposable marker key",
+  );
+});
+
+test("season rollback verifier is self-contained and tests activation failure", () => {
+  const sql = readFileSync("supabase/verification/verify_season_drafts.sql", "utf8");
+  for (const table of ["categories", "locations", "competitions", "seasons", "competition_seasons", "teams", "team_kickoff_preferences", "team_fixture_notes", "fixtures", "result_versions", "standing_adjustments"]) assert.match(sql, new RegExp(`insert into public\\.${table}`));
+  assert.match(sql, /forced activation failure/);
+  assert.match(sql, /anonymous caller is rejected/);
+  assert.match(sql, /non-admin caller is rejected/);
+  assert.match(sql, /fixtures were not copied/);
+  assert.match(sql, /^begin;/m);
+  assert.doesNotMatch(sql, /^commit;/im);
+  assert.match(sql, /season_draft_verification_passed[\s\S]*rollback;\s*$/);
 });
