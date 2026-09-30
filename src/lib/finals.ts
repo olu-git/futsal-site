@@ -25,15 +25,33 @@ export type FinalsSlot =
   | { type: "seed"; value: number }
   | { type: "winner" | "loser"; matchId: string };
 
-export interface FinalsMatch {
+interface FinalsMatchBase {
   id: string;
   round: FinalsRound;
   label: string;
   week: number;
+}
+
+export interface ScheduledFinalsMatch extends FinalsMatchBase {
+  status?: never;
   time: string;
   court: number;
   a: FinalsSlot;
   b: FinalsSlot;
+}
+
+export interface AbandonedFinalsMatch extends FinalsMatchBase {
+  status: "abandoned";
+  time: null;
+  court: null;
+  a: null;
+  b: null;
+}
+
+export type FinalsMatch = ScheduledFinalsMatch | AbandonedFinalsMatch;
+
+export function isScheduledFinalsMatch(match: FinalsMatch): match is ScheduledFinalsMatch {
+  return match.status !== "abandoned";
 }
 
 export interface ResolvedFinalsTeam {
@@ -56,7 +74,7 @@ const wednesdayQuarterFinals: FinalsMatch[] = [
   { id: "qf-1", round: "QF", label: "QF1", week: 1, time: "19:40", court: 1, a: winner("r16-m1"), b: winner("r16-m2") },
   { id: "qf-2", round: "QF", label: "QF2", week: 1, time: "19:40", court: 2, a: winner("r16-m3"), b: winner("r16-m4") },
   { id: "qf-3", round: "QF", label: "QF3", week: 1, time: "20:20", court: 1, a: winner("r16-m5"), b: winner("r16-m6") },
-  { id: "qf-4", round: "QF", label: "QF4", week: 1, time: "20:20", court: 2, a: winner("r16-m7"), b: winner("r16-m8") },
+  { id: "qf-4", round: "QF", label: "QF4", week: 1, time: "19:00", court: 1, a: winner("r16-m7"), b: winner("r16-m8") },
 ];
 
 const mondayGradingGames: FinalsMatch[] = [
@@ -67,10 +85,10 @@ const mondayGradingGames: FinalsMatch[] = [
 ];
 
 const wednesdayGradingGames: FinalsMatch[] = [
-  { id: "grading-1", round: "Grading", label: "G1", week: 1, time: "19:00", court: 1, a: loser("r16-m1"), b: loser("r16-m4") },
-  { id: "grading-2", round: "Grading", label: "G2", week: 1, time: "21:00", court: 1, a: loser("r16-m7"), b: loser("r16-m2") },
-  { id: "grading-3", round: "Grading", label: "G3", week: 1, time: "19:00", court: 2, a: loser("r16-m5"), b: loser("r16-m3") },
-  { id: "grading-4", round: "Grading", label: "G4", week: 1, time: "21:00", court: 2, a: loser("r16-m6"), b: loser("r16-m8") },
+  { id: "grading-1", round: "Grading", label: "G1", week: 1, time: "19:00", court: 2, a: loser("r16-m1"), b: loser("r16-m5") },
+  { id: "grading-2", round: "Grading", label: "G2", week: 1, time: "20:20", court: 2, a: loser("r16-m8"), b: loser("r16-m2") },
+  { id: "grading-3", round: "Grading", label: "G3", week: 1, status: "abandoned", time: null, court: null, a: null, b: null },
+  { id: "grading-4", round: "Grading", label: "G4", week: 1, status: "abandoned", time: null, court: null, a: null, b: null },
 ];
 
 const finalRoundsTemplate: FinalsMatch[] = [
@@ -122,17 +140,18 @@ export function winnerSide(result?: FinalsResult): FinalsSide | null {
 }
 
 export function resolveFinalsSlot(
-  slot: FinalsSlot,
+  slot: FinalsSlot | null,
   night: CompetitionNight,
   data: FinalsNightData
 ): ResolvedFinalsTeam | null {
+  if (!slot) return null;
   if (slot.type === "seed") {
     const name = data.seeds[slot.value - 1];
     return name ? { name, seed: slot.value } : null;
   }
 
   const feeder = finalsMatches[night].find((match) => match.id === slot.matchId);
-  if (!feeder) return null;
+  if (!feeder || !isScheduledFinalsMatch(feeder)) return null;
 
   const winningSide = winnerSide(data.results[feeder.id]);
   if (!winningSide) return null;

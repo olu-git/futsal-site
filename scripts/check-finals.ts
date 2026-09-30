@@ -5,6 +5,7 @@ import wednesdayFixturesData from "../src/data/wednesday-fixtures.json";
 import {
   finalsDates,
   finalsMatches,
+  isScheduledFinalsMatch,
   resolveFinalsSlot,
   winnerSide,
   type FinalsNightData,
@@ -51,7 +52,8 @@ for (const night of nights) {
   assert.equal(new Set(ids).size, ids.length, `${night} match IDs should be unique`);
 
   for (const [matchId, result] of Object.entries(data.results)) {
-    assert(ids.includes(matchId), `${night} result ${matchId} should reference a known match`);
+    const match = finalsMatches[night].find((item) => item.id === matchId);
+    assert(match && isScheduledFinalsMatch(match), `${night} result ${matchId} should reference a scheduled match`);
     assert(Number.isFinite(result.scoreA) && Number.isFinite(result.scoreB));
     if (result.forfeitSide !== undefined) {
       assert(["A", "B"].includes(result.forfeitSide), `${night} ${matchId} has an invalid forfeit side`);
@@ -65,12 +67,13 @@ for (const night of nights) {
     }
   }
 
-  const slots = finalsMatches[night].map(
+  const slots = finalsMatches[night].filter(isScheduledFinalsMatch).map(
     (match) => `${match.week}|${match.time}|${match.court}`
   );
   assert.equal(new Set(slots).size, slots.length, `${night} time/court slots should be unique`);
 
   const firstRound = finalsMatches[night]
+    .filter(isScheduledFinalsMatch)
     .filter((match) => match.round === "R16")
     .map((match) => {
       assert(match.a.type === "seed" && match.b.type === "seed");
@@ -99,7 +102,7 @@ for (const night of nights) {
     assert.equal(umoja.match.time, "21:00");
   }
 
-  for (const match of finalsMatches[night]) {
+  for (const match of finalsMatches[night].filter(isScheduledFinalsMatch)) {
     const resolvedTeams = [
       resolveFinalsSlot(match.a, night, data)?.name,
       resolveFinalsSlot(match.b, night, data)?.name,
@@ -155,6 +158,29 @@ assert.equal(
   resolveFinalsSlot(wednesdayQuarterFinalTwo.b, "wednesday", wednesdayFinals)?.name,
   "Hazara United"
 );
+
+const wednesdayPlayed = [
+  ["qf-4", "19:00", 1, "Goldlink Up", "Wildcats", 5, 4],
+  ["grading-1", "19:00", 2, "Kuq E Zi", "MTS FC", 10, 4],
+  ["qf-1", "19:40", 1, "AFG", "Moza Mama", 8, 4],
+  ["qf-2", "19:40", 2, "Pops", "Hazara United", 8, 4],
+  ["qf-3", "20:20", 1, "Ghazni United", "Misfits", 10, 7],
+  ["grading-2", "20:20", 2, "Rinnai", "Toss", 4, 8],
+] as const;
+for (const [id, time, court, home, away, homeScore, awayScore] of wednesdayPlayed) {
+  const match = finalsMatches.wednesday.find((item) => item.id === id);
+  assert(match && isScheduledFinalsMatch(match), `Wednesday ${id} must be scheduled`);
+  assert.equal(match.time, time);
+  assert.equal(match.court, court);
+  assert.equal(resolveFinalsSlot(match.a, "wednesday", wednesdayFinals)?.name, home);
+  assert.equal(resolveFinalsSlot(match.b, "wednesday", wednesdayFinals)?.name, away);
+  assert.deepEqual(wednesdayFinals.results[id], { scoreA: homeScore, scoreB: awayScore });
+}
+for (const id of ["grading-3", "grading-4"]) {
+  const match = finalsMatches.wednesday.find((item) => item.id === id);
+  assert(match && !isScheduledFinalsMatch(match), `Wednesday ${id} must be abandoned`);
+  assert.equal(wednesdayFinals.results[id], undefined, `Abandoned ${id} cannot have a result`);
+}
 
 assert.equal(winnerSide(undefined), null);
 assert.equal(winnerSide({ scoreA: 2, scoreB: 2 }), null);

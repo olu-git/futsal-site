@@ -30,6 +30,6 @@ test("semantic typography utilities are used by shared public headings", () => {
   const bracket = readFileSync("src/components/KnockoutBracket.tsx", "utf8");
   assert.match(section, /type-page-title/);
   assert.match(section, /type-body-compact/);
-  assert.match(bracket, /type-section-title/);
   assert.match(bracket, /type-card-title/);
+  assert.doesNotMatch(bracket, /Grading Games/);
 });

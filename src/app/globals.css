@@ -335,8 +335,6 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .admin-matchup-prominent .admin-matchup-score { font-size: 26px; }
 .admin-matchup-no-scores .admin-matchup-side { grid-template-columns: 34px minmax(0,1fr); }
 .bracket-section { background: var(--fis-navy); color: white; border-block: 4px solid var(--fis-red); }
-.bracket-grading { min-width: 0; background: var(--fis-blue-dark); border-color: #ffffff80; }
-.bracket-grading > div, .bracket-grading > div > div { min-width: 0; }
 .bracket-match { overflow: hidden; background: var(--fis-cream-light); color: var(--fis-ink); border: 1px solid var(--fis-border); border-left: 4px solid var(--fis-red); }
 .bracket-match-final { border: 2px solid var(--fis-red); }
 .bracket-match-head { display: flex; justify-content: space-between; align-items: start; gap: 8px; min-height: 37px; padding: 10px 12px; background: var(--fis-blue); color: white; font: 8px/1.7 var(--font-mono); text-transform: uppercase; }
@@ -869,7 +867,6 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
 .home-finals-nav a { margin-left: auto; color: white; font: var(--type-action)/1.6 var(--font-mono); text-decoration: underline; text-underline-offset: 4px; text-transform: uppercase; }
 .home-bracket { border: 0; padding-top: 18px; }
 .home-bracket > div { max-width: none; padding-inline: 0; }
-.home-bracket .bracket-grading { margin-top: 0; }
 
 @media (max-width: 767px) {
   .home-hero { min-height: 610px; }

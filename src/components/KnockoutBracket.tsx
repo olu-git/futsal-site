@@ -4,12 +4,14 @@ import FixtureTeam from "./FixtureTeam";
 import {
   finalsDates,
   finalsMatches,
+  isScheduledFinalsMatch,
   resolveFinalsSlot,
   winnerSide,
-  type FinalsMatch,
   type FinalsNightData,
   type FinalsSide,
+  type FinalsSlot,
   type ResolvedFinalsTeam,
+  type ScheduledFinalsMatch,
 } from "@/lib/finals";
 import type { CompetitionNight } from "@/lib/types";
 import { formatDate, formatTime } from "@/lib/utils";
@@ -29,8 +31,7 @@ const rounds = [
 ] as const;
 
 export default function KnockoutBracket({ night, data, kitColours, preview = false }: KnockoutBracketProps) {
-  const matches = finalsMatches[night];
-  const gradingGames = matches.filter((match) => match.round === "Grading");
+  const matches = finalsMatches[night].filter(isScheduledFinalsMatch);
 
   return (
     <section id={preview ? undefined : "finals"} className={`bracket-section overflow-hidden ${preview ? "home-bracket" : "py-16 sm:py-20"}`}>
@@ -52,27 +53,6 @@ export default function KnockoutBracket({ night, data, kitColours, preview = fal
             before the knockout stages. The referee has the final say.
           </p>
         </>}
-
-        <div className="bracket-grading mt-10 border-2 p-4 sm:p-6">
-          <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h3 className="type-section-title uppercase text-white">
-                Grading Games
-              </h3>
-              <p className="type-body-compact mt-1 text-white/75">
-                Round of 16 teams continuing in grading matches
-              </p>
-            </div>
-            <p className="font-[family-name:var(--font-mono)] text-[9px] leading-5 text-white/80">
-              {formatDate(finalsDates[night][1])}
-            </p>
-          </div>
-          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {[...gradingGames].sort((a, b) => a.time.localeCompare(b.time) || a.court - b.court).map((match) => (
-              <FinalsMatchCard key={match.id} match={match} night={night} data={data} kitColours={kitColours} />
-            ))}
-          </div>
-        </div>
 
         <div
           className="mt-10 max-w-full overflow-x-auto overscroll-x-contain pb-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600"
@@ -105,7 +85,7 @@ interface FinalsRoundColumnProps {
   title: string;
   date: string;
   round: "R16" | "QF" | "SF" | "GF";
-  matches: FinalsMatch[];
+  matches: ScheduledFinalsMatch[];
   night: CompetitionNight;
   data: FinalsNightData;
   kitColours: Record<string, string | undefined>;
@@ -151,7 +131,7 @@ function FinalsRoundColumn({
 }
 
 interface FinalsMatchCardProps {
-  match: FinalsMatch;
+  match: ScheduledFinalsMatch;
   night: CompetitionNight;
   data: FinalsNightData;
   kitColours: Record<string, string | undefined>;
@@ -204,7 +184,7 @@ interface FinalsTeamRowProps {
   placeholder: string;
 }
 
-function slotLabel(slot: FinalsMatch["a"], night: CompetitionNight) {
+function slotLabel(slot: FinalsSlot, night: CompetitionNight) {
   if (slot.type === "seed") return "TBC";
   const feeder = finalsMatches[night].find((match) => match.id === slot.matchId);
   return `${slot.type === "winner" ? "Winner" : "Loser"} ${feeder?.label ?? slot.matchId}`;
