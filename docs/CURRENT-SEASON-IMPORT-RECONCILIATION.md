@@ -1,6 +1,6 @@
 # Current-season Supabase import reconciliation
 
-Generated deterministically from source digest `bcf95212532b5530a8176fcf5aea22771f4a42481103971bfe3fae88cafcd0c8`.
+Generated deterministically from source digest `9bf5c78f8f0a35afa477c81f7dac98db2f15c625f8da22fc4a1e98b08b1a62d2`.
 
 ## Source files
 
@@ -43,9 +43,9 @@ Every team below has genuine regular-season fixture or adjustment history. Inact
 
 ### Monday
 
-- Active teams (16): `mon-afg` (AFG), `mon-blue-dragons` (Blue Dragons), `mon-moza-mama` (Moza Mama), `mon-hunger-fc` (Hunger FC), `mon-goldlink-up` (Goldlink Up), `mon-misfits` (Misfits), `mon-ghazni-united` (Ghazni United), `mon-goal-diggers` (Goal Diggers), `mon-wildcats` (Wildcats), `mon-hope` (Hope), `mon-salvos` (Salvos), `mon-toss` (Toss), `mon-hazara-united` (Hazara United), `mon-top-up-fc` (Top Up FC), `mon-bunyip` (Bunyip), `mon-declans-team` (Declan's Team)
+- Active teams (16): `mon-afg` (AFG), `mon-blue-dragons` (Blue Dragons), `mon-moza-mama` (Moza Mama), `mon-hunger-fc` (Hunger FC), `mon-goldlink-up` (Goldlink Up), `mon-misfits` (Misfits), `mon-ghazni-united` (Ghazni United), `mon-goal-diggers` (Goal Diggers), `mon-wildcats` (Wildcats), `mon-hope` (Hope), `mon-salvos` (Salvos), `mon-toss` (Toss), `mon-hazara-united` (Hazara United), `mon-top-up-fc` (Top Up FC), `mon-bunyip` (Bunyip), `mon-declans-team` (Declan's Delinquents)
 - Inactive historical teams (2): `mon-samen` (Samen), `mon-buckle-city` (Buckle City)
-- Standings-eligible teams (16): `mon-afg` (AFG), `mon-blue-dragons` (Blue Dragons), `mon-moza-mama` (Moza Mama), `mon-hunger-fc` (Hunger FC), `mon-goldlink-up` (Goldlink Up), `mon-misfits` (Misfits), `mon-ghazni-united` (Ghazni United), `mon-goal-diggers` (Goal Diggers), `mon-wildcats` (Wildcats), `mon-hope` (Hope), `mon-salvos` (Salvos), `mon-toss` (Toss), `mon-hazara-united` (Hazara United), `mon-top-up-fc` (Top Up FC), `mon-bunyip` (Bunyip), `mon-declans-team` (Declan's Team)
+- Standings-eligible teams (16): `mon-afg` (AFG), `mon-blue-dragons` (Blue Dragons), `mon-moza-mama` (Moza Mama), `mon-hunger-fc` (Hunger FC), `mon-goldlink-up` (Goldlink Up), `mon-misfits` (Misfits), `mon-ghazni-united` (Ghazni United), `mon-goal-diggers` (Goal Diggers), `mon-wildcats` (Wildcats), `mon-hope` (Hope), `mon-salvos` (Salvos), `mon-toss` (Toss), `mon-hazara-united` (Hazara United), `mon-top-up-fc` (Top Up FC), `mon-bunyip` (Bunyip), `mon-declans-team` (Declan's Delinquents)
 - Standings-ineligible historical teams (2): `mon-samen` (Samen), `mon-buckle-city` (Buckle City)
 
 ### Wednesday
@@ -58,7 +58,7 @@ Every team below has genuine regular-season fixture or adjustment history. Inact
 ## Excluded records
 
 - mon-buckle-city-fc (Buckle City): no completed fixture or standing adjustment; excluded as a stale/non-regular-season record.
-- Monday finals/grading: 19 fixtures and 8 recorded results excluded.
+- Monday finals/grading: 19 fixtures and 16 recorded results excluded.
 - Wednesday finals/grading: 19 fixtures and 8 recorded results excluded.
 - Scheduled regular-season fixtures excluded: Monday 0; Wednesday 0.
 

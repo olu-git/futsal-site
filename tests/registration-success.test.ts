@@ -1,0 +1,34 @@
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import test from "node:test";
+
+const form = readFileSync("src/components/EnquiryForm.tsx", "utf8");
+const modal = readFileSync("src/components/RegistrationProvider.tsx", "utf8");
+const css = readFileSync("src/app/globals.css", "utf8");
+
+test("registration confirmation follows only a successful Web3Forms response", () => {
+  const successGuard = form.indexOf("result.success !== true");
+  const successCallback = form.indexOf("onSuccess?.()");
+  assert.ok(successGuard >= 0 && successCallback > successGuard);
+  assert.match(form, /catch \{\s*setStatus\("error"\)/);
+});
+
+test("player label is concise while its submission field name stays stable", () => {
+  assert.match(form, /name: "player_name", label: "Full Name"/);
+  assert.doesNotMatch(form, /Player Full Name/);
+});
+
+test("completed registration replaces the form until a tab is chosen", () => {
+  assert.match(modal, /submitted \? <div className="registration-confirmation"/);
+  assert.match(modal, /Registration submitted/);
+  assert.match(modal, /<EnquiryForm kind=\{value\} onSuccess=\{\(\) => setSubmitted\(true\)\}/);
+  assert.match(modal, /function selectTab\(next: RegistrationTab\) \{\s*setTab\(next\);\s*setSubmitted\(false\)/);
+  assert.match(modal, /onClick=\{\(\) => selectTab\(value\)\}/);
+  assert.match(modal, /confirmationHeading\.current\?\.focus/);
+});
+
+test("mobile confirmation stays prominent and respects reduced motion", () => {
+  assert.match(css, /\.registration-confirmation \{[^}]*border-top: 5px solid var\(--fis-red\)/);
+  assert.match(css, /\.registration-body\.is-submitted \.registration-tabs \{[^}]*repeat\(3, minmax\(0, 1fr\)\)/);
+  assert.match(css, /prefers-reduced-motion: reduce\) \{ \.registration-confirmation \{ animation: none/);
+});

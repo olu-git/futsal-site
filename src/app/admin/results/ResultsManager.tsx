@@ -166,7 +166,7 @@ export default function ResultsManager({ fixtures, onChanged }: { fixtures: Admi
       </div>
       <div className="admin-finals-notice"><ShieldAlert aria-hidden="true" />Current finals remain managed through the existing JSON workflow.</div>
       {message && <p className={`admin-action-message ${message.type}`} role="status">{message.type === "success" && <CheckCircle2 />}{message.text}</p>}
-      {refreshStatus === "triggering" && <div className="admin-snapshot-warning" role="status"><p>Requesting fallback snapshot refresh...</p><button disabled>Retry Snapshot Refresh</button></div>}
+      {refreshStatus === "triggering" && <div className="admin-snapshot-warning" role="status"><p>Requesting fallback snapshot refresh...</p><button disabled aria-busy="true">Retry Snapshot Refresh</button></div>}
       {refreshStatus === "queued" && <p className="admin-action-message success" role="status">Fallback snapshot refresh queued.</p>}
       {refreshStatus === "failed" && <div className="admin-snapshot-warning" role="status"><p>Live result is published. The fallback snapshot could not be refreshed yet.</p><button onClick={() => void queueSnapshotRefresh()}>Retry Snapshot Refresh</button></div>}
       <div className="admin-results-layout">

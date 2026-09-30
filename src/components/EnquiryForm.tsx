@@ -17,13 +17,13 @@ const preferences: Field[] = [
 ];
 const fieldSets: Record<EnquiryKind, Field[]> = {
   team: [{ name: "team_name", label: "Team Name", required: true }, { name: "captain_name", label: "Captain Full Name", required: true, autoComplete: "name" }, phone, email, postcode, gender, ...preferences],
-  player: [{ name: "player_name", label: "Player Full Name", required: true, autoComplete: "name" }, postcode, phone, email, gender, ...preferences],
+  player: [{ name: "player_name", label: "Full Name", required: true, autoComplete: "name" }, postcode, phone, email, gender, ...preferences],
   future: [{ name: "name", label: "Full Name", required: true, autoComplete: "name" }, { name: "registering_as", label: "Registering As", choices: ["Team", "Individual"], required: true }, gender, postcode, phone, email],
   contact: [{ name: "first_name", label: "First Name", required: true, autoComplete: "given-name" }, { name: "last_name", label: "Last Name", required: true, autoComplete: "family-name" }, { ...phone, label: "Phone Number", required: false }, email, { name: "enquiry_type", label: "Enquiry Type", choices: ["General Enquiry", "Partnerships", "Other"], required: true }],
 };
 const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-export default function EnquiryForm({ kind }: { kind: EnquiryKind }) {
+export default function EnquiryForm({ kind, onSuccess }: { kind: EnquiryKind; onSuccess?: () => void }) {
   const id = useId();
   const [status, setStatus] = useState<"idle" | "sending" | "error" | "success">("idle");
   const [message, setMessage] = useState("");
@@ -58,6 +58,7 @@ export default function EnquiryForm({ kind }: { kind: EnquiryKind }) {
       if (!response.ok || result.success !== true) throw new Error("Submission failed");
       setStatus("success"); setMessage("Thanks. We’ll be in touch shortly about your enquiry.");
       form.reset();
+      onSuccess?.();
     } catch {
       setStatus("error"); setMessage("Your enquiry could not be sent. Please try again or email contact@futsalindoorsoccer.com.au.");
     } finally { submitting.current = false; }
@@ -73,7 +74,7 @@ export default function EnquiryForm({ kind }: { kind: EnquiryKind }) {
     {renderField(fields[fields.length - 1])}
     {kind !== "contact" && <label className="confirmation"><input type="checkbox" name="confirmation" required aria-invalid={invalid.includes("confirmation")} aria-describedby={invalid.includes("confirmation") ? `${id}-status` : undefined} /><span>I confirm my details are accurate and acknowledge the <Link href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</Link> and <Link href="/terms" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</Link>. <span className="required">*</span></span></label>}
     <p id={`${id}-status`} className={`form-status ${status}`} role="status" aria-live="polite">{status === "sending" ? <span className="sr-only">Sending enquiry</span> : message}</p>
-    <button type="submit" className="submit-button" disabled={status === "sending"}>{status === "sending" && <LoaderCircle size={16} className="sending-icon" aria-hidden="true" />}SUBMIT</button>
+    <button type="submit" className="submit-button" disabled={status === "sending"} aria-busy={status === "sending"}>{status === "sending" && <LoaderCircle size={16} className="sending-icon" aria-hidden="true" />}SUBMIT</button>
   </form>;
 
   function renderField(field: Field) {

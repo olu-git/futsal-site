@@ -50,7 +50,8 @@ html { background: var(--fis-cream); scroll-behavior: smooth; scroll-padding-top
 body { margin: 0; background: var(--fis-cream); color: var(--fis-ink); font-family: var(--font-sans); font-weight: 300; }
 button, input, select, textarea { font: inherit; }
 button, summary { cursor: pointer; }
-button:disabled { cursor: wait; opacity: .65; }
+button:disabled { cursor: not-allowed; opacity: .65; }
+button[aria-busy="true"]:disabled { cursor: progress; }
 a, button { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 3px solid var(--fis-red); outline-offset: 4px; }
 ::selection { background: var(--fis-blue); color: white; }
@@ -198,6 +199,12 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .registration-tabs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-block: 16px 28px; }
 .registration-tabs button { border: 2px solid var(--fis-blue); padding: 12px 8px; min-height: 58px; color: var(--fis-blue); font: 9px/1.8 var(--font-mono); text-transform: uppercase; }
 .registration-tabs button[aria-selected="true"] { color: white; background: var(--fis-blue); box-shadow: 4px 4px 0 var(--fis-red); }
+.registration-confirmation { min-height: 230px; border: 2px solid var(--fis-blue); border-top: 5px solid var(--fis-red); padding: 32px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; color: var(--fis-blue); animation: registration-confirm 240ms ease-out both; }
+.registration-confirmation h3 { margin: 0; }
+.registration-confirmation p { max-width: 38ch; margin: 0; font-size: var(--type-body-compact); line-height: var(--leading-body); }
+.registration-confirmation h3:focus { outline: 2px solid var(--fis-red); outline-offset: 5px; }
+@keyframes registration-confirm { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .registration-confirmation { animation: none; } }
 .registration-body h3 { font-size: 21px; line-height: 1.6; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; color: var(--fis-blue); }
 .panel-copy, .registration-links { font-size: 12px; line-height: 2; margin-bottom: 22px; }
 .fill-in-note { padding: 14px 18px; border-left: 4px solid var(--fis-red); background: #e8e1d5; font-size: 12px; line-height: 1.9; margin-bottom: 22px; }
@@ -363,7 +370,7 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .admin-action-message svg { width: 17px; flex: 0 0 17px; }
 .admin-snapshot-warning { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 12px; background: #f7e8d4; border-left: 4px solid var(--fis-red); color: var(--fis-ink); font-size: 10px; line-height: 1.7; }
 .admin-snapshot-warning button { min-height: 38px; border: 1px solid var(--fis-blue); padding: 8px 10px; background: white; color: var(--fis-blue); font: 7px/1.6 var(--font-mono); text-transform: uppercase; }
-.admin-snapshot-warning button:disabled { opacity: .5; cursor: wait; }
+.admin-snapshot-warning button:disabled { opacity: .5; }
 .admin-published-summary { display: grid; justify-items: stretch; gap: 14px; margin-block: 0 24px; }
 .admin-published-summary > p { color: var(--fis-blue); font: 7px/1.6 var(--font-mono); text-transform: uppercase; }
 .admin-published-summary .admin-published-forfeit { color: var(--fis-red-dark); font-size: 10px; }
@@ -563,6 +570,9 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
   .registration-body { padding: 22px 18px 32px; }
   .registration-tabs { grid-template-columns: 1fr; gap: 10px; }
   .registration-tabs button { min-height: 46px; }
+  .registration-body.is-submitted .registration-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-block: 12px 18px; }
+  .registration-body.is-submitted .registration-tabs button { min-width: 0; padding: 8px 3px; font-size: 7px; line-height: 1.5; }
+  .registration-confirmation { min-height: 200px; padding: 24px 14px; }
   .enquiry-form { grid-template-columns: 1fr; }
   .section-head { align-items: start; flex-direction: column; gap: 0; }
 }

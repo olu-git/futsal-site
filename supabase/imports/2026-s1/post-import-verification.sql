@@ -22,7 +22,7 @@ insert into _fis_expected_standings values
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-moza-mama', 'Moza Mama', 24, 6, 1, 17, 121, 157, -36, 19, 12),
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-blue-dragons', 'Blue Dragons', 24, 6, 0, 18, 94, 185, -91, 18, 13),
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-salvos', 'Salvos', 24, 4, 5, 15, 89, 138, -49, 17, 14),
-  ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-declans-team', 'Declan''s Team', 24, 5, 1, 18, 16, 54, -38, 16, 15),
+  ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-declans-team', 'Declan''s Delinquents', 24, 5, 1, 18, 16, 54, -38, 16, 15),
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-bunyip', 'Bunyip', 24, 5, 0, 19, 21, 64, -43, 15, 16),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-afg', 'AFG', 26, 23, 1, 2, 206, 121, 85, 70, 1),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-ghazni-united', 'Ghazni United', 26, 21, 0, 5, 213, 110, 103, 63, 2),
