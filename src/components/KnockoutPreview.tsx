@@ -14,7 +14,7 @@ function localDate() {
 
 export function hasCurrentFinals(finals: FinalsSeasonData, today = localDate()) {
   return (["monday", "wednesday"] as const).some((night) =>
-    finalsDates[night].at(-1)! >= today && finalsMatches[night].some((match) => !finals.finals[night].results[match.id]));
+    finalsDates[night].at(-1)! >= today && finalsMatches[night].some((match) => match.round !== "Grading" && !finals.finals[night].results[match.id]));
 }
 
 export default function KnockoutPreview({ finals, competitions }: {

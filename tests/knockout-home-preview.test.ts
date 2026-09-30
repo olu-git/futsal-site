@@ -3,7 +3,7 @@ import test from "node:test";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import seasonData from "../src/data/season-2026-s1.json";
-import { finalsMatches, resolveFinalsSlot, winnerSide, type FinalsSeasonData } from "../src/lib/finals";
+import { finalsMatches, isScheduledFinalsMatch, resolveFinalsSlot, winnerSide, type FinalsSeasonData } from "../src/lib/finals";
 import { hasCurrentFinals } from "../src/components/KnockoutPreview";
 import KnockoutBracket from "../src/components/KnockoutBracket";
 
@@ -54,6 +54,54 @@ test("Monday results advance the correct semi-final teams", () => {
   assert.equal(result.scoreA, result.scoreB);
 });
 
+test("Wednesday 30 September quarter-finals advance the reported winners", () => {
+  const data = season.finals.wednesday;
+  const expected = [
+    ["qf-1", "AFG", "Moza Mama", 8, 4],
+    ["qf-2", "Pops", "Hazara United", 8, 4],
+    ["qf-3", "Ghazni United", "Misfits", 10, 7],
+    ["qf-4", "Goldlink Up", "Wildcats", 5, 4],
+  ] as const;
+  for (const [id, home, away, homeScore, awayScore] of expected) {
+    const match = finalsMatches.wednesday.find((item) => item.id === id);
+    assert.ok(match, `Missing ${id}`);
+    assert.equal(resolveFinalsSlot(match.a, "wednesday", data)?.name, home);
+    assert.equal(resolveFinalsSlot(match.b, "wednesday", data)?.name, away);
+    assert.deepEqual(data.results[id], { scoreA: homeScore, scoreB: awayScore });
+  }
+  const semiOne = finalsMatches.wednesday.find((match) => match.id === "sf-1");
+  const semiTwo = finalsMatches.wednesday.find((match) => match.id === "sf-2");
+  assert.ok(semiOne && semiTwo);
+  assert.equal(resolveFinalsSlot(semiOne.a, "wednesday", data)?.name, "AFG");
+  assert.equal(resolveFinalsSlot(semiOne.b, "wednesday", data)?.name, "Pops");
+  assert.equal(resolveFinalsSlot(semiTwo.a, "wednesday", data)?.name, "Ghazni United");
+  assert.equal(resolveFinalsSlot(semiTwo.b, "wednesday", data)?.name, "Goldlink Up");
+});
+
+test("Wednesday grading history retains the played slots and abandoned records", () => {
+  const data = season.finals.wednesday;
+  for (const [id, time, court, home, away, homeScore, awayScore] of [
+    ["grading-1", "19:00", 2, "Kuq E Zi", "MTS FC", 10, 4],
+    ["grading-2", "20:20", 2, "Rinnai", "Toss", 4, 8],
+  ] as const) {
+    const match = finalsMatches.wednesday.find((item) => item.id === id);
+    assert.ok(match && isScheduledFinalsMatch(match));
+    assert.equal(match.time, time);
+    assert.equal(match.court, court);
+    assert.equal(resolveFinalsSlot(match.a, "wednesday", data)?.name, home);
+    assert.equal(resolveFinalsSlot(match.b, "wednesday", data)?.name, away);
+    assert.deepEqual(data.results[id], { scoreA: homeScore, scoreB: awayScore });
+  }
+  for (const id of ["grading-3", "grading-4"]) {
+    const match = finalsMatches.wednesday.find((item) => item.id === id);
+    assert.ok(match && !isScheduledFinalsMatch(match));
+    assert.equal(data.results[id], undefined);
+  }
+  const playedSlots = finalsMatches.wednesday.filter((match) => match.week === 1 && isScheduledFinalsMatch(match));
+  assert.equal(playedSlots.length, 6);
+  assert.equal(new Set(playedSlots.map((match) => `${match.time}|${match.court}`)).size, 6);
+});
+
 test("home bracket remains active through both finals nights", () => {
   assert.equal(hasCurrentFinals(season, "2026-09-30"), true);
   assert.ok(finalsMatches.monday.some((match) => match.round === "Grading"));
@@ -61,25 +109,27 @@ test("home bracket remains active through both finals nights", () => {
   assert.equal(hasCurrentFinals(season, "2026-10-08"), false);
 });
 
-test("home bracket shows grading and the decisive rounds without the full Round of 16 stack", () => {
+test("public brackets show only knockout rounds while grading history stays in data", () => {
   for (const night of ["monday", "wednesday"] as const) {
-    const html = renderToStaticMarkup(createElement(KnockoutBracket, {
-      night, data: season.finals[night], kitColours: {}, preview: true,
-    }));
-    assert.match(html, /Grading Games/);
-    assert.match(html, /Quarter Finals/);
-    assert.match(html, /Semi Finals/);
-    assert.match(html, /Grand Final/);
-    assert.doesNotMatch(html, /Round of 16<\/h3>/);
-    assert.match(html, /h-\[600px\]/);
+    for (const preview of [false, true]) {
+      const html = renderToStaticMarkup(createElement(KnockoutBracket, {
+        night, data: season.finals[night], kitColours: {}, preview,
+      }));
+      assert.doesNotMatch(html, /Grading Games|bracket-grading|>G[1-4]<|Abandoned/i);
+      assert.match(html, /Quarter Finals/);
+      assert.match(html, /Semi Finals/);
+      assert.match(html, /Grand Final/);
+      if (preview) {
+        assert.doesNotMatch(html, /Round of 16<\/h3>/);
+        assert.match(html, /h-\[600px\]/);
+      } else {
+        assert.match(html, /Round of 16/);
+      }
+    }
   }
 });
 
-test("Monday G2 identifies Salvos as the forfeiting side on full and preview brackets", () => {
-  for (const preview of [false, true]) {
-    const html = renderToStaticMarkup(createElement(KnockoutBracket, {
-      night: "monday", data: season.finals.monday, kitColours: {}, preview,
-    }));
-    assert.match(html, /Salvos forfeited/);
-  }
+test("Monday Salvos forfeit remains recorded without a public grading card", () => {
+  assert.deepEqual(season.finals.monday.results["grading-2"], { scoreA: 5, scoreB: 0, forfeitSide: "B" });
+  assert.equal(winnerSide(season.finals.monday.results["grading-2"]), "A");
 });

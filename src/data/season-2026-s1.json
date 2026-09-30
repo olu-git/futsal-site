@@ -71,7 +71,13 @@
         "r16-m5": { "scoreA": 5, "scoreB": 0 },
         "r16-m6": { "scoreA": 6, "scoreB": 5 },
         "r16-m7": { "scoreA": 8, "scoreB": 7 },
-        "r16-m8": { "scoreA": 17, "scoreB": 4 }
+        "r16-m8": { "scoreA": 17, "scoreB": 4 },
+        "qf-1": { "scoreA": 8, "scoreB": 4 },
+        "qf-2": { "scoreA": 8, "scoreB": 4 },
+        "qf-3": { "scoreA": 10, "scoreB": 7 },
+        "qf-4": { "scoreA": 5, "scoreB": 4 },
+        "grading-1": { "scoreA": 10, "scoreB": 4 },
+        "grading-2": { "scoreA": 4, "scoreB": 8 }
       }
     }
   }

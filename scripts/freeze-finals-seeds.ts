@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { finalsDates, finalsMatches, type FinalsSeasonData } from "../src/lib/finals";
+import { finalsDates, finalsMatches, isScheduledFinalsMatch, type FinalsSeasonData } from "../src/lib/finals";
 import { fixtures } from "../src/lib/data";
 import { calculateStandings } from "../src/lib/standings";
 import type { CompetitionNight } from "../src/lib/types";
@@ -76,7 +76,7 @@ function validateCalendar(night: CompetitionNight) {
   }
 
   const occupied = new Set<string>();
-  for (const match of finalsMatches[night]) {
+  for (const match of finalsMatches[night].filter(isScheduledFinalsMatch)) {
     const key = `${match.week}|${match.time}|${match.court}`;
     if (occupied.has(key)) {
       throw new Error(`${night} has a duplicate finals slot at ${key}.`);
@@ -87,6 +87,7 @@ function validateCalendar(night: CompetitionNight) {
 
 function validateFirstRoundTimes(night: CompetitionNight, seeds: string[]) {
   const assignments = finalsMatches[night]
+    .filter(isScheduledFinalsMatch)
     .filter((match) => match.round === "R16")
     .map((match) => {
       if (match.a.type !== "seed" || match.b.type !== "seed") {
