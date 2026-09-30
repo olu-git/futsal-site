@@ -98,6 +98,43 @@ for (const night of nights) {
     assert.notEqual(rinnai.match.time, "19:00");
     assert.equal(umoja.match.time, "21:00");
   }
+
+  for (const match of finalsMatches[night]) {
+    const resolvedTeams = [
+      resolveFinalsSlot(match.a, night, data)?.name,
+      resolveFinalsSlot(match.b, night, data)?.name,
+    ].filter((team): team is string => Boolean(team));
+
+    if (night === "monday") {
+      if (resolvedTeams.some((team) => team === "Hunger FC" || team === "Ghazni United")) {
+        // Approved SF2-only exception: Hunger FC vs Moza Mama, 5 October at 19:30 on Court 2.
+        const approvedHungerSemiFinal = match.id === "sf-2"
+          && match.round === "SF"
+          && finalsDates.monday[match.week] === "2026-10-05"
+          && match.time === "19:30"
+          && match.court === 2
+          && resolvedTeams[0] === "Hunger FC"
+          && resolvedTeams[1] === "Moza Mama";
+        assert(
+          approvedHungerSemiFinal || ["20:20", "21:00"].includes(match.time),
+          `${resolvedTeams.join(" vs ")} cannot play at ${match.time}`
+        );
+      }
+      if (resolvedTeams.includes("Blue Dragons")) {
+        assert.notEqual(match.time, "19:00", "Blue Dragons cannot play at 19:00");
+      }
+    } else {
+      if (resolvedTeams.includes("Rinnai")) {
+        assert.notEqual(match.time, "19:00", "Rinnai cannot play at 19:00");
+      }
+      if (resolvedTeams.includes("Kuq E Zi")) {
+        assert.notEqual(match.time, "21:00", "Kuq E Zi cannot play at 21:00");
+      }
+      if (resolvedTeams.includes("Umoja Stars")) {
+        assert.equal(match.time, "21:00", "Umoja Stars must play at 21:00");
+      }
+    }
+  }
 }
 
 const wednesdayFinals = season.finals.wednesday;
@@ -146,5 +183,37 @@ assert.equal(resolveFinalsSlot(semiFinalOne.a, "monday", resolverData)?.name, "T
 assert.equal(resolveFinalsSlot(gradingOne.a, "monday", resolverData)?.name, "Team 16");
 assert.equal(resolveFinalsSlot(gradingOne.b, "monday", resolverData)?.name, "Team 15");
 assert.equal(resolveFinalsSlot(semiFinalOne.b, "monday", resolverData), null);
+
+const mondayData = season.finals.monday;
+const gradingMatchOne = mondayMatches.find((match) => match.id === "grading-1");
+const gradingMatchThree = mondayMatches.find((match) => match.id === "grading-3");
+const gradingMatchFour = mondayMatches.find((match) => match.id === "grading-4");
+const mondayQuarterFinalTwo = mondayMatches.find((match) => match.id === "qf-2");
+const mondayQuarterFinalThree = mondayMatches.find((match) => match.id === "qf-3");
+const mondaySemiFinalTwo = mondayMatches.find((match) => match.id === "sf-2");
+assert(gradingMatchOne && gradingMatchThree && gradingMatchFour);
+assert(mondayQuarterFinalTwo && mondayQuarterFinalThree && mondaySemiFinalTwo);
+assert.equal(resolveFinalsSlot(gradingMatchOne.a, "monday", mondayData)?.name, "Bunyip");
+assert.equal(resolveFinalsSlot(gradingMatchOne.b, "monday", mondayData)?.name, "Declan's Delinquents");
+assert.equal(gradingMatchOne.time, "19:00");
+assert.equal(resolveFinalsSlot(gradingMatchThree.a, "monday", mondayData)?.name, "Blue Dragons");
+assert.equal(resolveFinalsSlot(gradingMatchThree.b, "monday", mondayData)?.name, "Misfits");
+assert.equal(gradingMatchThree.time, "19:40");
+assert.equal(resolveFinalsSlot(gradingMatchFour.a, "monday", mondayData)?.name, "Top Up FC");
+assert.equal(resolveFinalsSlot(gradingMatchFour.b, "monday", mondayData)?.name, "Toss");
+assert.equal(gradingMatchFour.time, "21:00");
+assert.equal(resolveFinalsSlot(mondayQuarterFinalTwo.a, "monday", mondayData)?.name, "AFG");
+assert.equal(resolveFinalsSlot(mondayQuarterFinalTwo.b, "monday", mondayData)?.name, "Goldlink Up");
+assert.equal(mondayQuarterFinalTwo.time, "20:20");
+assert.equal(mondayQuarterFinalTwo.court, 1);
+assert.equal(resolveFinalsSlot(mondayQuarterFinalThree.a, "monday", mondayData)?.name, "Hunger FC");
+assert.equal(resolveFinalsSlot(mondayQuarterFinalThree.b, "monday", mondayData)?.name, "Ghazni United");
+assert.equal(mondayQuarterFinalThree.time, "20:20");
+assert.equal(mondayQuarterFinalThree.court, 2);
+assert.equal(finalsDates.monday[mondaySemiFinalTwo.week], "2026-10-05");
+assert.equal(mondaySemiFinalTwo.time, "19:30");
+assert.equal(mondaySemiFinalTwo.court, 2);
+assert.equal(resolveFinalsSlot(mondaySemiFinalTwo.a, "monday", mondayData)?.name, "Hunger FC");
+assert.equal(resolveFinalsSlot(mondaySemiFinalTwo.b, "monday", mondayData)?.name, "Moza Mama");
 
 console.log("Finals data, calendar, and resolver checks passed.");

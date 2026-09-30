@@ -221,7 +221,7 @@ export function buildImportModel(): ImportModel {
 
   const sourceFiles = Object.values(SOURCE_PATHS);
   const sourceDigest = createHash("sha256")
-    .update(sourceFiles.map((path) => `${path}\n${sourceText(path)}`).join("\n---\n"))
+    .update(sourceFiles.map((path) => `${path}\n${sourceText(path).replace(/\r\n?/g, "\n")}`).join("\n---\n"))
     .digest("hex");
   const completedDates = [...mondayFixtures, ...wednesdayFixtures]
     .filter((fixture) => fixture.status === "completed")

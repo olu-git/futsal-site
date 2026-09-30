@@ -1,6 +1,6 @@
 # Current-season Supabase import reconciliation
 
-Generated deterministically from source digest `9bf5c78f8f0a35afa477c81f7dac98db2f15c625f8da22fc4a1e98b08b1a62d2`.
+Generated deterministically from source digest `52aa0dd297194880edf339e2459f0c25504e84f7b446b260df2bdd15be3416a5`.
 
 ## Source files
 
