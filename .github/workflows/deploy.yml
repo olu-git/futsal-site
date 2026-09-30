@@ -4,6 +4,10 @@ on:
   push:
     branches: ["master"]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Refresh Public Competition Snapshot"]
+    types: [completed]
+    branches: ["master"]
 
 permissions:
   contents: read
@@ -16,6 +20,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'master' && github.event.workflow_run.head_sha != github.sha)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,6 +37,9 @@ jobs:
 
       - name: Build static site
         run: npm run build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY }}
 
       - name: Ensure GitHub Pages serves _next assets
         run: New-Item -ItemType File -Path out/.nojekyll -Force

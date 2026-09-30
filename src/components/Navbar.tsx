@@ -1,87 +1,42 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { useEffect, useRef, useState } from "react";
+import { useRegistration } from "./RegistrationProvider";
+import { site } from "@/lib/site-content";
 
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/monday-night", label: "Monday Night" },
-  { href: "/wednesday-night", label: "Wednesday Night" },
-  { href: "/rules", label: "Rules" },
-  { href: "/contact", label: "Contact" },
-];
+const links = [{ href: "/", label: "Home" }, { href: "/monday-night", label: "Monday" }, { href: "/wednesday-night", label: "Wednesday" }, { href: "/rules", label: "Rules" }, { href: "/admin", label: "Admin" }];
 
 export default function Navbar() {
-  const pathname = usePathname();
+  const path = usePathname();
   const [open, setOpen] = useState(false);
-
-  return (
-    <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0A0A0A]/95 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-1.5 h-6 bg-red-600 rounded-sm" />
-          <span
-            className="text-xl uppercase tracking-wider leading-none text-white"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Endeavour Hills{" "}
-            <span className="text-red-500" style={{ fontFamily: "var(--font-heading)", fontSize: "inherit" }}>Futsal</span>
-          </span>
-        </Link>
-
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-1">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "px-4 py-2 rounded-lg text-sm transition-colors font-[family-name:var(--font-geist-mono)] uppercase tracking-wider",
-                pathname === link.href
-                  ? "bg-red-600 text-white"
-                  : "text-white/50 hover:text-white hover:bg-white/5"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const { openRegistration } = useRegistration();
+  useEffect(() => {
+    if (!open) return;
+    const outside = (event: PointerEvent) => { if (!menuRef.current?.contains(event.target as Node)) setOpen(false); };
+    const keyboard = (event: KeyboardEvent) => { if (event.key === "Escape") { setOpen(false); buttonRef.current?.focus(); } };
+    document.addEventListener("pointerdown", outside);
+    document.addEventListener("keydown", keyboard);
+    return () => { document.removeEventListener("pointerdown", outside); document.removeEventListener("keydown", keyboard); };
+  }, [open]);
+  const navLink = ({ href, label }: typeof links[number]) => <Link key={href} href={href} aria-current={path === href ? "page" : undefined} onClick={() => setOpen(false)}>{label}</Link>;
+  return <header className="site-header">
+    <div className="fis-container header-inner">
+      <Link href="/" className="brand" aria-label="Futsal Indoor Soccer home" onClick={() => setOpen(false)}><Image src={site.logo} alt="Futsal Indoor Soccer" width={138} height={57} priority /></Link>
+      <div className="nav-cluster"><nav className="primary-nav" aria-label="Primary navigation">{links.map(navLink)}</nav>
+        <div ref={menuRef} className="menu-wrap" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }}>
+          <button ref={buttonRef} className="menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="site-menu" onClick={() => setOpen(!open)}><span>Menu</span><span className="hamburger" aria-hidden="true"><i /><i /><i /></span></button>
+          {open && <nav id="site-menu" className="menu-panel" aria-label="More navigation">
+            <div className="mobile-nav-links">{links.map(navLink)}</div>
+            <button onClick={() => { openRegistration("team", buttonRef.current); setOpen(false); }}>Register</button>
+            {navLink({ href: "/contact", label: "Contact" })}{navLink({ href: "/about-us", label: "About Us" })}
+          </nav>}
         </div>
-
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-white/50 hover:text-white p-2"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
       </div>
-
-      {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden border-t border-white/10 bg-[#0A0A0A]/95 backdrop-blur-md">
-          <div className="px-4 py-3 space-y-1">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className={cn(
-                  "block px-4 py-2.5 rounded-lg text-sm transition-colors font-[family-name:var(--font-geist-mono)] uppercase tracking-wider",
-                  pathname === link.href
-                    ? "bg-red-600 text-white"
-                    : "text-white/50 hover:text-white hover:bg-white/5"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-    </nav>
-  );
+    </div>
+  </header>;
 }

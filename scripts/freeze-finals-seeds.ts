@@ -38,7 +38,7 @@ for (const night of nights) {
             )
             .slice(0, 14)
             .map((team) => team.teamName),
-          "Declan's Team",
+          "Declan's Delinquents",
           "Bunyip",
         ]
       : standings.slice(0, 16).map((team) => team.teamName);

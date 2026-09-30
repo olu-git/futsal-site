@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 import seasonData from "../src/data/season-2026-s1.json";
+import teamsData from "../src/data/teams.json";
+import wednesdayFixturesData from "../src/data/wednesday-fixtures.json";
 import {
   finalsDates,
   finalsMatches,
@@ -8,10 +10,28 @@ import {
   type FinalsNightData,
   type FinalsSeasonData,
 } from "../src/lib/finals";
-import type { CompetitionNight } from "../src/lib/types";
+import type { CompetitionNight, Fixture, Team } from "../src/lib/types";
 
 const season = seasonData as FinalsSeasonData;
 const nights: CompetitionNight[] = ["monday", "wednesday"];
+const teams = teamsData as Team[];
+const wednesdayFixtures = wednesdayFixturesData as Fixture[];
+
+const dwell = teams.find((team) => team.id === "wed-dwell-fc");
+assert(dwell, "Dwell FC should remain in the Wednesday regular-season team data");
+assert.equal(dwell.name, "Dwell FC");
+assert.equal(dwell.night, "wednesday");
+assert(
+  wednesdayFixtures.some(
+    (fixture) =>
+      fixture.homeTeam === "wed-dwell-fc" || fixture.awayTeam === "wed-dwell-fc"
+  ),
+  "Dwell FC should retain its Wednesday regular-season fixture history"
+);
+assert(
+  !teams.some((team) => team.id === "wed-top-up-fc"),
+  "Top Up FC is a knockout-only replacement and should not overwrite Wednesday regular-season teams"
+);
 
 for (const night of nights) {
   const data = season.finals[night];
@@ -29,6 +49,21 @@ for (const night of nights) {
 
   const ids = finalsMatches[night].map((match) => match.id);
   assert.equal(new Set(ids).size, ids.length, `${night} match IDs should be unique`);
+
+  for (const [matchId, result] of Object.entries(data.results)) {
+    assert(ids.includes(matchId), `${night} result ${matchId} should reference a known match`);
+    assert(Number.isFinite(result.scoreA) && Number.isFinite(result.scoreB));
+    if (result.forfeitSide !== undefined) {
+      assert(["A", "B"].includes(result.forfeitSide), `${night} ${matchId} has an invalid forfeit side`);
+      assert.equal(winnerSide(result), result.forfeitSide === "A" ? "B" : "A", `${night} ${matchId} forfeit winner should be the other team`);
+      assert.equal(result.penaltyWinner, undefined, `${night} ${matchId} forfeit cannot use penalties`);
+    }
+    if (result.penaltyWinner) {
+      assert.equal(result.scoreA, result.scoreB, `${night} ${matchId} penalties require a tied score`);
+      assert(Number.isFinite(result.penaltyScoreA) && Number.isFinite(result.penaltyScoreB));
+      assert.notEqual(result.penaltyScoreA, result.penaltyScoreB);
+    }
+  }
 
   const slots = finalsMatches[night].map(
     (match) => `${match.week}|${match.time}|${match.court}`
@@ -72,8 +107,16 @@ for (const night of nights) {
 
     if (night === "monday") {
       if (resolvedTeams.some((team) => team === "Hunger FC" || team === "Ghazni United")) {
+        // Approved SF2-only exception: Hunger FC vs Moza Mama, 5 October at 19:30 on Court 2.
+        const approvedHungerSemiFinal = match.id === "sf-2"
+          && match.round === "SF"
+          && finalsDates.monday[match.week] === "2026-10-05"
+          && match.time === "19:30"
+          && match.court === 2
+          && resolvedTeams[0] === "Hunger FC"
+          && resolvedTeams[1] === "Moza Mama";
         assert(
-          ["20:20", "21:00"].includes(match.time),
+          approvedHungerSemiFinal || ["20:20", "21:00"].includes(match.time),
           `${resolvedTeams.join(" vs ")} cannot play at ${match.time}`
         );
       }
@@ -94,6 +137,25 @@ for (const night of nights) {
   }
 }
 
+const wednesdayFinals = season.finals.wednesday;
+assert.equal(wednesdayFinals.seeds[11], "Top Up FC");
+assert(!wednesdayFinals.seeds.includes("Dwell FC"));
+const wednesdayQuarterFinalTwo = finalsMatches.wednesday.find(
+  (match) => match.id === "qf-2"
+);
+assert(wednesdayQuarterFinalTwo);
+assert.equal(finalsDates.wednesday[wednesdayQuarterFinalTwo.week], "2026-09-30");
+assert.equal(wednesdayQuarterFinalTwo.time, "19:40");
+assert.equal(wednesdayQuarterFinalTwo.court, 2);
+assert.equal(
+  resolveFinalsSlot(wednesdayQuarterFinalTwo.a, "wednesday", wednesdayFinals)?.name,
+  "Pops"
+);
+assert.equal(
+  resolveFinalsSlot(wednesdayQuarterFinalTwo.b, "wednesday", wednesdayFinals)?.name,
+  "Hazara United"
+);
+
 assert.equal(winnerSide(undefined), null);
 assert.equal(winnerSide({ scoreA: 2, scoreB: 2 }), null);
 assert.equal(winnerSide({ scoreA: 2, scoreB: 2, penaltyWinner: "B" }), "B");
@@ -104,6 +166,7 @@ const resolverData: FinalsNightData = {
   results: {
     "r16-m1": { scoreA: 5, scoreB: 2 },
     "r16-m2": { scoreA: 3, scoreB: 3, penaltyWinner: "B" },
+    "r16-m5": { scoreA: 4, scoreB: 1 },
     "qf-1": { scoreA: 1, scoreB: 2 },
   },
 };
@@ -118,7 +181,7 @@ assert.equal(resolveFinalsSlot(quarterFinalOne.a, "monday", resolverData)?.name,
 assert.equal(resolveFinalsSlot(quarterFinalOne.b, "monday", resolverData)?.name, "Team 9");
 assert.equal(resolveFinalsSlot(semiFinalOne.a, "monday", resolverData)?.name, "Team 9");
 assert.equal(resolveFinalsSlot(gradingOne.a, "monday", resolverData)?.name, "Team 16");
-assert.equal(resolveFinalsSlot(gradingOne.b, "monday", resolverData), null);
+assert.equal(resolveFinalsSlot(gradingOne.b, "monday", resolverData)?.name, "Team 15");
 assert.equal(resolveFinalsSlot(semiFinalOne.b, "monday", resolverData), null);
 
 const mondayData = season.finals.monday;
@@ -127,10 +190,11 @@ const gradingMatchThree = mondayMatches.find((match) => match.id === "grading-3"
 const gradingMatchFour = mondayMatches.find((match) => match.id === "grading-4");
 const mondayQuarterFinalTwo = mondayMatches.find((match) => match.id === "qf-2");
 const mondayQuarterFinalThree = mondayMatches.find((match) => match.id === "qf-3");
+const mondaySemiFinalTwo = mondayMatches.find((match) => match.id === "sf-2");
 assert(gradingMatchOne && gradingMatchThree && gradingMatchFour);
-assert(mondayQuarterFinalTwo && mondayQuarterFinalThree);
+assert(mondayQuarterFinalTwo && mondayQuarterFinalThree && mondaySemiFinalTwo);
 assert.equal(resolveFinalsSlot(gradingMatchOne.a, "monday", mondayData)?.name, "Bunyip");
-assert.equal(resolveFinalsSlot(gradingMatchOne.b, "monday", mondayData)?.name, "Declan's Team");
+assert.equal(resolveFinalsSlot(gradingMatchOne.b, "monday", mondayData)?.name, "Declan's Delinquents");
 assert.equal(gradingMatchOne.time, "19:00");
 assert.equal(resolveFinalsSlot(gradingMatchThree.a, "monday", mondayData)?.name, "Blue Dragons");
 assert.equal(resolveFinalsSlot(gradingMatchThree.b, "monday", mondayData)?.name, "Misfits");
@@ -146,5 +210,10 @@ assert.equal(resolveFinalsSlot(mondayQuarterFinalThree.a, "monday", mondayData)?
 assert.equal(resolveFinalsSlot(mondayQuarterFinalThree.b, "monday", mondayData)?.name, "Ghazni United");
 assert.equal(mondayQuarterFinalThree.time, "20:20");
 assert.equal(mondayQuarterFinalThree.court, 2);
+assert.equal(finalsDates.monday[mondaySemiFinalTwo.week], "2026-10-05");
+assert.equal(mondaySemiFinalTwo.time, "19:30");
+assert.equal(mondaySemiFinalTwo.court, 2);
+assert.equal(resolveFinalsSlot(mondaySemiFinalTwo.a, "monday", mondayData)?.name, "Hunger FC");
+assert.equal(resolveFinalsSlot(mondaySemiFinalTwo.b, "monday", mondayData)?.name, "Moza Mama");
 
 console.log("Finals data, calendar, and resolver checks passed.");

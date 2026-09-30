@@ -6,6 +6,7 @@ export type FinalsRound = "R16" | "QF" | "SF" | "GF" | "Grading";
 export interface FinalsResult {
   scoreA: number;
   scoreB: number;
+  forfeitSide?: FinalsSide;
   penaltyWinner?: FinalsSide;
   penaltyScoreA?: number;
   penaltyScoreB?: number;

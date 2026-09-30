@@ -59,7 +59,7 @@ export function getTeamName(teamId: string): string {
 export function getCompletedFixtures(night: CompetitionNight): Fixture[] {
   return fixtures
     .filter((f) => f.night === night && f.status === "completed")
-    .sort((a, b) => b.date.localeCompare(a.date) || b.time.localeCompare(a.time));
+    .sort((a, b) => b.date.localeCompare(a.date) || a.time.localeCompare(b.time) || a.court - b.court);
 }
 
 export function getUpcomingFixtures(night: CompetitionNight): Fixture[] {
@@ -71,7 +71,7 @@ export function getUpcomingFixtures(night: CompetitionNight): Fixture[] {
         isTeamActive(f.homeTeam) &&
         isTeamActive(f.awayTeam)
     )
-    .sort((a, b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time));
+    .sort((a, b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time) || a.court - b.court);
 }
 
 export function getFixturesByRound(night: CompetitionNight, round: number): Fixture[] {

@@ -18,11 +18,11 @@ export default function NightCard({ title, href, description }: NightCardProps) 
       >
         <div className="flex items-center gap-3 mb-3">
           <div className="w-1 h-6 rounded-sm bg-red-600" />
-          <h3 className="font-[family-name:var(--font-heading)] text-xl uppercase tracking-wider text-white">
+          <h3 className="type-card-title uppercase text-white">
             {title}
           </h3>
         </div>
-        <p className="text-sm text-white/50 leading-relaxed font-[family-name:var(--font-sans)]">
+        <p className="type-body-compact text-white/70">
           {description}
         </p>
       </Link>

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "monday",
+    "season": "2026 Season 1",
+    "competitionSeasonId": "11111111-1111-4111-8111-111111111111"
+  },
+  "title": "Rounds 12 and 13 scheduling changes",
+  "overallNote": "Team and venue requests reviewed together",
+  "changes": [
+    {
+      "operation": "update",
+      "fixtureId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "expectedFixtureVersion": 1,
+      "reason": "Team requested a later kick-off",
+      "homeTeamName": "Home team",
+      "awayTeamName": "Away team",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2026-10-12",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "22222222-2222-4222-8222-222222222222",
+        "awayTeamId": "33333333-3333-4333-8333-333333333333",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "New team joined the next round",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2026-10-19",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "44444444-4444-4444-8444-444444444444",
+        "awayTeamId": "55555555-5555-4555-8555-555555555555",
+        "publicationState": "published"
+      }
+    }
+  ]
+}
