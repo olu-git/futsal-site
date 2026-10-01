@@ -11,7 +11,7 @@ This version has breaking changes - APIs, conventions, and file structure may al
 - This is the public website for Futsal Indoor Soccer (FIS), an adult social and competitive futsal league at Endeavour Hills Leisure Centre in Melbourne. Players must be at least 16 years old.
 - Monday Night and Wednesday Night are separate competitions. Keep their teams, fixtures, results, standings, adjustments, and finals data separate.
 - The product should feel inclusive, organised, credible, and easy to scan for players checking schedules or results on a phone.
-- Core public areas are Home, Monday Night, Wednesday Night, Rules, Contact, About Us, Privacy, and Terms. Team, player, and future-competition registration use the Home REGISTER dialog; Contact has a separate enquiry form. There is no standalone registration route.
+- Core public areas are Home, Monday Night, Wednesday Night, Rules, Contact, About Us, Privacy, Terms, and Register. Team, player, and future-competition registration share the Home REGISTER dialog and the direct `/register/` page; Contact has a separate enquiry form.
 
 ## Brand and interface
 
