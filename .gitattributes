@@ -1,0 +1,4 @@
+src/data/public-competition-snapshot.json text eol=lf
+supabase/imports/2026-s1/current-season-import.sql text eol=lf
+supabase/imports/2026-s1/post-import-verification.sql text eol=lf
+docs/CURRENT-SEASON-IMPORT-RECONCILIATION.md text eol=lf

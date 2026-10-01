@@ -1,16 +1,16 @@
-# FIS Supabase preparation
+# FIS Supabase operations
 
-The initial schema and administrator foundation have been applied to the FIS project. The public site remains a GitHub Pages static export. The fixture change-set migration in this directory is **local and unapplied**; see [ADMIN-FIXTURES-DESIGN.md](../docs/ADMIN-FIXTURES-DESIGN.md) for its review, verification and rollback steps.
+The FIS production project has the initial schema, administrator access, completed 2026 regular-season import, fixture change-set workflow, transactional team-profile save, standing-adjustment workflow, and season management installed and verified. Do not rerun an installed migration or the current-season import. The public site is still a GitHub Pages static export: browser reads use the Supabase publishable key and RLS, with a checked-in published-data fallback. Current finals and grading history remain JSON-managed.
 
-## Apply later
+## Operating boundaries
 
-1. The initial schema, administrator enrolment and current-season import are already applied and verified in the FIS project. Do not rerun those migrations or create another administrator for this fixture-change review.
-2. Review `migrations/202609270001_fixture_change_sets.sql` and test it against a disposable/local database with the existing schema and a confirmed FIS administrator. Run `verification/verify_fixture_change_sets.sql` there; its test records are wrapped in a transaction and rolled back.
-3. Only after separate approval, apply the fixture-change migration through the controlled Supabase migration workflow. Confirm its grants, RLS and fixture visibility before building an Admin Fixtures interface. Do not apply it as part of this task.
-4. Use [SEASON_IMPORT.md](SEASON_IMPORT.md) for the existing regular-season import procedure. The in-progress 2026 knockout series remains JSON-managed and is not part of this migration.
-5. Keep only the Supabase URL and publishable key in browser environment configuration. Never expose or commit a service-role key.
+1. Use `/admin/` for routine results, fixture, team, standing-adjustment, and season work. Published-result corrections and other changes must follow their reviewed RPC workflows.
+2. Keep only the Supabase URL and publishable key in browser configuration. Never expose or commit a secret/service-role key or a database password.
+3. For a new migration, first use the guarded disposable verification package and the appropriate read-only production preflight/postflight in `tests/`, `verification/`, and `production/`. The retained runbooks describe those procedures as historical records and future diagnostic references, not instructions to reapply installed migrations.
+4. Use [SEASON_IMPORT.md](SEASON_IMPORT.md) for the already-completed import's source and artifact boundaries. Do not run `current-season-import.sql` again for a routine team-name or finals change.
+5. Snapshot refresh automation has a separate activation procedure in [PUBLIC-SNAPSHOT-AUTOMATION.md](../docs/PUBLIC-SNAPSHOT-AUTOMATION.md); do not assume the Edge Function is active merely because the workflow file exists.
 
-The migration creates no Auth accounts, seasons, teams, fixtures, scores, or other live competition rows. The only initial administrator allowed by the database is the confirmed Auth account for the email above. Admin users are explicitly enrolled after account creation.
+Migrations do not create Auth users or import current finals. Administrator membership is explicitly enrolled after account creation.
 
 ## Model notes
 

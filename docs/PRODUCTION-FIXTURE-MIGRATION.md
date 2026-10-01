@@ -1,6 +1,6 @@
 # Production fixture-change migration
 
-This runbook applies `supabase/migrations/202609270001_fixture_change_sets.sql` once after review. It never imports competition data or finals JSON.
+**Status:** The fixture change-set migration was applied to FIS production and its postflight passed: 326 fixtures and 326 published results remained unchanged, public fixture visibility was intact, and no fixture change set was created. Do not run the migration again. The sequence below is the retained application and diagnostic record for a fresh environment; it never imports competition data or finals JSON.
 
 1. In Supabase Dashboard, confirm the selected project is the FIS production project using its visible project name and URL. Do not rely on an open browser tab alone.
 2. Run the complete read-only `supabase/production/fixture_change_preflight.sql`. Save every result set and the total fixture and published-result counts.

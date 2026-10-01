@@ -1,5 +1,7 @@
 # Published competition snapshot automation
 
+The repository contains the refresh workflow and Edge Function implementation. Their presence does not mean the production Edge Function has been deployed or its trigger secrets configured; follow the activation steps below before relying on automatic refresh. Until then, use the reviewed read-only snapshot generation/check process to keep the fallback current.
+
 ## Flow and boundaries
 
 After `public.publish_result()` succeeds for a regular-season result (including a correction), Admin Results calls the `trigger-snapshot-refresh` Supabase Edge Function. The function verifies the user's Supabase JWT, then checks `public.is_fis_admin()` in that caller's session before requesting the GitHub `Refresh Public Competition Snapshot` workflow. The GitHub credential stays in the Edge Function's secrets; it is never sent to the browser. The browser cannot securely call the GitHub API itself from a static GitHub Pages site.

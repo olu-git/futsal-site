@@ -1,6 +1,6 @@
 # Standing adjustments transactional migration
 
-This package adds draft/review/published lifecycle, versioned edits, immutable published rows and linked correction/reversal drafts. It does not alter existing published deltas or competition JSON.
+**Status:** Applied to FIS production and postflight verified. Do not rerun the migration. This package adds draft/review/published lifecycle, versioned edits, immutable published rows and linked correction/reversal drafts. It did not alter existing published deltas or competition JSON.
 
 ## Disposable sequence
 
@@ -16,7 +16,7 @@ This package adds draft/review/published lifecycle, versioned edits, immutable p
 
 ## Production sequence
 
-After disposable verification only: run the read-only production preflight and save counts, apply the exact migration once, insert counts into the postflight placeholders, and require every postflight result true. Stop on any mismatch. Do not activate snapshot automation as part of migration application.
+Historical application sequence for a fresh environment only: run the read-only production preflight and save counts, apply the exact migration once, insert counts into the postflight placeholders, and require every postflight result true. Stop on any mismatch. Do not activate snapshot automation as part of migration application.
 
 ## Completed verification
 

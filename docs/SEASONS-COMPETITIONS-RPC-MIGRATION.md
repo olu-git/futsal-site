@@ -1,5 +1,7 @@
 # Seasons and competitions transactional migration
 
+**Status:** Applied to FIS production and postflight verified without creating a draft or changing existing business-data counts. Do not rerun this migration. The diagnostic sequence below is retained for a fresh environment or reviewed investigation.
+
 ## Model
 
 Draft metadata, competition structure and returning-team choices live in administrator-only `season_drafts`, `season_draft_competitions` and `season_draft_teams`. Draft teams retain `source_team_id` only for traceability. Activation creates new season-specific team IDs and rewrites copied preference/note foreign keys to those IDs.

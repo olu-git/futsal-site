@@ -21,7 +21,7 @@ If the migration is already installed only in `fis-fixture-test` and the functio
 4. Run `supabase/tests/disposable_team_profile_zero_check.sql`; require all counts to be zero and the final Boolean to be true.
 5. Only then proceed to the two-session concurrency sequence.
 
-Production never received the team-profile migration or this defect. The migration source now contains the corrected named-constraint form for future application.
+When the ambiguity was found, production had not received the team-profile migration or the defect. The corrected named-constraint version was subsequently applied and verified in production, as recorded below. Do not rerun it.
 
 ### Completed disposable results
 
