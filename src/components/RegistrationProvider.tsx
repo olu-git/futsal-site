@@ -1,12 +1,8 @@
 "use client";
 
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
-import { CheckCircle2, X } from "lucide-react";
-import EnquiryForm from "./EnquiryForm";
-import { site } from "@/lib/site-content";
+import RegistrationContent, { type RegistrationTab } from "./RegistrationContent";
 
-type RegistrationTab = "team" | "player" | "future";
-const tabs: { value: RegistrationTab; label: string }[] = [{ value: "team", label: "Team" }, { value: "player", label: "Player" }, { value: "future", label: "Future Competitions" }];
 const RegistrationContext = createContext<{ openRegistration: (tab?: RegistrationTab, trigger?: HTMLElement | null) => void } | null>(null);
 
 export function useRegistration() {
@@ -22,12 +18,10 @@ export function RegisterButton({ tab = "team", children = "Register", className 
 
 export default function RegistrationProvider({ children }: { children: ReactNode }) {
   const [tab, setTab] = useState<RegistrationTab>("team");
-  const [submitted, setSubmitted] = useState(false);
   const [open, setOpen] = useState(false);
+  const [instance, setInstance] = useState(0);
   const dialog = useRef<HTMLDialogElement>(null);
-  const confirmationHeading = useRef<HTMLHeadingElement>(null);
   const returnFocus = useRef<HTMLElement | null>(null);
-  const tabButtons = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
     if (!open) return;
@@ -42,20 +36,11 @@ export default function RegistrationProvider({ children }: { children: ReactNode
     };
   }, [open]);
 
-  useEffect(() => {
-    if (!submitted) return;
-    confirmationHeading.current?.focus({ preventScroll: true });
-    dialog.current?.scrollTo({ top: 0 });
-  }, [submitted]);
-
-  function selectTab(next: RegistrationTab) {
-    setTab(next);
-    setSubmitted(false);
-  }
-
   function openRegistration(next: RegistrationTab = "team", trigger?: HTMLElement | null) {
     returnFocus.current = trigger ?? document.activeElement as HTMLElement;
-    selectTab(next); setOpen(true);
+    setTab(next);
+    setInstance((current) => current + 1);
+    setOpen(true);
   }
 
   return <RegistrationContext.Provider value={{ openRegistration }}>
@@ -65,28 +50,7 @@ export default function RegistrationProvider({ children }: { children: ReactNode
       const rect = dialog.current.getBoundingClientRect();
       if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) setOpen(false);
     }}>
-      {open && <>
-        <div className="registration-banner"><h2 id="registration-title">Register</h2><p id="registration-intro">Team and player registrations are for the current Endeavour Hills competitions. Future competitions help us plan where and what to open next.</p><button className="dialog-close" aria-label="Close registration" onClick={() => setOpen(false)} autoFocus><X size={22} /></button></div>
-        <div className={`registration-body${submitted ? " is-submitted" : ""}`}><p className="fis-kicker">{submitted ? "ENQUIRY RECEIVED" : "I'm registering as a..."}</p>
-          <div className="registration-tabs" role="tablist" aria-label="Registration type">{tabs.map(({ value, label }, index) => <button key={value} id={`registration-tab-${value}`} ref={(element) => { tabButtons.current[index] = element; }} type="button" role="tab" aria-selected={tab === value} aria-controls={`registration-panel-${value}`} tabIndex={tab === value ? 0 : -1} onClick={() => selectTab(value)} onKeyDown={(event) => {
-            const target = event.key === "ArrowRight" ? (index + 1) % tabs.length : event.key === "ArrowLeft" ? (index + tabs.length - 1) % tabs.length : event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : null;
-            if (target !== null) { event.preventDefault(); selectTab(tabs[target].value); tabButtons.current[target]?.focus(); }
-          }}>{label}</button>)}</div>
-          {tabs.map(({ value, label }) => <section key={value} id={`registration-panel-${value}`} role="tabpanel" aria-labelledby={`registration-tab-${value}`} hidden={tab !== value}>
-            {tab === value && (submitted ? <div className="registration-confirmation" role="status" aria-live="polite">
-              <CheckCircle2 aria-hidden="true" size={48} strokeWidth={1.8} />
-              <h3 ref={confirmationHeading} tabIndex={-1}>Registration submitted</h3>
-              <p>Your enquiry has been sent. We&apos;ll be in touch shortly.</p>
-            </div> : <>
-              <h3>{label}{value !== "future" ? " Registration" : ""}</h3>
-              {value === "team" && <p className="panel-copy">For the <strong>Endeavour Hills competition.</strong> Interested in another location? <button className="inline-link" onClick={() => selectTab("future")}>Tell us here.</button></p>}
-              {value === "player" && <><p className="panel-copy">Want to fill in for a team at <strong>Endeavour Hills?</strong> Share your details and preferred night. Interested in another location? <button className="inline-link" onClick={() => selectTab("future")}>Tell us here.</button></p><p className="fill-in-note">Looking to fill in or find a player quickly? Visit the <a href={site.fillIns} target="_blank" rel="noopener noreferrer">FIS Fill-ins Facebook group.</a></p></>}
-              {value === "future" && <p className="panel-copy">Tell us where and how you&apos;d like to play. For the current <strong>Endeavour Hills competition,</strong> choose <button className="inline-link" onClick={() => selectTab("team")}>Team</button> or <button className="inline-link" onClick={() => selectTab("player")}>Player</button>.</p>}
-              <EnquiryForm kind={value} onSuccess={() => setSubmitted(true)} />
-            </>)}
-          </section>)}
-        </div>
-      </>}
+      {open && <RegistrationContent key={instance} idPrefix="registration" initialTab={tab} onClose={() => setOpen(false)} scrollContainer={dialog} />}
     </dialog>
   </RegistrationContext.Provider>;
 }
