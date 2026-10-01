@@ -192,7 +192,10 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .registration-dialog { position: fixed; inset: 0; width: min(900px, calc(100% - 32px)); max-width: none; max-height: calc(100dvh - 48px); margin: auto; padding: 0; border: 2px solid white; background: var(--fis-cream); color: var(--fis-ink); overflow-y: auto; overscroll-behavior: contain; }
 .registration-dialog::backdrop { background: #001b4fe8; }
 .registration-banner { position: relative; background: var(--fis-navy); color: white; border-bottom: 4px solid var(--fis-red); padding: 30px 76px 26px 36px; }
-.registration-banner h2 { font: 23px/1.6 var(--font-mono); text-transform: uppercase; margin-bottom: 12px; }
+.registration-banner h1, .registration-banner h2 { font: 23px/1.6 var(--font-mono); text-transform: uppercase; margin-bottom: 12px; }
+.registration-page { max-width: 900px; padding-bottom: 64px; }
+.registration-page .registration-banner, .registration-page .registration-body { border-inline: 2px solid var(--fis-blue); }
+.registration-page .registration-body { border-bottom: 2px solid var(--fis-blue); background: var(--fis-cream-light); }
 .registration-banner p { font-size: 12px; line-height: 1.9; }
 .dialog-close { position: absolute; top: 16px; right: 16px; border: 2px solid white; background: transparent; color: white; width: 44px; height: 44px; display: grid; place-items: center; }
 .registration-body { padding: 28px 36px 40px; }
@@ -563,7 +566,7 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
   .rules-grid { grid-template-columns: 1fr; }
   .registration-dialog { width: calc(100% - 16px); max-height: calc(100dvh - 24px); }
   .registration-banner { padding: 26px 62px 24px 20px; }
-  .registration-banner h2 { font-size: 19px; }
+  .registration-banner h1, .registration-banner h2 { font-size: 19px; }
   .registration-banner p { font-size: 11px; }
   .registration-body { padding: 22px 18px 32px; }
   .registration-tabs { grid-template-columns: 1fr; gap: 10px; }
