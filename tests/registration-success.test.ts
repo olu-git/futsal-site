@@ -3,7 +3,9 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 
 const form = readFileSync("src/components/EnquiryForm.tsx", "utf8");
+const registration = readFileSync("src/components/RegistrationContent.tsx", "utf8");
 const modal = readFileSync("src/components/RegistrationProvider.tsx", "utf8");
+const page = readFileSync("src/app/register/page.tsx", "utf8");
 const css = readFileSync("src/app/globals.css", "utf8");
 
 test("registration confirmation follows only a successful Web3Forms response", () => {
@@ -19,12 +21,14 @@ test("player label is concise while its submission field name stays stable", () 
 });
 
 test("completed registration replaces the form until a tab is chosen", () => {
-  assert.match(modal, /submitted \? <div className="registration-confirmation"/);
-  assert.match(modal, /Registration submitted/);
-  assert.match(modal, /<EnquiryForm kind=\{value\} onSuccess=\{\(\) => setSubmitted\(true\)\}/);
-  assert.match(modal, /function selectTab\(next: RegistrationTab\) \{\s*setTab\(next\);\s*setSubmitted\(false\)/);
-  assert.match(modal, /onClick=\{\(\) => selectTab\(value\)\}/);
-  assert.match(modal, /confirmationHeading\.current\?\.focus/);
+  assert.match(registration, /submitted \? <div className="registration-confirmation"/);
+  assert.match(registration, /Registration submitted/);
+  assert.match(registration, /<EnquiryForm kind=\{value\} onSuccess=\{\(\) => setSubmitted\(true\)\}/);
+  assert.match(registration, /function selectTab\(next: RegistrationTab\) \{\s*setTab\(next\);\s*setSubmitted\(false\)/);
+  assert.match(registration, /onClick=\{\(\) => selectTab\(value\)\}/);
+  assert.match(registration, /confirmationHeading\.current\?\.focus/);
+  assert.match(modal, /<RegistrationContent/);
+  assert.match(page, /<RegistrationContent/);
 });
 
 test("mobile confirmation stays prominent and respects reduced motion", () => {
