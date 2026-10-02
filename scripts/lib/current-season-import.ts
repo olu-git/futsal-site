@@ -674,7 +674,7 @@ ${excludedTeams.length ? excludedTeams.join("\n") : "- No empty or stale source 
 
 - Monday published JSON-derived table: **offline match passed** (${model.nights.monday.standings.length} rows).
 - Wednesday published JSON-derived table: **offline match passed** (${model.nights.wednesday.standings.length} rows).
-- The generated post-import SQL compares every standings field and position against these expected rows. Database parity remains pending until the operator deliberately executes the import and verification SQL.
+- The generated post-import SQL compares every standings field and position against these expected rows. The initial production import and verification were completed; this historical import artifact must not be rerun to patch later changes.
 
 ## Assumptions and unresolved discrepancies
 

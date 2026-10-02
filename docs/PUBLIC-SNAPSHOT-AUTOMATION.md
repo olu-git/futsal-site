@@ -6,7 +6,7 @@ The repository contains the refresh workflow and Edge Function implementation. T
 
 After `public.publish_result()` succeeds for a regular-season result (including a correction), Admin Results calls the `trigger-snapshot-refresh` Supabase Edge Function. The function verifies the user's Supabase JWT, then checks `public.is_fis_admin()` in that caller's session before requesting the GitHub `Refresh Public Competition Snapshot` workflow. The GitHub credential stays in the Edge Function's secrets; it is never sent to the browser. The browser cannot securely call the GitHub API itself from a static GitHub Pages site.
 
-The workflow anonymously reads published Monday and Wednesday regular-season data through Supabase RLS using the public URL and publishable key. Its read-only preparation job validates and regenerates `src/data/public-competition-snapshot.json`; a separate job receives only that validated artifact and gains Contents write permission to commit it if its bytes changed. A changed snapshot on `master` starts the Pages workflow via `workflow_run`: commits made with `GITHUB_TOKEN` do not themselves start `push` workflows. The workflow is also configured for ordinary pushes to `master`. Refreshes on `feature/new-website` do not deploy.
+The workflow anonymously reads published Monday and Wednesday regular-season data through Supabase RLS using the public URL and publishable key. Its read-only preparation job validates and regenerates `src/data/public-competition-snapshot.json`; a separate job receives only that validated artifact and gains Contents write permission to commit it if its bytes changed. A changed snapshot on `master` starts the Pages workflow via `workflow_run`: commits made with `GITHUB_TOKEN` do not themselves start `push` workflows. The workflow is also configured for ordinary pushes to `master`. Only `master` is allowlisted for refresh dispatch.
 
 Supabase remains the live primary source. A failed dispatch or workflow does **not** undo a published result; it only leaves the static fallback stale. The admin warning provides a retry action. Finals, grading and knockout data stay exclusively in `src/data/season-2026-s1.json` and are not generated or changed by this process.
 
@@ -27,7 +27,7 @@ Set Supabase **Edge Function secrets** for `trigger-snapshot-refresh`:
 - `GITHUB_TOKEN`: fine-grained personal access token scoped to this repository with **Actions: Read and write**; no Contents write permission is needed on this token. The workflow's own `GITHUB_TOKEN` has job-scoped Contents write permission for its snapshot commit.
 - `GITHUB_OWNER`, `GITHUB_REPOSITORY`: the target repository coordinates.
 - `GITHUB_WORKFLOW_FILE`: `refresh-public-snapshot.yml`.
-- `GITHUB_WORKFLOW_REF`: `master` after release. `feature/new-website` is permitted for pre-release testing only.
+- `GITHUB_WORKFLOW_REF`: `master` only. Review an allowlist change separately before any future branch test.
 
 Do not put the GitHub token, service-role key or any password in `NEXT_PUBLIC_*`, source code, repository Variables, or browser-accessible configuration. Do not log them. Restrict access to the Edge Function secret and rotate the token if exposed. Deploy the function later using the Supabase CLI or Dashboard with JWT verification enabled; do not disable JWT verification. `supabase/functions/trigger-snapshot-refresh/deno.json` pins its Supabase JS dependency.
 
@@ -58,6 +58,6 @@ To stop automatic dispatch without changing competition data, disable the Edge F
 - [ ] Confirm the dedicated workflow exists on the repository's default branch; GitHub requires this for `workflow_dispatch` and `workflow_run` activation.
 - [ ] Configure public repository Variables and the Edge secrets; review branch-protection rules for the workflow's snapshot-only push.
 - [ ] Deploy the Edge Function with JWT verification and test 401/403 before the first authorised 202 request.
-- [ ] Trial the refresh on `feature/new-website`, inspect the sole generated-file diff, and confirm it does not deploy.
-- [ ] After merging the reviewed code to `master`, set `GITHUB_WORKFLOW_REF=master`, confirm the dispatch commits only the snapshot on `master`, and confirm the successful `workflow_run` produces the Pages build.
+- [ ] Before activation, review the current `master` snapshot against anonymously published Supabase data and confirm the workflow is still allowlisted to `master` only.
+- [ ] Set `GITHUB_WORKFLOW_REF=master`, confirm the dispatch commits only the snapshot on `master`, and confirm the successful `workflow_run` produces the Pages build.
 - [ ] Check failure visibility and retry on the admin screen. Keep the existing JSON finals workflow separate.

@@ -73,9 +73,9 @@ test("workflow commits only the snapshot and production deploy follows successfu
   assert.match(workflow, /git add -- src\/data\/public-competition-snapshot\.json/);
   assert.match(workflow, /git diff --cached --name-only/);
   assert.match(workflow, /git diff --quiet -- src\/data\/public-competition-snapshot\.json/);
-  assert.match(workflow, /master\|feature\/new-website/);
+  assert.match(workflow, /^\s+master\) ;;$/m);
   assert.match(edge, /config\.workflowFile !== "refresh-public-snapshot\.yml"/);
-  assert.match(edge, /\["master", "feature\/new-website"\]\.includes\(config\.ref\)/);
+  assert.match(edge, /config\.ref !== "master"/);
   assert.match(deploy, /workflow_run:/);
   assert.match(deploy, /head_branch == 'master'/);
   assert.match(deploy, /head_sha != github\.sha/);

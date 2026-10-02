@@ -2,15 +2,9 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import snapshotFile from "../src/data/public-competition-snapshot.json";
 import finalsFile from "../src/data/season-2026-s1.json";
-import { competitionRepository, jsonCompetitionData } from "../src/lib/competition-repository";
+import { competitionRepository } from "../src/lib/competition-repository";
 import { buildPublicSnapshot, serializePublicSnapshot, validatePublicSnapshot } from "../src/lib/public-snapshot";
 import type { PublishedCompetitionRows } from "../src/lib/public-competition";
-import { calculateStandings } from "../src/lib/standings";
-import teamsFile from "../src/data/teams.json";
-import mondayFixturesFile from "../src/data/monday-fixtures.json";
-import wednesdayFixturesFile from "../src/data/wednesday-fixtures.json";
-import adjustmentsFile from "../src/data/standings-adjustments.json";
-import type { CompetitionDataset } from "../src/lib/competition-repository";
 import { teamDisplayName } from "../src/lib/team-display-name";
 
 const rows: PublishedCompetitionRows = {
@@ -60,7 +54,8 @@ test("snapshot is deterministic, segregated, and published-only", () => {
 
 test("snapshot validation rejects incomplete or invalid public data", () => {
   assert.throws(() => buildPublicSnapshot({ ...rows, teams: rows.teams.filter((team) => team.id !== "m1") }), /unresolved home team/);
-  assert.throws(() => buildPublicSnapshot({ ...rows, fixtures: rows.fixtures.filter((fixture) => fixture.id !== "wf") }), /wednesday history is missing/);
+  assert.doesNotThrow(() => buildPublicSnapshot({ ...rows, fixtures: rows.fixtures.filter((fixture) => fixture.id !== "wf") }));
+  assert.throws(() => buildPublicSnapshot({ ...rows, teams: rows.teams.filter((team) => team.competition_season_id !== "w"), fixtures: rows.fixtures.filter((fixture) => fixture.competition_season_id !== "w"), adjustments: [] }), /wednesday teams are missing/);
   assert.throws(() => buildPublicSnapshot({ ...rows, results: [{ fixture_id: "mf", status: "published", home_score: -1, away_score: 2, forfeit_side: null }] }), /Invalid published score/);
   const bad = structuredClone(buildPublicSnapshot(rows));
   bad.data.fixtures[1].homeTeam = "mon-a";
@@ -74,17 +69,22 @@ test("checked-in snapshot is the regular-season fallback; finals stay separate",
     teams: snapshotFile.data.teams.map((team) => ({ ...team, name: teamDisplayName(team.id, team.name) })),
   });
   assert.deepEqual(await competitionRepository.readFinals(), finalsFile);
-  assert.ok(snapshotFile.data.fixtures.every((fixture) => fixture.status === "completed"));
+  assert.ok(snapshotFile.data.fixtures.every((fixture) => ["scheduled", "completed"].includes(fixture.status)));
   assert.ok(!JSON.stringify(snapshotFile).includes("penaltyWinner"));
 });
 
-test("generated fallback preserves the existing published standings on both nights", () => {
-  const historical: CompetitionDataset = {
-    teams: teamsFile as CompetitionDataset["teams"],
-    fixtures: [...mondayFixturesFile, ...wednesdayFixturesFile] as CompetitionDataset["fixtures"],
-    standingsAdjustments: adjustmentsFile as CompetitionDataset["standingsAdjustments"],
-  };
-  for (const night of ["monday", "wednesday"] as const) {
-    assert.deepEqual(calculateStandings(night, "A", jsonCompetitionData), calculateStandings(night, "A", historical));
-  }
+test("new published seasons can snapshot scheduled fixtures and records without legacy IDs", () => {
+  const next = structuredClone(rows);
+  next.teams[0].legacy_id = null;
+  next.fixtures[0].legacy_id = null;
+  next.fixtures[0].id = "next-fixture";
+  next.results = next.results.filter((result) => result.fixture_id !== "mf");
+  next.adjustments[0].legacy_id = null;
+  const snapshot = buildPublicSnapshot(next);
+  assert.equal(snapshot.data.teams[0].id, "m1");
+  assert.equal(snapshot.data.fixtures[0].id, "next-fixture");
+  assert.equal(snapshot.data.fixtures[0].homeTeam, "m1");
+  assert.equal(snapshot.data.fixtures[0].status, "scheduled");
+  assert.equal(snapshot.data.standingsAdjustments[0].id, "a1");
+  assert.doesNotThrow(() => validatePublicSnapshot(snapshot));
 });

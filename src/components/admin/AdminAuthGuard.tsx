@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
+import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/browser";
 import { resolveAdminAccess, type AdminAccess } from "@/lib/admin/auth";
 
 export default function AdminAuthGuard({ children }: { children: ReactNode }) {
+  const router = useRouter();
   const [access, setAccess] = useState<AdminAccess>("loading");
 
   useEffect(() => {
@@ -32,9 +34,9 @@ export default function AdminAuthGuard({ children }: { children: ReactNode }) {
   if (access === "loading") return <AdminState title="Checking access" text="Confirming your administrator session..." />;
   if (access === "unauthenticated") return <AdminState title="Sign in required" text="Your session has expired or you are not signed in." action="Go to admin login" onAction={() => {
     const returnTo = `${window.location.pathname}${window.location.search}`;
-    window.location.assign(`/admin/login/?returnTo=${encodeURIComponent(returnTo)}`);
+    router.push(`/admin/login/?returnTo=${encodeURIComponent(returnTo)}`);
   }} />;
-  if (access === "denied") return <AdminState title="Access denied" text="This account is not authorised to manage FIS and has been signed out." action="Return to login" onAction={() => window.location.assign("/admin/login/")} />;
+  if (access === "denied") return <AdminState title="Access denied" text="This account is not authorised to manage FIS and has been signed out." action="Return to login" onAction={() => router.push("/admin/login/")} />;
   if (access === "unavailable") return <AdminState title="Admin unavailable" text="Supabase could not confirm administrator access. Check your connection and try again." action="Try again" onAction={() => window.location.reload()} />;
   return children;
 }

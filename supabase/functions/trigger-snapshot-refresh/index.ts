@@ -25,7 +25,7 @@ function githubConfig(): GitHubDispatchConfig | null {
     workflowFile: env("GITHUB_WORKFLOW_FILE"), ref: env("GITHUB_WORKFLOW_REF"),
   };
   if (!config.token || !/^[A-Za-z0-9-]+$/.test(config.owner) || !/^[A-Za-z0-9._-]+$/.test(config.repository) ||
-    config.workflowFile !== "refresh-public-snapshot.yml" || !["master", "feature/new-website"].includes(config.ref) ||
+    config.workflowFile !== "refresh-public-snapshot.yml" || config.ref !== "master" ||
     !allowedOrigins.length || !env("SUPABASE_URL") || !env("SUPABASE_PUBLISHABLE_KEY")) return null;
   return config;
 }

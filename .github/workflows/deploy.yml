@@ -29,11 +29,21 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Validate site and data
+        run: |
+          npm test
+          npm run lint
+          npx tsc --noEmit --incremental false
+          npm run finals:check
+          npm run snapshot:validate
+          npm run season:import:validate
+          npm run season:import:check
 
       - name: Build static site
         run: npm run build

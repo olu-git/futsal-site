@@ -17,15 +17,8 @@ export function buildPublicSnapshot(rows: PublishedCompetitionRows): PublicSnaps
   const sourceTeams = rows.teams.filter((row) => editionIds.has(row.competition_season_id));
   const idMap = new Map<string, string>();
   for (const team of sourceTeams) {
-    if (!team.legacy_id) throw new Error(`Team ${team.name} has no public legacy ID.`);
     if (idMap.has(team.id)) throw new Error("Duplicate source team ID.");
-    idMap.set(team.id, team.legacy_id);
-  }
-  for (const fixture of rows.fixtures.filter((row) => editionIds.has(row.competition_season_id) && row.stage === "regular_season" && row.publication_state === "published")) {
-    if (!fixture.legacy_id) throw new Error("A published fixture has no public legacy ID.");
-  }
-  for (const adjustment of rows.adjustments.filter((row) => editionIds.has(row.competition_season_id) && row.publication_state === "published")) {
-    if (!adjustment.legacy_id) throw new Error("A published adjustment has no public legacy ID.");
+    idMap.set(team.id, team.legacy_id ?? team.id);
   }
 
   const mapped = mapPublishedCompetition(editions, sourceTeams, rows.fixtures, rows.results, rows.adjustments);
@@ -104,7 +97,7 @@ export function validatePublicSnapshot(value: unknown): asserts value is PublicS
     adjustmentIds.add(adjustment.id);
   }
   for (const night of nights) {
-    if (!teams.some((team) => team.night === night) || !fixtures.some((fixture) => fixture.night === night && fixture.status === "completed"))
-      throw new Error(`Published ${night} history is missing from the snapshot.`);
+    if (!teams.some((team) => team.night === night))
+      throw new Error(`Published ${night} teams are missing from the snapshot.`);
   }
 }

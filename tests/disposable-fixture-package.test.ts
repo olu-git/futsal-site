@@ -6,7 +6,6 @@ const directory = "supabase/tests";
 const scripts = [
   "disposable_fixture_marker.sql",
   "disposable_fixture_admin_enrolment.sql",
-  "disposable_fixture_change_patch.sql",
   "disposable_fixture_schema_preflight.sql",
   "disposable_fixture_verification_zero_check.sql",
   "fixture_concurrency_prepare.sql",
@@ -16,7 +15,6 @@ const scripts = [
   "fixture_concurrency_cleanup.sql",
   "disposable_team_profile_schema_preflight.sql",
   "disposable_team_profile_zero_check.sql",
-  "disposable_team_profile_rpc_patch.sql",
   "team_profile_concurrency_prepare.sql",
   "team_profile_concurrency_session_a.sql",
   "team_profile_concurrency_session_b.sql",
@@ -99,9 +97,8 @@ test("team-profile concurrency setup and cleanup are self-contained and preserve
   assert.doesNotMatch(cleanup, /delete from private\.admin_users|delete from auth\.users|update fis_fixture_test\.project_marker/i);
 });
 
-test("team-profile RPC uses an unambiguous named conflict constraint and patch preserves security", () => {
+test("team-profile RPC uses an unambiguous named conflict constraint and preserves security", () => {
   const migration = readFileSync("supabase/migrations/202609280001_transactional_team_profile_save.sql", "utf8");
-  const patch = readFileSync(`${directory}/disposable_team_profile_rpc_patch.sql`, "utf8");
   const outputNames = [...migration.matchAll(/returns\s+table\(([^)]+)\)/gi)]
     .flatMap((match) => match[1].split(",").map((column) => column.trim().split(/\s+/)[0]));
   const conflictTargets = [...migration.matchAll(/on\s+conflict\s*\(([^)]+)\)/gi)]
@@ -110,15 +107,9 @@ test("team-profile RPC uses an unambiguous named conflict constraint and patch p
   assert.equal(conflictTargets.some((column) => outputNames.includes(column)), false);
   assert.doesNotMatch(migration, /on\s+conflict\s*\(\s*team_id\s*\)/i);
   assert.match(migration, /on conflict on constraint team_fixture_notes_pkey do update set notes = excluded\.notes/i);
-  assert.match(patch, /select fis_fixture_test\.assert_disposable\(\);/);
-  assert.match(patch, /public\.save_team_profile\(uuid,bigint,text,text,uuid,text,jsonb,text,text\)/);
-  assert.match(patch, /security_definer_preserved/);
-  assert.match(patch, /safe_search_path_preserved/);
-  assert.match(patch, /ownership_preserved/);
-  assert.match(patch, /grants_preserved/);
-  assert.match(patch, /authenticated_execute_preserved/);
-  assert.match(patch, /anonymous_execute_denied/);
-  assert.doesNotMatch(patch, /\b(insert|update|delete)\s+(into|from)?\s*public\.(teams|team_fixture_notes|team_kickoff_preferences)\b/i);
+  assert.match(migration, /security definer/i);
+  assert.match(migration, /set search_path\s*=\s*''/i);
+  assert.match(migration, /grant execute on function public\.save_team_profile/i);
 });
 
 test("rollback verifier keeps its temporary assertion helper alive for one outer transaction", () => {
@@ -191,10 +182,9 @@ test("ordinary concurrency cleanup preserves disposable administrator identity",
   assert.doesNotMatch(cleanup, /disposable_admin_user_id\s*=\s*null/i);
 });
 
-test("fixture migration and disposable repair contain no ambiguous team identifier", () => {
+test("fixture migration contains no ambiguous team identifier", () => {
   const migration = readFileSync("supabase/migrations/202609270001_fixture_change_sets.sql", "utf8");
-  const patch = readFileSync(`${directory}/disposable_fixture_change_patch.sql`, "utf8");
-  for (const sql of [migration, patch]) {
+  for (const sql of [migration]) {
     assert.doesNotMatch(sql, /\bn\.team_id\s*=\s*team_id\b/i);
     assert.doesNotMatch(sql, /\btkp\.team_id\s*=\s*team_id\b/i);
     assert.match(sql, /n\.team_id\s*=\s*v_team_id/);
@@ -208,10 +198,6 @@ test("fixture migration and disposable repair contain no ambiguous team identifi
     "location_id", "status", "operation", "publication_state", "round_number", "court", "match_date", "kickoff_time"]) {
     assert.doesNotMatch(report, new RegExp(`\\n\\s*${variable}\\s+[^;]+;`, "i"));
   }
-  assert.match(patch, /^-- DISPOSABLE TEST PROJECT ONLY — DO NOT RUN IN PRODUCTION/m);
-  assert.match(patch, /select fis_fixture_test\.assert_disposable\(\);/);
-  assert.match(patch, /create or replace function private\.fixture_change_report/);
-  assert.match(patch, /known_ambiguous_expression_removed/);
 });
 
 test("fixture-change PL/pgSQL locals and parameters use explicit prefixes", () => {

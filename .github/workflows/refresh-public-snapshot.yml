@@ -26,7 +26,7 @@ jobs:
         shell: bash
         run: |
           case "$GITHUB_REF_NAME" in
-            master|feature/new-website) ;;
+            master) ;;
             *) echo "Snapshot refresh is not allowed on this ref." >&2; exit 1 ;;
           esac
           if [ -z "$NEXT_PUBLIC_SUPABASE_URL" ] || [ -z "$NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY" ]; then
@@ -47,7 +47,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Install dependencies

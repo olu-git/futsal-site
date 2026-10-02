@@ -23,7 +23,7 @@ This version has breaking changes - APIs, conventions, and file structure may al
 
 ## Architecture and source of truth
 
-- The app uses Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, Framer Motion, and Lucide. It is statically exported by `next.config.ts` and deployed to GitHub Pages from `master` via `.github/workflows/deploy.yml`.
+- The app uses Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, and Lucide. It is statically exported by `next.config.ts` and deployed to GitHub Pages from `master` via `.github/workflows/deploy.yml`.
 - Keep the current static, low-cost architecture unless the user explicitly approves an infrastructure change. Supabase is already the primary regular-season and admin data store; use its public publishable key with RLS, never a secret/service-role key.
 - Public regular-season reads use Supabase after hydration, with `src/data/public-competition-snapshot.json` as the checked-in fallback. The older team, fixture, and adjustment JSON remains for historical comparison and validation. `season-2026-s1.json` and `src/lib/finals.ts` remain the source of truth for current finals and grading history.
 - Standings are derived from completed fixtures plus explicit administrative adjustments. Never hand-code a displayed ladder, fabricate results, or duplicate competition data inside a page component.
@@ -34,7 +34,7 @@ This version has breaking changes - APIs, conventions, and file structure may al
 ## Fixtures, results, and registration
 
 - Manage future regular-season changes through the authenticated admin workflows and reviewed RPCs. Current finals remain JSON-managed: preserve match IDs, published date, time, court, opponent, scores, and history unless the user explicitly changes them.
-- Apply fixture constraints from `src/lib/validate.ts` and the current competition instructions. Do not invent a score, opponent, time preference, eligibility rule, or standings adjustment.
+- Use the current fixture change-set validation and its documented competition constraints for admin scheduling; use `npm run finals:check` for JSON finals. Do not invent a score, opponent, time preference, eligibility rule, or standings adjustment.
 - Monday and Wednesday pages must continue to provide fixtures, results, standings, and finals information with consistent components and formatting.
 - Registration is an enquiry, not a payment or confirmed place. Preserve the current Team, Player, and Future Competitions tabs and the separate Contact form. Keep the primary action labelled `SUBMIT` and make submission success and errors clear.
 - Never expose secrets or private administration data in client code, fixtures, logs, or documentation. Treat public form integration identifiers according to the provider's documented security model.

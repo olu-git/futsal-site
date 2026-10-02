@@ -11,17 +11,7 @@ This runbook applies `supabase/migrations/202609280001_transactional_team_profil
 5. Run `supabase/tests/disposable_team_profile_zero_check.sql`; require all counts to be zero.
 6. Follow `supabase/tests/team_profile_concurrency_prepare.sql`, Session A, Session B, verify and cleanup in order. Preparation creates a separate deterministic committed hierarchy because two sessions must share it. Session B must wait and then fail stale after Session A commits; cleanup removes that hierarchy while preserving the marker, Auth user and administrator membership.
 
-### Recovery after the ambiguous `team_id` failure
-
-If the migration is already installed only in `fis-fixture-test` and the functional verifier failed at `ON CONFLICT (team_id)`, do not rerun the migration. `RETURNS TABLE` introduced an output variable named `team_id`, making that conflict-inference identifier ambiguous inside PL/pgSQL. The failed verifier transaction did not retain its deterministic test hierarchy.
-
-1. Run the complete guarded `supabase/tests/disposable_team_profile_rpc_patch.sql` once. It replaces only the installed function body, uses the named `team_fixture_notes_pkey` constraint, and verifies that signature, owner, grants, `SECURITY DEFINER` and safe `search_path` remain intact.
-2. Require every returned Boolean to be `true`, including `known_ambiguous_expression_removed` and `named_constraint_installed`.
-3. Rerun the complete `supabase/verification/verify_team_profile_save.sql` from its first line; require `team_profile_verification_passed = true`.
-4. Run `supabase/tests/disposable_team_profile_zero_check.sql`; require all counts to be zero and the final Boolean to be true.
-5. Only then proceed to the two-session concurrency sequence.
-
-When the ambiguity was found, production had not received the team-profile migration or the defect. The corrected named-constraint version was subsequently applied and verified in production, as recorded below. Do not rerun it.
+The current migration uses the named `team_fixture_notes_pkey` constraint, avoiding the historical `team_id` output-column ambiguity. Production received the corrected migration; do not rerun it. Older disposable-only repair scripts are retired. For a new disposable project, apply the current migration once and run the verification sequence above.
 
 ### Completed disposable results
 

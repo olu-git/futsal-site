@@ -6,4 +6,4 @@ The loader selects the latest published competition season for each night and di
 
 Grading and knockout history still comes exclusively from `src/data/season-2026-s1.json`. Home, Monday, and Wednesday publicly render only the knockout bracket; grading results remain recorded in JSON. This layer does not read or write finals in Supabase. It does not perform any database mutation.
 
-The generated JSON snapshot is static at build time. The snapshot refresh automation is implemented but must be reviewed and configured before activation; see `docs/PUBLIC-SNAPSHOT-AUTOMATION.md`. The historical source JSON remains unchanged and is still used by legacy validation and import scripts.
+The generated JSON snapshot is static at build time. The snapshot refresh automation is implemented but must be reviewed and configured before activation; see `docs/PUBLIC-SNAPSHOT-AUTOMATION.md`. New-season teams, fixtures and adjustments may use their stable Supabase UUIDs when no legacy ID exists. A new season may have scheduled fixtures but no results yet. The historical source JSON remains unchanged for import reconciliation and finals validation.

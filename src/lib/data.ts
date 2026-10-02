@@ -4,20 +4,9 @@ import mondayFixturesData from "@/data/monday-fixtures.json";
 import wednesdayFixturesData from "@/data/wednesday-fixtures.json";
 import standingsAdjustmentsData from "@/data/standings-adjustments.json";
 
-// ============================================================
-// Core data — edit the JSON files in src/data/ directly:
-//   teams.json              → team names and IDs
-//   monday-fixtures.json    → Monday night schedule + scores
-//   wednesday-fixtures.json → Wednesday night schedule + scores
-//
-// To enter results after a game night:
-//   1. Open the relevant JSON file
-//   2. Find the fixture by ID (e.g. "mon-r3-1")
-//   3. Add homeScore, awayScore and change status to "completed"
-//
-// Run validateFixtures() from src/lib/validate.ts in the browser
-// console or a script to check constraint violations.
-// ============================================================
+// Historical regular-season source data retained for import reconciliation.
+// Current published league data comes from Supabase with a generated JSON fallback.
+// Finals and grading remain in the separate knockout JSON workflow.
 
 export const teams: Team[] = teamsData as Team[];
 
