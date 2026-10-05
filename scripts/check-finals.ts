@@ -63,7 +63,12 @@ for (const night of nights) {
     if (result.penaltyWinner) {
       assert.equal(result.scoreA, result.scoreB, `${night} ${matchId} penalties require a tied score`);
       assert(Number.isFinite(result.penaltyScoreA) && Number.isFinite(result.penaltyScoreB));
-      assert.notEqual(result.penaltyScoreA, result.penaltyScoreB);
+      const approvedTiedShootout = night === "monday" && matchId === "qf-3"
+        && result.scoreA === 5 && result.scoreB === 5
+        && result.penaltyScoreA === 2 && result.penaltyScoreB === 2
+        && result.penaltyWinner === "A";
+      assert(result.penaltyScoreA !== result.penaltyScoreB || approvedTiedShootout,
+        `${night} ${matchId} tied penalties require the approved Hunger FC advancement`);
     }
   }
 

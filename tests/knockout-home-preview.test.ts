@@ -42,7 +42,7 @@ test("Monday results advance the correct semi-final teams", () => {
   assert.deepEqual(results["qf-2"], { scoreA: 4, scoreB: 5 });
   assert.deepEqual(results["qf-4"], { scoreA: 3, scoreB: 7 });
   const result = results["qf-3"];
-  assert.deepEqual(result, { scoreA: 5, scoreB: 5, penaltyWinner: "A", penaltyScoreA: 3, penaltyScoreB: 2 });
+  assert.deepEqual(result, { scoreA: 5, scoreB: 5, penaltyWinner: "A", penaltyScoreA: 2, penaltyScoreB: 2 });
   assert.equal(winnerSide(result), "A");
   const firstSemi = finalsMatches.monday.find((match) => match.id === "sf-1");
   const semi = finalsMatches.monday.find((match) => match.id === "sf-2");
@@ -119,6 +119,9 @@ test("public brackets show only knockout rounds while grading history stays in d
       assert.match(html, /Quarter Finals/);
       assert.match(html, /Semi Finals/);
       assert.match(html, /Grand Final/);
+      if (night === "monday") {
+        assert.match(html, /Hunger FC advances; penalties tied 2-2/);
+      }
       if (preview) {
         assert.doesNotMatch(html, /Round of 16<\/h3>/);
         assert.match(html, /h-\[600px\]/);

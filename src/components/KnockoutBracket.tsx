@@ -170,6 +170,9 @@ export function FinalsMatchCard({ match, night, data, kitColours }: FinalsMatchC
       {result?.forfeitSide && <p className="bracket-match-note">
         {result.forfeitSide === "A" ? teamA?.name ?? "Team A" : teamB?.name ?? "Team B"} forfeited
       </p>}
+      {result?.penaltyWinner && result.penaltyScoreA === result.penaltyScoreB && <p className="bracket-match-note">
+        {result.penaltyWinner === "A" ? teamA?.name ?? "Team A" : teamB?.name ?? "Team B"} advances; penalties tied {result.penaltyScoreA}-{result.penaltyScoreB}
+      </p>}
     </div>
   );
 }

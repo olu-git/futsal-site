@@ -40,7 +40,7 @@
         "grading-4": { "scoreA": 4, "scoreB": 7 },
         "qf-1": { "scoreA": 7, "scoreB": 4 },
         "qf-2": { "scoreA": 4, "scoreB": 5 },
-        "qf-3": { "scoreA": 5, "scoreB": 5, "penaltyWinner": "A", "penaltyScoreA": 3, "penaltyScoreB": 2 },
+        "qf-3": { "scoreA": 5, "scoreB": 5, "penaltyWinner": "A", "penaltyScoreA": 2, "penaltyScoreB": 2 },
         "qf-4": { "scoreA": 3, "scoreB": 7 }
       }
     },
