@@ -54,6 +54,36 @@ test("Monday results advance the correct semi-final teams", () => {
   assert.equal(result.scoreA, result.scoreB);
 });
 
+test("Monday 5 October results resolve Goldlink Up as champion", () => {
+  const data = season.finals.monday;
+  const semiOne = finalsMatches.monday.find((match) => match.id === "sf-1");
+  const semiTwo = finalsMatches.monday.find((match) => match.id === "sf-2");
+  const final = finalsMatches.monday.find((match) => match.id === "gf");
+  assert.ok(semiOne && semiTwo && final);
+  assert.deepEqual(data.results["sf-1"], { scoreA: 5, scoreB: 8 });
+  assert.deepEqual(data.results["sf-2"], { scoreA: 7, scoreB: 6 });
+  assert.deepEqual(data.results.gf, { scoreA: 6, scoreB: 5 });
+  assert.equal(resolveFinalsSlot(final.a, "monday", data)?.name, "Goldlink Up");
+  assert.equal(resolveFinalsSlot(final.b, "monday", data)?.name, "Hunger FC");
+  assert.equal(winnerSide(data.results.gf), "A");
+
+  for (const preview of [false, true]) {
+    const html = renderToStaticMarkup(createElement(KnockoutBracket, { night: "monday", data, kitColours: {}, preview }));
+    assert.match(html, /2026 Season 1 Champions/);
+    assert.match(html, /finals-champion-name">Goldlink Up/);
+    assert.match(html, /pixel-confetti/);
+    assert.match(html, /fill="#e6a921"/);
+    assert.match(html, /aria-label="Play confetti"/);
+    assert.match(html, /data-playing="false"/);
+  }
+  const withoutFinal = { ...data, results: { ...data.results } };
+  delete withoutFinal.results.gf;
+  const pendingHtml = renderToStaticMarkup(createElement(KnockoutBracket, { night: "monday", data: withoutFinal, kitColours: {} }));
+  assert.doesNotMatch(pendingHtml, /finals-champion/);
+  const wednesdayHtml = renderToStaticMarkup(createElement(KnockoutBracket, { night: "wednesday", data: season.finals.wednesday, kitColours: {} }));
+  assert.doesNotMatch(wednesdayHtml, /finals-champion/);
+});
+
 test("Wednesday 30 September quarter-finals advance the reported winners", () => {
   const data = season.finals.wednesday;
   const expected = [

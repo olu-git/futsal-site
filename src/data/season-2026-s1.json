@@ -41,7 +41,10 @@
         "qf-1": { "scoreA": 7, "scoreB": 4 },
         "qf-2": { "scoreA": 4, "scoreB": 5 },
         "qf-3": { "scoreA": 5, "scoreB": 5, "penaltyWinner": "A", "penaltyScoreA": 2, "penaltyScoreB": 2 },
-        "qf-4": { "scoreA": 3, "scoreB": 7 }
+        "qf-4": { "scoreA": 3, "scoreB": 7 },
+        "sf-1": { "scoreA": 5, "scoreB": 8 },
+        "sf-2": { "scoreA": 7, "scoreB": 6 },
+        "gf": { "scoreA": 6, "scoreB": 5 }
       }
     },
     "wednesday": {

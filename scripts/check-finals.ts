@@ -115,7 +115,7 @@ for (const night of nights) {
 
     if (night === "monday") {
       if (resolvedTeams.some((team) => team === "Hunger FC" || team === "Ghazni United")) {
-        // Approved SF2-only exception: Hunger FC vs Moza Mama, 5 October at 19:30 on Court 2.
+        // Approved SF2 exception: Hunger FC vs Moza Mama, 5 October at 19:30 on Court 2.
         const approvedHungerSemiFinal = match.id === "sf-2"
           && match.round === "SF"
           && finalsDates.monday[match.week] === "2026-10-05"
@@ -123,8 +123,18 @@ for (const night of nights) {
           && match.court === 2
           && resolvedTeams[0] === "Hunger FC"
           && resolvedTeams[1] === "Moza Mama";
+        // Approved completed GF exception: Goldlink Up vs Hunger FC, 5 October at 20:30 on Court 1.
+        const approvedHungerGrandFinal = match.id === "gf"
+          && match.round === "GF"
+          && finalsDates.monday[match.week] === "2026-10-05"
+          && match.time === "20:30"
+          && match.court === 1
+          && resolvedTeams[0] === "Goldlink Up"
+          && resolvedTeams[1] === "Hunger FC"
+          && data.results.gf?.scoreA === 6
+          && data.results.gf?.scoreB === 5;
         assert(
-          approvedHungerSemiFinal || ["20:20", "21:00"].includes(match.time),
+          approvedHungerSemiFinal || approvedHungerGrandFinal || ["20:20", "21:00"].includes(match.time),
           `${resolvedTeams.join(" vs ")} cannot play at ${match.time}`
         );
       }
@@ -246,5 +256,13 @@ assert.equal(mondaySemiFinalTwo.time, "19:30");
 assert.equal(mondaySemiFinalTwo.court, 2);
 assert.equal(resolveFinalsSlot(mondaySemiFinalTwo.a, "monday", mondayData)?.name, "Hunger FC");
 assert.equal(resolveFinalsSlot(mondaySemiFinalTwo.b, "monday", mondayData)?.name, "Moza Mama");
+const mondayFinal = mondayMatches.find((match) => match.id === "gf");
+assert(mondayFinal);
+assert.deepEqual(mondayData.results["sf-1"], { scoreA: 5, scoreB: 8 });
+assert.deepEqual(mondayData.results["sf-2"], { scoreA: 7, scoreB: 6 });
+assert.deepEqual(mondayData.results.gf, { scoreA: 6, scoreB: 5 });
+assert.equal(resolveFinalsSlot(mondayFinal.a, "monday", mondayData)?.name, "Goldlink Up");
+assert.equal(resolveFinalsSlot(mondayFinal.b, "monday", mondayData)?.name, "Hunger FC");
+assert.equal(winnerSide(mondayData.results.gf), "A");
 
 console.log("Finals data, calendar, and resolver checks passed.");

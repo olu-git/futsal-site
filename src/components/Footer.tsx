@@ -10,7 +10,7 @@ export default function Footer() {
         ["/", "Home"], ["/monday-night", "Monday"], ["/wednesday-night", "Wednesday"], ["/rules", "Rules"], ["/admin/", "Admin"], ["/contact", "Contact Us"], ["/about-us", "About Us"],
       ].map(([href, label]) => <Link href={href} key={href}>{label}</Link>)}</nav>
       <nav aria-label="Legal"><h2>Legal</h2><Link href="/privacy">Privacy Policy</Link><Link href="/terms">Terms &amp; Conditions</Link></nav>
-      <div className="footer-contact"><h2>Contact</h2>
+      <div className="footer-contact"><h2>Contact Us</h2>
         <a href={`mailto:${site.email}`}><span className="footer-contact-icon"><Mail aria-hidden="true" /></span><span>{site.email}</span></a>
         <a href={site.telephone}><span className="footer-contact-icon"><Phone aria-hidden="true" /></span><span>{site.phone}</span></a>
         <a href={site.directions} target="_blank" rel="noopener noreferrer"><span className="footer-contact-icon"><MapPin aria-hidden="true" /></span><span>{site.venue}<br />{site.address}</span></a>

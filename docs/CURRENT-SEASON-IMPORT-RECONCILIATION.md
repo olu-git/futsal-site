@@ -1,6 +1,6 @@
 # Current-season Supabase import reconciliation
 
-Generated deterministically from source digest `d727b3dddf7ccb6dee4223dc5a8dd036feef69d168ecea69a01f8cd5b5745d85`.
+Generated deterministically from source digest `2e0f577456636e8284756f8e633655e73da87d44f83035cfc1441bb7a4fe61be`.
 
 ## Source files
 
@@ -58,7 +58,7 @@ Every team below has genuine regular-season fixture or adjustment history. Inact
 ## Excluded records
 
 - mon-buckle-city-fc (Buckle City): no completed fixture or standing adjustment; excluded as a stale/non-regular-season record.
-- Monday finals/grading: 19 fixtures and 16 recorded results excluded.
+- Monday finals/grading: 19 fixtures and 19 recorded results excluded.
 - Wednesday finals/grading: 19 fixtures and 14 recorded results excluded.
 - Scheduled regular-season fixtures excluded: Monday 0; Wednesday 0.
 

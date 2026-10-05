@@ -33,7 +33,7 @@ export default function Navbar() {
           {open && <nav id="site-menu" className="menu-panel" aria-label="More navigation">
             <div className="mobile-nav-links">{links.map(navLink)}</div>
             <button onClick={() => { openRegistration("team", buttonRef.current); setOpen(false); }}>Register</button>
-            {navLink({ href: "/contact", label: "Contact" })}{navLink({ href: "/about-us", label: "About Us" })}
+            {navLink({ href: "/contact", label: "Contact Us" })}{navLink({ href: "/about-us", label: "About Us" })}
           </nav>}
         </div>
       </div>

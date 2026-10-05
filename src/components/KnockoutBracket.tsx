@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SectionHeading from "./SectionHeading";
 import FixtureTeam from "./FixtureTeam";
+import FinalsTrophy from "./FinalsTrophy";
 import {
   finalsDates,
   finalsMatches,
@@ -32,6 +33,12 @@ const rounds = [
 
 export default function KnockoutBracket({ night, data, kitColours, preview = false }: KnockoutBracketProps) {
   const matches = finalsMatches[night].filter(isScheduledFinalsMatch);
+  const hasChampion = winnerSide(data.results.gf) !== null;
+  const columns = hasChampion
+    ? preview
+      ? "min-w-[850px] grid-cols-[minmax(220px,1fr)_minmax(220px,1fr)_minmax(360px,1.6fr)]"
+      : "min-w-[1180px] grid-cols-[repeat(3,minmax(220px,1fr))_minmax(360px,1.6fr)]"
+    : preview ? "min-w-[780px] grid-cols-3" : "min-w-[1040px] grid-cols-4";
 
   return (
     <section id={preview ? undefined : "finals"} className={`bracket-section overflow-hidden ${preview ? "home-bracket" : "py-16 sm:py-20"}`}>
@@ -60,7 +67,7 @@ export default function KnockoutBracket({ night, data, kitColours, preview = fal
           aria-label={`${night} knockout bracket`}
           tabIndex={0}
         >
-          <div className={`grid gap-4 lg:gap-5 ${preview ? "min-w-[780px] grid-cols-3" : "min-w-[1040px] grid-cols-4"}`}>
+          <div className={`grid gap-4 lg:gap-5 ${columns}`}>
             {rounds.filter((round) => !preview || round.key !== "R16").map((round) => (
               <FinalsRoundColumn
                 key={round.key}
@@ -120,11 +127,16 @@ function FinalsRoundColumn({
         {formatDate(date)}
       </p>
       <div className={`mt-4 ${compact ? "h-[600px]" : "h-[1200px]"} ${stackClass}`}>
-        {[...matches].sort((a, b) => a.time.localeCompare(b.time) || a.court - b.court).map((match) => (
-          <div key={match.id} className={round === "R16" ? "" : "self-center"}>
+        {[...matches].sort((a, b) => a.time.localeCompare(b.time) || a.court - b.court).map((match) => {
+          const winningSide = round === "GF" ? winnerSide(data.results[match.id]) : null;
+          const champion = winningSide
+            ? resolveFinalsSlot(winningSide === "A" ? match.a : match.b, night, data)
+            : null;
+          return <div key={match.id} className={champion ? "bracket-final-with-trophy self-center" : round === "R16" ? "" : "self-center"}>
             <FinalsMatchCard match={match} night={night} data={data} kitColours={kitColours} />
-          </div>
-        ))}
+            {champion && <FinalsTrophy champion={champion.name} />}
+          </div>;
+        })}
       </div>
     </div>
   );
