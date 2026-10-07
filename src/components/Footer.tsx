@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { RegisterButton } from "./RegistrationProvider";
 import { site } from "@/lib/site-content";
 
 export default function Footer() {
@@ -8,7 +10,10 @@ export default function Footer() {
     <div className="footer-grid">
       <nav aria-label="Quick links"><h2>Quick Links</h2>{[
         ["/", "Home"], ["/monday-night", "Monday"], ["/wednesday-night", "Wednesday"], ["/rules", "Rules"], ["/admin/", "Admin"], ["/contact", "Contact Us"], ["/about-us", "About Us"],
-      ].map(([href, label]) => <Link href={href} key={href}>{label}</Link>)}</nav>
+      ].map(([href, label]) => <Fragment key={href}>
+        <Link href={href}>{label}</Link>
+        {href === "/wednesday-night" && <RegisterButton className="footer-quick-link">Register</RegisterButton>}
+      </Fragment>)}</nav>
       <nav aria-label="Legal"><h2>Legal</h2><Link href="/privacy">Privacy Policy</Link><Link href="/terms">Terms &amp; Conditions</Link></nav>
       <div className="footer-contact"><h2>Contact Us</h2>
         <a href={`mailto:${site.email}`}><span className="footer-contact-icon"><Mail aria-hidden="true" /></span><span>{site.email}</span></a>

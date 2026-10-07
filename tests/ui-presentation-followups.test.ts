@@ -9,6 +9,17 @@ test("global footer exposes the authenticated admin destination", () => {
   assert.match(footer, /\["\/admin\/", "Admin"\]/);
 });
 
+test("register follows Wednesday in mobile navigation and footer quick links", () => {
+  const navbar = readFileSync("src/components/Navbar.tsx", "utf8");
+  const footer = readFileSync("src/components/Footer.tsx", "utf8");
+  assert.match(navbar, /className="mobile-nav-links"[\s\S]*link\.href === "\/wednesday-night" && <button[\s\S]*>Register<\/button>/);
+  assert.match(navbar, /className="desktop-menu-register"/);
+  assert.match(css, /@media \(max-width: 800px\)[\s\S]*\.menu-panel \.desktop-menu-register \{ display: none; \}/);
+  assert.match(footer, /\["\/wednesday-night", "Wednesday"\][\s\S]*\["\/rules", "Rules"\]/);
+  assert.match(footer, /<Link href=\{href\}>\{label\}<\/Link>[\s\S]*href === "\/wednesday-night" && <RegisterButton className="footer-quick-link">Register<\/RegisterButton>/);
+  assert.match(css, /\.footer-grid \.footer-quick-link \{[^}]*color: inherit/);
+});
+
 test("competition metadata uses outlined items and moves the venue on narrow screens", () => {
   assert.match(css, /\.competition-stats span\s*\{[^}]*border:\s*1px solid/);
   assert.match(css, /@media \(max-width: 540px\)[\s\S]*\.competition-stats span:last-child\s*\{[^}]*flex-basis:\s*100%/);

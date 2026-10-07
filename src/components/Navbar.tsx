@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { useRegistration } from "./RegistrationProvider";
 import { site } from "@/lib/site-content";
 
@@ -31,8 +31,11 @@ export default function Navbar() {
         <div ref={menuRef} className="menu-wrap" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }}>
           <button ref={buttonRef} className="menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="site-menu" onClick={() => setOpen(!open)}><span>Menu</span><span className="hamburger" aria-hidden="true"><i /><i /><i /></span></button>
           {open && <nav id="site-menu" className="menu-panel" aria-label="More navigation">
-            <div className="mobile-nav-links">{links.map(navLink)}</div>
-            <button onClick={() => { openRegistration("team", buttonRef.current); setOpen(false); }}>Register</button>
+            <div className="mobile-nav-links">{links.map((link) => <Fragment key={link.href}>
+              {navLink(link)}
+              {link.href === "/wednesday-night" && <button type="button" onClick={() => { openRegistration("team", buttonRef.current); setOpen(false); }}>Register</button>}
+            </Fragment>)}</div>
+            <button type="button" className="desktop-menu-register" onClick={() => { openRegistration("team", buttonRef.current); setOpen(false); }}>Register</button>
             {navLink({ href: "/contact", label: "Contact Us" })}{navLink({ href: "/about-us", label: "About Us" })}
           </nav>}
         </div>

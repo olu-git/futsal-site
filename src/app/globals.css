@@ -176,8 +176,9 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .site-footer { background: var(--fis-navy); color: var(--fis-cream); border-top: 4px solid var(--fis-red); padding-block: 44px 24px; }
 .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 40px; }
 .site-footer h2 { font: 10px/1.8 var(--font-mono); text-transform: uppercase; margin-bottom: 16px; color: white; }
-.footer-grid a { display: block; font-size: 12px; line-height: 2; padding-block: 5px; overflow-wrap: anywhere; }
-.site-footer a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.footer-grid a, .footer-grid .footer-quick-link { display: block; font-size: 12px; line-height: 2; padding-block: 5px; overflow-wrap: anywhere; }
+.footer-grid .footer-quick-link { width: fit-content; border: 0; background: none; padding-inline: 0; color: inherit; text-align: left; }
+.site-footer a:hover, .site-footer .footer-quick-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 .footer-contact a { display: flex; align-items: center; gap: 12px; padding-block: 6px; }
 .footer-contact-icon { width: 44px; height: 44px; flex: 0 0 44px; display: grid; place-items: center; border: 1px solid #ffffff66; color: var(--fis-red); }
 .footer-contact-icon svg { width: 19px; height: 19px; }
@@ -554,6 +555,7 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
   .fis-container { width: calc(100% - 32px); }
   .primary-nav { display: none; }
   .mobile-nav-links { display: block; }
+  .menu-panel .desktop-menu-register { display: none; }
   .brand img { width: 116px; }
   .menu-button > span:first-child { display: none; }
   .menu-button { width: 46px; justify-content: center; padding-inline: 10px; }
@@ -824,7 +826,7 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
 .hero-content > p,.body-copy,.prose p { font-size: var(--type-body); line-height: var(--leading-body); }
 .section-title { font-size: clamp(1.125rem, 1.1vw + .9rem, 1.4375rem); line-height: 1.65; }
 .prose h2,.registration-body h3 { font-family: var(--font-sans); font-size: var(--type-section-title); line-height: var(--leading-heading); }
-.registration-banner p,.panel-copy,.registration-links,.fill-in-note,.rule-card p,.contact-details li,.footer-grid a { font-size: var(--type-body-compact); line-height: var(--leading-body); }
+.registration-banner p,.panel-copy,.registration-links,.fill-in-note,.rule-card p,.contact-details li,.footer-grid a,.footer-grid .footer-quick-link { font-size: var(--type-body-compact); line-height: var(--leading-body); }
 .policy-date,.about-photo figcaption,.snapshot-notice,.fixture-note,.footer-bottom { font-size: var(--type-caption); line-height: var(--leading-compact); }
 .field label,.night-options legend { font-size: var(--type-body-compact); line-height: var(--leading-compact); }
 .field input,.field select,.field textarea { font-size: var(--type-input); line-height: 1.6; }
