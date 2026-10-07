@@ -80,8 +80,29 @@ test("Monday 5 October results resolve Goldlink Up as champion", () => {
   delete withoutFinal.results.gf;
   const pendingHtml = renderToStaticMarkup(createElement(KnockoutBracket, { night: "monday", data: withoutFinal, kitColours: {} }));
   assert.doesNotMatch(pendingHtml, /finals-champion/);
-  const wednesdayHtml = renderToStaticMarkup(createElement(KnockoutBracket, { night: "wednesday", data: season.finals.wednesday, kitColours: {} }));
+  const wednesdayWithoutFinal = { ...season.finals.wednesday, results: { ...season.finals.wednesday.results } };
+  delete wednesdayWithoutFinal.results.gf;
+  const wednesdayHtml = renderToStaticMarkup(createElement(KnockoutBracket, { night: "wednesday", data: wednesdayWithoutFinal, kitColours: {} }));
   assert.doesNotMatch(wednesdayHtml, /finals-champion/);
+});
+
+test("Wednesday 7 October results resolve Goldlink Up as champion with the shared trophy", () => {
+  const data = season.finals.wednesday;
+  const final = finalsMatches.wednesday.find((match) => match.id === "gf");
+  assert.ok(final);
+  assert.deepEqual(data.results["sf-1"], { scoreA: 5, scoreB: 3 });
+  assert.deepEqual(data.results["sf-2"], { scoreA: 5, scoreB: 6 });
+  assert.deepEqual(data.results.gf, { scoreA: 4, scoreB: 8 });
+  assert.equal(resolveFinalsSlot(final.a, "wednesday", data)?.name, "AFG");
+  assert.equal(resolveFinalsSlot(final.b, "wednesday", data)?.name, "Goldlink Up");
+  assert.equal(winnerSide(data.results.gf), "B");
+
+  for (const preview of [false, true]) {
+    const html = renderToStaticMarkup(createElement(KnockoutBracket, { night: "wednesday", data, kitColours: {}, preview }));
+    assert.match(html, /finals-champion-name">Goldlink Up/);
+    assert.match(html, /pixel-confetti/);
+    assert.match(html, /fill="#e6a921"/);
+  }
 });
 
 test("Wednesday 30 September quarter-finals advance the reported winners", () => {
@@ -132,8 +153,11 @@ test("Wednesday grading history retains the played slots and abandoned records",
   assert.equal(new Set(playedSlots.map((match) => `${match.time}|${match.court}`)).size, 6);
 });
 
-test("home bracket remains active through both finals nights", () => {
-  assert.equal(hasCurrentFinals(season, "2026-09-30"), true);
+test("home bracket remains active while a final is pending and ends when both are complete", () => {
+  const pendingWednesday = { ...season.finals.wednesday, results: { ...season.finals.wednesday.results } };
+  delete pendingWednesday.results.gf;
+  assert.equal(hasCurrentFinals({ finals: { ...season.finals, wednesday: pendingWednesday } }, "2026-09-30"), true);
+  assert.equal(hasCurrentFinals(season, "2026-09-30"), false);
   assert.ok(finalsMatches.monday.some((match) => match.round === "Grading"));
   assert.ok(finalsMatches.wednesday.some((match) => match.round === "Grading"));
   assert.equal(hasCurrentFinals(season, "2026-10-08"), false);

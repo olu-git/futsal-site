@@ -196,6 +196,21 @@ for (const id of ["grading-3", "grading-4"]) {
   assert(match && !isScheduledFinalsMatch(match), `Wednesday ${id} must be abandoned`);
   assert.equal(wednesdayFinals.results[id], undefined, `Abandoned ${id} cannot have a result`);
 }
+const wednesdaySemiFinalOne = finalsMatches.wednesday.find((match) => match.id === "sf-1");
+const wednesdaySemiFinalTwo = finalsMatches.wednesday.find((match) => match.id === "sf-2");
+const wednesdayGrandFinal = finalsMatches.wednesday.find((match) => match.id === "gf");
+assert(wednesdaySemiFinalOne && wednesdaySemiFinalTwo && wednesdayGrandFinal);
+assert.equal(finalsDates.wednesday[wednesdayGrandFinal.week], "2026-10-07");
+assert.deepEqual(wednesdayFinals.results["sf-1"], { scoreA: 5, scoreB: 3 });
+assert.deepEqual(wednesdayFinals.results["sf-2"], { scoreA: 5, scoreB: 6 });
+assert.deepEqual(wednesdayFinals.results.gf, { scoreA: 4, scoreB: 8 });
+assert.equal(resolveFinalsSlot(wednesdaySemiFinalOne.a, "wednesday", wednesdayFinals)?.name, "AFG");
+assert.equal(resolveFinalsSlot(wednesdaySemiFinalOne.b, "wednesday", wednesdayFinals)?.name, "Pops");
+assert.equal(resolveFinalsSlot(wednesdaySemiFinalTwo.a, "wednesday", wednesdayFinals)?.name, "Ghazni United");
+assert.equal(resolveFinalsSlot(wednesdaySemiFinalTwo.b, "wednesday", wednesdayFinals)?.name, "Goldlink Up");
+assert.equal(resolveFinalsSlot(wednesdayGrandFinal.a, "wednesday", wednesdayFinals)?.name, "AFG");
+assert.equal(resolveFinalsSlot(wednesdayGrandFinal.b, "wednesday", wednesdayFinals)?.name, "Goldlink Up");
+assert.equal(winnerSide(wednesdayFinals.results.gf), "B");
 
 assert.equal(winnerSide(undefined), null);
 assert.equal(winnerSide({ scoreA: 2, scoreB: 2 }), null);
