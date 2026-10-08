@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/browser";
-import { safeAdminReturnPath } from "@/lib/admin/auth";
+import { safeAdminReturnPath, withAdminTimeout } from "@/lib/admin/auth";
 
 const INVALID_CREDENTIALS = "The email or password is incorrect.";
 
@@ -16,10 +16,13 @@ export default function LoginForm() {
     async function checkExistingSession() {
       try {
         const supabase = createClient();
-        const { data: { session } } = await supabase.auth.getSession();
+        const { data: { session } } = await withAdminTimeout(() => supabase.auth.getSession());
         if (!session || !active) return;
-        const { data: isAdmin } = await supabase.rpc("is_fis_admin");
+        const { data: isAdmin, error: accessError } = await withAdminTimeout(() => supabase.rpc("is_fis_admin"));
+        if (accessError) throw accessError;
         if (isAdmin && active) window.location.replace(getReturnPath());
+      } catch {
+        if (active) setError("Unable to confirm your session. Check your connection and try again.");
       } finally {
         if (active) setChecking(false);
       }
@@ -39,29 +42,29 @@ export default function LoginForm() {
 
     try {
       const supabase = createClient();
-      const { error: signInError } = await supabase.auth.signInWithPassword({
+      const { error: signInError } = await withAdminTimeout(() => supabase.auth.signInWithPassword({
         email,
         password,
-      });
+      }), 15000);
 
       if (signInError) {
         setError(INVALID_CREDENTIALS);
         return;
       }
 
-      const { data: isAdmin, error: accessError } = await supabase.rpc(
+      const { data: isAdmin, error: accessError } = await withAdminTimeout(() => supabase.rpc(
         "is_fis_admin",
-      );
+      ));
 
       if (accessError || !isAdmin) {
-        await supabase.auth.signOut();
+        await withAdminTimeout(() => supabase.auth.signOut());
         setError("This account does not have FIS administrator access.");
         return;
       }
 
       window.location.replace(getReturnPath());
     } catch {
-      setError("Unable to sign in right now. Check the local Supabase configuration.");
+      setError("Unable to sign in right now. Check your connection and try again.");
     } finally {
       setSubmitting(false);
     }

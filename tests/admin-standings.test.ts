@@ -1,5 +1,17 @@
 import assert from"node:assert/strict";import{readFileSync}from"node:fs";import test from"node:test";import{deltaToDraft,emptyDelta,isEditableSignedInteger,normalizeSignedInteger,parseDeltaDraft,projectStanding,validateAdjustment,type AdminStanding}from"../src/lib/admin/standings";
 const row:AdminStanding={competitionSeasonId:"m",teamId:"t",teamName:"Test",kitColour:"#fff",position:1,played:10,wins:6,draws:2,losses:2,goalsFor:30,goalsAgainst:20,goalDifference:10,points:20};
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import StandingsManager from "../src/app/admin/standings/StandingsManager";
+
+test("standing management exposes every division and explains empty data", () => {
+ const editions = ["A", "B"].map(division => ({id:division,night:"monday" as const,division,label:division,season:"Audit"}));
+ const html=renderToStaticMarkup(createElement(StandingsManager,{workspace:{editions,standings:[{...row,competitionSeasonId:"A"}],adjustments:[]},onChanged:async()=>{}}));
+ assert.match(html, /<option value="A" selected="">A<\/option><option value="B">B<\/option>/);
+ const empty=renderToStaticMarkup(createElement(StandingsManager,{workspace:{editions:[],standings:[],adjustments:[]},onChanged:async()=>{}}));
+ assert.match(empty,/No standings are available for this competition\./);
+ assert.doesNotMatch(html,/Snapshot automation remains inactive/);
+});
 test("standing projections apply positive and negative signed deltas",()=>{const d={...emptyDelta(),wins:1,losses:-1,goalsFor:2,goalsAgainst:-3,points:3};assert.deepEqual(projectStanding(row,d),{...row,wins:7,losses:1,goalsFor:32,goalsAgainst:17,goalDifference:15,points:23})});
 test("adjustments require a reason and one non-zero whole value",()=>{assert.equal(validateAdjustment(emptyDelta(),"").length,2);assert.deepEqual(validateAdjustment({...emptyDelta(),points:-1},"Disciplinary deduction"),[]);assert.match(validateAdjustment({...emptyDelta(),points:1.5},"Reason")[0],/whole numbers/)});
 test("standings route is static browser-side and reconfirms admin before mutation",()=>{const page=readFileSync("src/app/admin/standings/page.tsx","utf8"),action=readFileSync("src/lib/admin/standings-actions.ts","utf8"),data=readFileSync("src/lib/admin/standings-data.ts","utf8");assert.match(page,/AdminAuthGuard/);assert.match(action,/getUser\(\)/);assert.match(action,/rpc\("is_fis_admin"\)/);assert.match(data,/from\("standings"\)/);assert.match(data,/eq\("lifecycle","active"\)/);assert.doesNotMatch(`${page}${action}${data}`,/use server|service_role|SUPABASE_SERVICE/)});

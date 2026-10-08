@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/browser";
+import { selectAdminEditions } from "./competition-editions";
 import type { ChangeSetStatus, FixtureChange, FixtureChangeContext, KickoffPreference, Night,
   ScheduleCompetition, ScheduleCompetitionSeason, ScheduleFixture, ScheduleTeam, ValidationMessage } from "./fixture-changes";
 
@@ -6,7 +7,7 @@ export interface AdminFixtureData extends ScheduleFixture {
   homeName: string; awayName: string; homeKit: string | null; awayKit: string | null;
 }
 export interface AdminCompetitionEdition {
-  id: string; night: Night; season: string; lifecycle: "planned" | "active" | "archived"; locationId: string;
+  id: string; night: Night; division: string; season: string; lifecycle: "planned" | "active" | "archived"; locationId: string;
 }
 export interface AdminChangeSet {
   id: string; competitionSeasonId: string; title: string; overallNote: string | null; source: string;
@@ -27,14 +28,11 @@ export class FixturesSetupInactiveError extends Error { constructor() { super("F
 export async function loadFixturesWorkspace(): Promise<FixturesWorkspace> {
   const supabase = createClient();
   const { data: editionRows, error: editionError } = await supabase.from("competition_seasons")
-    .select("id,lifecycle,publication_state,seasons(name,ends_on),competitions(id,weekday,location_id)")
+    .select("id,lifecycle,publication_state,seasons(name,ends_on),competitions(id,weekday,division,location_id)")
     .eq("publication_state", "published");
   if (editionError) throw new Error(`Unable to load competition seasons: ${editionError.message}`);
-  const sorted = ([...(editionRows ?? [])] as Row[]).filter((row) => [1, 3].includes(Number(one(row.competitions as { weekday: number } | { weekday: number }[]).weekday)))
-    .sort((a, b) => String(one(b.seasons as { ends_on: string } | { ends_on: string }[]).ends_on).localeCompare(String(one(a.seasons as { ends_on: string } | { ends_on: string }[]).ends_on)));
-  const chosen = new Map<number, Row>();
-  sorted.forEach((row) => { const day = Number(one(row.competitions as { weekday: number } | { weekday: number }[]).weekday); if (!chosen.has(day)) chosen.set(day, row); });
-  const editions: AdminCompetitionEdition[] = [...chosen.entries()].map(([day, row]) => ({ id: String(row.id), night: day === 1 ? "monday" : "wednesday",
+  const editions: AdminCompetitionEdition[] = selectAdminEditions((editionRows ?? []) as Row[]).map((row) => ({ id: String(row.id), night: Number(one(row.competitions as { weekday: number }).weekday) === 1 ? "monday" : "wednesday",
+    division: String(one(row.competitions as { division: string }).division),
     season: String(one(row.seasons as { name: string } | { name: string }[]).name), lifecycle: row.lifecycle as AdminCompetitionEdition["lifecycle"],
     locationId: String(one(row.competitions as { location_id: string } | { location_id: string }[]).location_id) }));
   const ids = editions.map((edition) => edition.id);
