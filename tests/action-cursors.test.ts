@@ -15,6 +15,7 @@ test("disabled buttons do not imply loading unless explicitly busy", () => {
 
 test("Save Team marks only a real pending save as busy", () => {
   assert.match(teams, /disabled=\{pending\|\|errors\.length>0\} aria-busy=\{pending\} onClick=\{save\}/);
-  assert.match(results, /<button disabled aria-busy="true">Retry Snapshot Refresh<\/button>/);
+  assert.match(results, /Published data is saved to Supabase immediately/);
+  assert.doesNotMatch(results, /Retry Snapshot Refresh|snapshot refresh queued/i);
   assert.match(form, /disabled=\{status === "sending"\} aria-busy=\{status === "sending"\}/);
 });

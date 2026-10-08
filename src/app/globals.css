@@ -400,6 +400,7 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .admin-action-message.success { background: #dcefe2; color: #125f36; }.admin-action-message.error { background: #f7dfe0; color: #8c1018; }
 .admin-action-message svg { width: 17px; flex: 0 0 17px; }
 .admin-snapshot-warning { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 12px; background: #f7e8d4; border-left: 4px solid var(--fis-red); color: var(--fis-ink); font-size: 10px; line-height: 1.7; }
+.admin-snapshot-notice { margin: 0 0 16px; padding: 10px 12px; border-left: 3px solid var(--fis-blue); background: #e8e1d5; color: var(--fis-ink); font-size: 10px; line-height: 1.7; }
 .admin-snapshot-warning button { min-height: 38px; border: 1px solid var(--fis-blue); padding: 8px 10px; background: white; color: var(--fis-blue); font: 7px/1.6 var(--font-mono); text-transform: uppercase; }
 .admin-snapshot-warning button:disabled { opacity: .5; }
 .admin-published-summary { display: grid; justify-items: stretch; gap: 14px; margin-block: 0 24px; }
@@ -832,7 +833,7 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
 .field input,.field select,.field textarea { font-size: var(--type-input); line-height: 1.6; }
 .confirmation,.night-options label { font-size: var(--type-body-compact); line-height: var(--leading-body); }
 .form-status,.admin-auth-error,.admin-action-message,.admin-team-errors,.admin-team-warning,.admin-validation p { font-family: var(--font-sans); font-size: var(--type-validation); line-height: var(--leading-compact); text-transform: none; }
-.empty-state,.admin-auth-card > p:not(.eyebrow),.admin-workspace > p:not(.eyebrow),.admin-finals-notice,.admin-private-note,.admin-season-help { font-size: var(--type-body-compact); line-height: var(--leading-body); }
+.empty-state,.admin-auth-card > p:not(.eyebrow),.admin-workspace > p:not(.eyebrow),.admin-finals-notice,.admin-snapshot-notice,.admin-private-note,.admin-season-help { font-size: var(--type-body-compact); line-height: var(--leading-body); }
 .admin-workspace h2 { font-size: var(--type-page-title); line-height: var(--leading-heading); }
 .admin-placeholder-grid p,.admin-results-heading p,.admin-team-count,.admin-fixture-history span,.admin-season-summary article ul { font-size: var(--type-helper); line-height: var(--leading-compact); }
 .admin-field-error,.admin-season-create-errors,.admin-team-fields small,.admin-team-editor label small { font-family: var(--font-sans); font-size: var(--type-validation); line-height: var(--leading-compact); font-weight: 300; text-transform: none; letter-spacing: 0; }

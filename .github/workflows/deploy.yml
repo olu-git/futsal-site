@@ -35,6 +35,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify production public Supabase configuration
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          node --input-type=module -e 'const url = process.env.NEXT_PUBLIC_SUPABASE_URL; const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY; if (!url || !key || new URL(url).hostname !== "gaqevgjgolvndhcycxzt.supabase.co") { console.error("Production Supabase Actions variables are missing or do not target fis."); process.exit(1); } console.log("Production Supabase Actions variables verified.");'
+
       - name: Validate site and data
         run: |
           npm test

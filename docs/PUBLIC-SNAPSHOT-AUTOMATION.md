@@ -1,63 +1,57 @@
-# Published competition snapshot automation
+# Published competition snapshot refresh
 
-The repository contains the refresh workflow and Edge Function implementation. Their presence does not mean the production Edge Function has been deployed or its trigger secrets configured; follow the activation steps below before relying on automatic refresh. Until then, use the reviewed read-only snapshot generation/check process to keep the fallback current.
+Supabase remains the live source for published regular-season data. Public pages prefer an anonymous live Supabase read after hydration and use `src/data/public-competition-snapshot.json` when that read fails or times out. The checked-in snapshot is a fallback; regular-season results, fixtures, teams and adjustments are not copied into finals data.
 
-## Flow and boundaries
+## Scheduled and manual operation
 
-After `public.publish_result()` succeeds for a regular-season result (including a correction), Admin Results calls the `trigger-snapshot-refresh` Supabase Edge Function. The function verifies the user's Supabase JWT, then checks `public.is_fis_admin()` in that caller's session before requesting the GitHub `Refresh Public Competition Snapshot` workflow. The GitHub credential stays in the Edge Function's secrets; it is never sent to the browser. The browser cannot securely call the GitHub API itself from a static GitHub Pages site.
+`.github/workflows/refresh-public-snapshot.yml` runs at minutes 17 and 47 of each UTC hour and also supports `workflow_dispatch`. Both paths run on `master`. There is intentionally no Supabase Edge Function in this scheduled-only design. Results publication saves to Supabase immediately; the Results screen explains that the static fallback refreshes separately. Do not tell administrators a refresh is queued or complete based solely on publication.
 
-The workflow anonymously reads published Monday and Wednesday regular-season data through Supabase RLS using the public URL and publishable key. Its read-only preparation job validates and regenerates `src/data/public-competition-snapshot.json`; a separate job receives only that validated artifact and gains Contents write permission to commit it if its bytes changed. A changed snapshot on `master` starts the Pages workflow via `workflow_run`: commits made with `GITHUB_TOKEN` do not themselves start `push` workflows. The workflow is also configured for ordinary pushes to `master`. Only `master` is allowlisted for refresh dispatch.
+GitHub scheduled runs can start late during heavy Actions load or be dropped. Scheduled workflows run only from the repository's default branch; GitHub may disable schedules in public repositories after 60 days without repository activity. Monitor the workflow's Actions history and failure notifications. If the last successful run is stale or failed, inspect its logs, correct any configuration or validation problem, then use **Run workflow** on `master` for a manual recovery. Do not create a competition data change to test the workflow.
 
-Supabase remains the live primary source. A failed dispatch or workflow does **not** undo a published result; it only leaves the static fallback stale. The admin warning provides a retry action. Finals, grading and knockout data stay exclusively in `src/data/season-2026-s1.json` and are not generated or changed by this process.
+The workflow reads published rows anonymously through the production project's public URL and publishable key. It generates the snapshot in an isolated runner, validates it, and checks that it still matches published data before committing. A clean run skips tests/finals checks that are needed only for changed output. Unexpected file changes fail the run. No-change runs do not commit. Only the dedicated commit job has `contents: write`, and it commits only `src/data/public-competition-snapshot.json` after successful preparation. A failed generation or check cannot change the repository's prior snapshot: the runner is isolated, and the commit job runs only after preparation succeeds.
 
-The old `src/data/teams.json`, Monday/Wednesday fixture JSON and standing-adjustment JSON remain intact for legacy scripts and historical comparison. The separate generated snapshot prevents refreshes from overwriting hand-maintained finals data.
+A changed snapshot commit uses the workflow's `GITHUB_TOKEN`. GitHub does not start a push-triggered workflow from such a token, so `.github/workflows/deploy.yml` listens for a successful `workflow_run` on `master` and builds the refreshed commit. A failed refresh leaves the previous Pages fallback deployed. A no-change run does not start a Pages deployment because the published fallback has not changed.
 
-## Future configuration (not activated by this change)
+## Configuration and secret handling
 
-Set GitHub repository **Variables** on the target repository:
+Set repository Actions **Variables** `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` to the production `fis` project. Before enabling or relying on the schedule, verify the URL's project ref is `gaqevgjgolvndhcycxzt` and that the publishable key is present and belongs to that project. A publishable key is public by design, but never print it in logs or diagnostic output. Keep RLS enabled and ensure anonymous reads expose only published public competition records. The workflow needs no Supabase secret/service-role key and no GitHub PAT or Edge Function secret.
 
-- `NEXT_PUBLIC_SUPABASE_URL`: the public project URL.
-- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`: the publishable key. This key is public by design; RLS still controls read access.
+The refresh workflow checks both Variables are present before reading data, and the Pages build verifies that the public URL hostname is the production `fis` project before exporting assets. These checks never print either value. A successful Actions configuration step verifies the configured project target; local `.env.local` settings do not verify Actions configuration. The previous `trigger-snapshot-refresh` function implementation is not called by the site and is not required for this scheduled-only baseline. Do not deploy it as part of routine snapshot operations.
 
-Set Supabase **Edge Function secrets** for `trigger-snapshot-refresh`:
+## Local read-only checks and manual recovery
 
-- `SUPABASE_URL`: the same public project URL.
-- `SUPABASE_PUBLISHABLE_KEY`: the same publishable key, not a secret/service-role key.
-- `FIS_ALLOWED_ORIGINS`: comma-separated exact website origins (for example, the production origin and `http://localhost:3000` only while local browser review is needed). Do not include a trailing slash or `*`; remove temporary local origins after review.
-- `GITHUB_TOKEN`: fine-grained personal access token scoped to this repository with **Actions: Read and write**; no Contents write permission is needed on this token. The workflow's own `GITHUB_TOKEN` has job-scoped Contents write permission for its snapshot commit.
-- `GITHUB_OWNER`, `GITHUB_REPOSITORY`: the target repository coordinates.
-- `GITHUB_WORKFLOW_FILE`: `refresh-public-snapshot.yml`.
-- `GITHUB_WORKFLOW_REF`: `master` only. Review an allowlist change separately before any future branch test.
-
-Do not put the GitHub token, service-role key or any password in `NEXT_PUBLIC_*`, source code, repository Variables, or browser-accessible configuration. Do not log them. Restrict access to the Edge Function secret and rotate the token if exposed. Deploy the function later using the Supabase CLI or Dashboard with JWT verification enabled; do not disable JWT verification. `supabase/functions/trigger-snapshot-refresh/deno.json` pins its Supabase JS dependency.
-
-## Validation and safe operation
-
-Local, read-only snapshot commands:
+From a checkout whose ignored `.env.local` points to production, first run:
 
 ```text
+npm run snapshot:check
+```
+
+This compares anonymous published Supabase data to the local fallback without writing Supabase or files. When an update is intended and the check reports a difference, run:
+
+```text
+npm run snapshot:generate
 npm run snapshot:validate
 npm run snapshot:check
 ```
 
-`snapshot:check` queries public Supabase data anonymously and fails when the checked-in snapshot is stale. `snapshot:generate` refreshes only the local snapshot file. Run it only when a snapshot update is intended. Both remote-reading commands need the public environment values set locally; `snapshot:validate` is offline. No command in this group writes to Supabase.
+Generation writes the local JSON only after successfully reading and validating the complete published dataset; it writes a temporary file and renames it into place. A failed read or validation leaves the existing local snapshot in place. Review `git diff -- src/data/public-competition-snapshot.json`; only the generated public regular-season fallback should change. Follow the usual review, commit and release process to publish a local recovery.
 
-After activation, test authentication without changing competition data: try the Edge endpoint with no JWT (401), a valid non-admin JWT (403), and a verified admin JWT (202). The admin request queues a workflow, so use the approved feature branch first and review the generated diff before enabling the production ref. A browser CORS preflight is allowed only from the configured origins. The Edge Function never accepts a caller-supplied user ID or Git ref.
+For a remote manual recovery, open **Actions → Refresh Public Competition Snapshot → Run workflow**, select `master`, then inspect the run. This will automatically commit and push a changed snapshot to `master`, which triggers the Pages workflow through `workflow_run`. Treat it as a release action. Do not manually push or deploy a second snapshot while the workflow is running.
 
-To manually retry, use **RETRY SNAPSHOT REFRESH** in Admin Results after a dispatch failure, or dispatch **Refresh Public Competition Snapshot** in GitHub Actions on the intended branch. Check the Edge Function logs for a rejected dispatch, the workflow run for query/validation/commit errors, and the Pages workflow for deployment errors. No-change runs do not commit. A failed generation leaves the previous snapshot intact. A retry does not republish or alter the result.
+Verify these outcomes in order:
 
-## Disable and rollback
+1. The refresh run passes its public-data read, snapshot validation, freshness check and conditional tests.
+2. If data changed, the commit job succeeds and its commit changes only `src/data/public-competition-snapshot.json`. If no change was needed, confirm the prepare job passed and the commit job was correctly skipped; no Pages deployment is expected from this run.
+3. For a changed snapshot, the Pages `workflow_run` build and deploy succeed for the refreshed commit.
+4. Fetch `master`, compare the committed snapshot with `npm run snapshot:check`, and inspect the live Pages export directly. A hydrated browser can show live Supabase data and mask a stale static fallback, so verify the exported snapshot asset/content as well.
 
-To stop automatic dispatch without changing competition data, disable the Edge Function or remove its `GITHUB_TOKEN` secret. Result publication continues in Supabase; admins will see a non-blocking fallback-refresh warning. Disable the dedicated GitHub workflow as well if manual dispatches must also stop. Keep the public Supabase configuration intact so live competition pages continue to load. If the generated fallback must be rolled back, review the last known-good snapshot commit and restore **only** `src/data/public-competition-snapshot.json` through the normal reviewed Git process, then rebuild Pages. Do not revert published Supabase results or edit finals JSON as part of this rollback. Remove the `workflow_run` deploy hook only through a separate reviewed code change if retiring the automation permanently.
+On any failure, the prior repository and Pages fallback remain available. Review the failed step and Actions logs, fix only its cause, and retry the workflow on `master`. `snapshot:check` and the workflow only read Supabase; no refresh step mutates database data. Results, fixtures, teams, standing adjustments and season changes remain published in Supabase even if a snapshot run fails. Finals and grading remain in `src/data/season-2026-s1.json` and are excluded from the generated fallback.
 
-## Review checklist before activation
+## Validation checklist
 
-- [ ] Review the generated snapshot against public Monday/Wednesday standings, results, kit colours and team status; confirm no draft, grading or knockout records.
-- [ ] Confirm `npm test`, lint, TypeScript, static build, finals check, snapshot validation and `git diff --check` pass; inspect exported public and admin routes.
-- [ ] Review the Edge Function's JWT/admin check, CORS origins and GitHub token scope. Use an exact allowed origin list.
-- [ ] Confirm the dedicated workflow exists on the repository's default branch; GitHub requires this for `workflow_dispatch` and `workflow_run` activation.
-- [ ] Configure public repository Variables and the Edge secrets; review branch-protection rules for the workflow's snapshot-only push.
-- [ ] Deploy the Edge Function with JWT verification and test 401/403 before the first authorised 202 request.
-- [ ] Before activation, review the current `master` snapshot against anonymously published Supabase data and confirm the workflow is still allowlisted to `master` only.
-- [ ] Set `GITHUB_WORKFLOW_REF=master`, confirm the dispatch commits only the snapshot on `master`, and confirm the successful `workflow_run` produces the Pages build.
-- [ ] Check failure visibility and retry on the admin screen. Keep the existing JSON finals workflow separate.
+- [ ] Verify the two public Actions Variables target the production project without printing the key.
+- [ ] Run the workflow on `master` and confirm the no-change path skips expensive checks and the commit job.
+- [ ] Exercise a changed-snapshot path only when production data naturally differs; never alter data to manufacture a test change.
+- [ ] Confirm a failed read or validation cannot push or deploy a changed snapshot.
+- [ ] For a changed production snapshot, verify the snapshot-only commit, successful Pages run, and deployed static fallback.
+- [ ] Preserve the `pre-new-website-2026-09-30` rollback tag and custom domain.
