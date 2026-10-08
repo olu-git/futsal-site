@@ -9,7 +9,7 @@ export default function Footer() {
   return <footer className="site-footer"><div className="fis-container">
     <div className="footer-grid">
       <nav aria-label="Quick links"><h2>Quick Links</h2>{[
-        ["/", "Home"], ["/monday-night", "Monday"], ["/wednesday-night", "Wednesday"], ["/rules", "Rules"], ["/admin/", "Admin"], ["/contact", "Contact Us"], ["/about-us", "About Us"],
+        ["/", "Home"], ["/monday-night", "Monday"], ["/wednesday-night", "Wednesday"], ["/fis-tv", "FIS TV"], ["/rules", "Rules"], ["/admin/", "Admin"], ["/contact", "Contact Us"], ["/about-us", "About Us"],
       ].map(([href, label]) => <Fragment key={href}>
         <Link href={href}>{label}</Link>
         {href === "/wednesday-night" && <RegisterButton className="footer-quick-link">Register</RegisterButton>}
