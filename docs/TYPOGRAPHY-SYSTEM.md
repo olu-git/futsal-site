@@ -2,9 +2,9 @@
 
 ## Font roles
 
-Unbounded is the primary reading and display family. It is used for hero and page titles, longer headings, paragraphs, descriptions, form values, helper text, validation, legal copy and modal or sheet instructions.
+Unbounded is the primary reading family and the family for supporting headings, such as WATCH THE FINAL, SEMI FINALS and GRAND FINAL. It is also used for longer headings, paragraphs, descriptions, form values, helper text, validation, legal copy and modal or sheet instructions.
 
-Press Start 2P is the compact retro accent. It is reserved for navigation, kickers, short labels, buttons, status badges, selected table headings and values, and the established fixture, result and league-table presentation. It must not be used for paragraphs, long instructions or validation copy.
+Press Start 2P identifies major section headings, such as FIS TV, KNOCKOUT STAGES, THE REPLAY and THE GALLERY, as well as navigation, kickers, short labels, buttons, status badges, selected table headings and values, and the established fixture, result and league-table presentation. It must not be used for paragraphs, long instructions or validation copy. Major headings use the shared section scale with a comfortable 1.6 line height and safe wrapping on mobile.
 
 ## Responsive scale
 
@@ -32,7 +32,8 @@ The `clamp()` tokens reduce type gradually instead of changing abruptly at a bre
 
 ## Usage rules
 
-- Use `.type-page-title` for prominent readable headings and `.type-section-title` or `.type-card-title` as hierarchy descends.
+- Use Press Start 2P (`--font-mono`) for major section headings at the shared section-title scale. Keep supporting/card headings in Unbounded (`--font-sans`), using `.type-card-title` as appropriate.
+- On cream backgrounds, use brand blue for general section headings and accessible brand red for featured sections such as Home FIS TV. Use cream/white on blue backgrounds. Choose by section context and preserve accessible contrast; do not alternate colours arbitrarily.
 - Use `.type-body` for normal prose and `.type-body-compact` for supporting copy in cards, banners, dialogs and sheets.
 - Use `.type-helper`, `.type-validation` and `.type-caption` for their named supporting roles. These always use Unbounded and normal casing.
 - Use `.type-label` and `.type-action` only for short text. Keep Press Start 2P labels concise and avoid letter spacing beyond the established brand treatment.

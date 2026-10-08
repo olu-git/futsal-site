@@ -6,7 +6,8 @@
 .heroArtwork { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none; }
 .section { padding-block: 40px; }
 .sectionHeading { margin-bottom: 24px; }
-.sectionHeading h2 { margin: 0 0 8px; color: var(--fis-blue); }
+.sectionHeading h2 { margin: 0 0 8px; font: 400 var(--type-section-title)/1.6 var(--font-mono); color: var(--fis-blue); text-indent: -.125em; }
+/* Press Start 2P T has a 125/1000-em bearing; align its ink with the media edge. */
 .sectionHeading > p:last-child { margin: 0; }
 .replays { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .replay { min-width: 0; }
@@ -16,9 +17,9 @@
 .poster img { object-fit: cover; }
 .playIcon { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 64px; height: 52px; display: grid; place-items: center; background: var(--fis-red-dark); border: 2px solid white; }
 .poster:hover .playIcon { background: var(--fis-blue); }
-.replayDetails { display: flex; align-items: start; justify-content: space-between; gap: 16px; padding-top: 18px; }
-.replayDetails h3 { font: 700 var(--type-card-title)/1.4 var(--font-sans); text-transform: uppercase; margin: 0 0 6px; }
-.replayDetails p { font-size: var(--type-helper); margin: 0; }
+.replayDetails { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 4px 16px; padding-top: 18px; }
+.replayDetails h3 { font: 700 var(--type-card-title)/1.4 var(--font-sans); text-transform: uppercase; margin: 0; }
+.replayDetails p { grid-column: 1 / -1; margin: 0; font-size: var(--type-helper); }
 .replayDetails a { min-height: 44px; display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0; font-size: var(--type-helper); text-decoration: underline; text-underline-offset: 4px; }
 .gallerySection { padding-bottom: 64px; }
 .collection + .collection { margin-top: 48px; }

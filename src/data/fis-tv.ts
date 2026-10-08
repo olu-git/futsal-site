@@ -24,8 +24,8 @@ export interface PhotoCollection {
 }
 
 export const replayVideos: ReplayVideo[] = [
-  { id: "semi-finals", title: "Semi Finals", youtubeId: "3Bxik7Ll9mM", competition: "FIS knockout stages", order: 1 },
-  { id: "grand-final", title: "Grand Final", youtubeId: "KAVssKxlDCs", competition: "FIS knockout stages", order: 2 },
+  { id: "semi-finals", title: "Semi Finals", description: "Ghazni United vs Goldlink Up", youtubeId: "3Bxik7Ll9mM", competition: "FIS knockout stages", order: 1 },
+  { id: "grand-final", title: "Grand Final", description: "AFG vs Goldlink Up", youtubeId: "KAVssKxlDCs", competition: "FIS knockout stages", order: 2 },
 ];
 
 export const photoCollections: PhotoCollection[] = [

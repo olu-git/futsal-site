@@ -9,7 +9,7 @@ This version has breaking changes - APIs, conventions, and file structure may al
 ## Brand and interface
 
 - Reuse the square-edged FIS blue/red/cream system in `src/app/globals.css`. Preserve the approved logos, brand-pack assets and font files; do not redraw or distort them without approval.
-- `Unbounded` is the main body/display family. Reserve `Press Start 2P` for compact retro labels and accents. Keep contrast, focus states, tables and phone layouts readable.
+- Use `Press Start 2P` for major section headings (for example FIS TV, KNOCKOUT STAGES, THE REPLAY and THE GALLERY) and compact retro labels. Use `Unbounded` for supporting headings (such as WATCH THE FINAL), body text and longer copy. Choose brand blue or accessible brand red for headings by section context; use cream/white on blue backgrounds. Keep contrast, focus states, tables and phone layouts readable.
 
 ## Architecture and source of truth
 

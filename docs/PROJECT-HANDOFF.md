@@ -38,7 +38,7 @@ Status checked locally on 8 October 2026 (Australia/Sydney). Recheck Git and rem
 - Monday and Wednesday regular seasons stay separate. Standings derive from published results plus published adjustments; the fallback is not authoritative over live Supabase.
 - Monday Hunger FC v Ghazni United is recorded as 5-5 regulation and 2-2 penalties with Hunger explicitly advancing. `scripts/check-finals.ts` contains a narrowly scoped validator allowance; it also holds approved Hunger scheduling exceptions for SF2 and the completed Grand Final only. Monday Salvos' 5-0 grading loss is marked as a forfeit; public grading cards remain hidden. Wednesday G3/G4 are abandoned. Do not generalise any exception or invent missing fixture details.
 - `src/lib/team-display-name.ts` preserves the legacy team identity while displaying Declan's Delinquents. If changing its Supabase profile, retain the stable team ID and historical links.
-- Preserve `public/logos/`, `brand-assets/fis-logo-pack/` and font assets. `Unbounded` is the main family; `Press Start 2P` is for compact retro accents. See [TYPOGRAPHY-SYSTEM.md](TYPOGRAPHY-SYSTEM.md).
+- Preserve `public/logos/`, `brand-assets/fis-logo-pack/` and font assets. Major section headings use `Press Start 2P`; supporting headings and reading text use `Unbounded`. Choose brand blue or accessible red by section context, and cream/white on blue backgrounds. See [TYPOGRAPHY-SYSTEM.md](TYPOGRAPHY-SYSTEM.md).
 
 ## Current checkout and next checks
 
