@@ -33,6 +33,8 @@ Status checked locally on 8 October 2026 (Australia/Sydney). Recheck Git and rem
 
 ## Decisions and quirks
 
+- Home feature prepared for release on 9 October 2026, based on released audit merge `77d3270`: Home temporarily places `HomeTvFeature` immediately after the hero, before league sections, featuring the existing Grand Final with click-to-load/no-autoplay playback. Move that component in `HomeContent` when new-season fixtures are introduced; there is no automatic season switch. The full FIS TV page and league content are retained. A content-width blue KNOCKOUT STAGES box follows FIS TV, with Monday/Wednesday switching, semi finals and grand final only, and links to each unchanged full night bracket. Upcoming-fixture form is derived in the shared competition service; see [PUBLIC-COMPETITION-DATA.md](PUBLIC-COMPETITION-DATA.md).
+
 - Monday and Wednesday regular seasons stay separate. Standings derive from published results plus published adjustments; the fallback is not authoritative over live Supabase.
 - Monday Hunger FC v Ghazni United is recorded as 5-5 regulation and 2-2 penalties with Hunger explicitly advancing. `scripts/check-finals.ts` contains a narrowly scoped validator allowance; it also holds approved Hunger scheduling exceptions for SF2 and the completed Grand Final only. Monday Salvos' 5-0 grading loss is marked as a forfeit; public grading cards remain hidden. Wednesday G3/G4 are abandoned. Do not generalise any exception or invent missing fixture details.
 - `src/lib/team-display-name.ts` preserves the legacy team identity while displaying Declan's Delinquents. If changing its Supabase profile, retain the stable team ID and historical links.
