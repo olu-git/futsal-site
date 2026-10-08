@@ -1,8 +1,9 @@
 import { competitionRepository, type CompetitionRepository, type CompetitionDataset } from "./competition-repository";
 import { calculateStandings } from "./standings";
+import { calculateTeamForm, type FormResult } from "./team-form";
 import type { CompetitionNight, Division, Fixture, Team } from "./types";
 
-export interface DisplayFixture extends Fixture { home: Team; away: Team; }
+export interface DisplayFixture extends Fixture { home: Team; away: Team; homeForm?: FormResult[]; awayForm?: FormResult[]; }
 export interface DisplayRound { night: CompetitionNight; round: number; date: string; fixtures: DisplayFixture[]; }
 
 export function groupRounds(fixtures: DisplayFixture[]): DisplayRound[] {
@@ -24,7 +25,10 @@ function displayFixtures(data: CompetitionDataset): DisplayFixture[] {
     const away = teams.get(fixture.awayTeam);
     if (!home || !away) throw new Error(`Unknown team in fixture ${fixture.id}`);
     if (fixture.status === "scheduled" && (home.active === false || away.active === false)) return [];
-    return [{ ...fixture, home, away }];
+    return [{ ...fixture, home, away, ...(fixture.status === "scheduled" ? {
+      homeForm: calculateTeamForm(home.id, fixture, data.fixtures),
+      awayForm: calculateTeamForm(away.id, fixture, data.fixtures),
+    } : {}) }];
   });
 }
 

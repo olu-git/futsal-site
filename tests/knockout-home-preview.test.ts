@@ -4,7 +4,6 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import seasonData from "../src/data/season-2026-s1.json";
 import { finalsMatches, isScheduledFinalsMatch, resolveFinalsSlot, winnerSide, type FinalsSeasonData } from "../src/lib/finals";
-import { hasCurrentFinals } from "../src/components/KnockoutPreview";
 import KnockoutBracket from "../src/components/KnockoutBracket";
 
 const season = seasonData as FinalsSeasonData;
@@ -153,14 +152,11 @@ test("Wednesday grading history retains the played slots and abandoned records",
   assert.equal(new Set(playedSlots.map((match) => `${match.time}|${match.court}`)).size, 6);
 });
 
-test("home bracket remains active while a final is pending and ends when both are complete", () => {
-  const pendingWednesday = { ...season.finals.wednesday, results: { ...season.finals.wednesday.results } };
-  delete pendingWednesday.results.gf;
-  assert.equal(hasCurrentFinals({ finals: { ...season.finals, wednesday: pendingWednesday } }, "2026-09-30"), true);
-  assert.equal(hasCurrentFinals(season, "2026-09-30"), false);
-  assert.ok(finalsMatches.monday.some((match) => match.round === "Grading"));
-  assert.ok(finalsMatches.wednesday.some((match) => match.round === "Grading"));
-  assert.equal(hasCurrentFinals(season, "2026-10-08"), false);
+test("completed finals remain available in the Home preview", () => {
+  for (const night of ["monday", "wednesday"] as const) {
+    const html = renderToStaticMarkup(createElement(KnockoutBracket, { night, data: season.finals[night], kitColours: {}, preview: true }));
+    assert.match(html, /2026 Season 1 Champions/);
+  }
 });
 
 test("public brackets show only knockout rounds while grading history stays in data", () => {
@@ -170,15 +166,16 @@ test("public brackets show only knockout rounds while grading history stays in d
         night, data: season.finals[night], kitColours: {}, preview,
       }));
       assert.doesNotMatch(html, /Grading Games|bracket-grading|>G[1-4]<|Abandoned/i);
-      assert.match(html, /Quarter Finals/);
+      if (preview) assert.doesNotMatch(html, /Quarter Finals/);
+      else assert.match(html, /Quarter Finals/);
       assert.match(html, /Semi Finals/);
       assert.match(html, /Grand Final/);
-      if (night === "monday") {
+      if (night === "monday" && !preview) {
         assert.match(html, /Hunger FC advances; penalties tied 2-2/);
       }
       if (preview) {
         assert.doesNotMatch(html, /Round of 16<\/h3>/);
-        assert.match(html, /h-\[600px\]/);
+        assert.match(html, /home-knockout-stack/);
       } else {
         assert.match(html, /Round of 16/);
       }

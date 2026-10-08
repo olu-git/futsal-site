@@ -36,9 +36,9 @@ export default function KnockoutBracket({ night, data, kitColours, preview = fal
   const hasChampion = winnerSide(data.results.gf) !== null;
   const columns = hasChampion
     ? preview
-      ? "min-w-[850px] grid-cols-[minmax(220px,1fr)_minmax(220px,1fr)_minmax(360px,1.6fr)]"
+      ? "home-knockout-grid"
       : "min-w-[1180px] grid-cols-[repeat(3,minmax(220px,1fr))_minmax(360px,1.6fr)]"
-    : preview ? "min-w-[780px] grid-cols-3" : "min-w-[1040px] grid-cols-4";
+    : preview ? "home-knockout-grid" : "min-w-[1040px] grid-cols-4";
 
   return (
     <section id={preview ? undefined : "finals"} className={`bracket-section overflow-hidden ${preview ? "home-bracket" : "py-16 sm:py-20"}`}>
@@ -68,7 +68,7 @@ export default function KnockoutBracket({ night, data, kitColours, preview = fal
           tabIndex={0}
         >
           <div className={`grid gap-4 lg:gap-5 ${columns}`}>
-            {rounds.filter((round) => !preview || round.key !== "R16").map((round) => (
+            {rounds.filter((round) => !preview || round.key === "SF" || round.key === "GF").map((round) => (
               <FinalsRoundColumn
                 key={round.key}
                 title={round.title}
@@ -126,7 +126,7 @@ function FinalsRoundColumn({
       <p className="mt-1 font-[family-name:var(--font-mono)] text-[9px] leading-5 text-white/80">
         {formatDate(date)}
       </p>
-      <div className={`mt-4 ${compact ? "h-[600px]" : "h-[1200px]"} ${stackClass}`}>
+      <div className={`mt-4 ${compact ? "home-knockout-stack" : "h-[1200px]"} ${stackClass}`}>
         {[...matches].sort((a, b) => a.time.localeCompare(b.time) || a.court - b.court).map((match) => {
           const winningSide = round === "GF" ? winnerSide(data.results[match.id]) : null;
           const champion = winningSide

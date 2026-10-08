@@ -37,6 +37,8 @@ test("unplayed fixtures show upcoming without a fabricated score", () => {
   assert.match(markup, /Scheduled fixture/);
   assert.match(markup, /Upcoming/);
   assert.doesNotMatch(markup, /5 - 0/);
+  assert.equal((markup.match(/role="listitem"/g) ?? []).length, 10);
+  assert.match(markup, /No completed match/);
 });
 
 test("completed result and explicit forfeit note remain scannable", () => {
@@ -44,6 +46,7 @@ test("completed result and explicit forfeit note remain scannable", () => {
   assert.match(markup, /Final score 5 to 0/);
   assert.match(markup, /Forfeit/);
   assert.match(markup, /Home team forfeited/);
+  assert.doesNotMatch(markup, /team-form|form-badge/);
 });
 
 test("knockout feeder placeholders and result data stay visible", () => {
@@ -54,4 +57,19 @@ test("knockout feeder placeholders and result data stay visible", () => {
   assert.match(markup, /Final score|5 goals/);
   assert.match(markup, /team-kit-light/);
   assert.match(markup, /team-kit[^>]*>[\s\S]*?Team 1/);
+  assert.doesNotMatch(markup, /team-form|form-badge/);
+});
+
+test("Home knockout preview shows only semi finals and grand final for each night", () => {
+  const data: FinalsNightData = { seeds: Array.from({ length: 16 }, (_, i) => `Team ${i + 1}`), results: {} };
+  for (const night of ["monday", "wednesday"] as const) {
+    const markup = renderToStaticMarkup(<KnockoutBracket night={night} data={data} kitColours={{}} preview />);
+    assert.match(markup, /Semi Finals/);
+    assert.match(markup, /Grand Final/);
+    assert.equal((markup.match(/class="bracket-match /g) ?? []).length, 3);
+    assert.doesNotMatch(markup, /Quarter Finals|Round of 16|Grading|id="finals"/);
+    const full = renderToStaticMarkup(<KnockoutBracket night={night} data={data} kitColours={{}} />);
+    assert.match(full, /Quarter Finals/);
+    assert.match(full, /Round of 16/);
+  }
 });
