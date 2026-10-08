@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/browser";
+import { selectAdminEditions } from "./competition-editions";
 import type { AdminTeam, TeamEdition, TeamPreference } from "./teams";
 
 export interface TeamsWorkspace { editions: TeamEdition[]; teams: AdminTeam[] }
@@ -14,11 +15,7 @@ export async function loadTeamsWorkspace(): Promise<TeamsWorkspace> {
     .eq("publication_state", "published");
   if (editionError) throw new Error(`Unable to load competition seasons: ${editionError.message}`);
   const rows = (editionData ?? []) as Row[];
-  const relevant = rows.filter((row) => [1, 3].includes(Number(one(row.competitions as { weekday: number } | { weekday: number }[]).weekday)));
-  const latest = new Map<string, Row>();
-  relevant.sort((a, b) => String(one(b.seasons as { ends_on: string } | { ends_on: string }[]).ends_on).localeCompare(String(one(a.seasons as { ends_on: string } | { ends_on: string }[]).ends_on)))
-    .forEach((row) => { const competition = one(row.competitions as { weekday: number; division: string } | { weekday: number; division: string }[]); const key = `${competition.weekday}:${competition.division}`; if (!latest.has(key)) latest.set(key, row); });
-  const editions: TeamEdition[] = [...latest.values()].map((row) => { const competition = one(row.competitions as { weekday: number; division: string; name: string } | { weekday: number; division: string; name: string }[]); return {
+  const editions: TeamEdition[] = selectAdminEditions(rows).map((row) => { const competition = one(row.competitions as { weekday: number; division: string; name: string } | { weekday: number; division: string; name: string }[]); return {
     id: String(row.id), night: (competition.weekday === 1 ? "monday" : "wednesday") as TeamEdition["night"], division: competition.division,
     label: competition.name, season: String(one(row.seasons as { name: string } | { name: string }[]).name), lifecycle: row.lifecycle as TeamEdition["lifecycle"],
   }; }).sort((a, b) => a.night.localeCompare(b.night) || a.division.localeCompare(b.division));

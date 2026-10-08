@@ -3,7 +3,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/browser";
-import { resolveAdminAccess, type AdminAccess } from "@/lib/admin/auth";
+import { resolveAdminAccess, withAdminTimeout, type AdminAccess } from "@/lib/admin/auth";
 
 export default function AdminAuthGuard({ children }: { children: ReactNode }) {
   const router = useRouter();
@@ -13,19 +13,23 @@ export default function AdminAuthGuard({ children }: { children: ReactNode }) {
     const supabase = createClient();
     let active = true;
     async function check() {
-      const { data: { session }, error: sessionError } = await supabase.auth.getSession();
-      if (!active) return;
-      if (sessionError) { setAccess("unavailable"); return; }
-      if (!session) { setAccess("unauthenticated"); return; }
-      const { data, error } = await supabase.rpc("is_fis_admin");
-      if (!active) return;
-      const next = resolveAdminAccess(session, data === true, Boolean(error));
-      if (next === "denied") await supabase.auth.signOut();
-      if (active) setAccess(next);
+      try {
+        const next = await withAdminTimeout(async () => {
+          const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+          if (sessionError) return "unavailable" as const;
+          if (!session) return "unauthenticated" as const;
+          const { data, error } = await supabase.rpc("is_fis_admin");
+          return resolveAdminAccess(session, data === true, Boolean(error));
+        });
+        if (!active) return;
+        setAccess(next);
+        if (next === "denied") void supabase.auth.signOut().catch(() => {});
+      } catch { if (active) setAccess("unavailable"); }
     }
     void check();
     const { data: listener } = supabase.auth.onAuthStateChange((event) => {
-      if (event === "SIGNED_OUT") setAccess("unauthenticated");
+      if (!active) return;
+      if (event === "SIGNED_OUT") setAccess(current => current === "denied" ? "denied" : "unauthenticated");
       if (event === "TOKEN_REFRESHED" || event === "SIGNED_IN") void check();
     });
     return () => { active = false; listener.subscription.unsubscribe(); };
@@ -36,7 +40,7 @@ export default function AdminAuthGuard({ children }: { children: ReactNode }) {
     const returnTo = `${window.location.pathname}${window.location.search}`;
     router.push(`/admin/login/?returnTo=${encodeURIComponent(returnTo)}`);
   }} />;
-  if (access === "denied") return <AdminState title="Access denied" text="This account is not authorised to manage FIS and has been signed out." action="Return to login" onAction={() => router.push("/admin/login/")} />;
+  if (access === "denied") return <AdminState title="Access denied" text="This account is not authorised to manage FIS." action="Return to login" onAction={() => router.push("/admin/login/")} />;
   if (access === "unavailable") return <AdminState title="Admin unavailable" text="Supabase could not confirm administrator access. Check your connection and try again." action="Try again" onAction={() => window.location.reload()} />;
   return children;
 }

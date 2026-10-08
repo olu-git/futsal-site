@@ -61,6 +61,16 @@ jobs:
           npm run snapshot:generate
           npm run snapshot:validate
 
+      - name: Detect snapshot change
+        id: snapshot
+        shell: bash
+        run: |
+          if git diff --quiet -- src/data/public-competition-snapshot.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Confirm generated snapshot still matches published data
         if: steps.snapshot.outputs.changed == 'true'
         run: npm run snapshot:check
@@ -81,16 +91,6 @@ jobs:
           if [ -n "$changed" ] && [ "$changed" != ' M src/data/public-competition-snapshot.json' ]; then
             echo "Snapshot generation changed an unexpected file." >&2
             exit 1
-          fi
-
-      - name: Detect snapshot change
-        id: snapshot
-        shell: bash
-        run: |
-          if git diff --quiet -- src/data/public-competition-snapshot.json; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Transfer validated snapshot

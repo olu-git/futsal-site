@@ -25,6 +25,7 @@ export default function HomeContent({ initial, finals }: { initial: PublicCompet
     <SnapshotNotice source={source} />
     <section className="fis-section fis-container" id="standings">
       <p className="eyebrow">Current standings</p><h2 className="section-title">League Tables</h2>
+      {!monday.divisions.length && !wednesday.divisions.length && <p className="empty-state">No standings are available yet.</p>}
       <div className="standings-previews">{[monday, wednesday].flatMap((competition) => competition.divisions.map(({ division, standings, teams }) => <article key={`${competition.night}-${division}`}>
         <Link className="league-head" href={`${nightPath(competition.night)}#standings`}>
           <h3>{nightLabel(competition.night)}{competition.divisions.length > 1 && ` / Division ${division}`}</h3><span>View Table</span>

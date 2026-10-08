@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/browser";
+import { selectAdminEditions } from "./competition-editions";
 
-export const CURRENT_SEASON_SELECT = "id, lifecycle, created_at, seasons(name, starts_on, ends_on), competitions(name, weekday)";
+export const CURRENT_SEASON_SELECT = "id, lifecycle, created_at, seasons(name, starts_on, ends_on), competitions(name, weekday, division)";
 export const FIXTURE_RESULTS_SELECT = `id, competition_season_id, home_team_id, away_team_id, round_number, match_date, kickoff_time, court, stage,
   result_versions(id, revision, status, home_score, away_score, forfeit_side, forfeit_exception_reason,
     penalty_home_score, penalty_away_score, penalty_winner, supersedes_result_id, correction_reason, created_at, published_at)`;
@@ -57,15 +58,8 @@ export async function getAdminRegularSeasonFixtures(): Promise<AdminFixture[]> {
     .eq("publication_state", "published");
   if (editionsError) throw new Error(`Unable to load competition seasons: ${editionsError.message}`);
 
-  const selected = ([...(editions ?? [])] as Array<Record<string, unknown>>)
-    .filter((row) => [1, 3].includes(Number(one(row.competitions as Relation<{ weekday: number }>).weekday)))
-    .sort((a, b) => String(one(b.seasons as Relation<{ ends_on: string }>).ends_on).localeCompare(String(one(a.seasons as Relation<{ ends_on: string }>).ends_on)));
-  const byNight = new Map<number, Record<string, unknown>>();
-  selected.forEach((row) => {
-    const weekday = Number(one(row.competitions as Relation<{ weekday: number }>).weekday);
-    if (!byNight.has(weekday)) byNight.set(weekday, row);
-  });
-  const ids = [...byNight.values()].map((row) => String(row.id));
+  const selected = selectAdminEditions((editions ?? []) as AdminEditionRow[]);
+  const ids = selected.map((row) => String(row.id));
   if (!ids.length) return [];
 
   const { data: fixtureRows, error } = await supabase
@@ -87,7 +81,7 @@ export async function getAdminRegularSeasonFixtures(): Promise<AdminFixture[]> {
   return mapAdminFixtures(
     (fixtureRows ?? []) as AdminFixtureRow[],
     (teamRows ?? []) as AdminTeamRow[],
-    [...byNight.values()],
+    selected,
   );
 }
 

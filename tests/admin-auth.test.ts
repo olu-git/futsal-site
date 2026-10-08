@@ -1,11 +1,17 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import type { Session } from "@supabase/supabase-js";
-import { resolveAdminAccess, safeAdminReturnPath } from "../src/lib/admin/auth";
+import { resolveAdminAccess, safeAdminReturnPath, withAdminTimeout } from "../src/lib/admin/auth";
 import { CURRENT_SEASON_SELECT } from "../src/lib/admin/results-data";
 import { SUPABASE_AUTH_OPTIONS } from "../src/lib/supabase/browser";
 
 const session = { user: { id: "admin-user" } } as Session;
+
+test("unresponsive administrator checks time out instead of blocking the UI", async () => {
+  await assert.rejects(withAdminTimeout(() => new Promise(() => {}), 5), /timed out/);
+  assert.equal(await withAdminTimeout(async () => "authorised"), "authorised");
+  await assert.rejects(withAdminTimeout(() => { throw new Error("Session unavailable"); }), /Session unavailable/);
+});
 
 test("static authentication guard reports an unauthenticated session", () => {
   assert.equal(resolveAdminAccess(null, null), "unauthenticated");

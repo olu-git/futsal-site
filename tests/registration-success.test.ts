@@ -8,11 +8,11 @@ const modal = readFileSync("src/components/RegistrationProvider.tsx", "utf8");
 const page = readFileSync("src/app/register/page.tsx", "utf8");
 const css = readFileSync("src/app/globals.css", "utf8");
 
-test("registration confirmation follows only a successful Web3Forms response", () => {
-  const successGuard = form.indexOf("result.success !== true");
-  const successCallback = form.indexOf("onSuccess?.()");
-  assert.ok(successGuard >= 0 && successCallback > successGuard);
-  assert.match(form, /catch \{\s*setStatus\("error"\)/);
+test("registration uses the tested response handler and invalidates it on unmount", () => {
+  assert.match(form, /await settleEnquiryResponse\(/);
+  assert.match(form, /\(\) => mounted\.current/);
+  assert.match(form, /return \(\) => \{ mounted\.current = false; \}/);
+  assert.match(form, /onSuccess\?\.\(\)/);
 });
 
 test("player label is concise while its submission field name stays stable", () => {

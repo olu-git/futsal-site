@@ -21,6 +21,7 @@ export default function CompetitionContent({ night, initial, finals }: {
     <KnockoutBracket night={night} data={finals} kitColours={competition.kitColours} />
     <section className="fis-section fis-container" id="standings">
       <h2 className="section-title">Standings</h2>
+      {!competition.divisions.length && <p className="empty-state">No standings are available yet.</p>}
       {competition.divisions.map(({ division, standings, teams }) => <div className="division-table" key={division}>
         {competition.divisions.length > 1 && <h3 className="division-label">Division {division}</h3>}
         <LeagueTable standings={standings} teams={teams} label={`${nightLabel(night)} Division ${division} standings`} />

@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { LoaderCircle } from "lucide-react";
 import { enquiryForms, type EnquiryKind } from "@/lib/form-config";
+import { settleEnquiryResponse } from "@/lib/enquiry-response";
 
 type Field = { name: string; label: string; type?: "text" | "email" | "tel" | "date" | "textarea"; required?: boolean; choices?: string[]; autoComplete?: string };
 const phone: Field = { name: "phone", label: "Mobile Number", type: "tel", required: true, autoComplete: "tel" };
@@ -29,6 +30,11 @@ export default function EnquiryForm({ kind, onSuccess }: { kind: EnquiryKind; on
   const [message, setMessage] = useState("");
   const [invalid, setInvalid] = useState<string[]>([]);
   const submitting = useRef(false);
+  const mounted = useRef(true);
+  useEffect(() => {
+    mounted.current = true;
+    return () => { mounted.current = false; };
+  }, []);
   const fields = [...fieldSets[kind], { name: "message", label: "Message", type: "textarea" } satisfies Field];
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
@@ -53,14 +59,18 @@ export default function EnquiryForm({ kind, onSuccess }: { kind: EnquiryKind; on
     data.set("from_name", "Futsal Indoor Soccer");
     if (kind === "future") data.set("preferred_nights", data.getAll("preferred_nights").join(", "));
     try {
-      const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data, signal: AbortSignal.timeout(15000) });
-      const result = await response.json();
-      if (!response.ok || result.success !== true) throw new Error("Submission failed");
-      setStatus("success"); setMessage("Thanks. We’ll be in touch shortly about your enquiry.");
-      form.reset();
-      onSuccess?.();
-    } catch {
-      setStatus("error"); setMessage("Your enquiry could not be sent. Please try again or email contact@futsalindoorsoccer.com.au.");
+      await settleEnquiryResponse(
+        () => fetch("https://api.web3forms.com/submit", { method: "POST", body: data, signal: AbortSignal.timeout(15000) }),
+        () => mounted.current,
+        () => {
+          setStatus("success"); setMessage("Thanks. We’ll be in touch shortly about your enquiry.");
+          form.reset();
+          onSuccess?.();
+        },
+        () => {
+          setStatus("error"); setMessage("Your enquiry could not be sent. Please try again or email contact@futsalindoorsoccer.com.au.");
+        },
+      );
     } finally { submitting.current = false; }
   }
 
