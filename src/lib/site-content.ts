@@ -15,7 +15,7 @@ export const site = {
   communityCaption: null as string | null,
   favicon: "/logos/FIS-04-Secondary-Profile-Colour.png",
   socials: [
-    { name: "Facebook", href: "https://www.facebook.com/futsalis/" },
+    { name: "Facebook", href: "https://www.facebook.com/futsalindoorsoccer.au" },
     { name: "Instagram", href: "https://www.instagram.com/futsalindoorsoccer/" },
     { name: "YouTube", href: "https://www.youtube.com/@futsalindoorsoccer" },
     { name: "Email", href: "mailto:contact@futsalindoorsoccer.com.au" },
