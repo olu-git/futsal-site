@@ -36,5 +36,9 @@ export default function HomeContent({ initial, finals }: { initial: PublicCompet
       <div className="section-head"><div><p className="eyebrow">Next scheduled night</p><h2 className="section-title">Upcoming Fixtures</h2></div>{nextRound && <Link className="text-link" href={`${nightPath(nextRound.night)}#fixtures`}>View {nextRound.night}</Link>}</div>
       {nextRound ? <div className="next-round"><div className="round-heading"><span>{nightLabel(nextRound.night)} / Round {nextRound.round}</span><span>{formatDate(nextRound.date)}</span></div><FixtureList fixtures={nextRound.fixtures} /></div> : <p className="empty-state">No upcoming regular-season fixtures are scheduled.</p>}
     </section>}
+    <section className="fis-container home-tv-entry" aria-labelledby="watch-the-action">
+      <div><p className="eyebrow">FIS TV</p><h2 id="watch-the-action" className="type-section-title">WATCH THE ACTION</h2><p>Catch the latest match replays, highlights and moments from FIS.</p></div>
+      <Link className="text-link" href="/fis-tv">EXPLORE FIS TV <span aria-hidden="true">→</span></Link>
+    </section>
   </>;
 }

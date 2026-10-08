@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+.home-tv-entry { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-block: 40px 56px; padding-block: 28px; border-block: 2px solid var(--fis-blue); }
+.home-tv-entry h2 { margin: 0 0 10px; }
+.home-tv-entry .eyebrow { margin-top: 0; }
+.home-tv-entry .text-link { gap: 12px; flex-shrink: 0; }
+@media (max-width: 640px) { .home-tv-entry { align-items: start; flex-direction: column; gap: 12px; } }
+
 :root {
   --fis-blue: #003b9b;
   --fis-blue-dark: #002969;
