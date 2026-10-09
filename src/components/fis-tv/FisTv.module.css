@@ -1,7 +1,21 @@
-.hero { min-height: clamp(340px, 30vw, 480px); padding-block: 80px; background: #083a97; color: var(--fis-cream); overflow: hidden; }
-.hero::before { content: ""; position: absolute; inset: 0; z-index: -2; pointer-events: none; background-image: repeating-linear-gradient(0deg, #001e602e 0 2px, transparent 2px 5px), radial-gradient(#63b7ff38 1px, transparent 1px), linear-gradient(90deg, #00296966, transparent 28%, #00296966 62%, transparent); background-size: auto, 4px 4px, auto; }
+.hero {
+  min-height: clamp(360px, 32vw, 490px);
+  padding-block: 80px;
+  background: radial-gradient(ellipse at 35% 45%, #073b96 0%, #032d7b 48%, #001b50 100%);
+  color: var(--fis-cream);
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image: linear-gradient(90deg, #00133355, transparent 24%, transparent 70%, #00133366), repeating-linear-gradient(0deg, #00143d40 0 2px, transparent 2px 5px), radial-gradient(#5494e54d 1px, transparent 1px);
+  background-size: auto, auto, 4px 4px;
+}
 .hero > div { position: static; text-align: left; }
-.hero h1 { font-family: var(--font-mono); font-size: clamp(2.25rem, 8vw, 8rem); font-weight: 400; line-height: 1.35; color: var(--fis-cream); text-shadow: 4px 5px 0 var(--fis-red); }
+.hero h1 { font-family: var(--font-mono); font-size: clamp(2.25rem, 8vw, 8rem); font-weight: 400; line-height: 1.35; color: var(--fis-cream); text-shadow: 4px 5px 0 var(--fis-red), 8px 9px 0 #00143780; }
 .hero > div > p { max-width: none; margin: 20px 0 0; font: 400 clamp(.75rem, 1.8vw, 1.75rem)/1.8 var(--font-mono); color: var(--fis-cream); }
 .heroArtwork { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none; }
 .section { padding-block: 40px; }

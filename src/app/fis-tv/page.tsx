@@ -20,12 +20,12 @@ export default function FisTvPage() {
       <p>THE MATCHDAY LOUNGE</p>
       <svg className={styles.heroArtwork} viewBox="0 0 1600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
         <defs>
-          <filter id="fis-tv-grain"><feTurbulence type="fractalNoise" baseFrequency=".65 .08" numOctaves="2" seed="8" /><feColorMatrix type="saturate" values="0" /></filter>
+          <filter id="fis-tv-grain"><feTurbulence type="fractalNoise" baseFrequency=".65 .08" numOctaves="3" seed="8" /><feColorMatrix type="saturate" values="0" /></filter>
           <pattern id="fis-tv-pixels" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="white" /></pattern>
           <mask id="fis-tv-court"><rect width="1600" height="460" fill="url(#fis-tv-pixels)" /></mask>
         </defs>
-        <rect width="1600" height="460" filter="url(#fis-tv-grain)" opacity=".16" style={{ mixBlendMode: "soft-light" }} />
-        <g fill="none" stroke="#63b7ff" strokeWidth="12" opacity=".32" mask="url(#fis-tv-court)">
+        <rect width="1600" height="460" filter="url(#fis-tv-grain)" opacity=".26" style={{ mixBlendMode: "soft-light" }} />
+        <g fill="none" stroke="#559ef0" strokeWidth="12" opacity=".42" mask="url(#fis-tv-court)">
           <path d="M1240 0v460" /><circle cx="1240" cy="230" r="132" />
         </g>
         <path d="M70 32H34v36M1530 32h36v36M70 428H34v-36M1530 428h36v-36" fill="none" stroke="#63b7ff" strokeWidth="6" opacity=".3" />
