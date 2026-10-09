@@ -103,6 +103,15 @@
         "kitColour": "#111111"
       },
       {
+        "id": "mon-toss",
+        "name": "King ADL",
+        "night": "monday",
+        "division": "A",
+        "active": true,
+        "standingsEligible": true,
+        "kitColour": "#27AE60"
+      },
+      {
         "id": "mon-misfits",
         "name": "Misfits",
         "night": "monday",
@@ -146,15 +155,6 @@
         "active": true,
         "standingsEligible": true,
         "kitColour": "#FFFFFF"
-      },
-      {
-        "id": "mon-toss",
-        "name": "Toss",
-        "night": "monday",
-        "division": "A",
-        "active": true,
-        "standingsEligible": true,
-        "kitColour": "#27AE60"
       },
       {
         "id": "mon-wildcats",
@@ -220,6 +220,15 @@
         "kitColour": "#111111"
       },
       {
+        "id": "wed-toss",
+        "name": "King ADL",
+        "night": "wednesday",
+        "division": "A",
+        "active": true,
+        "standingsEligible": true,
+        "kitColour": "#27AE60"
+      },
+      {
         "id": "wed-xaywan",
         "name": "Kuq E Zi",
         "night": "wednesday",
@@ -272,15 +281,6 @@
         "active": true,
         "standingsEligible": true,
         "kitColour": "#2F80ED"
-      },
-      {
-        "id": "wed-toss",
-        "name": "Toss",
-        "night": "wednesday",
-        "division": "A",
-        "active": true,
-        "standingsEligible": true,
-        "kitColour": "#27AE60"
       },
       {
         "id": "wed-umoja-stars",
