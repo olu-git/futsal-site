@@ -1,5 +1,5 @@
 import { createClient } from "@/lib/supabase/browser";
-import { selectAdminEditions } from "./competition-editions";
+import { selectFixtureAdminEditions } from "./competition-editions";
 import type { ChangeSetStatus, FixtureChange, FixtureChangeContext, KickoffPreference, Night,
   ScheduleCompetition, ScheduleCompetitionSeason, ScheduleFixture, ScheduleTeam, ValidationMessage } from "./fixture-changes";
 
@@ -28,10 +28,9 @@ export class FixturesSetupInactiveError extends Error { constructor() { super("F
 export async function loadFixturesWorkspace(): Promise<FixturesWorkspace> {
   const supabase = createClient();
   const { data: editionRows, error: editionError } = await supabase.from("competition_seasons")
-    .select("id,lifecycle,publication_state,seasons(name,ends_on),competitions(id,weekday,division,location_id)")
-    .eq("publication_state", "published");
+    .select("id,lifecycle,publication_state,seasons(name,ends_on),competitions(id,weekday,division,location_id)");
   if (editionError) throw new Error(`Unable to load competition seasons: ${editionError.message}`);
-  const editions: AdminCompetitionEdition[] = selectAdminEditions((editionRows ?? []) as Row[]).map((row) => ({ id: String(row.id), night: Number(one(row.competitions as { weekday: number }).weekday) === 1 ? "monday" : "wednesday",
+  const editions: AdminCompetitionEdition[] = selectFixtureAdminEditions((editionRows ?? []) as Row[]).map((row) => ({ id: String(row.id), night: Number(one(row.competitions as { weekday: number }).weekday) === 1 ? "monday" : "wednesday",
     division: String(one(row.competitions as { division: string }).division),
     season: String(one(row.seasons as { name: string } | { name: string }[]).name), lifecycle: row.lifecycle as AdminCompetitionEdition["lifecycle"],
     locationId: String(one(row.competitions as { location_id: string } | { location_id: string }[]).location_id) }));

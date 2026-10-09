@@ -1,0 +1,789 @@
+{
+  "format": "fis-local-schedule-draft-v1",
+  "night": "monday",
+  "publication": "local-review-only",
+  "calendarStatus": "dated-standing-venue-booking-confirmed-returning-availability-pending",
+  "startDate": "2026-10-12",
+  "endDate": "2027-05-03",
+  "generationSeed": 20261010,
+  "searchAttempts": 5,
+  "finalDateIfNovemberTwoCancelled": "2027-05-10",
+  "constraints": {
+    "dates": [
+      "2026-10-12",
+      "2026-10-19",
+      "2026-10-26",
+      "2026-11-02",
+      "2026-11-09",
+      "2026-11-16",
+      "2026-11-23",
+      "2026-11-30",
+      "2026-12-07",
+      "2026-12-14",
+      "2026-12-21",
+      "2027-01-11",
+      "2027-01-18",
+      "2027-01-25",
+      "2027-02-01",
+      "2027-02-08",
+      "2027-02-15",
+      "2027-02-22",
+      "2027-03-01",
+      "2027-03-15",
+      "2027-03-22",
+      "2027-04-05",
+      "2027-04-12",
+      "2027-04-19",
+      "2027-04-26",
+      "2027-05-03"
+    ],
+    "roster": [
+      "mon-afg",
+      "mon-blue-dragons",
+      "mon-goldlink-up",
+      "mon-misfits",
+      "mon-ghazni-united",
+      "mon-wildcats",
+      "mon-nassaji-fc",
+      "mon-salvos",
+      "mon-hunger-fc",
+      "mon-king-adl",
+      "mon-xaywan",
+      "mon-hope",
+      "mon-bunyip",
+      "mon-declans-delinquents"
+    ],
+    "allowedKickoffs": {
+      "mon-afg": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "mon-blue-dragons": [
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "mon-goldlink-up": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "mon-misfits": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "mon-ghazni-united": [
+        "20:20",
+        "21:00"
+      ],
+      "mon-wildcats": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "mon-nassaji-fc": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "mon-salvos": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "mon-hunger-fc": [
+        "20:20",
+        "21:00"
+      ],
+      "mon-king-adl": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "mon-xaywan": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "mon-hope": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "mon-bunyip": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "mon-declans-delinquents": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ]
+    },
+    "exceptions": [],
+    "pairs": [
+      {
+        "a": "mon-afg",
+        "b": "mon-blue-dragons",
+        "count": 2
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-goldlink-up",
+        "count": 2
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-misfits",
+        "count": 1
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-ghazni-united",
+        "count": 2
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-wildcats",
+        "count": 2
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-nassaji-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-salvos",
+        "count": 2
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-hunger-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-king-adl",
+        "count": 2
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-xaywan",
+        "count": 3
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-hope",
+        "count": 2
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-bunyip",
+        "count": 2
+      },
+      {
+        "a": "mon-afg",
+        "b": "mon-declans-delinquents",
+        "count": 2
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-goldlink-up",
+        "count": 2
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-misfits",
+        "count": 1
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-ghazni-united",
+        "count": 2
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-wildcats",
+        "count": 2
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-nassaji-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-salvos",
+        "count": 2
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-hunger-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-king-adl",
+        "count": 2
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-xaywan",
+        "count": 3
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-hope",
+        "count": 2
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-bunyip",
+        "count": 2
+      },
+      {
+        "a": "mon-blue-dragons",
+        "b": "mon-declans-delinquents",
+        "count": 2
+      },
+      {
+        "a": "mon-goldlink-up",
+        "b": "mon-misfits",
+        "count": 2
+      },
+      {
+        "a": "mon-goldlink-up",
+        "b": "mon-ghazni-united",
+        "count": 2
+      },
+      {
+        "a": "mon-goldlink-up",
+        "b": "mon-wildcats",
+        "count": 2
+      },
+      {
+        "a": "mon-goldlink-up",
+        "b": "mon-nassaji-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-goldlink-up",
+        "b": "mon-salvos",
+        "count": 2
+      },
+      {
+        "a": "mon-goldlink-up",
+        "b": "mon-hunger-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-goldlink-up",
+        "b": "mon-king-adl",
+        "count": 2
+      },
+      {
+        "a": "mon-goldlink-up",
+        "b": "mon-xaywan",
+        "count": 2
+      },
+      {
+        "a": "mon-goldlink-up",
+        "b": "mon-hope",
+        "count": 2
+      },
+      {
+        "a": "mon-goldlink-up",
+        "b": "mon-bunyip",
+        "count": 2
+      },
+      {
+        "a": "mon-goldlink-up",
+        "b": "mon-declans-delinquents",
+        "count": 2
+      },
+      {
+        "a": "mon-misfits",
+        "b": "mon-ghazni-united",
+        "count": 2
+      },
+      {
+        "a": "mon-misfits",
+        "b": "mon-wildcats",
+        "count": 2
+      },
+      {
+        "a": "mon-misfits",
+        "b": "mon-nassaji-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-misfits",
+        "b": "mon-salvos",
+        "count": 2
+      },
+      {
+        "a": "mon-misfits",
+        "b": "mon-hunger-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-misfits",
+        "b": "mon-king-adl",
+        "count": 2
+      },
+      {
+        "a": "mon-misfits",
+        "b": "mon-xaywan",
+        "count": 2
+      },
+      {
+        "a": "mon-misfits",
+        "b": "mon-hope",
+        "count": 2
+      },
+      {
+        "a": "mon-misfits",
+        "b": "mon-bunyip",
+        "count": 3
+      },
+      {
+        "a": "mon-misfits",
+        "b": "mon-declans-delinquents",
+        "count": 3
+      },
+      {
+        "a": "mon-ghazni-united",
+        "b": "mon-wildcats",
+        "count": 2
+      },
+      {
+        "a": "mon-ghazni-united",
+        "b": "mon-nassaji-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-ghazni-united",
+        "b": "mon-salvos",
+        "count": 2
+      },
+      {
+        "a": "mon-ghazni-united",
+        "b": "mon-hunger-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-ghazni-united",
+        "b": "mon-king-adl",
+        "count": 2
+      },
+      {
+        "a": "mon-ghazni-united",
+        "b": "mon-xaywan",
+        "count": 2
+      },
+      {
+        "a": "mon-ghazni-united",
+        "b": "mon-hope",
+        "count": 2
+      },
+      {
+        "a": "mon-ghazni-united",
+        "b": "mon-bunyip",
+        "count": 2
+      },
+      {
+        "a": "mon-ghazni-united",
+        "b": "mon-declans-delinquents",
+        "count": 2
+      },
+      {
+        "a": "mon-wildcats",
+        "b": "mon-nassaji-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-wildcats",
+        "b": "mon-salvos",
+        "count": 2
+      },
+      {
+        "a": "mon-wildcats",
+        "b": "mon-hunger-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-wildcats",
+        "b": "mon-king-adl",
+        "count": 2
+      },
+      {
+        "a": "mon-wildcats",
+        "b": "mon-xaywan",
+        "count": 2
+      },
+      {
+        "a": "mon-wildcats",
+        "b": "mon-hope",
+        "count": 2
+      },
+      {
+        "a": "mon-wildcats",
+        "b": "mon-bunyip",
+        "count": 2
+      },
+      {
+        "a": "mon-wildcats",
+        "b": "mon-declans-delinquents",
+        "count": 2
+      },
+      {
+        "a": "mon-nassaji-fc",
+        "b": "mon-salvos",
+        "count": 2
+      },
+      {
+        "a": "mon-nassaji-fc",
+        "b": "mon-hunger-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-nassaji-fc",
+        "b": "mon-king-adl",
+        "count": 2
+      },
+      {
+        "a": "mon-nassaji-fc",
+        "b": "mon-xaywan",
+        "count": 2
+      },
+      {
+        "a": "mon-nassaji-fc",
+        "b": "mon-hope",
+        "count": 2
+      },
+      {
+        "a": "mon-nassaji-fc",
+        "b": "mon-bunyip",
+        "count": 2
+      },
+      {
+        "a": "mon-nassaji-fc",
+        "b": "mon-declans-delinquents",
+        "count": 2
+      },
+      {
+        "a": "mon-salvos",
+        "b": "mon-hunger-fc",
+        "count": 2
+      },
+      {
+        "a": "mon-salvos",
+        "b": "mon-king-adl",
+        "count": 2
+      },
+      {
+        "a": "mon-salvos",
+        "b": "mon-xaywan",
+        "count": 3
+      },
+      {
+        "a": "mon-salvos",
+        "b": "mon-hope",
+        "count": 1
+      },
+      {
+        "a": "mon-salvos",
+        "b": "mon-bunyip",
+        "count": 2
+      },
+      {
+        "a": "mon-salvos",
+        "b": "mon-declans-delinquents",
+        "count": 2
+      },
+      {
+        "a": "mon-hunger-fc",
+        "b": "mon-king-adl",
+        "count": 2
+      },
+      {
+        "a": "mon-hunger-fc",
+        "b": "mon-xaywan",
+        "count": 2
+      },
+      {
+        "a": "mon-hunger-fc",
+        "b": "mon-hope",
+        "count": 2
+      },
+      {
+        "a": "mon-hunger-fc",
+        "b": "mon-bunyip",
+        "count": 2
+      },
+      {
+        "a": "mon-hunger-fc",
+        "b": "mon-declans-delinquents",
+        "count": 2
+      },
+      {
+        "a": "mon-king-adl",
+        "b": "mon-xaywan",
+        "count": 2
+      },
+      {
+        "a": "mon-king-adl",
+        "b": "mon-hope",
+        "count": 2
+      },
+      {
+        "a": "mon-king-adl",
+        "b": "mon-bunyip",
+        "count": 2
+      },
+      {
+        "a": "mon-king-adl",
+        "b": "mon-declans-delinquents",
+        "count": 2
+      },
+      {
+        "a": "mon-xaywan",
+        "b": "mon-hope",
+        "count": 3
+      },
+      {
+        "a": "mon-xaywan",
+        "b": "mon-bunyip",
+        "count": 0
+      },
+      {
+        "a": "mon-xaywan",
+        "b": "mon-declans-delinquents",
+        "count": 0
+      },
+      {
+        "a": "mon-hope",
+        "b": "mon-bunyip",
+        "count": 2
+      },
+      {
+        "a": "mon-hope",
+        "b": "mon-declans-delinquents",
+        "count": 2
+      },
+      {
+        "a": "mon-bunyip",
+        "b": "mon-declans-delinquents",
+        "count": 3
+      }
+    ],
+    "sharedPlayers": [],
+    "weekOnePairs": [
+      [
+        "mon-wildcats",
+        "mon-nassaji-fc"
+      ]
+    ],
+    "minimumRepeatGap": 4,
+    "maximumHomeAwayRun": 3
+  },
+  "fixtures": [
+    {"round": 1, "date": "2026-10-12", "time": "19:00", "court": 1, "home": "mon-nassaji-fc", "away": "mon-wildcats", "provisional": false},
+    {"round": 1, "date": "2026-10-12", "time": "19:00", "court": 2, "home": "mon-xaywan", "away": "mon-hope", "provisional": false},
+    {"round": 1, "date": "2026-10-12", "time": "19:40", "court": 1, "home": "mon-blue-dragons", "away": "mon-afg", "provisional": false},
+    {"round": 1, "date": "2026-10-12", "time": "19:40", "court": 2, "home": "mon-bunyip", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 1, "date": "2026-10-12", "time": "20:20", "court": 1, "home": "mon-hunger-fc", "away": "mon-salvos", "provisional": false},
+    {"round": 1, "date": "2026-10-12", "time": "20:20", "court": 2, "home": "mon-ghazni-united", "away": "mon-king-adl", "provisional": false},
+    {"round": 1, "date": "2026-10-12", "time": "21:00", "court": 1, "home": "mon-goldlink-up", "away": "mon-misfits", "provisional": false},
+    {"round": 2, "date": "2026-10-19", "time": "19:00", "court": 1, "home": "mon-salvos", "away": "mon-xaywan", "provisional": false},
+    {"round": 2, "date": "2026-10-19", "time": "19:00", "court": 2, "home": "mon-goldlink-up", "away": "mon-wildcats", "provisional": false},
+    {"round": 2, "date": "2026-10-19", "time": "19:40", "court": 1, "home": "mon-blue-dragons", "away": "mon-misfits", "provisional": false},
+    {"round": 2, "date": "2026-10-19", "time": "19:40", "court": 2, "home": "mon-declans-delinquents", "away": "mon-afg", "provisional": false},
+    {"round": 2, "date": "2026-10-19", "time": "20:20", "court": 1, "home": "mon-hunger-fc", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 2, "date": "2026-10-19", "time": "20:20", "court": 2, "home": "mon-hope", "away": "mon-bunyip", "provisional": false},
+    {"round": 2, "date": "2026-10-19", "time": "21:00", "court": 1, "home": "mon-king-adl", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 3, "date": "2026-10-26", "time": "19:00", "court": 1, "home": "mon-afg", "away": "mon-xaywan", "provisional": false},
+    {"round": 3, "date": "2026-10-26", "time": "19:00", "court": 2, "home": "mon-goldlink-up", "away": "mon-bunyip", "provisional": false},
+    {"round": 3, "date": "2026-10-26", "time": "19:40", "court": 1, "home": "mon-salvos", "away": "mon-king-adl", "provisional": false},
+    {"round": 3, "date": "2026-10-26", "time": "19:40", "court": 2, "home": "mon-misfits", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 3, "date": "2026-10-26", "time": "20:20", "court": 1, "home": "mon-nassaji-fc", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 3, "date": "2026-10-26", "time": "20:20", "court": 2, "home": "mon-hunger-fc", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 3, "date": "2026-10-26", "time": "21:00", "court": 1, "home": "mon-wildcats", "away": "mon-hope", "provisional": false},
+    {"round": 4, "date": "2026-11-02", "time": "19:00", "court": 1, "home": "mon-bunyip", "away": "mon-king-adl", "provisional": true},
+    {"round": 4, "date": "2026-11-02", "time": "19:00", "court": 2, "home": "mon-misfits", "away": "mon-nassaji-fc", "provisional": true},
+    {"round": 4, "date": "2026-11-02", "time": "19:40", "court": 1, "home": "mon-blue-dragons", "away": "mon-wildcats", "provisional": true},
+    {"round": 4, "date": "2026-11-02", "time": "19:40", "court": 2, "home": "mon-afg", "away": "mon-hope", "provisional": true},
+    {"round": 4, "date": "2026-11-02", "time": "20:20", "court": 1, "home": "mon-xaywan", "away": "mon-hunger-fc", "provisional": true},
+    {"round": 4, "date": "2026-11-02", "time": "20:20", "court": 2, "home": "mon-ghazni-united", "away": "mon-goldlink-up", "provisional": true},
+    {"round": 4, "date": "2026-11-02", "time": "21:00", "court": 1, "home": "mon-salvos", "away": "mon-declans-delinquents", "provisional": true},
+    {"round": 5, "date": "2026-11-09", "time": "19:00", "court": 1, "home": "mon-goldlink-up", "away": "mon-salvos", "provisional": false},
+    {"round": 5, "date": "2026-11-09", "time": "19:00", "court": 2, "home": "mon-hope", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 5, "date": "2026-11-09", "time": "19:40", "court": 1, "home": "mon-blue-dragons", "away": "mon-xaywan", "provisional": false},
+    {"round": 5, "date": "2026-11-09", "time": "19:40", "court": 2, "home": "mon-bunyip", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 5, "date": "2026-11-09", "time": "20:20", "court": 1, "home": "mon-ghazni-united", "away": "mon-misfits", "provisional": false},
+    {"round": 5, "date": "2026-11-09", "time": "20:20", "court": 2, "home": "mon-wildcats", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 5, "date": "2026-11-09", "time": "21:00", "court": 1, "home": "mon-afg", "away": "mon-king-adl", "provisional": false},
+    {"round": 6, "date": "2026-11-16", "time": "19:00", "court": 1, "home": "mon-declans-delinquents", "away": "mon-wildcats", "provisional": false},
+    {"round": 6, "date": "2026-11-16", "time": "19:00", "court": 2, "home": "mon-bunyip", "away": "mon-afg", "provisional": false},
+    {"round": 6, "date": "2026-11-16", "time": "19:40", "court": 1, "home": "mon-king-adl", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 6, "date": "2026-11-16", "time": "19:40", "court": 2, "home": "mon-nassaji-fc", "away": "mon-salvos", "provisional": false},
+    {"round": 6, "date": "2026-11-16", "time": "20:20", "court": 1, "home": "mon-hope", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 6, "date": "2026-11-16", "time": "20:20", "court": 2, "home": "mon-hunger-fc", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 6, "date": "2026-11-16", "time": "21:00", "court": 1, "home": "mon-misfits", "away": "mon-xaywan", "provisional": false},
+    {"round": 7, "date": "2026-11-23", "time": "19:00", "court": 1, "home": "mon-declans-delinquents", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 7, "date": "2026-11-23", "time": "19:00", "court": 2, "home": "mon-wildcats", "away": "mon-king-adl", "provisional": false},
+    {"round": 7, "date": "2026-11-23", "time": "19:40", "court": 1, "home": "mon-blue-dragons", "away": "mon-salvos", "provisional": false},
+    {"round": 7, "date": "2026-11-23", "time": "19:40", "court": 2, "home": "mon-xaywan", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 7, "date": "2026-11-23", "time": "20:20", "court": 1, "home": "mon-hope", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 7, "date": "2026-11-23", "time": "20:20", "court": 2, "home": "mon-ghazni-united", "away": "mon-afg", "provisional": false},
+    {"round": 7, "date": "2026-11-23", "time": "21:00", "court": 1, "home": "mon-misfits", "away": "mon-bunyip", "provisional": false},
+    {"round": 8, "date": "2026-11-30", "time": "19:00", "court": 1, "home": "mon-nassaji-fc", "away": "mon-afg", "provisional": false},
+    {"round": 8, "date": "2026-11-30", "time": "19:00", "court": 2, "home": "mon-king-adl", "away": "mon-hope", "provisional": false},
+    {"round": 8, "date": "2026-11-30", "time": "19:40", "court": 1, "home": "mon-declans-delinquents", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 8, "date": "2026-11-30", "time": "19:40", "court": 2, "home": "mon-goldlink-up", "away": "mon-xaywan", "provisional": false},
+    {"round": 8, "date": "2026-11-30", "time": "20:20", "court": 1, "home": "mon-hunger-fc", "away": "mon-misfits", "provisional": false},
+    {"round": 8, "date": "2026-11-30", "time": "20:20", "court": 2, "home": "mon-wildcats", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 8, "date": "2026-11-30", "time": "21:00", "court": 1, "home": "mon-salvos", "away": "mon-bunyip", "provisional": false},
+    {"round": 9, "date": "2026-12-07", "time": "19:00", "court": 1, "home": "mon-nassaji-fc", "away": "mon-hope", "provisional": false},
+    {"round": 9, "date": "2026-12-07", "time": "19:00", "court": 2, "home": "mon-afg", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 9, "date": "2026-12-07", "time": "19:40", "court": 1, "home": "mon-blue-dragons", "away": "mon-bunyip", "provisional": false},
+    {"round": 9, "date": "2026-12-07", "time": "19:40", "court": 2, "home": "mon-misfits", "away": "mon-king-adl", "provisional": false},
+    {"round": 9, "date": "2026-12-07", "time": "20:20", "court": 1, "home": "mon-ghazni-united", "away": "mon-salvos", "provisional": false},
+    {"round": 9, "date": "2026-12-07", "time": "20:20", "court": 2, "home": "mon-hunger-fc", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 9, "date": "2026-12-07", "time": "21:00", "court": 1, "home": "mon-xaywan", "away": "mon-wildcats", "provisional": false},
+    {"round": 10, "date": "2026-12-14", "time": "19:00", "court": 1, "home": "mon-bunyip", "away": "mon-wildcats", "provisional": false},
+    {"round": 10, "date": "2026-12-14", "time": "19:00", "court": 2, "home": "mon-misfits", "away": "mon-afg", "provisional": false},
+    {"round": 10, "date": "2026-12-14", "time": "19:40", "court": 1, "home": "mon-blue-dragons", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 10, "date": "2026-12-14", "time": "19:40", "court": 2, "home": "mon-xaywan", "away": "mon-salvos", "provisional": false},
+    {"round": 10, "date": "2026-12-14", "time": "20:20", "court": 1, "home": "mon-declans-delinquents", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 10, "date": "2026-12-14", "time": "20:20", "court": 2, "home": "mon-hunger-fc", "away": "mon-king-adl", "provisional": false},
+    {"round": 10, "date": "2026-12-14", "time": "21:00", "court": 1, "home": "mon-hope", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 11, "date": "2026-12-21", "time": "19:00", "court": 1, "home": "mon-salvos", "away": "mon-wildcats", "provisional": false},
+    {"round": 11, "date": "2026-12-21", "time": "19:00", "court": 2, "home": "mon-hope", "away": "mon-misfits", "provisional": false},
+    {"round": 11, "date": "2026-12-21", "time": "19:40", "court": 1, "home": "mon-goldlink-up", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 11, "date": "2026-12-21", "time": "19:40", "court": 2, "home": "mon-declans-delinquents", "away": "mon-bunyip", "provisional": false},
+    {"round": 11, "date": "2026-12-21", "time": "20:20", "court": 1, "home": "mon-afg", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 11, "date": "2026-12-21", "time": "20:20", "court": 2, "home": "mon-ghazni-united", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 11, "date": "2026-12-21", "time": "21:00", "court": 1, "home": "mon-king-adl", "away": "mon-xaywan", "provisional": false},
+    {"round": 12, "date": "2027-01-11", "time": "19:00", "court": 1, "home": "mon-hope", "away": "mon-xaywan", "provisional": false},
+    {"round": 12, "date": "2027-01-11", "time": "19:00", "court": 2, "home": "mon-king-adl", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 12, "date": "2027-01-11", "time": "19:40", "court": 1, "home": "mon-blue-dragons", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 12, "date": "2027-01-11", "time": "19:40", "court": 2, "home": "mon-wildcats", "away": "mon-afg", "provisional": false},
+    {"round": 12, "date": "2027-01-11", "time": "20:20", "court": 1, "home": "mon-hunger-fc", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 12, "date": "2027-01-11", "time": "20:20", "court": 2, "home": "mon-ghazni-united", "away": "mon-bunyip", "provisional": false},
+    {"round": 12, "date": "2027-01-11", "time": "21:00", "court": 1, "home": "mon-misfits", "away": "mon-salvos", "provisional": false},
+    {"round": 13, "date": "2027-01-18", "time": "19:00", "court": 1, "home": "mon-nassaji-fc", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 13, "date": "2027-01-18", "time": "19:00", "court": 2, "home": "mon-misfits", "away": "mon-wildcats", "provisional": false},
+    {"round": 13, "date": "2027-01-18", "time": "19:40", "court": 1, "home": "mon-blue-dragons", "away": "mon-hope", "provisional": false},
+    {"round": 13, "date": "2027-01-18", "time": "19:40", "court": 2, "home": "mon-salvos", "away": "mon-afg", "provisional": false},
+    {"round": 13, "date": "2027-01-18", "time": "20:20", "court": 1, "home": "mon-bunyip", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 13, "date": "2027-01-18", "time": "20:20", "court": 2, "home": "mon-xaywan", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 13, "date": "2027-01-18", "time": "21:00", "court": 1, "home": "mon-goldlink-up", "away": "mon-king-adl", "provisional": false},
+    {"round": 14, "date": "2027-01-25", "time": "19:00", "court": 1, "home": "mon-misfits", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 14, "date": "2027-01-25", "time": "19:00", "court": 2, "home": "mon-xaywan", "away": "mon-afg", "provisional": false},
+    {"round": 14, "date": "2027-01-25", "time": "19:40", "court": 1, "home": "mon-wildcats", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 14, "date": "2027-01-25", "time": "19:40", "court": 2, "home": "mon-declans-delinquents", "away": "mon-salvos", "provisional": false},
+    {"round": 14, "date": "2027-01-25", "time": "20:20", "court": 1, "home": "mon-ghazni-united", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 14, "date": "2027-01-25", "time": "20:20", "court": 2, "home": "mon-bunyip", "away": "mon-hope", "provisional": false},
+    {"round": 14, "date": "2027-01-25", "time": "21:00", "court": 1, "home": "mon-nassaji-fc", "away": "mon-king-adl", "provisional": false},
+    {"round": 15, "date": "2027-02-01", "time": "19:00", "court": 1, "home": "mon-declans-delinquents", "away": "mon-misfits", "provisional": false},
+    {"round": 15, "date": "2027-02-01", "time": "19:00", "court": 2, "home": "mon-bunyip", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 15, "date": "2027-02-01", "time": "19:40", "court": 1, "home": "mon-afg", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 15, "date": "2027-02-01", "time": "19:40", "court": 2, "home": "mon-wildcats", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 15, "date": "2027-02-01", "time": "20:20", "court": 1, "home": "mon-king-adl", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 15, "date": "2027-02-01", "time": "20:20", "court": 2, "home": "mon-hunger-fc", "away": "mon-xaywan", "provisional": false},
+    {"round": 15, "date": "2027-02-01", "time": "21:00", "court": 1, "home": "mon-hope", "away": "mon-salvos", "provisional": false},
+    {"round": 16, "date": "2027-02-08", "time": "19:00", "court": 1, "home": "mon-nassaji-fc", "away": "mon-misfits", "provisional": false},
+    {"round": 16, "date": "2027-02-08", "time": "19:00", "court": 2, "home": "mon-king-adl", "away": "mon-bunyip", "provisional": false},
+    {"round": 16, "date": "2027-02-08", "time": "19:40", "court": 1, "home": "mon-xaywan", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 16, "date": "2027-02-08", "time": "19:40", "court": 2, "home": "mon-wildcats", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 16, "date": "2027-02-08", "time": "20:20", "court": 1, "home": "mon-salvos", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 16, "date": "2027-02-08", "time": "20:20", "court": 2, "home": "mon-ghazni-united", "away": "mon-hope", "provisional": false},
+    {"round": 16, "date": "2027-02-08", "time": "21:00", "court": 1, "home": "mon-afg", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 17, "date": "2027-02-15", "time": "19:00", "court": 1, "home": "mon-xaywan", "away": "mon-misfits", "provisional": false},
+    {"round": 17, "date": "2027-02-15", "time": "19:00", "court": 2, "home": "mon-hope", "away": "mon-wildcats", "provisional": false},
+    {"round": 17, "date": "2027-02-15", "time": "19:40", "court": 1, "home": "mon-king-adl", "away": "mon-salvos", "provisional": false},
+    {"round": 17, "date": "2027-02-15", "time": "19:40", "court": 2, "home": "mon-afg", "away": "mon-bunyip", "provisional": false},
+    {"round": 17, "date": "2027-02-15", "time": "20:20", "court": 1, "home": "mon-blue-dragons", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 17, "date": "2027-02-15", "time": "20:20", "court": 2, "home": "mon-ghazni-united", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 17, "date": "2027-02-15", "time": "21:00", "court": 1, "home": "mon-goldlink-up", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 18, "date": "2027-02-22", "time": "19:00", "court": 1, "home": "mon-nassaji-fc", "away": "mon-bunyip", "provisional": false},
+    {"round": 18, "date": "2027-02-22", "time": "19:00", "court": 2, "home": "mon-declans-delinquents", "away": "mon-hope", "provisional": false},
+    {"round": 18, "date": "2027-02-22", "time": "19:40", "court": 1, "home": "mon-blue-dragons", "away": "mon-king-adl", "provisional": false},
+    {"round": 18, "date": "2027-02-22", "time": "19:40", "court": 2, "home": "mon-goldlink-up", "away": "mon-afg", "provisional": false},
+    {"round": 18, "date": "2027-02-22", "time": "20:20", "court": 1, "home": "mon-misfits", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 18, "date": "2027-02-22", "time": "20:20", "court": 2, "home": "mon-hunger-fc", "away": "mon-wildcats", "provisional": false},
+    {"round": 18, "date": "2027-02-22", "time": "21:00", "court": 1, "home": "mon-salvos", "away": "mon-xaywan", "provisional": false},
+    {"round": 19, "date": "2027-03-01", "time": "19:00", "court": 1, "home": "mon-bunyip", "away": "mon-misfits", "provisional": false},
+    {"round": 19, "date": "2027-03-01", "time": "19:00", "court": 2, "home": "mon-wildcats", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 19, "date": "2027-03-01", "time": "19:40", "court": 1, "home": "mon-salvos", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 19, "date": "2027-03-01", "time": "19:40", "court": 2, "home": "mon-nassaji-fc", "away": "mon-xaywan", "provisional": false},
+    {"round": 19, "date": "2027-03-01", "time": "20:20", "court": 1, "home": "mon-goldlink-up", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 19, "date": "2027-03-01", "time": "20:20", "court": 2, "home": "mon-hunger-fc", "away": "mon-hope", "provisional": false},
+    {"round": 19, "date": "2027-03-01", "time": "21:00", "court": 1, "home": "mon-king-adl", "away": "mon-afg", "provisional": false},
+    {"round": 20, "date": "2027-03-15", "time": "19:00", "court": 1, "home": "mon-bunyip", "away": "mon-salvos", "provisional": false},
+    {"round": 20, "date": "2027-03-15", "time": "19:00", "court": 2, "home": "mon-king-adl", "away": "mon-wildcats", "provisional": false},
+    {"round": 20, "date": "2027-03-15", "time": "19:40", "court": 1, "home": "mon-blue-dragons", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 20, "date": "2027-03-15", "time": "19:40", "court": 2, "home": "mon-hope", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 20, "date": "2027-03-15", "time": "20:20", "court": 1, "home": "mon-afg", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 20, "date": "2027-03-15", "time": "20:20", "court": 2, "home": "mon-misfits", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 20, "date": "2027-03-15", "time": "21:00", "court": 1, "home": "mon-xaywan", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 21, "date": "2027-03-22", "time": "19:00", "court": 1, "home": "mon-king-adl", "away": "mon-misfits", "provisional": false},
+    {"round": 21, "date": "2027-03-22", "time": "19:00", "court": 2, "home": "mon-xaywan", "away": "mon-hope", "provisional": false},
+    {"round": 21, "date": "2027-03-22", "time": "19:40", "court": 1, "home": "mon-bunyip", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 21, "date": "2027-03-22", "time": "19:40", "court": 2, "home": "mon-salvos", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 21, "date": "2027-03-22", "time": "20:20", "court": 1, "home": "mon-declans-delinquents", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 21, "date": "2027-03-22", "time": "20:20", "court": 2, "home": "mon-ghazni-united", "away": "mon-wildcats", "provisional": false},
+    {"round": 21, "date": "2027-03-22", "time": "21:00", "court": 1, "home": "mon-afg", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 22, "date": "2027-04-05", "time": "19:00", "court": 1, "home": "mon-wildcats", "away": "mon-bunyip", "provisional": false},
+    {"round": 22, "date": "2027-04-05", "time": "19:00", "court": 2, "home": "mon-misfits", "away": "mon-hope", "provisional": false},
+    {"round": 22, "date": "2027-04-05", "time": "19:40", "court": 1, "home": "mon-goldlink-up", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 22, "date": "2027-04-05", "time": "19:40", "court": 2, "home": "mon-salvos", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 22, "date": "2027-04-05", "time": "20:20", "court": 1, "home": "mon-hunger-fc", "away": "mon-afg", "provisional": false},
+    {"round": 22, "date": "2027-04-05", "time": "20:20", "court": 2, "home": "mon-ghazni-united", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 22, "date": "2027-04-05", "time": "21:00", "court": 1, "home": "mon-xaywan", "away": "mon-king-adl", "provisional": false},
+    {"round": 23, "date": "2027-04-12", "time": "19:00", "court": 1, "home": "mon-wildcats", "away": "mon-xaywan", "provisional": false},
+    {"round": 23, "date": "2027-04-12", "time": "19:00", "court": 2, "home": "mon-hope", "away": "mon-afg", "provisional": false},
+    {"round": 23, "date": "2027-04-12", "time": "19:40", "court": 1, "home": "mon-nassaji-fc", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 23, "date": "2027-04-12", "time": "19:40", "court": 2, "home": "mon-misfits", "away": "mon-declans-delinquents", "provisional": false},
+    {"round": 23, "date": "2027-04-12", "time": "20:20", "court": 1, "home": "mon-salvos", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 23, "date": "2027-04-12", "time": "20:20", "court": 2, "home": "mon-hunger-fc", "away": "mon-bunyip", "provisional": false},
+    {"round": 23, "date": "2027-04-12", "time": "21:00", "court": 1, "home": "mon-king-adl", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 24, "date": "2027-04-19", "time": "19:00", "court": 1, "home": "mon-wildcats", "away": "mon-salvos", "provisional": false},
+    {"round": 24, "date": "2027-04-19", "time": "19:00", "court": 2, "home": "mon-bunyip", "away": "mon-misfits", "provisional": false},
+    {"round": 24, "date": "2027-04-19", "time": "19:40", "court": 1, "home": "mon-afg", "away": "mon-xaywan", "provisional": false},
+    {"round": 24, "date": "2027-04-19", "time": "19:40", "court": 2, "home": "mon-hope", "away": "mon-king-adl", "provisional": false},
+    {"round": 24, "date": "2027-04-19", "time": "20:20", "court": 1, "home": "mon-blue-dragons", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 24, "date": "2027-04-19", "time": "20:20", "court": 2, "home": "mon-goldlink-up", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 24, "date": "2027-04-19", "time": "21:00", "court": 1, "home": "mon-declans-delinquents", "away": "mon-nassaji-fc", "provisional": false},
+    {"round": 25, "date": "2027-04-26", "time": "19:00", "court": 1, "home": "mon-nassaji-fc", "away": "mon-goldlink-up", "provisional": false},
+    {"round": 25, "date": "2027-04-26", "time": "19:00", "court": 2, "home": "mon-declans-delinquents", "away": "mon-bunyip", "provisional": false},
+    {"round": 25, "date": "2027-04-26", "time": "19:40", "court": 1, "home": "mon-hope", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 25, "date": "2027-04-26", "time": "19:40", "court": 2, "home": "mon-salvos", "away": "mon-misfits", "provisional": false},
+    {"round": 25, "date": "2027-04-26", "time": "20:20", "court": 1, "home": "mon-king-adl", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 25, "date": "2027-04-26", "time": "20:20", "court": 2, "home": "mon-ghazni-united", "away": "mon-xaywan", "provisional": false},
+    {"round": 25, "date": "2027-04-26", "time": "21:00", "court": 1, "home": "mon-afg", "away": "mon-wildcats", "provisional": false},
+    {"round": 26, "date": "2027-05-03", "time": "19:00", "court": 1, "home": "mon-declans-delinquents", "away": "mon-king-adl", "provisional": false},
+    {"round": 26, "date": "2027-05-03", "time": "19:00", "court": 2, "home": "mon-wildcats", "away": "mon-misfits", "provisional": false},
+    {"round": 26, "date": "2027-05-03", "time": "19:40", "court": 1, "home": "mon-xaywan", "away": "mon-blue-dragons", "provisional": false},
+    {"round": 26, "date": "2027-05-03", "time": "19:40", "court": 2, "home": "mon-goldlink-up", "away": "mon-hope", "provisional": false},
+    {"round": 26, "date": "2027-05-03", "time": "20:20", "court": 1, "home": "mon-nassaji-fc", "away": "mon-hunger-fc", "provisional": false},
+    {"round": 26, "date": "2027-05-03", "time": "20:20", "court": 2, "home": "mon-bunyip", "away": "mon-ghazni-united", "provisional": false},
+    {"round": 26, "date": "2027-05-03", "time": "21:00", "court": 1, "home": "mon-afg", "away": "mon-salvos", "provisional": false}
+  ]
+}

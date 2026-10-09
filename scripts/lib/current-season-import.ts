@@ -5,6 +5,7 @@ import { calculateStandings } from "../../src/lib/standings";
 import { finalsDates, finalsMatches, resolveFinalsSlot, type FinalsSeasonData } from "../../src/lib/finals";
 import type { CompetitionDataset } from "../../src/lib/competition-repository";
 import type { CompetitionNight, Fixture, Standing, StandingAdjustment, Team } from "../../src/lib/types";
+import { originalTeamImportId } from "../../src/lib/team-readable-id";
 
 const ROOT = process.cwd();
 const SOURCE_PATHS = {
@@ -260,7 +261,7 @@ export function buildImportModel(): ImportModel {
         ...team,
         id: normalizeLegacyId(team.id),
         name: normalizeName(team.name),
-        uuid: deterministicUuid(`team:${SEASON.key}:${night}:${normalizeLegacyId(team.id)}`),
+        uuid: deterministicUuid(`team:${SEASON.key}:${night}:${originalTeamImportId(normalizeLegacyId(team.id))}`),
         status: team.active === false || isWednesdayDwell ? "inactive" : "active",
         standingsEligible: isWednesdayDwell || team.active !== false,
       };

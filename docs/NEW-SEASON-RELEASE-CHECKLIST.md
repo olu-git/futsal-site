@@ -1,0 +1,63 @@
+# New-season release checklist
+
+Local checkpoint: 10 October 2026, `prep/new-season-identities`. This is a review/execution plan, not authorisation to run hosted SQL, release code, stage or activate production. Obtain a separate release instruction before those actions. Preserve `pre-new-website-2026-09-30`, [rollback runbook](NEW-WEBSITE-ROLLBACK.md), old memberships/UUIDs, results, adjustments and 2026 S1 knockout JSON.
+
+## Completed locally
+
+- [x] Monday: 26 rounds, 182 matches, 26/team, 13 home/13 away; Wednesday: 30 rounds, 240 matches, 30/team, 15 home/15 away. Maximum home/away streak three. Approved fixture arrays unchanged.
+- [x] Venue standing booking and exceptions validated. Monday ends 3 May 2027; Wednesday 26 May 2027. Cancelling provisional 2 November moves Monday to 10 May, Wednesday unchanged; no finals dates.
+- [x] Four fresh identities have organiser-confirmed current 19:00/19:40/20:20/21:00 availability dated 10 October 2026. Wednesday Goldlink/Buckle separation retained except their head-to-head. Xaywan counts/exclusions and Week 1 Wildcats/Nassaji retained.
+- [x] Identity/FK/uniqueness/repeat/rollback checks and all seven migrations verified in disposable PGlite. Read-only profile review returns 26 scoped rows without free-text export and rejects a non-admin. Later source-profile changes block final validation/activation. These use mocked Auth and one database connection.
+- [x] Edge browser workflow/responsive checks use disposable REST/Auth mocks, with production requests intercepted. This is separate from database RPC verification.
+- [x] Tests, lint, TypeScript, build, import/finals/snapshot checks and whitespace pass; snapshot comparison reads production anonymously. No hosted mutation is part of this checkpoint.
+
+## 1. Preflight and exact migration/proposal order ? outstanding on hosted services
+
+1. Freeze admin mutations for the release window. Verify the target is the production FIS project (`gaqevgjgolvndhcycxzt`) without exposing keys. Inspect installed migration history and grants/RLS/schema using existing authorised access. Preserve backup/rollback references; a website rollback does not undo database publication.
+2. Confirm these **six baseline migrations are already installed**; do not rerun them or the completed current-season import:
+   - `202609250001_initial_fis_admin_schema.sql`
+   - `202609260001_expose_fis_admin_check.sql`
+   - `202609270001_fixture_change_sets.sql`
+   - `202609280001_transactional_team_profile_save.sql`
+   - `202609290001_transactional_standing_adjustments.sql`
+   - `202609300001_season_draft_management.sql`
+3. Run the **read-only** [returning profile query](../supabase/production/review-returning-availability.sql) using existing authorised access. It requires no migration and can be reviewed before any release. Resolve all 26 profiles using section 2. Do not change profiles/fixtures simply to make verification pass.
+4. Under future explicit authorisation, apply **only** `supabase/migrations/20261009224309_season_fixture_staging.sql` through the normal migration process. It is currently local/unreleased. Verify its columns/RPCs, grants/RLS, planned-publication guard, source-profile locks and PostgREST schema cache before releasing the matching admin UI. Avoid activation from either old or new UI during this transition.
+5. Apply the guarded **data proposal** `supabase/production/team-readable-id-update.sql` once reviewed and separately authorised, **while the old editions remain active/published and before creating the new private draft**. It updates only the four exact legacy IDs, preserving UUIDs/history/kits. Recheck guards first; do not defeat a mismatch. Safe-repeat behaviour is locally verified.
+6. Release the reviewed application checkpoint through the normal feature-branch/master process under separate authorisation; verify Pages before using the new setup UI.
+7. **Do not run** `supabase/production/new-season-team-memberships.sql` on the recommended wizard path. It is a separately guarded alternative for manually provisioned planned editions; Stage creates all memberships, including the four reserved UUIDs. Running both paths would collide. The standalone proposal does not configure availability or activate anything. Never rerun `supabase/imports/2026-s1/current-season-import.sql` on production.
+
+## 2. Returning preferences versus the approved draft ? outstanding
+
+- Open [review-returning-availability.sql](../supabase/production/review-returning-availability.sql) in the existing authorised SQL Editor (`postgres`) or FIS-admin SQL session. It starts a read-only transaction and rolls back; it changes no grants, roles or records. Output is only team, night and structured scheduling preferences, with a private-note-review flag. All exact source UUIDs are internal filters, not returned identifiers. If access/schema/identity errors occur, stop, `ROLLBACK`, and report the error. Do not substitute anonymous access or interpret an error as an empty profile.
+- Alternatively, use the existing authenticated `/admin/teams/` interface: select each current night and inspect the returning team's private profile **without saving or changing it**. Do not automate or share login credentials. If the private-note flag is true, inspect the note there and extract only its scheduling rules; do not export unrelated contact/personal details. The query deliberately does not expose free-text notes.
+- Expect **12 Monday and 14 Wednesday** returning profiles. Match names/night to the report's exact source UUIDs. A missing/hidden/mismatched membership requires identity resolution, not reassignment.
+- Compare each required-time allow-list against every draft kickoff for that exact night/team. Retain repository general restrictions even if no structured row is recorded. Check private date exclusions and shared-player rules manually. Preferred/avoid entries are soft goals unless explicitly confirmed as hard. Report hard conflicts before changing any approved fixture; record unavoidable soft deviations for review.
+- Kuq/Umoja's explicit 21:00 exception remains narrowly scoped; Kuq's other opponents cannot use 21:00. Preserve Umoja's 21:00-only requirement and Goldlink/Buckle non-simultaneous rule except their own match. Do not carry Hunger's single old-finals 19:30 exception or other obsolete finals-specific rules forward. Leave historical profiles/results unchanged; make any authorised new-season profile edits only in the new draft.
+- Record current review evidence, then mark each returning profile confirmed in the wizard. Empty structured rows are not proof of unrestricted availability. The four new entries are already organiser-confirmed for all four times in [membership preparation](drafts/new-season-team-memberships.json); transfer that dated current position, explicit allowed-time rows and scheduling note into their new private draft profiles and set their confirmation checkbox. Generic new-team entry remains unconfirmed by default: there is no identity-based bypass of review gates.
+- Recheck immediately before Stage and activation. Source notes/preferences are compared and locked by the new RPCs; copied-source changes block staging/final validation/activation. Later draft identity/readable-ID/time/note edits revoke confirmation. If availability changes after staging but before activation, stop: staged restructure/discard is unsupported and requires a separately reviewed recovery extension. Do not use ad hoc SQL to bypass the freeze. After activation, use the ordinary authorised Teams/Fixtures workflows for later availability changes.
+
+## 3. Hosted authentication and concurrent-edit verification ? outstanding
+
+- With disposable **verified non-production** data after installing the migration, test anonymous, authenticated non-admin, expired-session and confirmed-admin users through actual Auth/PostgREST. Verify draft/private rows remain invisible, denied calls do not mutate, all new RPCs require admin access, source-profile checks work and planned fixtures cannot publish outside activation. Do not assume the hosted fixture-test database is disposable.
+- Use two independent sessions: race Save/Validate/Stage/Import, stale fixture replacement/submission, source-profile updates during final validation/activation, and duplicate activations. Confirm stale-version errors, consistent venue/edition/draft/profile/plan locking, no deadlocks, no duplicate memberships/plans and atomic rollback. Local single-connection checks are not concurrency proof.
+- Change either fixture review after season validation and verify activation is rejected until re-validation. Force a second-night failure only in verified disposable data and confirm all-night rollback/history preservation. Verify terminal drafts cannot be edited or activated again.
+
+## 4. GitHub configuration and fallback ? Pages ? outstanding
+
+- Verify repository Actions Variables `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` target production; display only project ref/presence, never values. GitHub Variables authentication has not been established here.
+- Refresh uses `master` only, cron **17 and 47 minutes each UTC hour**, plus manual dispatch. Feature preparation stays on this branch; release uses the reviewed master process. A manual refresh commits/pushes changed snapshots automatically, so dispatch is a future authorised release action, not part of local checks.
+- Follow [snapshot runbook](PUBLIC-SNAPSHOT-AUTOMATION.md). Monitor delayed/dropped schedules and failures. Verify no-change skips its commit/deployment; failed reads/checks preserve the previous fallback. Use manual master refresh for authorised recovery after correcting the cause.
+- On a naturally changed published dataset, verify refresh validation, a snapshot-only commit, successful Pages `workflow_run` deployment of that commit, then the **static exported fallback** plus live hydrated pages. A browser's live Supabase response can hide a stale fallback. No-change reconciliation is not proof of changed-snapshot ? commit ? Pages; never manufacture production changes to exercise the chain.
+
+## 5. Stage, review, activate and publish ? future authorised execution
+
+1. After profile review and migration/UI release, create a private season draft from 2026 S1. Preserve returning source UUIDs, names, memberships/history and kits. Use confirmed readable IDs; add the four fresh reserved UUIDs. Buckle is an ordinary standings-eligible entry, not a bye.
+2. Enter/review all profiles, including current four-entry organiser confirmations. Preserve the venue standing booking and all calendar exceptions. 2 November participation remains provisional. Save, then Validate the persisted structure; unsaved edits cannot validate/stage.
+3. **Stage** creates planned/unpublished editions and memberships; it does not archive the old season or expose the new one. Structure/profiles freeze. Import the existing complete Monday/Wednesday JSON files with reviewed constraints; do not regenerate approved assignments without a verified conflict.
+4. In Fixtures choose each planned night/season, inspect all fixtures/warnings, validate, save edits before submission, acknowledge warnings and submit both complete plans for review. Pending-review fields are read-only. Ordinary **Publish is disabled and rejected** for planned editions.
+5. In Seasons Validate again, binding both exact review versions and rechecking source-profile freshness. All of these steps remain private.
+6. Under a separate explicit activation instruction, confirm **ACTIVATE**. This atomically publishes both reviewed new fixture plans/editions and archives the matching old editions while preserving historical teams/fixtures/results/adjustments and knockout JSON. Activation is the first public exposure; there is no separate planned-fixture Publish step.
+7. Verify automatic active-season public selection, Week 1 fixtures, standings eligibility, old-history preservation and read-only archived records. Reconcile the fallback through the authorised scheduled/manual refresh, verify Actions/Pages/static fallback, and record commits/run IDs. If a release-critical check fails, use the rollback runbook and halt further publication; a site rollback alone is not a database season rollback.
+
+**Release readiness:** local checkpoint ready for review. Production setup/activation remains blocked by the 26 returning-profile reviews, hosted migration/Auth/concurrency checks and separately authorised release operations. No production SQL, activation, publication, dispatch, push, merge or deployment is performed here.

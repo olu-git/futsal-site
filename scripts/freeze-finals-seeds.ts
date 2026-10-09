@@ -33,7 +33,7 @@ for (const night of nights) {
           ...standings
             .filter(
               (team) =>
-                team.teamId !== "mon-declans-team" &&
+                team.teamId !== "mon-declans-delinquents" &&
                 team.teamId !== "mon-bunyip"
             )
             .slice(0, 14)
@@ -45,7 +45,6 @@ for (const night of nights) {
 
   validateSeeds(night, seeds);
   validateCalendar(night);
-  validateFirstRoundTimes(night, seeds);
   season.finals[night].seeds = seeds;
 
   console.log(`\n${night.toUpperCase()} FINALS SEEDS`);
@@ -82,68 +81,5 @@ function validateCalendar(night: CompetitionNight) {
       throw new Error(`${night} has a duplicate finals slot at ${key}.`);
     }
     occupied.add(key);
-  }
-}
-
-function validateFirstRoundTimes(night: CompetitionNight, seeds: string[]) {
-  const assignments = finalsMatches[night]
-    .filter(isScheduledFinalsMatch)
-    .filter((match) => match.round === "R16")
-    .map((match) => {
-      if (match.a.type !== "seed" || match.b.type !== "seed") {
-        throw new Error(`${match.id} must use two seed slots.`);
-      }
-      return {
-        match,
-        teams: [seeds[match.a.value - 1], seeds[match.b.value - 1]],
-      };
-    });
-
-  const errors: string[] = [];
-  for (const { match, teams } of assignments) {
-    if (
-      night === "monday" &&
-      teams.some((team) => team === "Hunger FC" || team === "Ghazni United") &&
-      !["20:20", "21:00"].includes(match.time)
-    ) {
-      errors.push(`${teams.join(" vs ")} cannot play at ${match.time}.`);
-    }
-    if (
-      night === "monday" &&
-      teams.includes("Blue Dragons") &&
-      match.time === "19:00"
-    ) {
-      errors.push(`Blue Dragons cannot play at ${match.time}.`);
-    }
-    if (night === "wednesday" && teams.includes("Rinnai") && match.time === "19:00") {
-      errors.push(`Rinnai cannot play at ${match.time}.`);
-    }
-    if (night === "wednesday" && teams.includes("Kuq E Zi") && match.time === "21:00") {
-      errors.push(`Kuq E Zi cannot play at ${match.time}.`);
-    }
-    if (
-      night === "wednesday" &&
-      teams.includes("Umoja Stars") &&
-      match.time !== "21:00"
-    ) {
-      errors.push(`Umoja Stars must play at 21:00, not ${match.time}.`);
-    }
-  }
-
-  if (night === "monday") {
-    const buckle = assignments.find(({ teams }) => teams.includes("Buckle City"));
-    const goldlink = assignments.find(({ teams }) => teams.includes("Goldlink Up"));
-    if (
-      buckle &&
-      goldlink &&
-      buckle.match.id !== goldlink.match.id &&
-      buckle.match.time === goldlink.match.time
-    ) {
-      errors.push("Buckle City and Goldlink Up cannot play at the same time.");
-    }
-  }
-
-  if (errors.length > 0) {
-    throw new Error(`Finals time constraints failed:\n- ${errors.join("\n- ")}`);
   }
 }

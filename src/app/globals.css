@@ -967,3 +967,13 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
   .home-bracket .bracket-final-with-trophy { grid-template-columns: minmax(0, 1fr); }
   .home-bracket .bracket-final-with-trophy > :last-child { justify-self: center; }
 }
+
+.admin-season-structure { min-width: 0; border: 0; margin: 0; padding: 0; }
+.admin-season-team-row > label { min-width: 0; display: grid; gap: 5px; }
+.admin-season-team-row input:not([type="checkbox"]),.admin-season-team-row select { min-width: 0; width: 100%; }
+
+/* Full season labels must not squeeze the night tabs in the fixture toolbar. */
+.admin-fixture-toolbar { flex-wrap: wrap; }
+.admin-fixture-toolbar .admin-night-tabs { flex: 1 0 220px; }
+.admin-fixture-toolbar > label { flex: 1 1 240px; min-width: 0; }
+.admin-fixture-toolbar > label select { width: 100%; min-width: 0; }

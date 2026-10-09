@@ -1,6 +1,6 @@
 # Current-season Supabase import reconciliation
 
-Generated deterministically from source digest `620e3edaf956b6fca1d1a28562f5634ca6df0f0255683e9faad5890e50c40b70`.
+Generated deterministically from source digest `ef245526cea336a9d9db4196e80fe6f4b19bfe4e466200193b6ae32647f21ed5`.
 
 ## Source files
 
@@ -43,16 +43,16 @@ Every team below has genuine regular-season fixture or adjustment history. Inact
 
 ### Monday
 
-- Active teams (16): `mon-afg` (AFG), `mon-blue-dragons` (Blue Dragons), `mon-moza-mama` (Moza Mama), `mon-hunger-fc` (Hunger FC), `mon-goldlink-up` (Goldlink Up), `mon-misfits` (Misfits), `mon-ghazni-united` (Ghazni United), `mon-goal-diggers` (Goal Diggers), `mon-wildcats` (Wildcats), `mon-hope` (Hope), `mon-salvos` (Salvos), `mon-toss` (Toss), `mon-hazara-united` (Hazara United), `mon-top-up-fc` (Top Up FC), `mon-bunyip` (Bunyip), `mon-declans-team` (Declan's Delinquents)
+- Active teams (16): `mon-afg` (AFG), `mon-blue-dragons` (Blue Dragons), `mon-moza-mama` (Moza Mama), `mon-hunger-fc` (Hunger FC), `mon-goldlink-up` (Goldlink Up), `mon-misfits` (Misfits), `mon-ghazni-united` (Ghazni United), `mon-goal-diggers` (Goal Diggers), `mon-wildcats` (Wildcats), `mon-hope` (Hope), `mon-salvos` (Salvos), `mon-king-adl` (King ADL), `mon-hazara-united` (Hazara United), `mon-top-up-fc` (Top Up FC), `mon-bunyip` (Bunyip), `mon-declans-delinquents` (Declan's Delinquents)
 - Inactive historical teams (2): `mon-samen` (Samen), `mon-buckle-city` (Buckle City)
-- Standings-eligible teams (16): `mon-afg` (AFG), `mon-blue-dragons` (Blue Dragons), `mon-moza-mama` (Moza Mama), `mon-hunger-fc` (Hunger FC), `mon-goldlink-up` (Goldlink Up), `mon-misfits` (Misfits), `mon-ghazni-united` (Ghazni United), `mon-goal-diggers` (Goal Diggers), `mon-wildcats` (Wildcats), `mon-hope` (Hope), `mon-salvos` (Salvos), `mon-toss` (Toss), `mon-hazara-united` (Hazara United), `mon-top-up-fc` (Top Up FC), `mon-bunyip` (Bunyip), `mon-declans-team` (Declan's Delinquents)
+- Standings-eligible teams (16): `mon-afg` (AFG), `mon-blue-dragons` (Blue Dragons), `mon-moza-mama` (Moza Mama), `mon-hunger-fc` (Hunger FC), `mon-goldlink-up` (Goldlink Up), `mon-misfits` (Misfits), `mon-ghazni-united` (Ghazni United), `mon-goal-diggers` (Goal Diggers), `mon-wildcats` (Wildcats), `mon-hope` (Hope), `mon-salvos` (Salvos), `mon-king-adl` (King ADL), `mon-hazara-united` (Hazara United), `mon-top-up-fc` (Top Up FC), `mon-bunyip` (Bunyip), `mon-declans-delinquents` (Declan's Delinquents)
 - Standings-ineligible historical teams (2): `mon-samen` (Samen), `mon-buckle-city` (Buckle City)
 
 ### Wednesday
 
-- Active teams (15): `wed-afg` (AFG), `wed-ibiza` (Ibiza), `wed-goldlink-up` (Goldlink Up), `wed-misfits` (Misfits), `wed-moza-mama` (Moza Mama), `wed-hazara-united` (Hazara United), `wed-ghazni-united` (Ghazni United), `wed-pops` (Pops), `wed-rinnai` (Rinnai), `wed-toss` (Toss), `wed-unathletico` (Unathletico), `wed-wildcats` (Wildcats), `wed-umoja-stars` (Umoja Stars), `wed-mts-fc` (MTS FC), `wed-xaywan` (Kuq E Zi)
+- Active teams (15): `wed-afg` (AFG), `wed-ibiza` (Ibiza), `wed-goldlink-up` (Goldlink Up), `wed-misfits` (Misfits), `wed-moza-mama` (Moza Mama), `wed-hazara-united` (Hazara United), `wed-ghazni-united` (Ghazni United), `wed-pops` (Pops), `wed-rinnai` (Rinnai), `wed-king-adl` (King ADL), `wed-unathletico` (Unathletico), `wed-wildcats` (Wildcats), `wed-umoja-stars` (Umoja Stars), `wed-mts-fc` (MTS FC), `wed-kuq-e-zi` (Kuq E Zi)
 - Inactive historical teams (1): `wed-dwell-fc` (Dwell FC)
-- Standings-eligible teams (16): `wed-afg` (AFG), `wed-ibiza` (Ibiza), `wed-goldlink-up` (Goldlink Up), `wed-misfits` (Misfits), `wed-moza-mama` (Moza Mama), `wed-hazara-united` (Hazara United), `wed-ghazni-united` (Ghazni United), `wed-pops` (Pops), `wed-rinnai` (Rinnai), `wed-toss` (Toss), `wed-unathletico` (Unathletico), `wed-wildcats` (Wildcats), `wed-dwell-fc` (Dwell FC), `wed-umoja-stars` (Umoja Stars), `wed-mts-fc` (MTS FC), `wed-xaywan` (Kuq E Zi)
+- Standings-eligible teams (16): `wed-afg` (AFG), `wed-ibiza` (Ibiza), `wed-goldlink-up` (Goldlink Up), `wed-misfits` (Misfits), `wed-moza-mama` (Moza Mama), `wed-hazara-united` (Hazara United), `wed-ghazni-united` (Ghazni United), `wed-pops` (Pops), `wed-rinnai` (Rinnai), `wed-king-adl` (King ADL), `wed-unathletico` (Unathletico), `wed-wildcats` (Wildcats), `wed-dwell-fc` (Dwell FC), `wed-umoja-stars` (Umoja Stars), `wed-mts-fc` (MTS FC), `wed-kuq-e-zi` (Kuq E Zi)
 - Standings-ineligible historical teams (0): None
 
 ## Excluded records

@@ -2,6 +2,9 @@
 
 **Status:** Applied to FIS production and postflight verified without creating a draft or changing existing business-data counts. Do not rerun this migration. The diagnostic sequence below is retained for a fresh environment or reviewed investigation.
 
+
+**Local extension, not deployed (10 October 2026):** `20261009224309_season_fixture_staging.sql` adds null-source new teams, confirmed profiles/venue gates, private staging, complete fixture-plan review and atomic publication at activation. The applied baseline migration and its historical verification below remain unchanged. The old activation verifier is for the six-migration baseline, not the new staging flow. See [NEW-SEASON-PREPARATION.md](NEW-SEASON-PREPARATION.md) for the new practical sequence and URL-free PGlite verification; hosted release/preflight/PostgREST and genuine concurrency verification are still required under separate authorisation.
+
 ## Model
 
 Draft metadata, competition structure and returning-team choices live in administrator-only `season_drafts`, `season_draft_competitions` and `season_draft_teams`. Draft teams retain `source_team_id` only for traceability. Activation creates new season-specific team IDs and rewrites copied preference/note foreign keys to those IDs.

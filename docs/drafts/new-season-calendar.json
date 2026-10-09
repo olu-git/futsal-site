@@ -1,0 +1,90 @@
+{
+  "starts": {
+    "monday": "2026-10-12",
+    "wednesday": "2026-10-14"
+  },
+  "rounds": {
+    "monday": 26,
+    "wednesday": 30
+  },
+  "lastPreBreakNight": "2026-12-23",
+  "firstPostBreakNight": "2027-01-11",
+  "provisionalDates": [
+    "2026-11-02"
+  ],
+  "blockedDates": [
+    {
+      "date": "2026-10-28",
+      "reason": "Confirmed Wednesday blackout"
+    },
+    {
+      "date": "2026-11-03",
+      "reason": "Melbourne Cup public holiday"
+    },
+    {
+      "date": "2026-12-25",
+      "reason": "Christmas public holiday"
+    },
+    {
+      "date": "2026-12-26",
+      "reason": "Boxing Day public holiday"
+    },
+    {
+      "date": "2026-12-28",
+      "reason": "Additional Boxing Day public holiday"
+    },
+    {
+      "date": "2027-01-01",
+      "reason": "New Year public holiday"
+    },
+    {
+      "date": "2027-01-26",
+      "reason": "Australia Day public holiday"
+    },
+    {
+      "date": "2027-03-08",
+      "reason": "Labour Day public holiday"
+    },
+    {
+      "date": "2027-03-26",
+      "reason": "Good Friday public holiday"
+    },
+    {
+      "date": "2027-03-27",
+      "reason": "Easter Saturday public holiday"
+    },
+    {
+      "date": "2027-03-28",
+      "reason": "Easter Sunday public holiday"
+    },
+    {
+      "date": "2027-03-29",
+      "reason": "Easter Monday public holiday"
+    },
+    {
+      "date": "2027-04-25",
+      "reason": "ANZAC Day; no Victorian replacement holiday on 26 April"
+    }
+  ],
+  "holidaySources": [
+    "https://business.vic.gov.au/business-information/public-holidays/victorian-public-holidays-2026",
+    "https://business.vic.gov.au/business-information/public-holidays/victorian-public-holidays-2027"
+  ],
+  "sourceCheckedOn": "2026-10-10",
+  "venueBlackouts": "Standing Monday/Wednesday booking confirmed by organiser; retain the listed closure, Christmas break and public-holiday exclusions",
+  "finalsDatesIncluded": false,
+  "standingVenueBooking": {
+    "locationId": "ce7becb1-0bbc-5cb4-8aa9-d708aaeaebce",
+    "venue": "Endeavour Hills Leisure Centre",
+    "weekdays": [
+      1,
+      3
+    ],
+    "confirmedBy": "organiser",
+    "status": "confirmed",
+    "scope": "All scheduled Monday and Wednesday playing nights, subject to listed calendar exceptions",
+    "provisionalParticipationDates": [
+      "2026-11-02"
+    ]
+  }
+}

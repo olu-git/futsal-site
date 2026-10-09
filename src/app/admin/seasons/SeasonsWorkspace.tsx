@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, useTransition, type FormEvent } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useTransition, type FormEvent } from "react";
 import TeamKit from "@/components/TeamKit";
 import {
   abandonSeasonDraft,
@@ -8,9 +8,16 @@ import {
   createSeasonDraft,
   saveSeasonDraft,
   validateSeasonDraft,
+  stageSeasonDraft,
+  importSeasonSchedule,
 } from "@/lib/admin/seasons-actions";
 import {
   draftCounts,
+  seasonDraftDirty,
+  seasonStageErrors,
+  standingVenueBooking,
+  newDraftTeam,
+  reviewTeamEdit,
   validateDraft,
   validatePreferences,
   validateSeasonCreateFields,
@@ -20,7 +27,10 @@ import {
   type SeasonsWorkspace,
 } from "@/lib/admin/seasons";
 
-const steps = ["Season details", "Competition structure", "Returning teams", "Preferences & notes", "Review & activate"];
+import { loadSeasonDraft } from "@/lib/admin/seasons-data";
+import Link from "next/link";
+
+const steps = ["Season details", "Competition structure", "Teams", "Preferences & notes", "Review & activate"];
 
 function nextPreferenceTime(team: DraftTeam) {
   for (const time of ["19:00", "19:40", "20:20", "21:00"]) {
@@ -41,6 +51,7 @@ function PrivateProfileEditor({ team, onChange }: { team: DraftTeam; onChange(te
       <div><strong>{team.name}</strong><small>Private scheduling profile</small></div>
       <label className="admin-season-copy-toggle"><input type="checkbox" checked={team.copyPrivateProfile} onChange={(event) => onChange({ ...team, copyPrivateProfile: event.target.checked })} /> Copy preferences and notes</label>
     </header>
+    <label><input type="checkbox" checked={team.availabilityConfirmed ?? false} onChange={e => onChange({ ...team, availabilityConfirmed: e.target.checked })} /> Availability and private notes verified with this team</label>
     <p className="admin-private-note">Only administrators can see these scheduling preferences and notes.</p>
     {team.copyPrivateProfile ? <>
       <fieldset className="admin-preference-list">
@@ -68,6 +79,8 @@ function PrivateProfileEditor({ team, onChange }: { team: DraftTeam; onChange(te
 
 export default function SeasonsWorkspace({ workspace, reload }: { workspace: SeasonsWorkspace; reload(): Promise<void> }) {
   const [draft, setDraft] = useState<SeasonDraft | null>(null);
+  const [savedDraft, setSavedDraft] = useState<SeasonDraft | null>(null);
+  const editorEpoch = useRef(0);
   const [step, setStep] = useState(0);
   const [notice, setNotice] = useState("");
   const [pending, startTransition] = useTransition();
@@ -85,6 +98,9 @@ export default function SeasonsWorkspace({ workspace, reload }: { workspace: Sea
   const errors = useMemo(() => draft ? validateDraft(draft) : [], [draft]);
   const createFieldErrors = useMemo(() => validateSeasonCreateFields(newSeason), [newSeason]);
   const createErrors = Object.values(createFieldErrors);
+
+  const dirty = !!(draft && savedDraft && seasonDraftDirty(draft, savedDraft));
+  function editDraft(value: SeasonDraft) { setDraft({ ...value, status: "draft" }); }
 
   async function handleCreateSeason(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -110,17 +126,25 @@ export default function SeasonsWorkspace({ workspace, reload }: { workspace: Sea
     }
   }
 
-  function closeDraft(fromHistory = false) {
+  const closeDraft = useCallback((fromHistory = false) => {
+    if (dirty && !confirm("Discard unsaved season changes?")) {
+      if (fromHistory) history.pushState({ fisSeasonDraft: draftId }, "");
+      return;
+    }
+    editorEpoch.current++;
     setDraft(null);
+    setSavedDraft(null);
     setNotice("");
     if (!fromHistory && historyPushedRef.current) history.back();
     historyPushedRef.current = false;
     requestAnimationFrame(() => openerRef.current?.focus());
-  }
+  }, [dirty, draftId]);
 
   function openDraft(value: SeasonDraft, opener: HTMLElement) {
     openerRef.current = opener;
+    editorEpoch.current++;
     setDraft(structuredClone(value));
+    setSavedDraft(structuredClone(value));
     setStep(0);
     setNotice("");
     if (!historyPushedRef.current) {
@@ -129,11 +153,12 @@ export default function SeasonsWorkspace({ workspace, reload }: { workspace: Sea
     }
   }
 
+  useEffect(() => { if (draftId) closeRef.current?.focus(); }, [draftId]);
+
   useEffect(() => {
     if (!draftId) return;
     const mobile = matchMedia("(max-width: 767px)").matches;
     if (mobile) document.body.classList.add("admin-season-dialog-open");
-    closeRef.current?.focus();
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") closeDraft();
       if (event.key === "Tab" && mobile) {
@@ -146,19 +171,38 @@ export default function SeasonsWorkspace({ workspace, reload }: { workspace: Sea
       }
     };
     const onPopState = () => closeDraft(true);
+    const onBeforeUnload = (event: BeforeUnloadEvent) => { if (dirty) { event.preventDefault(); event.returnValue = ""; } };
+    const onNavigate = (event: MouseEvent) => {
+      const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>("a[href]") : null;
+      if (dirty && link && link.target !== "_blank" && link.href !== location.href && !confirm("Discard unsaved season changes?")) { event.preventDefault(); event.stopPropagation(); }
+    };
+    document.addEventListener("click", onNavigate, true);
+    addEventListener("beforeunload", onBeforeUnload);
     addEventListener("keydown", onKeyDown);
     addEventListener("popstate", onPopState);
     return () => {
       document.body.classList.remove("admin-season-dialog-open");
       removeEventListener("keydown", onKeyDown);
       removeEventListener("popstate", onPopState);
+      removeEventListener("beforeunload", onBeforeUnload);
+      document.removeEventListener("click", onNavigate, true);
     };
-  }, [draftId]);
+  }, [draftId, dirty, closeDraft]);
 
-  function run(task: () => Promise<unknown>, success: string) {
+  function run(task: () => Promise<unknown>, success: string, refreshDraft = true) {
+    const epoch = editorEpoch.current, id = draft?.id;
     startTransition(async () => {
-      try { await task(); setNotice(success); await reload(); }
-      catch (error) { setNotice(error instanceof Error ? error.message : "The action failed. No changes were applied."); }
+      try {
+        await task();
+        const persisted = refreshDraft && id ? await loadSeasonDraft(id) : null;
+        if (epoch === editorEpoch.current) {
+          if (persisted) { setDraft(persisted); setSavedDraft(structuredClone(persisted)); }
+          setNotice(success);
+        }
+        await reload();
+      } catch (error) {
+        if (epoch === editorEpoch.current) setNotice(error instanceof Error ? error.message : "The action failed. Reload and review before retrying.");
+      }
     });
   }
 
@@ -172,18 +216,22 @@ export default function SeasonsWorkspace({ workspace, reload }: { workspace: Sea
   </>;
 
   const counts = draftCounts(draft);
-  const updateTeam = (team: DraftTeam) => setDraft({ ...draft, teams: draft.teams.map((item) => item.id === team.id ? team : item) });
+  const updateTeam = (team: DraftTeam) => editDraft({ ...draft, teams: draft.teams.map((item) => item.id === team.id ? reviewTeamEdit(item, team) : item) });
   return <section className="admin-season-wizard" role="dialog" aria-modal="true" aria-labelledby="season-draft-title">
     <header><div><p className="eyebrow">Season draft</p><h2 id="season-draft-title">{draft.name}</h2><span className={`admin-lifecycle-badge is-${draft.status}`}>{draft.status} · version {draft.version}</span></div><button ref={closeRef} className="admin-season-close" aria-label="Close season draft" onClick={() => closeDraft()}>Close</button></header>
     <nav aria-label="Season draft steps">{steps.map((label, index) => <button key={label} aria-current={step === index ? "step" : undefined} onClick={() => setStep(index)}><span>{index + 1}</span>{label}</button>)}</nav>
     {notice && <p className="admin-action-message" role="status">{notice}</p>}
+    {dirty && <p className="admin-action-message" role="status">Unsaved changes. Save before validation or staging.</p>}
     <div className="admin-season-step" tabIndex={-1}>
-      {step === 0 && <div className="admin-season-panel"><label>Season name<input value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} /></label><label>Start date<input type="date" value={draft.startsOn} onChange={(event) => setDraft({ ...draft, startsOn: event.target.value })} /></label><label>End date<input type="date" value={draft.endsOn} onChange={(event) => setDraft({ ...draft, endsOn: event.target.value })} /></label>{validateSeasonDates(draft.name, draft.startsOn, draft.endsOn).map((error) => <p className="admin-field-error" role="alert" key={error}>{error}</p>)}</div>}
-      {step === 1 && <><div className="admin-season-step-heading"><div><h3>Competition structure</h3><p>Retain and edit copied competitions, or add another competition.</p></div><button type="button" onClick={() => { const id = crypto.randomUUID(); setDraft({ ...draft, competitions: [...draft.competitions, { id, sourceCompetitionSeasonId: null, categoryId: workspace.categories[0]?.id ?? "", categoryName: workspace.categories[0]?.name ?? "", locationId: workspace.locations[0]?.id ?? "", locationName: workspace.locations[0]?.name ?? "", weekday: 1, division: "A", name: "New competition", retained: true }] }); }}>Add competition</button></div><div className="admin-season-cards">{draft.competitions.map((competition) => <article className={!competition.retained ? "is-removed" : ""} key={competition.id}><label className="admin-season-retain"><input type="checkbox" checked={competition.retained} onChange={(event) => setDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, retained: event.target.checked } : item) })} /> Retain competition</label><label>Competition name<input value={competition.name} onChange={(event) => setDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, name: event.target.value } : item) })} /></label><div><label>Location<select value={competition.locationId} onChange={(event) => setDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, locationId: event.target.value } : item) })}>{workspace.locations.map((location) => <option key={location.id} value={location.id}>{location.name}</option>)}</select></label><label>Category<select value={competition.categoryId} onChange={(event) => setDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, categoryId: event.target.value } : item) })}>{workspace.categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}</select></label><label>Night<select value={competition.weekday} onChange={(event) => setDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, weekday: Number(event.target.value) } : item) })}>{[[1,"Monday"],[2,"Tuesday"],[3,"Wednesday"],[4,"Thursday"],[5,"Friday"],[6,"Saturday"],[7,"Sunday"]].map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label><label>Division<input value={competition.division} onChange={(event) => setDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, division: event.target.value } : item) })} /></label></div><small>{draft.teams.filter((team) => team.selected && team.draftCompetitionId === competition.id).length} returning teams</small></article>)}</div>{errors.filter((error) => /competition|at least one/i.test(error)).map((error) => <p className="admin-field-error" role="alert" key={error}>{error}</p>)}</>}
-      {step === 2 && <div className="admin-season-teams"><div className="admin-season-step-heading"><div><h3>Returning teams</h3><p>{counts.teams} teams selected</p></div><div className="admin-bulk-actions"><button onClick={() => setDraft({ ...draft, teams: draft.teams.map((team) => ({ ...team, selected: true })) })}>Select all</button><button onClick={() => setDraft({ ...draft, teams: draft.teams.map((team) => ({ ...team, selected: false })) })}>Deselect all</button></div></div>{draft.competitions.filter((competition) => competition.retained).map((competition) => <section key={competition.id}><h3>{competition.name}</h3>{draft.teams.filter((team) => team.draftCompetitionId === competition.id).map((team) => <div className="admin-season-team-row" key={team.id}><label><input aria-label={`Select ${team.name}`} type="checkbox" checked={team.selected} onChange={(event) => updateTeam({ ...team, selected: event.target.checked })} /><TeamKit colour={team.kitColour ?? undefined} /><span>{team.name}</span></label><label>Destination<select value={team.draftCompetitionId} onChange={(event) => updateTeam({ ...team, draftCompetitionId: event.target.value })}>{draft.competitions.filter((item) => item.retained).map((item) => <option value={item.id} key={item.id}>{item.name}</option>)}</select></label></div>)}</section>)}{errors.filter((error) => /duplicate team/i.test(error)).map((error) => <p className="admin-field-error" role="alert" key={error}>{error}</p>)}</div>}
+    <fieldset className="admin-season-structure" disabled={pending || !!draft.stagedSeasonId}>
+      {step === 0 && <div className="admin-season-panel"><label>Season name<input value={draft.name} onChange={(event) => editDraft({ ...draft, name: event.target.value })} /></label><label>Start date<input type="date" value={draft.startsOn} onChange={(event) => editDraft({ ...draft, startsOn: event.target.value })} /></label><label>End date<input type="date" value={draft.endsOn} onChange={(event) => editDraft({ ...draft, endsOn: event.target.value })} /></label>{validateSeasonDates(draft.name, draft.startsOn, draft.endsOn).map((error) => <p className="admin-field-error" role="alert" key={error}>{error}</p>)}</div>}
+      {step === 1 && <><div className="admin-season-step-heading"><div><h3>Competition structure</h3><p>Retain and edit copied competitions, or add another competition.</p></div><button type="button" onClick={() => { const id = crypto.randomUUID(); editDraft({ ...draft, competitions: [...draft.competitions, { id, sourceCompetitionSeasonId: null, categoryId: workspace.categories[0]?.id ?? "", categoryName: workspace.categories[0]?.name ?? "", locationId: workspace.locations[0]?.id ?? "", locationName: workspace.locations[0]?.name ?? "", weekday: 1, division: "A", name: "New competition", retained: true }] }); }}>Add competition</button></div><div className="admin-season-cards">{draft.competitions.map((competition) => <article className={!competition.retained ? "is-removed" : ""} key={competition.id}><label className="admin-season-retain"><input type="checkbox" checked={competition.retained} onChange={(event) => editDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, retained: event.target.checked } : item) })} /> Retain competition</label><label>Competition name<input value={competition.name} onChange={(event) => editDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, name: event.target.value } : item) })} /></label><div><label>Location<select value={competition.locationId} onChange={(event) => editDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, locationId: event.target.value, locationName: workspace.locations.find(l => l.id === event.target.value)?.name ?? "", venueConfirmed: false } : item) })}>{workspace.locations.map((location) => <option key={location.id} value={location.id}>{location.name}</option>)}</select></label><label>Category<select value={competition.categoryId} onChange={(event) => editDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, categoryId: event.target.value } : item) })}>{workspace.categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}</select></label><label>Night<select value={competition.weekday} onChange={(event) => editDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, weekday: Number(event.target.value), venueConfirmed: false } : item) })}>{[[1,"Monday"],[2,"Tuesday"],[3,"Wednesday"],[4,"Thursday"],[5,"Friday"],[6,"Saturday"],[7,"Sunday"]].map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label><label>Division<input value={competition.division} onChange={(event) => editDraft({ ...draft, competitions: draft.competitions.map((item) => item.id === competition.id ? { ...item, division: event.target.value } : item) })} /></label></div>{standingVenueBooking(competition) ? <p>Standing Monday/Wednesday venue booking confirmed by organiser. Calendar exceptions still apply; 2 November is provisional for team participation.</p> : <label><input type="checkbox" checked={competition.venueConfirmed ?? false} onChange={e => editDraft({ ...draft, competitions: draft.competitions.map(c => c.id === competition.id ? { ...c, venueConfirmed: e.target.checked } : c) })} /> Venue booking confirmed for this competition</label>}<small>{draft.teams.filter((team) => team.selected && team.draftCompetitionId === competition.id).length} selected teams</small></article>)}</div>{errors.filter((error) => /competition|at least one/i.test(error)).map((error) => <p className="admin-field-error" role="alert" key={error}>{error}</p>)}</>}
+      {step === 2 && <div className="admin-season-teams"><div className="admin-season-step-heading"><div><h3>Teams</h3><p>{counts.teams} teams selected</p></div><div className="admin-bulk-actions"><button onClick={() => editDraft({ ...draft, teams: draft.teams.map((team) => ({ ...team, selected: true })) })}>Select all</button><button onClick={() => editDraft({ ...draft, teams: draft.teams.map((team) => ({ ...team, selected: false })) })}>Deselect all</button></div></div>{draft.competitions.filter((competition) => competition.retained).map((competition) => <section key={competition.id}><h3>{competition.name}</h3><button type="button" onClick={() => editDraft({ ...draft, teams: [...draft.teams, newDraftTeam(competition.id, crypto.randomUUID())] })}>Add new team</button>{draft.teams.filter((team) => team.draftCompetitionId === competition.id).map((team) => <div className="admin-season-team-row" key={team.id}><label><input aria-label={`Select ${team.name}`} type="checkbox" checked={team.selected} onChange={(event) => updateTeam({ ...team, selected: event.target.checked })} /><TeamKit colour={team.kitColour ?? undefined} /><span>{team.name || "New team"}</span></label><label>Name<input value={team.name} onChange={e => updateTeam({ ...team, name: e.target.value })} /></label><label>Readable ID<input value={team.readableId ?? ""} onChange={e => updateTeam({ ...team, readableId: e.target.value })} /></label><label>Kit colour<input placeholder="#083A97" value={team.kitColour ?? ""} onChange={e => updateTeam({ ...team, kitColour: e.target.value || null })} /></label><label><input type="checkbox" checked={team.standingsEligible} onChange={e => updateTeam({ ...team, standingsEligible: e.target.checked })} /> Counts in standings</label>{!team.sourceTeamId && <label>Reserved membership UUID<input defaultValue={team.id} onBlur={e => editDraft({ ...draft, teams: draft.teams.map(t => t.id === team.id ? reviewTeamEdit(t, { ...t, id: e.target.value }) : t) })} /></label>}<label>Destination<select value={team.draftCompetitionId} onChange={(event) => updateTeam({ ...team, draftCompetitionId: event.target.value })}>{draft.competitions.filter((item) => item.retained).map((item) => <option value={item.id} key={item.id}>{item.name}</option>)}</select></label></div>)}</section>)}{errors.filter((error) => /duplicate team/i.test(error)).map((error) => <p className="admin-field-error" role="alert" key={error}>{error}</p>)}</div>}
       {step === 3 && <><div className="admin-season-step-heading"><div><h3>Preferences and private notes</h3><p>Review private scheduling details before rollover.</p></div></div><div className="admin-season-profiles">{draft.teams.filter((team) => team.selected).map((team) => <PrivateProfileEditor key={team.id} team={team} onChange={updateTeam} />)}{draft.teams.every((team) => !team.selected) && <p className="admin-season-empty">Select returning teams before reviewing private profiles.</p>}</div></>}
-      {step === 4 && <div className="admin-season-review"><h3>Activation review</h3><dl><div><dt>Season</dt><dd>{draft.name}</dd></div><div><dt>Dates</dt><dd>{draft.startsOn} to {draft.endsOn}</dd></div><div><dt>Competitions</dt><dd>{counts.competitions}</dd></div><div><dt>Returning teams</dt><dd>{counts.teams}</dd></div><div><dt>Preferences</dt><dd>{counts.preferences}</dd></div><div><dt>Private notes</dt><dd>{counts.notes}</dd></div></dl><div className="admin-season-warning"><strong>Activation archives the current editions.</strong><p>Historical teams, fixtures, results and standing adjustments remain unchanged. Fixtures, results and adjustments are never copied.</p></div>{errors.map((error) => <p className="admin-field-error" role="alert" key={error}>{error}</p>)}<button className="admin-season-activate" disabled={pending || errors.length > 0 || draft.status !== "validated"} onClick={() => { if (confirm("Activate this season and archive the current active competition editions?")) run(() => activateSeasonDraft(draft.id, draft.version), "Season activated."); }}>Activate season</button>{draft.status !== "validated" && <p className="admin-season-help">Validate this draft before activation.</p>}</div>}
+      </fieldset>
+      {step === 4 && <div className="admin-season-review"><h3>Activation review</h3><dl><div><dt>Season</dt><dd>{draft.name}</dd></div><div><dt>Dates</dt><dd>{draft.startsOn} to {draft.endsOn}</dd></div><div><dt>Competitions</dt><dd>{counts.competitions}</dd></div><div><dt>Teams</dt><dd>{counts.teams}</dd></div><div><dt>Preferences</dt><dd>{counts.preferences}</dd></div><div><dt>Private notes</dt><dd>{counts.notes}</dd></div></dl><div className="admin-season-warning"><strong>Activation archives the current editions.</strong><p>Historical teams, fixtures, results and standing adjustments remain unchanged. Fixtures, results and adjustments are never copied. Activation publishes the staged, reviewed new fixtures atomically.</p></div>{errors.map((error) => <p className="admin-field-error" role="alert" key={error}>{error}</p>)}{!draft.stagedSeasonId ? <><p>Stage unpublished teams before importing and reviewing fixtures. The reviewed team structure will be frozen.</p>{seasonStageErrors(draft).map(error => <p className="admin-field-error" key={error}>{error}</p>)}<button disabled={pending || dirty || draft.status !== "validated" || seasonStageErrors(draft).length > 0} onClick={() => run(() => stageSeasonDraft(draft.id, draft.version), "Season staged privately. Import each schedule, then review its fixture change set.")}>Stage teams and competitions</button></> : <><p>Staged privately. Import a complete local schedule for each competition; replacing a plan requires cancelling its existing change set first.</p>{draft.competitions.filter(c => c.retained).map(c => <label key={c.id}>{c.name}: import complete schedule<input type="file" accept="application/json,.json" disabled={pending || draft.status === "activated" || draft.status === "abandoned"} onChange={e => { const file=e.target.files?.[0]; if(file) run(async () => { const schedule=JSON.parse(await file.text()); await importSeasonSchedule(draft.id,draft.version,c.id,schedule); }, "Schedule imported privately. Review and acknowledge its fixture change set in Fixtures."); e.target.value=""; }} /></label>)}<Link href="/admin/fixtures/">Review staged fixture plans</Link></>}
+      <button className="admin-season-activate" disabled={pending || errors.length > 0 || (dirty || !draft.stagedSeasonId || draft.status !== "validated")} onClick={() => { if (confirm("Activate this season and archive the current active competition editions?")) run(() => activateSeasonDraft(draft.id, draft.version), "Season activated."); }}>Activate season</button>{draft.status !== "validated" && <p className="admin-season-help">Validate this draft before activation.</p>}</div>}
     </div>
-    <footer><div className="admin-season-step-actions"><button disabled={step === 0} onClick={() => setStep((value) => Math.max(0, value - 1))}>Previous</button><button disabled={step === steps.length - 1} onClick={() => setStep((value) => Math.min(steps.length - 1, value + 1))}>Next</button></div><div className="admin-season-save-actions"><button disabled={pending} onClick={() => run(async () => { const version = await saveSeasonDraft(draft); setDraft({ ...draft, version }); }, "Draft saved.")}>Save draft</button><button disabled={pending || errors.length > 0} onClick={() => run(async () => { await validateSeasonDraft(draft.id, draft.version); setDraft({ ...draft, status: "validated", version: draft.version + 1 }); setStep(4); }, "Draft validated.")}>Validate draft</button><button disabled={pending} onClick={() => { if (confirm("Abandon this unactivated draft?")) run(() => abandonSeasonDraft(draft.id, draft.version), "Draft abandoned."); }}>Abandon draft</button></div></footer>
+    <footer><div className="admin-season-step-actions"><button disabled={step === 0} onClick={() => setStep((value) => Math.max(0, value - 1))}>Previous</button><button disabled={step === steps.length - 1} onClick={() => setStep((value) => Math.min(steps.length - 1, value + 1))}>Next</button></div><div className="admin-season-save-actions"><button disabled={pending || !!draft.stagedSeasonId} onClick={() => run(() => saveSeasonDraft(draft), "Draft saved. Validation has been reset.")}>Save draft</button><button disabled={pending || dirty || errors.length > 0 || draft.status === "activated" || draft.status === "abandoned"} onClick={() => run(() => validateSeasonDraft(draft.id, draft.version), draft.stagedSeasonId ? "Persisted season and reviewed fixtures validated." : "Persisted team structure validated. Confirm team availability before staging; the standing venue booking is recorded.")}>Validate draft</button><button disabled={pending || !!draft.stagedSeasonId} onClick={() => { if (confirm("Abandon this unactivated draft?")) run(() => abandonSeasonDraft(draft.id, draft.version), "Draft abandoned."); }}>Abandon draft</button></div></footer>
   </section>;
 }

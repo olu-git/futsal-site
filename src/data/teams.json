@@ -148,8 +148,8 @@
     "division": "A"
   },
   {
-    "id": "wed-toss",
-    "name": "Toss",
+    "id": "wed-king-adl",
+    "name": "King ADL",
     "kitColour": "#27AE60",
     "night": "wednesday",
     "division": "A"
@@ -183,8 +183,8 @@
     "division": "A"
   },
   {
-    "id": "mon-toss",
-    "name": "Toss",
+    "id": "mon-king-adl",
+    "name": "King ADL",
     "kitColour": "#27AE60",
     "night": "monday",
     "division": "A"
@@ -219,7 +219,7 @@
     "division": "A"
   },
   {
-    "id": "wed-xaywan",
+    "id": "wed-kuq-e-zi",
     "name": "Kuq E Zi",
     "kitColour": "#EB5757",
     "night": "wednesday",
@@ -233,7 +233,7 @@
     "division": "A"
   },
   {
-    "id": "mon-declans-team",
+    "id": "mon-declans-delinquents",
     "name": "Declan's Delinquents",
     "kitColour": "#111111",
     "night": "monday",

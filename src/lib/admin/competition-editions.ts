@@ -14,3 +14,8 @@ export function selectAdminEditions(rows: Row[]): Row[] {
   }
   return [...selected.values()];
 }
+
+// Fixture staging keeps every planned edition alongside the selected public editions.
+export function selectFixtureAdminEditions(rows:Row[]):Row[]{
+ return [...selectAdminEditions(rows.filter(r=>r.publication_state==="published")),...rows.filter(r=>r.lifecycle==="planned" && [1,3].includes(Number(relation(r.competitions).weekday)))];
+}
