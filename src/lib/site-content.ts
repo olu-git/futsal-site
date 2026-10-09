@@ -17,7 +17,7 @@ export const site = {
   socials: [
     { name: "Facebook", href: "https://www.facebook.com/futsalindoorsoccer.au" },
     { name: "Instagram", href: "https://www.instagram.com/futsalindoorsoccer/" },
-    { name: "YouTube", href: "https://www.youtube.com/@futsalindoorsoccer" },
+    { name: "YouTube", href: "https://www.youtube.com/channel/UC8JCoZ6lmqY59iDKRh-irOg" },
     { name: "Email", href: "mailto:contact@futsalindoorsoccer.com.au" },
   ],
 };
