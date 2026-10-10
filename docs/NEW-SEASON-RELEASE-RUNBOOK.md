@@ -237,4 +237,32 @@ Fetch static Home/Monday/Wednesday before hydration and inspect expected new-sea
 
 If 2 November is cancelled, re-date subsequent Monday rounds to available Mondays, preserving approved opponents/times/courts/orientations and exclusions, and revalidate/review before activation. Monday ends 10 May; Wednesday unchanged. Do not apply that scenario unless cancellation is confirmed.
 
-**Next outstanding step:** explicit approval for application deployment/private preparation; the independent off-site recovery gate now passes. Recheck backup freshness/source guards before the guarded King ADL correction runs first. No platform recovery point is available; full-platform recovery is outside scope. **Season 2 2026** is approved for both nights, with all dates/422 fixtures unchanged. Public activation and refresh dispatch need their distinct approval. New-resource hosted reads must pass after migration and before setup; existing verification limitations remain recorded.
+## Authorised release evidence — 11 October 2026
+
+This receipt supersedes the earlier awaiting-authorisation status. The organiser authorised application deployment and private staging only. Public activation/publication is still excluded.
+
+- Fresh origin/master was `628a1daae05df5704e79b93fe0a1847b73c8a2d0`; clean reviewed branch was `fa9f9a45ce0d0530e09d0f7d7d504c472e15804b`. Production application-table baseline matched the rehearsed capture; the known audit text digest was reconciled against exact restored JSONB. Drive archive and recovery receipt remain available with existing owner/one-writer sharing and a separately saved recovery key.
+- Applied the exact guarded King ADL correction, staging migration and four readable-ID updates in that order. Provider registered the staging migration as `20261010190017`; its source remains `20261009224309_season_fixture_staging.sql`. Original UUIDs/kits/history remain intact. King ADL has no preference; the four readable IDs match the reviewed proposal. No alternative membership SQL ran.
+- [PR #19](https://github.com/olu-git/futsal-site/pull/19) merged normally as `952b3e2996113c5585152ad37fc3211c507c4c35`. [Pages run 38078187971](https://github.com/olu-git/futsal-site/actions/runs/38078187971) succeeded with that SHA; deployed admin UI exposes Stage/import. Production Actions target verification passed. No force-push or workflow dispatch.
+- Repeated 181 tests, lint, TypeScript, production build, finals/snapshot validation, import checks, both schedule validators and whitespace checks passed. Approved draft files remain identical to `e013330`. Permanent rollback tag is unchanged.
+- Stage completed through the signed-in FIS admin workflow: draft `f3434fe5-770a-4229-b7c6-1060c5006101`, staged season `ba8c0e2f-7f8a-41be-8ddb-65b320cebaa2`, Monday edition `62ce7ec9-459e-4acf-bec5-c6734a3199ef` (14 memberships), Wednesday edition `be008d39-f175-45c1-a232-2148d84b1cf9` (16). Both editions are planned/draft. Thirty availability confirmations were saved; four new profiles explicitly allow all four approved slots. Empty returning profiles do not supersede imported general constraints.
+- New UUIDs: Xaywan `44d7e359-957a-4b38-8a0a-40b698d609c9`; Nassaji FC `8464062e-5897-4573-a075-d283236dd36c`; Etihad FC `90f4484f-9735-4ba3-a9e9-f165381cf00b`; Buckle City `c9f73f23-1e6c-42df-a7fa-9a7953d9cb75`. No old identity was reused.
+- Anonymous PostgREST sees only the two old editions, zero planned editions; draft/fixture-plan reads return 401/42501. New RPC grants exclude anonymous execution and private helpers are not client-executable. Actual admin reads and Stage succeed. Old editions remain active/published. All 326 fixtures, 326 result versions and 38 adjustments retain exact pre-release canonical checksums.
+
+**Current blocking step:** browser upload rejected the Monday file because ChatGPT's Brave extension lacks “Allow access to file URLs”. The upload did not create a fixture plan. Both imports, their hosted validation/review and final season validation remain outstanding: production currently has **zero new fixture plans/items**, not 422 imported fixtures. Organiser must enable that permission or upload the approved files in the same Seasons workspace. Resume from the staged draft; do not create a second season or rerun SQL/Stage. Import Monday and Wednesday, review both, finally validate, then STOP before Activate.
+
+Hosted non-admin/expired-session account checks and true hosted concurrent-edit tests remain unperformed because suitable authorised test infrastructure/account was unavailable. Existing independent local race/rollback checks remain evidence, not hosted proof. Changed snapshot → commit → Pages/forced-fallback remains an activation-time verification gate; no new chain is claimed. Existing advisor warnings about a platform event-trigger function and disabled leaked-password protection were observed without changing configuration.
+
+### Recovery-folder retention review (nothing deleted)
+
+Inspected `%LOCALAPPDATA%\\FIS\\backup-access` by filenames and limited non-secret verifier source, never credential/key contents. The folder is **not entirely redundant**. The independently restored Drive copy plus separately held key covers the pre-release application/schema recovery scope; it does not replace operational credentials or capture newly staged state.
+
+| Item | Treatment |
+|---|---|
+| `backups`, `portable`, manifests/rehearsal/recovery receipts | Retain protected originals, local portable copy and evidence; archive bytes duplicate verified off-site recovery, but retain pending an explicit cleanup decision. |
+| `recovery-secrets` | Supplemental profile-bound key cache; keep separate from uploaded archive. Do not remove the independently saved Import Details recovery key. |
+| `pg_service.conf`, verified-attempt password file | Operational production access; not replaced by the encrypted backup. Retain securely, outside Git. |
+| Earlier rejected `pgpass.conf` / retry file | Cleanup candidates once confirmed unused; contain sensitive credential attempts. No deletion performed. |
+| `verification` temporary harnesses, password-entry helpers | Temporary execution material; retain non-secret receipts/checkpoints as evidence. Review individual files before authorised cleanup. |
+
+Before public activation, consider an additional protected recovery point covering completed private staging; the verified existing copy is pre-release. Vault root keys/platform services, Storage bytes and project secrets remain outside scoped recovery. No full-platform recovery claim or expanded DR work is made.

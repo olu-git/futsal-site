@@ -1,6 +1,20 @@
 # New-season release checklist
 
-Local checkpoint: 10 October 2026, `prep/new-season-identities`. Read-only production diagnostics are now explicitly authorised; production writes, release, staging and activation still require a separate release instruction. [Single release runbook](NEW-SEASON-RELEASE-RUNBOOK.md) is the execution package. Preserve `pre-new-website-2026-09-30`, [rollback runbook](NEW-WEBSITE-ROLLBACK.md), old memberships/UUIDs, results, adjustments and 2026 S1 knockout JSON.
+Release checkpoint: 11 October 2026, `prep/new-season-identities`. Application release and private staging are authorised and have progressed as recorded below. Public activation/publication remain excluded. [Single release runbook](NEW-SEASON-RELEASE-RUNBOOK.md) is the execution package. Preserve `pre-new-website-2026-09-30`, [rollback runbook](NEW-WEBSITE-ROLLBACK.md), old memberships/UUIDs, results, adjustments and 2026 S1 knockout JSON.
+
+## Current execution status
+
+- [x] Backup availability/source freshness checked; scoped independent recovery remains verified.
+- [x] Exact King ADL correction → staging migration → readable-ID proposal applied, with UUID/history preservation.
+- [x] Application merged via PR #19 (`952b3e2`); Pages run `38078187971` succeeded. Local required checks repeated successfully.
+- [x] Save → Validate → Stage through actual hosted admin. Private season `ba8c0e2f-7f8a-41be-8ddb-65b320cebaa2` has 14/16 memberships and planned/draft editions; previous season active/published.
+- [x] Anonymous private-resource denial and planned-edition invisibility; admin Stage/read access. Historical fixture/result/adjustment checksums unchanged.
+- [ ] Upload the approved 182/240 plans: Brave extension local-file access blocked the first upload; no fixture plans created. Enable “Allow access to file URLs” or use organiser uploads. Resume existing draft `f3434fe5-770a-4229-b7c6-1060c5006101` without repeating Stage.
+- [ ] Validate/review both imported plans, compare all 422 hosted assignments with approved files, final persisted-season validation.
+- [ ] Hosted non-admin/expired-session and hosted independent-session concurrency checks remain limited by unavailable suitable test infrastructure; completed local tests do not replace hosted evidence.
+- [ ] Public activation/publication requires separate approval. Snapshot commit → Pages → forced fallback remains an activation-time gate, not a completed test.
+
+Recovery-folder retention and exact release evidence are recorded in the runbook. Nothing deleted; off-site backup/key do not make the entire local access/evidence folder redundant.
 
 ## Completed locally
 
