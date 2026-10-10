@@ -1,5 +1,28 @@
 # FIS new-season release package
 
+## Completed public release evidence — 11 October 2026
+
+The organiser authorised matching application release and atomic public activation. This latest checkpoint supersedes earlier awaiting-authorisation/private-only statements below; retain them as preparation history. Do not rerun installed SQL, Stage, imports or activation.
+
+| Evidence | Result |
+| --- | --- |
+| Application PR #20 | Merge `ad7bdf8859460985452bc3d771b0f2283ede2659`; [Pages 38092427665](https://github.com/olu-git/futsal-site/actions/runs/38092427665) success |
+| Archive pagination/tablet PR #21 | Commit `f41290d06e009d2ed2fb22920fb6d10866a5e4ad`; merge `8cc4fbc2a0cd90e536d0bb5d1233731ba5e58b1a`; [Pages 38093031062](https://github.com/olu-git/futsal-site/actions/runs/38093031062) success |
+| Atomic activation | Existing draft `f3434fe5-770a-4229-b7c6-1060c5006101`, activated/version 9; both editions active/published |
+| Monday | Edition `62ce7ec9-459e-4acf-bec5-c6734a3199ef`; Season 2 2026; 14 teams, 26 rounds, 182 fixtures; 12 October 2026–3 May 2027 |
+| Wednesday | Edition `be008d39-f175-45c1-a232-2148d84b1cf9`; Season 2 2026; 16 teams, 30 rounds, 240 fixtures; 14 October 2026–26 May 2027 |
+| Assignment preservation | All 422 published assignments match reviewed plans exactly; approved files unchanged from e013330; no new results |
+| Historical preservation | Previous editions archived/published; 326 fixtures, 326 result versions, 38 adjustments retain exact baseline checksums; knockout JSON untouched |
+| Actual refresh | [38093049933](https://github.com/olu-git/futsal-site/actions/runs/38093049933) success; snapshot-only commit `2a2bf5d3988499ccfc6539b6733094a8f8884d6f` |
+| Downstream deployment | [38093108663](https://github.com/olu-git/futsal-site/actions/runs/38093108663) checks out snapshot commit above, builds and deploys successfully; production configuration guard passes |
+| Raw deployed fallback | `/_next/static/chunks/3d2_nlrkgo3mt.js`, SHA256 `f634f62190888e1293fb48d3f6bb49dafaa93bb4687c97534e6320beb5f2a3b8`; decoded snapshot exactly equals refreshed committed JSON and anonymous Supabase |
+
+Validation: 188 tests, lint, non-incremental TypeScript, build, finals, snapshot/import and whitespace checks pass. Live Home order is hero → both nights' upcoming fixtures → standings → existing FIS TV → archived knockout, with no obsolete full-bracket link. Both night pages show current name/count, zero standings, full 26/30 rounds and archived-results selector. First fixtures match approved dates/times/courts; five grey pixel-font question marks per team, upcoming only. Mobile/desktop overflow checks pass, tablet Home stacks and desktop 16:9 video spans the combined 1,152px content width. Replay click loads youtube-nocookie with autoplay=0; gallery retained.
+
+Forced fallback proof uses a read-only off-repository localhost mirror fetching actual deployed assets and adding connect-src 'none'. It verifies fallback notice, all 422 fixtures, 30 teams, zero standings and historical 146/180 result selection without Supabase. It is not a local application build or a production configuration change. The changed-snapshot → commit → Pages chain is now exercised, not merely no-change reconciliation. Temporary verifiers/screenshots remain outside Git.
+
+Backup qualifications remain: independently recoverable verified off-site package covers the pre-release state; fresh staged-state DPAPI checkpoint `20261010-74500b83-3547-4b12-b9ed-235b8b71d93e` restores 46 tables/2,776 rows without discrepancies but depends on the original Windows profile and is not uploaded. Whole-platform Vault/root keys, Storage bytes and project-secret recovery are not claimed. Actual admin activation and anonymous reads pass; real non-admin/expired-JWT and hosted concurrency remain limited by missing suitable accounts/explicitly disposable infrastructure. Prior real local SQL races/rollback/RLS and mocked UI checks stand. Permanent rollback tag and runbook preserved; application rollback alone does not reverse atomic database activation. No failure required rollback. Monday 2 November remains provisional and all calendar/availability constraints remain unchanged.
+
 Updated 11 October 2026 on `prep/new-season-identities`, preserving e013330 and fd2c402. **No production write or external release is authorised yet.** This is the single execution sequence; the checklist tracks its gates. Stop at a failed precondition rather than bypassing it. Approved fixtures are unchanged. [Fixture review](NEW-SEASON-FIXTURE-REVIEW.md) is the package's schedule appendix, containing both Week 1 tables and every team's kickoff distribution.
 
 ## Evidence and unresolved gates
