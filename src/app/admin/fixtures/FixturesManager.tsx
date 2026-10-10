@@ -16,7 +16,9 @@ export function filterAdminFixtures(fixtures:AdminFixtureData[],x:{editionId:str
 export const fixtureDiff=(original:AdminFixtureData|null,change:FixtureChange)=>compareFixtureChange(original,change);
 
 export default function FixturesManager({workspace,onChanged}:{workspace:FixturesWorkspace;onChanged():Promise<void>}){
- const[night,setNight]=useState<Night>(workspace.editions[0]?.night??"monday"),[editionId,setEditionId]=useState(workspace.editions[0]?.id??""),[round,setRound]=useState("all"),[date,setDate]=useState(""),[search,setSearch]=useState(""),[status,setStatus]=useState("all");
+ const requestedId=typeof window!=="undefined"?new URLSearchParams(window.location.search).get("edition"):null;
+ const initialEdition=workspace.editions.find(e=>e.id===requestedId)??workspace.editions[0];
+ const[night,setNight]=useState<Night>(initialEdition?.night??"monday"),[editionId,setEditionId]=useState(initialEdition?.id??""),[round,setRound]=useState("all"),[date,setDate]=useState(""),[search,setSearch]=useState(""),[status,setStatus]=useState("all");
  const[view,setView]=useState<View>(null),[changes,setChanges]=useState<FixtureChange[]>([]),[meta,setMeta]=useState<Meta>(blank()),[messages,setMessages]=useState<ValidationMessage[]>([]),[ack,setAck]=useState(false);
  const[notice,setNotice]=useState<{kind:"success"|"error";text:string}|null>(null),[jsonText,setJsonText]=useState(""),[jsonPreview,setJsonPreview]=useState<FixtureChangeUpload|null>(null),[existingFixtureId,setExistingFixtureId]=useState(""),[pending,startTransition]=useTransition(),[phone,setPhone]=useState(false);
  const panel=useRef<HTMLElement>(null),trigger=useRef<HTMLButtonElement|null>(null);const nightEditions=workspace.editions.filter(e=>e.night===night);const edition=nightEditions.find(e=>e.id===editionId)??nightEditions[0];

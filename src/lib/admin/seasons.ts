@@ -2,7 +2,8 @@ export type SeasonLifecycle="draft"|"validated"|"activated"|"abandoned";
 export type DraftCompetition={id:string;sourceCompetitionSeasonId:string|null;categoryId:string;categoryName:string;locationId:string;locationName:string;weekday:number;division:string;name:string;retained:boolean;venueConfirmed?:boolean};
 export type DraftPreference={kickoff_time:string;classification:"required"|"preferred"|"avoid"};
 export type DraftTeam={id:string;draftCompetitionId:string;sourceTeamId:string|null;readableId?:string;availabilityConfirmed?:boolean;selected:boolean;name:string;status:string;standingsEligible:boolean;kitColour:string|null;copyPrivateProfile:boolean;fixtureNote:string;preferences:DraftPreference[];sourceFixtureNote:string;sourcePreferences:DraftPreference[]};
-export type SeasonDraft={id:string;sourceSeasonId:string|null;name:string;startsOn:string;endsOn:string;status:SeasonLifecycle;version:number;stagedSeasonId?:string|null;competitions:DraftCompetition[];teams:DraftTeam[]};
+export type SeasonFixturePlan={id:string;competitionId:string;status:"draft"|"pending_review"|"published"|"cancelled";version:number;fixtureCount:number;reviewedAt:string|null;warningsAcknowledgedAt:string|null;messages:Array<{severity:string;message:string}>};
+export type SeasonDraft={id:string;sourceSeasonId:string|null;name:string;startsOn:string;endsOn:string;status:SeasonLifecycle;version:number;stagedSeasonId?:string|null;validatedFixtureVersions?:Record<string,number>|null;fixturePlans?:SeasonFixturePlan[];competitions:DraftCompetition[];teams:DraftTeam[]};
 export type SeasonSummary={id:string;name:string;startsOn:string;endsOn:string;lifecycle:"active"|"archived";competitions:Array<{name:string;weekday:number;division:string;teamCount:number}>};
 export type SeasonsWorkspace={active:SeasonSummary[];archived:SeasonSummary[];drafts:SeasonDraft[];categories:Array<{id:string;name:string}>;locations:Array<{id:string;name:string}>};
 export type SeasonCreateInput={name:string;startsOn:string;endsOn:string};
@@ -35,4 +36,35 @@ export function newDraftTeam(competitionId:string,id:string):DraftTeam{return {i
 export function reviewTeamEdit(previous:DraftTeam,next:DraftTeam):DraftTeam{
  const changed=previous.id!==next.id||previous.sourceTeamId!==next.sourceTeamId||previous.readableId!==next.readableId||previous.status!==next.status||previous.name!==next.name||previous.draftCompetitionId!==next.draftCompetitionId||previous.copyPrivateProfile!==next.copyPrivateProfile||previous.fixtureNote!==next.fixtureNote||JSON.stringify(previous.preferences)!==JSON.stringify(next.preferences);
  return changed?{...next,availabilityConfirmed:false}:next;
+}
+
+// These summaries describe persisted review/validation evidence, never upload progress.
+export function seasonFixtureStatus(draft:SeasonDraft,competitionId:string){
+ const history=(draft.fixturePlans??[]).filter(p=>p.competitionId===competitionId);
+ const plans=history.filter(p=>p.status!=="cancelled"),plan=plans.length===1?plans[0]:undefined;
+ const blocking=plan?.messages.some(m=>m.severity==="blocking")??false;
+ const warnings=plan?.messages.some(m=>m.severity==="warning")??false;
+ const reviewed=!!plan&&plan.status==="pending_review"&&!!plan.reviewedAt&&(!warnings||!!plan.warningsAcknowledgedAt);
+ const validated=!!plan&&draft.status==="validated"&&draft.validatedFixtureVersions?.[plan.id]===plan.version;
+ const ready=!!draft.stagedSeasonId&&plans.length===1&&!!plan?.fixtureCount&&reviewed&&validated&&!blocking;
+ return {plan,fixtureCount:plans.reduce((n,p)=>n+p.fixtureCount,0),hasHistory:history.length>0,canImport:plans.length===0,ready,
+  importStatus:plans.length>1?"Multiple plans — resolve before activation":plan?"Imported":history.length?"Previous plan cancelled":"Not imported",
+  reviewStatus:!plan?"Not reviewed":plan.status==="published"?"Published":reviewed?"Reviewed":warnings&&plan.status==="pending_review"&&!plan.warningsAcknowledgedAt?"Acknowledge warnings in Fixtures":"Awaiting review",
+  validationStatus:plans.length>1?"Resolve multiple plans in Fixtures":blocking?"Blocking issues — review fixtures":plan?.status==="published"?"Published":ready?"Validated for activation":!plan?"Import required":!plan.fixtureCount?"No fixtures in this plan":!reviewed?"Review required":"Validate the season again"};
+}
+
+export function seasonActivationBlockers(draft:SeasonDraft,dirty=false){
+ if(draft.status==="activated")return ["This season is already public."];
+ if(draft.status==="abandoned")return ["This draft was abandoned and cannot be activated."];
+ const blockers=seasonStageErrors(draft);
+ if(dirty)blockers.push("Save unsaved changes before validation or activation.");
+ if(!draft.stagedSeasonId)blockers.push("Stage teams and competitions before importing schedules.");
+ if(draft.status!=="validated")blockers.push("Validate the persisted season before activation.");
+ if(draft.stagedSeasonId)for(const c of draft.competitions.filter(c=>c.retained)){
+  const state=seasonFixtureStatus(draft,c.id);
+  if(!state.ready)blockers.push(`${c.name}: ${state.validationStatus}.`);
+ }
+ const plans=(draft.fixturePlans??[]).filter(p=>p.status!=="cancelled"&&draft.competitions.some(c=>c.retained&&c.id===p.competitionId));
+ if(draft.status==="validated"&&draft.stagedSeasonId&&Object.keys(draft.validatedFixtureVersions??{}).length!==plans.length)blockers.push("Fixture review changed. Validate the season again.");
+ return [...new Set(blockers)];
 }

@@ -1,6 +1,20 @@
 # New-season release checklist
 
-Local checkpoint: 10 October 2026, `prep/new-season-identities`. Read-only production diagnostics are now explicitly authorised; production writes, release, staging and activation still require a separate release instruction. [Single release runbook](NEW-SEASON-RELEASE-RUNBOOK.md) is the execution package. Preserve `pre-new-website-2026-09-30`, [rollback runbook](NEW-WEBSITE-ROLLBACK.md), old memberships/UUIDs, results, adjustments and 2026 S1 knockout JSON.
+Release checkpoint: 11 October 2026, `prep/new-season-identities`. Application release and private staging are authorised and have progressed as recorded below. Public activation/publication remain excluded. [Single release runbook](NEW-SEASON-RELEASE-RUNBOOK.md) is the execution package. Preserve `pre-new-website-2026-09-30`, [rollback runbook](NEW-WEBSITE-ROLLBACK.md), old memberships/UUIDs, results, adjustments and 2026 S1 knockout JSON.
+
+## Current execution status
+
+- [x] Backup availability/source freshness checked; scoped independent recovery remains verified.
+- [x] Exact King ADL correction → staging migration → readable-ID proposal applied, with UUID/history preservation.
+- [x] Application merged via PR #19 (`952b3e2`); Pages run `38078187971` succeeded. Local required checks repeated successfully.
+- [x] Save → Validate → Stage through actual hosted admin. Private season `ba8c0e2f-7f8a-41be-8ddb-65b320cebaa2` has 14/16 memberships and planned/draft editions; previous season active/published.
+- [x] Anonymous private-resource denial and planned-edition invisibility; admin Stage/read access. Historical fixture/result/adjustment checksums unchanged.
+- [x] Imported approved 182 Monday / 240 Wednesday plans through the existing Seasons workflow after the browser reconnect; no duplicate Stage/identities. Plans `f45ead76-dff5-4610-8745-6bb8eec371b5` and `cb921f98-e0c9-45b2-851d-dcddbbdcf469` are pending_review, version 4.
+- [x] All 422 hosted assignments match approved round/date/time/court/home/away values with zero differences; both constraint objects match exactly. Hosted validation has zero blockers; new-slot/private-note warnings reviewed and acknowledged. Final season draft `f3434fe5-770a-4229-b7c6-1060c5006101` is validated, version 7, binding both plan versions. No activation/publication.
+- [ ] Hosted non-admin/expired-session and hosted independent-session concurrency checks remain limited by unavailable suitable test infrastructure; completed local tests do not replace hosted evidence.
+- [ ] Public activation/publication requires separate approval. Snapshot commit → Pages → forced fallback remains an activation-time gate, not a completed test.
+
+Recovery-folder retention and exact release evidence are recorded in the runbook. Nothing deleted; off-site backup/key do not make the entire local access/evidence folder redundant.
 
 ## Completed locally
 
