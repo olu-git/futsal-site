@@ -1,5 +1,21 @@
 # New-season release checklist
 
+## Completed public release — 11 October 2026
+
+This latest status supersedes older preparation/private-only gates below. Public activation was explicitly authorised and committed atomically once; do not repeat setup or activation.
+
+- [x] Verified independent off-site recovery package still available; fresh private-staging backup restored locally (46 tables/2,776 rows, no discrepancies). Fresh DPAPI copy is profile-bound; independent off-site package is the pre-release point.
+- [x] Reviewed application PR #20 merged/deployed; archive pagination/tablet follow-up PR #21 merged/deployed. 188 tests, lint, TypeScript, static build, finals, import/snapshot and whitespace checks pass.
+- [x] Existing draft activated/version 9, both editions active/published: Monday 14 teams/182 fixtures; Wednesday 16/240. Zero differences from approved assignments; previous season archived with exact historical checksums preserved.
+- [x] Actual changed refresh [38093049933](https://github.com/olu-git/futsal-site/actions/runs/38093049933) commits snapshot-only `2a2bf5d3988499ccfc6539b6733094a8f8884d6f`; downstream [Pages 38093108663](https://github.com/olu-git/futsal-site/actions/runs/38093108663) builds that SHA and deploys successfully. Production Variables guard passes. Former deployment-chain gap closed.
+- [x] Raw deployed snapshot exactly matches committed JSON and anonymous Supabase: all 422 current fixtures, 30 teams, zero results and isolated archive/326 fixtures. Forced-fallback browser passes using a deployed-asset loopback mirror with data connections blocked; production configuration untouched.
+- [x] Live Home order, first-round dates/times/courts, both full schedules, zero standings, five unknown form boxes, history selector and mobile navigation pass. Desktop video remains full width/16:9 and click-to-load without autoplay. No page overflow at checked mobile/tablet/desktop widths.
+- [x] e013330, both approved fixture files and rollback tag unchanged; credentials, backups, temporary preview/verifiers and build output excluded from Git.
+- [ ] Real hosted non-admin/expired-JWT and concurrent mutation checks remain unverified: suitable accounts/disposable hosted infrastructure unavailable. Completed local independent-session SQL/RLS/rollback and mocked browser checks are retained; actual authorised activation passed.
+- [ ] Whole-platform Vault/Storage bytes/project-secret recovery remains outside scoped backup coverage; this release did not alter those resources.
+
+Operational follow-up: monitor scheduled refresh/Pages failures and retain manual recovery procedure. Monday 2 November remains provisional; no fixture cancellation or assignment change was made.
+
 Release checkpoint: 11 October 2026, `prep/new-season-identities`. Application release and private staging are authorised and have progressed as recorded below. Public activation/publication remain excluded. [Single release runbook](NEW-SEASON-RELEASE-RUNBOOK.md) is the execution package. Preserve `pre-new-website-2026-09-30`, [rollback runbook](NEW-WEBSITE-ROLLBACK.md), old memberships/UUIDs, results, adjustments and 2026 S1 knockout JSON.
 
 ## Current execution status
