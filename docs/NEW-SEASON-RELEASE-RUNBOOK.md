@@ -13,13 +13,26 @@ Prepared 10 October 2026 on `prep/new-season-identities`, preserving e013330 and
 
 ## Release preconditions
 
-Release authority must distinguish application deployment/private staging from public activation and refresh dispatch. Approval for deployment/staging alone does not authorise activation. Freeze other admin writes for the release window. Confirm the proposed season name below. Record current master SHA, latest successful Pages run, old season/edition IDs, public counts and the verified logical backup described below. No automatic database rollback proposal is supplied.
+Release authority must distinguish application deployment/private staging from public activation and refresh dispatch. Approval for deployment/staging alone does not authorise activation. Freeze other admin writes for the release window. Use the organiser-approved season name below. Record current master SHA, latest successful Pages run, old season/edition IDs, public counts and the verified logical backup described below. No automatic database rollback proposal is supplied.
 
-### Season display name proposed for approval
+### Approved season display name and creation inputs
 
 The read-only production query on 10 October returns one season: **2026 Season 1**, 23 March to 7 October 2026. This is the observed year-plus-season-number convention, not evidence of a historical cross-year naming rule. The wizard accepts a supplied non-empty name; validation rejects duplicate names without deriving the year from the dates.
 
-Propose exactly **2026–27 Season 2** (en dash between the years), retaining the numbering while identifying the span. Overall regular-season dates: 12 October 2026 to 26 May 2027; Monday finishes 3 May and Wednesday finishes 26 May. The name remains a proposal until organiser approval; no stored name, fixture metadata or archived label is changed by this documentation.
+The organiser approved exactly **Season 2 2026** on 10 October 2026 for both Monday and Wednesday. This supersedes the previous cross-year-name proposal. Keep the approved dates across 2026/2027 despite the chosen display label. Both editions share the season name; retain competition names Monday Night and Wednesday Night, Division A. No production season has been created or renamed.
+
+Prepared wizard inputs (documentation only; not an executed RPC):
+
+| Field | Exact value |
+|---|---|
+| Name | `Season 2 2026` |
+| Source season | `08dce649-66b8-5d32-9c9e-d07a180cf591` (2026 Season 1) |
+| Overall start / end | `2026-10-12` / `2027-05-26` |
+| Monday first / last regular-season fixture | `2026-10-12` / `2027-05-03` |
+| Wednesday first / last regular-season fixture | `2026-10-14` / `2027-05-26` |
+| Fixture import inputs | Unchanged `docs/drafts/monday-rounds.json` (182) and `docs/drafts/wednesday-rounds.json` (240) |
+
+Do not regenerate assignments, add finals dates, or change fixture dates to match the display year. The provisional 2 November cancellation scenario remains unapplied.
 
 ### Database backup gate and concrete procedure
 
@@ -59,6 +72,14 @@ Required release coverage, checked against the current catalogue:
 5. Take another verified checkpoint after schema/application release and before activation if private staging has occurred or other authorised edits resumed. Keep both copies. Production recovery requires its own explicit instruction and reviewed restore scope; it must account for all changes since capture. Never run `pg_restore --clean` against production as an automatic rollback.
 
 Official references: [Supabase backups](https://supabase.com/docs/guides/platform/backups), [Supabase logical recovery](https://supabase.com/docs/guides/platform/migrating-within-supabase/backup-restore), [PostgreSQL 17 pg_dump](https://www.postgresql.org/docs/17/app-pgdump.html) and [role metadata export](https://www.postgresql.org/docs/17/app-pg-dumpall.html). The export/restore procedure is prepared, **not executed or restore-verified**.
+
+#### Authorised backup attempt: access/tooling blockers
+
+The organiser authorised read-only backup creation and disposable local restoration on 10 October. Local inspection found no configured `PGSERVICE`, `PGSERVICEFILE`, `PGPASSFILE`, database host/user/password/URL environment settings, standard Windows `pg_service.conf` or `pgpass.conf`. Repository environment files contain only the public Supabase URL/publishable key. Those keys cannot authenticate `pg_dump` or restore a database. No credential values were displayed.
+
+No `pg_dump`, `pg_dumpall`, `pg_restore`, `psql`, Supabase CLI or Docker is on PATH. The retained temporary embedded PostgreSQL 17 installation contains `postgres.exe`/`initdb.exe` and the Node client, but not dump/restore client tools. Local fresh-cluster verification remains available once a backup exists; no database was overwritten. The SQL connector returns query results into tool output and has no direct archive-to-file stream, so it is not used to export private/Auth rows or substitute an incomplete backup.
+
+**Smallest organiser action:** privately configure an existing production database connection as libpq service `fis_production_backup` in `%APPDATA%\postgresql\pg_service.conf`, and its password in `%APPDATA%\postgresql\pgpass.conf` (or an existing approved secret manager), restricted to the Windows user. Obtain host/port/user from the verified project's Connect panel: direct or session pooler, not transaction pooler; database `postgres`, TLS enabled. Do not paste credentials here or reset/create credentials. Confirm only that configuration is ready. PostgreSQL 17 dump/restore tools can then be installed from the official distribution and used under this backup-only authority. A protected encrypted off-repository destination and fresh isolated restore target will be established before any private export. No archive, plaintext export, backup folder containing private data or restore result has been produced yet. Application deployment/private staging remain blocked by the unverified recovery gate.
 
 ### Separate release scopes
 
@@ -103,7 +124,7 @@ Resolve any new remote changes carefully, rerun affected checks and review the f
 
 ## Private staging and review
 
-1. Open `/admin/seasons/` as the verified FIS admin. Create a private draft copying 2026 Season 1 (`08dce649-66b8-5d32-9c9e-d07a180cf591`). Use the confirmed season label, season start 12 October 2026 and overall end 26 May 2027; the Monday edition's actual last fixture remains 3 May. Retain Monday/Wednesday Division A at Endeavour Hills Leisure Centre.
+1. Open `/admin/seasons/` as the verified FIS admin. Create a private draft named exactly **Season 2 2026**, copying 2026 Season 1 (`08dce649-66b8-5d32-9c9e-d07a180cf591`). Use season start 12 October 2026 and overall end 26 May 2027; the Monday edition's actual last fixture remains 3 May. Retain Monday/Wednesday Division A at Endeavour Hills Leisure Centre. Both editions use the approved season display name.
 2. Select exactly the confirmed 14 Monday and 16 Wednesday teams. Copy the 26 returning source memberships with their UUID/history/kit links. Add fresh Monday Xaywan/Nassaji FC and Wednesday Etihad FC/Buckle City with their exact readable IDs. The wizard creates fresh UUIDs, stable after Save/Stage; local UUID reservations are not an additional SQL provisioning step. Import resolves approved fixture readable IDs against these staged memberships. Record actual new UUIDs after staging. Never reuse Ibiza, former Xaywan or another team's history.
 3. Review all availability using the reconciled organiser/repository rules; empty DB profiles do not erase established restrictions. Monday King ADL has no current preference. The four new entrants currently permit all four slots. Buckle City counts normally in standings. Check confirmations, including the standing venue booking; no 56 separate date confirmations. Calendar and time rules are in the approved JSON constraints. Monday 2 November remains provisional.
 4. **Save -> Validate -> Stage**. Validate persisted data only; Save invalidates earlier validation. Stage creates private planned/draft editions and memberships, preserving the old active season. Structure/profiles freeze after Stage; there is no supported staged discard/restructure path. A new constraint before activation is a stop/recovery decision, not permission to edit DB rows manually.
@@ -162,4 +183,4 @@ Fetch static Home/Monday/Wednesday before hydration and inspect expected new-sea
 
 If 2 November is cancelled, re-date subsequent Monday rounds to available Mondays, preserving approved opponents/times/courts/orientations and exclusions, and revalidate/review before activation. Monday ends 10 May; Wednesday unchanged. Do not apply that scenario unless cancellation is confirmed.
 
-**Next outstanding gate:** create and restore-verify the protected logical backup; no platform recovery point is available. Confirm proposed **2026–27 Season 2**. Only after explicit authority for application deployment/private preparation may the guarded King ADL correction run first. Public activation and refresh dispatch need their distinct approval. New-resource hosted reads must pass after migration and before setup; existing verification limitations remain recorded.
+**Next outstanding gate:** configure the existing database connection privately, then create and restore-verify the protected logical backup; no platform recovery point is available. **Season 2 2026** is approved for both nights, with all dates/422 fixtures unchanged. Only after explicit authority for application deployment/private preparation may the guarded King ADL correction run first. Public activation and refresh dispatch need their distinct approval. New-resource hosted reads must pass after migration and before setup; existing verification limitations remain recorded.
