@@ -9,8 +9,8 @@ Release checkpoint: 11 October 2026, `prep/new-season-identities`. Application r
 - [x] Application merged via PR #19 (`952b3e2`); Pages run `38078187971` succeeded. Local required checks repeated successfully.
 - [x] Save → Validate → Stage through actual hosted admin. Private season `ba8c0e2f-7f8a-41be-8ddb-65b320cebaa2` has 14/16 memberships and planned/draft editions; previous season active/published.
 - [x] Anonymous private-resource denial and planned-edition invisibility; admin Stage/read access. Historical fixture/result/adjustment checksums unchanged.
-- [ ] Upload the approved 182/240 plans: Brave extension local-file access blocked the first upload; no fixture plans created. Enable “Allow access to file URLs” or use organiser uploads. Resume existing draft `f3434fe5-770a-4229-b7c6-1060c5006101` without repeating Stage.
-- [ ] Validate/review both imported plans, compare all 422 hosted assignments with approved files, final persisted-season validation.
+- [x] Imported approved 182 Monday / 240 Wednesday plans through the existing Seasons workflow after the browser reconnect; no duplicate Stage/identities. Plans `f45ead76-dff5-4610-8745-6bb8eec371b5` and `cb921f98-e0c9-45b2-851d-dcddbbdcf469` are pending_review, version 4.
+- [x] All 422 hosted assignments match approved round/date/time/court/home/away values with zero differences; both constraint objects match exactly. Hosted validation has zero blockers; new-slot/private-note warnings reviewed and acknowledged. Final season draft `f3434fe5-770a-4229-b7c6-1060c5006101` is validated, version 7, binding both plan versions. No activation/publication.
 - [ ] Hosted non-admin/expired-session and hosted independent-session concurrency checks remain limited by unavailable suitable test infrastructure; completed local tests do not replace hosted evidence.
 - [ ] Public activation/publication requires separate approval. Snapshot commit → Pages → forced fallback remains an activation-time gate, not a completed test.
 
