@@ -72,6 +72,7 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .competition-season-selection select { max-width: 100%; min-width: 0; padding: 12px; border: 1px solid var(--fis-blue); color: var(--fis-blue); background: var(--fis-cream); font: 13px/1.8 var(--font-sans); }
 .competition-season-selection p { margin: 0; }
 @media (max-width: 767px) { .home-upcoming-nights { grid-template-columns: 1fr; }.competition-season-selection label { width: 100%; } }
+@media (min-width: 768px) and (max-width: 1100px) { .home-upcoming-nights { grid-template-columns: 1fr; } }
 .type-display { font: 800 var(--type-display)/var(--leading-display) var(--font-sans); }
 .type-page-title { font: 700 var(--type-page-title)/var(--leading-heading) var(--font-sans); }
 .type-section-title { font: 700 var(--type-section-title)/var(--leading-heading) var(--font-sans); }
