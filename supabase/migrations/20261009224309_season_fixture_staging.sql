@@ -341,6 +341,9 @@ end $$;
 create trigger guard_staged_season_header before update or delete on public.season_drafts for each row execute function private.guard_staged_season_header();
 revoke all on function private.guard_staged_season_header() from public,anon,authenticated;
 -- No new public tables or policies: all new fields inherit existing admin-only RLS.
+-- Hosted default privileges include operations that row policies do not govern.
+-- Draft clients need DML only, never table-wide TRUNCATE or trigger/reference grants.
+revoke truncate,references,trigger on public.season_drafts,public.season_draft_competitions,public.season_draft_teams from public,anon,authenticated;
 revoke all on function public.stage_season_draft(uuid,integer),public.import_season_schedule(uuid,integer,uuid,jsonb) from public,anon;
 grant execute on function public.stage_season_draft(uuid,integer),public.import_season_schedule(uuid,integer,uuid,jsonb) to authenticated;
 revoke all on function private.fixture_change_report_before_staging(uuid),private.fixture_change_report(uuid),private.assert_staged_season_reviewed(uuid),private.guard_staged_fixture_publication() from public,anon,authenticated;

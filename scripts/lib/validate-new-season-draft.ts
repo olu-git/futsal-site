@@ -78,7 +78,7 @@ function validateDraft(draft: LocalMondayDraft, night: "monday" | "wednesday") {
   }));
   if (maximumHomeAwayRun > 3) throw new Error("Home/away streak exceeds three.");
   const repeated = [...pairs.values()].flatMap((matches) => matches.slice(1).map((match, i) => match.round - matches[i].round));
-  return { rounds, matches: rounds * games, startDate: expectedDates[0], endDate: expectedDates.at(-1), totals, hardConstraints: "passed", calendar: "confirmed dates, standing venue booking and known restrictions passed; returning private preferences unverified", minimumRepeatGap: Math.min(...repeated), maximumHomeAwayRun, preferences, gapsUnderFour, sameHalfDoubles };
+  return { rounds, matches: rounds * games, startDate: expectedDates[0], endDate: expectedDates.at(-1), totals, hardConstraints: "passed", calendar: "confirmed dates, standing venue booking and known restrictions passed; private-profile reconciliation is recorded separately in the preparation report", minimumRepeatGap: Math.min(...repeated), maximumHomeAwayRun, preferences, gapsUnderFour, sameHalfDoubles };
 }
 export const validateMondayDraft = (draft: LocalMondayDraft) => validateDraft(draft, "monday");
 export const validateWednesdayDraft = (draft: LocalMondayDraft) => validateDraft(draft, "wednesday");

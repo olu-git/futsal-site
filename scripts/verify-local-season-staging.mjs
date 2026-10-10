@@ -23,7 +23,12 @@ async function fail(sql,args,pattern){try{await db.query(sql,args);assert.fail('
 async function history(){return (await db.query(`select jsonb_build_object('teams',(select jsonb_agg(to_jsonb(t) order by t.id) from public.teams t where t.competition_season_id in('8021a2bb-eb2b-55fe-9900-d3f50facf092','e1db4456-0663-55d2-95a1-681d17163b91')),'fixtures',(select jsonb_agg(to_jsonb(f) order by f.id) from public.fixtures f),'results',(select jsonb_agg(to_jsonb(r) order by r.id) from public.result_versions r),'adjustments',(select jsonb_agg(to_jsonb(a) order by a.id) from public.standing_adjustments a)) data`)).rows[0].data;}
 try{
  await db.exec(`create role anon;create role authenticated;create role service_role;create schema auth;create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('fis.local_actor',true),'')::uuid$$;create function auth.role() returns text language sql stable as $$select 'local-test'::text$$;`);
- for(const name of readdirSync('supabase/migrations').filter(n=>n.endsWith('.sql')).sort())await db.exec(read('supabase/migrations/'+name));
+ for(const name of readdirSync('supabase/migrations').filter(n=>n.endsWith('.sql')).sort()){
+  // Reproduce observed hosted default privileges before the proposed migration.
+  if(name==='20261009224309_season_fixture_staging.sql')await db.exec('grant truncate,references,trigger on public.season_drafts,public.season_draft_competitions,public.season_draft_teams to authenticated;');
+  await db.exec(read('supabase/migrations/'+name));
+ }
+ for(const table of ['season_drafts','season_draft_competitions','season_draft_teams'])for(const privilege of ['TRUNCATE','REFERENCES','TRIGGER'])for(const role of ['anon','authenticated'])assert.equal((await db.query('select has_table_privilege($1,$2,$3) allowed',[role,'public.'+table,privilege])).rows[0].allowed,false);
  await db.exec(read('supabase/imports/2026-s1/current-season-import.sql'));
  await db.query('insert into auth.users values($1,$2,now())',[adminId,'contact@futsalindoorsoccer.com.au']);
  await db.query('insert into private.admin_users(user_id) values($1)',[adminId]);
@@ -56,6 +61,9 @@ try{
  await db.exec(correction);await db.exec(correction);
  assert.equal((await db.query('select profile_version from public.teams where id=$1',[king])).rows[0].profile_version,3);
  assert.equal((await db.query('select count(*)::integer n from public.team_kickoff_preferences where team_id=$1',[king])).rows[0].n,0);
+ const preflight=(await db.exec(read('supabase/production/new-season-release-preflight.sql'))).find(r=>r.rows?.[0]?.exact_accidental_row!==undefined);
+ assert.equal(preflight.rows[0].preference_count,0);
+ assert.equal(preflight.rows[0].exact_accidental_row,false);
  const correctedDraft=(await db.query('select * from public.create_season_draft($1,$2,$3,null)',['CORRECTED COPY','2026-10-12','2027-05-26'])).rows[0].draft_id;
  await db.query("update public.season_draft_teams set preferences='[{\"kickoff_time\":\"19:00\",\"classification\":\"preferred\"}]'::jsonb,availability_confirmed=false where season_draft_id=$1 and source_team_id=$2",[correctedDraft,king]);
  await fail("update public.season_draft_teams set source_preferences='[{\"kickoff_time\":\"19:00:00\",\"classification\":\"preferred\"}]'::jsonb where season_draft_id=$1 and source_team_id=$2",[correctedDraft,king],/accidental 19:00/);
@@ -189,6 +197,12 @@ try{
  await db.exec('rollback;');
  assert.deepEqual(await history(),original);
  assert.equal((await db.query('select lifecycle from public.competition_seasons where id=$1',[comps[0].id])).rows[0].lifecycle,'planned');
+ if(realPostgres){
+  await race('two-session activation commits once','select * from public.activate_season_draft($1,$2,\'ACTIVATE\')',[id,version]);
+  await fail("select * from public.activate_season_draft($1,$2,'ACTIVATE')",[id,version],/Stale|activated|validated/i);
+  assert.equal((await db.query('select count(*)::integer n from public.fixtures where competition_season_id=any($1::uuid[])',[comps.map(c=>c.id)])).rows[0].n,422);
+  assert.deepEqual((await history()).fixtures.filter(f=>original.fixtures.some(old=>old.id===f.id)),original.fixtures);
+ }
  console.log(JSON.stringify({engine:realPostgres?'PostgreSQL 17 ephemeral loopback cluster':'PGlite in-memory PostgreSQL',raceEvidence,migrations:7,hostedConnections:0,newTeams:4,stagedMemberships:30,reviewedMatches:422,adminDenial:'passed',kingAdlCorrection:'passed: exact deletion, rollback, repeat, changed-profile refusal, stale copy/validation rejection; legitimate future preference permitted',availabilityGate:'passed: four organiser-confirmed, 26 returning remain gated',readOnlyProfileReview:'passed: 26 scoped rows, no free text, non-admin denied',sourceProfileFreshness:'passed: later source changes block validation/activation',saveResetsValidation:'passed',staleVersions:'passed',failedImportRollback:'passed',ordinaryPublicationBlocked:'passed',anonymousDraftInvisibility:'passed',historyPreserved:'passed',fixtureReviewVersionBinding:'passed',secondNightFailureRollback:'passed',buckleNormalStandings:'passed with synthetic draw',atomicSyntheticRollover:'passed then rolled back',limits:realPostgres?'Mock Auth helpers; real independent SQL sessions; no hosted Auth/PostgREST':'Mock Auth helpers; single connection; no hosted PostgREST or concurrency test'},null,2));
 }catch(e){console.error(e.message,e.where??'',e.position??'');if(e.position)console.error(e.query?.slice(Number(e.position)-100,Number(e.position)+100));process.exitCode=1;}finally{await db.close();}
 // The temporary PostgreSQL library's beforeExit hook otherwise replaces exitCode with zero.

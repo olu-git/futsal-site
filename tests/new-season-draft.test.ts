@@ -8,7 +8,7 @@ test("approved Monday counts decompose into 26 feasible rounds with balanced hom
   const result = validateMondayDraft(draft);
   assert.equal(result.matches, 182);
   assert.equal(result.maximumHomeAwayRun, 3);
-  assert.equal(result.calendar, "confirmed dates, standing venue booking and known restrictions passed; returning private preferences unverified");
+  assert.equal(result.calendar, "confirmed dates, standing venue booking and known restrictions passed; private-profile reconciliation is recorded separately in the preparation report");
   assert.deepEqual(result.gapsUnderFour, []);
   assert.deepEqual(result.sameHalfDoubles, []);
   assert(Object.values(result.totals).every((total) => total.played === 26 && total.home === 13 && total.away === 13));
