@@ -8,6 +8,8 @@ export interface CompetitionDataset {
   teams: Team[];
   fixtures: Fixture[];
   standingsAdjustments: StandingAdjustment[];
+  seasonNames?: Partial<Record<"monday" | "wednesday", string>>;
+  archives?: Array<{ id: string; name: string; data: CompetitionDataset }>;
 }
 
 export interface CompetitionRepository {
@@ -17,6 +19,7 @@ export interface CompetitionRepository {
 
 // Legacy calculation scripts share this snapshot with the async public service.
 export const jsonCompetitionData: CompetitionDataset = {
+  ...snapshotData.data as CompetitionDataset,
   teams: (snapshotData.data.teams as Team[]).map((team) => ({
     ...team, name: teamDisplayName(team.id, team.name),
   })),

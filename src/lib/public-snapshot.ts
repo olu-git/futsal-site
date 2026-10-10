@@ -1,4 +1,4 @@
-import { mapPublishedCompetition, selectPublicEditions, type PublishedCompetitionRows } from "./public-competition";
+import { archivedSeasonRows, mapPublishedCompetition, selectPublicEditions, type PublishedCompetitionRows } from "./public-competition";
 import type { CompetitionDataset } from "./competition-repository";
 import type { CompetitionNight, Fixture, StandingAdjustment, Team } from "./types";
 import { canonicalTeamReadableId } from "./team-readable-id";
@@ -12,7 +12,7 @@ export interface PublicSnapshot {
 const nights: CompetitionNight[] = ["monday", "wednesday"];
 const byText = (a: string, b: string) => a.localeCompare(b, "en");
 
-export function buildPublicSnapshot(rows: PublishedCompetitionRows): PublicSnapshot {
+export function buildPublicSnapshot(rows: PublishedCompetitionRows, includeHistory = true): PublicSnapshot {
   const editions = selectPublicEditions(rows.editions);
   const editionIds = new Set(editions.map((row) => row.id));
   const sourceTeams = rows.teams.filter((row) => editionIds.has(row.competition_season_id));
@@ -45,8 +45,12 @@ export function buildPublicSnapshot(rows: PublishedCompetitionRows): PublicSnaps
   const snapshot: PublicSnapshot = {
     format: "fis-public-competition-v1",
     notice: "Generated from published regular-season Supabase data. Do not edit manually.",
-    data: { teams, fixtures, standingsAdjustments },
+    data: { teams, fixtures, standingsAdjustments, ...(mapped.seasonNames ? { seasonNames: mapped.seasonNames } : {}) },
   };
+  if (includeHistory) {
+    const archives = archivedSeasonRows(rows).map(s => ({ id:s.id, name:s.name, data:buildPublicSnapshot(s.rows, false).data }));
+    if (archives.length) snapshot.data.archives = archives;
+  }
   validatePublicSnapshot(snapshot);
   return snapshot;
 }
@@ -61,6 +65,16 @@ export function validatePublicSnapshot(value: unknown): asserts value is PublicS
   const snapshot = value as Partial<PublicSnapshot>;
   if (snapshot.format !== "fis-public-competition-v1" || !snapshot.data) throw new Error("Unsupported public snapshot format.");
   const { teams, fixtures, standingsAdjustments } = snapshot.data;
+  if (snapshot.data.seasonNames && Object.entries(snapshot.data.seasonNames).some(([night,name]) => !["monday","wednesday"].includes(night) || typeof name !== "string" || !name.trim())) throw new Error("Invalid snapshot season labels.");
+  if (snapshot.data.archives !== undefined) {
+    if (!Array.isArray(snapshot.data.archives)) throw new Error("Invalid snapshot history.");
+    const ids = new Set<string>();
+    for (const archive of snapshot.data.archives) {
+      if (!archive.id || ids.has(archive.id) || typeof archive.name !== "string" || !archive.name.trim() || archive.data?.archives) throw new Error("Invalid or duplicate archived season.");
+      ids.add(archive.id);
+      validatePublicSnapshot({format:snapshot.format,notice:snapshot.notice,data:archive.data});
+    }
+  }
   if (!Array.isArray(teams) || !Array.isArray(fixtures) || !Array.isArray(standingsAdjustments)) throw new Error("Snapshot arrays are missing.");
   const teamIds = new Map<string, Team>();
   const fixtureIds = new Set<string>();

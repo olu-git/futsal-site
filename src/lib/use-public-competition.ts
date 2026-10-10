@@ -1,8 +1,8 @@
 "use client";
 
 import { createElement, useEffect, useState } from "react";
-import { competitionRepository } from "./competition-repository";
-import { createCompetitionService, competitionService } from "./competition-service";
+import { competitionService } from "./competition-service";
+import { competitionViews } from "./competition-views";
 import { loadPublishedCompetition, preferPublished } from "./public-competition";
 
 export type CompetitionView = Awaited<ReturnType<typeof competitionService.getNight>>;
@@ -12,6 +12,7 @@ export interface PublicCompetitionViews {
   monday: CompetitionView;
   wednesday: CompetitionView;
   nextRound: NextRoundView;
+  history?: Array<{id:string;name:string;monday:CompetitionView;wednesday:CompetitionView}>;
 }
 
 export function usePublicCompetition(initial: PublicCompetitionViews) {
@@ -22,11 +23,7 @@ export function usePublicCompetition(initial: PublicCompetitionViews) {
     let cancelled = false;
     preferPublished(async () => {
       const data = await loadPublishedCompetition();
-      const service = createCompetitionService({ readCompetition: async () => data, readFinals: competitionRepository.readFinals });
-      const [monday, wednesday, nextRound] = await Promise.all([
-        service.getNight("monday"), service.getNight("wednesday"), service.getNextRound(),
-      ]);
-      return { monday, wednesday, nextRound };
+      return competitionViews(data);
     }, initial).then(({ value, source }) => {
       if (!cancelled) { setViews(value); setSource(source); }
     });

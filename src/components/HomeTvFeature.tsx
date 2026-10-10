@@ -2,8 +2,7 @@ import Link from "next/link";
 import { replayVideos } from "@/data/fis-tv";
 import ReplayPlayer from "./fis-tv/ReplayPlayer";
 
-// Temporary hero-adjacent feature until new-season fixtures arrive. Move this
-// component in HomeContent when repositioning; no season-driven switching.
+// Standalone feature after the league tables; video and styling remain shared.
 export default function HomeTvFeature() {
   const video = replayVideos.find(replay => replay.id === "grand-final")!;
   return <section className="fis-container home-tv-entry" aria-labelledby="home-fis-tv">

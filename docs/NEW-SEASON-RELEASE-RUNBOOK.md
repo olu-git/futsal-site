@@ -189,11 +189,13 @@ Resolve any new remote changes carefully, rerun affected checks and review the f
 
 Only within explicit release authority, enter **ACTIVATE** once. The transaction publishes both new fixture plans/editions, archives corresponding old editions, and preserves old teams/results/adjustments/UUID relationships and JSON finals. Activation is the first public exposure; do not separately Publish planned fixtures.
 
-Read back 30 new memberships, 422 regular-season fixtures, both active/published editions, old archived/published editions, no new results and unchanged historical scores/kits. Public Home/Monday/Wednesday must select the new season, show 14/16-team tables and five unknown form badges, and retain labelled 2026 S1 finals. Existing public archived regular-season selection is unsupported; archive preservation is verified through admin/read-only records rather than claiming a new public history selector.
+Read back 30 new memberships, 422 regular-season fixtures, both active/published editions, old archived/published editions, no new results and unchanged historical scores/kits. Public Home/Monday/Wednesday must select the new season, show 14/16-team tables and five unknown form badges, and retain labelled 2026 S1 finals on Home. The activation release adds a public season selector on each night page: published archived results and standings remain accessible, isolated from current-season form and tables, in both live data and the generated fallback. Private editions are excluded.
 
 If the request times out, reload/read status before retrying. A committed activation must not be performed again; a rolled-back failure leaves the old season active and no partial published new night. Stale errors require reload and review, never forced version numbers.
 
 ## Snapshot and Pages verification
+
+For the authorised 11 October public activation, release the admin cleanup and public presentation together first: Home upcoming fixtures for both nights -> league tables -> existing FIS TV -> archived knockout preview; no obsolete full-knockout link or night-page bracket. Do not alter approved assignments. Then activate the existing validated draft once and dispatch the master-only refresh. Record the actual changed snapshot commit and downstream successful Pages checkout; a reconciliation-only/no-change run is insufficient for this activation's chain check.
 
 Follow the exact nine-step procedure in [release checklist](NEW-SEASON-RELEASE-CHECKLIST.md#exact-future-snapshot-to-pages-and-forced-fallback-verification). After naturally changed published data, authorised master refresh or the 17/47 schedule must validate and create a snapshot-only commit. Record resulting commit SHA, then successful downstream Pages run/checkout SHA containing it. A no-change run verifies reconciliation only; a skipped Pages run is not this chain test. Failures preserve the previous committed fallback.
 

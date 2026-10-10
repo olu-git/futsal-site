@@ -63,6 +63,15 @@ a, button { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 3px solid var(--fis-red); outline-offset: 4px; }
 ::selection { background: var(--fis-blue); color: white; }
 button, h1, h2, h3, p, span { letter-spacing: 0; }
+.home-upcoming-nights { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.home-upcoming-nights > article { min-width: 0; }
+.home-upcoming-nights .section-head { align-items: start; gap: 12px; }
+.home-upcoming-nights .section-head p { margin: 8px 0 0; }
+.competition-season-selection { padding-top: 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: end; }
+.competition-season-selection label { display: grid; gap: 10px; color: var(--fis-blue); font: 10px/1.8 var(--font-mono); }
+.competition-season-selection select { max-width: 100%; min-width: 0; padding: 12px; border: 1px solid var(--fis-blue); color: var(--fis-blue); background: var(--fis-cream); font: 13px/1.8 var(--font-sans); }
+.competition-season-selection p { margin: 0; }
+@media (max-width: 767px) { .home-upcoming-nights { grid-template-columns: 1fr; }.competition-season-selection label { width: 100%; } }
 .type-display { font: 800 var(--type-display)/var(--leading-display) var(--font-sans); }
 .type-page-title { font: 700 var(--type-page-title)/var(--leading-heading) var(--font-sans); }
 .type-section-title { font: 700 var(--type-section-title)/var(--leading-heading) var(--font-sans); }

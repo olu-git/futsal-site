@@ -1,11 +1,9 @@
-import { competitionService } from "@/lib/competition-service";
 import type { CompetitionNight } from "@/lib/types";
 import CompetitionContent from "./CompetitionContent";
+import { jsonCompetitionData } from "@/lib/competition-repository";
+import { competitionViews } from "@/lib/competition-views";
 
 export default async function CompetitionPage({ night }: { night: CompetitionNight }) {
-  const [monday, wednesday, nextRound, finals] = await Promise.all([
-    competitionService.getNight("monday"), competitionService.getNight("wednesday"),
-    competitionService.getNextRound(), competitionService.getFinals(),
-  ]);
-  return <CompetitionContent night={night} initial={{ monday, wednesday, nextRound }} finals={finals.finals[night]} />;
+  const initial = await competitionViews(jsonCompetitionData);
+  return <CompetitionContent night={night} initial={initial} />;
 }

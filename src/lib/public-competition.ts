@@ -11,8 +11,9 @@ export interface PublicEditionRow {
   id: string;
   publication_state: string;
   lifecycle: string;
+  season_id?: string;
   competitions: Relation<{ weekday: number; division: string }>;
-  seasons: Relation<{ ends_on: string }>;
+  seasons: Relation<{ ends_on: string; name?: string }>;
 }
 export interface PublicTeamRow {
   id: string;
@@ -148,15 +149,18 @@ export function mapPublishedCompetition(
         lost: row.losses_delta, goalsFor: row.goals_for_delta, goalsAgainst: row.goals_against_delta,
         points: row.points_delta, note: row.reason };
     });
-  return { teams: mappedTeams, fixtures: mappedFixtures, standingsAdjustments: mappedAdjustments };
+  const seasonNames = Object.fromEntries(editions.filter(e => one(e.seasons).name).map(e => [one(e.competitions).weekday === 1 ? "monday" : "wednesday", one(e.seasons).name]));
+  return { teams: mappedTeams, fixtures: mappedFixtures, standingsAdjustments: mappedAdjustments,
+    ...(Object.keys(seasonNames).length ? { seasonNames } : {}) };
 }
 
 export async function loadPublishedCompetitionRows(supabase: SupabaseClient): Promise<PublishedCompetitionRows> {
   const { data: editionRows, error: editionError } = await supabase.from("competition_seasons")
-    .select("id, lifecycle, publication_state, competitions(weekday, division), seasons(ends_on)")
+    .select("id, season_id, lifecycle, publication_state, competitions(weekday, division), seasons(name, ends_on)")
     .eq("publication_state", "published");
   if (editionError) throw new Error(`Unable to load public competitions: ${editionError.message}`);
-  const editions = selectPublicEditions((editionRows ?? []) as PublicEditionRow[]);
+  const editions = ((editionRows ?? []) as PublicEditionRow[]).filter(e => e.publication_state === "published" && [1,3].includes(Number(one(e.competitions).weekday)));
+  selectPublicEditions(editions); // Fail closed if either published night is unavailable.
   const ids = editions.map((edition) => edition.id);
   const [teamResponse, fixtureResponse, adjustmentResponse] = await Promise.all([
     supabase.from("teams").select("id, competition_season_id, legacy_id, name, status, standings_eligible, kit_colour", { count: "exact" }).in("competition_season_id", ids),
@@ -189,5 +193,19 @@ export async function loadPublishedCompetitionRows(supabase: SupabaseClient): Pr
 
 export async function loadPublishedCompetition(): Promise<CompetitionDataset> {
   const rows = await loadPublishedCompetitionRows(createClient());
-  return mapPublishedCompetition(rows.editions, rows.teams, rows.fixtures, rows.results, rows.adjustments);
+  return mapPublishedSeasons(rows);
+}
+
+export function archivedSeasonRows(rows: PublishedCompetitionRows) {
+  const current = new Set(selectPublicEditions(rows.editions).map(e => e.season_id));
+  return [...new Set(rows.editions.filter(e => e.publication_state === "published" && e.lifecycle === "archived" && e.season_id && !current.has(e.season_id)).map(e => e.season_id!))].sort().map(id => {
+    const editions = rows.editions.filter(e => e.season_id === id && e.publication_state === "published");
+    return { id, name: one(editions[0].seasons).name ?? id, rows: { ...rows, editions } };
+  });
+}
+
+export function mapPublishedSeasons(rows: PublishedCompetitionRows): CompetitionDataset {
+  const data = mapPublishedCompetition(selectPublicEditions(rows.editions), rows.teams, rows.fixtures, rows.results, rows.adjustments);
+  const archives = archivedSeasonRows(rows).map(s => ({ id:s.id, name:s.name, data:mapPublishedCompetition(s.rows.editions, rows.teams, rows.fixtures, rows.results, rows.adjustments) }));
+  return { ...data, ...(archives.length ? { archives } : {}) };
 }
