@@ -1,11 +1,19 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
-import { mapPublishedSeasons, type PublishedCompetitionRows } from "../src/lib/public-competition";
+import { loadPublicPages, mapPublishedSeasons, type PublishedCompetitionRows } from "../src/lib/public-competition";
 import { buildPublicSnapshot } from "../src/lib/public-snapshot";
 import { competitionViews } from "../src/lib/competition-views";
 
 const rows:PublishedCompetitionRows={editions:[],teams:[],fixtures:[],results:[],adjustments:[]};
+
+test("published archive pagination exceeds the row cap and rejects partial or changing reads",async()=>{
+ const source=Array.from({length:1203},(_,id)=>({id}));const calls:number[]=[];
+ const result=await loadPublicPages(async(from,to)=>{calls.push(from);return {data:source.slice(from,to+1),count:source.length,error:null};});
+ assert.deepEqual(result.data,source);assert.deepEqual(calls,[0,500,1000]);
+ await assert.rejects(()=>loadPublicPages(async()=>({data:source.slice(0,499),count:1203,error:null})),/truncated/);
+ await assert.rejects(()=>loadPublicPages(async(from,to)=>({data:source.slice(from,to+1),count:from?1204:1203,error:null})),/changed during pagination/);
+});
 for(const [id,lifecycle,name] of [["old","archived","2026 Season 1"],["new","active","Season 2 2026"],["private","planned","Private season"]])for(const weekday of [1,3]){
  const edition=`${id}-${weekday}`;
  rows.editions.push({id:edition,season_id:id,lifecycle,publication_state:id==="private"?"draft":"published",competitions:{weekday,division:"A"},seasons:{name,ends_on:id==="old"?"2026-10-07":"2027-05-26"}});

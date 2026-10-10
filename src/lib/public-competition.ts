@@ -69,6 +69,27 @@ export interface PublishedCompetitionRows {
   adjustments: PublicAdjustmentRow[];
 }
 
+export async function loadPublicPages<T>(load: (from: number, to: number) => PromiseLike<{
+  data: T[] | null; error: { message: string } | null; count: number | null;
+}>) {
+  const data: T[] = [];
+  let expected: number | undefined;
+  for (let from = 0; ; from += 500) {
+    const page = await load(from, from + 499);
+    if (page.error) throw new Error(`Unable to load public competition data: ${page.error.message}`);
+    if (page.count === null || (expected !== undefined && page.count !== expected)) {
+      throw new Error("Public competition changed during pagination. Retry the read.");
+    }
+    expected = page.count;
+    const items = page.data ?? [];
+    data.push(...items);
+    if (data.length === expected) return { data, count: expected };
+    if (items.length !== 500 || data.length > expected) {
+      throw new Error("Public competition data was truncated by the database row limit.");
+    }
+  }
+}
+
 export async function preferPublished<T>(load: () => Promise<T>, snapshot: T, timeoutMs = 8000): Promise<{ value: T; source: "supabase" | "snapshot" }> {
   let timer: ReturnType<typeof setTimeout> | undefined;
   try {
@@ -163,19 +184,12 @@ export async function loadPublishedCompetitionRows(supabase: SupabaseClient): Pr
   selectPublicEditions(editions); // Fail closed if either published night is unavailable.
   const ids = editions.map((edition) => edition.id);
   const [teamResponse, fixtureResponse, adjustmentResponse] = await Promise.all([
-    supabase.from("teams").select("id, competition_season_id, legacy_id, name, status, standings_eligible, kit_colour", { count: "exact" }).in("competition_season_id", ids),
-    supabase.from("fixtures").select("id, competition_season_id, legacy_id, round_number, match_date, kickoff_time, court, home_team_id, away_team_id, stage, publication_state, public_note", { count: "exact" })
-      .in("competition_season_id", ids).eq("stage", "regular_season").eq("publication_state", "published"),
-    supabase.from("standing_adjustments").select("id, competition_season_id, team_id, legacy_id, played_delta, wins_delta, draws_delta, losses_delta, goals_for_delta, goals_against_delta, points_delta, reason, publication_state", { count: "exact" })
-      .in("competition_season_id", ids).eq("publication_state", "published"),
+    loadPublicPages((from,to)=>supabase.from("teams").select("id, competition_season_id, legacy_id, name, status, standings_eligible, kit_colour", { count: "exact" }).in("competition_season_id", ids).order("id").range(from,to)),
+    loadPublicPages((from,to)=>supabase.from("fixtures").select("id, competition_season_id, legacy_id, round_number, match_date, kickoff_time, court, home_team_id, away_team_id, stage, publication_state, public_note", { count: "exact" })
+      .in("competition_season_id", ids).eq("stage", "regular_season").eq("publication_state", "published").order("id").range(from,to)),
+    loadPublicPages((from,to)=>supabase.from("standing_adjustments").select("id, competition_season_id, team_id, legacy_id, played_delta, wins_delta, draws_delta, losses_delta, goals_for_delta, goals_against_delta, points_delta, reason, publication_state", { count: "exact" })
+      .in("competition_season_id", ids).eq("publication_state", "published").order("id").range(from,to)),
   ]);
-  if (teamResponse.error) throw new Error(`Unable to load public teams: ${teamResponse.error.message}`);
-  if (fixtureResponse.error) throw new Error(`Unable to load public fixtures: ${fixtureResponse.error.message}`);
-  if (adjustmentResponse.error) throw new Error(`Unable to load public standings adjustments: ${adjustmentResponse.error.message}`);
-  if (teamResponse.count !== (teamResponse.data ?? []).length || fixtureResponse.count !== (fixtureResponse.data ?? []).length ||
-      adjustmentResponse.count !== (adjustmentResponse.data ?? []).length) {
-    throw new Error("Public competition data was truncated by the database row limit.");
-  }
   const fixtureRows = (fixtureResponse.data ?? []) as PublicFixtureRow[];
   const resultRows: PublicResultRow[] = [];
   for (let offset = 0; offset < fixtureRows.length; offset += 100) {
