@@ -774,6 +774,36 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .admin-season-warning p { margin: 7px 0 0; }
 .admin-season-activate { border-color: var(--fis-red) !important; background: var(--fis-red) !important; color: white !important; }
 .admin-season-activate:disabled { opacity: .42; }
+.admin-season-schedules,.admin-season-staging,.admin-season-publication { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--fis-blue); min-width: 0; }
+.admin-season-schedules h3,.admin-season-staging h3,.admin-season-publication h3 { font: 11px/1.8 var(--font-mono); color: var(--fis-blue); text-transform: uppercase; margin: 0 0 12px; }
+.admin-season-schedules > header p,.admin-season-publication > p { margin: 0 0 20px; }
+.admin-season-schedule-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.admin-season-schedule-card { min-width: 0; padding: 20px; border: 1px solid var(--fis-blue); background: var(--fis-cream-light); display: flex; flex-direction: column; gap: 16px; }
+.admin-season-schedule-card > header { display: flex; flex-wrap: wrap; align-items: start; justify-content: space-between; gap: 12px; }
+.admin-season-schedule-card h4 { margin: 0; font: 10px/1.8 var(--font-mono); color: var(--fis-blue); text-transform: uppercase; overflow-wrap: anywhere; }
+.admin-season-schedule-card p { margin: 0; }
+.admin-season-fixture-count strong { font-size: 24px; color: var(--fis-blue); }
+.admin-season-review .admin-season-schedule-status { display: grid; grid-template-columns: 1fr; margin: 0; gap: 12px; }
+.admin-season-review .admin-season-schedule-status > div { border: 0; padding: 0; min-width: 0; }
+.admin-season-schedule-status dd { overflow-wrap: anywhere; }
+.admin-season-schedule-upload { display: grid; gap: 10px; min-width: 0; font: 8px/1.8 var(--font-mono); color: var(--fis-blue); }
+.admin-season-schedule-upload input { width: 100%; min-width: 0; max-width: 100%; border: 1px solid var(--fis-blue); padding: 6px; font: 12px/1.8 var(--font-sans); color: var(--fis-blue); }
+.admin-season-schedule-upload input::file-selector-button { border: 1px solid var(--fis-blue); border-radius: 0; background: var(--fis-blue); color: white; font: 8px/1.8 var(--font-mono); padding: 10px 8px; margin-right: 8px; cursor: pointer; }
+.admin-season-schedule-upload input:disabled { opacity: .55; }
+.admin-season-review-link { display: inline-block; font: 8px/1.8 var(--font-mono); color: var(--fis-blue); text-transform: uppercase; text-underline-offset: 4px; padding: 8px 0; }
+.admin-season-review-link .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.admin-season-schedule-actions { margin-top: auto; }
+.admin-season-replacement { border-top: 1px solid #d6dce5; padding-top: 16px; }
+.admin-season-replacement summary { color: var(--fis-blue); font: 8px/1.8 var(--font-mono); cursor: pointer; text-transform: uppercase; }
+.admin-season-replacement[open] > :not(summary) { margin-top: 16px; }
+.admin-season-replacement button { max-width: 100%; }
+.admin-season-publication .admin-season-help ul { margin: 0; padding-left: 20px; }
+.admin-season-publication .admin-season-help p { margin: 0; }
+.admin-season-schedules a:focus-visible,.admin-season-replacement summary:focus-visible { outline: 3px solid var(--fis-red); outline-offset: 3px; }
+@media (max-width: 767px) {
+  .admin-season-schedule-grid { grid-template-columns: 1fr; gap: 16px; }
+  .admin-season-schedule-card { padding: 16px; }
+}
 .admin-season-help { margin: 8px 0 0; color: #52617b; font-size: 13px; }
 .admin-season-wizard > footer { align-items: center; justify-content: space-between; z-index: 2; }
 .admin-season-wizard > footer { position: static; }
