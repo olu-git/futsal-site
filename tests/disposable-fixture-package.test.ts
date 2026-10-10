@@ -55,6 +55,7 @@ test("migration order and rollback-only verification remain explicit", () => {
     "202609280001_transactional_team_profile_save.sql",
     "202609290001_transactional_standing_adjustments.sql",
     "202609300001_season_draft_management.sql",
+    "20261009224309_season_fixture_staging.sql",
   ]);
   const verification = readFileSync("supabase/verification/verify_fixture_change_sets.sql", "utf8");
   assert.match(verification, /^-- DISPOSABLE TEST PROJECT ONLY — DO NOT RUN IN PRODUCTION/m);

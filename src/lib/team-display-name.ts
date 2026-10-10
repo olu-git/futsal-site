@@ -1,7 +1,8 @@
 import teams from "@/data/teams.json";
+import { canonicalTeamReadableId } from "./team-readable-id";
 
-const declansOfficialName = teams.find((team) => team.id === "mon-declans-team")?.name;
+const declansOfficialName = teams.find((team) => team.id === "mon-declans-delinquents")?.name;
 
 export function teamDisplayName(legacyId: string | null, publishedName: string): string {
-  return legacyId === "mon-declans-team" ? declansOfficialName ?? publishedName : publishedName;
+  return legacyId && canonicalTeamReadableId(legacyId) === "mon-declans-delinquents" ? declansOfficialName ?? publishedName : publishedName;
 }

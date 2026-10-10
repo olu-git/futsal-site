@@ -1,0 +1,178 @@
+{
+  "purpose": "Local draft membership reservations only; not production records",
+  "seasonId": null,
+  "entries": [
+    {
+      "uuid": "d9611fa9-bb86-4b6c-9ed9-75113b231809",
+      "night": "monday",
+      "name": "Xaywan",
+      "readableId": "mon-xaywan",
+      "kind": "new",
+      "sourceTeamId": null,
+      "status": "active",
+      "standingsEligible": true,
+      "kitColour": null,
+      "availabilityConfirmed": true,
+      "availabilityConfirmation": {
+        "confirmedBy": "organiser",
+        "asOf": "2026-10-10",
+        "kickoffTimes": [
+          "19:00",
+          "19:40",
+          "20:20",
+          "21:00"
+        ],
+        "position": "Current confirmation; availability may change and must be reviewed if updated",
+        "sourceProfileInherited": false
+      },
+      "preferences": [
+        {
+          "kickoff_time": "19:00",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "19:40",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "20:20",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "21:00",
+          "classification": "required"
+        }
+      ],
+      "fixtureNote": "Organiser confirmed 19:00, 19:40, 20:20 and 21:00 on 10 October 2026. Current position; availability may change. No inherited private profile."
+    },
+    {
+      "uuid": "8b1cff66-c38c-45bd-92a7-7fe80ac89a77",
+      "night": "monday",
+      "name": "Nassaji FC",
+      "readableId": "mon-nassaji-fc",
+      "kind": "new",
+      "sourceTeamId": null,
+      "status": "active",
+      "standingsEligible": true,
+      "kitColour": null,
+      "availabilityConfirmed": true,
+      "availabilityConfirmation": {
+        "confirmedBy": "organiser",
+        "asOf": "2026-10-10",
+        "kickoffTimes": [
+          "19:00",
+          "19:40",
+          "20:20",
+          "21:00"
+        ],
+        "position": "Current confirmation; availability may change and must be reviewed if updated",
+        "sourceProfileInherited": false
+      },
+      "preferences": [
+        {
+          "kickoff_time": "19:00",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "19:40",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "20:20",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "21:00",
+          "classification": "required"
+        }
+      ],
+      "fixtureNote": "Organiser confirmed 19:00, 19:40, 20:20 and 21:00 on 10 October 2026. Current position; availability may change. No inherited private profile."
+    },
+    {
+      "uuid": "bd8d3bb7-6fde-4e7d-b779-3ed2d92e6d72",
+      "night": "wednesday",
+      "name": "Etihad FC",
+      "readableId": "wed-etihad-fc",
+      "kind": "new",
+      "sourceTeamId": null,
+      "status": "active",
+      "standingsEligible": true,
+      "kitColour": null,
+      "availabilityConfirmed": true,
+      "availabilityConfirmation": {
+        "confirmedBy": "organiser",
+        "asOf": "2026-10-10",
+        "kickoffTimes": [
+          "19:00",
+          "19:40",
+          "20:20",
+          "21:00"
+        ],
+        "position": "Current confirmation; availability may change and must be reviewed if updated",
+        "sourceProfileInherited": false
+      },
+      "preferences": [
+        {
+          "kickoff_time": "19:00",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "19:40",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "20:20",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "21:00",
+          "classification": "required"
+        }
+      ],
+      "fixtureNote": "Organiser confirmed 19:00, 19:40, 20:20 and 21:00 on 10 October 2026. Current position; availability may change. No inherited private profile."
+    },
+    {
+      "uuid": "36781b64-2197-4a8b-ac2e-bb9c76c5c167",
+      "night": "wednesday",
+      "name": "Buckle City",
+      "readableId": "wed-buckle-city",
+      "kind": "placeholder",
+      "sourceTeamId": null,
+      "status": "active",
+      "standingsEligible": true,
+      "kitColour": null,
+      "availabilityConfirmed": true,
+      "availabilityConfirmation": {
+        "confirmedBy": "organiser",
+        "asOf": "2026-10-10",
+        "kickoffTimes": [
+          "19:00",
+          "19:40",
+          "20:20",
+          "21:00"
+        ],
+        "position": "Current confirmation; availability may change and must be reviewed if updated",
+        "sourceProfileInherited": false
+      },
+      "preferences": [
+        {
+          "kickoff_time": "19:00",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "19:40",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "20:20",
+          "classification": "required"
+        },
+        {
+          "kickoff_time": "21:00",
+          "classification": "required"
+        }
+      ],
+      "fixtureNote": "Organiser confirmed 19:00, 19:40, 20:20 and 21:00 on 10 October 2026. Current position; availability may change. No inherited private profile. Goldlink Up and Buckle City cannot kick off simultaneously except when playing each other."
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { mapPublishedCompetition, selectPublicEditions, type PublishedCompetitionRows } from "./public-competition";
 import type { CompetitionDataset } from "./competition-repository";
 import type { CompetitionNight, Fixture, StandingAdjustment, Team } from "./types";
+import { canonicalTeamReadableId } from "./team-readable-id";
 
 export interface PublicSnapshot {
   format: "fis-public-competition-v1";
@@ -18,7 +19,7 @@ export function buildPublicSnapshot(rows: PublishedCompetitionRows): PublicSnaps
   const idMap = new Map<string, string>();
   for (const team of sourceTeams) {
     if (idMap.has(team.id)) throw new Error("Duplicate source team ID.");
-    idMap.set(team.id, team.legacy_id ?? team.id);
+    idMap.set(team.id, canonicalTeamReadableId(team.legacy_id ?? team.id, team.id));
   }
 
   const mapped = mapPublishedCompetition(editions, sourceTeams, rows.fixtures, rows.results, rows.adjustments);

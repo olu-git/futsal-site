@@ -17,12 +17,12 @@ insert into _fis_expected_standings values
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-hope', 'Hope', 24, 10, 6, 8, 116, 118, -2, 36, 7),
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-hazara-united', 'Hazara United', 24, 7, 5, 12, 70, 92, -22, 26, 8),
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-goal-diggers', 'Goal Diggers', 24, 7, 3, 14, 91, 109, -18, 24, 9),
-  ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-toss', 'Toss', 24, 7, 2, 15, 94, 126, -32, 23, 10),
+  ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-king-adl', 'King ADL', 24, 7, 2, 15, 94, 126, -32, 23, 10),
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-top-up-fc', 'Top Up FC', 24, 5, 4, 15, 67, 83, -16, 19, 11),
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-moza-mama', 'Moza Mama', 24, 6, 1, 17, 121, 157, -36, 19, 12),
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-blue-dragons', 'Blue Dragons', 24, 6, 0, 18, 94, 185, -91, 18, 13),
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-salvos', 'Salvos', 24, 4, 5, 15, 89, 138, -49, 17, 14),
-  ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-declans-team', 'Declan''s Delinquents', 24, 5, 1, 18, 16, 54, -38, 16, 15),
+  ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-declans-delinquents', 'Declan''s Delinquents', 24, 5, 1, 18, 16, 54, -38, 16, 15),
   ('8021a2bb-eb2b-55fe-9900-d3f50facf092', 'mon-bunyip', 'Bunyip', 24, 5, 0, 19, 21, 64, -43, 15, 16),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-afg', 'AFG', 26, 23, 1, 2, 206, 121, 85, 70, 1),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-ghazni-united', 'Ghazni United', 26, 21, 0, 5, 213, 110, 103, 63, 2),
@@ -32,14 +32,14 @@ insert into _fis_expected_standings values
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-wildcats', 'Wildcats', 27, 13, 2, 12, 184, 164, 20, 41, 6),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-moza-mama', 'Moza Mama', 26, 12, 4, 10, 142, 133, 9, 40, 7),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-misfits', 'Misfits', 26, 11, 4, 11, 190, 166, 24, 37, 8),
-  ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-toss', 'Toss', 26, 11, 1, 14, 128, 133, -5, 34, 9),
+  ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-king-adl', 'King ADL', 26, 11, 1, 14, 128, 133, -5, 34, 9),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-ibiza', 'Ibiza', 26, 8, 4, 14, 129, 150, -21, 28, 10),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-umoja-stars', 'Umoja Stars', 26, 4, 7, 15, 102, 148, -46, 19, 11),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-dwell-fc', 'Dwell FC', 26, 4, 6, 16, 80, 145, -65, 18, 12),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-unathletico', 'Unathletico', 26, 5, 2, 19, 97, 173, -76, 17, 13),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-rinnai', 'Rinnai', 26, 4, 2, 20, 134, 217, -83, 14, 14),
   ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-mts-fc', 'MTS FC', 26, 4, 0, 22, 41, 120, -79, 12, 15),
-  ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-xaywan', 'Kuq E Zi', 26, 2, 1, 23, 18, 93, -75, 7, 16);
+  ('e1db4456-0663-55d2-95a1-681d17163b91', 'wed-kuq-e-zi', 'Kuq E Zi', 26, 2, 1, 23, 18, 93, -75, 7, 16);
 
 do $verify$
 begin

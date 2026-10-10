@@ -252,3 +252,8 @@ export function nextChangeSetStatus(current: ChangeSetStatus, action: "submit" |
   if (!next) throw new Error(`Cannot ${action} a ${current} fixture change set.`);
   return next;
 }
+
+export function fixtureChangesDirty(current:FixtureChange[],saved:FixtureChange[]):boolean{
+ const fingerprint=(changes:FixtureChange[])=>JSON.stringify(changes.map(c=>[c.operation,c.fixtureId??null,c.expectedFixtureVersion??null,c.reason,c.homeTeamName??null,c.awayTeamName??null,c.proposed?[c.proposed.roundNumber,c.proposed.date,c.proposed.kickoffTime,c.proposed.court,c.proposed.homeTeamId,c.proposed.awayTeamId,c.proposed.publicationState]:null]));
+ return fingerprint(current)!==fingerprint(saved);
+}

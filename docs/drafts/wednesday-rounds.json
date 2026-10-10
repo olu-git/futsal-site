@@ -1,0 +1,1013 @@
+{
+  "format": "fis-local-schedule-draft-v1",
+  "night": "wednesday",
+  "publication": "local-review-only",
+  "calendarStatus": "dated-standing-venue-booking-confirmed-returning-availability-pending",
+  "startDate": "2026-10-14",
+  "endDate": "2027-05-26",
+  "constraints": {
+    "dates": [
+      "2026-10-14",
+      "2026-10-21",
+      "2026-11-04",
+      "2026-11-11",
+      "2026-11-18",
+      "2026-11-25",
+      "2026-12-02",
+      "2026-12-09",
+      "2026-12-16",
+      "2026-12-23",
+      "2027-01-13",
+      "2027-01-20",
+      "2027-01-27",
+      "2027-02-03",
+      "2027-02-10",
+      "2027-02-17",
+      "2027-02-24",
+      "2027-03-03",
+      "2027-03-10",
+      "2027-03-17",
+      "2027-03-24",
+      "2027-03-31",
+      "2027-04-07",
+      "2027-04-14",
+      "2027-04-21",
+      "2027-04-28",
+      "2027-05-05",
+      "2027-05-12",
+      "2027-05-19",
+      "2027-05-26"
+    ],
+    "roster": [
+      "wed-afg",
+      "wed-goldlink-up",
+      "wed-misfits",
+      "wed-ghazni-united",
+      "wed-pops",
+      "wed-rinnai",
+      "wed-unathletico",
+      "wed-wildcats",
+      "wed-hazara-united",
+      "wed-king-adl",
+      "wed-ibiza",
+      "wed-umoja-stars",
+      "wed-mts-fc",
+      "wed-kuq-e-zi",
+      "wed-etihad-fc",
+      "wed-buckle-city"
+    ],
+    "allowedKickoffs": {
+      "wed-afg": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-goldlink-up": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-misfits": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-ghazni-united": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-pops": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-rinnai": [
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-unathletico": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-wildcats": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-hazara-united": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-king-adl": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-ibiza": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-umoja-stars": [
+        "21:00"
+      ],
+      "wed-mts-fc": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-kuq-e-zi": [
+        "19:00",
+        "19:40",
+        "20:20"
+      ],
+      "wed-etihad-fc": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ],
+      "wed-buckle-city": [
+        "19:00",
+        "19:40",
+        "20:20",
+        "21:00"
+      ]
+    },
+    "exceptions": [
+      {
+        "team": "wed-kuq-e-zi",
+        "opponent": "wed-umoja-stars",
+        "time": "21:00"
+      }
+    ],
+    "pairs": [
+      {
+        "a": "wed-afg",
+        "b": "wed-goldlink-up",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-misfits",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-ghazni-united",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-pops",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-rinnai",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-unathletico",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-wildcats",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-hazara-united",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-king-adl",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-ibiza",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-umoja-stars",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-afg",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-misfits",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-ghazni-united",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-pops",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-rinnai",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-unathletico",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-wildcats",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-hazara-united",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-king-adl",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-ibiza",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-umoja-stars",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-goldlink-up",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-ghazni-united",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-pops",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-rinnai",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-unathletico",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-wildcats",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-hazara-united",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-king-adl",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-ibiza",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-umoja-stars",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-misfits",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-pops",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-rinnai",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-unathletico",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-wildcats",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-hazara-united",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-king-adl",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-ibiza",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-umoja-stars",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-ghazni-united",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-pops",
+        "b": "wed-rinnai",
+        "count": 2
+      },
+      {
+        "a": "wed-pops",
+        "b": "wed-unathletico",
+        "count": 2
+      },
+      {
+        "a": "wed-pops",
+        "b": "wed-wildcats",
+        "count": 2
+      },
+      {
+        "a": "wed-pops",
+        "b": "wed-hazara-united",
+        "count": 2
+      },
+      {
+        "a": "wed-pops",
+        "b": "wed-king-adl",
+        "count": 2
+      },
+      {
+        "a": "wed-pops",
+        "b": "wed-ibiza",
+        "count": 2
+      },
+      {
+        "a": "wed-pops",
+        "b": "wed-umoja-stars",
+        "count": 2
+      },
+      {
+        "a": "wed-pops",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-pops",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-pops",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-pops",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-rinnai",
+        "b": "wed-unathletico",
+        "count": 2
+      },
+      {
+        "a": "wed-rinnai",
+        "b": "wed-wildcats",
+        "count": 2
+      },
+      {
+        "a": "wed-rinnai",
+        "b": "wed-hazara-united",
+        "count": 2
+      },
+      {
+        "a": "wed-rinnai",
+        "b": "wed-king-adl",
+        "count": 2
+      },
+      {
+        "a": "wed-rinnai",
+        "b": "wed-ibiza",
+        "count": 2
+      },
+      {
+        "a": "wed-rinnai",
+        "b": "wed-umoja-stars",
+        "count": 2
+      },
+      {
+        "a": "wed-rinnai",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-rinnai",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-rinnai",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-rinnai",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-unathletico",
+        "b": "wed-wildcats",
+        "count": 2
+      },
+      {
+        "a": "wed-unathletico",
+        "b": "wed-hazara-united",
+        "count": 2
+      },
+      {
+        "a": "wed-unathletico",
+        "b": "wed-king-adl",
+        "count": 2
+      },
+      {
+        "a": "wed-unathletico",
+        "b": "wed-ibiza",
+        "count": 2
+      },
+      {
+        "a": "wed-unathletico",
+        "b": "wed-umoja-stars",
+        "count": 2
+      },
+      {
+        "a": "wed-unathletico",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-unathletico",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-unathletico",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-unathletico",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-wildcats",
+        "b": "wed-hazara-united",
+        "count": 2
+      },
+      {
+        "a": "wed-wildcats",
+        "b": "wed-king-adl",
+        "count": 2
+      },
+      {
+        "a": "wed-wildcats",
+        "b": "wed-ibiza",
+        "count": 2
+      },
+      {
+        "a": "wed-wildcats",
+        "b": "wed-umoja-stars",
+        "count": 2
+      },
+      {
+        "a": "wed-wildcats",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-wildcats",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-wildcats",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-wildcats",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-hazara-united",
+        "b": "wed-king-adl",
+        "count": 2
+      },
+      {
+        "a": "wed-hazara-united",
+        "b": "wed-ibiza",
+        "count": 2
+      },
+      {
+        "a": "wed-hazara-united",
+        "b": "wed-umoja-stars",
+        "count": 2
+      },
+      {
+        "a": "wed-hazara-united",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-hazara-united",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-hazara-united",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-hazara-united",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-king-adl",
+        "b": "wed-ibiza",
+        "count": 2
+      },
+      {
+        "a": "wed-king-adl",
+        "b": "wed-umoja-stars",
+        "count": 2
+      },
+      {
+        "a": "wed-king-adl",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-king-adl",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-king-adl",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-king-adl",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-ibiza",
+        "b": "wed-umoja-stars",
+        "count": 2
+      },
+      {
+        "a": "wed-ibiza",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-ibiza",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-ibiza",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-ibiza",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-umoja-stars",
+        "b": "wed-mts-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-umoja-stars",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-umoja-stars",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-umoja-stars",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-mts-fc",
+        "b": "wed-kuq-e-zi",
+        "count": 2
+      },
+      {
+        "a": "wed-mts-fc",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-mts-fc",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-kuq-e-zi",
+        "b": "wed-etihad-fc",
+        "count": 2
+      },
+      {
+        "a": "wed-kuq-e-zi",
+        "b": "wed-buckle-city",
+        "count": 2
+      },
+      {
+        "a": "wed-etihad-fc",
+        "b": "wed-buckle-city",
+        "count": 2
+      }
+    ],
+    "sharedPlayers": [
+      [
+        "wed-goldlink-up",
+        "wed-buckle-city"
+      ]
+    ],
+    "weekOnePairs": [],
+    "minimumRepeatGap": 4,
+    "maximumHomeAwayRun": 3
+  },
+  "fixtures": [
+    {"round": 1, "date": "2026-10-14", "time": "19:00", "court": 1, "home": "wed-misfits", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 1, "date": "2026-10-14", "time": "19:00", "court": 2, "home": "wed-afg", "away": "wed-buckle-city", "provisional": false},
+    {"round": 1, "date": "2026-10-14", "time": "19:40", "court": 1, "home": "wed-etihad-fc", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 1, "date": "2026-10-14", "time": "19:40", "court": 2, "home": "wed-mts-fc", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 1, "date": "2026-10-14", "time": "20:20", "court": 1, "home": "wed-ibiza", "away": "wed-rinnai", "provisional": false},
+    {"round": 1, "date": "2026-10-14", "time": "20:20", "court": 2, "home": "wed-unathletico", "away": "wed-king-adl", "provisional": false},
+    {"round": 1, "date": "2026-10-14", "time": "21:00", "court": 1, "home": "wed-pops", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 1, "date": "2026-10-14", "time": "21:00", "court": 2, "home": "wed-hazara-united", "away": "wed-wildcats", "provisional": false},
+    {"round": 2, "date": "2026-10-21", "time": "19:00", "court": 1, "home": "wed-king-adl", "away": "wed-pops", "provisional": false},
+    {"round": 2, "date": "2026-10-21", "time": "19:00", "court": 2, "home": "wed-wildcats", "away": "wed-unathletico", "provisional": false},
+    {"round": 2, "date": "2026-10-21", "time": "19:40", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-buckle-city", "provisional": false},
+    {"round": 2, "date": "2026-10-21", "time": "19:40", "court": 2, "home": "wed-rinnai", "away": "wed-hazara-united", "provisional": false},
+    {"round": 2, "date": "2026-10-21", "time": "20:20", "court": 1, "home": "wed-etihad-fc", "away": "wed-afg", "provisional": false},
+    {"round": 2, "date": "2026-10-21", "time": "20:20", "court": 2, "home": "wed-ghazni-united", "away": "wed-ibiza", "provisional": false},
+    {"round": 2, "date": "2026-10-21", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-misfits", "provisional": false},
+    {"round": 2, "date": "2026-10-21", "time": "21:00", "court": 2, "home": "wed-goldlink-up", "away": "wed-mts-fc", "provisional": false},
+    {"round": 3, "date": "2026-11-04", "time": "19:00", "court": 1, "home": "wed-mts-fc", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 3, "date": "2026-11-04", "time": "19:00", "court": 2, "home": "wed-hazara-united", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 3, "date": "2026-11-04", "time": "19:40", "court": 1, "home": "wed-afg", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 3, "date": "2026-11-04", "time": "19:40", "court": 2, "home": "wed-misfits", "away": "wed-king-adl", "provisional": false},
+    {"round": 3, "date": "2026-11-04", "time": "20:20", "court": 1, "home": "wed-ibiza", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 3, "date": "2026-11-04", "time": "20:20", "court": 2, "home": "wed-pops", "away": "wed-wildcats", "provisional": false},
+    {"round": 3, "date": "2026-11-04", "time": "21:00", "court": 1, "home": "wed-buckle-city", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 3, "date": "2026-11-04", "time": "21:00", "court": 2, "home": "wed-unathletico", "away": "wed-rinnai", "provisional": false},
+    {"round": 4, "date": "2026-11-11", "time": "19:00", "court": 1, "home": "wed-goldlink-up", "away": "wed-hazara-united", "provisional": false},
+    {"round": 4, "date": "2026-11-11", "time": "19:00", "court": 2, "home": "wed-ghazni-united", "away": "wed-unathletico", "provisional": false},
+    {"round": 4, "date": "2026-11-11", "time": "19:40", "court": 1, "home": "wed-rinnai", "away": "wed-pops", "provisional": false},
+    {"round": 4, "date": "2026-11-11", "time": "19:40", "court": 2, "home": "wed-wildcats", "away": "wed-misfits", "provisional": false},
+    {"round": 4, "date": "2026-11-11", "time": "20:20", "court": 1, "home": "wed-mts-fc", "away": "wed-afg", "provisional": false},
+    {"round": 4, "date": "2026-11-11", "time": "20:20", "court": 2, "home": "wed-king-adl", "away": "wed-buckle-city", "provisional": false},
+    {"round": 4, "date": "2026-11-11", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 4, "date": "2026-11-11", "time": "21:00", "court": 2, "home": "wed-etihad-fc", "away": "wed-ibiza", "provisional": false},
+    {"round": 5, "date": "2026-11-18", "time": "19:00", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-king-adl", "provisional": false},
+    {"round": 5, "date": "2026-11-18", "time": "19:00", "court": 2, "home": "wed-buckle-city", "away": "wed-wildcats", "provisional": false},
+    {"round": 5, "date": "2026-11-18", "time": "19:40", "court": 1, "home": "wed-unathletico", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 5, "date": "2026-11-18", "time": "19:40", "court": 2, "home": "wed-pops", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 5, "date": "2026-11-18", "time": "20:20", "court": 1, "home": "wed-misfits", "away": "wed-rinnai", "provisional": false},
+    {"round": 5, "date": "2026-11-18", "time": "20:20", "court": 2, "home": "wed-hazara-united", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 5, "date": "2026-11-18", "time": "21:00", "court": 1, "home": "wed-afg", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 5, "date": "2026-11-18", "time": "21:00", "court": 2, "home": "wed-ibiza", "away": "wed-mts-fc", "provisional": false},
+    {"round": 6, "date": "2026-11-25", "time": "19:00", "court": 1, "home": "wed-etihad-fc", "away": "wed-unathletico", "provisional": false},
+    {"round": 6, "date": "2026-11-25", "time": "19:00", "court": 2, "home": "wed-goldlink-up", "away": "wed-pops", "provisional": false},
+    {"round": 6, "date": "2026-11-25", "time": "19:40", "court": 1, "home": "wed-rinnai", "away": "wed-buckle-city", "provisional": false},
+    {"round": 6, "date": "2026-11-25", "time": "19:40", "court": 2, "home": "wed-mts-fc", "away": "wed-hazara-united", "provisional": false},
+    {"round": 6, "date": "2026-11-25", "time": "20:20", "court": 1, "home": "wed-wildcats", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 6, "date": "2026-11-25", "time": "20:20", "court": 2, "home": "wed-ghazni-united", "away": "wed-misfits", "provisional": false},
+    {"round": 6, "date": "2026-11-25", "time": "21:00", "court": 1, "home": "wed-king-adl", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 6, "date": "2026-11-25", "time": "21:00", "court": 2, "home": "wed-ibiza", "away": "wed-afg", "provisional": false},
+    {"round": 7, "date": "2026-12-02", "time": "19:00", "court": 1, "home": "wed-pops", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 7, "date": "2026-12-02", "time": "19:00", "court": 2, "home": "wed-buckle-city", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 7, "date": "2026-12-02", "time": "19:40", "court": 1, "home": "wed-afg", "away": "wed-king-adl", "provisional": false},
+    {"round": 7, "date": "2026-12-02", "time": "19:40", "court": 2, "home": "wed-unathletico", "away": "wed-mts-fc", "provisional": false},
+    {"round": 7, "date": "2026-12-02", "time": "20:20", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-rinnai", "provisional": false},
+    {"round": 7, "date": "2026-12-02", "time": "20:20", "court": 2, "home": "wed-hazara-united", "away": "wed-ibiza", "provisional": false},
+    {"round": 7, "date": "2026-12-02", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-wildcats", "provisional": false},
+    {"round": 7, "date": "2026-12-02", "time": "21:00", "court": 2, "home": "wed-misfits", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 8, "date": "2026-12-09", "time": "19:00", "court": 1, "home": "wed-hazara-united", "away": "wed-afg", "provisional": false},
+    {"round": 8, "date": "2026-12-09", "time": "19:00", "court": 2, "home": "wed-etihad-fc", "away": "wed-misfits", "provisional": false},
+    {"round": 8, "date": "2026-12-09", "time": "19:40", "court": 1, "home": "wed-ghazni-united", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 8, "date": "2026-12-09", "time": "19:40", "court": 2, "home": "wed-wildcats", "away": "wed-king-adl", "provisional": false},
+    {"round": 8, "date": "2026-12-09", "time": "20:20", "court": 1, "home": "wed-mts-fc", "away": "wed-pops", "provisional": false},
+    {"round": 8, "date": "2026-12-09", "time": "20:20", "court": 2, "home": "wed-goldlink-up", "away": "wed-buckle-city", "provisional": false},
+    {"round": 8, "date": "2026-12-09", "time": "21:00", "court": 1, "home": "wed-rinnai", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 8, "date": "2026-12-09", "time": "21:00", "court": 2, "home": "wed-ibiza", "away": "wed-unathletico", "provisional": false},
+    {"round": 9, "date": "2026-12-16", "time": "19:00", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 9, "date": "2026-12-16", "time": "19:00", "court": 2, "home": "wed-misfits", "away": "wed-mts-fc", "provisional": false},
+    {"round": 9, "date": "2026-12-16", "time": "19:40", "court": 1, "home": "wed-afg", "away": "wed-wildcats", "provisional": false},
+    {"round": 9, "date": "2026-12-16", "time": "19:40", "court": 2, "home": "wed-buckle-city", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 9, "date": "2026-12-16", "time": "20:20", "court": 1, "home": "wed-unathletico", "away": "wed-hazara-united", "provisional": false},
+    {"round": 9, "date": "2026-12-16", "time": "20:20", "court": 2, "home": "wed-pops", "away": "wed-ibiza", "provisional": false},
+    {"round": 9, "date": "2026-12-16", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 9, "date": "2026-12-16", "time": "21:00", "court": 2, "home": "wed-king-adl", "away": "wed-rinnai", "provisional": false},
+    {"round": 10, "date": "2026-12-23", "time": "19:00", "court": 1, "home": "wed-ghazni-united", "away": "wed-king-adl", "provisional": false},
+    {"round": 10, "date": "2026-12-23", "time": "19:00", "court": 2, "home": "wed-mts-fc", "away": "wed-buckle-city", "provisional": false},
+    {"round": 10, "date": "2026-12-23", "time": "19:40", "court": 1, "home": "wed-unathletico", "away": "wed-afg", "provisional": false},
+    {"round": 10, "date": "2026-12-23", "time": "19:40", "court": 2, "home": "wed-hazara-united", "away": "wed-pops", "provisional": false},
+    {"round": 10, "date": "2026-12-23", "time": "20:20", "court": 1, "home": "wed-rinnai", "away": "wed-wildcats", "provisional": false},
+    {"round": 10, "date": "2026-12-23", "time": "20:20", "court": 2, "home": "wed-etihad-fc", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 10, "date": "2026-12-23", "time": "21:00", "court": 1, "home": "wed-goldlink-up", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 10, "date": "2026-12-23", "time": "21:00", "court": 2, "home": "wed-ibiza", "away": "wed-misfits", "provisional": false},
+    {"round": 11, "date": "2027-01-13", "time": "19:00", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-mts-fc", "provisional": false},
+    {"round": 11, "date": "2027-01-13", "time": "19:00", "court": 2, "home": "wed-wildcats", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 11, "date": "2027-01-13", "time": "19:40", "court": 1, "home": "wed-misfits", "away": "wed-hazara-united", "provisional": false},
+    {"round": 11, "date": "2027-01-13", "time": "19:40", "court": 2, "home": "wed-king-adl", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 11, "date": "2027-01-13", "time": "20:20", "court": 1, "home": "wed-afg", "away": "wed-rinnai", "provisional": false},
+    {"round": 11, "date": "2027-01-13", "time": "20:20", "court": 2, "home": "wed-buckle-city", "away": "wed-ibiza", "provisional": false},
+    {"round": 11, "date": "2027-01-13", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 11, "date": "2027-01-13", "time": "21:00", "court": 2, "home": "wed-pops", "away": "wed-unathletico", "provisional": false},
+    {"round": 12, "date": "2027-01-20", "time": "19:00", "court": 1, "home": "wed-pops", "away": "wed-afg", "provisional": false},
+    {"round": 12, "date": "2027-01-20", "time": "19:00", "court": 2, "home": "wed-goldlink-up", "away": "wed-wildcats", "provisional": false},
+    {"round": 12, "date": "2027-01-20", "time": "19:40", "court": 1, "home": "wed-ghazni-united", "away": "wed-rinnai", "provisional": false},
+    {"round": 12, "date": "2027-01-20", "time": "19:40", "court": 2, "home": "wed-etihad-fc", "away": "wed-king-adl", "provisional": false},
+    {"round": 12, "date": "2027-01-20", "time": "20:20", "court": 1, "home": "wed-ibiza", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 12, "date": "2027-01-20", "time": "20:20", "court": 2, "home": "wed-unathletico", "away": "wed-misfits", "provisional": false},
+    {"round": 12, "date": "2027-01-20", "time": "21:00", "court": 1, "home": "wed-mts-fc", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 12, "date": "2027-01-20", "time": "21:00", "court": 2, "home": "wed-hazara-united", "away": "wed-buckle-city", "provisional": false},
+    {"round": 13, "date": "2027-01-27", "time": "19:00", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-hazara-united", "provisional": false},
+    {"round": 13, "date": "2027-01-27", "time": "19:00", "court": 2, "home": "wed-buckle-city", "away": "wed-unathletico", "provisional": false},
+    {"round": 13, "date": "2027-01-27", "time": "19:40", "court": 1, "home": "wed-rinnai", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 13, "date": "2027-01-27", "time": "19:40", "court": 2, "home": "wed-misfits", "away": "wed-pops", "provisional": false},
+    {"round": 13, "date": "2027-01-27", "time": "20:20", "court": 1, "home": "wed-afg", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 13, "date": "2027-01-27", "time": "20:20", "court": 2, "home": "wed-king-adl", "away": "wed-mts-fc", "provisional": false},
+    {"round": 13, "date": "2027-01-27", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-ibiza", "provisional": false},
+    {"round": 13, "date": "2027-01-27", "time": "21:00", "court": 2, "home": "wed-wildcats", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 14, "date": "2027-02-03", "time": "19:00", "court": 1, "home": "wed-misfits", "away": "wed-afg", "provisional": false},
+    {"round": 14, "date": "2027-02-03", "time": "19:00", "court": 2, "home": "wed-mts-fc", "away": "wed-wildcats", "provisional": false},
+    {"round": 14, "date": "2027-02-03", "time": "19:40", "court": 1, "home": "wed-etihad-fc", "away": "wed-rinnai", "provisional": false},
+    {"round": 14, "date": "2027-02-03", "time": "19:40", "court": 2, "home": "wed-unathletico", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 14, "date": "2027-02-03", "time": "20:20", "court": 1, "home": "wed-goldlink-up", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 14, "date": "2027-02-03", "time": "20:20", "court": 2, "home": "wed-ibiza", "away": "wed-king-adl", "provisional": false},
+    {"round": 14, "date": "2027-02-03", "time": "21:00", "court": 1, "home": "wed-hazara-united", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 14, "date": "2027-02-03", "time": "21:00", "court": 2, "home": "wed-pops", "away": "wed-buckle-city", "provisional": false},
+    {"round": 15, "date": "2027-02-10", "time": "19:00", "court": 1, "home": "wed-afg", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 15, "date": "2027-02-10", "time": "19:00", "court": 2, "home": "wed-king-adl", "away": "wed-hazara-united", "provisional": false},
+    {"round": 15, "date": "2027-02-10", "time": "19:40", "court": 1, "home": "wed-buckle-city", "away": "wed-misfits", "provisional": false},
+    {"round": 15, "date": "2027-02-10", "time": "19:40", "court": 2, "home": "wed-ghazni-united", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 15, "date": "2027-02-10", "time": "20:20", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-pops", "provisional": false},
+    {"round": 15, "date": "2027-02-10", "time": "20:20", "court": 2, "home": "wed-wildcats", "away": "wed-ibiza", "provisional": false},
+    {"round": 15, "date": "2027-02-10", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-unathletico", "provisional": false},
+    {"round": 15, "date": "2027-02-10", "time": "21:00", "court": 2, "home": "wed-rinnai", "away": "wed-mts-fc", "provisional": false},
+    {"round": 16, "date": "2027-02-17", "time": "19:00", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-misfits", "provisional": false},
+    {"round": 16, "date": "2027-02-17", "time": "19:00", "court": 2, "home": "wed-king-adl", "away": "wed-unathletico", "provisional": false},
+    {"round": 16, "date": "2027-02-17", "time": "19:40", "court": 1, "home": "wed-buckle-city", "away": "wed-afg", "provisional": false},
+    {"round": 16, "date": "2027-02-17", "time": "19:40", "court": 2, "home": "wed-wildcats", "away": "wed-hazara-united", "provisional": false},
+    {"round": 16, "date": "2027-02-17", "time": "20:20", "court": 1, "home": "wed-goldlink-up", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 16, "date": "2027-02-17", "time": "20:20", "court": 2, "home": "wed-ghazni-united", "away": "wed-mts-fc", "provisional": false},
+    {"round": 16, "date": "2027-02-17", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-pops", "provisional": false},
+    {"round": 16, "date": "2027-02-17", "time": "21:00", "court": 2, "home": "wed-rinnai", "away": "wed-ibiza", "provisional": false},
+    {"round": 17, "date": "2027-02-24", "time": "19:00", "court": 1, "home": "wed-buckle-city", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 17, "date": "2027-02-24", "time": "19:00", "court": 2, "home": "wed-pops", "away": "wed-king-adl", "provisional": false},
+    {"round": 17, "date": "2027-02-24", "time": "19:40", "court": 1, "home": "wed-mts-fc", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 17, "date": "2027-02-24", "time": "19:40", "court": 2, "home": "wed-unathletico", "away": "wed-wildcats", "provisional": false},
+    {"round": 17, "date": "2027-02-24", "time": "20:20", "court": 1, "home": "wed-hazara-united", "away": "wed-rinnai", "provisional": false},
+    {"round": 17, "date": "2027-02-24", "time": "20:20", "court": 2, "home": "wed-ibiza", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 17, "date": "2027-02-24", "time": "21:00", "court": 1, "home": "wed-misfits", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 17, "date": "2027-02-24", "time": "21:00", "court": 2, "home": "wed-afg", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 18, "date": "2027-03-03", "time": "19:00", "court": 1, "home": "wed-etihad-fc", "away": "wed-mts-fc", "provisional": false},
+    {"round": 18, "date": "2027-03-03", "time": "19:00", "court": 2, "home": "wed-ghazni-united", "away": "wed-hazara-united", "provisional": false},
+    {"round": 18, "date": "2027-03-03", "time": "19:40", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-afg", "provisional": false},
+    {"round": 18, "date": "2027-03-03", "time": "19:40", "court": 2, "home": "wed-wildcats", "away": "wed-pops", "provisional": false},
+    {"round": 18, "date": "2027-03-03", "time": "20:20", "court": 1, "home": "wed-rinnai", "away": "wed-unathletico", "provisional": false},
+    {"round": 18, "date": "2027-03-03", "time": "20:20", "court": 2, "home": "wed-goldlink-up", "away": "wed-ibiza", "provisional": false},
+    {"round": 18, "date": "2027-03-03", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-buckle-city", "provisional": false},
+    {"round": 18, "date": "2027-03-03", "time": "21:00", "court": 2, "home": "wed-king-adl", "away": "wed-misfits", "provisional": false},
+    {"round": 19, "date": "2027-03-10", "time": "19:00", "court": 1, "home": "wed-misfits", "away": "wed-wildcats", "provisional": false},
+    {"round": 19, "date": "2027-03-10", "time": "19:00", "court": 2, "home": "wed-unathletico", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 19, "date": "2027-03-10", "time": "19:40", "court": 1, "home": "wed-pops", "away": "wed-rinnai", "provisional": false},
+    {"round": 19, "date": "2027-03-10", "time": "19:40", "court": 2, "home": "wed-hazara-united", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 19, "date": "2027-03-10", "time": "20:20", "court": 1, "home": "wed-afg", "away": "wed-mts-fc", "provisional": false},
+    {"round": 19, "date": "2027-03-10", "time": "20:20", "court": 2, "home": "wed-buckle-city", "away": "wed-king-adl", "provisional": false},
+    {"round": 19, "date": "2027-03-10", "time": "21:00", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 19, "date": "2027-03-10", "time": "21:00", "court": 2, "home": "wed-ibiza", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 20, "date": "2027-03-17", "time": "19:00", "court": 1, "home": "wed-etihad-fc", "away": "wed-hazara-united", "provisional": false},
+    {"round": 20, "date": "2027-03-17", "time": "19:00", "court": 2, "home": "wed-goldlink-up", "away": "wed-unathletico", "provisional": false},
+    {"round": 20, "date": "2027-03-17", "time": "19:40", "court": 1, "home": "wed-king-adl", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 20, "date": "2027-03-17", "time": "19:40", "court": 2, "home": "wed-ghazni-united", "away": "wed-pops", "provisional": false},
+    {"round": 20, "date": "2027-03-17", "time": "20:20", "court": 1, "home": "wed-rinnai", "away": "wed-misfits", "provisional": false},
+    {"round": 20, "date": "2027-03-17", "time": "20:20", "court": 2, "home": "wed-wildcats", "away": "wed-buckle-city", "provisional": false},
+    {"round": 20, "date": "2027-03-17", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-afg", "provisional": false},
+    {"round": 20, "date": "2027-03-17", "time": "21:00", "court": 2, "home": "wed-mts-fc", "away": "wed-ibiza", "provisional": false},
+    {"round": 21, "date": "2027-03-24", "time": "19:00", "court": 1, "home": "wed-pops", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 21, "date": "2027-03-24", "time": "19:00", "court": 2, "home": "wed-misfits", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 21, "date": "2027-03-24", "time": "19:40", "court": 1, "home": "wed-buckle-city", "away": "wed-rinnai", "provisional": false},
+    {"round": 21, "date": "2027-03-24", "time": "19:40", "court": 2, "home": "wed-hazara-united", "away": "wed-mts-fc", "provisional": false},
+    {"round": 21, "date": "2027-03-24", "time": "20:20", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-wildcats", "provisional": false},
+    {"round": 21, "date": "2027-03-24", "time": "20:20", "court": 2, "home": "wed-unathletico", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 21, "date": "2027-03-24", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-king-adl", "provisional": false},
+    {"round": 21, "date": "2027-03-24", "time": "21:00", "court": 2, "home": "wed-afg", "away": "wed-ibiza", "provisional": false},
+    {"round": 22, "date": "2027-03-31", "time": "19:00", "court": 1, "home": "wed-king-adl", "away": "wed-afg", "provisional": false},
+    {"round": 22, "date": "2027-03-31", "time": "19:00", "court": 2, "home": "wed-ghazni-united", "away": "wed-buckle-city", "provisional": false},
+    {"round": 22, "date": "2027-03-31", "time": "19:40", "court": 1, "home": "wed-rinnai", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 22, "date": "2027-03-31", "time": "19:40", "court": 2, "home": "wed-mts-fc", "away": "wed-unathletico", "provisional": false},
+    {"round": 22, "date": "2027-03-31", "time": "20:20", "court": 1, "home": "wed-etihad-fc", "away": "wed-pops", "provisional": false},
+    {"round": 22, "date": "2027-03-31", "time": "20:20", "court": 2, "home": "wed-goldlink-up", "away": "wed-misfits", "provisional": false},
+    {"round": 22, "date": "2027-03-31", "time": "21:00", "court": 1, "home": "wed-wildcats", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 22, "date": "2027-03-31", "time": "21:00", "court": 2, "home": "wed-ibiza", "away": "wed-hazara-united", "provisional": false},
+    {"round": 23, "date": "2027-04-07", "time": "19:00", "court": 1, "home": "wed-king-adl", "away": "wed-wildcats", "provisional": false},
+    {"round": 23, "date": "2027-04-07", "time": "19:00", "court": 2, "home": "wed-pops", "away": "wed-mts-fc", "provisional": false},
+    {"round": 23, "date": "2027-04-07", "time": "19:40", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 23, "date": "2027-04-07", "time": "19:40", "court": 2, "home": "wed-misfits", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 23, "date": "2027-04-07", "time": "20:20", "court": 1, "home": "wed-afg", "away": "wed-hazara-united", "provisional": false},
+    {"round": 23, "date": "2027-04-07", "time": "20:20", "court": 2, "home": "wed-unathletico", "away": "wed-ibiza", "provisional": false},
+    {"round": 23, "date": "2027-04-07", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-rinnai", "provisional": false},
+    {"round": 23, "date": "2027-04-07", "time": "21:00", "court": 2, "home": "wed-buckle-city", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 24, "date": "2027-04-14", "time": "19:00", "court": 1, "home": "wed-goldlink-up", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 24, "date": "2027-04-14", "time": "19:00", "court": 2, "home": "wed-hazara-united", "away": "wed-unathletico", "provisional": false},
+    {"round": 24, "date": "2027-04-14", "time": "19:40", "court": 1, "home": "wed-wildcats", "away": "wed-afg", "provisional": false},
+    {"round": 24, "date": "2027-04-14", "time": "19:40", "court": 2, "home": "wed-etihad-fc", "away": "wed-buckle-city", "provisional": false},
+    {"round": 24, "date": "2027-04-14", "time": "20:20", "court": 1, "home": "wed-ibiza", "away": "wed-pops", "provisional": false},
+    {"round": 24, "date": "2027-04-14", "time": "20:20", "court": 2, "home": "wed-mts-fc", "away": "wed-misfits", "provisional": false},
+    {"round": 24, "date": "2027-04-14", "time": "21:00", "court": 1, "home": "wed-ghazni-united", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 24, "date": "2027-04-14", "time": "21:00", "court": 2, "home": "wed-rinnai", "away": "wed-king-adl", "provisional": false},
+    {"round": 25, "date": "2027-04-21", "time": "19:00", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 25, "date": "2027-04-21", "time": "19:00", "court": 2, "home": "wed-buckle-city", "away": "wed-mts-fc", "provisional": false},
+    {"round": 25, "date": "2027-04-21", "time": "19:40", "court": 1, "home": "wed-afg", "away": "wed-unathletico", "provisional": false},
+    {"round": 25, "date": "2027-04-21", "time": "19:40", "court": 2, "home": "wed-king-adl", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 25, "date": "2027-04-21", "time": "20:20", "court": 1, "home": "wed-pops", "away": "wed-hazara-united", "provisional": false},
+    {"round": 25, "date": "2027-04-21", "time": "20:20", "court": 2, "home": "wed-misfits", "away": "wed-ibiza", "provisional": false},
+    {"round": 25, "date": "2027-04-21", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 25, "date": "2027-04-21", "time": "21:00", "court": 2, "home": "wed-wildcats", "away": "wed-rinnai", "provisional": false},
+    {"round": 26, "date": "2027-04-28", "time": "19:00", "court": 1, "home": "wed-unathletico", "away": "wed-pops", "provisional": false},
+    {"round": 26, "date": "2027-04-28", "time": "19:00", "court": 2, "home": "wed-ghazni-united", "away": "wed-wildcats", "provisional": false},
+    {"round": 26, "date": "2027-04-28", "time": "19:40", "court": 1, "home": "wed-hazara-united", "away": "wed-misfits", "provisional": false},
+    {"round": 26, "date": "2027-04-28", "time": "19:40", "court": 2, "home": "wed-goldlink-up", "away": "wed-king-adl", "provisional": false},
+    {"round": 26, "date": "2027-04-28", "time": "20:20", "court": 1, "home": "wed-rinnai", "away": "wed-afg", "provisional": false},
+    {"round": 26, "date": "2027-04-28", "time": "20:20", "court": 2, "home": "wed-mts-fc", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 26, "date": "2027-04-28", "time": "21:00", "court": 1, "home": "wed-etihad-fc", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 26, "date": "2027-04-28", "time": "21:00", "court": 2, "home": "wed-ibiza", "away": "wed-buckle-city", "provisional": false},
+    {"round": 27, "date": "2027-05-05", "time": "19:00", "court": 1, "home": "wed-afg", "away": "wed-pops", "provisional": false},
+    {"round": 27, "date": "2027-05-05", "time": "19:00", "court": 2, "home": "wed-king-adl", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 27, "date": "2027-05-05", "time": "19:40", "court": 1, "home": "wed-rinnai", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 27, "date": "2027-05-05", "time": "19:40", "court": 2, "home": "wed-wildcats", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 27, "date": "2027-05-05", "time": "20:20", "court": 1, "home": "wed-kuq-e-zi", "away": "wed-ibiza", "provisional": false},
+    {"round": 27, "date": "2027-05-05", "time": "20:20", "court": 2, "home": "wed-buckle-city", "away": "wed-hazara-united", "provisional": false},
+    {"round": 27, "date": "2027-05-05", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-mts-fc", "provisional": false},
+    {"round": 27, "date": "2027-05-05", "time": "21:00", "court": 2, "home": "wed-misfits", "away": "wed-unathletico", "provisional": false},
+    {"round": 28, "date": "2027-05-12", "time": "19:00", "court": 1, "home": "wed-hazara-united", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 28, "date": "2027-05-12", "time": "19:00", "court": 2, "home": "wed-etihad-fc", "away": "wed-wildcats", "provisional": false},
+    {"round": 28, "date": "2027-05-12", "time": "19:40", "court": 1, "home": "wed-pops", "away": "wed-misfits", "provisional": false},
+    {"round": 28, "date": "2027-05-12", "time": "19:40", "court": 2, "home": "wed-mts-fc", "away": "wed-king-adl", "provisional": false},
+    {"round": 28, "date": "2027-05-12", "time": "20:20", "court": 1, "home": "wed-ghazni-united", "away": "wed-afg", "provisional": false},
+    {"round": 28, "date": "2027-05-12", "time": "20:20", "court": 2, "home": "wed-unathletico", "away": "wed-buckle-city", "provisional": false},
+    {"round": 28, "date": "2027-05-12", "time": "21:00", "court": 1, "home": "wed-ibiza", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 28, "date": "2027-05-12", "time": "21:00", "court": 2, "home": "wed-goldlink-up", "away": "wed-rinnai", "provisional": false},
+    {"round": 29, "date": "2027-05-19", "time": "19:00", "court": 1, "home": "wed-afg", "away": "wed-misfits", "provisional": false},
+    {"round": 29, "date": "2027-05-19", "time": "19:00", "court": 2, "home": "wed-wildcats", "away": "wed-mts-fc", "provisional": false},
+    {"round": 29, "date": "2027-05-19", "time": "19:40", "court": 1, "home": "wed-rinnai", "away": "wed-etihad-fc", "provisional": false},
+    {"round": 29, "date": "2027-05-19", "time": "19:40", "court": 2, "home": "wed-kuq-e-zi", "away": "wed-unathletico", "provisional": false},
+    {"round": 29, "date": "2027-05-19", "time": "20:20", "court": 1, "home": "wed-ghazni-united", "away": "wed-goldlink-up", "provisional": false},
+    {"round": 29, "date": "2027-05-19", "time": "20:20", "court": 2, "home": "wed-king-adl", "away": "wed-ibiza", "provisional": false},
+    {"round": 29, "date": "2027-05-19", "time": "21:00", "court": 1, "home": "wed-umoja-stars", "away": "wed-hazara-united", "provisional": false},
+    {"round": 29, "date": "2027-05-19", "time": "21:00", "court": 2, "home": "wed-buckle-city", "away": "wed-pops", "provisional": false},
+    {"round": 30, "date": "2027-05-26", "time": "19:00", "court": 1, "home": "wed-pops", "away": "wed-kuq-e-zi", "provisional": false},
+    {"round": 30, "date": "2027-05-26", "time": "19:00", "court": 2, "home": "wed-goldlink-up", "away": "wed-afg", "provisional": false},
+    {"round": 30, "date": "2027-05-26", "time": "19:40", "court": 1, "home": "wed-mts-fc", "away": "wed-rinnai", "provisional": false},
+    {"round": 30, "date": "2027-05-26", "time": "19:40", "court": 2, "home": "wed-misfits", "away": "wed-buckle-city", "provisional": false},
+    {"round": 30, "date": "2027-05-26", "time": "20:20", "court": 1, "home": "wed-etihad-fc", "away": "wed-ghazni-united", "provisional": false},
+    {"round": 30, "date": "2027-05-26", "time": "20:20", "court": 2, "home": "wed-hazara-united", "away": "wed-king-adl", "provisional": false},
+    {"round": 30, "date": "2027-05-26", "time": "21:00", "court": 1, "home": "wed-unathletico", "away": "wed-umoja-stars", "provisional": false},
+    {"round": 30, "date": "2027-05-26", "time": "21:00", "court": 2, "home": "wed-ibiza", "away": "wed-wildcats", "provisional": false}
+  ]
+}
