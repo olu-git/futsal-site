@@ -83,10 +83,33 @@ end $$;
 -- Recheck and lock copied source profiles at staging, validation and activation.
 -- Parent locks serialize the normal team-profile RPC and new FK-linked profile rows;
 -- child locks also protect existing note/preference rows from direct concurrent edits.
+-- Organiser correction, 10 October 2026: accidental Monday King ADL preference.
+-- Exact accidental record and stale source snapshots only; future preferences remain editable.
+create function private.assert_king_adl_preference_corrected(p_source uuid,p_source_preferences jsonb) returns void
+language plpgsql security definer set search_path='' as $$
+begin
+ if p_source='04ebec43-f537-52b4-bbae-ffe3449b7826'::uuid and (
+  exists(select 1 from public.team_kickoff_preferences p where p.team_id=p_source and p.id='a04c3160-7c38-4dd9-b0d2-73bb4d73f649'::uuid)
+  or coalesce(p_source_preferences,'[]'::jsonb) is distinct from coalesce((select jsonb_agg(jsonb_build_object('kickoff_time',to_char(p.kickoff_time,'HH24:MI'),'classification',p.classification) order by p.kickoff_time) from public.team_kickoff_preferences p where p.team_id=p_source),'[]'::jsonb)) then
+  raise exception 'Monday King ADL accidental 19:00 preference must be corrected before copying or validating this season';
+ end if;
+end $$;
+revoke all on function private.assert_king_adl_preference_corrected(uuid,jsonb) from public,anon,authenticated;
+create function private.guard_king_adl_draft_preference() returns trigger
+language plpgsql security definer set search_path='' as $$
+begin
+ perform private.assert_king_adl_preference_corrected(new.source_team_id,new.source_preferences);
+ return new;
+end $$;
+revoke all on function private.guard_king_adl_draft_preference() from public,anon,authenticated;
+create trigger guard_king_adl_draft_preference before insert or update on public.season_draft_teams
+for each row execute function private.guard_king_adl_draft_preference();
+
 create function private.assert_season_source_profiles_current(p_draft_id uuid) returns void
 language plpgsql security definer set search_path='' as $$
 begin
  perform 1 from public.teams t join public.season_draft_teams dt on dt.source_team_id=t.id where dt.season_draft_id=p_draft_id and dt.selected order by t.id for update of t;
+ perform private.assert_king_adl_preference_corrected(dt.source_team_id,dt.source_preferences) from public.season_draft_teams dt where dt.season_draft_id=p_draft_id and dt.selected;
  perform 1 from public.team_fixture_notes n join public.season_draft_teams dt on dt.source_team_id=n.team_id where dt.season_draft_id=p_draft_id and dt.selected order by n.team_id for share of n;
  perform 1 from public.team_kickoff_preferences p join public.season_draft_teams dt on dt.source_team_id=p.team_id where dt.season_draft_id=p_draft_id and dt.selected order by p.team_id,p.kickoff_time for share of p;
  if exists(select 1 from public.season_draft_teams dt left join public.team_fixture_notes sn on sn.team_id=dt.source_team_id where dt.season_draft_id=p_draft_id and dt.selected and dt.source_team_id is not null and (coalesce(dt.source_fixture_note,'')<>coalesce(sn.notes,'') or dt.source_preferences is distinct from coalesce((select jsonb_agg(jsonb_build_object('kickoff_time',to_char(sp.kickoff_time,'HH24:MI'),'classification',sp.classification) order by sp.kickoff_time) from public.team_kickoff_preferences sp where sp.team_id=dt.source_team_id),'[]'::jsonb))) then raise exception 'Source availability profile changed; recreate or reload the draft and review current information'; end if;

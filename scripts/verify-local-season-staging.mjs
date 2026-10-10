@@ -5,7 +5,19 @@ import { pathToFileURL } from 'node:url';
 import { resolve } from 'node:path';
 import { randomUUID } from 'node:crypto';
 if(!process.argv[2])throw new Error('Pass temporary local PGlite module path.');
-const {PGlite}=await import(pathToFileURL(resolve(process.argv[2])).href),db=new PGlite();
+// Optional real local PostgreSQL mode; caller supplies a temporary installed module.
+// No hosted URL is accepted. Bind loopback and use an ephemeral cluster/password.
+const realPostgres=process.argv[3]==='--postgres';
+let db,localServer;
+if(realPostgres){
+ const pgDriver=await import(pathToFileURL(resolve(process.argv[2],'../../../pg/lib/index.js')).href);pgDriver.default.types.setTypeParser(20,Number);pgDriver.default.types.setTypeParser(1082,value=>value);
+ const {default:EmbeddedPostgres}=await import(pathToFileURL(resolve(process.argv[2])).href);
+ const {tmpdir}=await import('node:os');const {join}=await import('node:path');
+ localServer=new EmbeddedPostgres({databaseDir:join(tmpdir(),'fis-disposable-pg-'+randomUUID()),user:'postgres',password:randomUUID(),port:54329,persistent:false,createPostgresUser:false,postgresFlags:['-c','listen_addresses=127.0.0.1'],onLog:()=>{},onError:()=>{}});
+ await localServer.initialise();await localServer.start();
+ const client=localServer.getPgClient('postgres','127.0.0.1');await client.connect();
+ db={query:(sql,args)=>client.query(sql,args),exec:async sql=>{const r=await client.query(sql);return Array.isArray(r)?r:[r]},close:async()=>{await client.end();await localServer.stop()},newSession:async()=>{const c=localServer.getPgClient('postgres','127.0.0.1');await c.connect();await c.query("set statement_timeout='10s';set lock_timeout='8s'");await c.query("select set_config('fis.local_actor',$1,false)",[adminId]);return c}};
+}else{const {PGlite}=await import(pathToFileURL(resolve(process.argv[2])).href);db=new PGlite();}
 const read=p=>readFileSync(p,'utf8'),adminId='ffffffff-1111-4000-8000-000000000001';
 async function fail(sql,args,pattern){try{await db.query(sql,args);assert.fail('Expected rejection');}catch(e){assert.match(e.message,pattern);}}
 async function history(){return (await db.query(`select jsonb_build_object('teams',(select jsonb_agg(to_jsonb(t) order by t.id) from public.teams t where t.competition_season_id in('8021a2bb-eb2b-55fe-9900-d3f50facf092','e1db4456-0663-55d2-95a1-681d17163b91')),'fixtures',(select jsonb_agg(to_jsonb(f) order by f.id) from public.fixtures f),'results',(select jsonb_agg(to_jsonb(r) order by r.id) from public.result_versions r),'adjustments',(select jsonb_agg(to_jsonb(a) order by a.id) from public.standing_adjustments a)) data`)).rows[0].data;}
@@ -30,6 +42,50 @@ try{
  try{await db.exec(reviewSql);assert.fail('Non-admin review must fail');}catch(e){assert.match(e.message,/Authorised|permission denied/);await db.exec('rollback');}
  await db.exec('reset role');await db.query("select set_config('fis.local_actor',$1,false)",[adminId]);
  await db.query('delete from public.team_fixture_notes where team_id=$1',[reviewTeam]);await db.query('delete from public.team_kickoff_preferences where team_id=$1',[reviewTeam]);
+ // Exact accidental preference correction and stale-copy protection, disposable only.
+ const king='04ebec43-f537-52b4-bbae-ffe3449b7826';
+ await db.query('update public.teams set profile_version=2 where id=$1',[king]);
+ await db.query("insert into public.team_kickoff_preferences(id,team_id,kickoff_time,classification,created_at,updated_at) values('a04c3160-7c38-4dd9-b0d2-73bb4d73f649',$1,'19:00','preferred','2026-10-09T20:00:03.54453Z','2026-10-09T20:00:03.54453Z')",[king]);
+ await fail('select public.create_season_draft($1,$2,$3,null)',['BLOCKED STALE COPY','2026-10-12','2027-05-26'],/accidental 19:00/);
+ const correction=read('supabase/production/correct-king-adl-kickoff-preference.sql');
+ await db.exec(correction.replace(/commit;\s*$/,'rollback;'));
+ assert.equal((await db.query('select count(*)::integer n from public.team_kickoff_preferences where team_id=$1',[king])).rows[0].n,1);
+ await db.query('update public.teams set profile_version=3 where id=$1',[king]);
+ await assert.rejects(db.exec(correction),/Recorded profile changed/);await db.exec('rollback;');
+ await db.query('update public.teams set profile_version=2 where id=$1',[king]);
+ await db.exec(correction);await db.exec(correction);
+ assert.equal((await db.query('select profile_version from public.teams where id=$1',[king])).rows[0].profile_version,3);
+ assert.equal((await db.query('select count(*)::integer n from public.team_kickoff_preferences where team_id=$1',[king])).rows[0].n,0);
+ const correctedDraft=(await db.query('select * from public.create_season_draft($1,$2,$3,null)',['CORRECTED COPY','2026-10-12','2027-05-26'])).rows[0].draft_id;
+ await db.query("update public.season_draft_teams set preferences='[{\"kickoff_time\":\"19:00\",\"classification\":\"preferred\"}]'::jsonb,availability_confirmed=false where season_draft_id=$1 and source_team_id=$2",[correctedDraft,king]);
+ await fail("update public.season_draft_teams set source_preferences='[{\"kickoff_time\":\"19:00:00\",\"classification\":\"preferred\"}]'::jsonb where season_draft_id=$1 and source_team_id=$2",[correctedDraft,king],/accidental 19:00/);
+ // Simulate a draft predating the guard; validation must reject its stale profile.
+ await db.exec('alter table public.season_draft_teams disable trigger guard_king_adl_draft_preference;');
+ await db.query("update public.season_draft_teams set source_preferences='[{\"kickoff_time\":\"19:00\",\"classification\":\"preferred\"}]'::jsonb where season_draft_id=$1 and source_team_id=$2",[correctedDraft,king]);
+ await db.exec('alter table public.season_draft_teams enable trigger guard_king_adl_draft_preference;');
+ await fail('select public.validate_season_draft($1,1)',[correctedDraft],/accidental 19:00/);
+ await db.query('delete from public.season_drafts where id=$1',[correctedDraft]);
+ // A distinct future source preference is legitimate, including the same kickoff time.
+ const futurePreference=(await db.query("insert into public.team_kickoff_preferences(team_id,kickoff_time,classification) values($1,'19:00','preferred') returning id",[king])).rows[0].id;
+ const futureDraft=(await db.query('select * from public.create_season_draft($1,$2,$3,null)',['FUTURE REVIEWED PREFERENCE','2026-10-12','2027-05-26'])).rows[0].draft_id;
+ assert.deepEqual((await db.query('select source_preferences from public.season_draft_teams where season_draft_id=$1 and source_team_id=$2',[futureDraft,king])).rows[0].source_preferences,[{kickoff_time:'19:00',classification:'preferred'}]);
+ await db.query('delete from public.season_drafts where id=$1',[futureDraft]);
+ await db.query('delete from public.team_kickoff_preferences where id=$1',[futurePreference]);
+ const raceEvidence=[];
+ async function race(label,sql,args){
+  const a=await db.newSession(),b=await db.newSession();try{
+   await a.query('begin');const first=await a.query(sql,args);
+   await b.query('begin');const pid=(await b.query('select pg_backend_pid() pid')).rows[0].pid;
+   const loser=b.query(sql,args).then(()=>({ok:true}),e=>({ok:false,error:e}));
+   let blocked=false;for(let i=0;i<60;i++){const row=(await db.query('select wait_event_type from pg_stat_activity where pid=$1',[pid])).rows[0];if(row?.wait_event_type==='Lock'){blocked=true;break}await new Promise(r=>setTimeout(r,30));}
+   assert(blocked,label+' must demonstrably wait on a PostgreSQL lock');await a.query('commit');
+   const result=await loser;assert.equal(result.ok,false,label+' stale writer must fail');assert.match(result.error.message,/Stale|changed|editable|activated|review/i);await b.query('rollback');raceEvidence.push(label);return first;
+  }finally{await a.query('rollback');await b.query('rollback');await a.end();await b.end()}
+ }
+ if(realPostgres){
+  const t=(await db.query('select * from public.teams where id=$1',[king])).rows[0];
+  await race('two-session profile save','select * from public.save_team_profile($1,$2,$3,$4,$5,$6,$7,$8,$9)',[king,t.profile_version,t.name,t.status,t.competition_season_id,t.kit_colour,'[]',null,null]);
+ }
  const original=await history();
  const d=(await db.query('select * from public.create_season_draft($1,$2,$3,null)',['LOCAL STAGING','2026-10-12','2027-05-26'])).rows[0],id=d.draft_id;
  const comps=(await db.query('select * from public.season_draft_competitions where season_draft_id=$1 order by weekday',[id])).rows;
@@ -53,6 +109,7 @@ try{
  await fail('select public.stage_season_draft($1,$2)',[id,version],/unvalidated/);
  version=(await db.query('select public.validate_season_draft($1,$2) report',[id,version])).rows[0].report.version;
  await fail('select public.stage_season_draft($1,$2)',[id,version-1],/Stale/);
+ if(realPostgres){await race('two-session draft save','select public.save_season_draft($1,$2,$3,$4,$5,$6,$7)',[id,version,'LOCAL STAGING','2026-10-12','2027-05-26',JSON.stringify(payload),JSON.stringify(teams)]);version++;version=(await db.query('select public.validate_season_draft($1,$2) report',[id,version])).rows[0].report.version;}
  const staged=(await db.query('select public.stage_season_draft($1,$2) season',[id,version])).rows[0].season;version++;
  assert.equal((await db.query("select count(*)::integer n from public.competition_seasons where season_id=$1 and lifecycle='planned' and publication_state='draft'",[staged])).rows[0].n,2);
  assert.equal((await db.query('select count(*)::integer n from public.teams where competition_season_id=any($1::uuid[])',[comps.map(c=>c.id)])).rows[0].n,30);
@@ -100,6 +157,18 @@ try{
  await fail("select * from public.activate_season_draft($1,$2,'ACTIVATE')",[id,version],/Source availability profile changed/);
  assert.deepEqual(await history(),original);
  await db.query('delete from public.team_fixture_notes where team_id=$1',[changedSource]);
+ if(realPostgres){
+  const editor=await db.newSession(),activator=await db.newSession();try{
+   await editor.query('begin');const current=(await editor.query('select * from public.fixture_change_sets where id=$1',[plans[0].id])).rows[0];
+   await editor.query("select public.transition_fixture_change_set($1,$2,'return',false)",[current.id,current.version]);
+   const pid=(await activator.query('select pg_backend_pid() pid')).rows[0].pid;
+   const attempt=activator.query("select * from public.activate_season_draft($1,$2,'ACTIVATE')",[id,version]).then(()=>({ok:true}),error=>({ok:false,error}));
+   let blocked=false;for(let i=0;i<60;i++){if((await db.query('select wait_event_type from pg_stat_activity where pid=$1',[pid])).rows[0]?.wait_event_type==='Lock'){blocked=true;break}await new Promise(r=>setTimeout(r,30));}assert(blocked);
+   await editor.query('commit');const result=await attempt;assert.equal(result.ok,false);assert.match(result.error.message,/review|pending/i);assert.deepEqual(await history(),original);
+   raceEvidence.push('activation waits for fixture edit and rejects stale review');
+  }finally{await editor.query('rollback');await editor.end();await activator.end()}
+  const changed=(await db.query('select * from public.fixture_change_sets where id=$1',[plans[0].id])).rows[0];await db.query("select public.transition_fixture_change_set($1,$2,'submit',true)",[changed.id,changed.version]);version=(await db.query('select public.validate_season_draft($1,$2) report',[id,version])).rows[0].report.version;
+ }
  // Force a second-night insert failure to prove first-night writes roll back too.
  await db.exec(`begin;create function pg_temp.reject_second_night() returns trigger language plpgsql as $$begin if new.competition_season_id='${comps[1].id}' then raise exception 'Synthetic second-night failure';end if;return new;end$$;create trigger local_second_night_failure before insert on public.fixtures for each row execute function pg_temp.reject_second_night();savepoint local_failure;`);
  await fail("select * from public.activate_season_draft($1,$2,'ACTIVATE')",[id,version],/Synthetic second-night failure/);
@@ -120,5 +189,7 @@ try{
  await db.exec('rollback;');
  assert.deepEqual(await history(),original);
  assert.equal((await db.query('select lifecycle from public.competition_seasons where id=$1',[comps[0].id])).rows[0].lifecycle,'planned');
- console.log(JSON.stringify({engine:'PGlite in-memory PostgreSQL',migrations:7,hostedConnections:0,newTeams:4,stagedMemberships:30,reviewedMatches:422,adminDenial:'passed',availabilityGate:'passed: four organiser-confirmed, 26 returning remain gated',readOnlyProfileReview:'passed: 26 scoped rows, no free text, non-admin denied',sourceProfileFreshness:'passed: later source changes block validation/activation',saveResetsValidation:'passed',staleVersions:'passed',failedImportRollback:'passed',ordinaryPublicationBlocked:'passed',anonymousDraftInvisibility:'passed',historyPreserved:'passed',fixtureReviewVersionBinding:'passed',secondNightFailureRollback:'passed',buckleNormalStandings:'passed with synthetic draw',atomicSyntheticRollover:'passed then rolled back',limits:'Mock Auth helpers; single connection; no hosted PostgREST or concurrency test'},null,2));
+ console.log(JSON.stringify({engine:realPostgres?'PostgreSQL 17 ephemeral loopback cluster':'PGlite in-memory PostgreSQL',raceEvidence,migrations:7,hostedConnections:0,newTeams:4,stagedMemberships:30,reviewedMatches:422,adminDenial:'passed',kingAdlCorrection:'passed: exact deletion, rollback, repeat, changed-profile refusal, stale copy/validation rejection; legitimate future preference permitted',availabilityGate:'passed: four organiser-confirmed, 26 returning remain gated',readOnlyProfileReview:'passed: 26 scoped rows, no free text, non-admin denied',sourceProfileFreshness:'passed: later source changes block validation/activation',saveResetsValidation:'passed',staleVersions:'passed',failedImportRollback:'passed',ordinaryPublicationBlocked:'passed',anonymousDraftInvisibility:'passed',historyPreserved:'passed',fixtureReviewVersionBinding:'passed',secondNightFailureRollback:'passed',buckleNormalStandings:'passed with synthetic draw',atomicSyntheticRollover:'passed then rolled back',limits:realPostgres?'Mock Auth helpers; real independent SQL sessions; no hosted Auth/PostgREST':'Mock Auth helpers; single connection; no hosted PostgREST or concurrency test'},null,2));
 }catch(e){console.error(e.message,e.where??'',e.position??'');if(e.position)console.error(e.query?.slice(Number(e.position)-100,Number(e.position)+100));process.exitCode=1;}finally{await db.close();}
+// The temporary PostgreSQL library's beforeExit hook otherwise replaces exitCode with zero.
+if(process.exitCode)process.exit(process.exitCode);

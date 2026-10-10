@@ -1,5 +1,8 @@
 # Project handoff
 
+Current follow-up status: scheduling-source reconciliation is closed by supplied authenticated exports and the organiser correction on 10 October 2026. Monday King ADL has no current kickoff preference. See the final correction section; older checkpoint profile-access limitations are historical. Production cleanup and hosted release checks remain pending.
+
+
 Status checked locally on 8 October 2026 (Australia/Sydney). Recheck Git and remote services before acting: this is an orientation note, not a release record.
 
 ## Site and data map
@@ -77,3 +80,20 @@ Week 1 fixture tables, all 30 teams' season kickoff distributions, exact source-
 
 
 Release preparation checkpoint (10 October 2026): [NEW-SEASON-RELEASE-CHECKLIST.md](NEW-SEASON-RELEASE-CHECKLIST.md) gives the exact migration/proposal order and private Stage -> Import -> Review -> Validate -> Activate sequence. Only the new staging migration is to be installed after preflight; the six installed baselines/current-season import must not be rerun. Readable-ID proposal precedes new draft creation; the standalone membership proposal is an alternative and must not be combined with Stage. [Read-only returning-profile query](../supabase/production/review-returning-availability.sql) scopes all 26 source UUIDs, exports no free-text notes and has passed local authenticated/non-admin tests; it has not run hosted. Returning source profiles are now rechecked/locked before final validation/activation; later source edits block locally. Hosted Auth/PostgREST and genuine concurrent edits remain unverified. GitHub Variables and changed-snapshot-to-Pages checks remain separate future release gates. Approved fixture arrays are unchanged; the checkpoint commit is local only.
+
+
+### Organiser correction and reconciled availability ? 10 October 2026
+
+Scheduling-source reconciliation is closed following the five supplied SQL exports and organiser confirmation: all 26 source identities/editions match, the deployed profile schema matches, 25 have zero preference rows and all 26 zero note rows. Monday King ADL's sole 19:00 preferred row was accidentally inserted during its rename; organiser confirms no current preference. Disregard it for planning; approved fixture arrays remain unchanged. All established general rules and four new-team confirmations remain in force. Earlier checkpoint references to 26 inaccessible/unreviewed profiles are superseded by this evidence.
+
+New guarded proposal: `supabase/production/correct-king-adl-kickoff-preference.sql`, prepared only. Exact row/UUID/version/timestamps are checked; deletion is audited and version advances; safe repeat/rollback and stale-profile refusal are tested locally. Apply only with separate write authorisation, before new draft creation. The unreleased staging migration blocks stale copying/reintroduction and validates source freshness; copied old drafts need renewed review after cleanup. Checkpoint e013330 is intact; the reviewed follow-up checkpoint is separate; use Git log/status for its final hash and sync state. See the updated release checklist: hosted Auth/schema cache, genuine concurrency, GitHub Variables and changed-snapshot-to-Pages remain outstanding. No hosted SQL, activation, publication, push, merge or deployment.
+
+### Autonomous follow-up verification - 10 October 2026
+
+This supersedes earlier pending local review/concurrency statements. The six follow-up files are reviewed, with [fixture review](NEW-SEASON-FIXTURE-REVIEW.md) added. The King ADL guard rejects the identified accidental row and stale source snapshots; legitimate future 19:00 preferences are explicitly tested and remain possible through ordinary renewed review. e013330 and both approved draft files are preserved.
+
+Fresh ephemeral PostgreSQL 17 verifies genuine independent-session lock waits/stale rejection for profile and draft edits, activation racing fixture review, source freshness, failed-import/second-night rollback, safe retries and preservation of old season/history. All seven migrations, 30 memberships and 422 reviewed fixtures pass. Auth helpers are mocked; this is real local SQL/RLS/concurrency, not hosted JWT/PostgREST proof. The retained verifier accepts no hosted URL and preserves failure status.
+
+Edge admin journey passes at 390/768/1365px using intercepted disposable Auth/REST mocks. Anonymous DTOs exported from real disposable activation verify public current-season tables/fixtures/form and archived finals at 390/1365px, plus fallback on forced read failure and subsequent recovery. No hosted browser mutation or page error. Tests (181), lint and TypeScript pass; unchanged production build/import/finals/snapshot evidence is reused from e013330. Screenshots, temporary harnesses/libraries, personal exports and generated build output are excluded from the local follow-up commit.
+
+Read-only Supabase table metadata matches expected RLS/schema; migration-history API is empty, so installed migration effects still require separate authorised verification. Production SQL preflight was rejected by automatic approval review under this task's prohibition and was not executed. GitHub public API confirms Pages 37992904367 and refresh 38012665030 succeeded, downstream Pages 38012696221 skipped; Variables/configuration remain authentication-blocked. Hosted JWT/PostgREST/concurrency and changed-snapshot -> commit -> Pages remain unverified. The release checklist records exact order and future forced-fallback verification. Next: separately authorised hosted compatibility/access preflight and authenticated GitHub configuration; no production SQL, activation/publication, push, merge, deployment or workflow dispatch here.
