@@ -1,6 +1,7 @@
+import { publicMetadata } from "@/lib/public-metadata";
 import PolicyPage from "@/components/PolicyPage";
 
-export const metadata = { title: "Terms & Conditions", description: "Participation and website terms for Futsal Indoor Soccer." };
+export const metadata = publicMetadata("Terms & Conditions", "Participation and website terms for Futsal Indoor Soccer.", "/terms/");
 const sections = [
   { heading: "Joining and eligibility", paragraphs: ["FIS competitions are for participants aged 18 and over. A registration is an enquiry and does not confirm a competition place. Team captains provide an initial roster and must ensure their players understand these Terms and the FIS Rules."] },
   { heading: "Competition participation", paragraphs: ["Participants agree to follow published fixtures, competition rules and reasonable directions from referees, FIS administrators and venue staff. Fixtures, times, courts, opponents and results may be corrected or changed; teams should check the current published information before travelling."] },

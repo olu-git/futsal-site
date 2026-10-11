@@ -1,0 +1,70 @@
+.page {
+  --about-blue: #083a97;
+  background: #f2efe9;
+  padding-block: clamp(48px, 6vw, 80px) clamp(64px, 8vw, 112px);
+}
+.photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+  padding: 20px 24px 36px;
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+.photo {
+  position: relative;
+  isolation: isolate;
+  margin: 0;
+  flex: 1 1 0;
+  max-width: 480px;
+  min-width: 0;
+}
+.photo::before {
+  content: "";
+  position: absolute;
+  inset: 10px -12px -14px 10px;
+  background: var(--about-blue);
+  z-index: -1;
+}
+.photo img { display: block; width: 100%; height: auto; }
+.teamPhoto { transform: rotate(-4deg); }
+.celebrationPhoto { transform: translateY(16px) rotate(3deg); max-width: 320px; }
+.copy { max-width: 780px; margin-inline: auto; }
+.copy section + section { margin-top: clamp(40px, 5vw, 64px); }
+.copy h1, .copy h2 {
+  margin: 0 0 24px;
+  color: var(--about-blue);
+  font: 400 clamp(18px, 2vw, 26px)/1.65 var(--font-mono);
+  text-wrap: balance;
+}
+.copy p { margin: 0 0 20px; font: 300 15px/2 var(--font-sans); }
+.copy p:last-child { margin-bottom: 0; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 28px 36px; margin-top: 40px; }
+.register, .fillInLink { font: 400 10px/1.9 var(--font-mono); }
+.register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 16px 20px;
+  background: var(--fis-red-dark);
+  color: white;
+  border: 2px solid var(--fis-red-dark);
+  text-align: center;
+}
+.register:hover { background: var(--about-blue); border-color: var(--about-blue); }
+.fillIns { min-width: 0; }
+.fillInLink { display: inline-flex; align-items: center; min-height: 44px; color: var(--about-blue); text-decoration: underline; text-underline-offset: 6px; }
+.fillInLink:hover { color: var(--fis-red-dark); }
+.fillIns p { font-size: 12px; margin-top: 4px; }
+@media (max-width: 640px) {
+  .photos { flex-direction: column; gap: 36px; padding: 8px 20px 20px; margin-bottom: 48px; }
+  .photo { flex: none; width: 100%; }
+  .teamPhoto { transform: rotate(-2deg); align-self: flex-start; }
+  .celebrationPhoto { width: 76%; max-width: 300px; transform: rotate(2deg); align-self: flex-end; }
+  .photo::before { inset: 7px -8px -10px 7px; }
+  .copy h1, .copy h2 { font-size: 18px; }
+  .copy p { font-size: 14px; line-height: 1.9; }
+  .actions { flex-direction: column; align-items: stretch; gap: 24px; }
+  .register, .fillInLink { font-size: 9px; }
+}

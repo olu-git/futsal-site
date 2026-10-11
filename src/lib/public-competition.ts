@@ -1,3 +1,4 @@
+import { seasonDisplayName, compareSeasonNames } from "./season-names";
 import { createClient } from "./supabase/browser";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { CompetitionDataset } from "./competition-repository";
@@ -170,7 +171,7 @@ export function mapPublishedCompetition(
         lost: row.losses_delta, goalsFor: row.goals_for_delta, goalsAgainst: row.goals_against_delta,
         points: row.points_delta, note: row.reason };
     });
-  const seasonNames = Object.fromEntries(editions.filter(e => one(e.seasons).name).map(e => [one(e.competitions).weekday === 1 ? "monday" : "wednesday", one(e.seasons).name]));
+  const seasonNames = Object.fromEntries(editions.filter(e => one(e.seasons).name).map(e => [one(e.competitions).weekday === 1 ? "monday" : "wednesday", seasonDisplayName(one(e.seasons).name!)]));
   return { teams: mappedTeams, fixtures: mappedFixtures, standingsAdjustments: mappedAdjustments,
     ...(Object.keys(seasonNames).length ? { seasonNames } : {}) };
 }
@@ -214,8 +215,8 @@ export function archivedSeasonRows(rows: PublishedCompetitionRows) {
   const current = new Set(selectPublicEditions(rows.editions).map(e => e.season_id));
   return [...new Set(rows.editions.filter(e => e.publication_state === "published" && e.lifecycle === "archived" && e.season_id && !current.has(e.season_id)).map(e => e.season_id!))].sort().map(id => {
     const editions = rows.editions.filter(e => e.season_id === id && e.publication_state === "published");
-    return { id, name: one(editions[0].seasons).name ?? id, rows: { ...rows, editions } };
-  });
+    return { id, name: seasonDisplayName(one(editions[0].seasons).name ?? id), rows: { ...rows, editions } };
+  }).sort((a,b) => compareSeasonNames(a.name,b.name));
 }
 
 export function mapPublishedSeasons(rows: PublishedCompetitionRows): CompetitionDataset {

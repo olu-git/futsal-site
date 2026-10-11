@@ -1,3 +1,4 @@
+import { seasonDisplayName } from "../season-names";
 import { createClient } from "@/lib/supabase/browser";
 import { selectFixtureAdminEditions } from "./competition-editions";
 import type { ChangeSetStatus, FixtureChange, FixtureChangeContext, KickoffPreference, Night,
@@ -32,7 +33,7 @@ export async function loadFixturesWorkspace(): Promise<FixturesWorkspace> {
   if (editionError) throw new Error(`Unable to load competition seasons: ${editionError.message}`);
   const editions: AdminCompetitionEdition[] = selectFixtureAdminEditions((editionRows ?? []) as Row[]).map((row) => ({ id: String(row.id), night: Number(one(row.competitions as { weekday: number }).weekday) === 1 ? "monday" : "wednesday",
     division: String(one(row.competitions as { division: string }).division),
-    season: String(one(row.seasons as { name: string } | { name: string }[]).name), lifecycle: row.lifecycle as AdminCompetitionEdition["lifecycle"],
+    season: seasonDisplayName(String(one(row.seasons as { name: string } | { name: string }[]).name)), lifecycle: row.lifecycle as AdminCompetitionEdition["lifecycle"],
     locationId: String(one(row.competitions as { location_id: string } | { location_id: string }[]).location_id) }));
   const ids = editions.map((edition) => edition.id);
   if (!ids.length) return { editions, fixtures: [], teams: [], contexts: {}, changeSets: [] };

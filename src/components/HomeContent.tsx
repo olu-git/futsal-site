@@ -15,7 +15,7 @@ import HomeTvFeature from "./HomeTvFeature";
 export default function HomeContent({ initial, finals }: { initial: PublicCompetitionViews; finals: FinalsSeasonData }) {
   const { views, source } = usePublicCompetition(initial);
   const { monday, wednesday } = views;
-  return <>
+  return <div className="home-public">
     <div className="home-hero-wrap">
       <PageHero title="Futsal Indoor Soccer" image={site.homeHeroPhoto} imageAlt="Six FIS players standing together in front of an indoor futsal goal" home>
         <div className="hero-actions"><Link href="/monday-night">Monday Night</Link><Link href="/wednesday-night">Wednesday Night</Link><a className="fill-ins" href={site.fillIns} target="_blank" rel="noopener noreferrer">Fill-ins</a></div>
@@ -45,5 +45,5 @@ export default function HomeContent({ initial, finals }: { initial: PublicCompet
     </section>
     <HomeTvFeature />
     <KnockoutPreview finals={finals} competitions={{ monday, wednesday }} />
-  </>;
+  </div>;
 }

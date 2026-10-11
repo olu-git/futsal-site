@@ -1,10 +1,11 @@
+import { publicMetadata } from "@/lib/public-metadata";
 import { Mail, MapPin, Phone } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import EnquiryForm from "@/components/EnquiryForm";
 import { RegisterButton } from "@/components/RegistrationProvider";
 import { site } from "@/lib/site-content";
 
-export const metadata = { title: "Contact Us" };
+export const metadata = publicMetadata("Contact Us", "Contact Futsal Indoor Soccer about competitions, teams and player enquiries at Endeavour Hills.", "/contact/");
 
 export default function ContactPage() {
   return <>

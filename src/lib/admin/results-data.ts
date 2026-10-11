@@ -1,3 +1,4 @@
+import { seasonDisplayName } from "../season-names";
 import { createClient } from "@/lib/supabase/browser";
 import { selectAdminEditions } from "./competition-editions";
 
@@ -103,7 +104,7 @@ export function mapAdminFixtures(rows: AdminFixtureRow[], teams: AdminTeamRow[],
     const results = (row.result_versions ?? []) as Array<Record<string, unknown>>;
     return {
       id: String(row.id), competitionSeasonId,
-      night: competition.weekday === 1 ? "monday" : "wednesday", seasonName: season.name,
+      night: competition.weekday === 1 ? "monday" : "wednesday", seasonName: seasonDisplayName(season.name),
       round: Number(row.round_number), date: String(row.match_date), time: String(row.kickoff_time),
       court: Number(row.court), stage: row.stage as AdminFixture["stage"],
       home: { id: home.id, name: home.name, kitColour: home.kit_colour },

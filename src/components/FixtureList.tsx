@@ -6,7 +6,7 @@ export default function FixtureList({ fixtures }: { fixtures: DisplayFixture[] }
   const divisions = [...new Set(fixtures.map((fixture) => fixture.division))].sort();
   return <div className="fixture-list">{divisions.map((division) => <div key={division}>
     {divisions.length > 1 && <h3 className="division-label">Division {division}</h3>}
-    {fixtures.filter((fixture) => fixture.division === division).sort((a, b) => a.time.localeCompare(b.time) || a.court - b.court).map((fixture) => <article className="fixture-row" key={fixture.id}>
+    {fixtures.filter((fixture) => fixture.division === division).sort((a, b) => a.time.localeCompare(b.time) || a.court - b.court).map((fixture) => <article className={`fixture-row${fixture.status === "scheduled" ? " fixture-upcoming" : ""}`} key={fixture.id}>
       <div className="fixture-meta"><time dateTime={`${fixture.date}T${fixture.time}`}>{formatTime(fixture.time)}</time><span>Court {fixture.court}</span></div>
       <span className="fixture-team home"><FixtureTeam side="home" name={fixture.home.name} colour={fixture.home.kitColour} form={fixture.status === "scheduled" ? fixture.homeForm ?? Array(5).fill("?") : undefined} /></span>
       <span className="fixture-outcome"><span className="fixture-score" aria-label={fixture.status === "completed" && fixture.homeScore !== undefined && fixture.awayScore !== undefined ? `Final score ${fixture.homeScore} to ${fixture.awayScore}` : "Scheduled fixture"}>{fixture.status === "completed" && fixture.homeScore !== undefined && fixture.awayScore !== undefined ? `${fixture.homeScore} - ${fixture.awayScore}` : "VS"}</span><span className="fixture-status">{fixture.status === "completed" ? "Final" : "Upcoming"}</span></span>

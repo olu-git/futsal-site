@@ -1,10 +1,11 @@
+import { publicMetadata } from "@/lib/public-metadata";
 import { ChevronDown, Clock, CreditCard, Disc, Gavel, Hourglass, Play, Shield, Square, Trophy, TriangleAlert, UserPlus, UserX, Users } from "lucide-react";
 import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import { site } from "@/lib/site-content";
 
-export const metadata = { title: "Rules", description: "Futsal Indoor Soccer competition rules." };
+export const metadata = publicMetadata("Rules", "Futsal Indoor Soccer competition rules.", "/rules/");
 type Rule = { title: string; body: string; icon?: LucideIcon; image?: string };
 type RuleGroup = { heading: string; rules: Rule[] };
 

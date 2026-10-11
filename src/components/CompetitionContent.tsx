@@ -8,20 +8,34 @@ import CompetitionHero from "./CompetitionHero";
 import LeagueTable from "./LeagueTable";
 import RoundAccordion from "./RoundAccordion";
 import FixtureList from "./FixtureList";
+import KnockoutBracket from "./KnockoutBracket";
+import { seasonDisplayName, compareSeasonNames } from "@/lib/season-names";
+import { historicalFinals, historicalKitColours } from "@/lib/historical-finals";
 
 export default function CompetitionContent({ night, initial }: {
   night: CompetitionNight; initial: PublicCompetitionViews;
 }) {
   const { views, source } = usePublicCompetition(initial);
-  const [seasonId,setSeasonId] = useState("current");
-  const competition = views.history?.find(s=>s.id===seasonId)?.[night] ?? views[night];
-  return <>
+  const [seasonId, setSeasonId] = useState("current");
+  const selectedArchive = views.history?.find(s => s.id === seasonId);
+  const competition = selectedArchive?.[night] ?? views[night];
+  const seasonOptions = [{ id: "current", name: views[night].seasonName ?? "Current Season" }, ...(views.history ?? [])].sort((a,b) => compareSeasonNames(a.name,b.name));
+  const knockout = selectedArchive ? historicalFinals(selectedArchive.id, night) : undefined;
+  return <div className="competition-public">
     <CompetitionHero nightName={nightLabel(night)} teamCount={competition.teams.length} />
     <SnapshotNotice source={source} />
     <section className="fis-container competition-season-selection" aria-label="Season selection">
-      <label>Season<select value={seasonId} onChange={e=>setSeasonId(e.target.value)}><option value="current">{views[night].seasonName ?? "Current season"}</option>{views.history?.map(s=><option value={s.id} key={s.id}>{s.name} — previous season</option>)}</select></label>
-      <p>{competition.seasonName ?? "Current season"}</p>
+      <div className="season-selection-bar">
+        <label htmlFor={`season-${night}`}>Season</label>
+        <select id={`season-${night}`} value={seasonId} onChange={e => setSeasonId(e.target.value)}>
+          {seasonOptions.map(s => <option value={s.id} key={s.id}>{seasonDisplayName(s.name)}</option>)}
+        </select>
+        <span className="season-selection-status" role="status">{selectedArchive ? "Previous Season" : "Current Season"}</span>
+      </div>
     </section>
+    {knockout && <div className="fis-container archived-finals-panel">
+      <KnockoutBracket night={night} data={knockout} kitColours={historicalKitColours(competition.kitColours)} />
+    </div>}
     {competition.upcoming[0] && <section className="fis-section fis-container" id="upcoming-fixtures">
       <h2 className="section-title">Upcoming Fixtures</h2>
       <div className="round-heading"><span>Round {competition.upcoming[0].round}</span><span>{formatDate(competition.upcoming[0].date)}</span></div>
@@ -47,5 +61,5 @@ export default function CompetitionContent({ night, initial }: {
         <FixtureList fixtures={round.fixtures} />
       </RoundAccordion>)}</div>
     </section>}
-  </>;
+  </div>;
 }
