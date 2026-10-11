@@ -38,6 +38,8 @@
   text-wrap: balance;
 }
 .copy p { margin: 0 0 20px; font: 300 15px/2 var(--font-sans); }
+/* Align the pixel font's inset T with the visible left edge of the body copy. */
+.copy h2 { text-indent: -.125em; }
 .copy p:last-child { margin-bottom: 0; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 28px 36px; margin-top: 40px; }
 .register, .fillInLink { font: 400 10px/1.9 var(--font-mono); }
