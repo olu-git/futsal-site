@@ -11,10 +11,6 @@ export function historicalFinals(seasonId: string, night: CompetitionNight) {
   return finalsBySeason[seasonId]?.finals[night];
 }
 
-export function previousSeasonLabel(name: string) {
-  return `${name} — Previous Season`;
-}
-
 // Finals retain the recorded name; the same team UUID is now named King ADL.
 export function historicalKitColours(colours: Record<string, string | undefined>) {
   return { ...colours, Toss: colours.Toss ?? colours["King ADL"] };

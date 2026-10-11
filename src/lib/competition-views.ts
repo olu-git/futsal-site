@@ -1,3 +1,4 @@
+import { seasonDisplayName, compareSeasonNames } from "./season-names";
 import { competitionRepository, type CompetitionDataset } from "./competition-repository";
 import { createCompetitionService } from "./competition-service";
 
@@ -6,7 +7,7 @@ export async function competitionViews(data: CompetitionDataset) {
   const [monday,wednesday,nextRound] = await Promise.all([service.getNight("monday"),service.getNight("wednesday"),service.getNextRound()]);
   const history = await Promise.all((data.archives ?? []).map(async s => {
     const archived = createCompetitionService({readCompetition:async()=>s.data,readFinals:competitionRepository.readFinals});
-    return {id:s.id,name:s.name,monday:await archived.getNight("monday"),wednesday:await archived.getNight("wednesday")};
+    return {id:s.id,name:seasonDisplayName(s.name),monday:await archived.getNight("monday"),wednesday:await archived.getNight("wednesday")};
   }));
-  return {monday,wednesday,nextRound,history};
+  return {monday,wednesday,nextRound,history:history.sort((a,b)=>compareSeasonNames(a.name,b.name))};
 }

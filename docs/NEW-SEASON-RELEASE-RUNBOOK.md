@@ -9,8 +9,8 @@ The organiser authorised matching application release and atomic public activati
 | Application PR #20 | Merge `ad7bdf8859460985452bc3d771b0f2283ede2659`; [Pages 38092427665](https://github.com/olu-git/futsal-site/actions/runs/38092427665) success |
 | Archive pagination/tablet PR #21 | Commit `f41290d06e009d2ed2fb22920fb6d10866a5e4ad`; merge `8cc4fbc2a0cd90e536d0bb5d1233731ba5e58b1a`; [Pages 38093031062](https://github.com/olu-git/futsal-site/actions/runs/38093031062) success |
 | Atomic activation | Existing draft `f3434fe5-770a-4229-b7c6-1060c5006101`, activated/version 9; both editions active/published |
-| Monday | Edition `62ce7ec9-459e-4acf-bec5-c6734a3199ef`; Season 2 2026; 14 teams, 26 rounds, 182 fixtures; 12 October 2026–3 May 2027 |
-| Wednesday | Edition `be008d39-f175-45c1-a232-2148d84b1cf9`; Season 2 2026; 16 teams, 30 rounds, 240 fixtures; 14 October 2026–26 May 2027 |
+| Monday | Edition `62ce7ec9-459e-4acf-bec5-c6734a3199ef`; 2026 Season 2; 14 teams, 26 rounds, 182 fixtures; 12 October 2026–3 May 2027 |
+| Wednesday | Edition `be008d39-f175-45c1-a232-2148d84b1cf9`; 2026 Season 2; 16 teams, 30 rounds, 240 fixtures; 14 October 2026–26 May 2027 |
 | Assignment preservation | All 422 published assignments match reviewed plans exactly; approved files unchanged from e013330; no new results |
 | Historical preservation | Previous editions archived/published; 326 fixtures, 326 result versions, 38 adjustments retain exact baseline checksums; knockout JSON untouched |
 | Actual refresh | [38093049933](https://github.com/olu-git/futsal-site/actions/runs/38093049933) success; snapshot-only commit `2a2bf5d3988499ccfc6539b6733094a8f8884d6f` |
@@ -42,13 +42,13 @@ Release authority must distinguish application deployment/private staging from p
 
 The read-only production query on 10 October returns one season: **2026 Season 1**, 23 March to 7 October 2026. This is the observed year-plus-season-number convention, not evidence of a historical cross-year naming rule. The wizard accepts a supplied non-empty name; validation rejects duplicate names without deriving the year from the dates.
 
-The organiser approved exactly **Season 2 2026** on 10 October 2026 for both Monday and Wednesday. This supersedes the previous cross-year-name proposal. Keep the approved dates across 2026/2027 despite the chosen display label. Both editions share the season name; retain competition names Monday Night and Wednesday Night, Division A. No production season has been created or renamed.
+The organiser approved exactly **2026 Season 2** on 10 October 2026 for both Monday and Wednesday. This supersedes the previous cross-year-name proposal. Keep the approved dates across 2026/2027 despite the chosen display label. Both editions share the season name; retain competition names Monday Night and Wednesday Night, Division A. No production season has been created or renamed.
 
 Prepared wizard inputs (documentation only; not an executed RPC):
 
 | Field | Exact value |
 |---|---|
-| Name | `Season 2 2026` |
+| Name | `2026 Season 2` |
 | Source season | `08dce649-66b8-5d32-9c9e-d07a180cf591` (2026 Season 1) |
 | Overall start / end | `2026-10-12` / `2027-05-26` |
 | Monday first / last regular-season fixture | `2026-10-12` / `2027-05-03` |
@@ -201,7 +201,7 @@ Resolve any new remote changes carefully, rerun affected checks and review the f
 
 ## Private staging and review
 
-1. Open `/admin/seasons/` as the verified FIS admin. Create a private draft named exactly **Season 2 2026**, copying 2026 Season 1 (`08dce649-66b8-5d32-9c9e-d07a180cf591`). Use season start 12 October 2026 and overall end 26 May 2027; the Monday edition's actual last fixture remains 3 May. Retain Monday/Wednesday Division A at Endeavour Hills Leisure Centre. Both editions use the approved season display name.
+1. Open `/admin/seasons/` as the verified FIS admin. Create a private draft named exactly **2026 Season 2**, copying 2026 Season 1 (`08dce649-66b8-5d32-9c9e-d07a180cf591`). Use season start 12 October 2026 and overall end 26 May 2027; the Monday edition's actual last fixture remains 3 May. Retain Monday/Wednesday Division A at Endeavour Hills Leisure Centre. Both editions use the approved season display name.
 2. Select exactly the confirmed 14 Monday and 16 Wednesday teams. Copy the 26 returning source memberships with their UUID/history/kit links. Add fresh Monday Xaywan/Nassaji FC and Wednesday Etihad FC/Buckle City with their exact readable IDs. The wizard creates fresh UUIDs, stable after Save/Stage; local UUID reservations are not an additional SQL provisioning step. Import resolves approved fixture readable IDs against these staged memberships. Record actual new UUIDs after staging. Never reuse Ibiza, former Xaywan or another team's history.
 3. Review all availability using the reconciled organiser/repository rules; empty DB profiles do not erase established restrictions. Monday King ADL has no current preference. The four new entrants currently permit all four slots. Buckle City counts normally in standings. Check confirmations, including the standing venue booking; no 56 separate date confirmations. Calendar and time rules are in the approved JSON constraints. Monday 2 November remains provisional.
 4. **Save -> Validate -> Stage**. Validate persisted data only; Save invalidates earlier validation. Stage creates private planned/draft editions and memberships, preserving the old active season. Structure/profiles freeze after Stage; there is no supported staged discard/restructure path. A new constraint before activation is a stop/recovery decision, not permission to edit DB rows manually.

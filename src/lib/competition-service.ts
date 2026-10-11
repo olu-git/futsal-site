@@ -1,3 +1,4 @@
+import { seasonDisplayName } from "./season-names";
 import { competitionRepository, type CompetitionRepository, type CompetitionDataset } from "./competition-repository";
 import { calculateStandings } from "./standings";
 import { calculateTeamForm, type FormResult } from "./team-form";
@@ -45,7 +46,7 @@ export function createCompetitionService(repository: CompetitionRepository) {
       const divisions = [...new Set(ladderTeams.map((team) => team.division))].sort() as Division[];
       const fixtures = displayFixtures(data).filter((fixture) => fixture.night === night);
       return {
-        night, teams, kitColours, seasonName: data.seasonNames?.[night],
+        night, teams, kitColours, seasonName: data.seasonNames?.[night] ? seasonDisplayName(data.seasonNames[night]!) : undefined,
         divisions: divisions.map((division) => ({ division, standings: calculateStandings(night, division, data), teams: ladderTeams.filter((team) => team.division === division) })),
         results: groupRounds(fixtures.filter((fixture) => fixture.status === "completed")).reverse(),
         upcoming: groupRounds(fixtures.filter((fixture) => fixture.status === "scheduled")),

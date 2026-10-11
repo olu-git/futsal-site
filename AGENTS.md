@@ -17,6 +17,7 @@ This version has breaking changes - APIs, conventions, and file structure may al
 - Supabase is authoritative for published regular-season teams, fixtures, results and adjustments, plus authenticated admin workflows. Browser access uses a publishable key, grants and RLS; mutations use existing admin checks and reviewed RPCs. Never use a secret/service-role key in the site.
 - Public regular-season pages read Supabase after hydration and fall back to generated `src/data/public-competition-snapshot.json`. Older team/fixture/adjustment JSON remains for reconciliation, not live regular-season reads. Standings derive from published results and adjustments; never hand-code them.
 - `src/data/season-2026-s1.json` and `src/lib/finals.ts` own current finals and grading history. Show only knockout rounds publicly. Keep Monday and Wednesday separate; preserve stable team/match IDs, completed results and feeder relationships. Do not import finals or grading into Supabase.
+- Season display names use year-first format (`2026 Season 1`, `2026 Season 2`). Keep `Current Season` and `Previous Season` as separate status labels. Order season options by numeric year descending, then numeric season number descending; preserve active-edition selection, IDs and history.
 
 ## Checks and operations
 

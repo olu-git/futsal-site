@@ -1,9 +1,10 @@
+import { seasonDisplayName } from "../src/lib/season-names";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import KnockoutBracket from "../src/components/KnockoutBracket";
-import { historicalFinals, historicalKitColours, previousSeasonLabel } from "../src/lib/historical-finals";
+import { historicalFinals, historicalKitColours } from "../src/lib/historical-finals";
 import { publicMetadata, publicOrigin, socialCover } from "../src/lib/public-metadata";
 
 const archive = "08dce649-66b8-5d32-9c9e-d07a180cf591";
@@ -27,7 +28,7 @@ test("only the recorded archive receives finals, with independent night results"
 });
 
 test("archive display preserves historical names and the renamed team's kit", () => {
-  assert.equal(previousSeasonLabel("2026 Season 1"), "2026 Season 1 — Previous Season");
+  assert.equal(seasonDisplayName("2026 Season 1"), "2026 Season 1");
   const colours = { "King ADL": "#27AE60", AFG: "#2F80ED" };
   assert.equal(historicalKitColours(colours).Toss, "#27AE60");
   assert.deepEqual(colours, { "King ADL": "#27AE60", AFG: "#2F80ED" });

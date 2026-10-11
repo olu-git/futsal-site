@@ -1,3 +1,4 @@
+import { seasonDisplayName } from "../season-names";
 import { createClient } from "@/lib/supabase/browser";
 import { selectAdminEditions } from "./competition-editions";
 import type { AdminTeam, TeamEdition, TeamPreference } from "./teams";
@@ -17,7 +18,7 @@ export async function loadTeamsWorkspace(): Promise<TeamsWorkspace> {
   const rows = (editionData ?? []) as Row[];
   const editions: TeamEdition[] = selectAdminEditions(rows).map((row) => { const competition = one(row.competitions as { weekday: number; division: string; name: string } | { weekday: number; division: string; name: string }[]); return {
     id: String(row.id), night: (competition.weekday === 1 ? "monday" : "wednesday") as TeamEdition["night"], division: competition.division,
-    label: competition.name, season: String(one(row.seasons as { name: string } | { name: string }[]).name), lifecycle: row.lifecycle as TeamEdition["lifecycle"],
+    label: competition.name, season: seasonDisplayName(String(one(row.seasons as { name: string } | { name: string }[]).name)), lifecycle: row.lifecycle as TeamEdition["lifecycle"],
   }; }).sort((a, b) => a.night.localeCompare(b.night) || a.division.localeCompare(b.division));
   const ids = editions.map((edition) => edition.id);
   if (!ids.length) return { editions, teams: [] };
