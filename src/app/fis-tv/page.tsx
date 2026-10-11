@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { publicMetadata } from "@/lib/public-metadata";
 import PageHero from "@/components/PageHero";
 import ReplayCard from "@/components/fis-tv/ReplayCard";
 import PhotoGallery from "@/components/fis-tv/PhotoGallery";
@@ -6,13 +6,7 @@ import styles from "@/components/fis-tv/FisTv.module.css";
 import { galleryPhotos, photoCollections, replayVideos } from "@/data/fis-tv";
 
 const description = "FIS TV — The Matchday Lounge. Watch FIS match replays and explore photography from Futsal Indoor Soccer.";
-const url = "https://www.futsalindoorsoccer.com.au/fis-tv/";
-export const metadata: Metadata = {
-  title: "FIS TV", description,
-  alternates: { canonical: url },
-  openGraph: { title: "FIS TV | Futsal Indoor Soccer", description, url, type: "website", images: [{ url: "https://www.futsalindoorsoccer.com.au/media/finals-2026/finals-mon-01.jpg", width: 1365, height: 2048, alt: "FIS players with their medals and champions board" }] },
-  twitter: { card: "summary_large_image", title: "FIS TV", description, images: ["https://www.futsalindoorsoccer.com.au/media/finals-2026/finals-mon-01.jpg"] },
-};
+export const metadata = publicMetadata("FIS TV", description, "/fis-tv/");
 
 export default function FisTvPage() {
   return <>

@@ -35,6 +35,7 @@ test("invalid kit colour falls back without injecting a CSS colour", () => {
 test("unplayed fixtures show upcoming without a fabricated score", () => {
   const markup = renderToStaticMarkup(<FixtureList fixtures={[fixture("scheduled")]} />);
   assert.match(markup, /Scheduled fixture/);
+  assert.match(markup, /fixture-row fixture-upcoming/);
   assert.match(markup, /Upcoming/);
   assert.doesNotMatch(markup, /5 - 0/);
   assert.equal((markup.match(/role="listitem"/g) ?? []).length, 10);
@@ -47,6 +48,7 @@ test("completed result and explicit forfeit note remain scannable", () => {
   assert.match(markup, /Forfeit/);
   assert.match(markup, /Home team forfeited/);
   assert.doesNotMatch(markup, /team-form|form-badge/);
+  assert.doesNotMatch(markup, /fixture-upcoming/);
 });
 
 test("knockout feeder placeholders and result data stay visible", () => {

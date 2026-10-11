@@ -37,11 +37,11 @@ test("current season and archived results remain isolated in live and fallback v
  assert.equal(live.monday.upcoming[0].fixtures[0].date,fallback.monday.upcoming[0].fixtures[0].date);
 });
 
-test("Home shows both nights before standings, video and archived knockout; night pages have history without a bracket",()=>{
+test("Home shows both nights before standings, video and archived knockout; night pages isolate archive brackets",()=>{
  const home=readFileSync("src/components/HomeContent.tsx","utf8"),night=readFileSync("src/components/CompetitionContent.tsx","utf8"),preview=readFileSync("src/components/KnockoutPreview.tsx","utf8");
  assert.ok(home.indexOf('id="next-fixtures"')<home.indexOf('id="standings"'));
  assert.ok(home.indexOf('id="standings"')<home.indexOf('<HomeTvFeature'));
  assert.ok(home.indexOf('<HomeTvFeature')<home.indexOf('<KnockoutPreview'));
- assert.match(home,/\[monday,wednesday\]\.map/);assert.match(night,/previous season/);
- assert.doesNotMatch(night,/KnockoutBracket/);assert.doesNotMatch(preview,/View full knockout stage/);
+ assert.match(home,/\[monday,wednesday\]\.map/);assert.match(night,/previousSeasonLabel/);
+ assert.match(night,/selectedArchive \? historicalFinals/);assert.doesNotMatch(preview,/View full knockout stage/);
 });

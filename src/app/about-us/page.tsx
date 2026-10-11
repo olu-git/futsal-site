@@ -1,8 +1,9 @@
+import { publicMetadata } from "@/lib/public-metadata";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { champions, site } from "@/lib/site-content";
 
-export const metadata = { title: "About Us", description: "About Futsal Indoor Soccer and its Endeavour Hills competitions." };
+export const metadata = publicMetadata("About Us", "About Futsal Indoor Soccer and its Endeavour Hills competitions.", "/about-us/");
 
 export default function AboutUsPage() {
   return <><PageHero title="About Us" image={site.actionPhoto} />

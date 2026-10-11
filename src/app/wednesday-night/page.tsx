@@ -1,3 +1,4 @@
 import CompetitionPage from "@/components/CompetitionPage";
-export const metadata = { title: "Wednesday Night" };
+import { publicMetadata } from "@/lib/public-metadata";
+export const metadata = publicMetadata("Wednesday Night", "Wednesday Night futsal fixtures, standings, results and previous seasons at Endeavour Hills Leisure Centre.", "/wednesday-night/");
 export default function WednesdayNightPage() { return <CompetitionPage night="wednesday" />; }

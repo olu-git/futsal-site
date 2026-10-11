@@ -1017,3 +1017,69 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
 .admin-fixture-toolbar .admin-night-tabs { flex: 1 0 220px; }
 .admin-fixture-toolbar > label { flex: 1 1 240px; min-width: 0; }
 .admin-fixture-toolbar > label select { width: 100%; min-width: 0; }
+
+/* Public competition surfaces share a wider container; other pages keep their widths. */
+.home-public .fis-container, .competition-public .fis-container { width: min(100% - 48px, 1320px); }
+.competition-public .fixture-row:not(.fixture-upcoming) { grid-template-columns: 80px minmax(0,1fr) 56px minmax(0,1fr) 30px; gap: 10px; padding: 18px 12px; }
+.competition-public .fixture-row:not(.fixture-upcoming) .fixture-team-label { display: grid; grid-template-columns: 20px minmax(0,1fr); width: 100%; }
+.competition-public .fixture-row:not(.fixture-upcoming) .fixture-team-label-away { grid-template-columns: minmax(0,1fr) 20px; }
+.competition-public .fixture-row .fixture-team-name { overflow-wrap: normal; word-break: normal; hyphens: none; }
+.fixture-upcoming { grid-template-columns: 80px minmax(0,1fr) 56px minmax(0,1fr) 30px; grid-template-rows: auto auto; column-gap: 10px; row-gap: 8px; padding: 18px 12px; }
+.fixture-upcoming .fixture-meta { grid-column: 1; grid-row: 1 / span 2; }
+.fixture-upcoming .fixture-outcome { grid-column: 3; grid-row: 1 / span 2; }
+.fixture-upcoming .fixture-night { grid-column: 5; grid-row: 1 / span 2; }
+.fixture-upcoming .fixture-team { display: grid; grid-template-rows: subgrid; grid-row: 1 / span 2; align-items: stretch; font-size: 10px; }
+.fixture-upcoming .fixture-team.home { grid-column: 2; }
+.fixture-upcoming .fixture-team.away { grid-column: 4; }
+.fixture-upcoming .fixture-team-label { display: grid; grid-template-columns: 20px minmax(0,1fr); grid-template-rows: subgrid; grid-row: 1 / span 2; gap: 8px; width: 100%; }
+.fixture-upcoming .fixture-team-label-away { grid-template-columns: minmax(0,1fr) 20px; }
+.fixture-upcoming .fixture-team-copy { display: contents; }
+.fixture-upcoming .fixture-team-name { grid-column: 2; grid-row: 1; align-self: center; overflow-wrap: normal; word-break: normal; hyphens: none; }
+.fixture-upcoming .fixture-team-label-away .fixture-team-name { grid-column: 1; }
+.fixture-upcoming .team-kit { grid-column: 1; grid-row: 1; align-self: center; width: 20px; height: 21px; margin: 0; }
+.fixture-upcoming .fixture-team-label-away .team-kit { grid-column: 2; }
+.fixture-upcoming .team-form { grid-column: 2; grid-row: 2; align-self: start; justify-self: start; }
+.fixture-upcoming .fixture-team-label-away .team-form { grid-column: 1; justify-self: end; }
+.fixture-upcoming .fixture-note { grid-row: 3; }
+.home-public .home-upcoming-nights { gap: 32px; }
+.competition-public .competition-season-selection { padding-block: 24px; }
+.season-selection-bar { display: flex; align-items: center; gap: 18px; width: 100%; padding: 16px 20px; border: 2px solid var(--fis-blue); background: var(--fis-cream-light); }
+.competition-season-selection .season-selection-bar label { font: 10px/1.8 var(--font-mono); }
+.competition-season-selection .season-selection-bar select { flex: 1; width: 100%; min-width: 0; padding: 12px 36px 12px 12px; font: 12px/1.7 var(--font-sans); border: 1px solid var(--fis-blue); background: var(--fis-cream); }
+.season-selection-bar select:focus-visible { outline: 3px solid var(--fis-red-dark); outline-offset: 3px; }
+.season-selection-status { font: 10px/1.8 var(--font-sans); color: var(--fis-blue); white-space: nowrap; }
+.archived-finals-panel { margin-bottom: 32px; background: var(--fis-navy); color: var(--fis-cream); border: 2px solid var(--fis-blue); }
+.archived-finals-panel .bracket-section { padding-block: 32px; }
+.archived-finals-panel .bracket-section > div { max-width: none; padding-inline: 24px; }
+@media (max-width: 1199px) { .home-public .home-upcoming-nights { grid-template-columns: 1fr; } }
+@media (max-width: 767px) {
+  .home-public .fis-container, .competition-public .fis-container { width: calc(100% - 32px); }
+  .competition-public .fixture-row:not(.fixture-upcoming) { grid-template-columns: minmax(0,1fr) 48px minmax(0,1fr); gap: 8px; padding: 16px 8px; }
+  .fixture-upcoming { grid-template-columns: minmax(0,1fr) 48px minmax(0,1fr); grid-template-rows: auto auto auto; gap: 8px; padding: 16px 8px; }
+  .fixture-upcoming .fixture-meta { grid-column: 1 / 3; grid-row: 1; display: flex; gap: 12px; }
+  .fixture-upcoming .fixture-meta span { margin: 0; }
+  .fixture-upcoming .fixture-night { grid-column: 3; grid-row: 1; }
+  .fixture-upcoming .fixture-team { grid-row: 2 / span 2; font-size: 9px; }
+  .fixture-upcoming .fixture-team.home { grid-column: 1; }
+  .fixture-upcoming .fixture-team.away { grid-column: 3; }
+  .fixture-upcoming .fixture-outcome { grid-column: 2; grid-row: 2 / span 2; }
+  .fixture-upcoming .fixture-note { grid-row: 4; }
+  .season-selection-bar { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 12px; }
+  .competition-season-selection .season-selection-bar label { width: auto; }
+  .season-selection-bar select { grid-column: 1 / -1; grid-row: 2; }
+  .season-selection-status { grid-column: 2; grid-row: 1; }
+  .archived-finals-panel .bracket-section > div { padding-inline: 16px; }
+}
+@media (max-width: 380px) {
+  .competition-season-selection .season-selection-bar select { font-size: 10px; min-height: 44px; padding-inline: 6px; }
+  .competition-public .fixture-row:not(.fixture-upcoming) .fixture-team-label { position: relative; grid-template-columns: minmax(0,1fr); }
+  .competition-public .fixture-row:not(.fixture-upcoming) .fixture-team-name { padding-top: 24px; }
+  .competition-public .fixture-row:not(.fixture-upcoming) .team-kit { position: absolute; top: 0; left: 0; margin: 0; }
+  .competition-public .fixture-row:not(.fixture-upcoming) .fixture-team-label-away .team-kit { left: auto; right: 0; }
+  .fixture-upcoming { grid-template-columns: minmax(0,1fr) 40px minmax(0,1fr); gap: 6px; padding-inline: 6px; }
+  .fixture-upcoming .fixture-team-label { position: relative; grid-template-columns: minmax(0,1fr); }
+  .fixture-upcoming .fixture-team-name { grid-column: 1; padding-top: 27px; }
+  .fixture-upcoming .team-kit { position: absolute; top: 0; left: 0; }
+  .fixture-upcoming .fixture-team-label-away .team-kit { left: auto; right: 0; }
+  .fixture-upcoming .team-form { grid-column: 1; }
+}

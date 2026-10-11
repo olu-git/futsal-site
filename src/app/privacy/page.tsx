@@ -1,6 +1,7 @@
+import { publicMetadata } from "@/lib/public-metadata";
 import PolicyPage from "@/components/PolicyPage";
 
-export const metadata = { title: "Privacy Policy", description: "How Futsal Indoor Soccer collects and handles personal information." };
+export const metadata = publicMetadata("Privacy Policy", "How Futsal Indoor Soccer collects and handles personal information.", "/privacy/");
 const sections = [
   { heading: "Who we are", paragraphs: ["Futsal Indoor Soccer operates adult futsal competitions, currently including Monday and Wednesday nights at Endeavour Hills Leisure Centre."] },
   { heading: "Information we collect", paragraphs: ["We may collect registration and enquiry details, team and player names, contact information, postcode, gender, competition preferences, team details, fixtures, results, tables, team availability and preferences, communications, and signed captain onboarding forms.", "The website administration system does not store transaction history, medical information or emergency contacts. Financial records and cashflow tracking remain in a separate spreadsheet or accounting process."] },
