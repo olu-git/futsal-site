@@ -19,7 +19,11 @@ test("both fallback competitions and archives use year-first names with unchange
   const views = await competitionViews(jsonCompetitionData);
   assert.equal(views.monday.seasonName, "2026 Season 2");
   assert.equal(views.wednesday.seasonName, "2026 Season 2");
-  assert.equal(views.monday.upcoming.flatMap(r=>r.fixtures).length, 182);
-  assert.equal(views.wednesday.upcoming.flatMap(r=>r.fixtures).length, 240);
+  // Played fixtures move into results; naming must preserve the complete schedule.
+  for (const [night, count] of [[views.monday, 182], [views.wednesday, 240]] as const) {
+    const fixtures = [...night.upcoming, ...night.results].flatMap(round => round.fixtures);
+    assert.equal(fixtures.length, count);
+    assert.equal(new Set(fixtures.map(fixture => fixture.id)).size, count);
+  }
   assert.equal(views.history?.[0].name, "2026 Season 1");
 });
