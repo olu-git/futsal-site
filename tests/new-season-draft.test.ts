@@ -16,8 +16,8 @@ test("approved Monday counts decompose into 26 feasible rounds with balanced hom
 test("draft verification rejects double bookings, invalid counts, wrong kickoff and blackout dates", () => {
   const collision = structuredClone(draft); collision.fixtures[1] = { ...collision.fixtures[0] };
   assert.throws(() => validateMondayDraft(collision), /collision|exactly one|opponent count/);
-  const early = structuredClone(draft); early.fixtures.find((match) => [match.home, match.away].includes("mon-hunger-fc"))!.time = "19:00";
-  assert.throws(() => validateMondayDraft(early), /Hunger FC/);
+  const early = structuredClone(draft); early.fixtures.find((match) => [match.home, match.away].includes("mon-blue-dragons"))!.time = "19:00";
+  assert.throws(() => validateMondayDraft(early), /Blue Dragons/);
   const blocked = structuredClone(draft); blocked.fixtures[0].date = "2026-12-28";
   assert.throws(() => validateMondayDraft(blocked), /Blocked calendar/);
 });
@@ -40,8 +40,13 @@ test("Wednesday double round robin has balanced homes, separated repeats and all
   assert.equal(result.maximumHomeAwayRun, 3);
   assert.equal(result.startDate, "2026-10-14"); assert.equal(result.endDate, "2027-05-26");
   assert(Object.values(result.totals).every((total) => total.played === 30 && total.home === 15 && total.away === 15));
-  assert.equal(result.preferences.length, 2); // Ghazni must face 21:00-only Umoja twice.
-  assert(result.preferences.every((entry) => entry.pair.includes("wed-umoja-stars") && entry.issue.includes("Ghazni")));
+  // The unchanged draft now reports Ghazni's newly confirmed soft 19:00 rule too.
+  assert.equal(result.preferences.length, 21);
+  assert.equal(result.preferences.filter((entry) => entry.issue.includes("Ghazni")).length, 12);
+  assert.equal(result.preferences.filter((entry) => entry.issue.includes("King ADL")).length, 9);
+  const latePreferences = result.preferences.filter((entry) => entry.issue.includes("21:00"));
+  assert.equal(latePreferences.length, 2); // Both are against 21:00-only Umoja.
+  assert(latePreferences.every((entry) => entry.pair.includes("wed-umoja-stars")));
 });
 test("Wednesday verifier rejects restricted late games, shared-player collision and incorrect dates", () => {
   const early = structuredClone(wed); early.fixtures.find((m) => [m.home,m.away].includes("wed-umoja-stars"))!.time = "20:20";

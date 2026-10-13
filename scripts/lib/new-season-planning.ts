@@ -39,16 +39,17 @@ export function kickoffIssues(night: "monday" | "wednesday", teams: readonly str
   const hard: string[] = [], soft: string[] = [];
   if (!/^([01]\d|2[0-3]):[0-5]\d$/.test(time)) throw new Error("Invalid kickoff time.");
   if (night === "monday") {
-    for (const team of ["Hunger FC", "Ghazni United"]) if (teams.includes(team) && !["20:20", "21:00"].includes(time)) hard.push(`${team}: 20:20 or 21:00 only`);
+    // Gay Guys (formerly Hunger FC) now accepts any kickoff time.
     if (teams.includes("Blue Dragons") && time === "19:00") hard.push("Blue Dragons: no 19:00");
     if (teams.includes("Premiers FC") && time === "19:00") soft.push("Premiers FC: avoid 19:00");
   } else {
     if (teams.includes("Rinnai") && time === "19:00") hard.push("Rinnai: no 19:00");
     if (teams.includes("Umoja Stars") && time !== "21:00") hard.push("Umoja Stars: 21:00 throughout season");
     if (teams.includes("Kuq E Zi") && time === "21:00" && !teams.includes("Umoja Stars")) hard.push("Kuq E Zi: no 21:00 except against Umoja Stars");
-    if (teams.includes("Ghazni United") && time === "21:00") soft.push("Ghazni United: avoid 21:00 unless necessary");
-    if (teams.includes("Ibiza") && !["20:20", "21:00"].includes(time)) soft.push("Ibiza: prefer 20:20/21:00; 19:40 fallback; avoid 19:00");
   }
+  if (teams.includes("Ghazni United") && ["19:00", "21:00"].includes(time)) soft.push(`Ghazni United: prefer not to play at ${time}`);
+  for (const team of ["Bunyip", "Salvos", "Kroos Kontrol", "Kroos Control"]) if (teams.includes(team) && time === "21:00") soft.push(`${team}: prefer not to play at 21:00`);
+  if (teams.includes("King ADL") && time === "19:00") soft.push("King ADL: prefer not to play at 19:00");
   if (teams.includes("Samen")) {
     if (time === "19:00") hard.push("Samen: no 19:00");
     if (time !== "20:20") soft.push("Samen: prefer 20:20; 19:40 only if necessary");

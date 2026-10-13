@@ -85,7 +85,7 @@ test("general availability survives without applying it retroactively to finals 
   assert.equal(kickoffIssues("wednesday", ["Kuq E Zi", "Umoja Stars"], "21:00").hard.length, 0);
   assert.equal(kickoffIssues("wednesday", ["Kuq E Zi", "AFG"], "21:00").hard.length, 1);
   assert.equal(kickoffIssues("wednesday", ["Umoja Stars", "AFG"], "20:20").hard.length, 1);
-  assert.equal(kickoffIssues("monday", ["Hunger FC", "Ghazni United"], "19:30").hard.length, 2);
+  assert.equal(kickoffIssues("monday", ["Hunger FC", "Ghazni United"], "19:30").hard.length, 0);
   assert.equal(kickoffIssues("monday", ["Blue Dragons", "AFG"], "19:00").hard.length, 1);
   assert.equal(kickoffIssues("wednesday", ["Rinnai", "AFG"], "19:00").hard.length, 1);
   assert.equal(kickoffIssues("wednesday", ["Ibiza", "Ghazni United"], "21:00").soft.length, 1);
@@ -94,4 +94,27 @@ test("general availability survives without applying it retroactively to finals 
   assert.equal(sharedPlayerClash(["Goldlink Up", "Buckle City"], ["Ibiza", "Misfits"], true), false);
   const checker = readFileSync("scripts/check-finals.ts", "utf8");
   assert(!checker.includes("approvedHungerSemiFinal") && !checker.includes("Umoja Stars must play at 21:00"));
+});
+
+test("organiser soft preferences and unrestricted availability do not erase the retained hard rules", () => {
+  for (const night of ["monday", "wednesday"] as const) {
+    for (const time of ["19:00", "21:00"]) {
+      const issues = kickoffIssues(night, ["Ghazni United"], time);
+      assert.equal(issues.hard.length, 0);
+      assert.equal(issues.soft.length, 1);
+    }
+    assert.deepEqual(kickoffIssues(night, ["Ghazni United"], "19:40"), { hard: [], soft: [] });
+  }
+  assert.equal(kickoffIssues("monday", ["Salvos"], "21:00").hard.length, 0);
+  assert.equal(kickoffIssues("monday", ["Salvos"], "21:00").soft.length, 1);
+  assert.equal(kickoffIssues("monday", ["Blue Dragons"], "19:00").hard.length, 1);
+  assert.equal(kickoffIssues("monday", ["Blue Dragons"], "19:40").hard.length, 0);
+  assert.equal(kickoffIssues("monday", ["Gay Guys"], "19:40").hard.length, 0);
+  assert.equal(kickoffIssues("monday", ["Gay Guys"], "20:20").hard.length, 0);
+  for (const team of ["Bunyip", "Kroos Kontrol"]) {
+    assert.equal(kickoffIssues("monday", [team], "21:00").hard.length, 0);
+    assert.equal(kickoffIssues("monday", [team], "21:00").soft.length, 1);
+  }
+  assert.equal(kickoffIssues("monday", ["King ADL"], "19:00").soft.length, 1);
+  assert.deepEqual(kickoffIssues("wednesday", ["Ibiza"], "19:00"), { hard: [], soft: [] });
 });
