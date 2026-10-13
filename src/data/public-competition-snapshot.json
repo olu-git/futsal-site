@@ -27,7 +27,8 @@
         "night": "monday",
         "division": "A",
         "active": true,
-        "standingsEligible": true
+        "standingsEligible": true,
+        "kitColour": "#111111"
       },
       {
         "id": "mon-bunyip",
