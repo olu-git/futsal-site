@@ -9,10 +9,9 @@ import styles from "./FisTv.module.css";
 export default function PhotoGallery({ collection, photos }: { collection: PhotoCollection; photos: GalleryPhoto[] }) {
   const [active, setActive] = useState<number | null>(null);
   const trigger = useRef<HTMLButtonElement | null>(null);
-  return <article className={styles.collection} aria-labelledby={`collection-${collection.id}`}>
-    <h3 id={`collection-${collection.id}`} className={styles.collectionHeading}>{collection.title}</h3>
+  return <article className={styles.collection} aria-label={collection.title}>
     <div className={styles.gallery}>
-      {photos.map((photo, index) => <figure key={photo.id}>
+      {photos.map((photo, index) => <figure key={photo.id} className={photo.width > photo.height ? styles.landscape : undefined}>
         <button type="button" className={styles.photoButton} aria-label={`Enlarge photograph: ${photo.alt}`} aria-haspopup="dialog" onClick={(event) => { trigger.current = event.currentTarget; setActive(index); }}>
           <Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" />
           <span className={styles.expandIcon}><Expand size={18} aria-hidden="true" /></span>

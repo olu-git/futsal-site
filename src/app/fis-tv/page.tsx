@@ -32,7 +32,10 @@ export default function FisTvPage() {
         <div className={styles.replays}>{[...replayVideos].sort((a, b) => a.order - b.order).map((video) => <ReplayCard key={video.id} video={video} />)}</div>
       </section>
       <section className={`${styles.section} ${styles.gallerySection}`} aria-labelledby="the-gallery">
-        <header className={styles.sectionHeading}><h2 id="the-gallery" className="type-section-title">THE GALLERY</h2></header>
+        <header className={styles.sectionHeading}>
+          <h2 id="the-gallery" className="type-section-title">THE GALLERY</h2>
+          <p className={styles.galleryIntro}>A selection of moments from finals, captured by Basil. <a href="https://photobook.live/photobook/b3946a6b-39d8-4ffa-9e7d-14a063c053c2#photos" target="_blank" rel="noopener noreferrer">Click here to view all photos</a> in the full photobook.</p>
+        </header>
         {[...photoCollections].sort((a, b) => a.order - b.order).map((collection) => {
           const photos = galleryPhotos.filter((photo) => photo.collectionId === collection.id).sort((a, b) => a.order - b.order);
           return photos.length ? <PhotoGallery key={collection.id} collection={collection} photos={photos} /> : null;
