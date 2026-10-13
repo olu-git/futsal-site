@@ -36,7 +36,9 @@ test("gallery preserves full aspect ratios in balanced desktop, tablet and phone
 test("gallery introduction links to the full photobook without a redundant collection heading", () => {
   const page = readFileSync("src/app/fis-tv/page.tsx", "utf8");
   const gallery = readFileSync("src/components/fis-tv/PhotoGallery.tsx", "utf8");
-  assert.match(page, /Click here to view all photos/);
+  assert.match(page, /A selection of moments from our first season, captured by/);
+  assert.match(page, /href="http:\/\/instagram\.com\/qyserr"[^>]*>@Qyserr<\/a>/);
+  assert.match(page, /aria-label="View all first-season photos in the full photobook">Click here<\/a> to view all photos/);
   assert.match(page, /https:\/\/photobook\.live\/photobook\/b3946a6b-39d8-4ffa-9e7d-14a063c053c2#photos/);
   assert.match(page, /target="_blank" rel="noopener noreferrer"/);
   assert.doesNotMatch(gallery, /collectionHeading/);
