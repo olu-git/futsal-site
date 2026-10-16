@@ -53,4 +53,3 @@ END $$;
 COMMIT;
 SELECT f.id,f.round_number,f.match_date,h.name home_team,a.name away_team,r.home_score,r.away_score,r.id result_id
  FROM public.fixtures f JOIN public.teams h ON h.id=f.home_team_id JOIN public.teams a ON a.id=f.away_team_id JOIN public.result_versions r ON r.fixture_id=f.id AND r.status='published' WHERE f.id='b6b1a297-478a-4e71-a674-4228f2f11107';
-
