@@ -22,6 +22,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Public regular-season pages read Supabase after hydration and fall back to generated `src/data/public-competition-snapshot.json`. Older team/fixture/adjustment JSON remains for reconciliation, not live regular-season reads. Standings derive from published results and adjustments; never hand-code them.
 - `src/data/season-2026-s1.json` and `src/lib/finals.ts` own current finals and grading history. Show only knockout rounds publicly. Keep Monday and Wednesday separate; preserve stable team/match IDs, completed results and feeder relationships. Do not import finals or grading into Supabase.
 - Season display names use year-first format (`2026 - Season 1`, `2026 - Season 2`). Keep `Current Season` and `Previous Season` as separate status labels. Order season options by numeric year descending, then numeric season number descending; preserve active-edition selection, IDs and history.
+- Team replacements: propose inheritance of the outgoing team's current competition record and fixture place, but always obtain organiser confirmation for each replacement before applying it. Confirm both teams, night/division/season and transfer scope; approval for another replacement is insufficient. Preserve identities and audit history, avoid duplicate results/points, and derive standings/form from the inherited record. See the replacement procedure in `docs/PUBLIC-COMPETITION-DATA.md`.
 
 ## Checks and operations
 

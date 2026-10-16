@@ -1,5 +1,19 @@
 # Monday Imole United replacement - 16 October 2026
 
+## Current state: Round 1 result inherited
+
+The organiser explicitly corrected the original no-inheritance setup: Imole United now inherits Monday Buckle City's 12 October 2026 0-5 loss to Blue Dragons. This section supersedes the original setup described below.
+
+- Fixture `b6b1a297-478a-4e71-a674-4228f2f11107` now references `mon-imole` as its away team. Its original date, 19:40 kickoff, Court 1, opponent, published status, 5-0 score and published result UUID `ee9f7b8d-64cc-4d4c-b9f1-af3c034efaef` are unchanged.
+- Only the existing fixture's away-team reference was corrected. No result was inserted, altered or duplicated, and no standings adjustment was added. The old attribution remains in the audit history.
+- Imole United retains its fresh UUID/readable ID, black kit and unrestricted current availability. Buckle City's identity remains stored as replaced/ineligible. Wednesday and older seasons are unchanged.
+- Imole now has 1 played, 1 lost, 0 points, 0 goals for, 5 against and -5 goal difference. Upcoming form is `? ? ? ? L`. Blue Dragons retain their existing 5-0 win and 3 points. Other teams' statistics are unchanged apart from table position.
+- Imole now has all 30 season fixtures: 15 home/15 away, two meetings per opponent. Its 29 future fixtures have not moved.
+- The private profile note records this latest organiser instruction and explicitly supersedes its original no-transfer note. Audit/version triggers remained enabled. All existing result_versions rows, all other fixtures, unrelated teams/profiles/preferences, adjustments, seasons, edition state and previous audit rows were protected by transactional checks.
+- Applied receipt: `docs/drafts/monday-imole-result-inheritance-2026-10-16.sql`. Do not rerun. The public fallback is regenerated from production and included in the organiser-authorised commit/push together with the inheritance confirmation policy. No SQL receipt is rerun during release.
+
+## Initial replacement receipt (superseded only where noted above)
+
 Production data updated at the organiser's request. No application code, dates, times, courts, results, points or Wednesday data were changed.
 
 - New UUID: `aae18510-0f33-494b-8962-d7a5e86d0bf0`; readable ID: `mon-imole`.
