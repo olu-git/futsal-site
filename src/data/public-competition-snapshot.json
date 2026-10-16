@@ -199,15 +199,6 @@
         "kitColour": "#111111"
       },
       {
-        "id": "wed-hazara-united",
-        "name": "Hazara United",
-        "night": "wednesday",
-        "division": "A",
-        "active": true,
-        "standingsEligible": true,
-        "kitColour": "#FFFFFF"
-      },
-      {
         "id": "wed-ibiza",
         "name": "Ibiza",
         "night": "wednesday",
@@ -215,6 +206,15 @@
         "active": true,
         "standingsEligible": true,
         "kitColour": "#111111"
+      },
+      {
+        "id": "wed-hazara-united",
+        "name": "Kawsar FC",
+        "night": "wednesday",
+        "division": "A",
+        "active": true,
+        "standingsEligible": true,
+        "kitColour": "#FFFFFF"
       },
       {
         "id": "wed-king-adl",
