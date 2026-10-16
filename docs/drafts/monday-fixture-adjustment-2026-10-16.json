@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "monday",
+    "season": "2026 - Season 2",
+    "competitionSeasonId": "62ce7ec9-459e-4acf-bec5-c6734a3199ef"
+  },
+  "title": "16 October upcoming-fixture adjustments",
+  "overallNote": "APPLIED RECEIPT ONLY - DO NOT UPLOAD OR REPUBLISH. Applied in the authorised atomic connector transaction on 16 October 2026; these expected fixture versions are now stale.",
+  "changes": [
+    {
+      "operation": "update",
+      "fixtureId": "2521b1f2-7e43-4d62-913e-8c123b2da936",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Xaywan",
+      "awayTeamName": "Black Magic",
+      "proposed": {
+        "roundNumber": 2,
+        "date": "2026-10-19",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "534adb12-7f29-4546-bb2d-4ee37b887d0e",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Bunyip",
+      "awayTeamName": "Salvos",
+      "proposed": {
+        "roundNumber": 2,
+        "date": "2026-10-19",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fe42c8a3-a2a8-5dec-91d9-8e7ca8f7da6a",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Black Magic",
+      "awayTeamName": "Buckle City",
+      "proposed": {
+        "roundNumber": 3,
+        "date": "2026-10-26",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "26647e0e-fdf1-4be5-a3b8-7d0c5a4c9cf4",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Declan's Delinquents",
+      "awayTeamName": "Xaywan",
+      "proposed": {
+        "roundNumber": 3,
+        "date": "2026-10-26",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "1d74c3b0-90ba-4304-aa68-b9681ea4bb9a",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "23110bec-10dd-5f9f-a504-5f27b375a1d3",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Black Magic",
+      "awayTeamName": "Declan's Delinquents",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-09",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "1d74c3b0-90ba-4304-aa68-b9681ea4bb9a",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c76a8458-67ad-4093-8728-a571d40f59eb",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Nasaji FC",
+      "awayTeamName": "Bunyip",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-09",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "14305e6c-3fa6-496c-8f2d-f3854ddafd8a",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Salvos",
+      "awayTeamName": "Nasaji FC",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-16",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fa998c78-b8d9-4e30-82ea-301375b360d4",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Nasaji FC",
+      "awayTeamName": "Buckle City",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-11-30",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9ffa612f-8a19-4e99-8a39-4c09cabdb022",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Bunyip",
+      "awayTeamName": "Wildcats",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-11-30",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bda64c9c-10ef-4451-9392-cbe9df9b43a8",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Ghazni United",
+      "awayTeamName": "Salvos",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-11-30",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ccb8339b-3c18-5aee-9a8e-48cf19904356",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Nasaji FC",
+      "awayTeamName": "AFG",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-07",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "48862013-5d8d-4879-a4ff-3b7d7ef47a67",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Misfits",
+      "awayTeamName": "King ADL",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-07",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9458150f-5bec-45c0-ba25-9607f599326f",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Wildcats",
+      "awayTeamName": "Ghazni United",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-07",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b069e6cb-89cc-4fc5-8bd9-abd2f1e0375b",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Salvos",
+      "awayTeamName": "Xaywan",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-07",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1b3bc9e2-5b58-4413-9b95-9785ee7ce72f",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Black Magic",
+      "awayTeamName": "Bunyip",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-14",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bf19b721-0e60-5811-84f6-16c886078835",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Xaywan",
+      "awayTeamName": "Wildcats",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-14",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9a72a4e0-36d9-4731-9b95-d827acf738df",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Black Magic",
+      "awayTeamName": "Xaywan",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-08",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9814494b-2595-4387-a89c-e68a9eb4d9d0",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Declan's Delinquents",
+      "awayTeamName": "Black Magic",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-15",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "1d74c3b0-90ba-4304-aa68-b9681ea4bb9a",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8789954c-e45d-40e5-9e6d-b44cb533f5a6",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Bunyip",
+      "awayTeamName": "Nasaji FC",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-02-22",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "7488a3e4-73cf-40da-b486-fdc70273bb0f",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Salvos",
+      "awayTeamName": "Bunyip",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-15",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "17e22c14-2869-4d22-82db-0ec328bd0cb5",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Buckle City",
+      "awayTeamName": "Black Magic",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-05",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "cc3b1dc9-3b8e-45c5-bca8-00a06ef84c4e",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Nasaji FC",
+      "awayTeamName": "Salvos",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-05",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bf5a394f-36f0-5068-802f-5a3022af4dfc",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Xaywan",
+      "awayTeamName": "Declan's Delinquents",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-31",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "1d74c3b0-90ba-4304-aa68-b9681ea4bb9a",
+        "publicationState": "published"
+      }
+    }
+  ]
+}

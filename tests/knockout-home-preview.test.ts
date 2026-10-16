@@ -68,7 +68,7 @@ test("Monday 5 October results resolve Goldlink Up as champion", () => {
 
   for (const preview of [false, true]) {
     const html = renderToStaticMarkup(createElement(KnockoutBracket, { night: "monday", data, kitColours: {}, preview }));
-    assert.match(html, /2026 Season 1 Champions/);
+    assert.match(html, /2026 - Season 1 Champions/);
     assert.match(html, /finals-champion-name">Goldlink Up/);
     assert.match(html, /pixel-confetti/);
     assert.match(html, /fill="#e6a921"/);
@@ -155,7 +155,7 @@ test("Wednesday grading history retains the played slots and abandoned records",
 test("completed finals remain available in the Home preview", () => {
   for (const night of ["monday", "wednesday"] as const) {
     const html = renderToStaticMarkup(createElement(KnockoutBracket, { night, data: season.finals[night], kitColours: {}, preview: true }));
-    assert.match(html, /2026 Season 1 Champions/);
+    assert.match(html, /2026 - Season 1 Champions/);
   }
 });
 

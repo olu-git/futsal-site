@@ -28,7 +28,7 @@ test("only the recorded archive receives finals, with independent night results"
 });
 
 test("archive display preserves historical names and the renamed team's kit", () => {
-  assert.equal(seasonDisplayName("2026 Season 1"), "2026 Season 1");
+  assert.equal(seasonDisplayName("2026 Season 1"), "2026 - Season 1");
   const colours = { "King ADL": "#27AE60", AFG: "#2F80ED" };
   assert.equal(historicalKitColours(colours).Toss, "#27AE60");
   assert.deepEqual(colours, { "King ADL": "#27AE60", AFG: "#2F80ED" });

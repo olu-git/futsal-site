@@ -5,8 +5,9 @@ import { competitionViews } from "../src/lib/competition-views";
 import { jsonCompetitionData } from "../src/lib/competition-repository";
 
 test("year-first names recognise legacy labels without guessing unrelated labels", () => {
-  assert.equal(seasonDisplayName("Season 2 2026"), "2026 Season 2");
-  assert.equal(seasonDisplayName("2026 Season 1"), "2026 Season 1");
+  assert.equal(seasonDisplayName("Season 2 2026"), "2026 - Season 2");
+  assert.equal(seasonDisplayName("2026 Season 1"), "2026 - Season 1");
+  assert.equal(seasonDisplayName("2026 - Season 2"), "2026 - Season 2");
   assert.equal(seasonDisplayName("Summer Cup"), "Summer Cup");
 });
 
@@ -17,8 +18,8 @@ test("selectors order numeric years then numeric season numbers descending", () 
 
 test("both fallback competitions and archives use year-first names with unchanged schedules", async () => {
   const views = await competitionViews(jsonCompetitionData);
-  assert.equal(views.monday.seasonName, "2026 Season 2");
-  assert.equal(views.wednesday.seasonName, "2026 Season 2");
+  assert.equal(views.monday.seasonName, "2026 - Season 2");
+  assert.equal(views.wednesday.seasonName, "2026 - Season 2");
   // Played fixtures move into results; naming must preserve the complete schedule.
   for (const night of ['monday', 'wednesday'] as const) {
     const view = views[night];
@@ -28,5 +29,5 @@ test("both fallback competitions and archives use year-first names with unchange
     assert.deepEqual(fixtures.map(fixture => fixture.id).sort(), expected.map(fixture => fixture.id).sort());
     assert.equal(new Set(fixtures.map(fixture => fixture.id)).size, expected.length);
   }
-  assert.equal(views.history?.[0].name, "2026 Season 1");
+  assert.equal(views.history?.[0].name, "2026 - Season 1");
 });

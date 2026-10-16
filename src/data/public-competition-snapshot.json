@@ -420,27 +420,27 @@
         "status": "completed"
       },
       {
-        "id": "2521b1f2-7e43-4d62-913e-8c123b2da936",
-        "night": "monday",
-        "division": "A",
-        "round": 2,
-        "date": "2026-10-19",
-        "time": "19:00",
-        "court": 1,
-        "homeTeam": "mon-salvos",
-        "awayTeam": "mon-xaywan",
-        "status": "scheduled"
-      },
-      {
         "id": "534adb12-7f29-4546-bb2d-4ee37b887d0e",
         "night": "monday",
         "division": "A",
         "round": 2,
         "date": "2026-10-19",
         "time": "19:00",
+        "court": 1,
+        "homeTeam": "mon-bunyip",
+        "awayTeam": "mon-salvos",
+        "status": "scheduled"
+      },
+      {
+        "id": "2521b1f2-7e43-4d62-913e-8c123b2da936",
+        "night": "monday",
+        "division": "A",
+        "round": 2,
+        "date": "2026-10-19",
+        "time": "19:00",
         "court": 2,
-        "homeTeam": "mon-black-magic",
-        "awayTeam": "mon-bunyip",
+        "homeTeam": "mon-xaywan",
+        "awayTeam": "mon-black-magic",
         "status": "scheduled"
       },
       {
@@ -595,8 +595,8 @@
         "date": "2026-10-26",
         "time": "21:00",
         "court": 1,
-        "homeTeam": "mon-xaywan",
-        "awayTeam": "mon-declans-delinquents",
+        "homeTeam": "mon-declans-delinquents",
+        "awayTeam": "mon-xaywan",
         "status": "scheduled"
       },
       {
@@ -607,8 +607,8 @@
         "date": "2026-10-26",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "mon-buckle-city",
-        "awayTeam": "mon-black-magic",
+        "homeTeam": "mon-black-magic",
+        "awayTeam": "mon-buckle-city",
         "status": "scheduled"
       },
       {
@@ -751,8 +751,8 @@
         "date": "2026-11-09",
         "time": "19:40",
         "court": 2,
-        "homeTeam": "mon-bunyip",
-        "awayTeam": "mon-nassaji-fc",
+        "homeTeam": "mon-nassaji-fc",
+        "awayTeam": "mon-bunyip",
         "status": "scheduled"
       },
       {
@@ -799,8 +799,8 @@
         "date": "2026-11-09",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "mon-declans-delinquents",
-        "awayTeam": "mon-black-magic",
+        "homeTeam": "mon-black-magic",
+        "awayTeam": "mon-declans-delinquents",
         "status": "scheduled"
       },
       {
@@ -847,8 +847,8 @@
         "date": "2026-11-16",
         "time": "19:40",
         "court": 2,
-        "homeTeam": "mon-nassaji-fc",
-        "awayTeam": "mon-salvos",
+        "homeTeam": "mon-salvos",
+        "awayTeam": "mon-nassaji-fc",
         "status": "scheduled"
       },
       {
@@ -996,27 +996,27 @@
         "status": "scheduled"
       },
       {
-        "id": "bda64c9c-10ef-4451-9392-cbe9df9b43a8",
-        "night": "monday",
-        "division": "A",
-        "round": 8,
-        "date": "2026-11-30",
-        "time": "19:00",
-        "court": 1,
-        "homeTeam": "mon-salvos",
-        "awayTeam": "mon-bunyip",
-        "status": "scheduled"
-      },
-      {
         "id": "fa998c78-b8d9-4e30-82ea-301375b360d4",
         "night": "monday",
         "division": "A",
         "round": 8,
         "date": "2026-11-30",
         "time": "19:00",
-        "court": 2,
+        "court": 1,
         "homeTeam": "mon-nassaji-fc",
         "awayTeam": "mon-buckle-city",
+        "status": "scheduled"
+      },
+      {
+        "id": "9ffa612f-8a19-4e99-8a39-4c09cabdb022",
+        "night": "monday",
+        "division": "A",
+        "round": 8,
+        "date": "2026-11-30",
+        "time": "19:00",
+        "court": 2,
+        "homeTeam": "mon-bunyip",
+        "awayTeam": "mon-wildcats",
         "status": "scheduled"
       },
       {
@@ -1056,15 +1056,15 @@
         "status": "scheduled"
       },
       {
-        "id": "9ffa612f-8a19-4e99-8a39-4c09cabdb022",
+        "id": "bda64c9c-10ef-4451-9392-cbe9df9b43a8",
         "night": "monday",
         "division": "A",
         "round": 8,
         "date": "2026-11-30",
         "time": "20:20",
         "court": 2,
-        "homeTeam": "mon-wildcats",
-        "awayTeam": "mon-ghazni-united",
+        "homeTeam": "mon-ghazni-united",
+        "awayTeam": "mon-salvos",
         "status": "scheduled"
       },
       {
@@ -1128,15 +1128,15 @@
         "status": "scheduled"
       },
       {
-        "id": "48862013-5d8d-4879-a4ff-3b7d7ef47a67",
+        "id": "b069e6cb-89cc-4fc5-8bd9-abd2f1e0375b",
         "night": "monday",
         "division": "A",
         "round": 9,
         "date": "2026-12-07",
         "time": "19:40",
         "court": 2,
-        "homeTeam": "mon-misfits",
-        "awayTeam": "mon-king-adl",
+        "homeTeam": "mon-salvos",
+        "awayTeam": "mon-xaywan",
         "status": "scheduled"
       },
       {
@@ -1147,8 +1147,8 @@
         "date": "2026-12-07",
         "time": "20:20",
         "court": 1,
-        "homeTeam": "mon-ghazni-united",
-        "awayTeam": "mon-salvos",
+        "homeTeam": "mon-wildcats",
+        "awayTeam": "mon-ghazni-united",
         "status": "scheduled"
       },
       {
@@ -1164,27 +1164,27 @@
         "status": "scheduled"
       },
       {
-        "id": "b069e6cb-89cc-4fc5-8bd9-abd2f1e0375b",
-        "night": "monday",
-        "division": "A",
-        "round": 9,
-        "date": "2026-12-07",
-        "time": "21:00",
-        "court": 1,
-        "homeTeam": "mon-xaywan",
-        "awayTeam": "mon-wildcats",
-        "status": "scheduled"
-      },
-      {
         "id": "mon-2026-s2-r9-2100-c2",
         "night": "monday",
         "division": "A",
         "round": 9,
         "date": "2026-12-07",
         "time": "21:00",
-        "court": 2,
+        "court": 1,
         "homeTeam": "mon-nassaji-fc",
         "awayTeam": "mon-afg",
+        "status": "scheduled"
+      },
+      {
+        "id": "48862013-5d8d-4879-a4ff-3b7d7ef47a67",
+        "night": "monday",
+        "division": "A",
+        "round": 9,
+        "date": "2026-12-07",
+        "time": "21:00",
+        "court": 2,
+        "homeTeam": "mon-misfits",
+        "awayTeam": "mon-king-adl",
         "status": "scheduled"
       },
       {
@@ -1195,8 +1195,8 @@
         "date": "2026-12-14",
         "time": "19:00",
         "court": 1,
-        "homeTeam": "mon-bunyip",
-        "awayTeam": "mon-wildcats",
+        "homeTeam": "mon-black-magic",
+        "awayTeam": "mon-bunyip",
         "status": "scheduled"
       },
       {
@@ -1279,8 +1279,8 @@
         "date": "2026-12-14",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "mon-black-magic",
-        "awayTeam": "mon-xaywan",
+        "homeTeam": "mon-xaywan",
+        "awayTeam": "mon-wildcats",
         "status": "scheduled"
       },
       {
@@ -1795,8 +1795,8 @@
         "date": "2027-02-08",
         "time": "19:40",
         "court": 1,
-        "homeTeam": "mon-xaywan",
-        "awayTeam": "mon-black-magic",
+        "homeTeam": "mon-black-magic",
+        "awayTeam": "mon-xaywan",
         "status": "scheduled"
       },
       {
@@ -1939,8 +1939,8 @@
         "date": "2027-02-15",
         "time": "21:00",
         "court": 1,
-        "homeTeam": "mon-black-magic",
-        "awayTeam": "mon-declans-delinquents",
+        "homeTeam": "mon-declans-delinquents",
+        "awayTeam": "mon-black-magic",
         "status": "scheduled"
       },
       {
@@ -1963,8 +1963,8 @@
         "date": "2027-02-22",
         "time": "19:00",
         "court": 1,
-        "homeTeam": "mon-nassaji-fc",
-        "awayTeam": "mon-bunyip",
+        "homeTeam": "mon-bunyip",
+        "awayTeam": "mon-nassaji-fc",
         "status": "scheduled"
       },
       {
@@ -2155,8 +2155,8 @@
         "date": "2027-03-15",
         "time": "19:00",
         "court": 1,
-        "homeTeam": "mon-bunyip",
-        "awayTeam": "mon-salvos",
+        "homeTeam": "mon-salvos",
+        "awayTeam": "mon-bunyip",
         "status": "scheduled"
       },
       {
@@ -2383,8 +2383,8 @@
         "date": "2027-04-05",
         "time": "19:40",
         "court": 2,
-        "homeTeam": "mon-salvos",
-        "awayTeam": "mon-nassaji-fc",
+        "homeTeam": "mon-nassaji-fc",
+        "awayTeam": "mon-salvos",
         "status": "scheduled"
       },
       {
@@ -2395,8 +2395,8 @@
         "date": "2027-04-05",
         "time": "20:20",
         "court": 1,
-        "homeTeam": "mon-black-magic",
-        "awayTeam": "mon-buckle-city",
+        "homeTeam": "mon-buckle-city",
+        "awayTeam": "mon-black-magic",
         "status": "scheduled"
       },
       {
@@ -3199,8 +3199,8 @@
         "date": "2027-05-31",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "mon-declans-delinquents",
-        "awayTeam": "mon-xaywan",
+        "homeTeam": "mon-xaywan",
+        "awayTeam": "mon-declans-delinquents",
         "status": "scheduled"
       },
       {
@@ -3317,15 +3317,15 @@
         "status": "completed"
       },
       {
-        "id": "c53d32bd-192c-4a5a-840c-4b3db429ec0a",
+        "id": "fb9b9312-f8f3-4656-b07c-16be6ec405ec",
         "night": "wednesday",
         "division": "A",
         "round": 2,
         "date": "2026-10-21",
         "time": "19:00",
         "court": 1,
-        "homeTeam": "wed-kuq-e-zi",
-        "awayTeam": "wed-buckle-city",
+        "homeTeam": "wed-king-adl",
+        "awayTeam": "wed-pops",
         "status": "scheduled"
       },
       {
@@ -3341,15 +3341,15 @@
         "status": "scheduled"
       },
       {
-        "id": "fb9b9312-f8f3-4656-b07c-16be6ec405ec",
+        "id": "c53d32bd-192c-4a5a-840c-4b3db429ec0a",
         "night": "wednesday",
         "division": "A",
         "round": 2,
         "date": "2026-10-21",
         "time": "19:40",
         "court": 1,
-        "homeTeam": "wed-king-adl",
-        "awayTeam": "wed-pops",
+        "homeTeam": "wed-kuq-e-zi",
+        "awayTeam": "wed-buckle-city",
         "status": "scheduled"
       },
       {
@@ -6103,13 +6103,13 @@
     ],
     "standingsAdjustments": [],
     "seasonNames": {
-      "monday": "2026 Season 2",
-      "wednesday": "2026 Season 2"
+      "monday": "2026 - Season 2",
+      "wednesday": "2026 - Season 2"
     },
     "archives": [
       {
         "id": "08dce649-66b8-5d32-9c9e-d07a180cf591",
-        "name": "2026 Season 1",
+        "name": "2026 - Season 1",
         "data": {
           "teams": [
             {
@@ -11521,8 +11521,8 @@
             }
           ],
           "seasonNames": {
-            "monday": "2026 Season 1",
-            "wednesday": "2026 Season 1"
+            "monday": "2026 - Season 1",
+            "wednesday": "2026 - Season 1"
           }
         }
       }

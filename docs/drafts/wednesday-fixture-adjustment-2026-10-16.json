@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "wednesday",
+    "season": "2026 - Season 2",
+    "competitionSeasonId": "be008d39-f175-45c1-a232-2148d84b1cf9"
+  },
+  "title": "16 October upcoming-fixture adjustments",
+  "overallNote": "APPLIED RECEIPT ONLY - DO NOT UPLOAD OR REPUBLISH. Applied in the authorised atomic connector transaction on 16 October 2026; these expected fixture versions are now stale.",
+  "changes": [
+    {
+      "operation": "update",
+      "fixtureId": "c53d32bd-192c-4a5a-840c-4b3db429ec0a",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "Kuq E Zi",
+      "awayTeamName": "Buckle City",
+      "proposed": {
+        "roundNumber": 2,
+        "date": "2026-10-21",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fb9b9312-f8f3-4656-b07c-16be6ec405ec",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-requested upcoming fixtures and reciprocal schedule repair, 16 October 2026",
+      "homeTeamName": "King ADL",
+      "awayTeamName": "Pops",
+      "proposed": {
+        "roundNumber": 2,
+        "date": "2026-10-21",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "awayTeamId": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+        "publicationState": "published"
+      }
+    }
+  ]
+}

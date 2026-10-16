@@ -36,7 +36,7 @@ export default function FinalsTrophy({ champion }: { champion: string }) {
         <path fill="#fff4c4" d="M37 43h4v9h-4zm7-28h4v3h-4zm-5 22h4v3h-4z" />
       </svg>
     </div>
-    <p className="finals-champion-label">2026 Season 1 Champions</p>
+    <p className="finals-champion-label">2026 - Season 1 Champions</p>
     <strong className="finals-champion-name">{champion}</strong>
     <button
       type="button"

@@ -28,7 +28,8 @@ export default function HomeContent({ initial, finals }: { initial: PublicCompet
       <div className="home-upcoming-nights">{[monday,wednesday].map(competition => {
         const round = competition.upcoming[0];
         return <article key={competition.night}>
-          <div className="section-head"><div><h3 className="type-card-title">{nightLabel(competition.night)}</h3>{competition.seasonName && <p>{competition.seasonName}</p>}</div><Link className="text-link" href={`${nightPath(competition.night)}#fixtures`}>Full schedule</Link></div>
+          <div className="home-upcoming-heading"><h3 className="type-card-title">{nightLabel(competition.night)}</h3><Link className="text-link" href={`${nightPath(competition.night)}#fixtures`}>Full schedule</Link></div>
+          {competition.seasonName && <p className="home-upcoming-season">{competition.seasonName}</p>}
           {round ? <><div className="round-heading"><span>Round {round.round}</span><span>{formatDate(round.date)}</span></div><FixtureList fixtures={round.fixtures} /></> : <p className="empty-state">No upcoming regular-season fixtures are scheduled.</p>}
         </article>;
       })}</div>

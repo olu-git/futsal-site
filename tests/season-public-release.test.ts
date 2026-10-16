@@ -26,11 +26,11 @@ test("current season and archived results remain isolated in live and fallback v
  const live=await competitionViews(mapPublishedSeasons(rows));
  const fallback=await competitionViews(buildPublicSnapshot(rows).data);
  for(const views of [live,fallback]){
-  assert.equal(views.monday.seasonName,"2026 Season 2");
+  assert.equal(views.monday.seasonName,"2026 - Season 2");
   assert.equal(views.monday.results.length,0);
   assert.ok(views.monday.divisions[0].standings.every(s=>s.played===0&&s.points===0&&s.goalsFor===0));
   assert.deepEqual(views.monday.upcoming[0].fixtures[0].homeForm,["?","?","?","?","?"]);
-  assert.equal(views.history.length,1);assert.equal(views.history[0].name,"2026 Season 1");
+  assert.equal(views.history.length,1);assert.equal(views.history[0].name,"2026 - Season 1");
   assert.equal(views.history[0].monday.results[0].fixtures[0].homeScore,3);
   assert.equal(views.history[0].monday.results[0].fixtures[0].homeForm,undefined);
  }
