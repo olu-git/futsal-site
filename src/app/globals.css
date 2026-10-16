@@ -1027,6 +1027,7 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
 .competition-public .fixture-row:not(.fixture-upcoming) .fixture-team-label-away { grid-template-columns: minmax(0,1fr) 20px; }
 .competition-public .fixture-row .fixture-team-name { overflow-wrap: normal; word-break: normal; hyphens: none; }
 .fixture-upcoming { grid-template-columns: 80px minmax(0,1fr) 56px minmax(0,1fr) 30px; grid-template-rows: minmax(38px,auto) 16px; column-gap: 10px; row-gap: 8px; padding: 18px 12px; }
+.fixture-upcoming:last-child { border-bottom: 1px solid transparent; }
 .fixture-upcoming .fixture-meta { grid-column: 1; grid-row: 1 / span 2; }
 .fixture-upcoming .fixture-outcome { grid-column: 3; grid-row: 1 / span 2; }
 .fixture-upcoming .fixture-night { grid-column: 5; grid-row: 1 / span 2; }

@@ -1,6 +1,6 @@
 # Upcoming fixture adjustments - 16 October 2026
 
-Status: authorised production data release completed on 16 October 2026; application release in progress. Production preflight matched the reviewed f1388cd baseline. The 25 fixture updates and current season name were applied atomically through the authorised connector. Existing audit/version triggers remained enabled; no admin identity was impersonated.
+Status: authorised production data release completed on 16 October 2026; application release 7a33d33 deployed successfully. Production preflight matched the reviewed f1388cd baseline. The 25 fixture updates and current season name were applied atomically through the authorised connector. Existing audit/version triggers remained enabled; no admin identity was impersonated.
 
 ## Presentation
 
@@ -55,12 +55,14 @@ The solver minimized changed pair/round assignments first, then orientation chan
 - Do not re-upload the applied Monday/Wednesday import receipts or rerun the applied SQL. Future edits need a freshly versioned admin plan.
 - Persisted current season name is now `2026 - Season 2`, applied in the same transaction. The redundant standalone name-only proposal was removed. No season was recreated or reactivated.
 - Fallback generation reads the committed production changes. Matching application/fallback release follows repository checks and the master Pages workflow.
-- Automated verification only: no fresh visual browser sign-off. Production changes were limited to the authorised 25 future fixtures and current season name.
+- Initial release used automated checks; subsequent isolated Edge browser checks verified the deployed desktop and mobile layout. Production changes were limited to the authorised 25 future fixtures and current season name.
 
 ## Check evidence
 
-207 tests passed; ESLint, non-incremental TypeScript, static production build, snapshot validation/freshness, finals validation and diff whitespace checks passed. Static output contains the new label on Home and both competition pages. Before the data release, structural comparison confirmed only season labels changed; after release the fallback was regenerated from production. The attempted headless Edge run emitted no DOM measurements; equal-height and baseline CSS changes have not received a fresh visual browser sign-off. The redundant standalone name-only SQL proposal was removed after the combined applied transaction.
+207 tests passed; ESLint, non-incremental TypeScript, static production build, snapshot validation/freshness, finals validation and diff whitespace checks passed. Static output contains the new label on Home and both competition pages. Before the data release, structural comparison confirmed only season labels changed; after release the fallback was regenerated from production. The original CLI browser attempt was inconclusive. A supported isolated Edge DevTools run subsequently verified the deployed site at 1440, 768, 390 and 320 CSS pixels: no page overflow, clipped names or form-baseline differences, and Press Start 2P badges. It identified the last row as one pixel shorter because its border was removed; a transparent one-pixel border now preserves equal height. The redundant standalone name-only SQL proposal was removed after the combined applied transaction.
 
 ## Production transaction evidence
 
 Fixture hash before: `7c61ac7435b0faa7eaeb0b03d31bd8ba`; after: `108cba318df2a00406f2fd432ee3fc06`. Complete result_versions hash unchanged: `fb8afcb4c1e8fe901add297074502ab0`. All 16 published current-season results remain. The transaction checked unchanged non-target fixtures (including archives and Round 1), all teams/preferences/notes, adjustments, edition lifecycle/publication state, other seasons and previous audit rows. Existing triggers produced 51 audit records: two updates per target fixture plus one season rename. Target schedule versions increased by two. Current season dates and all edition/team IDs are unchanged. A fresh post-commit read passed the full 480-fixture validator.
+
+Pages run [38836988455](https://github.com/olu-git/futsal-site/actions/runs/38836988455) successfully deployed commit `7a33d33032da3b5c869b4054dc0125b567664478`. Home, Monday and Wednesday HTTPS responses returned 200 with the new season label and published fixtures. The row-border correction passed the same 207 tests, lint, TypeScript and static build before its follow-up release.
