@@ -14,6 +14,7 @@ const groups: { title: string; intro: string; groups: RuleGroup[] }[] = [
     { heading: "Players & Equipment", rules: [
       { image: "/logos/FIS-ball-rule.svg", title: "The Ball", body: "A low-bounce size 4 futsal ball is used. Standard outdoor footballs are not used." },
       { icon: Users, title: "The Team", body: "Five players per side, including the goalkeeper. A minimum of three players is required to start a match." },
+      { icon: Shield, title: "Jewellery & Watches", body: "Players must not wear necklaces, jewellery or watches with watch faces while playing. Remove these items before taking the court." },
       { icon: UserPlus, title: "Substitutions", body: "Rolling substitutions are unlimited and may be made during play without a stoppage. Teams must notify the referee of any goalkeeper substitutions." },
     ] },
     { heading: "Match Rules", rules: [
