@@ -436,9 +436,11 @@
         "date": "2026-10-19",
         "time": "19:00",
         "court": 1,
-        "homeTeam": "mon-bunyip",
-        "awayTeam": "mon-salvos",
-        "status": "scheduled"
+        "homeTeam": "mon-salvos",
+        "awayTeam": "mon-bunyip",
+        "homeScore": 5,
+        "awayScore": 1,
+        "status": "completed"
       },
       {
         "id": "2521b1f2-7e43-4d62-913e-8c123b2da936",
@@ -450,7 +452,9 @@
         "court": 2,
         "homeTeam": "mon-xaywan",
         "awayTeam": "mon-black-magic",
-        "status": "scheduled"
+        "homeScore": 2,
+        "awayScore": 10,
+        "status": "completed"
       },
       {
         "id": "e1b2abc6-88ec-46b5-ad1f-f2fc93e5104d",
@@ -460,9 +464,11 @@
         "date": "2026-10-19",
         "time": "19:40",
         "court": 1,
-        "homeTeam": "mon-blue-dragons",
-        "awayTeam": "mon-misfits",
-        "status": "scheduled"
+        "homeTeam": "mon-misfits",
+        "awayTeam": "mon-blue-dragons",
+        "homeScore": 7,
+        "awayScore": 3,
+        "status": "completed"
       },
       {
         "id": "476130fb-c05c-4fc3-ae64-b1d6f74ba84b",
@@ -472,21 +478,11 @@
         "date": "2026-10-19",
         "time": "19:40",
         "court": 2,
-        "homeTeam": "mon-declans-delinquents",
+        "homeTeam": "mon-ghazni-united",
         "awayTeam": "mon-imole",
-        "status": "scheduled"
-      },
-      {
-        "id": "3f44938e-938e-4160-a978-6446b4d86151",
-        "night": "monday",
-        "division": "A",
-        "round": 2,
-        "date": "2026-10-19",
-        "time": "20:20",
-        "court": 1,
-        "homeTeam": "mon-hunger-fc",
-        "awayTeam": "mon-ghazni-united",
-        "status": "scheduled"
+        "homeScore": 11,
+        "awayScore": 3,
+        "status": "completed"
       },
       {
         "id": "5c1d2b4c-b4db-4c2a-b2f1-4ad4f15636d3",
@@ -495,10 +491,40 @@
         "round": 2,
         "date": "2026-10-19",
         "time": "20:20",
-        "court": 2,
-        "homeTeam": "mon-nassaji-fc",
+        "court": 1,
+        "homeTeam": "mon-goldlink-up",
         "awayTeam": "mon-kroos-kontrol",
-        "status": "scheduled"
+        "homeScore": 6,
+        "awayScore": 7,
+        "status": "completed"
+      },
+      {
+        "id": "e3471294-0d0b-4815-9fd1-2f52f9fa1aec",
+        "night": "monday",
+        "division": "A",
+        "round": 2,
+        "date": "2026-10-19",
+        "time": "20:20",
+        "court": 2,
+        "homeTeam": "mon-declans-delinquents",
+        "awayTeam": "mon-wildcats",
+        "homeScore": 7,
+        "awayScore": 9,
+        "status": "completed"
+      },
+      {
+        "id": "3f44938e-938e-4160-a978-6446b4d86151",
+        "night": "monday",
+        "division": "A",
+        "round": 2,
+        "date": "2026-10-19",
+        "time": "21:00",
+        "court": 1,
+        "homeTeam": "mon-hunger-fc",
+        "awayTeam": "mon-nassaji-fc",
+        "homeScore": 4,
+        "awayScore": 12,
+        "status": "completed"
       },
       {
         "id": "mon-2026-s2-r2-2100-c1",
@@ -507,22 +533,12 @@
         "round": 2,
         "date": "2026-10-19",
         "time": "21:00",
-        "court": 1,
-        "homeTeam": "mon-king-adl",
-        "awayTeam": "mon-afg",
-        "status": "scheduled"
-      },
-      {
-        "id": "e3471294-0d0b-4815-9fd1-2f52f9fa1aec",
-        "night": "monday",
-        "division": "A",
-        "round": 2,
-        "date": "2026-10-19",
-        "time": "21:00",
         "court": 2,
-        "homeTeam": "mon-goldlink-up",
-        "awayTeam": "mon-wildcats",
-        "status": "scheduled"
+        "homeTeam": "mon-afg",
+        "awayTeam": "mon-king-adl",
+        "homeScore": 5,
+        "awayScore": 4,
+        "status": "completed"
       },
       {
         "id": "20a4e352-fa5b-4452-b382-e94ae068f644",
