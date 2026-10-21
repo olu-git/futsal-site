@@ -23,7 +23,7 @@ export default function Navbar() {
     document.addEventListener("keydown", keyboard);
     return () => { document.removeEventListener("pointerdown", outside); document.removeEventListener("keydown", keyboard); };
   }, [open]);
-  const navLink = ({ href, label }: typeof links[number]) => <Link key={href} href={href} aria-current={path === href ? "page" : undefined} onClick={() => setOpen(false)}>{label}</Link>;
+  const navLink = ({ href, label }: typeof links[number]) => <Link key={href} href={href} aria-current={(href === "/" ? path === href : path === href || path.startsWith(`${href}/`)) ? "page" : undefined} onClick={() => setOpen(false)}><span className="nav-pointer" aria-hidden="true">▶</span><span className="nav-label">{label}</span></Link>;
   return <header className="site-header">
     <div className="fis-container header-inner">
       <Link href="/" className="brand" aria-label="Futsal Indoor Soccer home" onClick={() => setOpen(false)}><Image src={site.logo} alt="Futsal Indoor Soccer" width={138} height={57} priority /></Link>

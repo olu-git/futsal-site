@@ -105,7 +105,14 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .brand img { width: 138px; height: auto; filter: brightness(0) invert(1); }
 .nav-cluster, .primary-nav { display: flex; align-items: center; gap: 28px; }
 .primary-nav a { display: flex; align-items: center; min-height: 44px; color: white; font: 9px/1.8 var(--font-mono); text-transform: uppercase; position: relative; }
-.primary-nav a[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 5px; height: 2px; background: var(--fis-red); }
+.nav-pointer { color: var(--fis-red); font-size: 8px; visibility: hidden; flex-shrink: 0; }
+.primary-nav .nav-pointer { position: absolute; right: calc(100% + 5px); }
+.primary-nav .nav-label { position: relative; }
+.primary-nav .nav-label::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; background: var(--fis-red); visibility: hidden; }
+.site-header a:is([aria-current="page"], :hover, :focus-visible) .nav-pointer,
+.primary-nav a:is([aria-current="page"], :hover, :focus-visible) .nav-label::after { visibility: visible; }
+.menu-panel a { gap: 8px; }
+.menu-panel a:is([aria-current="page"], :hover, :focus-visible) .nav-label { text-decoration: underline; text-decoration-color: var(--fis-red); text-underline-offset: 6px; }
 .menu-wrap { position: relative; }
 .menu-button { min-height: 44px; display: flex; align-items: center; gap: 12px; border: 1px solid #ffffff99; padding: 10px 14px; color: white; background: transparent; font: 9px/1.8 var(--font-mono); text-transform: uppercase; }
 .hamburger { width: 18px; height: 14px; display: flex; flex-direction: column; justify-content: space-between; }
@@ -1085,4 +1092,38 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
   .fixture-upcoming .team-kit { position: absolute; top: 0; left: 0; }
   .fixture-upcoming .fixture-team-label-away .team-kit { left: auto; right: 0; }
   .fixture-upcoming .team-form { grid-column: 1; }
+}
+
+/* Homepage recap: isolated from the shared photograph heroes on other routes. */
+.recap-hero { position: relative; isolation: isolate; display: flex; min-height: max(560px, min(calc(100svh - 70px), 900px)); color: white; background: var(--fis-navy) url('/images/fis-hero-poster.jpg') center / cover; border-bottom: 4px solid var(--fis-red); }
+.recap-video,.recap-overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.recap-video { object-fit: cover; object-position: center; z-index: -2; }
+.recap-overlay { z-index: -1; background: repeating-linear-gradient(0deg, rgba(0,0,0,.18) 0 1px, transparent 1px 3px), linear-gradient(58deg, rgba(0,27,79,.8) 0%, rgba(0,27,79,.65) 28%, rgba(0,27,79,.25) 50%, transparent 70%), linear-gradient(0deg, rgba(0,17,47,.6) 0%, transparent 30%); }
+.recap-content { display: flex; flex-direction: column; align-items: flex-start; padding-block: 28px 24px; }
+.recap-tag { display: flex; align-items: center; gap: 10px; margin: 0; font: 9px/1.8 var(--font-mono); text-shadow: 2px 2px 0 #0009; }
+.recap-dot { width: 10px; height: 10px; border-radius: 50%; background: #f22124; animation: recap-blink 1.2s steps(1) infinite; }
+.recap-main { width: 100%; margin-top: auto; padding-block: 64px 4px; }
+.recap-main h1 { margin: 0; font: clamp(28px, 4.4vw, 64px)/1.3 var(--font-mono); color: white; text-transform: uppercase; text-shadow: 4px 4px 0 #001b4f; overflow-wrap: normal; }
+.recap-main h1 span { display: inline-block; }
+.recap-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+.recap-actions :is(a,button) { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 58px; padding: 18px 26px; border: 3px solid white; background: #003b9b; color: white; font: 10px/1.8 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; text-align: center; white-space: normal; box-shadow: 5px 5px 0 #001b4f; transition: transform .12s steps(2), box-shadow .12s steps(2); }
+.recap-actions .recap-register { background: #f22124; }
+.recap-actions .recap-fill-ins { background: transparent; }
+.recap-arrow { animation: recap-blink 1.2s steps(1) infinite; }
+.recap-actions :is(a,button):hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 #001b4f; }
+.recap-actions :is(a,button):active { transform: translate(5px,5px); box-shadow: none; }
+.recap-hero :is(a,button):focus-visible { outline: 3px solid white; outline-offset: 5px; }
+@keyframes recap-blink { 50% { opacity: 0; } }
+@media (max-width: 600px) {
+  .recap-content { padding-block: 22px 18px; }
+  .recap-main { padding-block: 40px 4px; }
+  .recap-main h1 { font-size: clamp(28px, 8vw, 44px); line-height: 1.35; text-shadow: 3px 3px 0 #001b4f; }
+  .recap-main h1 span { display: block; }
+  .recap-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin-top: 24px; }
+  .recap-actions :is(a,button) { min-width: 0; min-height: 52px; padding: 14px 10px; font-size: 8px; }
+  .recap-actions .recap-register,.recap-actions .recap-fill-ins { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .recap-dot,.recap-arrow { animation: none; }
+  .recap-actions :is(a,button) { transition: none; }
 }

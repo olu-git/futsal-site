@@ -1,12 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import PageHero from "./PageHero";
+import HomeHero from "./HomeHero";
 import LeagueTable from "./LeagueTable";
 import FixtureList from "./FixtureList";
-import { RegisterButton } from "./RegistrationProvider";
 import { usePublicCompetition, SnapshotNotice, type PublicCompetitionViews } from "@/lib/use-public-competition";
-import { site } from "@/lib/site-content";
 import { formatDate, nightLabel, nightPath } from "@/lib/utils";
 import type { FinalsSeasonData } from "@/lib/finals";
 import KnockoutPreview from "./KnockoutPreview";
@@ -16,12 +14,7 @@ export default function HomeContent({ initial, finals }: { initial: PublicCompet
   const { views, source } = usePublicCompetition(initial);
   const { monday, wednesday } = views;
   return <div className="home-public">
-    <div className="home-hero-wrap">
-      <PageHero title="Futsal Indoor Soccer" image={site.homeHeroPhoto} imageAlt="Six FIS players standing together in front of an indoor futsal goal" home>
-        <div className="hero-actions"><Link href="/monday-night">Monday Night</Link><Link href="/wednesday-night">Wednesday Night</Link><a className="fill-ins" href={site.fillIns} target="_blank" rel="noopener noreferrer">Fill-ins</a></div>
-      </PageHero>
-      <div className="hero-register fis-container"><RegisterButton className="register-hero-button" /></div>
-    </div>
+    <HomeHero seasonName={monday.seasonName ?? wednesday.seasonName} />
     <SnapshotNotice source={source} />
     <section className="fis-section fis-container" id="next-fixtures">
       <h2 className="section-title">Upcoming Fixtures</h2>
