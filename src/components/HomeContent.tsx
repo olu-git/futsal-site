@@ -1,6 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { useSyncExternalStore } from "react";
+import NoGamesNotice from "./NoGamesNotice";
+import { activeNoticeFor, melbourneToday } from "@/lib/site-notices";
 import HomeHero from "./HomeHero";
 import LeagueTable from "./LeagueTable";
 import FixtureList from "./FixtureList";
@@ -10,7 +13,10 @@ import type { FinalsSeasonData } from "@/lib/finals";
 import KnockoutPreview from "./KnockoutPreview";
 import HomeTvFeature from "./HomeTvFeature";
 
+const subscribeToDate = () => () => {};
+
 export default function HomeContent({ initial, finals }: { initial: PublicCompetitionViews; finals: FinalsSeasonData }) {
+  const today = useSyncExternalStore(subscribeToDate, melbourneToday, melbourneToday);
   const { views, source } = usePublicCompetition(initial);
   const { monday, wednesday } = views;
   return <div className="home-public">
@@ -20,10 +26,11 @@ export default function HomeContent({ initial, finals }: { initial: PublicCompet
       <h2 className="section-title">Upcoming Fixtures</h2>
       <div className="home-upcoming-nights">{[monday,wednesday].map(competition => {
         const round = competition.upcoming[0];
+        const notice = activeNoticeFor(competition.night, today);
         return <article key={competition.night}>
           <div className="home-upcoming-heading"><h3 className="type-card-title">{nightLabel(competition.night)}</h3><Link className="text-link" href={`${nightPath(competition.night)}#fixtures`}>Full schedule</Link></div>
           {competition.seasonName && <p className="home-upcoming-season">{competition.seasonName}</p>}
-          {round ? <><div className="round-heading"><span>Round {round.round}</span><span>{formatDate(round.date)}</span></div><FixtureList fixtures={round.fixtures} /></> : <p className="empty-state">No upcoming regular-season fixtures are scheduled.</p>}
+          {notice ? <NoGamesNotice notice={notice} /> : round ? <><div className="round-heading"><span>Round {round.round}</span><span>{formatDate(round.date)}</span></div><FixtureList fixtures={round.fixtures} /></> : <p className="empty-state">No upcoming regular-season fixtures are scheduled.</p>}
         </article>;
       })}</div>
     </section>

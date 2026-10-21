@@ -1127,3 +1127,11 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
   .recap-dot,.recap-arrow { animation: none; }
   .recap-actions :is(a,button) { transition: none; }
 }
+
+/* Dated Home fixture notices */
+.no-games-notice { background: var(--fis-red-dark); border: 2px solid var(--fis-red-dark); color: white; padding: 24px; box-shadow: var(--fis-shadow); margin-top: 16px; }
+.no-games-notice h4 { margin: 0 0 24px; font: 400 var(--type-card-title)/var(--leading-heading) var(--font-mono); }
+.no-games-notice p { margin: 0 0 20px; font: 400 var(--type-body)/var(--leading-body) var(--font-sans); }
+.no-games-notice strong { font-weight: 700; }
+.no-games-notice a { color: white; font: 400 var(--type-action)/var(--leading-body) var(--font-mono); text-decoration: underline; text-underline-offset: 4px; }
+.no-games-notice a:focus-visible { outline: 2px solid white; outline-offset: 5px; }
