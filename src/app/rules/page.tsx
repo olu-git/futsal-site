@@ -43,6 +43,7 @@ const groups: { title: string; intro: string; groups: RuleGroup[] }[] = [
     ] },
     { heading: "Discipline", rules: [
       { icon: Gavel, title: "Suspensions", body: "A player shown a red card is dismissed for the remainder of the match. The team may replace them after two minutes or when the opposition scores. Carry-over suspensions vary according to the severity of the offence." },
+      { icon: Shield, title: "Disorderly Behaviour & Bond", body: "Teams that behave in a disorderly manner, provoke or abuse referees, or behave disruptively towards players or staff will forfeit their bond. An active bond is required to play. The team cannot play again until the bond has been paid in full and reinstated." },
     ] },
   ] },
   { title: "Knockout & Finals Rules", intro: "Additional rules for knockout-stage matches.", groups: [

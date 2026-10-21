@@ -1,0 +1,1683 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "monday",
+    "season": "2026 - Season 2",
+    "competitionSeasonId": "62ce7ec9-459e-4acf-bec5-c6734a3199ef"
+  },
+  "title": "22 October: 14-team roster and 26-match revision",
+  "overallNote": "Retain all played results, including withdrawn-team matches. Apply approved opponent totals and Monday Round 3 pairings. Only future fixtures change.",
+  "changes": [
+    {
+      "operation": "update",
+      "fixtureId": "26647e0e-fdf1-4be5-a3b8-7d0c5a4c9cf4",
+      "expectedFixtureVersion": 8,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 3,
+        "date": "2026-10-26",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c3be4e8e-7fd3-4f84-a418-eb3b777fdc19",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 3,
+        "date": "2026-10-26",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a75435ce-2048-4484-872d-1e99a78d6612",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 3,
+        "date": "2026-10-26",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8211d6d0-ae4e-43d8-88f7-abb531d0405b",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 3,
+        "date": "2026-10-26",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "597d5f34-669b-4d99-87ec-f6ce298ca5c8",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 3,
+        "date": "2026-10-26",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0a525e06-20f0-4a4a-95da-d22f986f77c5",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a08361d7-29fc-4035-9fbb-c1c3a475a077",
+      "expectedFixtureVersion": 5,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "930fc39c-a227-410e-94cf-8b99cc6ba56c",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f43c6052-360e-4b25-b8ba-147baaed1af2",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5a0e2b47-3351-58e6-a9fe-b69200a94fb5",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0638c88d-ff1e-419c-88d6-a9efebdead2d",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-09",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9320a43a-da54-4130-906a-93d8486e949f",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-09",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c76a8458-67ad-4093-8728-a571d40f59eb",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-09",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c9a6ae3d-69bf-4e2a-bca6-793de1138928",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-09",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "e39ac729-005d-42aa-94b5-6d7c13593afb",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-16",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "21057a98-6243-4d69-98ef-5fe1e0ed3629",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-16",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "987aa348-147b-4ee8-987c-35d4cb6f7349",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-16",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "2716bf44-3cfa-4852-9a6c-0b02c7024703",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-16",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8e7933e6-f8fe-4beb-8f19-cefaac3a1dec",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-23",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "148babf4-93a6-4a13-875e-8c28e34ad806",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-23",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a46df395-0ddb-4dce-bc4c-c42398c65ccf",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-23",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "91fcbb8f-9d3c-4635-87e6-f14b88c61834",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-23",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "16ecf0ce-1f82-50d4-9cad-b19e0367ada8",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-23",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9a236679-f684-4bb7-a486-4fdfdf9f643a",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-11-30",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "72862485-2f19-4e68-967d-984b98e9744a",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-11-30",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9760c9a2-a3ed-5273-b6c4-a2e96444e6a6",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-11-30",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "48862013-5d8d-4879-a4ff-3b7d7ef47a67",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-07",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b069e6cb-89cc-4fc5-8bd9-abd2f1e0375b",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-07",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d8e94b04-13a7-4bfd-a78d-cca6f13ccb5d",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-14",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b06c491f-554e-4a86-b777-c17701484281",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-14",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bf19b721-0e60-5811-84f6-16c886078835",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-14",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "45eb430b-d1c3-5ea0-b3ca-af834db60214",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2026-12-21",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fe496868-863b-4957-a9e8-7498fb38e569",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2026-12-21",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8d52e5ea-0631-4013-b34a-62f9a7c74ae2",
+      "expectedFixtureVersion": 5,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2026-12-21",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8f5392ce-8a18-4532-bb11-82c01f63c6a9",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-11",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "74388f9f-d8a1-4aae-8917-4d15ed2e3a76",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-11",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6b7a9e3a-0cae-475b-8327-b4b6cba01aba",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-11",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f67a66eb-0bfe-45cd-93c4-992589963b75",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-18",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a0154e04-f8f7-454a-8e2d-d0f963fcfe89",
+      "expectedFixtureVersion": 5,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-18",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1969999f-a2ab-5fab-a0b2-8f90aa6c8cc1",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-18",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "aca1dd69-7881-4052-8504-ae13ad5a3e71",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-18",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "80ff9eea-21cb-49cf-b0df-761197298407",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-18",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fb9c6644-f47f-4ed7-88cd-6e3ad8b7731f",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-18",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "cfcc18cd-e34f-46ad-91ce-7c76df8864a4",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-01-25",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d58f0d53-971a-4d8a-b0ee-c2c491f42571",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-01-25",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "355a91d8-13ce-4424-bb4d-27448790a739",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-01-25",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "acab7224-0de1-4393-973d-8184d5623de9",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-01-25",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1dfe1126-6778-4de8-b75a-6346c366a92c",
+      "expectedFixtureVersion": 7,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-01-25",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6acdaa06-dfe2-4767-96e9-a856d97c19ff",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-01",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ac571698-7252-4258-b2f9-a0d0933b2949",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-08",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9a72a4e0-36d9-4731-9b95-d827acf738df",
+      "expectedFixtureVersion": 5,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-08",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b50c7f43-8f00-4180-918b-f140d3d3cc37",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-08",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a83b72e5-f369-50a6-85f0-bc9d6cefcbb6",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-08",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9deafc8d-dd98-4cf7-8911-63efe15df40c",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-15",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "372999f0-a7fd-4431-b5e7-ac33a4e24f07",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-15",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9814494b-2595-4387-a89c-e68a9eb4d9d0",
+      "expectedFixtureVersion": 5,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-15",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d15131ca-9c94-4bea-868f-9102bcca3438",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-02-22",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "3aeabbac-9f17-4f5a-9e49-44ca90dd6475",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-02-22",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "da5c990a-28e8-5395-a888-816ed5ab459c",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-02-22",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "4ca76743-e4d8-484f-a81e-6b22515eae21",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-01",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0f00ad5e-4e4f-42e2-9b93-7fb2bd21b5da",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-01",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5e34fb5a-f8c8-5853-a348-0f06c5c1102c",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-01",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "705a852b-c4ed-4b2d-aefb-4585f7d96aac",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-01",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "34a2c8b8-58ef-4563-99b2-2b7630e6b81d",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-01",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "7488a3e4-73cf-40da-b486-fdc70273bb0f",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-15",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bb034913-d702-4c07-8bb1-c05540d2d3c6",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-15",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "4c79b26b-a533-473b-81bb-70fec7206169",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-15",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8874748e-b0e2-525d-ad2d-5c8a8bab956f",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-15",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0ad40eba-3484-4be4-940b-797352eb6194",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-15",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "7dca0c53-99a7-4bce-91dc-ddbe93d87eaf",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-15",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a5f67148-9add-512d-9859-19e4e693ab94",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-03-22",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "e760b713-cfd4-4ddf-a7ff-2de8ad4a63bc",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-03-22",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0f057089-0af5-487d-a6e9-43fdffd109e3",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-05",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0bb9558d-b70f-46a2-b6e0-90e83a10e957",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-05",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "17e22c14-2869-4d22-82db-0ec328bd0cb5",
+      "expectedFixtureVersion": 9,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-05",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "469b2e04-c80a-40fe-ad2d-e7d2df6bee4b",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-12",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "faa95b17-a5ec-42de-a3df-bbc69907b623",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-12",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fd23b97f-1426-474b-803f-8054e4ba24f2",
+      "expectedFixtureVersion": 7,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-12",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ed449f46-1446-4fa4-8a55-cab5431075e6",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-12",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "795ab020-b646-4081-bb54-b7a7fbc4bd5b",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-19",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c2fdcf2a-c134-4967-823c-f0e3e51f4f89",
+      "expectedFixtureVersion": 5,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-19",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fd64b9bc-2c80-44b8-a10f-70cbff5be808",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-19",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a8f344d6-d6e4-457f-842e-25fab4865500",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-19",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "15abf8dd-15cb-4b89-9536-685e9a25873d",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-26",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "05638327-ada7-4796-8a00-4405b4abc22d",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-26",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "869ecbd3-e04e-5bca-a148-55f84319fd48",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-26",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "82bcdc2e-75dc-4450-ad10-42a5efc0be0f",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-26",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "35f34712-2bd5-468f-9899-a2b6c9a414b8",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-03",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a48354c4-009b-5eb3-9c63-9364f70a690b",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser-approved 14-team, 26-match revision; preserve played fixtures and recorded results.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-03",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "054d657c-7e29-506e-afbe-98ebe12f7e9c",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "06c0a744-c61c-58b7-b184-b4a88a0f2575",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "181e7067-20e6-5947-9b33-503cee6c5622",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "19d32d05-6b7b-51f4-ac2c-01eaa42a1617",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "224da2f1-6497-5f5b-b58e-0530a82dd932",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "23110bec-10dd-5f9f-a504-5f27b375a1d3",
+      "expectedFixtureVersion": 3,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "24c9f695-c9e7-45a0-87dc-c521325276e0",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "250f29d8-6836-5148-bcd4-902931d1e882",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "26274e6c-baf9-4a9b-9c7b-f2b037b22987",
+      "expectedFixtureVersion": 5,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "300d72ee-3abe-4dd2-8c60-f6baf57acf06",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "3f30527f-281b-5cc6-93c6-b9db300553c2",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "44443d44-ef18-4ba2-a290-eb89d1ca8ac9",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "47de7232-d0b0-55a6-82ae-bbaab26e145b",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "49c22a7d-2c81-40ef-b8d0-a513340147b7",
+      "expectedFixtureVersion": 4,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "4d6f5ec0-3bcb-5e0c-a770-121d36c0abde",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "4dfca0be-65b2-57de-ac8f-096bdb30908c",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "58a8d768-7b8a-5234-a6a1-56a7b3b27608",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "5aa76c4f-5deb-4961-b3aa-7e54ed97cb91",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "5b00ef3c-ac1e-51fe-959c-c211c349fa5a",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "6eac565b-ec9f-447a-af7c-6f6aba062d4f",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "703c53da-eed8-5728-9531-630c14953d80",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "725c3de1-4158-441e-aa6d-4635c9555c9e",
+      "expectedFixtureVersion": 3,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "726a7cd4-35d5-43d1-970f-0a3bce7a6e27",
+      "expectedFixtureVersion": 4,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "75878629-f76a-48a0-b690-6088ed567e92",
+      "expectedFixtureVersion": 6,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "7780aca2-16ba-5584-81dd-5f65d72dfa87",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "7bbdda5a-dd16-475b-b119-8509ccc3ef63",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "848d3614-d81c-5188-9d2b-87957d263348",
+      "expectedFixtureVersion": 2,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "90d3b04a-78a4-5ac7-824a-fe2faab177f0",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "92b0904b-e2b8-50ef-b068-a58de7c00e5c",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "933e1528-cc94-5dac-9061-98dfca4f6ac1",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "94f1942d-6748-5967-a4c9-b7c32191b11a",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "9c3e3a56-be88-5086-95df-07263df9adc6",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "9d651b5a-12f3-500e-8d86-cf1fba466561",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "9d9ce91d-e11b-4b52-bf30-1e9afc50de8c",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "9ee14ec0-37bc-5d92-9577-b6cd1553a151",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "a608b372-cf4f-5093-abe0-da01e6ef16ed",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "aa36040b-6915-5c4d-ae2b-e27d6d5eb7fa",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "ae72a7d1-d5cb-5cd3-9d14-55b187c6866a",
+      "expectedFixtureVersion": 2,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "afab7b27-5989-557c-9d7a-508140431fdc",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "b0ca8806-dccf-58cd-929c-ef072e747c70",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "b110b796-2921-4d90-960a-d844a8e7d3a1",
+      "expectedFixtureVersion": 4,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "b8072979-7ae1-503a-92b9-3bdb93912ec5",
+      "expectedFixtureVersion": 2,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "bf5a394f-36f0-5068-802f-5a3022af4dfc",
+      "expectedFixtureVersion": 3,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "c1f3d1a4-4963-5260-ba5a-59f14d2b4fa8",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "c647ce99-c425-5d7c-916b-eb6ead7e37ea",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "c751f4cf-4fd3-554d-9e19-d31933a18e36",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "c9cae972-ba7b-497e-9cf0-6fd587afbc1b",
+      "expectedFixtureVersion": 4,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "cd85896a-bafd-5c9a-9a19-b91622e0bf16",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "d4d7eb7f-f4aa-5b04-9ec0-5c358782bb02",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "df4d1fac-cc92-503a-b9bd-a0b3e897b66a",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "e9b68d02-1e6f-5f16-a6c7-082e79724659",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "f091f9ea-0878-57b2-be5b-751d5a70ee59",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "f2d0a8c4-5960-5186-ad1a-26b3b2c9c519",
+      "expectedFixtureVersion": 2,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "faf421f5-bdbe-5085-a9a3-64dc8b9897f9",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "fe42c8a3-a2a8-5dec-91d9-8e7ca8f7da6a",
+      "expectedFixtureVersion": 4,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    },
+    {
+      "operation": "cancel",
+      "fixtureId": "fe9a9ddc-dfa8-53ee-85aa-3812242231f3",
+      "expectedFixtureVersion": 1,
+      "reason": "Withdrawn-team and excess future fixture cancelled in approved 26-match revision; history retained."
+    }
+  ]
+}
