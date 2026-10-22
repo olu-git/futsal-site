@@ -1,0 +1,58 @@
+{
+  "status": "published-receipt",
+  "night": "wednesday",
+  "competitionSeasonId": "be008d39-f175-45c1-a232-2148d84b1cf9",
+  "newTeam": {
+    "name": "Dream Team",
+    "readableId": "wed-dream-team",
+    "kitColour": "#ED1C24",
+    "allowedKickoffs": [
+      "19:00",
+      "19:40"
+    ],
+    "inheritResults": false,
+    "id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3"
+  },
+  "reinstateTeam": {
+    "id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+    "readableId": "wed-buckle-city",
+    "name": "Buckle City",
+    "expectedProfileVersion": 2,
+    "expectedStatus": "withdrawn",
+    "desiredStatus": "active",
+    "standingsEligible": true,
+    "preserveRecordedResults": true
+  },
+  "maximumPairMeetings": 2,
+  "preserveAllPublishedResults": true,
+  "mondayUnchanged": true,
+  "preservedRules": [
+    "Rinnai: no 19:00",
+    "Umoja Stars: 21:00 only",
+    "Kuq E Zi: no 21:00 except against Umoja Stars",
+    "Goldlink Up/Buckle City: no simultaneous kickoff unless opponents",
+    "Ghazni United: soft avoid 19:00 and 21:00",
+    "Pops: soft avoid 21:00",
+    "King ADL: soft avoid 19:00"
+  ],
+  "pending": [],
+  "existingPlayedPairAtCap": {
+    "teams": [
+      "Rinnai",
+      "Xaywan"
+    ],
+    "rounds": [
+      1,
+      2
+    ],
+    "remainingMeetingsAllowed": 0
+  },
+  "targetMatchesPerTeam": 30,
+  "dreamUmojaException": "21:00 against Umoja Stars only",
+  "inheritanceStatus": "organiser approved",
+  "proposedInheritanceFrom": "wed-etihad-fc",
+  "applied": true,
+  "publishedChangeSetId": "1cb905ac-8b8c-444d-bacb-716a858837f0",
+  "publishedVersion": 4,
+  "publishedAt": "2026-10-22T08:36:27.513788Z"
+}

@@ -1,0 +1,3001 @@
+{
+  "edition": "be008d39-f175-45c1-a232-2148d84b1cf9",
+  "teams": [
+    {
+      "id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "name": "AFG",
+      "status": "active",
+      "legacy_id": "wed-afg",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#2F80ED",
+      "updated_at": "2026-10-10T19:11:23.617699+00:00",
+      "profile_version": 1,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "name": "Buckle City",
+      "status": "active",
+      "legacy_id": "wed-buckle-city",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": null,
+      "updated_at": "2026-10-21T15:23:37.749877+00:00",
+      "profile_version": 2,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "name": "Dream Team",
+      "legacy_id": "wed-dream-team",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "status": "active",
+      "standings_eligible": true,
+      "kit_colour": "#ED1C24"
+    },
+    {
+      "id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "name": "Ghazni United",
+      "status": "active",
+      "legacy_id": "wed-ghazni-united",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#FFFFFF",
+      "updated_at": "2026-10-13T01:59:21.938786+00:00",
+      "profile_version": 2,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "name": "Goldlink Up",
+      "status": "active",
+      "legacy_id": "wed-goldlink-up",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#111111",
+      "updated_at": "2026-10-10T19:11:23.617699+00:00",
+      "profile_version": 1,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "name": "Ibiza",
+      "status": "active",
+      "legacy_id": "wed-ibiza",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#111111",
+      "updated_at": "2026-10-10T19:11:23.617699+00:00",
+      "profile_version": 1,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "name": "Kawsar FC",
+      "status": "active",
+      "legacy_id": "wed-hazara-united",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#FFFFFF",
+      "updated_at": "2026-10-15T23:26:43.401924+00:00",
+      "profile_version": 2,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "name": "King ADL",
+      "status": "active",
+      "legacy_id": "wed-king-adl",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#111111",
+      "updated_at": "2026-10-13T01:59:21.938786+00:00",
+      "profile_version": 2,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "name": "Kuq E Zi",
+      "status": "active",
+      "legacy_id": "wed-kuq-e-zi",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#EB5757",
+      "updated_at": "2026-10-13T01:59:21.938786+00:00",
+      "profile_version": 2,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "name": "MTS FC",
+      "status": "active",
+      "legacy_id": "wed-mts-fc",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#111111",
+      "updated_at": "2026-10-10T19:11:23.617699+00:00",
+      "profile_version": 1,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "name": "Misfits",
+      "status": "active",
+      "legacy_id": "wed-misfits",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#1E66E5",
+      "updated_at": "2026-10-13T01:59:21.938786+00:00",
+      "profile_version": 2,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "name": "Pops",
+      "status": "active",
+      "legacy_id": "wed-pops",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#2F80ED",
+      "updated_at": "2026-10-15T23:26:43.401924+00:00",
+      "profile_version": 2,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "name": "Rinnai",
+      "status": "active",
+      "legacy_id": "wed-rinnai",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#1E66E5",
+      "updated_at": "2026-10-13T01:59:21.938786+00:00",
+      "profile_version": 2,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "name": "Umoja Stars",
+      "status": "active",
+      "legacy_id": "wed-umoja-stars",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#111111",
+      "updated_at": "2026-10-13T01:59:21.938786+00:00",
+      "profile_version": 2,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "name": "Wildcats",
+      "status": "active",
+      "legacy_id": "wed-wildcats",
+      "created_at": "2026-10-10T19:11:23.617699+00:00",
+      "kit_colour": "#F2D34F",
+      "updated_at": "2026-10-13T01:59:21.938786+00:00",
+      "profile_version": 2,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "name": "Xaywan",
+      "status": "active",
+      "legacy_id": "wed-xaywan",
+      "created_at": "2026-10-15T08:58:03.138018+00:00",
+      "kit_colour": null,
+      "updated_at": "2026-10-15T08:58:03.138018+00:00",
+      "profile_version": 1,
+      "standings_eligible": true,
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    }
+  ],
+  "fixed": [
+    {
+      "id": "d1e37fa1-c7e6-4763-894d-40430a0671dd",
+      "court": 1,
+      "stage": "regular_season",
+      "legacy_id": "d1e37fa1-c7e6-4763-894d-40430a0671dd",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-14",
+      "updated_at": "2026-10-15T08:58:03.138018+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "19:00:00",
+      "round_number": 1,
+      "schedule_status": "scheduled",
+      "schedule_version": 3,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "7fada165-ea84-454b-b235-ba08a243e02b",
+      "court": 2,
+      "stage": "regular_season",
+      "legacy_id": "7fada165-ea84-454b-b235-ba08a243e02b",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-14",
+      "updated_at": "2026-10-15T08:58:03.138018+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "19:00:00",
+      "round_number": 1,
+      "schedule_status": "scheduled",
+      "schedule_version": 3,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "19db805f-e697-4b6b-91c8-62f2dfe89f88",
+      "court": 1,
+      "stage": "regular_season",
+      "legacy_id": "19db805f-e697-4b6b-91c8-62f2dfe89f88",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-14",
+      "updated_at": "2026-10-10T22:47:06.977969+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:40:00",
+      "round_number": 1,
+      "schedule_status": "scheduled",
+      "schedule_version": 1,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "8756948b-3fcd-47ff-b570-ce70f0f47946",
+      "court": 2,
+      "stage": "regular_season",
+      "legacy_id": "8756948b-3fcd-47ff-b570-ce70f0f47946",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-14",
+      "updated_at": "2026-10-15T08:58:03.138018+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:40:00",
+      "round_number": 1,
+      "schedule_status": "scheduled",
+      "schedule_version": 3,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "a3e389f2-634f-4215-816e-049fc52e3c95",
+      "court": 1,
+      "stage": "regular_season",
+      "legacy_id": "a3e389f2-634f-4215-816e-049fc52e3c95",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-14",
+      "updated_at": "2026-10-15T08:58:03.138018+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "20:20:00",
+      "round_number": 1,
+      "schedule_status": "scheduled",
+      "schedule_version": 3,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "bc0668f2-2fa7-42ce-b1ce-ad18b0a478be",
+      "court": 2,
+      "stage": "regular_season",
+      "legacy_id": "bc0668f2-2fa7-42ce-b1ce-ad18b0a478be",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-14",
+      "updated_at": "2026-10-15T08:58:03.138018+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "20:20:00",
+      "round_number": 1,
+      "schedule_status": "scheduled",
+      "schedule_version": 3,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "48c204ff-64e9-414c-b6c8-17217afbc9f7",
+      "court": 1,
+      "stage": "regular_season",
+      "legacy_id": "48c204ff-64e9-414c-b6c8-17217afbc9f7",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-14",
+      "updated_at": "2026-10-10T22:47:06.977969+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "21:00:00",
+      "round_number": 1,
+      "schedule_status": "scheduled",
+      "schedule_version": 1,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "c553b39f-1113-4db6-b4e2-a2104d963d4e",
+      "court": 2,
+      "stage": "regular_season",
+      "legacy_id": "c553b39f-1113-4db6-b4e2-a2104d963d4e",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-14",
+      "updated_at": "2026-10-10T22:47:06.977969+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "21:00:00",
+      "round_number": 1,
+      "schedule_status": "scheduled",
+      "schedule_version": 1,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "fb9b9312-f8f3-4656-b07c-16be6ec405ec",
+      "court": 1,
+      "stage": "regular_season",
+      "legacy_id": "fb9b9312-f8f3-4656-b07c-16be6ec405ec",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-21",
+      "updated_at": "2026-10-16T01:44:26.551056+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "19:00:00",
+      "round_number": 2,
+      "schedule_status": "scheduled",
+      "schedule_version": 5,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "834e527c-bfd1-471b-ad7b-aa4342346089",
+      "court": 2,
+      "stage": "regular_season",
+      "legacy_id": "834e527c-bfd1-471b-ad7b-aa4342346089",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-21",
+      "updated_at": "2026-10-21T15:10:58.780271+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "19:00:00",
+      "round_number": 2,
+      "schedule_status": "scheduled",
+      "schedule_version": 5,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "c53d32bd-192c-4a5a-840c-4b3db429ec0a",
+      "court": 1,
+      "stage": "regular_season",
+      "legacy_id": "c53d32bd-192c-4a5a-840c-4b3db429ec0a",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-21",
+      "updated_at": "2026-10-16T01:44:26.551056+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:40:00",
+      "round_number": 2,
+      "schedule_status": "scheduled",
+      "schedule_version": 5,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "8f903471-3629-4dc4-9985-e6b36f7e59a3",
+      "court": 2,
+      "stage": "regular_season",
+      "legacy_id": "8f903471-3629-4dc4-9985-e6b36f7e59a3",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-21",
+      "updated_at": "2026-10-21T15:10:58.780271+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "19:40:00",
+      "round_number": 2,
+      "schedule_status": "scheduled",
+      "schedule_version": 3,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "9771e8bd-f3f3-4d4f-a257-321bfa050482",
+      "court": 1,
+      "stage": "regular_season",
+      "legacy_id": "9771e8bd-f3f3-4d4f-a257-321bfa050482",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-21",
+      "updated_at": "2026-10-10T22:47:06.977969+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "20:20:00",
+      "round_number": 2,
+      "schedule_status": "scheduled",
+      "schedule_version": 1,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "7c442062-d9ef-41b8-9c21-82a418a4aba8",
+      "court": 2,
+      "stage": "regular_season",
+      "legacy_id": "7c442062-d9ef-41b8-9c21-82a418a4aba8",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-21",
+      "updated_at": "2026-10-10T22:47:06.977969+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "20:20:00",
+      "round_number": 2,
+      "schedule_status": "scheduled",
+      "schedule_version": 1,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "e612c91b-5ebf-4343-b8f6-03cd6ad2382e",
+      "court": 1,
+      "stage": "regular_season",
+      "legacy_id": "e612c91b-5ebf-4343-b8f6-03cd6ad2382e",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-21",
+      "updated_at": "2026-10-10T22:47:06.977969+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "round_number": 2,
+      "schedule_status": "scheduled",
+      "schedule_version": 1,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    },
+    {
+      "id": "e2f09aa2-2bf5-4ed4-9c3b-15e0eac96c18",
+      "court": 2,
+      "stage": "regular_season",
+      "legacy_id": "e2f09aa2-2bf5-4ed4-9c3b-15e0eac96c18",
+      "created_at": "2026-10-10T22:47:06.977969+00:00",
+      "match_date": "2026-10-21",
+      "updated_at": "2026-10-21T15:10:58.780271+00:00",
+      "public_note": null,
+      "round_label": null,
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "21:00:00",
+      "round_number": 2,
+      "schedule_status": "scheduled",
+      "schedule_version": 3,
+      "publication_state": "published",
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9"
+    }
+  ],
+  "future": [
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 3,
+      "match_date": "2026-11-04",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "337f72ec-33c3-4ca6-a7c6-ae00eb9d4428"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 3,
+      "match_date": "2026-11-04",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "6269d0a5-d354-4476-9934-3515ea7287a1"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 3,
+      "match_date": "2026-11-04",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "9d70da5d-6156-4882-8b2a-f212ee727ad6"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 3,
+      "match_date": "2026-11-04",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "ff4f4394-c365-491c-b476-5758ac3753fe"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 3,
+      "match_date": "2026-11-04",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "6b8a7d12-70ce-4af4-b959-3c6e18192887"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 3,
+      "match_date": "2026-11-04",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "af9109c0-a053-477a-af98-716462464570"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 3,
+      "match_date": "2026-11-04",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "1db0e8bc-e51f-4a1a-906c-f76be786383e"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 3,
+      "match_date": "2026-11-04",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "56c55c48-876b-412d-83f1-51ac0e22af69"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 4,
+      "match_date": "2026-11-11",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "81114ca1-4f2c-4e0e-8173-8d21ad48bcc1"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 4,
+      "match_date": "2026-11-11",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "cdefc9f8-f950-4695-b399-70a810b74a09"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 4,
+      "match_date": "2026-11-11",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "cc5fe049-d2a1-4ebb-9878-d31da27e1116"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 4,
+      "match_date": "2026-11-11",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "d63c58b8-9de9-4c6c-b7bd-ef11be4591cb"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 4,
+      "match_date": "2026-11-11",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "863de226-72b1-40ec-ac5c-ed24283b3b97"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 4,
+      "match_date": "2026-11-11",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "645f5ed4-3e62-44b9-afc9-e8db4bb80ed1"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 4,
+      "match_date": "2026-11-11",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "8d2401a8-c90d-48bd-be7f-8d7cee019e16"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 4,
+      "match_date": "2026-11-11",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "de483476-c861-460f-bc37-83ae570f9f7c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 5,
+      "match_date": "2026-11-18",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "49a8ffac-2f23-4d76-9003-63dfb71a33af"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 5,
+      "match_date": "2026-11-18",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "9bf48239-db86-4c39-b163-d18d53ba4628"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 5,
+      "match_date": "2026-11-18",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "62c63a21-4127-4e63-af96-f1b26f3710c0"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 5,
+      "match_date": "2026-11-18",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "b359dbdb-9403-4038-a1b5-a31287e2803f"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 5,
+      "match_date": "2026-11-18",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "d85f40cb-4e60-459e-a171-d506e816c855"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 5,
+      "match_date": "2026-11-18",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "27291b93-73d1-4d3e-9195-7753f46fded3"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 5,
+      "match_date": "2026-11-18",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "dfeb5483-0ccc-47dc-8270-0c42aa51d172"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 5,
+      "match_date": "2026-11-18",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "ec77e117-f603-434b-b678-30313ab426ea"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 6,
+      "match_date": "2026-11-25",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "c6df7106-577d-4825-8399-0c44efda06f2"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 6,
+      "match_date": "2026-11-25",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "8aba98e7-44e2-4d7e-b531-2087397d4ac2"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 6,
+      "match_date": "2026-11-25",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "3d1cb850-6aa4-473a-ab1a-daed1a04b931"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 6,
+      "match_date": "2026-11-25",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "d453af80-e152-4731-b91e-998a9efc71e9"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 6,
+      "match_date": "2026-11-25",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "a1c8f019-b7a5-4b11-bd75-5d085f330736"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 6,
+      "match_date": "2026-11-25",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "d9930373-0b3c-4371-926a-465e1540cb8e"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 6,
+      "match_date": "2026-11-25",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "c2114b41-27ce-463e-8fb8-6d61626b7555"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 6,
+      "match_date": "2026-11-25",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "76974261-5f08-43eb-968d-5aa97a070365"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 7,
+      "match_date": "2026-12-02",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "ae42eb61-f8f5-4d11-beab-f2fe7654ef2a"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 7,
+      "match_date": "2026-12-02",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "85870fd5-0daf-436d-842c-1393a879891d"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 7,
+      "match_date": "2026-12-02",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "68dfe148-4796-437e-8508-468a3cbc6b8d"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 7,
+      "match_date": "2026-12-02",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "0c6008ac-ac84-421b-9ae6-7a7e42ae77c9"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 7,
+      "match_date": "2026-12-02",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "11bda6d9-7fa1-476b-b1ac-34bd784772bc"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 7,
+      "match_date": "2026-12-02",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "88dbdb61-2607-4c31-b560-0155b3f3bcc8"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 7,
+      "match_date": "2026-12-02",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "12a69a08-2c11-4f44-be04-0a23c4ba96b4"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 7,
+      "match_date": "2026-12-02",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "7146ba85-ad57-40bd-a1a9-3989d5821435"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 8,
+      "match_date": "2026-12-09",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "828817f8-47d1-4e40-95a4-e0ef75570468"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 8,
+      "match_date": "2026-12-09",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "7274937f-5d2e-45f6-9f64-2c28dcd0803d"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 8,
+      "match_date": "2026-12-09",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "4c754f54-88ad-4f49-8357-96036e3f57f8"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 8,
+      "match_date": "2026-12-09",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "838d99fe-557e-4834-8f7c-e44ce109cf6f"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 8,
+      "match_date": "2026-12-09",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "79fc7811-5c80-43c3-b8ca-e891011acda5"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 8,
+      "match_date": "2026-12-09",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "1fccbbd1-a17d-4526-ae21-7b85c3bcf7f6"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 8,
+      "match_date": "2026-12-09",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "90e1ad4e-ba87-444f-a043-701faac49180"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 8,
+      "match_date": "2026-12-09",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "f0eaaa17-db74-45c1-b596-fe00275ef7db"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 9,
+      "match_date": "2026-12-16",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "da1437ac-a241-482c-97c9-3a17613f7204"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 9,
+      "match_date": "2026-12-16",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "edb2ba0e-964c-4d49-9d75-d9c2bc6e516b"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 9,
+      "match_date": "2026-12-16",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "c36da8f2-6510-4b65-8032-490685629072"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 9,
+      "match_date": "2026-12-16",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "c1f54f37-f091-41d8-95cc-2876d9fe2ebe"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 9,
+      "match_date": "2026-12-16",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "d3b3ee07-53b7-48c2-9e93-36d49600190e"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 9,
+      "match_date": "2026-12-16",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "a5649a38-42b2-40ec-93a4-32305b30911d"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 9,
+      "match_date": "2026-12-16",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "0a26f246-5bf5-4a0f-b040-44f68e4658c6"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 9,
+      "match_date": "2026-12-16",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "83b3127c-431d-4f83-bdce-65a3a36ff467"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 10,
+      "match_date": "2026-12-23",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "cf164c1d-68d7-4156-8be8-3c08ee3c5519"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 10,
+      "match_date": "2026-12-23",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "2d2d03ee-4b69-4b4d-bb4c-17aaee804747"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 10,
+      "match_date": "2026-12-23",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "f5fed81d-2486-4dd5-8d4f-2f0a6208efde"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 10,
+      "match_date": "2026-12-23",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "4320f4e7-f7e1-45ad-9723-f9abdf11b7b9"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 10,
+      "match_date": "2026-12-23",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "48968806-59fa-480a-9290-c537c92e0a7a"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 10,
+      "match_date": "2026-12-23",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "fd77a8cc-b1cf-49ed-b43e-2aa45be9c308"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 10,
+      "match_date": "2026-12-23",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "88e6f9f1-2c5a-4c70-90ed-62dcf5090c01"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 10,
+      "match_date": "2026-12-23",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "cfca92d9-beb0-4986-9ca3-24c0de8ccb78"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 11,
+      "match_date": "2027-01-13",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "3aceda00-dda0-4670-87df-c5bbc2c62524"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 11,
+      "match_date": "2027-01-13",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "7771d783-b0f0-4175-87ab-6a4083720bf6"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 11,
+      "match_date": "2027-01-13",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "715a65ff-3a41-4946-a7b0-af3b8e7e6903"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 11,
+      "match_date": "2027-01-13",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "637f4e51-9ea5-4e9f-b6e8-426468ef64a7"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 11,
+      "match_date": "2027-01-13",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "92aa98b6-0178-4576-a492-4d2e52839d1a"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 11,
+      "match_date": "2027-01-13",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "4e48da53-324d-438d-871f-4b94de49a29e"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 11,
+      "match_date": "2027-01-13",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "379b94c6-f569-4f06-b73a-a0d8886e6d02"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 11,
+      "match_date": "2027-01-13",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "90a1123e-41f6-4289-89ce-fe895af39774"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 12,
+      "match_date": "2027-01-20",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "78507460-2c05-4d55-be42-68444daaa350"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 12,
+      "match_date": "2027-01-20",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "0ed28bca-85bf-43ff-924c-59472393cde6"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 12,
+      "match_date": "2027-01-20",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "7469d071-f21e-4648-9cd9-db752130a15a"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 12,
+      "match_date": "2027-01-20",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "b5432d7a-9cad-47b9-9d4a-c65ccb995de0"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 12,
+      "match_date": "2027-01-20",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "09b1a79c-d370-4e1a-943d-bd010829bd87"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 12,
+      "match_date": "2027-01-20",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "28015844-e1f7-45c9-86bd-524c16eda2b9"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 12,
+      "match_date": "2027-01-20",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "9c00432a-6fa1-4a96-a4ff-322d17be0c3e"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 12,
+      "match_date": "2027-01-20",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "b0566f3f-fbd9-4fb5-a4ab-8a0e792aa441"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 13,
+      "match_date": "2027-01-27",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "8114b32b-71e3-4b51-8d3c-a83860f02e3b"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 13,
+      "match_date": "2027-01-27",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "6f36e609-49ef-4b36-91bf-91fc748a6852"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 13,
+      "match_date": "2027-01-27",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "35d7be6d-5ea3-47db-bee1-cd7a85e63504"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 13,
+      "match_date": "2027-01-27",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "f27096ec-fb40-45e1-8a27-5978b9a87764"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 13,
+      "match_date": "2027-01-27",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "ea816470-3587-406e-bba6-c79dd2c55c8c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 13,
+      "match_date": "2027-01-27",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "2032ff0c-7282-4f5e-9d41-65be7234b050"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 13,
+      "match_date": "2027-01-27",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "d4db7d86-5415-413d-a650-68a79327ef04"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 13,
+      "match_date": "2027-01-27",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "a09e03e9-059e-4d6b-889b-871a3792580e"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 14,
+      "match_date": "2027-02-03",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "bbdbbb96-0e77-43db-aa03-74bddf4945be"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 14,
+      "match_date": "2027-02-03",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "54364f72-9d1b-4f40-b88b-c4bf169ef811"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 14,
+      "match_date": "2027-02-03",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "f2c67944-3746-4c37-87a4-5b19fbc323bf"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 14,
+      "match_date": "2027-02-03",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "e3e478c0-93c8-4235-a8d3-c52094c1c19b"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 14,
+      "match_date": "2027-02-03",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "b0fbb4e3-2c85-427e-98d5-0f9530f90867"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 14,
+      "match_date": "2027-02-03",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "8ea47029-2f81-4506-926d-dc9e16f4a809"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 14,
+      "match_date": "2027-02-03",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "6c98473c-48eb-45cf-bc97-7614b613f77a"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 14,
+      "match_date": "2027-02-03",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "b34d497d-6bcc-464f-8ba7-4b8620043e23"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 15,
+      "match_date": "2027-02-10",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "5005c480-7123-4d12-891d-4d54f7bf0d53"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 15,
+      "match_date": "2027-02-10",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "197f16d0-9812-4afc-b66f-943f4783e3b5"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 15,
+      "match_date": "2027-02-10",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "bda97b2d-5196-4025-b7b6-1286019044a3"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 15,
+      "match_date": "2027-02-10",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "d9615755-a320-4d7c-9e24-ca757061c465"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 15,
+      "match_date": "2027-02-10",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "61ba3021-fc12-4087-aa4a-52efed5c1adc"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 15,
+      "match_date": "2027-02-10",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "f968b731-4505-4e58-af0f-137ff6e8b5e0"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 15,
+      "match_date": "2027-02-10",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "2592c1a9-d55b-4a53-a84a-b541907361f1"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 15,
+      "match_date": "2027-02-10",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "03e56ed5-e996-4f56-bc05-24b9e37bfde1"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 16,
+      "match_date": "2027-02-17",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "5eb2c56e-066d-4db5-ad3f-908b5fb3ef8d"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 16,
+      "match_date": "2027-02-17",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "5be781a6-1b02-4020-811e-01e2de1b7258"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 16,
+      "match_date": "2027-02-17",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "2fb033a3-9ed7-461a-b320-91b8d5342885"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 16,
+      "match_date": "2027-02-17",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "ef242b1e-2066-4149-a41e-25187153ef0a"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 16,
+      "match_date": "2027-02-17",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "75f32212-26ea-496c-94e9-ec5d928557c8"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 16,
+      "match_date": "2027-02-17",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "83556924-bab6-404d-82ed-2ded330416db"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 16,
+      "match_date": "2027-02-17",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "91ea2709-71d1-45f3-b2ff-edfaa120000b"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 16,
+      "match_date": "2027-02-17",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "5a3d209e-6aea-41cd-81ee-8813a9b7e420"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 17,
+      "match_date": "2027-02-24",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "9a73d3ec-b024-4407-96fe-99a88536f8d6"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 17,
+      "match_date": "2027-02-24",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "b96677aa-b577-403e-9fd6-189d3c5fe25c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 17,
+      "match_date": "2027-02-24",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "9a75d1f6-f67e-4525-8805-83b2b9591a20"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 17,
+      "match_date": "2027-02-24",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "1f4a2eec-67b8-41d4-b12a-ca26c520f20f"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 17,
+      "match_date": "2027-02-24",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "a19afe65-11ca-4691-8cd9-8fd876abf71e"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 17,
+      "match_date": "2027-02-24",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "1e36ef0a-f446-4eaf-be64-c4dc79b730db"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 17,
+      "match_date": "2027-02-24",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "ec4fe51b-4516-465b-afcb-56a7df9d8f7e"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 17,
+      "match_date": "2027-02-24",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "eb15f5b9-9388-484a-8720-13cd1b5e6483"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 18,
+      "match_date": "2027-03-03",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "f6c8c170-0213-41d9-9653-56926c07405f"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 18,
+      "match_date": "2027-03-03",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "85f27e31-6eef-4c99-91eb-5649cd4a7cb9"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 18,
+      "match_date": "2027-03-03",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "fd111ec7-2141-49ce-8ba2-57aee7ad3e0e"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 18,
+      "match_date": "2027-03-03",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "04958faf-595f-4ade-b931-909c2085afd0"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 18,
+      "match_date": "2027-03-03",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "3ce626b5-7c76-40af-bf49-28708a8cf637"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 18,
+      "match_date": "2027-03-03",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "918ec0ba-35ca-4d35-8487-4084e9f8ed35"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 18,
+      "match_date": "2027-03-03",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "e7ed2651-1889-4dd8-9239-b5222e12e0e4"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 18,
+      "match_date": "2027-03-03",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "90f4477e-d185-4e28-b734-da75930a6e43"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 19,
+      "match_date": "2027-03-10",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "3288c355-5cfc-4439-9596-7f426a08c889"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 19,
+      "match_date": "2027-03-10",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "4e7567f6-9aa5-499e-8fc6-747b3d8c5117"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 19,
+      "match_date": "2027-03-10",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "3984ee35-874a-4b7a-a517-1b616c298e4a"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 19,
+      "match_date": "2027-03-10",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "6b012812-dbad-4a59-acf0-e6f9cf64b740"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 19,
+      "match_date": "2027-03-10",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "5f44f7c2-1f2b-4de7-8eaf-3cb7be3a04f7"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 19,
+      "match_date": "2027-03-10",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "9b6faf10-5594-45ec-bd03-fe88b365c84d"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 19,
+      "match_date": "2027-03-10",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "49086576-a2fb-40e7-a588-3b2cc7db43aa"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 19,
+      "match_date": "2027-03-10",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "0c69952a-df7f-43a4-a49d-1632f1d3b1e8"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 20,
+      "match_date": "2027-03-17",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "6ea57774-fa70-43bb-9b56-69060f83e89d"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 20,
+      "match_date": "2027-03-17",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "cea2308a-6505-4c9c-a703-98270d76366b"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 20,
+      "match_date": "2027-03-17",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "dcc763db-9ae3-41c7-9530-18d4f58eb164"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 20,
+      "match_date": "2027-03-17",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "8754ac79-942a-40b7-8a50-2936d75fa1f6"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 20,
+      "match_date": "2027-03-17",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "83c62d79-0788-4847-8f4a-31b4a2aaeb11"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 20,
+      "match_date": "2027-03-17",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "26fcb64a-5e6f-4efb-955e-6e7b52439c37"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 20,
+      "match_date": "2027-03-17",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "c95cd12d-05f3-41ba-af72-e67a15c5425c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 20,
+      "match_date": "2027-03-17",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "211af171-2ef0-4d9e-b188-c0a6e55fee28"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 21,
+      "match_date": "2027-03-24",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "9e326672-2063-48f0-bd49-f530fa863643"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 21,
+      "match_date": "2027-03-24",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "df3e276f-017a-4128-b205-88b72eddbe8e"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 21,
+      "match_date": "2027-03-24",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "28b14d84-4352-43ec-9cf3-e0947e58b77d"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 21,
+      "match_date": "2027-03-24",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "7472e4d6-dbac-4512-bb29-111fd52ef74e"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 21,
+      "match_date": "2027-03-24",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "9fd14609-c5a0-4d7d-8d8f-a34de3e9aa3d"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 21,
+      "match_date": "2027-03-24",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "e7ac44a7-44e7-4fa6-9475-4b395adbf43f"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 21,
+      "match_date": "2027-03-24",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "55005c3f-2173-4e3f-814f-abc88f2f6f68"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 21,
+      "match_date": "2027-03-24",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "3c6642f9-4809-405c-9fa7-923740628ea2"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 22,
+      "match_date": "2027-03-31",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "bc3917c3-6484-420c-b73a-9440c13f42d5"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 22,
+      "match_date": "2027-03-31",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "08609990-6cae-41c4-b6ed-b0d5a7fe75cb"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 22,
+      "match_date": "2027-03-31",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "45ac0253-ba22-4490-b542-2f2681d794e1"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 22,
+      "match_date": "2027-03-31",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "0d41b858-d9a4-4db6-90c5-54be4e4f5f84"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 22,
+      "match_date": "2027-03-31",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "31f0d916-f045-43f0-b3d6-03344523788c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 22,
+      "match_date": "2027-03-31",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "0bf5f0b1-ca0b-4424-96ff-2b965bfd8ddb"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 22,
+      "match_date": "2027-03-31",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "6a0da39f-8331-493e-af98-2c1adaf3ec74"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 22,
+      "match_date": "2027-03-31",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "ecd6b996-d428-486f-9790-4356a357eb2c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 23,
+      "match_date": "2027-04-07",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "dea66e9b-a981-49ae-a0c0-ab81435a6e5b"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 23,
+      "match_date": "2027-04-07",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "608bd35f-7bde-44dc-af2a-a07dc68167a5"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 23,
+      "match_date": "2027-04-07",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "b5d4daea-e07b-4e5b-a1a8-340f0f9b1c0c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 23,
+      "match_date": "2027-04-07",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "248c9285-4eba-48ef-be03-217604d7a337"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 23,
+      "match_date": "2027-04-07",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "c5d27254-8051-42ac-8339-2ccf8206f9d6"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 23,
+      "match_date": "2027-04-07",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "ac68b089-a684-4926-9946-ba6fbf3d657c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 23,
+      "match_date": "2027-04-07",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "25bce392-cc37-4c74-bba1-74245f30d7fe"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 23,
+      "match_date": "2027-04-07",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "5c613321-d841-4119-93d4-c2cdf294f5c1"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 24,
+      "match_date": "2027-04-14",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "9e85b838-bde1-4fbf-8725-6829aed97521"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 24,
+      "match_date": "2027-04-14",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "6970921b-59c4-452d-aefe-32af2368eda8"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 24,
+      "match_date": "2027-04-14",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "3bfa2d09-9379-465f-a7a0-8861db6c8e13"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 24,
+      "match_date": "2027-04-14",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "0b81cf15-3f73-4c2d-9bf1-c4010cf4d698"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 24,
+      "match_date": "2027-04-14",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "2e750206-de8f-4a3e-b2a8-dac9bb1551c9"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 24,
+      "match_date": "2027-04-14",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "8dc6ec17-9f20-4d06-b157-558dcedf1eba"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 24,
+      "match_date": "2027-04-14",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "25e560cf-1e6a-43f4-9801-dc7e113083a0"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 24,
+      "match_date": "2027-04-14",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "4a989708-9de5-4120-b908-9cd551059cf4"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 25,
+      "match_date": "2027-04-21",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "7c026b21-8459-4e5f-8c61-b8dcc18f7147"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 25,
+      "match_date": "2027-04-21",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "5b906980-e23c-4663-bad8-1e86626e976c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 25,
+      "match_date": "2027-04-21",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "224c60fd-e206-42a1-8539-173520d229ab"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 25,
+      "match_date": "2027-04-21",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "245b229a-66d5-4bed-ad39-77d0add6d735"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 25,
+      "match_date": "2027-04-21",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "5bccd3c0-89dc-40a2-8f52-8a821937bf56"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 25,
+      "match_date": "2027-04-21",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "200cbd83-f112-49fa-96db-6c24edb065b4"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 25,
+      "match_date": "2027-04-21",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "e38ae644-5a33-4068-85d7-a4dc9ef0a073"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 25,
+      "match_date": "2027-04-21",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "8799583c-8e2f-4384-a466-839bc6cc717a"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 26,
+      "match_date": "2027-04-28",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "1fc859bb-e6c9-4812-a16b-7b3fdbe2429f"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 26,
+      "match_date": "2027-04-28",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "bf6bc0ee-38d8-4dc6-9cd9-723a7782fc9c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 26,
+      "match_date": "2027-04-28",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "e0344891-dd70-4444-a172-7a2fc23342b2"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 26,
+      "match_date": "2027-04-28",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "50cea693-be06-4966-9c21-52450e069bab"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 26,
+      "match_date": "2027-04-28",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "5fd6aa57-6b0d-4957-9b5b-a12cad0f22f1"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 26,
+      "match_date": "2027-04-28",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "90e5b207-a33d-446a-a62a-30ea3cbe4692"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 26,
+      "match_date": "2027-04-28",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "fee4560e-37a6-432b-8d66-e1edc640d967"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 26,
+      "match_date": "2027-04-28",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "7f31307a-6f00-4643-84c8-994fa43871cb"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 27,
+      "match_date": "2027-05-05",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "3e060df1-a21a-4694-8dbb-aca015bbbb2b"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 27,
+      "match_date": "2027-05-05",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "782a22ba-4af5-4320-838d-a4610d1f2884"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 27,
+      "match_date": "2027-05-05",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "7f7e4c6a-ab12-412c-bfb4-626895b98cee"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 27,
+      "match_date": "2027-05-05",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "c7860ab4-f8a8-4dcc-a954-c366c041da95"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 27,
+      "match_date": "2027-05-05",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "616fce6d-f998-424f-96b7-23c7c08d1513"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 27,
+      "match_date": "2027-05-05",
+      "home_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "89d390da-2698-4e56-9759-362cc1dc3a2a"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 27,
+      "match_date": "2027-05-05",
+      "home_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "99ebe7da-0b4a-432b-a867-751ddd0b16a6"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 27,
+      "match_date": "2027-05-05",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "78f75ff9-c841-48be-874b-9af827e5fa65"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 28,
+      "match_date": "2027-05-12",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "5164bf02-5c2c-4ecc-bfec-14664d6bcead"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 28,
+      "match_date": "2027-05-12",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "ab5bf56d-8249-4d17-b0b0-5cae5c328e6d"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 28,
+      "match_date": "2027-05-12",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "bf076c16-8fb9-4449-97a6-0845380991f9"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 28,
+      "match_date": "2027-05-12",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "2787bf6a-2959-44ae-a0c6-d4bd7ff3b528"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 28,
+      "match_date": "2027-05-12",
+      "home_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "away_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "37fdc75c-b3dc-4474-8401-48f8f781d5d4"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 28,
+      "match_date": "2027-05-12",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "8be67776-19f6-43d5-8695-f2e4d7727473"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 28,
+      "match_date": "2027-05-12",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "15aab25a-f3d8-4056-8b1e-ed5290c17723"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 28,
+      "match_date": "2027-05-12",
+      "home_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "6c745bca-da2c-490e-a6e0-a9ad5022e3e1"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 29,
+      "match_date": "2027-05-19",
+      "home_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "fb676fb7-bb53-444d-8fe2-f73f83e787dc"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 29,
+      "match_date": "2027-05-19",
+      "home_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "away_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "24c5d613-ffd1-432b-9993-4af4ea9a1b2c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 29,
+      "match_date": "2027-05-19",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "be674b40-7e11-4d61-b975-ed706f4f552c"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 29,
+      "match_date": "2027-05-19",
+      "home_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "e78973dd-2eb2-4afe-b6d6-72d4408ad66d"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 29,
+      "match_date": "2027-05-19",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "a502e918-65d0-4681-b6b7-9db70581ff50"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 29,
+      "match_date": "2027-05-19",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "bd2322f5-bf9e-4eed-9f39-736b7dee0340"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 29,
+      "match_date": "2027-05-19",
+      "home_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "36839dcf-6e34-4d70-9bc4-6dbd2ac12bb7"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 29,
+      "match_date": "2027-05-19",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "73dee380-0b72-42ee-bc36-356af747c156"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 30,
+      "match_date": "2027-05-26",
+      "home_team_id": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+      "away_team_id": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+      "kickoff_time": "19:00:00",
+      "court": 1,
+      "id": "eea5bd40-248d-42bf-b99b-af1ca6fecb93"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 30,
+      "match_date": "2027-05-26",
+      "home_team_id": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+      "away_team_id": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+      "kickoff_time": "19:00:00",
+      "court": 2,
+      "id": "5062ca1f-4bd4-4d02-9ec6-0fe9a22caad2"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 30,
+      "match_date": "2027-05-26",
+      "home_team_id": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+      "away_team_id": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+      "kickoff_time": "19:40:00",
+      "court": 1,
+      "id": "f1640c01-1aee-4e8c-a1ff-d40d546a1377"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 30,
+      "match_date": "2027-05-26",
+      "home_team_id": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+      "away_team_id": "a7306808-977f-496c-8f6c-3141529ca76c",
+      "kickoff_time": "19:40:00",
+      "court": 2,
+      "id": "9fcc5019-4551-468c-ade4-0b11625a42c1"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 30,
+      "match_date": "2027-05-26",
+      "home_team_id": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+      "away_team_id": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+      "kickoff_time": "20:20:00",
+      "court": 1,
+      "id": "040bc13c-b59b-4331-8987-ac551972bf18"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 30,
+      "match_date": "2027-05-26",
+      "home_team_id": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+      "away_team_id": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+      "kickoff_time": "20:20:00",
+      "court": 2,
+      "id": "33035a8f-f459-4c93-95ab-06dce2ceadee"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 30,
+      "match_date": "2027-05-26",
+      "home_team_id": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+      "away_team_id": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+      "kickoff_time": "21:00:00",
+      "court": 1,
+      "id": "d749c1ad-edba-44ba-8ab0-e7162b57740b"
+    },
+    {
+      "competition_season_id": "be008d39-f175-45c1-a232-2148d84b1cf9",
+      "round_number": 30,
+      "match_date": "2027-05-26",
+      "home_team_id": "435af587-f6ea-5030-a097-94ad466481c2",
+      "away_team_id": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+      "kickoff_time": "21:00:00",
+      "court": 2,
+      "id": "f29cfdf5-a962-434c-9220-3eec0f792d2d"
+    }
+  ],
+  "dates": [
+    "2026-10-14",
+    "2026-10-21",
+    "2026-11-04",
+    "2026-11-11",
+    "2026-11-18",
+    "2026-11-25",
+    "2026-12-02",
+    "2026-12-09",
+    "2026-12-16",
+    "2026-12-23",
+    "2027-01-13",
+    "2027-01-20",
+    "2027-01-27",
+    "2027-02-03",
+    "2027-02-10",
+    "2027-02-17",
+    "2027-02-24",
+    "2027-03-03",
+    "2027-03-10",
+    "2027-03-17",
+    "2027-03-24",
+    "2027-03-31",
+    "2027-04-07",
+    "2027-04-14",
+    "2027-04-21",
+    "2027-04-28",
+    "2027-05-05",
+    "2027-05-12",
+    "2027-05-19",
+    "2027-05-26"
+  ],
+  "conditionalInheritance": false,
+  "softExceptions": [
+    {
+      "round": 9,
+      "teams": [
+        "Umoja Stars",
+        "Ghazni United"
+      ],
+      "time": "21:00:00"
+    },
+    {
+      "round": 28,
+      "teams": [
+        "Ghazni United",
+        "Umoja Stars"
+      ],
+      "time": "21:00:00"
+    },
+    {
+      "round": 27,
+      "teams": [
+        "Umoja Stars",
+        "Pops"
+      ],
+      "time": "21:00:00"
+    }
+  ],
+  "totals": [
+    {
+      "name": "AFG",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 9,
+        "19:40:00": 7,
+        "20:20:00": 8,
+        "21:00:00": 6
+      }
+    },
+    {
+      "name": "Buckle City",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 7,
+        "19:40:00": 7,
+        "20:20:00": 7,
+        "21:00:00": 9
+      }
+    },
+    {
+      "name": "Dream Team",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 13,
+        "19:40:00": 14,
+        "20:20:00": 1,
+        "21:00:00": 2
+      }
+    },
+    {
+      "name": "Ghazni United",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 0,
+        "19:40:00": 13,
+        "20:20:00": 15,
+        "21:00:00": 2
+      }
+    },
+    {
+      "name": "Goldlink Up",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 9,
+        "19:40:00": 8,
+        "20:20:00": 7,
+        "21:00:00": 6
+      }
+    },
+    {
+      "name": "Ibiza",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 10,
+        "19:40:00": 6,
+        "20:20:00": 7,
+        "21:00:00": 7
+      }
+    },
+    {
+      "name": "Kawsar FC",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 8,
+        "19:40:00": 6,
+        "20:20:00": 7,
+        "21:00:00": 9
+      }
+    },
+    {
+      "name": "King ADL",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 1,
+        "19:40:00": 8,
+        "20:20:00": 14,
+        "21:00:00": 7
+      }
+    },
+    {
+      "name": "Kuq E Zi",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 12,
+        "19:40:00": 9,
+        "20:20:00": 7,
+        "21:00:00": 2
+      }
+    },
+    {
+      "name": "MTS FC",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 9,
+        "19:40:00": 6,
+        "20:20:00": 7,
+        "21:00:00": 8
+      }
+    },
+    {
+      "name": "Misfits",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 13,
+        "19:40:00": 4,
+        "20:20:00": 7,
+        "21:00:00": 6
+      }
+    },
+    {
+      "name": "Pops",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 13,
+        "19:40:00": 7,
+        "20:20:00": 8,
+        "21:00:00": 2
+      }
+    },
+    {
+      "name": "Rinnai",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 0,
+        "19:40:00": 11,
+        "20:20:00": 10,
+        "21:00:00": 9
+      }
+    },
+    {
+      "name": "Umoja Stars",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 0,
+        "19:40:00": 0,
+        "20:20:00": 0,
+        "21:00:00": 30
+      }
+    },
+    {
+      "name": "Wildcats",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 8,
+        "19:40:00": 7,
+        "20:20:00": 7,
+        "21:00:00": 8
+      }
+    },
+    {
+      "name": "Xaywan",
+      "matches": 30,
+      "home": 15,
+      "maximumStreak": 3,
+      "kickoffs": {
+        "19:00:00": 8,
+        "19:40:00": 7,
+        "20:20:00": 8,
+        "21:00:00": 7
+      }
+    }
+  ],
+  "inheritanceStatus": "organiser approved",
+  "applied": true,
+  "status": "published-receipt",
+  "publishedChangeSetId": "1cb905ac-8b8c-444d-bacb-716a858837f0",
+  "publishedVersion": 4,
+  "publishedAt": "2026-10-22T08:36:27.513788Z"
+}

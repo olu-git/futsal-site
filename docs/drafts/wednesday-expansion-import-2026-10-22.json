@@ -1,0 +1,1460 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "wednesday",
+    "season": "2026 - Season 2",
+    "competitionSeasonId": "be008d39-f175-45c1-a232-2148d84b1cf9"
+  },
+  "title": "Dream Team and Buckle City: 16-team 30-match revision",
+  "overallNote": "Reviewed expansion after approved Etihad-to-Dream Team record inheritance. Preserve all scores; Dream Team 19:00/19:40 except 21:00 against Umoja Stars; preserve Goldlink/Buckle separation.",
+  "changes": [
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 3,
+        "date": "2026-11-04",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 3,
+        "date": "2026-11-04",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+        "awayTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "publicationState": "published"
+      },
+      "fixtureId": "56c55c48-876b-412d-83f1-51ac0e22af69",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-11",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      },
+      "fixtureId": "81114ca1-4f2c-4e0e-8173-8d21ad48bcc1",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-11",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-11",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "awayTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "publicationState": "published"
+      },
+      "fixtureId": "d63c58b8-9de9-4c6c-b7bd-ef11be4591cb",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-11",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "awayTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "publicationState": "published"
+      },
+      "fixtureId": "de483476-c861-460f-bc37-83ae570f9f7c",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-18",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-18",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "publicationState": "published"
+      },
+      "fixtureId": "d85f40cb-4e60-459e-a171-d506e816c855",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-18",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "awayTeamId": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+        "publicationState": "published"
+      },
+      "fixtureId": "ec77e117-f603-434b-b678-30313ab426ea",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-25",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-25",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+        "awayTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "publicationState": "published"
+      },
+      "fixtureId": "c2114b41-27ce-463e-8fb8-6d61626b7555",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-25",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      },
+      "fixtureId": "76974261-5f08-43eb-968d-5aa97a070365",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-12-02",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "publicationState": "published"
+      },
+      "fixtureId": "68dfe148-4796-437e-8508-468a3cbc6b8d",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-12-02",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-09",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-09",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+        "publicationState": "published"
+      },
+      "fixtureId": "90e1ad4e-ba87-444f-a043-701faac49180",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-09",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "awayTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "publicationState": "published"
+      },
+      "fixtureId": "f0eaaa17-db74-45c1-b596-fe00275ef7db",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-16",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "awayTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "publicationState": "published"
+      },
+      "fixtureId": "edb2ba0e-964c-4d49-9d75-d9c2bc6e516b",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-16",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      },
+      "fixtureId": "c36da8f2-6510-4b65-8032-490685629072",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-16",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-16",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "awayTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "publicationState": "published"
+      },
+      "fixtureId": "83b3127c-431d-4f83-bdce-65a3a36ff467",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-23",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "awayTeamId": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+        "publicationState": "published"
+      },
+      "fixtureId": "cf164c1d-68d7-4156-8be8-3c08ee3c5519",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-23",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "publicationState": "published"
+      },
+      "fixtureId": "f5fed81d-2486-4dd5-8d4f-2f0a6208efde",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-23",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-23",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "awayTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "publicationState": "published"
+      },
+      "fixtureId": "cfca92d9-beb0-4986-9ca3-24c0de8ccb78",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-13",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-13",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "publicationState": "published"
+      },
+      "fixtureId": "92aa98b6-0178-4576-a492-4d2e52839d1a",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-13",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "awayTeamId": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+        "publicationState": "published"
+      },
+      "fixtureId": "4e48da53-324d-438d-871f-4b94de49a29e",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-13",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "awayTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "publicationState": "published"
+      },
+      "fixtureId": "90a1123e-41f6-4289-89ce-fe895af39774",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-20",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "publicationState": "published"
+      },
+      "fixtureId": "7469d071-f21e-4648-9cd9-db752130a15a",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-20",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-27",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+        "publicationState": "published"
+      },
+      "fixtureId": "8114b32b-71e3-4b51-8d3c-a83860f02e3b",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-27",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "publicationState": "published"
+      },
+      "fixtureId": "f27096ec-fb40-45e1-8a27-5978b9a87764",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-27",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "awayTeamId": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+        "publicationState": "published"
+      },
+      "fixtureId": "2032ff0c-7282-4f5e-9d41-65be7234b050",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-27",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "awayTeamId": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-03",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-03",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      },
+      "fixtureId": "b0fbb4e3-2c85-427e-98d5-0f9530f90867",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-03",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "awayTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "publicationState": "published"
+      },
+      "fixtureId": "b34d497d-6bcc-464f-8ba7-4b8620043e23",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-10",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      },
+      "fixtureId": "197f16d0-9812-4afc-b66f-943f4783e3b5",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-10",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-17",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      },
+      "fixtureId": "2fb033a3-9ed7-461a-b320-91b8d5342885",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-17",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "awayTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "publicationState": "published"
+      },
+      "fixtureId": "91ea2709-71d1-45f3-b2ff-edfaa120000b",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-17",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-24",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+        "publicationState": "published"
+      },
+      "fixtureId": "b96677aa-b577-403e-9fd6-189d3c5fe25c",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-24",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-24",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "awayTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "publicationState": "published"
+      },
+      "fixtureId": "eb15f5b9-9388-484a-8720-13cd1b5e6483",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-03",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-03",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+        "awayTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "publicationState": "published"
+      },
+      "fixtureId": "04958faf-595f-4ade-b931-909c2085afd0",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-03",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "publicationState": "published"
+      },
+      "fixtureId": "90f4477e-d185-4e28-b734-da75930a6e43",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-10",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "awayTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "publicationState": "published"
+      },
+      "fixtureId": "3288c355-5cfc-4439-9596-7f426a08c889",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-10",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-10",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      },
+      "fixtureId": "9b6faf10-5594-45ec-bd03-fe88b365c84d",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-10",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+        "awayTeamId": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+        "publicationState": "published"
+      },
+      "fixtureId": "0c69952a-df7f-43a4-a49d-1632f1d3b1e8",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-17",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-17",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "publicationState": "published"
+      },
+      "fixtureId": "211af171-2ef0-4d9e-b188-c0a6e55fee28",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-03-24",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-03-24",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "publicationState": "published"
+      },
+      "fixtureId": "7472e4d6-dbac-4512-bb29-111fd52ef74e",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-03-24",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "awayTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "publicationState": "published"
+      },
+      "fixtureId": "3c6642f9-4809-405c-9fa7-923740628ea2",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-03-31",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-03-31",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+        "publicationState": "published"
+      },
+      "fixtureId": "0bf5f0b1-ca0b-4424-96ff-2b965bfd8ddb",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-03-31",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "awayTeamId": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+        "publicationState": "published"
+      },
+      "fixtureId": "ecd6b996-d428-486f-9790-4356a357eb2c",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-07",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-07",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "awayTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "publicationState": "published"
+      },
+      "fixtureId": "5c613321-d841-4119-93d4-c2cdf294f5c1",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-14",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-14",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "awayTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "publicationState": "published"
+      },
+      "fixtureId": "8dc6ec17-9f20-4d06-b157-558dcedf1eba",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-14",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+        "publicationState": "published"
+      },
+      "fixtureId": "25e560cf-1e6a-43f4-9801-dc7e113083a0",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-14",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "awayTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "publicationState": "published"
+      },
+      "fixtureId": "4a989708-9de5-4120-b908-9cd551059cf4",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-21",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      },
+      "fixtureId": "224c60fd-e206-42a1-8539-173520d229ab",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-21",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "awayTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "publicationState": "published"
+      },
+      "fixtureId": "200cbd83-f112-49fa-96db-6c24edb065b4",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-21",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-04-28",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      },
+      "fixtureId": "e0344891-dd70-4444-a172-7a2fc23342b2",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-04-28",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-05",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-05",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+        "awayTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-05",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "awayTeamId": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-05",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "awayTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-05",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-05",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "awayTeamId": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-05",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+        "awayTeamId": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-05",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "awayTeamId": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-12",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-12",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-12",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+        "awayTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-12",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "awayTeamId": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-12",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+        "awayTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-12",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "awayTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-12",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "awayTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-12",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+        "awayTeamId": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-19",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "awayTeamId": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-19",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "awayTeamId": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-19",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+        "awayTeamId": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-19",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "awayTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-19",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "awayTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-19",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-19",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "awayTeamId": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-19",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "awayTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-26",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "5b5d3141-f8b7-481e-9e97-9407d8f224b9",
+        "awayTeamId": "bf6a7c6e-83e0-4d6d-8354-9a89ab679eb3",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-26",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-26",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "3a2cbf2d-326d-4a3b-bd94-56ac4f46a999",
+        "awayTeamId": "8902231b-a7f3-474b-96da-c8b3ac09c74b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-26",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "awayTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-26",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "b3be09fa-1f9e-4501-be80-ae0346804d31",
+        "awayTeamId": "b4b3cb39-f59c-4ea3-b176-8e637bfb7e8b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-26",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "awayTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-26",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "awayTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved 16-team 30-match Wednesday expansion; preserve played results and enforce Dream Team availability including Umoja exception.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-26",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "awayTeamId": "bafe147f-c3ac-4285-8159-f8e13a06e067",
+        "publicationState": "published"
+      }
+    }
+  ]
+}

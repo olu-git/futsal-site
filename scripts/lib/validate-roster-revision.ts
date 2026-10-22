@@ -19,6 +19,7 @@ export function revisedPlayingDates(night: 'monday' | 'wednesday'): string[] {
 export function revisedKickoffIssues(night: 'monday' | 'wednesday', names: string[], time: string) {
   const issues = kickoffIssues(night, names, time);
   if (night === 'monday' && names.includes('Bunyip') && !['19:00', '19:40'].includes(time)) issues.hard.push('Bunyip: 19:00 or 19:40 only');
+  if (night === 'wednesday' && names.includes('Dream Team') && !['19:00', '19:40'].includes(time) && !(names.includes('Umoja Stars') && time === '21:00')) issues.hard.push('Dream Team: 19:00 or 19:40 except 21:00 against Umoja Stars');
   if (night === 'wednesday' && names.includes('Pops') && time === '21:00') issues.soft.push('Pops: prefer not to play at 21:00');
   return issues;
 }
