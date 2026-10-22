@@ -12,7 +12,7 @@ test("global footer exposes the authenticated admin destination", () => {
 test("register follows Wednesday in mobile navigation and footer quick links", () => {
   const navbar = readFileSync("src/components/Navbar.tsx", "utf8");
   const footer = readFileSync("src/components/Footer.tsx", "utf8");
-  assert.match(navbar, /className="mobile-nav-links"[\s\S]*link\.href === "\/wednesday-night" && <button[\s\S]*>Register<\/button>/);
+  assert.match(navbar, /className="mobile-nav-links"[\s\S]*link\.href === "\/wednesday-night" && <button[\s\S]*>Register<\/span><\/button>/);
   assert.match(navbar, /className="desktop-menu-register"/);
   assert.match(css, /@media \(max-width: 800px\)[\s\S]*\.menu-panel \.desktop-menu-register \{ display: none; \}/);
   assert.match(footer, /\["\/wednesday-night", "Wednesday"\][\s\S]*\["\/rules", "Rules"\]/);

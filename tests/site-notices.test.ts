@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { readFileSync } from "node:fs";
 import { activeNoticeFor, melbourneToday, type SiteNotice } from "../src/lib/site-notices";
 
 test("Wednesday closure is shown inclusively from 22 through 28 October only", () => {
@@ -30,4 +31,11 @@ test("Melbourne date respects daylight saving and the end-of-night boundary", ()
   assert.equal(melbourneToday(new Date("2026-10-27T14:00:00Z")), "2026-10-28");
   assert.equal(melbourneToday(new Date("2026-10-28T12:59:59Z")), "2026-10-28");
   assert.equal(melbourneToday(new Date("2026-10-28T13:00:00Z")), "2026-10-29");
+});
+test("competition notice precedes upcoming fixtures and does not leak into archive selection", () => {
+  const source = readFileSync("src/components/CompetitionContent.tsx", "utf8");
+  assert.match(source, /!selectedArchive \? activeNoticeFor\(night, today\) : undefined/);
+  assert.ok(source.indexOf('<NoGamesNotice notice={notice}') < source.indexOf('id="upcoming-fixtures"'));
+  assert.match(source, /useSyncExternalStore\(subscribeToDate, melbourneToday, melbourneToday\)/);
+  assert.match(source, /<FixtureList fixtures=\{competition.upcoming\[0\].fixtures\}/);
 });

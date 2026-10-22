@@ -1,9 +1,11 @@
 "use client";
 
 import type { CompetitionNight } from "@/lib/types";
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { usePublicCompetition, SnapshotNotice, type PublicCompetitionViews } from "@/lib/use-public-competition";
 import { formatDate, nightLabel } from "@/lib/utils";
+import NoGamesNotice from "./NoGamesNotice";
+import { activeNoticeFor, melbourneToday } from "@/lib/site-notices";
 import CompetitionHero from "./CompetitionHero";
 import LeagueTable from "./LeagueTable";
 import RoundAccordion from "./RoundAccordion";
@@ -12,12 +14,16 @@ import KnockoutBracket from "./KnockoutBracket";
 import { seasonDisplayName, compareSeasonNames } from "@/lib/season-names";
 import { historicalFinals, historicalKitColours } from "@/lib/historical-finals";
 
+const subscribeToDate = () => () => {};
+
 export default function CompetitionContent({ night, initial }: {
   night: CompetitionNight; initial: PublicCompetitionViews;
 }) {
+  const today = useSyncExternalStore(subscribeToDate, melbourneToday, melbourneToday);
   const { views, source } = usePublicCompetition(initial);
   const [seasonId, setSeasonId] = useState("current");
   const selectedArchive = views.history?.find(s => s.id === seasonId);
+  const notice = !selectedArchive ? activeNoticeFor(night, today) : undefined;
   const competition = selectedArchive?.[night] ?? views[night];
   const seasonOptions = [{ id: "current", name: views[night].seasonName ?? "Current Season" }, ...(views.history ?? [])].sort((a,b) => compareSeasonNames(a.name,b.name));
   const knockout = selectedArchive ? historicalFinals(selectedArchive.id, night) : undefined;
@@ -36,6 +42,7 @@ export default function CompetitionContent({ night, initial }: {
     {knockout && <div className="fis-container archived-finals-panel">
       <KnockoutBracket night={night} data={knockout} kitColours={historicalKitColours(competition.kitColours)} />
     </div>}
+    {notice && <div className="fis-container competition-notice"><NoGamesNotice notice={notice} /></div>}
     {competition.upcoming[0] && <section className="fis-section fis-container" id="upcoming-fixtures">
       <h2 className="section-title">Upcoming Fixtures</h2>
       <div className="round-heading"><span>Round {competition.upcoming[0].round}</span><span>{formatDate(competition.upcoming[0].date)}</span></div>

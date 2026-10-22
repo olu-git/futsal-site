@@ -23,7 +23,7 @@ export default function Navbar() {
     document.addEventListener("keydown", keyboard);
     return () => { document.removeEventListener("pointerdown", outside); document.removeEventListener("keydown", keyboard); };
   }, [open]);
-  const navLink = ({ href, label }: typeof links[number]) => <Link key={href} href={href} aria-current={(href === "/" ? path === href : path === href || path.startsWith(`${href}/`)) ? "page" : undefined} onClick={() => setOpen(false)}><span className="nav-pointer" aria-hidden="true">▶</span><span className="nav-label">{label}</span></Link>;
+  const navLink = ({ href, label }: typeof links[number]) => <Link key={href} href={href} aria-current={(href === "/" ? path === href : path === href || path.startsWith(`${href}/`)) ? "page" : undefined} onClick={() => setOpen(false)}><span className="nav-pointer" aria-hidden="true"><svg viewBox="0 0 10 10" width="8" height="8" aria-hidden="true" focusable="false"><path d="M2 1 9 5 2 9Z" fill="currentColor" /></svg></span><span className="nav-label">{label}</span></Link>;
   return <header className="site-header">
     <div className="fis-container header-inner">
       <Link href="/" className="brand" aria-label="Futsal Indoor Soccer home" onClick={() => setOpen(false)}><Image src={site.logo} alt="Futsal Indoor Soccer" width={138} height={57} priority /></Link>
@@ -33,9 +33,9 @@ export default function Navbar() {
           {open && <nav id="site-menu" className="menu-panel" aria-label="More navigation">
             <div className="mobile-nav-links">{links.map((link) => <Fragment key={link.href}>
               {navLink(link)}
-              {link.href === "/wednesday-night" && <button type="button" onClick={() => { openRegistration("team", buttonRef.current); setOpen(false); }}>Register</button>}
+              {link.href === "/wednesday-night" && <button type="button" onClick={() => { openRegistration("team", buttonRef.current); setOpen(false); }}><span className="nav-pointer" aria-hidden="true"><svg viewBox="0 0 10 10" width="8" height="8" aria-hidden="true" focusable="false"><path d="M2 1 9 5 2 9Z" fill="currentColor" /></svg></span><span className="nav-label">Register</span></button>}
             </Fragment>)}</div>
-            <button type="button" className="desktop-menu-register" onClick={() => { openRegistration("team", buttonRef.current); setOpen(false); }}>Register</button>
+            <button type="button" className="desktop-menu-register" onClick={() => { openRegistration("team", buttonRef.current); setOpen(false); }}><span className="nav-pointer" aria-hidden="true"><svg viewBox="0 0 10 10" width="8" height="8" aria-hidden="true" focusable="false"><path d="M2 1 9 5 2 9Z" fill="currentColor" /></svg></span><span className="nav-label">Register</span></button>
             {navLink({ href: "/contact", label: "Contact Us" })}{navLink({ href: "/about-us", label: "About Us" })}
           </nav>}
         </div>
