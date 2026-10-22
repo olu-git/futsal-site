@@ -68,6 +68,8 @@ test("live mapping and serialized fallback produce equivalent upcoming form and 
     const next = view.upcoming.flatMap(round => round.fixtures).find(fixture => fixture.id === "next")!;
     assert.deepEqual(next.homeForm, ["?", "?", "?", "?", "W"]);
     assert.deepEqual(next.awayForm, ["?", "?", "?", "?", "L"]);
+    assert.deepEqual(view.formByTeam[next.home.id], next.homeForm);
+    assert.deepEqual(view.formByTeam[next.away.id], next.awayForm);
     assert.deepEqual((await service.getNextRound())?.fixtures[0].homeForm, next.homeForm);
     assert.ok(view.results.flatMap(round => round.fixtures).every(fixture => !fixture.homeForm && !fixture.awayForm));
   }
@@ -81,7 +83,9 @@ test("new edition with the same club names starts with five unknowns and ignores
     team.legacy_id = team.legacy_id!.replace("old-", "new-");
   }
   for (const data of [mapPublishedCompetition(selectPublicEditions(rows.editions), rows.teams, rows.fixtures, rows.results, []), buildPublicSnapshot(rows).data]) {
-    const next = (await serviceFor(data).getNight("monday")).upcoming.flatMap(round => round.fixtures).find(fixture => fixture.id === "next")!;
+    const view = await serviceFor(data).getNight("monday");
+    const next = view.upcoming.flatMap(round => round.fixtures).find(fixture => fixture.id === "next")!;
     assert.deepEqual(next.homeForm, ["?", "?", "?", "?", "?"]);
+    assert.deepEqual(view.formByTeam[next.home.id], next.homeForm);
   }
 });

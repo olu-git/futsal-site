@@ -22,7 +22,7 @@ export default function CompetitionContent({ night, initial }: {
   const seasonOptions = [{ id: "current", name: views[night].seasonName ?? "Current Season" }, ...(views.history ?? [])].sort((a,b) => compareSeasonNames(a.name,b.name));
   const knockout = selectedArchive ? historicalFinals(selectedArchive.id, night) : undefined;
   return <div className="competition-public">
-    <CompetitionHero nightName={nightLabel(night)} teamCount={competition.teams.length} />
+    <CompetitionHero night={night} nightName={nightLabel(night)} teamCount={competition.teams.length} />
     <SnapshotNotice source={source} />
     <section className="fis-container competition-season-selection" aria-label="Season selection">
       <div className="season-selection-bar">
@@ -46,7 +46,7 @@ export default function CompetitionContent({ night, initial }: {
       {!competition.divisions.length && <p className="empty-state">No standings are available yet.</p>}
       {competition.divisions.map(({ division, standings, teams }) => <div className="division-table" key={division}>
         {competition.divisions.length > 1 && <h3 className="division-label">Division {division}</h3>}
-        <LeagueTable standings={standings} teams={teams} label={`${nightLabel(night)} Division ${division} standings`} />
+        <LeagueTable standings={standings} teams={teams} formByTeam={competition.formByTeam} label={`${nightLabel(night)} Division ${division} standings`} />
       </div>)}
     </section>
     <section className="fis-section fis-container" id="results">

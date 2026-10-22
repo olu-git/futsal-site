@@ -5,7 +5,7 @@ export type FormResult = "W" | "D" | "L" | "?";
 /** Input is the shared published dataset: one selected edition per night/division.
  * Team IDs are edition-scoped; never join history by team name or legacy source data.
  */
-export function calculateTeamForm(teamId: string, fixture: Fixture, history: Fixture[]): FormResult[] {
+export function calculateTeamForm(teamId: string, fixture: Pick<Fixture, "night" | "division">, history: Fixture[]): FormResult[] {
   const played = history.filter(match => match.status === "completed" &&
     match.night === fixture.night && match.division === fixture.division &&
     match.homeTeam && match.awayTeam && match.homeTeam !== match.awayTeam &&

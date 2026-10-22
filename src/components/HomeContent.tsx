@@ -41,7 +41,7 @@ export default function HomeContent({ initial, finals }: { initial: PublicCompet
         <Link className="league-head" href={`${nightPath(competition.night)}#standings`}>
           <h3>{nightLabel(competition.night)}{competition.divisions.length > 1 && ` / Division ${division}`}</h3><span>View Table</span>
         </Link>
-        <LeagueTable standings={standings} teams={teams} compact label={`${nightLabel(competition.night)} Division ${division} top five`} />
+        <LeagueTable standings={standings} teams={teams} formByTeam={competition.formByTeam} compact label={`${nightLabel(competition.night)} Division ${division} top five`} />
       </article>))}</div>
     </section>
     <HomeTvFeature />

@@ -167,9 +167,7 @@ button, h1, h2, h3, p, span { letter-spacing: 0; }
 .league-table .number { text-align: right; white-space: nowrap; }
 .league-table .points { color: var(--fis-blue); }
 .table-team { display: flex; align-items: center; gap: 10px; min-width: 176px; }
-.team-kit { position: relative; display: inline-block; background: var(--kit, var(--fis-blue)); flex: 0 0 20px; width: 20px; height: 20px; clip-path: polygon(25% 0,40% 0,40% 10%,60% 10%,60% 0,75% 0,75% 10%,90% 10%,90% 20%,100% 20%,100% 40%,75% 40%,75% 100%,25% 100%,25% 40%,0 40%,0 20%,10% 20%,10% 10%,25% 10%); filter: drop-shadow(0 0 1px #082456); }
-.team-kit-light { background: var(--fis-navy); filter: none; }
-.team-kit-light::after { content: ""; position: absolute; inset: 1.5px; background: #fff; clip-path: inherit; }
+.team-kit { position: relative; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 20px; width: 20px; height: 20px; }
 .division-table + .division-table { margin-top: 30px; }
 .division-label { padding: 14px; background: var(--fis-cream); color: var(--fis-blue); font: 10px/1.8 var(--font-mono); text-transform: uppercase; }
 .rounds { display: grid; gap: 12px; }
@@ -1135,3 +1133,31 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
 .no-games-notice strong { font-weight: 700; }
 .no-games-notice a { color: white; font: 400 var(--type-action)/var(--leading-body) var(--font-mono); text-decoration: underline; text-underline-offset: 4px; }
 .no-games-notice a:focus-visible { outline: 2px solid white; outline-offset: 5px; }
+
+/* Natural-colour matchday photography with neutral shading for readable text. */
+.page-hero.with-image.competition-photo-hero { min-height: 400px; }
+.page-hero.with-image.competition-hero-monday .hero-image { object-position: center 56%; }
+.page-hero.with-image.competition-hero-wednesday .hero-image { object-position: center 22%; }
+.page-hero.with-image.competition-photo-hero .hero-treatment { background: linear-gradient(90deg, rgba(0,0,0,.76) 0%, rgba(0,0,0,.48) 42%, rgba(0,0,0,.06) 100%); }
+.team-kit svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.league-table { table-layout: fixed; min-width: 880px; }
+.league-table .table-position-column { width: 6%; }
+.league-table .table-name-column { width: 20%; }
+.league-table .table-stat-column { width: 7%; }
+.league-table .table-form-column { width: 18%; }
+.league-table.compact { min-width: 580px; }
+.league-table.compact .table-position-column { width: 8%; }
+.league-table.compact .table-name-column { width: 30%; }
+.league-table.compact .table-stat-column { width: 14%; }
+.league-table.compact .table-form-column { width: 20%; }
+.league-table .table-team { min-width: 0; min-height: 32px; }
+.table-team-name { min-width: 0; overflow-wrap: normal; word-break: normal; }
+.league-table .table-form { display: flex; gap: 3px; white-space: nowrap; }
+.league-table .table-form .form-badge { width: 16px; height: 16px; flex-basis: 16px; font-size: 8px; }
+.table-form .form-unknown { background: transparent; color: transparent; border: 1px dotted var(--fis-border); }
+@media (max-width: 640px) {
+  .page-hero.with-image.competition-photo-hero { min-height: 360px; }
+  .page-hero.with-image.competition-photo-hero .hero-treatment { background: linear-gradient(180deg, rgba(0,0,0,.64), rgba(0,0,0,.16) 55%, rgba(0,0,0,.72)); }
+  .page-hero.with-image.competition-hero-monday .hero-image { object-position: 62% center; }
+  .page-hero.with-image.competition-hero-wednesday .hero-image { object-position: 60% center; }
+}
