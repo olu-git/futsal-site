@@ -3,7 +3,6 @@ import { ChevronDown, Clock, CreditCard, Disc, Gavel, Hourglass, Play, Shield, S
 import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 import PageHero from "@/components/PageHero";
-import { site } from "@/lib/site-content";
 
 export const metadata = publicMetadata("Rules", "Futsal Indoor Soccer competition rules.", "/rules/");
 type Rule = { title: string; body: string; icon?: LucideIcon; image?: string };
@@ -60,7 +59,7 @@ const groups: { title: string; intro: string; groups: RuleGroup[] }[] = [
 ];
 
 export default function RulesPage() {
-  return <><PageHero title="Rules & Regulations" image={site.actionPhoto} className="rules-photo-hero"><p>Official futsal principles with FIS competition rules.</p></PageHero>
+  return <><PageHero title="Rules & Regulations" image="/images/rules-referee.jpg" imageAlt="FIS referee raising a red card on the indoor court" className="rules-photo-hero"><p>Official futsal principles with FIS competition rules.</p></PageHero>
     {groups.map((section) => <section className="rules-section fis-section fis-container" key={section.title}><h2 className="section-title">{section.title}</h2><p className="body-copy">{section.intro}</p><div className="rules-groups">{section.groups.map((group) => <div className="rule-group" key={group.heading}><h3>{group.heading}</h3><div className="rules-grid">{group.rules.map(({ icon: Icon, image, title, body }) => <details className="rule-card" key={title} open><summary>{image ? <Image src={image} alt="" width={20} height={20} aria-hidden="true" /> : Icon && <Icon aria-hidden="true" />}<span>{title}</span><ChevronDown className="rule-chevron" aria-hidden="true" /></summary><p>{body}</p></details>)}</div></div>)}</div></section>)}
   </>;
 }

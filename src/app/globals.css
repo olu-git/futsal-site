@@ -989,7 +989,6 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
 
 @media (max-width: 767px) {
   .rules-photo-hero { overflow: hidden; }
-  .rules-photo-hero .hero-image { transform: translateY(85px) scale(1.6); }
 }
 
 @media (max-width: 540px) {
@@ -1160,4 +1159,11 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
   .page-hero.with-image.competition-photo-hero .hero-treatment { background: linear-gradient(180deg, rgba(0,0,0,.64), rgba(0,0,0,.16) 55%, rgba(0,0,0,.72)); }
   .page-hero.with-image.competition-hero-monday .hero-image { object-position: 62% center; }
   .page-hero.with-image.competition-hero-wednesday .hero-image { object-position: 60% center; }
+}
+
+.page-hero.with-image.rules-photo-hero .hero-image { object-position: center 18%; }
+.page-hero.with-image.rules-photo-hero .hero-treatment { background: linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.4) 45%, rgba(0,0,0,.08)); }
+@media (max-width: 640px) {
+  .page-hero.with-image.rules-photo-hero .hero-image { object-position: left center; }
+  .page-hero.with-image.rules-photo-hero .hero-treatment { background: linear-gradient(180deg, rgba(0,0,0,.7), rgba(0,0,0,.28)); }
 }
