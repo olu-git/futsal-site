@@ -1,0 +1,46 @@
+{
+  "competitionSeasonId": "62ce7ec9-459e-4acf-bec5-c6734a3199ef",
+  "newTeam": {
+    "id": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+    "name": "Jaghori FC",
+    "readableId": "mon-jaghori-fc",
+    "kitColour": "#1F9D55"
+  },
+  "reinstateTeam": {
+    "id": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+    "name": "Buckle City",
+    "readableId": "mon-buckle-city"
+  },
+  "inheritance": [
+    {
+      "fromTeamId": "1d74c3b0-90ba-4304-aa68-b9681ea4bb9a",
+      "toTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+      "fixtureIds": [
+        "3765b565-c64c-4351-9c89-9522672fbf32",
+        "e3471294-0d0b-4815-9fd1-2f52f9fa1aec"
+      ]
+    },
+    {
+      "fromTeamId": "2368a5c2-7a91-484a-b201-fde870c85690",
+      "toTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+      "fixtureIds": [
+        "3f44938e-938e-4160-a978-6446b4d86151",
+        "f21d315e-e106-4dd5-b47f-c676469407a2"
+      ]
+    }
+  ],
+  "targetMatchesPerTeam": 30,
+  "maximumPairMeetings": 2,
+  "approvalDate": "2026-10-25",
+  "inheritanceStatus": "organiser approved",
+  "applied": false,
+  "pending": [
+    "Guarded roster SQL approval/application",
+    "Review and publish future fixture import"
+  ],
+  "importSummary": {
+    "updated": 50,
+    "created": 56,
+    "unchanged": 118
+  }
+}

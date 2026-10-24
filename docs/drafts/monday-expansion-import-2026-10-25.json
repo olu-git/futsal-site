@@ -1,0 +1,1490 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "monday",
+    "season": "2026 - Season 2",
+    "competitionSeasonId": "62ce7ec9-459e-4acf-bec5-c6734a3199ef"
+  },
+  "title": "Jaghori FC and Buckle City: 16-team 30-match revision",
+  "overallNote": "After confirmed Declan-to-Jaghori and Gay Guys-to-Buckle inheritance only. Every pair twice; preserve7 existing26Oct games; add Jaghori-Buckle21C2. Bunyip early only; Blue Dragons no19; Goldlink/Buckle separate.2Nov provisional. ExistingR3close rematches preserved.",
+  "changes": [
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 3,
+        "date": "2026-10-26",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      },
+      "fixtureId": "12fa288c-08f6-4f65-b75b-e5c48b12872c",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      },
+      "fixtureId": "a08361d7-29fc-4035-9fbb-c1c3a475a077",
+      "expectedFixtureVersion": 7
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      },
+      "fixtureId": "930fc39c-a227-410e-94cf-8b99cc6ba56c",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      },
+      "fixtureId": "f43c6052-360e-4b25-b8ba-147baaed1af2",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      },
+      "fixtureId": "0a525e06-20f0-4a4a-95da-d22f986f77c5",
+      "expectedFixtureVersion": 8
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-09",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      },
+      "fixtureId": "0638c88d-ff1e-419c-88d6-a9efebdead2d",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-09",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      },
+      "fixtureId": "351c7bb2-bd05-4b64-8bc9-ca94db75b658",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-09",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      },
+      "fixtureId": "77449678-b266-4658-a615-4d3340ad7903",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-09",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-16",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      },
+      "fixtureId": "c8144a73-e440-41f1-bb00-5b2d0137223a",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-16",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      },
+      "fixtureId": "21057a98-6243-4d69-98ef-5fe1e0ed3629",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-16",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      },
+      "fixtureId": "17e69d41-eed0-422a-ade4-d1e97df50c5f",
+      "expectedFixtureVersion": 4
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-16",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-23",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-11-30",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-11-30",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      },
+      "fixtureId": "796b3a31-a52a-4626-8be4-36deb3c629dd",
+      "expectedFixtureVersion": 4
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-11-30",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      },
+      "fixtureId": "bda64c9c-10ef-4451-9392-cbe9df9b43a8",
+      "expectedFixtureVersion": 6
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-11-30",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      },
+      "fixtureId": "9a236679-f684-4bb7-a486-4fdfdf9f643a",
+      "expectedFixtureVersion": 8
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-07",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-07",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      },
+      "fixtureId": "de4973f9-da93-483f-93eb-ea4ad9c25d6b",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-07",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      },
+      "fixtureId": "b069e6cb-89cc-4fc5-8bd9-abd2f1e0375b",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-14",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-14",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      },
+      "fixtureId": "1b3bc9e2-5b58-4413-9b95-9785ee7ce72f",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2026-12-21",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      },
+      "fixtureId": "bdd66e94-4a7a-4300-a485-f7011d18c375",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2026-12-21",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-11",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      },
+      "fixtureId": "6b7a9e3a-0cae-475b-8327-b4b6cba01aba",
+      "expectedFixtureVersion": 6
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-11",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-18",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      },
+      "fixtureId": "aca1dd69-7881-4052-8504-ae13ad5a3e71",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-18",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-01-25",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-01-25",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      },
+      "fixtureId": "1dfe1126-6778-4de8-b75a-6346c366a92c",
+      "expectedFixtureVersion": 9
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-01-25",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      },
+      "fixtureId": "9de41600-0ef4-4ba4-a6de-e625af306bfd",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-01",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      },
+      "fixtureId": "6a603747-9e22-4b9c-9abe-d051c25bf266",
+      "expectedFixtureVersion": 4
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-01",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      },
+      "fixtureId": "60852b7f-5de7-4daf-8f76-5a6e5f42dd45",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-01",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      },
+      "fixtureId": "5ffcbea0-3681-4c5e-b9a6-2dd17bcd5e52",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-01",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      },
+      "fixtureId": "6acdaa06-dfe2-4767-96e9-a856d97c19ff",
+      "expectedFixtureVersion": 6
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-01",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-08",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      },
+      "fixtureId": "c7fb6499-7278-471a-893a-abb86d9dfa3d",
+      "expectedFixtureVersion": 4
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-08",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-08",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      },
+      "fixtureId": "a83b72e5-f369-50a6-85f0-bc9d6cefcbb6",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-15",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      },
+      "fixtureId": "865ed9cc-973f-4479-9028-143ab641c731",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-15",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      },
+      "fixtureId": "58553fcd-54be-4cf1-817c-308c5cc80ec1",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-15",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      },
+      "fixtureId": "372999f0-a7fd-4431-b5e7-ac33a4e24f07",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-15",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-02-22",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      },
+      "fixtureId": "8789954c-e45d-40e5-9e6d-b44cb533f5a6",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-02-22",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      },
+      "fixtureId": "fbec2d26-3007-4521-aa4e-e461fd5b1832",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-02-22",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      },
+      "fixtureId": "5feb9fe5-3095-4c60-a487-bb054a45351b",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-02-22",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      },
+      "fixtureId": "da5c990a-28e8-5395-a888-816ed5ab459c",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-02-22",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-01",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-01",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      },
+      "fixtureId": "705a852b-c4ed-4b2d-aefb-4585f7d96aac",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-15",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      },
+      "fixtureId": "bb034913-d702-4c07-8bb1-c05540d2d3c6",
+      "expectedFixtureVersion": 6
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-15",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      },
+      "fixtureId": "4c79b26b-a533-473b-81bb-70fec7206169",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-15",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-15",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      },
+      "fixtureId": "0ad40eba-3484-4be4-940b-797352eb6194",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-03-22",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      },
+      "fixtureId": "f720832e-5562-4168-98bd-144a00c4cb55",
+      "expectedFixtureVersion": 5
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-03-22",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-05",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      },
+      "fixtureId": "cc3b1dc9-3b8e-45c5-bca8-00a06ef84c4e",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-05",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-12",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      },
+      "fixtureId": "ed449f46-1446-4fa4-8a55-cab5431075e6",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-12",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-19",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      },
+      "fixtureId": "ac51bf21-c568-4b1c-8b29-ea7526eb60e4",
+      "expectedFixtureVersion": 6
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-19",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      },
+      "fixtureId": "358ba785-0105-47a0-b4b5-cf10a6136056",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-19",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-26",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      },
+      "fixtureId": "2a533c3a-2ae8-4f5f-86e5-8ef61ce69e40",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-26",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-26",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      },
+      "fixtureId": "82bcdc2e-75dc-4450-ad10-42a5efc0be0f",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-03",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-03",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      },
+      "fixtureId": "5b9c8bdf-33e5-43db-8f8a-e500ddaf94f5",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-03",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      },
+      "fixtureId": "ac0ce7db-cf99-4fa8-aab3-dfbd58daa3d6",
+      "expectedFixtureVersion": 6
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-03",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      },
+      "fixtureId": "a48354c4-009b-5eb3-9c63-9364f70a690b",
+      "expectedFixtureVersion": 3
+    },
+    {
+      "operation": "update",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-03",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      },
+      "fixtureId": "d8aa201e-3fb9-4baa-962d-651db2094c10",
+      "expectedFixtureVersion": 1
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-10",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-10",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-10",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-10",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-10",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-10",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-10",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-10",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-17",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-17",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-17",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-17",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-17",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-17",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-17",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-17",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-24",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-24",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-24",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-24",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-24",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-24",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-24",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-24",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-31",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-31",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-31",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-31",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-31",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-31",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-31",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "create",
+      "reason": "Organiser-approved Monday16-team30-game expansion; preserve all results, seven October26 assignments, hard availability and Goldlink/Buckle separation.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-05-31",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    }
+  ]
+}
