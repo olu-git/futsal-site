@@ -33,14 +33,25 @@
   "maximumPairMeetings": 2,
   "approvalDate": "2026-10-25",
   "inheritanceStatus": "organiser approved",
-  "applied": false,
-  "pending": [
-    "Guarded roster SQL approval/application",
-    "Review and publish future fixture import"
-  ],
+  "applied": true,
+  "pending": [],
   "importSummary": {
     "updated": 50,
     "created": 56,
     "unchanged": 118
+  },
+  "rosterApplied": true,
+  "fixtureChangeSet": {
+    "id": "6289c8f1-dc92-401d-aabd-e512e9d679d2",
+    "status": "published",
+    "version": 4,
+    "publishedAt": "2026-10-24T13:55:13.540011+00:00"
+  },
+  "fallbackRelease": {
+    "commit": "7bc2b8ff5a827e23d741f63f8aa97a9037c30b1e",
+    "refreshRun": 40109841854,
+    "pagesRun": 40109910135,
+    "status": "success",
+    "verification": "Reviewed fallback equals scheduled commit and anonymous production data; raw deployed Monday HTML includes incoming teams,16 standings teams and Round30 before hydration. Forced-network-failure browser session not repeated."
   }
 }

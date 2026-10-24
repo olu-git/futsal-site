@@ -1,4 +1,4 @@
--- PROPOSAL ONLY — not applied. Explicit organiser confirmations: 25 October 2026.
+-- APPLIED RECEIPT: DO NOT RERUN. Explicit organiser approval, 25 October 2026.
 -- Monday Division A, 2026 - Season 2 only. Distinct new Jaghori FC/green;
 -- Declan -> Jaghori and Gay Guys -> reinstated Buckle: two results each.
 -- Imole's former Buckle result stays with Imole. No scores/IDs/history deleted.

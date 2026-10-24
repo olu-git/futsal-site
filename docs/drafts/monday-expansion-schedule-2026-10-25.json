@@ -2860,8 +2860,9 @@
     }
   ],
   "inheritanceStatus": "organiser approved",
-  "applied": false,
+  "applied": true,
   "rematchSpacingExceptions": [
     "AFG\u2013King ADL R2/R3 and Blue Dragons\u2013Imole R1/R3: existing Round3 assignments preserved"
-  ]
+  ],
+  "publicationChangeSetId": "6289c8f1-dc92-401d-aabd-e512e9d679d2"
 }
