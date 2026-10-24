@@ -5,7 +5,7 @@ import { buildImportArtifacts } from "../scripts/lib/current-season-import";
 import { canonicalTeamReadableId, originalTeamImportId, readableTeamIdChanges, kuqEZiIdentity } from "../src/lib/team-readable-id";
 import { buildPublicSnapshot } from "../src/lib/public-snapshot";
 import type { PublishedCompetitionRows } from "../src/lib/public-competition";
-import { kickoffIssues, mondayOpponentCount, mondayRoster, playingDateStatus, sharedPlayerClash } from "../scripts/lib/new-season-planning";
+import { kickoffIssues, playingDateStatus, sharedPlayerClash } from "../scripts/lib/new-season-planning";
 import { calculateStandings } from "../src/lib/standings";
 
 test("readable-ID changes preserve each imported database UUID and do not alias distinct teams", () => {
@@ -50,25 +50,6 @@ test("snapshots remap confirmed memberships and child references before and afte
   assert.equal(before.data.standingsAdjustments[0].teamId, m.newId);
   assert.equal(before.data.fixtures[0].homeScore, 2);
   assert.equal(before.data.teams.find((team) => team.id === m.newId)?.kitColour, "#27AE60");
-});
-
-test("review candidate satisfies all required Monday counts and balances every team", () => {
-  let matches = 0, exceptions = 0;
-  for (const [i, a] of mondayRoster.entries()) {
-    assert.equal(mondayRoster.reduce((total, b) => total + mondayOpponentCount(a, b), 0), 26, a);
-    for (const b of mondayRoster.slice(i + 1)) {
-      const count = mondayOpponentCount(a, b);
-      assert.equal(count, mondayOpponentCount(b, a));
-      assert(count >= 0 && count <= 3);
-      matches += count;
-      if (count !== 2) exceptions++;
-    }
-  }
-  assert.equal(matches, 182);
-  assert.equal(exceptions, 12);
-  assert.equal(mondayOpponentCount("Misfits", "Hope"), 2);
-  assert.equal(mondayOpponentCount("Misfits", "Xaywan"), 2);
-  assert.equal(mondayOpponentCount("Wildcats", "Nassaji FC"), 2);
 });
 
 test("calendar preserves boundary playing nights and the provisional Monday", () => {

@@ -33,6 +33,8 @@ git diff --check
 
 `snapshot:check` reads anonymous published Supabase data and compares it with the fallback; it does not write to Supabase. Import generation and checks do not execute SQL. Use [docs/PUBLIC-COMPETITION-DATA.md](docs/PUBLIC-COMPETITION-DATA.md), [docs/PUBLIC-SNAPSHOT-AUTOMATION.md](docs/PUBLIC-SNAPSHOT-AUTOMATION.md), and [supabase/README.md](supabase/README.md) for operating details. Run `finals:freeze` only for a separately reviewed seed refresh; routine score entry must preserve existing match IDs and feeder relationships.
 
+`npm test` covers the ongoing application behaviours and current scheduling regressions. Run `npm run test:database-package` when migrations or disposable database verification/concurrency scripts change; it checks the SQL package without executing SQL or connecting to a database. `npm run test:historical-planning` is an optional check of the original, superseded season-preparation artifacts, not a validation of today's live schedule. Applied SQL, import receipts and historical plans remain preserved even where their one-off tests have been retired.
+
 The four public forms use a shared public Web3Forms access-key fallback unless an optional per-form `NEXT_PUBLIC_WEB3FORMS_*_KEY` is configured. Keep `.env.example` as the configuration template; `.env.local` is machine-specific and ignored. Keep the source and export variants in `brand-assets/fis-logo-pack/` for future design work; the running site serves its selected logos from `public/logos/`.
 
 The original pre-new-website production commit remains permanently tagged `pre-new-website-2026-09-30`. Never move or delete that tag.

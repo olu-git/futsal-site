@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
-import { validateMondayDraft, validateWednesdayDraft, type LocalMondayDraft } from "../scripts/lib/validate-new-season-draft";
-import { canonicalTeamReadableId, kuqEZiIdentity } from "../src/lib/team-readable-id";
+import { validateMondayDraft, validateWednesdayDraft, type LocalMondayDraft } from "../../scripts/lib/validate-new-season-draft";
+import { canonicalTeamReadableId, kuqEZiIdentity } from "../../src/lib/team-readable-id";
 const draft = JSON.parse(readFileSync("docs/drafts/monday-rounds.json", "utf8")) as LocalMondayDraft;
 test("approved Monday counts decompose into 26 feasible rounds with balanced homes and hard kickoff rules", () => {
   const result = validateMondayDraft(draft);
@@ -59,7 +59,7 @@ test("Wednesday verifier rejects restricted late games, shared-player collision 
   assert.throws(() => validateWednesdayDraft(date), /Blocked calendar/);
 });
 
-import { regularSeasonDates, playingDateStatus } from "../scripts/lib/new-season-planning";
+import { regularSeasonDates, playingDateStatus } from "../../scripts/lib/new-season-planning";
 test("calendar derives separate final dates, holiday skips and cancellation impact", () => {
   const mon = regularSeasonDates("monday"), cancel = regularSeasonDates("monday", true), wedDates = regularSeasonDates("wednesday");
   assert.equal(mon.at(-1), "2027-05-03"); assert.equal(cancel.at(-1), "2027-05-10");

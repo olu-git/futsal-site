@@ -8,6 +8,8 @@
     "start": "node scripts/preview-static.mjs",
     "lint": "eslint",
     "test": "tsx --test tests/*.test.ts tests/*.test.tsx",
+    "test:database-package": "tsx --test tests/operational/*.test.ts",
+    "test:historical-planning": "tsx --test tests/historical/*.test.ts",
     "season:import:validate": "tsx scripts/generate-current-season-import.ts --validate-only",
     "season:import:generate": "tsx scripts/generate-current-season-import.ts",
     "season:import:check": "tsx scripts/check-current-season-import.ts",
