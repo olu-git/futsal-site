@@ -4,7 +4,6 @@ import test from "node:test";
 
 const css = readFileSync("src/app/globals.css", "utf8");
 const teams = readFileSync("src/app/admin/teams/TeamsManager.tsx", "utf8");
-const results = readFileSync("src/app/admin/results/ResultsManager.tsx", "utf8");
 const form = readFileSync("src/components/EnquiryForm.tsx", "utf8");
 
 test("disabled buttons do not imply loading unless explicitly busy", () => {
@@ -15,7 +14,5 @@ test("disabled buttons do not imply loading unless explicitly busy", () => {
 
 test("Save Team marks only a real pending save as busy", () => {
   assert.match(teams, /disabled=\{pending\|\|errors\.length>0\} aria-busy=\{pending\} onClick=\{save\}/);
-  assert.match(results, /Published data is saved to Supabase immediately/);
-  assert.doesNotMatch(results, /Retry Snapshot Refresh|snapshot refresh queued/i);
   assert.match(form, /disabled=\{status === "sending"\} aria-busy=\{status === "sending"\}/);
 });

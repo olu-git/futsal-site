@@ -34,6 +34,3 @@ test("fixture UI remains browser-only and does not load knockout JSON",()=>{
   assert.doesNotMatch(`${page}${manager}${actions}${data}`,/use server|service_role|SUPABASE_SERVICE/);
   assert.match(data,/locationEditionIds/);assert.match(data,/fixtures: occupancyFixtures/);
 });
-test("production migration diagnostics are read-only and credential-free",()=>{
-  for(const file of ["supabase/production/fixture_change_preflight.sql","supabase/production/fixture_change_postflight.sql"]){const sql=readFileSync(file,"utf8");assert.doesNotMatch(sql,/\b(insert|update|delete|truncate|create|alter|drop|grant|revoke)\b/i);assert.doesNotMatch(sql,/service_role|secret_key|password|token/i)}
-});

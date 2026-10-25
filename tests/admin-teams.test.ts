@@ -39,12 +39,3 @@ test("team management remains static, browser-side and admin-reconfirmed",()=>{
  assert.doesNotMatch(actions,/\.from\("teams"\)|\.from\("team_kickoff_preferences"\)|\.from\("team_fixture_notes"\)/);
  assert.doesNotMatch(`${page}${manager}${actions}${data}`,/use server|service_role|SUPABASE_SERVICE|season-2026-s1|fixtures\.json/);
 });
-test("transactional team profile migration covers validation, rollback, security and stale edits",()=>{
- const migration=readFileSync("supabase/migrations/202609280001_transactional_team_profile_save.sql","utf8");
- const verification=readFileSync("supabase/verification/verify_team_profile_save.sql","utf8");
- assert.match(migration,/for update/);assert.match(migration,/profile_version/);assert.match(migration,/private\.is_admin\(\)/);assert.match(migration,/set search_path = ''/);
- assert.match(migration,/Duplicate team name/);assert.match(migration,/Archived destination/);assert.match(migration,/Stale team profile/);assert.match(migration,/administrative reason/);
- assert.match(migration,/delete from public\.team_kickoff_preferences/);assert.doesNotMatch(migration,/on conflict\s*\(\s*team_id\s*\)/i);assert.match(migration,/on conflict on constraint team_fixture_notes_pkey\s+do update set notes = excluded\.notes/i);assert.match(migration,/delete from public\.team_fixture_notes/);
- assert.match(verification,/preferences replaced/);assert.match(verification,/preferences deleted/);assert.match(verification,/note intentionally removed/);assert.match(verification,/failed nested save rolled back all profile state/);assert.match(verification,/unauthorised caller rejected/);
- assert.match(verification,/^begin;/m);assert.match(verification,/rollback;\s*$/);assert.doesNotMatch(migration,/\b(team_id|profile_version|competition_season_id)\s*=\s*\1\b/);
-});

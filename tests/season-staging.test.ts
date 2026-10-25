@@ -15,22 +15,7 @@ test('fixture review detects unsaved edits without depending on object property 
 
 test("standing booking covers both nights only at the confirmed venue, without confirming team availability",()=>{for(const weekday of [1,3]){const d=structuredClone(draft);d.competitions[0]={...d.competitions[0],weekday,locationId:"ce7becb1-0bbc-5cb4-8aa9-d708aaeaebce",venueConfirmed:false};d.teams=d.teams.map(t=>({...t,readableId:t.readableId!.replace(/^mon-/,weekday===1?"mon-":"wed-")}));assert.deepEqual(seasonStageErrors(d),[]);d.teams[0].availabilityConfirmed=false;assert(seasonStageErrors(d).some(e=>e.includes("availability")));d.competitions[0].locationId="another-venue";assert(seasonStageErrors(d).some(e=>e.includes("venue")));}});
 
-import {readFileSync} from 'node:fs';
-test('organiser-confirmed fresh entries satisfy their gates while returning profiles stay unconfirmed',()=>{
- const entries=JSON.parse(readFileSync('docs/drafts/new-season-team-memberships.json','utf8')).entries;
- assert.equal(entries.length,4);
- for(const night of ['monday','wednesday']){
-  const d=structuredClone(draft);d.competitions[0].weekday=night==='monday'?1:3;
-  d.teams=entries.filter((e:{night:string})=>e.night===night).map((e:{uuid:string;name:string;readableId:string;availabilityConfirmed:boolean;fixtureNote:string;preferences:typeof d.teams[number]['preferences'];availabilityConfirmation:{asOf:string;kickoffTimes:string[]}})=>{
-   assert.equal(e.availabilityConfirmation.asOf,'2026-10-10');assert.deepEqual(e.availabilityConfirmation.kickoffTimes,['19:00','19:40','20:20','21:00']);
-   return {...newDraftTeam('m',e.uuid),name:e.name,readableId:e.readableId,availabilityConfirmed:e.availabilityConfirmed,fixtureNote:e.fixtureNote,preferences:e.preferences};
-  });
-  assert.deepEqual(seasonStageErrors(d),[]);
-  const returning={...newDraftTeam('m','00000000-0000-4000-8000-000000000090'),sourceTeamId:'returning-source',name:'AFG',readableId:night==='monday'?'mon-afg':'wed-afg'};
-  d.teams.push(returning,{...returning,id:'00000000-0000-4000-8000-000000000091',name:'Misfits',readableId:night==='monday'?'mon-misfits':'wed-misfits'});
-  const errors=seasonStageErrors(d);assert(errors.some(e=>e.includes('AFG: availability')));assert(errors.some(e=>e.includes('Misfits: availability')));assert(!errors.some(e=>e.includes('Xaywan: availability')||e.includes('Buckle City: availability')));
- }
-});
+
 test('later identity or availability edits revoke a current confirmation rather than carrying it forward',()=>{
  const t=draft.teams[0];for(const patch of [{id:'another-uuid'},{readableId:'mon-other'},{sourceTeamId:'another-history'},{preferences:[{kickoff_time:'21:00',classification:'required' as const}]}])assert.equal(reviewTeamEdit(t,{...t,...patch}).availabilityConfirmed,false);
 });

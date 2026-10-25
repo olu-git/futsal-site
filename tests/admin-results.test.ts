@@ -55,7 +55,7 @@ test("creating a correction draft requires and stores its reason", async () => {
   await submitResult(store, score({ supersedesResultId: "published-1", correctionReason: "Score sheet correction" }), "draft");
   assert.equal(store.rows[0].supersedesResultId, "published-1");
 });
-test("publishing a correction invokes atomic publication", async () => {
+test("publishing a correction delegates to the store publish operation", async () => {
   const store = new MemoryStore(); store.context.publishedResultId = "published-1";
   await submitResult(store, score({ supersedesResultId: "published-1", correctionReason: "Verified correction" }), "publish");
   assert.deepEqual(store.published, ["r1"]);
