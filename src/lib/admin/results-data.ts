@@ -68,6 +68,9 @@ export async function getAdminRegularSeasonFixtures(): Promise<AdminFixture[]> {
     .select(FIXTURE_RESULTS_SELECT)
     .in("competition_season_id", ids)
     .eq("stage", "regular_season")
+    // Publication updates these fixture rows in place; cancelled/draft rows stay for history.
+    .eq("publication_state", "published")
+    .eq("schedule_status", "scheduled")
     .order("round_number", { ascending: false })
     .order("kickoff_time", { ascending: true })
     .order("court", { ascending: true });
