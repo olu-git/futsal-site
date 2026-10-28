@@ -1171,3 +1171,5 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
   .page-hero.with-image.rules-photo-hero .hero-image { object-position: left center; }
   .page-hero.with-image.rules-photo-hero .hero-treatment { background: linear-gradient(180deg, rgba(0,0,0,.7), rgba(0,0,0,.28)); }
 }
+
+.home-public .home-upcoming-nights.home-upcoming-notices { grid-template-columns: minmax(0, 1fr); max-width: 720px; margin-inline: auto; }

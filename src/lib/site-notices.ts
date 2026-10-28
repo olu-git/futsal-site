@@ -14,6 +14,22 @@ export interface SiteNotice {
 
 const siteNotices = noticesData as SiteNotice[];
 
+// Align updates to the minute, including Melbourne midnight; refresh sleeping tabs.
+export function subscribeToMelbourneDate(onChange: () => void): () => void {
+  let timer: ReturnType<typeof setTimeout>;
+  const schedule = () => {
+    timer = setTimeout(() => { onChange(); schedule(); }, 60_000 - Date.now() % 60_000);
+  };
+  schedule();
+  window.addEventListener("focus", onChange);
+  document.addEventListener("visibilitychange", onChange);
+  return () => {
+    clearTimeout(timer);
+    window.removeEventListener("focus", onChange);
+    document.removeEventListener("visibilitychange", onChange);
+  };
+}
+
 export function melbourneToday(now = new Date()): string {
   return new Intl.DateTimeFormat("en-CA", {
     timeZone: "Australia/Melbourne",
