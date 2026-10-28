@@ -568,7 +568,9 @@
         "court": 1,
         "homeTeam": "mon-wildcats",
         "awayTeam": "mon-kroos-kontrol",
-        "status": "scheduled"
+        "homeScore": 5,
+        "awayScore": 3,
+        "status": "completed"
       },
       {
         "id": "26647e0e-fdf1-4be5-a3b8-7d0c5a4c9cf4",
@@ -580,7 +582,9 @@
         "court": 2,
         "homeTeam": "mon-black-magic",
         "awayTeam": "mon-salvos",
-        "status": "scheduled"
+        "homeScore": 9,
+        "awayScore": 3,
+        "status": "completed"
       },
       {
         "id": "c3be4e8e-7fd3-4f84-a418-eb3b777fdc19",
@@ -592,7 +596,9 @@
         "court": 1,
         "homeTeam": "mon-king-adl",
         "awayTeam": "mon-afg",
-        "status": "scheduled"
+        "homeScore": 5,
+        "awayScore": 6,
+        "status": "completed"
       },
       {
         "id": "a75435ce-2048-4484-872d-1e99a78d6612",
@@ -604,7 +610,9 @@
         "court": 2,
         "homeTeam": "mon-goldlink-up",
         "awayTeam": "mon-bunyip",
-        "status": "scheduled"
+        "homeScore": 11,
+        "awayScore": 7,
+        "status": "completed"
       },
       {
         "id": "67d7e52e-41d3-4350-9d4f-e4b61cbda226",
@@ -616,7 +624,9 @@
         "court": 1,
         "homeTeam": "mon-nassaji-fc",
         "awayTeam": "mon-ghazni-united",
-        "status": "scheduled"
+        "homeScore": 3,
+        "awayScore": 4,
+        "status": "completed"
       },
       {
         "id": "8211d6d0-ae4e-43d8-88f7-abb531d0405b",
@@ -628,7 +638,9 @@
         "court": 2,
         "homeTeam": "mon-misfits",
         "awayTeam": "mon-xaywan",
-        "status": "scheduled"
+        "homeScore": 6,
+        "awayScore": 1,
+        "status": "completed"
       },
       {
         "id": "597d5f34-669b-4d99-87ec-f6ce298ca5c8",
@@ -640,7 +652,10 @@
         "court": 1,
         "homeTeam": "mon-imole",
         "awayTeam": "mon-blue-dragons",
-        "status": "scheduled"
+        "homeScore": 0,
+        "awayScore": 5,
+        "note": "Forfeit: home team.",
+        "status": "completed"
       },
       {
         "id": "9e64b669-fbea-4555-b515-790514443ea0",
@@ -652,7 +667,9 @@
         "court": 2,
         "homeTeam": "mon-jaghori-fc",
         "awayTeam": "mon-buckle-city",
-        "status": "scheduled"
+        "homeScore": 3,
+        "awayScore": 10,
+        "status": "completed"
       },
       {
         "id": "168ca6fe-a6ce-4023-9c29-629c31a05658",
