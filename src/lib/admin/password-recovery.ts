@@ -43,6 +43,7 @@ export async function saveRecoveredPassword(client: SupabaseClient, userId: stri
   if (password.length < 8 || !password.trim()) throw new PasswordRecoveryError("Use a password of at least 8 characters.");
   if (await verifiedAdmin(client) !== userId) throw new PasswordRecoveryError(INVALID_RECOVERY);
   const { error } = await withAdminTimeout(() => client.auth.updateUser({ password }), 15000);
+  if (error?.code === "same_password") throw new PasswordRecoveryError("Choose a different password. Your new password must be different from your current password.");
   if (error) throw new PasswordRecoveryError(error.code === "weak_password"
     ? "Choose a stronger password that meets the account's password requirements."
     : "Unable to update the password. Your session may have expired; open a new recovery link and try again.");

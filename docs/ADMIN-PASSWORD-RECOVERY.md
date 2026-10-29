@@ -1,6 +1,6 @@
 # FIS administrator password recovery
 
-Approved for deployment. Apply the URL/template settings only after the live route is verified; the administrator initiates the email and chooses the password privately.
+The reset page is deployed. The organiser reports the production Site URL and redirect allowlist are configured. Keep the default email template unchanged; request emails with the explicit destination below.
 
 ## Implementation
 
@@ -26,7 +26,7 @@ failure cannot turn an already successful password change into a reported failur
 
 This deliberately retains the current implicit Auth configuration. It does not
 add a PKCE initiation flow or redeem arbitrary `?code=` sign-in callbacks; the
-single-use token-hash email below also works across browsers/devices without a
+optional single-use token-hash callback also works across browsers/devices without a
 PKCE verifier. Do not enable PKCE globally as part of this release.
 
 ## Exact production changes, after approval and frontend deployment
@@ -37,34 +37,48 @@ Project: fis (`gaqevgjgolvndhcycxzt`). Authentication > URL Configuration:
 - Add exact Redirect URL: `https://www.futsalindoorsoccer.com.au/admin/reset-password/`
 - No wildcard redirect is needed. Do not add localhost to production for this flow.
 
-For the existing dashboard **Send password recovery** action, update only the
-Reset Password email link in Authentication > Emails > Reset Password to:
+## Use the unchanged default recovery email
 
-```html
-<a href="{{ .SiteURL }}/admin/reset-password/?token_hash={{ .TokenHash }}&amp;type=recovery">Reset password</a>
+Keep the Reset Password template using `{{ .ConfirmationURL }}`. Custom SMTP
+and a custom email template are not required for this implementation.
+
+Request the email through Supabase Auth with an explicit destination:
+
+```ts
+const { error } = await supabase.auth.resetPasswordForEmail(
+  "contact@futsalindoorsoccer.com.au",
+  { redirectTo: "https://www.futsalindoorsoccer.com.au/admin/reset-password/" },
+);
 ```
 
-Retain the rest of the existing template. This explicit link is required when
-using the dashboard's default email action: setting Site URL to the production
-Home page and adding a redirect allowlist does not itself choose the reset route.
-Alternatively, a recovery request explicitly specifying `redirectTo` as the exact
-reset URL can keep the default ConfirmationURL template; this is not an additional
-public email-request form and no email is sent by this implementation.
+This example sends an email when executed. Run it only after the administrator
+explicitly authorises sending a fresh recovery email. Use the existing public
+Supabase configuration and implicit flow; no service key is required. The current
+website does not expose a reset-email request form.
 
-1. Review/commit the local files and deploy through normal Pages checks.
-2. Confirm `/admin/reset-password/` loads and rejects a direct visit.
-3. Record old Site URL, redirect allowlist and Reset Password template, then apply
-   only the approved configuration/template changes above.
-4. Send a new recovery email to the existing administrator. Do not reuse an old
-   expired link or put recovery links, tokens or passwords in chat/logs.
-5. Open the new link, choose the new password privately, then sign in at
-   `/admin/login/`. Confirm dashboard access and normal result-management reads.
-6. Verify the old password no longer works. Do not create competition records.
+The default ConfirmationURL points to Supabase's verification endpoint, including
+`redirect_to`. After verifying the one-use email token, Supabase redirects to the
+reset page with `type=recovery`, access token and refresh token in the fragment.
+The existing page explicitly calls `setSession`, validates the user and existing
+admin authorisation, and only then displays the new-password form. Automatic URL
+detection is deliberately disabled on this isolated client because the page handles
+these parameters itself and immediately clears them from the address bar.
 
-Before frontend deployment, configuration changes must wait to avoid sending users
-to a nonexistent route. For rollback, restore only the recorded URL/template
-settings and application release. A successfully changed password is not rolled
-back to the exposed one. No competition or Auth data restore is required.
+Without an explicit destination, requests use the Site URL (the homepage), not the
+reset page. Do not rely on the dashboard's default recovery action unless it lets
+you specify this exact destination. Do not change Site URL to the reset page.
+An allowlist entry permits a destination; it does not select it.
+
+1. Retain the deployed reset page and the production URL settings listed above.
+2. Keep the existing default Reset Password email template unchanged.
+3. When authorised, request a fresh email with the explicit `redirectTo` above.
+4. Open the email link privately and choose the new password. Never share the link,
+   tokens or password in chat/logs. Do not reuse an expired link.
+5. Sign in at `/admin/login/` and confirm normal dashboard access.
+
+No deployment or database change is needed to use the default email with the
+already deployed handler. A successfully changed password must not be rolled back
+to the exposed one. No competition or Auth data restore is required.
 
 ## Validation and limits
 
@@ -87,3 +101,14 @@ callbacks and rejection of an ambient normal login. Existing email/password logi
 and dashboard access also passed with mocked Auth responses. No overflow or page
 errors appeared. Browser harnesses, logs and screenshots remain in ignored cache.
 Production email delivery and a real password change remain to be verified by the administrator after deployment and configuration.
+## Password-update rejection diagnosis (30 October 2026)
+
+Read-only production Auth logs showed two HTTP 422 `same_password` responses.
+The previous handler incorrectly described these as possible session expiry.
+The handler now asks for a password different from the current one and keeps
+the verified form open for retry. No session or authorisation changes are needed.
+The recovery callback establishes the session before the admin check; credentials
+remain in the isolated client until successful update/logout. Strict Mode uses one
+cached recovery attempt. No production password update or email was used to test
+this fix. Regression coverage checks the authenticated request, same-password
+retry, and removal of the local session after success.
