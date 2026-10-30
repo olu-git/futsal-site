@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "monday",
+    "season": "2026 - Season 2",
+    "competitionSeasonId": "62ce7ec9-459e-4acf-bec5-c6734a3199ef"
+  },
+  "title": "2 November: organiser fixture updates",
+  "changes": [
+    {
+      "operation": "update",
+      "fixtureId": "12fa288c-08f6-4f65-b75b-e5c48b12872c",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f43c6052-360e-4b25-b8ba-147baaed1af2",
+      "expectedFixtureVersion": 5,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5a0e2b47-3351-58e6-a9fe-b69200a94fb5",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0a525e06-20f0-4a4a-95da-d22f986f77c5",
+      "expectedFixtureVersion": 10,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-02",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8e7933e6-f8fe-4beb-8f19-cefaac3a1dec",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-23",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "148babf4-93a6-4a13-875e-8c28e34ad806",
+      "expectedFixtureVersion": 3,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-23",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "91fcbb8f-9d3c-4635-87e6-f14b88c61834",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-23",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ca3375a0-bb3d-4479-b2bf-39001fa553cf",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-23",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f67a66eb-0bfe-45cd-93c4-992589963b75",
+      "expectedFixtureVersion": 5,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-18",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "80ff9eea-21cb-49cf-b0df-761197298407",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-18",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f720832e-5562-4168-98bd-144a00c4cb55",
+      "expectedFixtureVersion": 7,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-03-22",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "18e67a3e-503c-4df1-abc9-9c71a0aaf413",
+      "expectedFixtureVersion": 1,
+      "reason": "Organiser 2 November pairings; preserve at most two meetings per season.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-03-22",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    }
+  ]
+}

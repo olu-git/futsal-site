@@ -691,8 +691,8 @@
         "date": "2026-11-02",
         "time": "19:00",
         "court": 2,
-        "homeTeam": "mon-xaywan",
-        "awayTeam": "mon-buckle-city",
+        "homeTeam": "mon-goldlink-up",
+        "awayTeam": "mon-xaywan",
         "status": "scheduled"
       },
       {
@@ -740,7 +740,7 @@
         "time": "20:20",
         "court": 2,
         "homeTeam": "mon-salvos",
-        "awayTeam": "mon-goldlink-up",
+        "awayTeam": "mon-blue-dragons",
         "status": "scheduled"
       },
       {
@@ -752,7 +752,7 @@
         "time": "21:00",
         "court": 1,
         "homeTeam": "mon-afg",
-        "awayTeam": "mon-blue-dragons",
+        "awayTeam": "mon-nassaji-fc",
         "status": "scheduled"
       },
       {
@@ -763,8 +763,8 @@
         "date": "2026-11-02",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "mon-imole",
-        "awayTeam": "mon-nassaji-fc",
+        "homeTeam": "mon-buckle-city",
+        "awayTeam": "mon-imole",
         "status": "scheduled"
       },
       {
@@ -967,8 +967,8 @@
         "date": "2026-11-23",
         "time": "19:00",
         "court": 1,
-        "homeTeam": "mon-goldlink-up",
-        "awayTeam": "mon-xaywan",
+        "homeTeam": "mon-salvos",
+        "awayTeam": "mon-goldlink-up",
         "status": "scheduled"
       },
       {
@@ -991,8 +991,8 @@
         "date": "2026-11-23",
         "time": "19:40",
         "court": 1,
-        "homeTeam": "mon-salvos",
-        "awayTeam": "mon-blue-dragons",
+        "homeTeam": "mon-blue-dragons",
+        "awayTeam": "mon-kroos-kontrol",
         "status": "scheduled"
       },
       {
@@ -1015,8 +1015,8 @@
         "date": "2026-11-23",
         "time": "20:20",
         "court": 1,
-        "homeTeam": "mon-nassaji-fc",
-        "awayTeam": "mon-kroos-kontrol",
+        "homeTeam": "mon-xaywan",
+        "awayTeam": "mon-buckle-city",
         "status": "scheduled"
       },
       {
@@ -1051,7 +1051,7 @@
         "date": "2026-11-23",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "mon-buckle-city",
+        "homeTeam": "mon-nassaji-fc",
         "awayTeam": "mon-jaghori-fc",
         "status": "scheduled"
       },
@@ -1543,8 +1543,8 @@
         "date": "2027-01-18",
         "time": "19:00",
         "court": 1,
-        "homeTeam": "mon-afg",
-        "awayTeam": "mon-nassaji-fc",
+        "homeTeam": "mon-nassaji-fc",
+        "awayTeam": "mon-kroos-kontrol",
         "status": "scheduled"
       },
       {
@@ -1591,8 +1591,8 @@
         "date": "2027-01-18",
         "time": "20:20",
         "court": 1,
-        "homeTeam": "mon-blue-dragons",
-        "awayTeam": "mon-kroos-kontrol",
+        "homeTeam": "mon-afg",
+        "awayTeam": "mon-blue-dragons",
         "status": "scheduled"
       },
       {
@@ -2384,7 +2384,7 @@
         "time": "21:00",
         "court": 1,
         "homeTeam": "mon-buckle-city",
-        "awayTeam": "mon-imole",
+        "awayTeam": "mon-jaghori-fc",
         "status": "scheduled"
       },
       {
@@ -2395,8 +2395,8 @@
         "date": "2027-03-22",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "mon-nassaji-fc",
-        "awayTeam": "mon-jaghori-fc",
+        "homeTeam": "mon-imole",
+        "awayTeam": "mon-nassaji-fc",
         "status": "scheduled"
       },
       {
