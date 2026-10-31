@@ -36,6 +36,6 @@ test("competition notice precedes upcoming fixtures and does not leak into archi
   const source = readFileSync("src/components/CompetitionContent.tsx", "utf8");
   assert.match(source, /!selectedArchive \? activeNoticeFor\(night, today\) : undefined/);
   assert.ok(source.indexOf('<NoGamesNotice notice={notice}') < source.indexOf('id="upcoming-fixtures"'));
-  assert.match(source, /useSyncExternalStore\(subscribeToDate, melbourneToday, melbourneToday\)/);
+  assert.match(source, /useSyncExternalStore\(subscribeToMelbourneDate, melbourneToday, serverDate\)/);
   assert.match(source, /<FixtureList fixtures=\{competition.upcoming\[0\].fixtures\}/);
 });

@@ -9,6 +9,10 @@ export default function HomeUpcomingFixtures({ competitions, today }: {
   competitions: PublicCompetitionViews["monday"][]; today: string;
 }) {
   const noticeNights = competitions.filter(competition => activeNoticeFor(competition.night, today));
+  const sharedNotice = noticeNights.length > 1 ? activeNoticeFor(noticeNights[0].night, today) : undefined;
+  if (sharedNotice?.groupId && noticeNights.every(competition => activeNoticeFor(competition.night, today)?.groupId === sharedNotice.groupId)) {
+    return <div className="home-upcoming-nights home-upcoming-notices"><NoGamesNotice notice={sharedNotice} nights={noticeNights.map(competition => competition.night)} /></div>;
+  }
   const visible = noticeNights.length ? noticeNights : competitions;
   return <div className={`home-upcoming-nights${noticeNights.length ? " home-upcoming-notices" : ""}`}>
     {visible.map(competition => {

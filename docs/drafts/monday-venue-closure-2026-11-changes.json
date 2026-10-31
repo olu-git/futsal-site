@@ -1,0 +1,3251 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "monday",
+    "season": "2026 - Season 2",
+    "competitionSeasonId": "62ce7ec9-459e-4acf-bec5-c6734a3199ef"
+  },
+  "title": "November venue closure: monday one-playing-week postponement",
+  "changes": [
+    {
+      "operation": "update",
+      "fixtureId": "168ca6fe-a6ce-4023-9c29-629c31a05658",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-09",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "12fa288c-08f6-4f65-b75b-e5c48b12872c",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-09",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a6d024dc-c03a-4f2f-8c5f-db8d35dd801d",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-09",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a08361d7-29fc-4035-9fbb-c1c3a475a077",
+      "expectedFixtureVersion": 9,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-09",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "930fc39c-a227-410e-94cf-8b99cc6ba56c",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-09",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f43c6052-360e-4b25-b8ba-147baaed1af2",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-09",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5a0e2b47-3351-58e6-a9fe-b69200a94fb5",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-09",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0a525e06-20f0-4a4a-95da-d22f986f77c5",
+      "expectedFixtureVersion": 12,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-09",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0638c88d-ff1e-419c-88d6-a9efebdead2d",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d9f713df-b04c-4d09-adf3-2aa174fa9c80",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9320a43a-da54-4130-906a-93d8486e949f",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c76a8458-67ad-4093-8728-a571d40f59eb",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "351c7bb2-bd05-4b64-8bc9-ca94db75b658",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c9a6ae3d-69bf-4e2a-bca6-793de1138928",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "77449678-b266-4658-a615-4d3340ad7903",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6368bf78-92b6-4222-8ad2-1bdcddadbc45",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "e39ac729-005d-42aa-94b5-6d7c13593afb",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-23",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c8144a73-e440-41f1-bb00-5b2d0137223a",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-23",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "21057a98-6243-4d69-98ef-5fe1e0ed3629",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-23",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "14305e6c-3fa6-496c-8f2d-f3854ddafd8a",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-23",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "17e69d41-eed0-422a-ade4-d1e97df50c5f",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-23",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "987aa348-147b-4ee8-987c-35d4cb6f7349",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-23",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "2716bf44-3cfa-4852-9a6c-0b02c7024703",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-23",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f8dbddd5-7fdb-401d-9de8-1aeff5e16889",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-23",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8e7933e6-f8fe-4beb-8f19-cefaac3a1dec",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-30",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9ece89b6-6591-4692-bb31-6c0735bd4199",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-30",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "148babf4-93a6-4a13-875e-8c28e34ad806",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-30",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a46df395-0ddb-4dce-bc4c-c42398c65ccf",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-30",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "91fcbb8f-9d3c-4635-87e6-f14b88c61834",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-30",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "16ecf0ce-1f82-50d4-9cad-b19e0367ada8",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-30",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bbcbcc53-89bd-4da0-bf8f-586414bd61a4",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-30",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ca3375a0-bb3d-4479-b2bf-39001fa553cf",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-30",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fa998c78-b8d9-4e30-82ea-301375b360d4",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-07",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9ffa612f-8a19-4e99-8a39-4c09cabdb022",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-07",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a227aaed-41f0-48d8-b966-e520fb969c39",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-07",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "796b3a31-a52a-4626-8be4-36deb3c629dd",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-07",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "72862485-2f19-4e68-967d-984b98e9744a",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-07",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bda64c9c-10ef-4451-9392-cbe9df9b43a8",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-07",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9760c9a2-a3ed-5273-b6c4-a2e96444e6a6",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-07",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9a236679-f684-4bb7-a486-4fdfdf9f643a",
+      "expectedFixtureVersion": 10,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-07",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8ab28778-5725-4be5-b88e-794852824890",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c9aa418f-739a-4b83-a570-cc9d423a5ee7",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bce0ac25-6927-4323-b87c-528ad8df0892",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "48862013-5d8d-4879-a4ff-3b7d7ef47a67",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9458150f-5bec-45c0-ba25-9607f599326f",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "de4973f9-da93-483f-93eb-ea4ad9c25d6b",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ccb8339b-3c18-5aee-9a8e-48cf19904356",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b069e6cb-89cc-4fc5-8bd9-abd2f1e0375b",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "641500a4-6550-48a8-b678-9c2aa9031461",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-21",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c1368459-0068-4de7-8010-4d45ce7457fd",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-21",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d8e94b04-13a7-4bfd-a78d-cca6f13ccb5d",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-21",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "808393df-5f2b-4ef8-8963-ee0b1ff1854c",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-21",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b06c491f-554e-4a86-b777-c17701484281",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-21",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bf19b721-0e60-5811-84f6-16c886078835",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-21",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "cc6bde92-523a-4757-a335-bada1315ac34",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-21",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1b3bc9e2-5b58-4413-9b95-9785ee7ce72f",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-21",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bdd66e94-4a7a-4300-a485-f7011d18c375",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-11",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "45eb430b-d1c3-5ea0-b3ca-af834db60214",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-11",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fe496868-863b-4957-a9e8-7498fb38e569",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-11",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f6903ad1-3402-44e9-8afc-dd39a3676478",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-11",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8d52e5ea-0631-4013-b34a-62f9a7c74ae2",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-11",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a078ca33-de2b-4721-859d-726ade5845f3",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-11",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5e914657-5452-4495-8633-a9122d932a8d",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-11",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "cacf0ff2-b0cf-4ea2-bade-907978588a61",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-11",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8f5392ce-8a18-4532-bb11-82c01f63c6a9",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1032f0e4-4613-458d-acd3-a14b61ba9d37",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "74388f9f-d8a1-4aae-8917-4d15ed2e3a76",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b03b2ce1-ec56-4b2c-80eb-b8a46ac2763f",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ffd81f21-7e94-4663-b5c6-9d9c7221cb74",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ffae2a06-3f8b-4d00-ace6-74de400d39bc",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6b7a9e3a-0cae-475b-8327-b4b6cba01aba",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "e549355f-08c1-473e-af48-c2fe3b0e93df",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f67a66eb-0bfe-45cd-93c4-992589963b75",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-25",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a0154e04-f8f7-454a-8e2d-d0f963fcfe89",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-25",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1969999f-a2ab-5fab-a0b2-8f90aa6c8cc1",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-25",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "aca1dd69-7881-4052-8504-ae13ad5a3e71",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-25",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "80ff9eea-21cb-49cf-b0df-761197298407",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-25",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f80193c8-9095-4e0d-9418-da12dbb8f4d7",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-25",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fb9c6644-f47f-4ed7-88cd-6e3ad8b7731f",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-25",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6c9dc862-2d18-4ab5-bae3-8d01f307f0ba",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-25",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6a984b0f-7713-4705-9bea-40dde91a4dde",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-01",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "cfcc18cd-e34f-46ad-91ce-7c76df8864a4",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-01",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d58f0d53-971a-4d8a-b0ee-c2c491f42571",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-01",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "355a91d8-13ce-4424-bb4d-27448790a739",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-01",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "acab7224-0de1-4393-973d-8184d5623de9",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-01",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1dfe1126-6778-4de8-b75a-6346c366a92c",
+      "expectedFixtureVersion": 11,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-01",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a7ac2a09-accf-4553-b7b2-4feae7b249bc",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-01",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9de41600-0ef4-4ba4-a6de-e625af306bfd",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-01",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6a603747-9e22-4b9c-9abe-d051c25bf266",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-08",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "60852b7f-5de7-4daf-8f76-5a6e5f42dd45",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-08",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "2cf984ce-14b8-4852-a5f0-18b978cd0c08",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-08",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f0027bb6-de2c-4994-a92e-b4176cccb56e",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-08",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5ffcbea0-3681-4c5e-b9a6-2dd17bcd5e52",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-08",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a8abdf76-e2e4-4951-beb1-94f190167ed0",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-08",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6acdaa06-dfe2-4767-96e9-a856d97c19ff",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-08",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d8c29586-4bfe-4a0c-801b-d50633d1fefd",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-08",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ac571698-7252-4258-b2f9-a0d0933b2949",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-15",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c7fb6499-7278-471a-893a-abb86d9dfa3d",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-15",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9a72a4e0-36d9-4731-9b95-d827acf738df",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-15",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6c26d9d9-750c-459e-8d1b-01329231ede5",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-15",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b50c7f43-8f00-4180-918b-f140d3d3cc37",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-15",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "974a4611-8e79-4962-ba86-e5da83022fb7",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-15",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f4c9f989-2c11-465f-880a-a2856a9bd783",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-15",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a83b72e5-f369-50a6-85f0-bc9d6cefcbb6",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-15",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "3b9e9539-10cd-406e-a1b4-eff41159e9bf",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-22",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9deafc8d-dd98-4cf7-8911-63efe15df40c",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-22",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "865ed9cc-973f-4479-9028-143ab641c731",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-22",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "58553fcd-54be-4cf1-817c-308c5cc80ec1",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-22",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "372999f0-a7fd-4431-b5e7-ac33a4e24f07",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-22",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "62dc868a-f030-449b-afed-2d6e90a5f3bb",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-22",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9814494b-2595-4387-a89c-e68a9eb4d9d0",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-22",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "7a674f9d-c4a3-4a46-ad79-e22ce819af7b",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-22",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8789954c-e45d-40e5-9e6d-b44cb533f5a6",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-01",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d15131ca-9c94-4bea-868f-9102bcca3438",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-01",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "3aeabbac-9f17-4f5a-9e49-44ca90dd6475",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-01",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fbec2d26-3007-4521-aa4e-e461fd5b1832",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-01",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5feb9fe5-3095-4c60-a487-bb054a45351b",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-01",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "da5c990a-28e8-5395-a888-816ed5ab459c",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-01",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f8a215ac-07ca-4483-8c7d-526b2d73c3e5",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-01",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "96782c00-756f-4197-b11b-d68d1fcff9a4",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-01",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8c660aee-519d-473d-a76c-cd1ab705ed1c",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-15",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "4ca76743-e4d8-484f-a81e-6b22515eae21",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-15",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0f00ad5e-4e4f-42e2-9b93-7fb2bd21b5da",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-15",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5e34fb5a-f8c8-5853-a348-0f06c5c1102c",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-15",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "3664d679-2486-4b6b-af3d-6f600c1329e9",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-15",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "34a2c8b8-58ef-4563-99b2-2b7630e6b81d",
+      "expectedFixtureVersion": 6,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-15",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6b1ce9a4-e319-4f38-b9f5-ff31772cdff8",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-15",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "705a852b-c4ed-4b2d-aefb-4585f7d96aac",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-15",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "7488a3e4-73cf-40da-b486-fdc70273bb0f",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-22",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bb034913-d702-4c07-8bb1-c05540d2d3c6",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-22",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "4c79b26b-a533-473b-81bb-70fec7206169",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-22",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8874748e-b0e2-525d-ad2d-5c8a8bab956f",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-22",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c4f110f7-24bb-4517-a69e-7f7b27cb9996",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-22",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5b930c2a-eadc-4432-8aa8-654bf948b6b3",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-22",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "7dca0c53-99a7-4bce-91dc-ddbe93d87eaf",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-22",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0ad40eba-3484-4be4-940b-797352eb6194",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-22",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a5f67148-9add-512d-9859-19e4e693ab94",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-04-05",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6f79837f-2ead-4ebf-bc95-280677f21988",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-04-05",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ae47fddd-5b45-4113-96b1-ed0b0b24ef0c",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-04-05",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "e760b713-cfd4-4ddf-a7ff-2de8ad4a63bc",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-04-05",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8b0eee00-c925-4cd3-a3f3-58ed6b1e28ec",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-04-05",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "e5eca2cf-f46d-455d-8c79-ffe10a4921f1",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-04-05",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f720832e-5562-4168-98bd-144a00c4cb55",
+      "expectedFixtureVersion": 9,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-04-05",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "18e67a3e-503c-4df1-abc9-9c71a0aaf413",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-04-05",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b4429499-406a-4885-a970-d0958892b944",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-12",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1153bd85-fca6-421e-a98b-60c5b31feae3",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-12",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0f057089-0af5-487d-a6e9-43fdffd109e3",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-12",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "cc3b1dc9-3b8e-45c5-bca8-00a06ef84c4e",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-12",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0bb9558d-b70f-46a2-b6e0-90e83a10e957",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-12",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "17e22c14-2869-4d22-82db-0ec328bd0cb5",
+      "expectedFixtureVersion": 11,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-12",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "00ac910c-c44c-4e90-a542-936d00fc0bed",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-12",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8f564fcb-4424-49c5-bf6f-46e2d745f953",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-12",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c2c412e7-debd-4515-a99f-7f720e0dfb4b",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "469b2e04-c80a-40fe-ad2d-e7d2df6bee4b",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bdd6ec98-bf6f-4dc1-ac7d-b1e1d1991d9d",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "faa95b17-a5ec-42de-a3df-bbc69907b623",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8f1ec304-39b9-4f7c-a16e-077711118fff",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fd23b97f-1426-474b-803f-8054e4ba24f2",
+      "expectedFixtureVersion": 9,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ed449f46-1446-4fa4-8a55-cab5431075e6",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "167db7fc-0ca0-4b6b-b1ea-af83275fcb96",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "795ab020-b646-4081-bb54-b7a7fbc4bd5b",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-26",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "7430df1e-0059-4cf9-bdda-93f43b055f63",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-26",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c2fdcf2a-c134-4967-823c-f0e3e51f4f89",
+      "expectedFixtureVersion": 7,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-26",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ac51bf21-c568-4b1c-8b29-ea7526eb60e4",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-26",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "358ba785-0105-47a0-b4b5-cf10a6136056",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-26",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fd64b9bc-2c80-44b8-a10f-70cbff5be808",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-26",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a8f344d6-d6e4-457f-842e-25fab4865500",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-26",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ba476d24-ffed-458e-8975-cc8e8e913c5b",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-26",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "15abf8dd-15cb-4b89-9536-685e9a25873d",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-05-03",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "05638327-ada7-4796-8a00-4405b4abc22d",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-05-03",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "69cfa611-3621-4fd8-b702-8c540ef183f8",
+      "expectedFixtureVersion": 4,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-05-03",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "869ecbd3-e04e-5bca-a148-55f84319fd48",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-05-03",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "2a533c3a-2ae8-4f5f-86e5-8ef61ce69e40",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-05-03",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a3d439cd-4f37-493d-9be1-3bc05ccf13bb",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-05-03",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0b8afb0b-4fa4-41af-8a34-8ae9d362532a",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-05-03",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "82bcdc2e-75dc-4450-ad10-42a5efc0be0f",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-05-03",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "06e00ea1-ba99-4f15-80c8-4ca621407556",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-10",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9a0aecf4-0f02-4007-a900-f2b0947ea089",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-10",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "7a9cdfa6-77cb-4aae-91de-0e0408f32d23",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-10",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5b9c8bdf-33e5-43db-8f8a-e500ddaf94f5",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-10",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "35f34712-2bd5-468f-9899-a2b6c9a414b8",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-10",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ac0ce7db-cf99-4fa8-aab3-dfbd58daa3d6",
+      "expectedFixtureVersion": 8,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-10",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a48354c4-009b-5eb3-9c63-9364f70a690b",
+      "expectedFixtureVersion": 5,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-10",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d8aa201e-3fb9-4baa-962d-651db2094c10",
+      "expectedFixtureVersion": 3,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-10",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1ba188e1-b578-41b7-bf0f-897fe056d82e",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-17",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fe088370-ea56-494d-a8db-3228c851794a",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-17",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8d60498a-ccf2-4972-b402-2c21359af43a",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-17",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0c85f45b-7235-4dce-9a0a-8dc125894778",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-17",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "67e8e3b5-34c3-4e91-9260-73503813f828",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-17",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b1b04f7e-415c-43c9-b8bf-9764853758e7",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-17",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "db0abc31-4785-47b0-b7b7-53ee4e259631",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-17",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1d656f91-420f-49d2-9fb6-62d6647abe49",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-17",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d86d3987-92d3-4d6a-852a-7f8e517eca72",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-24",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "00557035-3674-437e-b718-091dcd6a810e",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-24",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "52a3c5fe-ac85-4d13-85c4-603e3b89480a",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-24",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "13a1dda1-b599-49e7-82c1-98bd7ec0d9a7",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-24",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "2b194225-802e-41e5-82e1-13a5b8dc5e9e",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-24",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f6dd283d-ff47-4c21-9e7a-6ecc8c8b52cc",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-24",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "e56f28e0-8dde-418d-9b65-b0cb9da62a6d",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-24",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "4ea27b16-fa17-40fd-a05e-4b3a7514d0f3",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-24",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c9f3bb06-a42e-45cd-b254-b47659efa7c7",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-31",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d26bfc86-94da-4ef7-8c5a-9b790a154acb",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-31",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "bd124b60-6f0f-4b6c-85e5-8170da0278a4",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-31",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fd2bde77-0eda-435a-b68b-a862c9f11d2d",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-31",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "87dde4f2-bea9-42a3-8a8c-474f7fa9444c",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-31",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "2a6a26a6-cd90-4f5c-8e43-8a4f5891d8e3",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-31",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "14b3f0af-f1ca-4512-9dcd-82c6d402e3eb",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-31",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "be7d32d5-07ed-4f0d-9633-5036f1b3c6f9",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-31",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fcdb7960-d519-4dfb-8e4b-d8177c3777ea",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-06-07",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b372dc32-2555-4d03-8e37-c7b19f9964e7",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-06-07",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "7c790c6c-85e8-4e98-a710-7ee667abb05b",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-06-07",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0a909789-6112-4840-aa7f-ba512b3cc057",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-06-07",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a4f527e2-aef0-49d5-b098-9260cf038654",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-06-07",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "2992fa61-a51c-475d-bf01-e24b63533c92",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-06-07",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a6519dee-3399-4dcb-bd1b-0aa7916d26de",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-06-07",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "59435eb0-81b6-46a7-8b3e-3f9ffadfc43b",
+      "expectedFixtureVersion": 1,
+      "reason": "Venue cancellation on 2/4 November: postpone one playing week; preserve fixture, round, time, court and opponents.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-06-07",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    }
+  ]
+}

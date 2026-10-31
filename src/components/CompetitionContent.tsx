@@ -5,7 +5,7 @@ import { useState, useSyncExternalStore } from "react";
 import { usePublicCompetition, SnapshotNotice, type PublicCompetitionViews } from "@/lib/use-public-competition";
 import { formatDate, nightLabel } from "@/lib/utils";
 import NoGamesNotice from "./NoGamesNotice";
-import { activeNoticeFor, melbourneToday } from "@/lib/site-notices";
+import { activeNoticeFor, melbourneToday, subscribeToMelbourneDate } from "@/lib/site-notices";
 import CompetitionHero from "./CompetitionHero";
 import LeagueTable from "./LeagueTable";
 import RoundAccordion from "./RoundAccordion";
@@ -14,12 +14,12 @@ import KnockoutBracket from "./KnockoutBracket";
 import { seasonDisplayName, compareSeasonNames } from "@/lib/season-names";
 import { historicalFinals, historicalKitColours } from "@/lib/historical-finals";
 
-const subscribeToDate = () => () => {};
+const serverDate = () => "";
 
 export default function CompetitionContent({ night, initial }: {
   night: CompetitionNight; initial: PublicCompetitionViews;
 }) {
-  const today = useSyncExternalStore(subscribeToDate, melbourneToday, melbourneToday);
+  const today = useSyncExternalStore(subscribeToMelbourneDate, melbourneToday, serverDate);
   const { views, source } = usePublicCompetition(initial);
   const [seasonId, setSeasonId] = useState("current");
   const selectedArchive = views.history?.find(s => s.id === seasonId);

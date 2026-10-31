@@ -8,5 +8,29 @@
     "message": "Due to court renovations, Endeavour Hills Leisure Centre will be closed on Wednesday 28th October 2026. We will not have any games during this night.",
     "resumeText": "The season will resume on WEDNESDAY 4 NOVEMBER",
     "linkLabel": "Click here to see all fixtures"
+  },
+  {
+    "id": "no-games-monday-2026-11-02",
+    "night": "monday",
+    "date": "2026-11-02",
+    "showFrom": "2026-10-31",
+    "showUntil": "2026-11-08",
+    "groupId": "venue-floor-repairs-november-2026",
+    "title": "NO GAMES - MON 2 & WED 4 NOV",
+    "message": "Endeavour Hills Leisure Centre has cancelled our court bookings for Monday 2 and Wednesday 4 November after flooring was damaged during the centre's basketball-ring upgrade. FIS games cannot go ahead on either night.",
+    "resumeText": "Games return MONDAY 9 NOVEMBER and WEDNESDAY 11 NOVEMBER.",
+    "linkLabel": "View the updated fixtures"
+  },
+  {
+    "id": "no-games-wednesday-2026-11-04",
+    "night": "wednesday",
+    "date": "2026-11-04",
+    "showFrom": "2026-10-31",
+    "showUntil": "2026-11-08",
+    "groupId": "venue-floor-repairs-november-2026",
+    "title": "NO GAMES - MON 2 & WED 4 NOV",
+    "message": "Endeavour Hills Leisure Centre has cancelled our court bookings for Monday 2 and Wednesday 4 November after flooring was damaged during the centre's basketball-ring upgrade. FIS games cannot go ahead on either night.",
+    "resumeText": "Games return MONDAY 9 NOVEMBER and WEDNESDAY 11 NOVEMBER.",
+    "linkLabel": "View the updated fixtures"
   }
 ]

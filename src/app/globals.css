@@ -1173,3 +1173,5 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
 }
 
 .home-public .home-upcoming-nights.home-upcoming-notices { grid-template-columns: minmax(0, 1fr); max-width: 720px; margin-inline: auto; }
+
+.no-games-notice-links { display: flex; flex-wrap: wrap; gap: 16px 24px; }

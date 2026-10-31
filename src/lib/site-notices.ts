@@ -6,6 +6,8 @@ export interface SiteNotice {
   night: CompetitionNight;
   date: string;
   showFrom: string;
+  showUntil?: string;
+  groupId?: string;
   title: string;
   message: string;
   resumeText: string;
@@ -40,5 +42,5 @@ export function melbourneToday(now = new Date()): string {
 }
 
 export function activeNoticeFor(night: CompetitionNight, today: string, notices: readonly SiteNotice[] = siteNotices): SiteNotice | undefined {
-  return notices.find((notice) => notice.night === night && notice.showFrom <= today && today <= notice.date);
+  return notices.find((notice) => notice.night === night && notice.showFrom <= today && today <= (notice.showUntil ?? notice.date));
 }
