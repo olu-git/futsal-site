@@ -23,23 +23,31 @@ open tabs. Return nights are 9 and 11 November.
 The two `*-venue-closure-2026-11-changes.json` files are normal admin imports.
 Use those through Fixtures when available. Do not also apply the SQL fallback.
 
-## Pending production action
+## Production application - 31 October 2026
 
-The browser access host is unavailable. No postponement has been applied to
-production. The postponement preview was tested locally; the released fallback remains aligned with the currently published production schedule until approval and application.
+The organiser explicitly approved the guarded SQL fallback because the browser
+access host was unavailable. Applied individually, in order:
 
-Explicit approval was requested for this guarded fallback, in order:
+1. `drafts/venue-closure-fixture-dates-2026-11.sql`: 440 date-only postponements.
+   Baseline digest matched; final digest and unchanged result-record check passed.
+   Existing audit logging recorded 440 fixture updates in transaction 1722.
+2. `drafts/venue-closure-season-end-2026-11.sql`: shared season end extended to
+   7 June 2027 after checking Monday 7 June and Wednesday 2 June as final dates.
+   Existing audit logging recorded one season update in transaction 1723.
 
-1. `drafts/venue-closure-fixture-dates-2026-11.sql`: exact baseline digest guard,
-   locks, rejection of published results, latest-date-first updates to avoid slot
-   collisions, post-update digest, unchanged result-record check, safe repeat.
-   Existing fixture version and audit triggers stay enabled.
-2. `drafts/venue-closure-season-end-2026-11.sql`: update only the shared season end
-   from 31 May to 7 June after checking both final fixture dates. The active-season
-   editor has no end-date action. Safe repeat supported.
+Do not import the alternative JSON change sets now: the SQL fallback already
+applied their date changes. They remain as review evidence, not pending work.
+No migrations or permissions changed.
 
-After approval/application, anonymously regenerate and check the snapshot; inspect
-the diff; commit only this release; push and verify Pages and the deployed notices.
+Production readback confirmed 240 fixtures per night, no games on 2/4 November,
+and next nights 9/11 November. Full-record checksums matched before/after for
+result versions, past fixtures, teams and standings adjustments. The anonymous
+snapshot matches production and its diff contains exactly the 440 approved date
+changes; all opponents, rounds, kickoff times, courts, scores and archives match.
+Both nights retain 16 teams playing once each night, 30 games each, and exactly
+two meetings per pair, with no slot collisions or calendar-exclusion violations.
+
+The fallback refresh is released through the normal commit/push/Pages workflow.
 
 ## Local verification
 
