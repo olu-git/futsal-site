@@ -32,9 +32,9 @@ test("Home shows only the centred Wednesday closure until Melbourne Thursday mid
   assert.equal((after.match(/<article/g) ?? []).length, 2);
 });
 
-test("Home combines the November venue closures into one notice until Melbourne Monday midnight", () => {
+test("Home combines the November venue closures into one notice until Melbourne Thursday midnight", () => {
   const postponed = [competition("monday", "2026-11-09"), competition("wednesday", "2026-11-11")];
-  for (const today of ["2026-10-31", "2026-11-02", "2026-11-04", melbourneToday(new Date("2026-11-08T12:59:59Z"))]) {
+  for (const today of ["2026-10-31", "2026-11-02", "2026-11-04", melbourneToday(new Date("2026-11-04T12:59:59Z"))]) {
     const html = renderToStaticMarkup(<HomeUpcomingFixtures competitions={postponed} today={today} />);
     assert.equal((html.match(/role="status"/g) ?? []).length, 1);
     assert.match(html, /NO GAMES - MON 2 &amp; WED 4 NOV/);
@@ -44,7 +44,7 @@ test("Home combines the November venue closures into one notice until Melbourne 
     assert.match(html, /wednesday-night#fixtures/);
     assert.doesNotMatch(html, /Round 4|round-heading|home-upcoming-heading/);
   }
-  const after = renderToStaticMarkup(<HomeUpcomingFixtures competitions={postponed} today={melbourneToday(new Date("2026-11-08T13:00:00Z"))} />);
+  const after = renderToStaticMarkup(<HomeUpcomingFixtures competitions={postponed} today={melbourneToday(new Date("2026-11-04T13:00:00Z"))} />);
   assert.doesNotMatch(after, /NO GAMES/);
   assert.match(after, /9 Nov 2026/);
   assert.match(after, /11 Nov 2026/);

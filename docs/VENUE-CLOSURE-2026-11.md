@@ -5,11 +5,12 @@ Organiser instruction, 31 October 2026: no FIS games on Monday 2 or Wednesday
 during its basketball-ring upgrade. The supplied email's Wednesday date is
 mistyped; 4 November is Wednesday. Do not publish the private email screenshot.
 
-The shared red notice runs from 31 October through 8 November, Melbourne time.
+The shared red notice runs from 31 October through 4 November, Melbourne time.
 Home shows one centred notice and links to both schedules, without upcoming games.
-Current competition pages show the notice above future fixtures. At Monday
-9 November midnight, all three pages automatically return to normal, including
-open tabs. Return nights are 9 and 11 November.
+Current competition pages show the notice above future fixtures. At Thursday
+5 November midnight, all three pages automatically return to normal, including
+open tabs. The organiser requested this earlier removal on 5 November. Return
+nights remain 9 and 11 November; fixtures are unchanged.
 
 ## Date-only schedule revision
 
