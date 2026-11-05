@@ -1,0 +1,249 @@
+{
+  "status": "Applied and anonymously verified in production",
+  "team": {
+    "id": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+    "legacyId": "mon-hakims-team",
+    "name": "Hakim's Team",
+    "oldId": "aae18510-0f33-494b-8962-d7a5e86d0bf0",
+    "kitColour": "#FFFFFF",
+    "availability": "organiser-confirmed no current kickoff restrictions, 6 November 2026"
+  },
+  "fixtureUpdates": 40,
+  "inheritedCompleted": 3,
+  "futureUpdates": 37,
+  "changedPairingSlots": 11,
+  "totalFixtures": 240,
+  "teams": 16,
+  "matchesPerTeam": 30,
+  "homePerTeam": 15,
+  "awayPerTeam": 15,
+  "meetingsPerPair": 2,
+  "round4": [
+    {
+      "date": "2026-11-09",
+      "time": "19:00",
+      "court": 1,
+      "home": "Kroos Kontrol",
+      "away": "Jaghori FC"
+    },
+    {
+      "date": "2026-11-09",
+      "time": "19:00",
+      "court": 2,
+      "home": "Goldlink Up",
+      "away": "Buckle City"
+    },
+    {
+      "date": "2026-11-09",
+      "time": "19:40",
+      "court": 1,
+      "home": "Bunyip",
+      "away": "King ADL"
+    },
+    {
+      "date": "2026-11-09",
+      "time": "19:40",
+      "court": 2,
+      "home": "Hakim's Team",
+      "away": "Ghazni United"
+    },
+    {
+      "date": "2026-11-09",
+      "time": "20:20",
+      "court": 1,
+      "home": "Black Magic",
+      "away": "Wildcats"
+    },
+    {
+      "date": "2026-11-09",
+      "time": "20:20",
+      "court": 2,
+      "home": "Salvos",
+      "away": "Blue Dragons"
+    },
+    {
+      "date": "2026-11-09",
+      "time": "21:00",
+      "court": 1,
+      "home": "AFG",
+      "away": "Nasaji FC"
+    },
+    {
+      "date": "2026-11-09",
+      "time": "21:00",
+      "court": 2,
+      "home": "Xaywan",
+      "away": "Misfits"
+    }
+  ],
+  "pairingChanges": [
+    {
+      "round": 4,
+      "date": "2026-11-09",
+      "time": "19:00",
+      "court": 2,
+      "before": [
+        "Goldlink Up",
+        "Xaywan"
+      ],
+      "after": [
+        "Goldlink Up",
+        "Buckle City"
+      ]
+    },
+    {
+      "round": 4,
+      "date": "2026-11-09",
+      "time": "19:40",
+      "court": 2,
+      "before": [
+        "Misfits",
+        "Ghazni United"
+      ],
+      "after": [
+        "Hakim's Team",
+        "Ghazni United"
+      ]
+    },
+    {
+      "round": 4,
+      "date": "2026-11-09",
+      "time": "21:00",
+      "court": 2,
+      "before": [
+        "Buckle City",
+        "Imole United"
+      ],
+      "after": [
+        "Xaywan",
+        "Misfits"
+      ]
+    },
+    {
+      "round": 5,
+      "date": "2026-11-16",
+      "time": "19:00",
+      "court": 1,
+      "before": [
+        "Goldlink Up",
+        "Buckle City"
+      ],
+      "after": [
+        "Goldlink Up",
+        "Xaywan"
+      ]
+    },
+    {
+      "round": 5,
+      "date": "2026-11-16",
+      "time": "19:40",
+      "court": 2,
+      "before": [
+        "Xaywan",
+        "Bunyip"
+      ],
+      "after": [
+        "Bunyip",
+        "Buckle City"
+      ]
+    },
+    {
+      "round": 15,
+      "date": "2027-02-08",
+      "time": "19:40",
+      "court": 2,
+      "before": [
+        "Imole United",
+        "Ghazni United"
+      ],
+      "after": [
+        "Misfits",
+        "Ghazni United"
+      ]
+    },
+    {
+      "round": 15,
+      "date": "2027-02-08",
+      "time": "21:00",
+      "court": 2,
+      "before": [
+        "Jaghori FC",
+        "Misfits"
+      ],
+      "after": [
+        "Hakim's Team",
+        "Jaghori FC"
+      ]
+    },
+    {
+      "round": 17,
+      "date": "2027-02-22",
+      "time": "19:00",
+      "court": 1,
+      "before": [
+        "Xaywan",
+        "Misfits"
+      ],
+      "after": [
+        "Xaywan",
+        "Bunyip"
+      ]
+    },
+    {
+      "round": 17,
+      "date": "2027-02-22",
+      "time": "19:40",
+      "court": 2,
+      "before": [
+        "Bunyip",
+        "Buckle City"
+      ],
+      "after": [
+        "Misfits",
+        "Buckle City"
+      ]
+    },
+    {
+      "round": 23,
+      "date": "2027-04-19",
+      "time": "21:00",
+      "court": 1,
+      "before": [
+        "Buckle City",
+        "Misfits"
+      ],
+      "after": [
+        "Misfits",
+        "Jaghori FC"
+      ]
+    },
+    {
+      "round": 23,
+      "date": "2027-04-19",
+      "time": "21:00",
+      "court": 2,
+      "before": [
+        "Imole United",
+        "Jaghori FC"
+      ],
+      "after": [
+        "Buckle City",
+        "Hakim's Team"
+      ]
+    }
+  ],
+  "maximumHomeAwayStreak": 4,
+  "oneHomeMeetingPerPair": true,
+  "additionalOrientationOnlyUpdates": 2,
+  "applied": true,
+  "transactionId": 1740,
+  "verification": {
+    "all240AssignmentsMatch": true,
+    "resultRecordHashUnchanged": "a137994908ee5778ea412bc4dd0d409a",
+    "wednesdayFixtureHashUnchanged": "b1c65d992f18c7dacd36c3532bc73103",
+    "fixtureUpdates": 40,
+    "auditRowsAdded": 43,
+    "localSnapshotMatchesSupabase": true
+  },
+  "release": "Organiser authorised commit and push of applied receipts and matching public fallback; normal master Pages workflow."
+}

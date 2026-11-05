@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "monday",
+    "season": "2026 - Season 2",
+    "competitionSeasonId": "62ce7ec9-459e-4acf-bec5-c6734a3199ef"
+  },
+  "title": "9 November: Hakim replacement and requested pairings",
+  "overallNote": "APPLIED RECEIPT: combined SQL transaction 1740 already applied all these changes in production. DO NOT IMPORT: expected versions are intentionally stale. Preserved for review only.",
+  "changes": [
+    {
+      "operation": "update",
+      "fixtureId": "12fa288c-08f6-4f65-b75b-e5c48b12872c",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-09",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a08361d7-29fc-4035-9fbb-c1c3a475a077",
+      "expectedFixtureVersion": 10,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-09",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0a525e06-20f0-4a4a-95da-d22f986f77c5",
+      "expectedFixtureVersion": 13,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-09",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0638c88d-ff1e-419c-88d6-a9efebdead2d",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c76a8458-67ad-4093-8728-a571d40f59eb",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "77449678-b266-4658-a615-4d3340ad7903",
+      "expectedFixtureVersion": 8,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f8dbddd5-7fdb-401d-9de8-1aeff5e16889",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-23",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "16ecf0ce-1f82-50d4-9cad-b19e0367ada8",
+      "expectedFixtureVersion": 5,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 7,
+        "date": "2026-11-30",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fa998c78-b8d9-4e30-82ea-301375b360d4",
+      "expectedFixtureVersion": 8,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 8,
+        "date": "2026-12-07",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "de4973f9-da93-483f-93eb-ea4ad9c25d6b",
+      "expectedFixtureVersion": 8,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c1368459-0068-4de7-8010-4d45ce7457fd",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-21",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8d52e5ea-0631-4013-b34a-62f9a7c74ae2",
+      "expectedFixtureVersion": 8,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 11,
+        "date": "2027-01-11",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1032f0e4-4613-458d-acd3-a14b61ba9d37",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a0154e04-f8f7-454a-8e2d-d0f963fcfe89",
+      "expectedFixtureVersion": 8,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-25",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6c9dc862-2d18-4ab5-bae3-8d01f307f0ba",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 13,
+        "date": "2027-01-25",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6a984b0f-7713-4705-9bea-40dde91a4dde",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-01",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "f0027bb6-de2c-4994-a92e-b4176cccb56e",
+      "expectedFixtureVersion": 5,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-08",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d8c29586-4bfe-4a0c-801b-d50633d1fefd",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 15,
+        "date": "2027-02-08",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b50c7f43-8f00-4180-918b-f140d3d3cc37",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-15",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "3b9e9539-10cd-406e-a1b4-eff41159e9bf",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-22",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "58553fcd-54be-4cf1-817c-308c5cc80ec1",
+      "expectedFixtureVersion": 8,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-22",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "372999f0-a7fd-4431-b5e7-ac33a4e24f07",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 17,
+        "date": "2027-02-22",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fbec2d26-3007-4521-aa4e-e461fd5b1832",
+      "expectedFixtureVersion": 8,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 18,
+        "date": "2027-03-01",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6b1ce9a4-e319-4f38-b9f5-ff31772cdff8",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-15",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c4f110f7-24bb-4517-a69e-7f7b27cb9996",
+      "expectedFixtureVersion": 8,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 20,
+        "date": "2027-03-22",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "18e67a3e-503c-4df1-abc9-9c71a0aaf413",
+      "expectedFixtureVersion": 4,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-04-05",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "17e22c14-2869-4d22-82db-0ec328bd0cb5",
+      "expectedFixtureVersion": 12,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 22,
+        "date": "2027-04-12",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ed449f46-1446-4fa4-8a55-cab5431075e6",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "167db7fc-0ca0-4b6b-b1ea-af83275fcb96",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c2fdcf2a-c134-4967-823c-f0e3e51f4f89",
+      "expectedFixtureVersion": 8,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 24,
+        "date": "2027-04-26",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "0b8afb0b-4fa4-41af-8a34-8ae9d362532a",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-05-03",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "06e00ea1-ba99-4f15-80c8-4ca621407556",
+      "expectedFixtureVersion": 6,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-10",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "db0abc31-4785-47b0-b7b7-53ee4e259631",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 27,
+        "date": "2027-05-17",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "13a1dda1-b599-49e7-82c1-98bd7ec0d9a7",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-24",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+        "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "4ea27b16-fa17-40fd-a05e-4b3a7514d0f3",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 28,
+        "date": "2027-05-24",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fd2bde77-0eda-435a-b68b-a862c9f11d2d",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 29,
+        "date": "2027-05-31",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fcdb7960-d519-4dfb-8e4b-d8177c3777ea",
+      "expectedFixtureVersion": 2,
+      "reason": "Organiser-confirmed Imole-to-Hakim replacement and 9 November pairings; every pair twice.",
+      "proposed": {
+        "roundNumber": 30,
+        "date": "2027-06-07",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+        "publicationState": "published"
+      }
+    }
+  ]
+}
