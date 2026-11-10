@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "monday",
+    "season": "2026 - Season 2",
+    "competitionSeasonId": "62ce7ec9-459e-4acf-bec5-c6734a3199ef"
+  },
+  "title": "9 November actual games and future opponent-count repair",
+  "overallNote": "APPLIED RECEIPT: combined guarded SQL transaction 1756 already applied all these future changes. DO NOT IMPORT; expected fixture versions are stale. Preserved for review only.",
+  "changes": [
+    {
+      "operation": "update",
+      "fixtureId": "0638c88d-ff1e-419c-88d6-a9efebdead2d",
+      "expectedFixtureVersion": 7,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d9f713df-b04c-4d09-adf3-2aa174fa9c80",
+      "expectedFixtureVersion": 7,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c76a8458-67ad-4093-8728-a571d40f59eb",
+      "expectedFixtureVersion": 7,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "e39ac729-005d-42aa-94b5-6d7c13593afb",
+      "expectedFixtureVersion": 6,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-23",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "21057a98-6243-4d69-98ef-5fe1e0ed3629",
+      "expectedFixtureVersion": 6,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 6,
+        "date": "2026-11-23",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a7ac2a09-accf-4553-b7b2-4feae7b249bc",
+      "expectedFixtureVersion": 2,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 14,
+        "date": "2027-02-01",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c7fb6499-7278-471a-893a-abb86d9dfa3d",
+      "expectedFixtureVersion": 7,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 16,
+        "date": "2027-02-15",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "705a852b-c4ed-4b2d-aefb-4585f7d96aac",
+      "expectedFixtureVersion": 6,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 19,
+        "date": "2027-03-15",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "a5f67148-9add-512d-9859-19e4e693ab94",
+      "expectedFixtureVersion": 4,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-04-05",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "awayTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "6f79837f-2ead-4ebf-bc95-280677f21988",
+      "expectedFixtureVersion": 5,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-04-05",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5b9c8bdf-33e5-43db-8f8a-e500ddaf94f5",
+      "expectedFixtureVersion": 6,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-10",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "35f34712-2bd5-468f-9899-a2b6c9a414b8",
+      "expectedFixtureVersion": 4,
+      "reason": "Actual 9 November games and minimal future repair: every pair at most twice, prior results fixed.",
+      "proposed": {
+        "roundNumber": 26,
+        "date": "2027-05-10",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    }
+  ]
+}

@@ -1,0 +1,365 @@
+{
+  "status": "Applied and anonymously verified in production on 10 November 2026",
+  "confirmedRule": {
+    "team": "AFG",
+    "nights": [
+      "monday",
+      "wednesday"
+    ],
+    "hardForbiddenTimes": [
+      "21:00"
+    ],
+    "allowedTimes": [
+      "19:00",
+      "19:40",
+      "20:20"
+    ],
+    "confirmedOn": "2026-11-10",
+    "databaseRepresentation": "required allowed-time rows (OR), not a soft avoid row",
+    "mondayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+    "wednesdayTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+    "profileNoteUpdate": "Prepend the current hard rule and mark earlier any-time availability as historical/superseded; preserve original context.",
+    "exception": {
+      "night": "wednesday",
+      "opponent": "Umoja Stars",
+      "time": "21:00",
+      "dates": [
+        "2026-11-25",
+        "2027-03-24"
+      ],
+      "organiserConfirmed": true
+    }
+  },
+  "repairableFixtures": 10,
+  "slotOnlyUpdates": 20,
+  "proposedSwaps": [
+    {
+      "night": "monday",
+      "date": "2026-12-07",
+      "fixtureId": "9a236679-f684-4bb7-a486-4fdfdf9f643a",
+      "home": "Xaywan",
+      "away": "AFG",
+      "before": {
+        "time": "21:00",
+        "court": 2
+      },
+      "after": {
+        "time": "19:00",
+        "court": 1
+      }
+    },
+    {
+      "night": "monday",
+      "date": "2026-12-07",
+      "fixtureId": "fa998c78-b8d9-4e30-82ea-301375b360d4",
+      "home": "Nasaji FC",
+      "away": "Hakim's Team",
+      "before": {
+        "time": "19:00",
+        "court": 1
+      },
+      "after": {
+        "time": "21:00",
+        "court": 2
+      }
+    },
+    {
+      "night": "monday",
+      "date": "2026-12-14",
+      "fixtureId": "mon-2026-s2-r9-2100-c2",
+      "home": "Nasaji FC",
+      "away": "AFG",
+      "before": {
+        "time": "21:00",
+        "court": 1
+      },
+      "after": {
+        "time": "19:40",
+        "court": 2
+      }
+    },
+    {
+      "night": "monday",
+      "date": "2026-12-14",
+      "fixtureId": "48862013-5d8d-4879-a4ff-3b7d7ef47a67",
+      "home": "Misfits",
+      "away": "King ADL",
+      "before": {
+        "time": "19:40",
+        "court": 2
+      },
+      "after": {
+        "time": "21:00",
+        "court": 1
+      }
+    },
+    {
+      "night": "monday",
+      "date": "2027-02-15",
+      "fixtureId": "f4c9f989-2c11-465f-880a-a2856a9bd783",
+      "home": "Jaghori FC",
+      "away": "AFG",
+      "before": {
+        "time": "21:00",
+        "court": 1
+      },
+      "after": {
+        "time": "19:40",
+        "court": 1
+      }
+    },
+    {
+      "night": "monday",
+      "date": "2027-02-15",
+      "fixtureId": "9a72a4e0-36d9-4731-9b95-d827acf738df",
+      "home": "Nasaji FC",
+      "away": "Black Magic",
+      "before": {
+        "time": "19:40",
+        "court": 1
+      },
+      "after": {
+        "time": "21:00",
+        "court": 1
+      }
+    },
+    {
+      "night": "monday",
+      "date": "2027-03-01",
+      "fixtureId": "96782c00-756f-4197-b11b-d68d1fcff9a4",
+      "home": "Buckle City",
+      "away": "AFG",
+      "before": {
+        "time": "21:00",
+        "court": 2
+      },
+      "after": {
+        "time": "20:20",
+        "court": 2
+      }
+    },
+    {
+      "night": "monday",
+      "date": "2027-03-01",
+      "fixtureId": "mon-2026-s2-r18-2100-c2",
+      "home": "Misfits",
+      "away": "Nasaji FC",
+      "before": {
+        "time": "20:20",
+        "court": 2
+      },
+      "after": {
+        "time": "21:00",
+        "court": 2
+      }
+    },
+    {
+      "night": "monday",
+      "date": "2027-05-24",
+      "fixtureId": "e56f28e0-8dde-418d-9b65-b0cb9da62a6d",
+      "home": "AFG",
+      "away": "Xaywan",
+      "before": {
+        "time": "21:00",
+        "court": 1
+      },
+      "after": {
+        "time": "20:20",
+        "court": 1
+      }
+    },
+    {
+      "night": "monday",
+      "date": "2027-05-24",
+      "fixtureId": "2b194225-802e-41e5-82e1-13a5b8dc5e9e",
+      "home": "Black Magic",
+      "away": "Goldlink Up",
+      "before": {
+        "time": "20:20",
+        "court": 1
+      },
+      "after": {
+        "time": "21:00",
+        "court": 1
+      }
+    },
+    {
+      "night": "monday",
+      "date": "2027-06-07",
+      "fixtureId": "a6519dee-3399-4dcb-bd1b-0aa7916d26de",
+      "home": "AFG",
+      "away": "Buckle City",
+      "before": {
+        "time": "21:00",
+        "court": 1
+      },
+      "after": {
+        "time": "19:00",
+        "court": 2
+      }
+    },
+    {
+      "night": "monday",
+      "date": "2027-06-07",
+      "fixtureId": "b372dc32-2555-4d03-8e37-c7b19f9964e7",
+      "home": "Jaghori FC",
+      "away": "Nasaji FC",
+      "before": {
+        "time": "19:00",
+        "court": 2
+      },
+      "after": {
+        "time": "21:00",
+        "court": 1
+      }
+    },
+    {
+      "night": "wednesday",
+      "date": "2026-11-18",
+      "fixtureId": "de483476-c861-460f-bc37-83ae570f9f7c",
+      "home": "AFG",
+      "away": "Xaywan",
+      "before": {
+        "time": "21:00",
+        "court": 2
+      },
+      "after": {
+        "time": "19:40",
+        "court": 2
+      }
+    },
+    {
+      "night": "wednesday",
+      "date": "2026-11-18",
+      "fixtureId": "d63c58b8-9de9-4c6c-b7bd-ef11be4591cb",
+      "home": "Misfits",
+      "away": "Wildcats",
+      "before": {
+        "time": "19:40",
+        "court": 2
+      },
+      "after": {
+        "time": "21:00",
+        "court": 2
+      }
+    },
+    {
+      "night": "wednesday",
+      "date": "2027-03-31",
+      "fixtureId": "3c6642f9-4809-405c-9fa7-923740628ea2",
+      "home": "AFG",
+      "away": "Ibiza",
+      "before": {
+        "time": "21:00",
+        "court": 2
+      },
+      "after": {
+        "time": "19:40",
+        "court": 2
+      }
+    },
+    {
+      "night": "wednesday",
+      "date": "2027-03-31",
+      "fixtureId": "7472e4d6-dbac-4512-bb29-111fd52ef74e",
+      "home": "Buckle City",
+      "away": "MTS FC",
+      "before": {
+        "time": "19:40",
+        "court": 2
+      },
+      "after": {
+        "time": "21:00",
+        "court": 2
+      }
+    },
+    {
+      "night": "wednesday",
+      "date": "2027-04-14",
+      "fixtureId": "5c613321-d841-4119-93d4-c2cdf294f5c1",
+      "home": "AFG",
+      "away": "Misfits",
+      "before": {
+        "time": "21:00",
+        "court": 2
+      },
+      "after": {
+        "time": "20:20",
+        "court": 2
+      }
+    },
+    {
+      "night": "wednesday",
+      "date": "2027-04-14",
+      "fixtureId": "ac68b089-a684-4926-9946-ba6fbf3d657c",
+      "home": "King ADL",
+      "away": "Wildcats",
+      "before": {
+        "time": "20:20",
+        "court": 2
+      },
+      "after": {
+        "time": "21:00",
+        "court": 2
+      }
+    },
+    {
+      "night": "wednesday",
+      "date": "2027-04-28",
+      "fixtureId": "fc32aa3e-cc0a-4368-97a0-278234f50587",
+      "home": "AFG",
+      "away": "Buckle City",
+      "before": {
+        "time": "21:00",
+        "court": 2
+      },
+      "after": {
+        "time": "20:20",
+        "court": 2
+      }
+    },
+    {
+      "night": "wednesday",
+      "date": "2027-04-28",
+      "fixtureId": "200cbd83-f112-49fa-96db-6c24edb065b4",
+      "home": "Wildcats",
+      "away": "Rinnai",
+      "before": {
+        "time": "20:20",
+        "court": 2
+      },
+      "after": {
+        "time": "21:00",
+        "court": 2
+      }
+    }
+  ],
+  "unresolved": [],
+  "verification": "480 fixtures independently checked: only 20 future kickoff/court updates; AFG has no future 21:00 fixture except two approved Wednesday Umoja games; all other hard rules, Goldlink/Buckle separation, pairings/counts/home-away, results and calendar preserved.",
+  "databaseLimit": "Required allowed-time rows are general. The opponent-specific Umoja exception must remain explicit in the private scheduling note and fixture review; existing admin represents required-time violations as warnings, not a separate exception field.",
+  "applied": true,
+  "transactionId": 1759,
+  "originalFutureConflicts": 12,
+  "remainingUnapprovedConflicts": 0,
+  "approved21Exceptions": 2,
+  "execution": {
+    "profileVersions": {
+      "monday": 4,
+      "wednesday": 2
+    },
+    "requiredAllowedTimes": [
+      "19:00",
+      "19:40",
+      "20:20"
+    ],
+    "fixtureRowsUpdated": 20,
+    "fixtureAuditEntries": 40,
+    "totalAuditEntriesAdded": 50,
+    "resultsHashUnchanged": "40ef7897591ac3f0046a3014fd8fade1",
+    "standingsHashUnchanged": "c9a842edfd664401c0afc63a0d05a6bc",
+    "pastFixturesHashUnchanged": "66c0d3dacdb67330ef7f497834cf05ff",
+    "anonymousReadbackMatchesAll480Fixtures": true,
+    "localFallbackMatchesProduction": true,
+    "gitRelease": "Organiser authorised release of completed results/AFG updates; normal master push workflow. No Buckle/Kabul record swap or rename included."
+  }
+}

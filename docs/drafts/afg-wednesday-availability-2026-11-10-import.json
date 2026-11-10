@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "wednesday",
+    "season": "2026 - Season 2",
+    "competitionSeasonId": "be008d39-f175-45c1-a232-2148d84b1cf9"
+  },
+  "title": "AFG: no 21:00 except Wednesday Umoja meetings",
+  "overallNote": "APPLIED RECEIPT: combined transaction 1759 already applied these slot updates. DO NOT IMPORT; expected versions are stale. Wednesday AFG-Umoja exceptions remain at 21:00 as explicitly approved.",
+  "changes": [
+    {
+      "operation": "update",
+      "fixtureId": "d63c58b8-9de9-4c6c-b7bd-ef11be4591cb",
+      "expectedFixtureVersion": 4,
+      "reason": "AFG hard no-21:00 availability; preserve opponents and dates.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-18",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "awayTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "de483476-c861-460f-bc37-83ae570f9f7c",
+      "expectedFixtureVersion": 8,
+      "reason": "AFG hard no-21:00 availability; preserve opponents and dates.",
+      "proposed": {
+        "roundNumber": 4,
+        "date": "2026-11-18",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "awayTeamId": "435af587-f6ea-5030-a097-94ad466481c2",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "7472e4d6-dbac-4512-bb29-111fd52ef74e",
+      "expectedFixtureVersion": 6,
+      "reason": "AFG hard no-21:00 availability; preserve opponents and dates.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-03-31",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "awayTeamId": "a4eb0d33-ec37-42c2-bb83-b25ac1f046b5",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "3c6642f9-4809-405c-9fa7-923740628ea2",
+      "expectedFixtureVersion": 6,
+      "reason": "AFG hard no-21:00 availability; preserve opponents and dates.",
+      "proposed": {
+        "roundNumber": 21,
+        "date": "2027-03-31",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "awayTeamId": "2c8b11cb-0809-475a-a9e8-d39834c41ccb",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ac68b089-a684-4926-9946-ba6fbf3d657c",
+      "expectedFixtureVersion": 4,
+      "reason": "AFG hard no-21:00 availability; preserve opponents and dates.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-14",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "99d1aedc-409b-4495-b32c-c874ec5958e0",
+        "awayTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "5c613321-d841-4119-93d4-c2cdf294f5c1",
+      "expectedFixtureVersion": 6,
+      "reason": "AFG hard no-21:00 availability; preserve opponents and dates.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-14",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "awayTeamId": "92b8f805-41b1-446a-b843-6f7cc7083e90",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "200cbd83-f112-49fa-96db-6c24edb065b4",
+      "expectedFixtureVersion": 6,
+      "reason": "AFG hard no-21:00 availability; preserve opponents and dates.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-28",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "a7306808-977f-496c-8f6c-3141529ca76c",
+        "awayTeamId": "8f0b3cd6-a819-411e-b08c-b57a3c9367fe",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fc32aa3e-cc0a-4368-97a0-278234f50587",
+      "expectedFixtureVersion": 2,
+      "reason": "AFG hard no-21:00 availability; preserve opponents and dates.",
+      "proposed": {
+        "roundNumber": 25,
+        "date": "2027-04-28",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "b7102a75-a3ad-488c-b16e-f6da36e7f7ba",
+        "awayTeamId": "c9f73f23-1e6c-42df-a7fa-9a7953d9cb75",
+        "publicationState": "published"
+      }
+    }
+  ]
+}
