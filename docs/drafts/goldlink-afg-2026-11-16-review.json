@@ -1,0 +1,335 @@
+{
+  "status": "Applied and anonymously verified in production on 11 November 2026; release authorised.",
+  "requestedPair": "Goldlink Up\u2013AFG, Monday 16 November 2026",
+  "solver": "Feasible; global minimum not proved within the time limit.",
+  "fixtureUpdates": 15,
+  "pairingSlotChanges": 15,
+  "orientationOnlyChanges": 0,
+  "changedRounds": [
+    5,
+    9,
+    10,
+    12,
+    23
+  ],
+  "totalFixtures": 240,
+  "perTeam": 30,
+  "eachPair": 2,
+  "homeAway": [
+    15,
+    15
+  ],
+  "maximumStreak": 4,
+  "protectedResults": 32,
+  "renameOrRecordSwap": false,
+  "newSoftPreferenceExceptions": [],
+  "removedSoftPreferenceExceptions": [],
+  "round5": [
+    {
+      "time": "19:00",
+      "court": 1,
+      "home": "Salvos",
+      "away": "Buckle City"
+    },
+    {
+      "time": "19:00",
+      "court": 2,
+      "home": "Wildcats",
+      "away": "Nasaji FC"
+    },
+    {
+      "time": "19:40",
+      "court": 1,
+      "home": "Ghazni United",
+      "away": "Bunyip"
+    },
+    {
+      "time": "19:40",
+      "court": 2,
+      "home": "Xaywan",
+      "away": "Kroos Kontrol"
+    },
+    {
+      "time": "20:20",
+      "court": 1,
+      "home": "AFG",
+      "away": "Goldlink Up"
+    },
+    {
+      "time": "20:20",
+      "court": 2,
+      "home": "Blue Dragons",
+      "away": "Black Magic"
+    },
+    {
+      "time": "21:00",
+      "court": 1,
+      "home": "Hakim's Team",
+      "away": "Misfits"
+    },
+    {
+      "time": "21:00",
+      "court": 2,
+      "home": "Jaghori FC",
+      "away": "King ADL"
+    }
+  ],
+  "changes": [
+    {
+      "id": "0638c88d-ff1e-419c-88d6-a9efebdead2d",
+      "round": 5,
+      "date": "2026-11-16",
+      "time": "19:00",
+      "court": 1,
+      "before": [
+        "AFG",
+        "Bunyip"
+      ],
+      "after": [
+        "Salvos",
+        "Buckle City"
+      ]
+    },
+    {
+      "id": "d9f713df-b04c-4d09-adf3-2aa174fa9c80",
+      "round": 5,
+      "date": "2026-11-16",
+      "time": "19:00",
+      "court": 2,
+      "before": [
+        "Buckle City",
+        "Goldlink Up"
+      ],
+      "after": [
+        "Wildcats",
+        "Nasaji FC"
+      ]
+    },
+    {
+      "id": "9320a43a-da54-4130-906a-93d8486e949f",
+      "round": 5,
+      "date": "2026-11-16",
+      "time": "19:40",
+      "court": 1,
+      "before": [
+        "Wildcats",
+        "Nasaji FC"
+      ],
+      "after": [
+        "Ghazni United",
+        "Bunyip"
+      ]
+    },
+    {
+      "id": "351c7bb2-bd05-4b64-8bc9-ca94db75b658",
+      "round": 5,
+      "date": "2026-11-16",
+      "time": "20:20",
+      "court": 1,
+      "before": [
+        "Ghazni United",
+        "Salvos"
+      ],
+      "after": [
+        "AFG",
+        "Goldlink Up"
+      ]
+    },
+    {
+      "id": "8ab28778-5725-4be5-b88e-794852824890",
+      "round": 9,
+      "date": "2026-12-14",
+      "time": "19:00",
+      "court": 1,
+      "before": [
+        "Kroos Kontrol",
+        "Black Magic"
+      ],
+      "after": [
+        "Misfits",
+        "Salvos"
+      ]
+    },
+    {
+      "id": "c9aa418f-739a-4b83-a570-cc9d423a5ee7",
+      "round": 9,
+      "date": "2026-12-14",
+      "time": "19:00",
+      "court": 2,
+      "before": [
+        "Salvos",
+        "Buckle City"
+      ],
+      "after": [
+        "Nasaji FC",
+        "AFG"
+      ]
+    },
+    {
+      "id": "ccb8339b-3c18-5aee-9a8e-48cf19904356",
+      "round": 9,
+      "date": "2026-12-14",
+      "time": "19:40",
+      "court": 2,
+      "before": [
+        "Nasaji FC",
+        "AFG"
+      ],
+      "after": [
+        "Kroos Kontrol",
+        "King ADL"
+      ]
+    },
+    {
+      "id": "48862013-5d8d-4879-a4ff-3b7d7ef47a67",
+      "round": 9,
+      "date": "2026-12-14",
+      "time": "21:00",
+      "court": 1,
+      "before": [
+        "Misfits",
+        "King ADL"
+      ],
+      "after": [
+        "Buckle City",
+        "Black Magic"
+      ]
+    },
+    {
+      "id": "d8e94b04-13a7-4bfd-a78d-cca6f13ccb5d",
+      "round": 10,
+      "date": "2026-12-21",
+      "time": "19:40",
+      "court": 1,
+      "before": [
+        "Kroos Kontrol",
+        "Goldlink Up"
+      ],
+      "after": [
+        "Kroos Kontrol",
+        "Black Magic"
+      ]
+    },
+    {
+      "id": "1b3bc9e2-5b58-4413-9b95-9785ee7ce72f",
+      "round": 10,
+      "date": "2026-12-21",
+      "time": "21:00",
+      "court": 2,
+      "before": [
+        "Buckle City",
+        "Black Magic"
+      ],
+      "after": [
+        "Buckle City",
+        "Goldlink Up"
+      ]
+    },
+    {
+      "id": "74388f9f-d8a1-4aae-8917-4d15ed2e3a76",
+      "round": 12,
+      "date": "2027-01-18",
+      "time": "19:40",
+      "court": 1,
+      "before": [
+        "Kroos Kontrol",
+        "King ADL"
+      ],
+      "after": [
+        "Kroos Kontrol",
+        "Bunyip"
+      ]
+    },
+    {
+      "id": "b03b2ce1-ec56-4b2c-80eb-b8a46ac2763f",
+      "round": 12,
+      "date": "2027-01-18",
+      "time": "19:40",
+      "court": 2,
+      "before": [
+        "Ghazni United",
+        "Bunyip"
+      ],
+      "after": [
+        "Ghazni United",
+        "Salvos"
+      ]
+    },
+    {
+      "id": "ffae2a06-3f8b-4d00-ace6-74de400d39bc",
+      "round": 12,
+      "date": "2027-01-18",
+      "time": "20:20",
+      "court": 2,
+      "before": [
+        "Misfits",
+        "Salvos"
+      ],
+      "after": [
+        "Misfits",
+        "King ADL"
+      ]
+    },
+    {
+      "id": "469b2e04-c80a-40fe-ad2d-e7d2df6bee4b",
+      "round": 23,
+      "date": "2027-04-19",
+      "time": "19:00",
+      "court": 2,
+      "before": [
+        "Kroos Kontrol",
+        "Bunyip"
+      ],
+      "after": [
+        "AFG",
+        "Bunyip"
+      ]
+    },
+    {
+      "id": "fd23b97f-1426-474b-803f-8054e4ba24f2",
+      "round": 23,
+      "date": "2027-04-19",
+      "time": "20:20",
+      "court": 2,
+      "before": [
+        "AFG",
+        "Goldlink Up"
+      ],
+      "after": [
+        "Kroos Kontrol",
+        "Goldlink Up"
+      ]
+    }
+  ],
+  "validation": {
+    "hardConstraintViolations": 0,
+    "adminImportBlockingMessages": 0,
+    "softAvoidTimeWarnings": 0,
+    "newPastFixtureChanges": 0,
+    "newIdentityOrRecordChanges": 0,
+    "globalMinimumProven": false
+  },
+  "publicationApproved": true,
+  "applied": true,
+  "guardedSql": "docs/drafts/goldlink-afg-2026-11-16.sql",
+  "disposableVerification": {
+    "allMigrationsLoaded": true,
+    "all240AssignmentsMatchPlan": true,
+    "resultsPreserved": 32,
+    "rollbackAfterWritePassed": true,
+    "repeatRejectedWithoutWrites": true,
+    "recordedTimePreferencesPreserved": true
+  },
+  "transactionId": 1761,
+  "productionVerification": {
+    "all240AssignmentsMatchApprovedPlan": true,
+    "fixtureUpdates": 15,
+    "auditRowsAdded": 15,
+    "all32MondayResultsUnchanged": true,
+    "resultHashUnchanged": "40ef7897591ac3f0046a3014fd8fade1",
+    "standingsHashUnchanged": "c9a842edfd664401c0afc63a0d05a6bc",
+    "teamHashUnchanged": "f19e89898ab333eb1bb50a1466852c84",
+    "wednesdayFixtureHashUnchanged": "44e0a95c2d5807a42850b36fac65c5dc",
+    "localFallbackMatchesProduction": true
+  }
+}

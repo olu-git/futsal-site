@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "competition": {
+    "night": "monday",
+    "season": "2026 - Season 2",
+    "competitionSeasonId": "62ce7ec9-459e-4acf-bec5-c6734a3199ef"
+  },
+  "title": "16 November: Goldlink Up\u2013AFG separate proposal",
+  "overallNote": "APPLIED RECEIPT: guarded production transaction 1761 applied these 15 assignments on 11 November 2026. DO NOT IMPORT: expected versions are stale. No rename or record swap; all 32 results remain fixed.",
+  "changes": [
+    {
+      "operation": "update",
+      "fixtureId": "0638c88d-ff1e-419c-88d6-a9efebdead2d",
+      "expectedFixtureVersion": 8,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d9f713df-b04c-4d09-adf3-2aa174fa9c80",
+      "expectedFixtureVersion": 8,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+        "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "9320a43a-da54-4130-906a-93d8486e949f",
+      "expectedFixtureVersion": 4,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "351c7bb2-bd05-4b64-8bc9-ca94db75b658",
+      "expectedFixtureVersion": 4,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 5,
+        "date": "2026-11-16",
+        "kickoffTime": "20:20",
+        "court": 1,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "8ab28778-5725-4be5-b88e-794852824890",
+      "expectedFixtureVersion": 7,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "19:00",
+        "court": 1,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "c9aa418f-739a-4b83-a570-cc9d423a5ee7",
+      "expectedFixtureVersion": 2,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+        "awayTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ccb8339b-3c18-5aee-9a8e-48cf19904356",
+      "expectedFixtureVersion": 6,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "48862013-5d8d-4879-a4ff-3b7d7ef47a67",
+      "expectedFixtureVersion": 8,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 9,
+        "date": "2026-12-14",
+        "kickoffTime": "21:00",
+        "court": 1,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "d8e94b04-13a7-4bfd-a78d-cca6f13ccb5d",
+      "expectedFixtureVersion": 7,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-21",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "1b3bc9e2-5b58-4413-9b95-9785ee7ce72f",
+      "expectedFixtureVersion": 6,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 10,
+        "date": "2026-12-21",
+        "kickoffTime": "21:00",
+        "court": 2,
+        "homeTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "74388f9f-d8a1-4aae-8917-4d15ed2e3a76",
+      "expectedFixtureVersion": 4,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "19:40",
+        "court": 1,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "b03b2ce1-ec56-4b2c-80eb-b8a46ac2763f",
+      "expectedFixtureVersion": 4,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "19:40",
+        "court": 2,
+        "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+        "awayTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "ffae2a06-3f8b-4d00-ace6-74de400d39bc",
+      "expectedFixtureVersion": 7,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 12,
+        "date": "2027-01-18",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+        "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "469b2e04-c80a-40fe-ad2d-e7d2df6bee4b",
+      "expectedFixtureVersion": 6,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "19:00",
+        "court": 2,
+        "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+        "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+        "publicationState": "published"
+      }
+    },
+    {
+      "operation": "update",
+      "fixtureId": "fd23b97f-1426-474b-803f-8054e4ba24f2",
+      "expectedFixtureVersion": 10,
+      "reason": "Separate Goldlink Up\u2013AFG request; retain results and balance future opponent counts.",
+      "proposed": {
+        "roundNumber": 23,
+        "date": "2027-04-19",
+        "kickoffTime": "20:20",
+        "court": 2,
+        "homeTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+        "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+        "publicationState": "published"
+      }
+    }
+  ]
+}
