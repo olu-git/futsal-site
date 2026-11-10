@@ -9,7 +9,6 @@ function competition(night: "monday" | "wednesday", date: string): CompetitionVi
   return {
     night, teams: [], kitColours: {}, formByTeam: {}, seasonName: "2026 - Season 2", divisions: [], results: [],
     upcoming: [
-      { night, round: 3, date: "2026-10-26", fixtures: [] },
       { night, round: 4, date, fixtures: [] },
     ],
   };
@@ -48,4 +47,29 @@ test("Home combines the November venue closures into one notice until Melbourne 
   assert.doesNotMatch(after, /NO GAMES/);
   assert.match(after, /9 Nov 2026/);
   assert.match(after, /11 Nov 2026/);
+});
+
+test("Home advances both nights together after results, retaining unfinished rounds", () => {
+  const monday = competition("monday", "2026-11-16");
+  const wednesday = competition("wednesday", "2026-11-18");
+  monday.upcoming = [{ night: "monday", round: 5, date: "2026-11-16", fixtures: [] }, { night: "monday", round: 6, date: "2026-11-23", fixtures: [] }];
+  wednesday.upcoming = [{ night: "wednesday", round: 4, date: "2026-11-11", fixtures: [] }, { night: "wednesday", round: 5, date: "2026-11-18", fixtures: [] }];
+  const render = (today: string) => renderToStaticMarkup(<HomeUpcomingFixtures competitions={[monday, wednesday]} today={today} />);
+  const pending = render("2026-11-12");
+  assert.match(pending, /home-upcoming-single/);
+  assert.match(pending, /11 Nov 2026/);
+  assert.doesNotMatch(pending, /Monday Night|16 Nov 2026/);
+  wednesday.upcoming.shift(); // All Wednesday results published.
+  const weekend = render("2026-11-14");
+  assert.match(weekend, /16 Nov 2026/);
+  assert.match(weekend, /18 Nov 2026/);
+  assert.doesNotMatch(weekend, /23 Nov 2026|home-upcoming-single/);
+  monday.upcoming.shift(); // All Monday results published.
+  const tuesday = render("2026-11-17");
+  assert.match(tuesday, /home-upcoming-single/);
+  assert.match(tuesday, /Wednesday Night/);
+  assert.doesNotMatch(tuesday, /Monday Night|23 Nov 2026/);
+  wednesday.upcoming = [];
+  monday.upcoming = [];
+  assert.match(render("2026-11-25"), /No upcoming regular-season fixtures/);
 });
