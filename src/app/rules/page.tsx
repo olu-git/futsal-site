@@ -29,12 +29,12 @@ const groups: { title: string; intro: string; groups: RuleGroup[] }[] = [
   ] },
   { title: "League Rules", intro: "Rules that apply to all Futsal Indoor Soccer competitions.", groups: [
     { heading: "Before the Match", rules: [
-      { icon: CreditCard, title: "Payment Before Kick-off", body: "All match payments must be made before the game begins." },
+      { icon: CreditCard, title: "Payment Before Kick-off", body: "The game fee is $70 per team and must be paid before the game begins." },
       { icon: Hourglass, title: "Late Penalty", body: "Teams must be ready at their scheduled kick-off time. A team concedes one goal for every two minutes it is late." },
-      { icon: TriangleAlert, title: "Absence & Forfeit", body: "Teams must notify FIS administrators at least 24 hours before kick-off if they cannot attend. Failure to provide notice results in an automatic forfeit, and the team must either pay its weekly match fee or forfeit its bond." },
+      { icon: TriangleAlert, title: "Absence & Forfeit", body: "Teams must notify FIS administrators at least 24 hours before kick-off if they cannot attend. Teams that cancel within 24 hours of kick-off or do not attend must still pay the $70 game fee before they can play in the league again. Failure to provide notice results in an automatic forfeit." },
       { icon: UserX, title: "Forfeits", body: "Forfeits are recorded as 5-0 losses. A team that does not arrive before half-time forfeits. A team also forfeits if it uses a player from another team when it already has five players available." },
       { icon: Trophy, title: "Opponent No-show", body: "If your scheduled opponent does not attend, your team wins 5-0. You may still play and pay the full match fee, or choose not to play." },
-      { icon: Shield, title: "Team Bond", body: "Teams cannot play unless FIS holds an active bond for them. Venue and staff costs still apply when a team does not attend, and a forfeited bond must be replaced before the team can play again." },
+      { icon: CreditCard, title: "Team Registration Fee", body: "Each team pays a one-off $70 registration fee in addition to its game fees." },
     ] },
     { heading: "During the Match", rules: [
       { icon: UserX, title: "No Tackle From Behind", body: "Players cannot challenge for the ball from behind, even when the ball is won cleanly. This is called as a foul." },
@@ -42,13 +42,13 @@ const groups: { title: string; intro: string; groups: RuleGroup[] }[] = [
     ] },
     { heading: "Discipline", rules: [
       { icon: Gavel, title: "Suspensions", body: "A player shown a red card is dismissed for the remainder of the match. The team may replace them after two minutes or when the opposition scores. Carry-over suspensions vary according to the severity of the offence." },
-      { icon: Shield, title: "Disorderly Behaviour & Bond", body: "Teams that behave in a disorderly manner, provoke or abuse referees, or behave disruptively towards players or staff will forfeit their bond. An active bond is required to play. The team cannot play again until the bond has been paid in full and reinstated." },
+      { icon: Shield, title: "Disorderly Behaviour", body: "Disorderly behaviour, provoking or abusing referees, and disruptive behaviour towards players or staff are not permitted." },
     ] },
   ] },
   { title: "Knockout & Finals Rules", intro: "Additional rules for knockout-stage matches.", groups: [
     { heading: "Eligibility & Attendance", rules: [
       { icon: UserPlus, title: "Player Eligibility", body: "Players must have played at least five regular-season games for that team. Fill-ins from other teams cannot be used. A team without enough eligible players must contact FIS privately; this may result in a forfeit. Final eligibility decisions are made by the referee and FIS administrators." },
-      { icon: UserX, title: "Knockout No-shows", body: "The regular no-show, forfeit and bond rules also apply during knockout matches." },
+      { icon: UserX, title: "Knockout No-shows", body: "The regular no-show, forfeit and payment rules also apply during knockout matches." },
       { icon: Gavel, title: "Referee Authority", body: "The referee has final say on match decisions and discretion over timekeeping, including whether the clock is stopped in exceptional circumstances." },
     ] },
     { heading: "Deciding Drawn Matches", rules: [
