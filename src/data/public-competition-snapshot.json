@@ -3586,27 +3586,27 @@
         "status": "scheduled"
       },
       {
-        "id": "1db0e8bc-e51f-4a1a-906c-f76be786383e",
-        "night": "wednesday",
-        "division": "A",
-        "round": 3,
-        "date": "2026-11-11",
-        "time": "21:00",
-        "court": 1,
-        "homeTeam": "wed-umoja-stars",
-        "awayTeam": "wed-hazara-united",
-        "status": "scheduled"
-      },
-      {
         "id": "56c55c48-876b-412d-83f1-51ac0e22af69",
         "night": "wednesday",
         "division": "A",
         "round": 3,
         "date": "2026-11-11",
         "time": "21:00",
-        "court": 2,
+        "court": 1,
         "homeTeam": "wed-goldlink-up",
         "awayTeam": "wed-misfits",
+        "status": "scheduled"
+      },
+      {
+        "id": "1db0e8bc-e51f-4a1a-906c-f76be786383e",
+        "night": "wednesday",
+        "division": "A",
+        "round": 3,
+        "date": "2026-11-11",
+        "time": "21:00",
+        "court": 2,
+        "homeTeam": "wed-umoja-stars",
+        "awayTeam": "wed-hazara-united",
         "status": "scheduled"
       },
       {
