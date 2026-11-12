@@ -3694,7 +3694,7 @@
         "time": "20:20",
         "court": 2,
         "homeTeam": "wed-kuq-e-zi",
-        "awayTeam": "wed-king-adl",
+        "awayTeam": "wed-goldlink-up",
         "status": "scheduled"
       },
       {
@@ -3705,8 +3705,8 @@
         "date": "2026-11-18",
         "time": "21:00",
         "court": 1,
-        "homeTeam": "wed-umoja-stars",
-        "awayTeam": "wed-goldlink-up",
+        "homeTeam": "wed-king-adl",
+        "awayTeam": "wed-umoja-stars",
         "status": "scheduled"
       },
       {
@@ -4113,7 +4113,7 @@
         "date": "2026-12-23",
         "time": "19:00",
         "court": 1,
-        "homeTeam": "wed-kuq-e-zi",
+        "homeTeam": "wed-buckle-city",
         "awayTeam": "wed-goldlink-up",
         "status": "scheduled"
       },
@@ -4149,8 +4149,8 @@
         "date": "2026-12-23",
         "time": "19:40",
         "court": 2,
-        "homeTeam": "wed-wildcats",
-        "awayTeam": "wed-buckle-city",
+        "homeTeam": "wed-kuq-e-zi",
+        "awayTeam": "wed-king-adl",
         "status": "scheduled"
       },
       {
@@ -4197,8 +4197,8 @@
         "date": "2026-12-23",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "wed-king-adl",
-        "awayTeam": "wed-rinnai",
+        "homeTeam": "wed-rinnai",
+        "awayTeam": "wed-wildcats",
         "status": "scheduled"
       },
       {
@@ -4281,8 +4281,8 @@
         "date": "2027-01-13",
         "time": "21:00",
         "court": 1,
-        "homeTeam": "wed-goldlink-up",
-        "awayTeam": "wed-umoja-stars",
+        "homeTeam": "wed-umoja-stars",
+        "awayTeam": "wed-goldlink-up",
         "status": "scheduled"
       },
       {
@@ -4377,8 +4377,8 @@
         "date": "2027-01-20",
         "time": "21:00",
         "court": 1,
-        "homeTeam": "wed-umoja-stars",
-        "awayTeam": "wed-king-adl",
+        "homeTeam": "wed-wildcats",
+        "awayTeam": "wed-umoja-stars",
         "status": "scheduled"
       },
       {
@@ -4389,8 +4389,8 @@
         "date": "2027-01-20",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "wed-rinnai",
-        "awayTeam": "wed-wildcats",
+        "homeTeam": "wed-king-adl",
+        "awayTeam": "wed-rinnai",
         "status": "scheduled"
       },
       {
@@ -5337,8 +5337,8 @@
         "date": "2027-03-31",
         "time": "21:00",
         "court": 1,
-        "homeTeam": "wed-king-adl",
-        "awayTeam": "wed-umoja-stars",
+        "homeTeam": "wed-umoja-stars",
+        "awayTeam": "wed-king-adl",
         "status": "scheduled"
       },
       {
@@ -5421,8 +5421,8 @@
         "date": "2027-04-07",
         "time": "20:20",
         "court": 2,
-        "homeTeam": "wed-buckle-city",
-        "awayTeam": "wed-goldlink-up",
+        "homeTeam": "wed-wildcats",
+        "awayTeam": "wed-buckle-city",
         "status": "scheduled"
       },
       {
@@ -5433,7 +5433,7 @@
         "date": "2027-04-07",
         "time": "21:00",
         "court": 1,
-        "homeTeam": "wed-wildcats",
+        "homeTeam": "wed-goldlink-up",
         "awayTeam": "wed-umoja-stars",
         "status": "scheduled"
       },

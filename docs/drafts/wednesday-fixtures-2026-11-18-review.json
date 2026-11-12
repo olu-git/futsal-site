@@ -1,0 +1,112 @@
+{
+  "changedFixtures": 11,
+  "changedPairings": 9,
+  "rounds": [
+    4,
+    9,
+    10,
+    11,
+    21,
+    22
+  ],
+  "maxHomeAwayStreak": 4,
+  "matches": 240,
+  "teams": 16,
+  "matchesPerTeam": 30,
+  "meetingsPerPair": 2,
+  "resultsPreserved": 24,
+  "changes": [
+    {
+      "id": "645f5ed4-3e62-44b9-afc9-e8db4bb80ed1",
+      "date": "2026-11-18",
+      "time": "20:20",
+      "court": 2,
+      "before": "Kuq E Zi vs King ADL",
+      "after": "Kuq E Zi vs Goldlink Up"
+    },
+    {
+      "id": "8d2401a8-c90d-48bd-be7f-8d7cee019e16",
+      "date": "2026-11-18",
+      "time": "21:00",
+      "court": 1,
+      "before": "Umoja Stars vs Goldlink Up",
+      "after": "King ADL vs Umoja Stars"
+    },
+    {
+      "id": "da1437ac-a241-482c-97c9-3a17613f7204",
+      "date": "2026-12-23",
+      "time": "19:00",
+      "court": 1,
+      "before": "Kuq E Zi vs Goldlink Up",
+      "after": "Buckle City vs Goldlink Up"
+    },
+    {
+      "id": "c36da8f2-6510-4b65-8032-490685629072",
+      "date": "2026-12-23",
+      "time": "19:40",
+      "court": 2,
+      "before": "Wildcats vs Buckle City",
+      "after": "Kuq E Zi vs King ADL"
+    },
+    {
+      "id": "83b3127c-431d-4f83-bdce-65a3a36ff467",
+      "date": "2026-12-23",
+      "time": "21:00",
+      "court": 2,
+      "before": "King ADL vs Rinnai",
+      "after": "Rinnai vs Wildcats"
+    },
+    {
+      "id": "88e6f9f1-2c5a-4c70-90ed-62dcf5090c01",
+      "date": "2027-01-13",
+      "time": "21:00",
+      "court": 1,
+      "before": "Goldlink Up vs Umoja Stars",
+      "after": "Umoja Stars vs Goldlink Up"
+    },
+    {
+      "id": "379b94c6-f569-4f06-b73a-a0d8886e6d02",
+      "date": "2027-01-20",
+      "time": "21:00",
+      "court": 1,
+      "before": "Umoja Stars vs King ADL",
+      "after": "Wildcats vs Umoja Stars"
+    },
+    {
+      "id": "90a1123e-41f6-4289-89ce-fe895af39774",
+      "date": "2027-01-20",
+      "time": "21:00",
+      "court": 2,
+      "before": "Rinnai vs Wildcats",
+      "after": "King ADL vs Rinnai"
+    },
+    {
+      "id": "55005c3f-2173-4e3f-814f-abc88f2f6f68",
+      "date": "2027-03-31",
+      "time": "21:00",
+      "court": 1,
+      "before": "King ADL vs Umoja Stars",
+      "after": "Umoja Stars vs King ADL"
+    },
+    {
+      "id": "0bf5f0b1-ca0b-4424-96ff-2b965bfd8ddb",
+      "date": "2027-04-07",
+      "time": "20:20",
+      "court": 2,
+      "before": "Buckle City vs Goldlink Up",
+      "after": "Wildcats vs Buckle City"
+    },
+    {
+      "id": "6a0da39f-8331-493e-af98-2c1adaf3ec74",
+      "date": "2027-04-07",
+      "time": "21:00",
+      "court": 1,
+      "before": "Wildcats vs Umoja Stars",
+      "after": "Goldlink Up vs Umoja Stars"
+    }
+  ],
+  "applied": true,
+  "authorisedScope": "Organiser authorised these two requested games, necessary twice-per-pair repairs, commit and push on 13 November 2026.",
+  "transactionId": 1779,
+  "verification": "Disposable all-migrations rehearsal; post-write failure rollback and retry rejection; anonymous 480-fixture/56-result readback; snapshot validation and freshness checks."
+}
