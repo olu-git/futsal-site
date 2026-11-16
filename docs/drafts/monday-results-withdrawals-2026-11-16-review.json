@@ -1,0 +1,665 @@
+{
+  "applied": true,
+  "activeTeams": 14,
+  "matchesPerActiveTeam": 26,
+  "retainedPlayedGames": 40,
+  "newResults": [
+    {
+      "fixtureId": "0638c88d-ff1e-419c-88d6-a9efebdead2d",
+      "home": "Salvos",
+      "away": "Buckle City",
+      "homeTeamId": "ec502bdd-d24e-48cf-84fb-f27f11387fda",
+      "awayTeamId": "997291fd-33ff-40cc-9fd8-be732f6e07ca",
+      "homeScore": 3,
+      "awayScore": 7,
+      "proposedTime": "19:00",
+      "proposedCourt": 1,
+      "slotConfirmationRequired": false,
+      "expectedFixtureVersion": 9
+    },
+    {
+      "fixtureId": "d9f713df-b04c-4d09-adf3-2aa174fa9c80",
+      "home": "Wildcats",
+      "away": "Nasaji FC",
+      "homeTeamId": "e5b8d7c3-89e1-430a-94b4-afd7b42cbe43",
+      "awayTeamId": "8464062e-5897-4573-a075-d283236dd36c",
+      "homeScore": 2,
+      "awayScore": 10,
+      "proposedTime": "19:00",
+      "proposedCourt": 2,
+      "slotConfirmationRequired": false,
+      "expectedFixtureVersion": 9
+    },
+    {
+      "fixtureId": "9320a43a-da54-4130-906a-93d8486e949f",
+      "home": "Ghazni United",
+      "away": "Kroos Kontrol",
+      "homeTeamId": "8c867565-d3f7-4445-b799-a2b0e15b510d",
+      "awayTeamId": "b78bd03e-1e87-4cf7-8a0e-409f5de92959",
+      "homeScore": 6,
+      "awayScore": 6,
+      "proposedTime": "19:40",
+      "proposedCourt": 1,
+      "slotConfirmationRequired": false,
+      "expectedFixtureVersion": 5
+    },
+    {
+      "fixtureId": "c76a8458-67ad-4093-8728-a571d40f59eb",
+      "home": "Xaywan",
+      "away": "Bunyip",
+      "homeTeamId": "44d7e359-957a-4b38-8a0a-40b698d609c9",
+      "awayTeamId": "bd834936-1b8a-4dd7-9013-d4b792862b67",
+      "homeScore": 9,
+      "awayScore": 8,
+      "proposedTime": "19:40",
+      "proposedCourt": 2,
+      "slotConfirmationRequired": false,
+      "expectedFixtureVersion": 8
+    },
+    {
+      "fixtureId": "351c7bb2-bd05-4b64-8bc9-ca94db75b658",
+      "home": "AFG",
+      "away": "Goldlink Up",
+      "homeTeamId": "3a9c1f75-ecbe-4c05-85b9-bacfd65fb7ff",
+      "awayTeamId": "d16662f1-9520-4f2a-b30b-ede1db30f28d",
+      "homeScore": 5,
+      "awayScore": 5,
+      "proposedTime": "20:20",
+      "proposedCourt": 1,
+      "slotConfirmationRequired": false,
+      "expectedFixtureVersion": 5
+    },
+    {
+      "fixtureId": "c9a6ae3d-69bf-4e2a-bca6-793de1138928",
+      "home": "Blue Dragons",
+      "away": "Black Magic",
+      "homeTeamId": "544ff92b-0753-4e4f-9feb-bdcdf9c74a98",
+      "awayTeamId": "38580a95-ab89-5ddd-a71d-c31ed05de4bd",
+      "homeScore": 7,
+      "awayScore": 12,
+      "proposedTime": "20:20",
+      "proposedCourt": 2,
+      "slotConfirmationRequired": false,
+      "expectedFixtureVersion": 4
+    },
+    {
+      "fixtureId": "77449678-b266-4658-a615-4d3340ad7903",
+      "home": "Kabul Commandos",
+      "away": "Misfits",
+      "homeTeamId": "f0402dd7-5aa2-4a6b-98ee-6d8663c6a76c",
+      "awayTeamId": "8434b3b9-091d-4d8b-ab29-f857807d1c3b",
+      "homeScore": 8,
+      "awayScore": 2,
+      "proposedTime": "21:00",
+      "proposedCourt": 1,
+      "slotConfirmationRequired": false,
+      "expectedFixtureVersion": 9
+    },
+    {
+      "fixtureId": "6368bf78-92b6-4222-8ad2-1bdcddadbc45",
+      "home": "Jaghori FC",
+      "away": "King ADL",
+      "homeTeamId": "0ad2ddbd-80e1-40f5-bb80-2e756a3d9419",
+      "awayTeamId": "57b0b3f9-24a5-4ea7-9e1b-fd3faa90891c",
+      "homeScore": 7,
+      "awayScore": 3,
+      "proposedTime": "21:00",
+      "proposedCourt": 2,
+      "slotConfirmationRequired": false,
+      "expectedFixtureVersion": 2
+    }
+  ],
+  "futureGames": 147,
+  "publishedGamesIncludingWithdrawnHistory": 187,
+  "cancellations": 53,
+  "pastPairCorrections": 2,
+  "futureUpdates": 47,
+  "maxPairMeetings": 2,
+  "singleMeetingPairs": [
+    [
+      "Jaghori FC",
+      "Nasaji FC"
+    ],
+    [
+      "Jaghori FC",
+      "Salvos"
+    ],
+    [
+      "Xaywan",
+      "Salvos"
+    ],
+    [
+      "Goldlink Up",
+      "Salvos"
+    ]
+  ],
+  "lastMonday": "2027-05-10",
+  "homeAway": [
+    {
+      "team": "AFG",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 9,
+        "19:40": 6,
+        "20:20": 9,
+        "21:00": 2
+      }
+    },
+    {
+      "team": "Black Magic",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:00": 9,
+        "19:40": 7,
+        "20:20": 6,
+        "21:00": 4
+      }
+    },
+    {
+      "team": "Blue Dragons",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:40": 9,
+        "20:20": 12,
+        "21:00": 5
+      }
+    },
+    {
+      "team": "Ghazni United",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 2,
+      "kickoffs": {
+        "19:40": 10,
+        "20:20": 16
+      }
+    },
+    {
+      "team": "Goldlink Up",
+      "games": 26,
+      "home": 14,
+      "away": 12,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 9,
+        "19:40": 5,
+        "20:20": 7,
+        "21:00": 5
+      }
+    },
+    {
+      "team": "Jaghori FC",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 8,
+        "19:40": 5,
+        "20:20": 6,
+        "21:00": 7
+      }
+    },
+    {
+      "team": "Kabul Commandos",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:00": 8,
+        "19:40": 5,
+        "20:20": 7,
+        "21:00": 6
+      }
+    },
+    {
+      "team": "King ADL",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:40": 9,
+        "20:20": 9,
+        "21:00": 8
+      }
+    },
+    {
+      "team": "Kroos Kontrol",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 11,
+        "19:40": 9,
+        "20:20": 5,
+        "21:00": 1
+      }
+    },
+    {
+      "team": "Misfits",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 9,
+        "19:40": 6,
+        "20:20": 5,
+        "21:00": 6
+      }
+    },
+    {
+      "team": "Nasaji FC",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 7,
+        "19:40": 5,
+        "20:20": 4,
+        "21:00": 10
+      }
+    },
+    {
+      "team": "Salvos",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:00": 11,
+        "19:40": 9,
+        "20:20": 6
+      }
+    },
+    {
+      "team": "Wildcats",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:00": 12,
+        "19:40": 8,
+        "20:20": 5,
+        "21:00": 1
+      }
+    },
+    {
+      "team": "Xaywan",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 9,
+        "19:40": 6,
+        "20:20": 6,
+        "21:00": 5
+      }
+    }
+  ],
+  "changedFixtureIds": [
+    "9320a43a-da54-4130-906a-93d8486e949f",
+    "c76a8458-67ad-4093-8728-a571d40f59eb",
+    "c8144a73-e440-41f1-bb00-5b2d0137223a",
+    "21057a98-6243-4d69-98ef-5fe1e0ed3629",
+    "17e69d41-eed0-422a-ade4-d1e97df50c5f",
+    "2716bf44-3cfa-4852-9a6c-0b02c7024703",
+    "8e7933e6-f8fe-4beb-8f19-cefaac3a1dec",
+    "9ece89b6-6591-4692-bb31-6c0735bd4199",
+    "91fcbb8f-9d3c-4635-87e6-f14b88c61834",
+    "bbcbcc53-89bd-4da0-bf8f-586414bd61a4",
+    "9ffa612f-8a19-4e99-8a39-4c09cabdb022",
+    "796b3a31-a52a-4626-8be4-36deb3c629dd",
+    "fa998c78-b8d9-4e30-82ea-301375b360d4",
+    "bce0ac25-6927-4323-b87c-528ad8df0892",
+    "48862013-5d8d-4879-a4ff-3b7d7ef47a67",
+    "641500a4-6550-48a8-b678-9c2aa9031461",
+    "1b3bc9e2-5b58-4413-9b95-9785ee7ce72f",
+    "bdd66e94-4a7a-4300-a485-f7011d18c375",
+    "f6903ad1-3402-44e9-8afc-dd39a3676478",
+    "cacf0ff2-b0cf-4ea2-bade-907978588a61",
+    "74388f9f-d8a1-4aae-8917-4d15ed2e3a76",
+    "e549355f-08c1-473e-af48-c2fe3b0e93df",
+    "1969999f-a2ab-5fab-a0b2-8f90aa6c8cc1",
+    "6c9dc862-2d18-4ab5-bae3-8d01f307f0ba",
+    "6a984b0f-7713-4705-9bea-40dde91a4dde",
+    "cfcc18cd-e34f-46ad-91ce-7c76df8864a4",
+    "355a91d8-13ce-4424-bb4d-27448790a739",
+    "a7ac2a09-accf-4553-b7b2-4feae7b249bc",
+    "9de41600-0ef4-4ba4-a6de-e625af306bfd",
+    "6a603747-9e22-4b9c-9abe-d051c25bf266",
+    "60852b7f-5de7-4daf-8f76-5a6e5f42dd45",
+    "d8c29586-4bfe-4a0c-801b-d50633d1fefd",
+    "6c26d9d9-750c-459e-8d1b-01329231ede5",
+    "974a4611-8e79-4962-ba86-e5da83022fb7",
+    "a83b72e5-f369-50a6-85f0-bc9d6cefcbb6",
+    "3b9e9539-10cd-406e-a1b4-eff41159e9bf",
+    "58553fcd-54be-4cf1-817c-308c5cc80ec1",
+    "7a674f9d-c4a3-4a46-ad79-e22ce819af7b",
+    "8789954c-e45d-40e5-9e6d-b44cb533f5a6",
+    "d15131ca-9c94-4bea-868f-9102bcca3438",
+    "fbec2d26-3007-4521-aa4e-e461fd5b1832",
+    "96782c00-756f-4197-b11b-d68d1fcff9a4",
+    "f8a215ac-07ca-4483-8c7d-526b2d73c3e5",
+    "8c660aee-519d-473d-a76c-cd1ab705ed1c",
+    "705a852b-c4ed-4b2d-aefb-4585f7d96aac",
+    "bb034913-d702-4c07-8bb1-c05540d2d3c6",
+    "4c79b26b-a533-473b-81bb-70fec7206169",
+    "5b930c2a-eadc-4432-8aa8-654bf948b6b3",
+    "7dca0c53-99a7-4bce-91dc-ddbe93d87eaf",
+    "0ad40eba-3484-4be4-940b-797352eb6194",
+    "ae47fddd-5b45-4113-96b1-ed0b0b24ef0c",
+    "f720832e-5562-4168-98bd-144a00c4cb55",
+    "b4429499-406a-4885-a970-d0958892b944",
+    "00ac910c-c44c-4e90-a542-936d00fc0bed",
+    "8f564fcb-4424-49c5-bf6f-46e2d745f953",
+    "c2c412e7-debd-4515-a99f-7f720e0dfb4b",
+    "469b2e04-c80a-40fe-ad2d-e7d2df6bee4b",
+    "faa95b17-a5ec-42de-a3df-bbc69907b623",
+    "167db7fc-0ca0-4b6b-b1ea-af83275fcb96",
+    "7430df1e-0059-4cf9-bdda-93f43b055f63",
+    "ac51bf21-c568-4b1c-8b29-ea7526eb60e4",
+    "358ba785-0105-47a0-b4b5-cf10a6136056",
+    "ba476d24-ffed-458e-8975-cc8e8e913c5b",
+    "15abf8dd-15cb-4b89-9536-685e9a25873d",
+    "69cfa611-3621-4fd8-b702-8c540ef183f8",
+    "2a533c3a-2ae8-4f5f-86e5-8ef61ce69e40",
+    "0b8afb0b-4fa4-41af-8a34-8ae9d362532a",
+    "7a9cdfa6-77cb-4aae-91de-0e0408f32d23",
+    "5b9c8bdf-33e5-43db-8f8a-e500ddaf94f5",
+    "a48354c4-009b-5eb3-9c63-9364f70a690b",
+    "1ba188e1-b578-41b7-bf0f-897fe056d82e",
+    "fe088370-ea56-494d-a8db-3228c851794a",
+    "8d60498a-ccf2-4972-b402-2c21359af43a",
+    "0c85f45b-7235-4dce-9a0a-8dc125894778",
+    "67e8e3b5-34c3-4e91-9260-73503813f828",
+    "b1b04f7e-415c-43c9-b8bf-9764853758e7",
+    "db0abc31-4785-47b0-b7b7-53ee4e259631",
+    "1d656f91-420f-49d2-9fb6-62d6647abe49",
+    "d86d3987-92d3-4d6a-852a-7f8e517eca72",
+    "00557035-3674-437e-b718-091dcd6a810e",
+    "52a3c5fe-ac85-4d13-85c4-603e3b89480a",
+    "13a1dda1-b599-49e7-82c1-98bd7ec0d9a7",
+    "e56f28e0-8dde-418d-9b65-b0cb9da62a6d",
+    "f6dd283d-ff47-4c21-9e7a-6ecc8c8b52cc",
+    "2b194225-802e-41e5-82e1-13a5b8dc5e9e",
+    "4ea27b16-fa17-40fd-a05e-4b3a7514d0f3",
+    "c9f3bb06-a42e-45cd-b254-b47659efa7c7",
+    "d26bfc86-94da-4ef7-8c5a-9b790a154acb",
+    "bd124b60-6f0f-4b6c-85e5-8170da0278a4",
+    "fd2bde77-0eda-435a-b68b-a862c9f11d2d",
+    "87dde4f2-bea9-42a3-8a8c-474f7fa9444c",
+    "2a6a26a6-cd90-4f5c-8e43-8a4f5891d8e3",
+    "14b3f0af-f1ca-4512-9dcd-82c6d402e3eb",
+    "be7d32d5-07ed-4f0d-9633-5036f1b3c6f9",
+    "fcdb7960-d519-4dfb-8e4b-d8177c3777ea",
+    "a6519dee-3399-4dcb-bd1b-0aa7916d26de",
+    "7c790c6c-85e8-4e98-a710-7ee667abb05b",
+    "0a909789-6112-4840-aa7f-ba512b3cc057",
+    "a4f527e2-aef0-49d5-b098-9260cf038654",
+    "2992fa61-a51c-475d-bf01-e24b63533c92",
+    "b372dc32-2555-4d03-8e37-c7b19f9964e7",
+    "59435eb0-81b6-46a7-8b3e-3f9ffadfc43b"
+  ],
+  "nextRound": [
+    {
+      "date": "2026-11-23",
+      "time": "19:00",
+      "court": 1,
+      "home": "Black Magic",
+      "away": "Wildcats"
+    },
+    {
+      "date": "2026-11-23",
+      "time": "19:00",
+      "court": 2,
+      "home": "Xaywan",
+      "away": "Kroos Kontrol"
+    },
+    {
+      "date": "2026-11-23",
+      "time": "19:40",
+      "court": 1,
+      "home": "Ghazni United",
+      "away": "Goldlink Up"
+    },
+    {
+      "date": "2026-11-23",
+      "time": "19:40",
+      "court": 2,
+      "home": "Salvos",
+      "away": "Nasaji FC"
+    },
+    {
+      "date": "2026-11-23",
+      "time": "20:20",
+      "court": 1,
+      "home": "Blue Dragons",
+      "away": "King ADL"
+    },
+    {
+      "date": "2026-11-23",
+      "time": "20:20",
+      "court": 2,
+      "home": "AFG",
+      "away": "Misfits"
+    },
+    {
+      "date": "2026-11-23",
+      "time": "21:00",
+      "court": 2,
+      "home": "Jaghori FC",
+      "away": "Kabul Commandos"
+    }
+  ],
+  "changedFixtureRows": 102,
+  "futureFixtureUpdates": 47,
+  "teamWithdrawals": [
+    "Bunyip",
+    "Buckle City"
+  ],
+  "teamTotals": [
+    {
+      "team": "AFG",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 9,
+        "19:40": 6,
+        "20:20": 9,
+        "21:00": 2
+      }
+    },
+    {
+      "team": "Black Magic",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:00": 9,
+        "19:40": 7,
+        "20:20": 6,
+        "21:00": 4
+      }
+    },
+    {
+      "team": "Blue Dragons",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:40": 9,
+        "20:20": 12,
+        "21:00": 5
+      }
+    },
+    {
+      "team": "Ghazni United",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 2,
+      "kickoffs": {
+        "19:40": 10,
+        "20:20": 16
+      }
+    },
+    {
+      "team": "Goldlink Up",
+      "games": 26,
+      "home": 14,
+      "away": 12,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 9,
+        "19:40": 5,
+        "20:20": 7,
+        "21:00": 5
+      }
+    },
+    {
+      "team": "Jaghori FC",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 8,
+        "19:40": 5,
+        "20:20": 6,
+        "21:00": 7
+      }
+    },
+    {
+      "team": "Kabul Commandos",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:00": 8,
+        "19:40": 5,
+        "20:20": 7,
+        "21:00": 6
+      }
+    },
+    {
+      "team": "King ADL",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:40": 9,
+        "20:20": 9,
+        "21:00": 8
+      }
+    },
+    {
+      "team": "Kroos Kontrol",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 11,
+        "19:40": 9,
+        "20:20": 5,
+        "21:00": 1
+      }
+    },
+    {
+      "team": "Misfits",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 9,
+        "19:40": 6,
+        "20:20": 5,
+        "21:00": 6
+      }
+    },
+    {
+      "team": "Nasaji FC",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 7,
+        "19:40": 5,
+        "20:20": 4,
+        "21:00": 10
+      }
+    },
+    {
+      "team": "Salvos",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:00": 11,
+        "19:40": 9,
+        "20:20": 6
+      }
+    },
+    {
+      "team": "Wildcats",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 4,
+      "kickoffs": {
+        "19:00": 12,
+        "19:40": 8,
+        "20:20": 5,
+        "21:00": 1
+      }
+    },
+    {
+      "team": "Xaywan",
+      "games": 26,
+      "home": 13,
+      "away": 13,
+      "maxStreak": 3,
+      "kickoffs": {
+        "19:00": 9,
+        "19:40": 6,
+        "20:20": 6,
+        "21:00": 5
+      }
+    }
+  ],
+  "firstFutureDate": "2026-11-23",
+  "lastRegularSeasonDate": "2027-05-10",
+  "notes": [
+    "All played results retained. Goldlink 14 home/12 away; other remaining teams 13/13.",
+    "Wednesday and the shared season end are unchanged."
+  ],
+  "transactionId": 1797,
+  "appliedDate": "2026-11-17",
+  "verification": "Fresh disposable PostgreSQL rehearsal, rollback and safe retry; anonymous 187-game readback, preserved Wednesday/previous results/profiles, 53 cancelled rows retained, exact standings preview match; snapshot checks, 188 tests and build passed."
+}
