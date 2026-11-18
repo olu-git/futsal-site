@@ -1949,15 +1949,15 @@
         "status": "scheduled"
       },
       {
-        "id": "fbec2d26-3007-4521-aa4e-e461fd5b1832",
+        "id": "mon-2026-s2-r18-2100-c2",
         "night": "monday",
         "division": "A",
         "round": 18,
         "date": "2027-03-01",
         "time": "19:40",
         "court": 2,
-        "homeTeam": "mon-wildcats",
-        "awayTeam": "mon-king-adl",
+        "homeTeam": "mon-misfits",
+        "awayTeam": "mon-nassaji-fc",
         "status": "scheduled"
       },
       {
@@ -1985,15 +1985,15 @@
         "status": "scheduled"
       },
       {
-        "id": "mon-2026-s2-r18-2100-c2",
+        "id": "fbec2d26-3007-4521-aa4e-e461fd5b1832",
         "night": "monday",
         "division": "A",
         "round": 18,
         "date": "2027-03-01",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "mon-misfits",
-        "awayTeam": "mon-nassaji-fc",
+        "homeTeam": "mon-wildcats",
+        "awayTeam": "mon-king-adl",
         "status": "scheduled"
       },
       {
@@ -2357,15 +2357,15 @@
         "status": "scheduled"
       },
       {
-        "id": "bdd6ec98-bf6f-4dc1-ac7d-b1e1d1991d9d",
+        "id": "ed449f46-1446-4fa4-8a55-cab5431075e6",
         "night": "monday",
         "division": "A",
         "round": 23,
         "date": "2027-04-19",
         "time": "19:40",
         "court": 1,
-        "homeTeam": "mon-nassaji-fc",
-        "awayTeam": "mon-blue-dragons",
+        "homeTeam": "mon-misfits",
+        "awayTeam": "mon-jaghori-fc",
         "status": "scheduled"
       },
       {
@@ -2405,15 +2405,15 @@
         "status": "scheduled"
       },
       {
-        "id": "ed449f46-1446-4fa4-8a55-cab5431075e6",
+        "id": "bdd6ec98-bf6f-4dc1-ac7d-b1e1d1991d9d",
         "night": "monday",
         "division": "A",
         "round": 23,
         "date": "2027-04-19",
         "time": "21:00",
         "court": 1,
-        "homeTeam": "mon-misfits",
-        "awayTeam": "mon-jaghori-fc",
+        "homeTeam": "mon-nassaji-fc",
+        "awayTeam": "mon-blue-dragons",
         "status": "scheduled"
       },
       {
@@ -2609,15 +2609,15 @@
         "status": "scheduled"
       },
       {
-        "id": "7a9cdfa6-77cb-4aae-91de-0e0408f32d23",
+        "id": "d8aa201e-3fb9-4baa-962d-651db2094c10",
         "night": "monday",
         "division": "A",
         "round": 26,
         "date": "2027-05-10",
         "time": "19:40",
         "court": 1,
-        "homeTeam": "mon-blue-dragons",
-        "awayTeam": "mon-xaywan",
+        "homeTeam": "mon-wildcats",
+        "awayTeam": "mon-misfits",
         "status": "scheduled"
       },
       {
@@ -2657,15 +2657,15 @@
         "status": "scheduled"
       },
       {
-        "id": "d8aa201e-3fb9-4baa-962d-651db2094c10",
+        "id": "7a9cdfa6-77cb-4aae-91de-0e0408f32d23",
         "night": "monday",
         "division": "A",
         "round": 26,
         "date": "2027-05-10",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "mon-wildcats",
-        "awayTeam": "mon-misfits",
+        "homeTeam": "mon-blue-dragons",
+        "awayTeam": "mon-xaywan",
         "status": "scheduled"
       },
       {
@@ -3642,15 +3642,15 @@
         "status": "scheduled"
       },
       {
-        "id": "fd77a8cc-b1cf-49ed-b43e-2aa45be9c308",
+        "id": "cfca92d9-beb0-4986-9ca3-24c0de8ccb78",
         "night": "wednesday",
         "division": "A",
         "round": 10,
         "date": "2027-01-13",
         "time": "20:20",
         "court": 2,
-        "homeTeam": "wed-xaywan",
-        "awayTeam": "wed-king-adl",
+        "homeTeam": "wed-ibiza",
+        "awayTeam": "wed-misfits",
         "status": "scheduled"
       },
       {
@@ -3666,15 +3666,15 @@
         "status": "scheduled"
       },
       {
-        "id": "cfca92d9-beb0-4986-9ca3-24c0de8ccb78",
+        "id": "fd77a8cc-b1cf-49ed-b43e-2aa45be9c308",
         "night": "wednesday",
         "division": "A",
         "round": 10,
         "date": "2027-01-13",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "wed-ibiza",
-        "awayTeam": "wed-misfits",
+        "homeTeam": "wed-xaywan",
+        "awayTeam": "wed-king-adl",
         "status": "scheduled"
       },
       {
@@ -5346,15 +5346,15 @@
         "status": "scheduled"
       },
       {
-        "id": "98dbc672-3967-480c-95bc-8f90f7f1dbdb",
+        "id": "5c84aa02-d325-4d75-b02c-1b9a33943cf6",
         "night": "wednesday",
         "division": "A",
         "round": 28,
         "date": "2027-05-19",
         "time": "19:40",
         "court": 2,
-        "homeTeam": "wed-ibiza",
-        "awayTeam": "wed-goldlink-up",
+        "homeTeam": "wed-misfits",
+        "awayTeam": "wed-rinnai",
         "status": "scheduled"
       },
       {
@@ -5382,15 +5382,15 @@
         "status": "scheduled"
       },
       {
-        "id": "5c84aa02-d325-4d75-b02c-1b9a33943cf6",
+        "id": "98dbc672-3967-480c-95bc-8f90f7f1dbdb",
         "night": "wednesday",
         "division": "A",
         "round": 28,
         "date": "2027-05-19",
         "time": "21:00",
         "court": 1,
-        "homeTeam": "wed-misfits",
-        "awayTeam": "wed-rinnai",
+        "homeTeam": "wed-ibiza",
+        "awayTeam": "wed-goldlink-up",
         "status": "scheduled"
       },
       {

@@ -1,0 +1,119 @@
+{
+  "applied": true,
+  "rule": {
+    "nights": [
+      "monday",
+      "wednesday"
+    ],
+    "allowedGeneralTimes": [
+      "19:00",
+      "19:40",
+      "20:20"
+    ],
+    "hardNo21": true,
+    "effectiveFrom": "2026-11-19",
+    "protectedPlayingDate": "2026-11-18",
+    "exception": {
+      "night": "wednesday",
+      "opponent": "Umoja Stars",
+      "time": "21:00"
+    }
+  },
+  "unchangedFutureExceptionDate": "2027-03-03",
+  "proposedSwaps": [
+    {
+      "date": "2027-03-01",
+      "night": "monday",
+      "misfitsFixtureId": "da5c990a-28e8-5395-a888-816ed5ab459c",
+      "misfitsGame": "Misfits vs Nasaji FC",
+      "misfitsBefore": {
+        "time": "21:00",
+        "court": 2
+      },
+      "misfitsAfter": {
+        "time": "19:40",
+        "court": 2
+      },
+      "otherFixtureId": "fbec2d26-3007-4521-aa4e-e461fd5b1832",
+      "otherGame": "Wildcats vs King ADL"
+    },
+    {
+      "date": "2027-04-19",
+      "night": "monday",
+      "misfitsFixtureId": "ed449f46-1446-4fa4-8a55-cab5431075e6",
+      "misfitsGame": "Misfits vs Jaghori FC",
+      "misfitsBefore": {
+        "time": "21:00",
+        "court": 1
+      },
+      "misfitsAfter": {
+        "time": "19:40",
+        "court": 1
+      },
+      "otherFixtureId": "bdd6ec98-bf6f-4dc1-ac7d-b1e1d1991d9d",
+      "otherGame": "Nasaji FC vs Blue Dragons"
+    },
+    {
+      "date": "2027-05-10",
+      "night": "monday",
+      "misfitsFixtureId": "d8aa201e-3fb9-4baa-962d-651db2094c10",
+      "misfitsGame": "Wildcats vs Misfits",
+      "misfitsBefore": {
+        "time": "21:00",
+        "court": 2
+      },
+      "misfitsAfter": {
+        "time": "19:40",
+        "court": 1
+      },
+      "otherFixtureId": "7a9cdfa6-77cb-4aae-91de-0e0408f32d23",
+      "otherGame": "Blue Dragons vs Xaywan"
+    },
+    {
+      "date": "2027-01-13",
+      "night": "wednesday",
+      "misfitsFixtureId": "cfca92d9-beb0-4986-9ca3-24c0de8ccb78",
+      "misfitsGame": "Ibiza vs Misfits",
+      "misfitsBefore": {
+        "time": "21:00",
+        "court": 2
+      },
+      "misfitsAfter": {
+        "time": "20:20",
+        "court": 2
+      },
+      "otherFixtureId": "fd77a8cc-b1cf-49ed-b43e-2aa45be9c308",
+      "otherGame": "Xaywan vs King ADL"
+    },
+    {
+      "date": "2027-05-19",
+      "night": "wednesday",
+      "misfitsFixtureId": "5c84aa02-d325-4d75-b02c-1b9a33943cf6",
+      "misfitsGame": "Misfits vs Rinnai",
+      "misfitsBefore": {
+        "time": "21:00",
+        "court": 1
+      },
+      "misfitsAfter": {
+        "time": "19:40",
+        "court": 2
+      },
+      "otherFixtureId": "98dbc672-3967-480c-95bc-8f90f7f1dbdb",
+      "otherGame": "Ibiza vs Goldlink Up"
+    }
+  ],
+  "changedFixtureRows": 10,
+  "unchanged": [
+    "opponents",
+    "dates",
+    "rounds",
+    "home/away",
+    "all results and standings",
+    "team identities/kits",
+    "all other profiles/preferences"
+  ],
+  "databaseLimit": "Allowed-time rows are general; the Umoja exception is explicit in private notes and independently checked in the schedule. Existing generic required-time validation may warn on this intentional exception.",
+  "transactionId": 1813,
+  "organiserInstruction": "Keep all 18 November fixtures unchanged; future fixtures may change.",
+  "verification": "Exact revised transaction passed fresh disposable PostgreSQL rollback/retry tests; anonymous 427-fixture/64-result readback confirms all eight protected-night fixtures unchanged, ten future slot changes and two profile versions; effective-date notes and six required-time rows read back; application standings/results, snapshot checks and build passed."
+}
