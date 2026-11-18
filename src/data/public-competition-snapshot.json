@@ -3015,7 +3015,9 @@
         "court": 1,
         "homeTeam": "wed-dream-team",
         "awayTeam": "wed-hazara-united",
-        "status": "scheduled"
+        "homeScore": 4,
+        "awayScore": 6,
+        "status": "completed"
       },
       {
         "id": "81114ca1-4f2c-4e0e-8173-8d21ad48bcc1",
@@ -3027,7 +3029,9 @@
         "court": 2,
         "homeTeam": "wed-pops",
         "awayTeam": "wed-buckle-city",
-        "status": "scheduled"
+        "homeScore": 9,
+        "awayScore": 2,
+        "status": "completed"
       },
       {
         "id": "cc5fe049-d2a1-4ebb-9878-d31da27e1116",
@@ -3039,7 +3043,9 @@
         "court": 1,
         "homeTeam": "wed-ibiza",
         "awayTeam": "wed-mts-fc",
-        "status": "scheduled"
+        "homeScore": 11,
+        "awayScore": 2,
+        "status": "completed"
       },
       {
         "id": "de483476-c861-460f-bc37-83ae570f9f7c",
@@ -3051,7 +3057,10 @@
         "court": 2,
         "homeTeam": "wed-afg",
         "awayTeam": "wed-xaywan",
-        "status": "scheduled"
+        "homeScore": 0,
+        "awayScore": 5,
+        "note": "Forfeit: home team.",
+        "status": "completed"
       },
       {
         "id": "863de226-72b1-40ec-ac5c-ed24283b3b97",
@@ -3063,7 +3072,9 @@
         "court": 1,
         "homeTeam": "wed-rinnai",
         "awayTeam": "wed-ghazni-united",
-        "status": "scheduled"
+        "homeScore": 2,
+        "awayScore": 10,
+        "status": "completed"
       },
       {
         "id": "645f5ed4-3e62-44b9-afc9-e8db4bb80ed1",
@@ -3075,7 +3086,9 @@
         "court": 2,
         "homeTeam": "wed-kuq-e-zi",
         "awayTeam": "wed-goldlink-up",
-        "status": "scheduled"
+        "homeScore": 6,
+        "awayScore": 7,
+        "status": "completed"
       },
       {
         "id": "8d2401a8-c90d-48bd-be7f-8d7cee019e16",
@@ -3087,7 +3100,9 @@
         "court": 1,
         "homeTeam": "wed-king-adl",
         "awayTeam": "wed-umoja-stars",
-        "status": "scheduled"
+        "homeScore": 0,
+        "awayScore": 5,
+        "status": "completed"
       },
       {
         "id": "d63c58b8-9de9-4c6c-b7bd-ef11be4591cb",
@@ -3099,7 +3114,9 @@
         "court": 2,
         "homeTeam": "wed-misfits",
         "awayTeam": "wed-wildcats",
-        "status": "scheduled"
+        "homeScore": 7,
+        "awayScore": 11,
+        "status": "completed"
       },
       {
         "id": "2f52f0d1-5d14-462e-a8f3-99639d8a8271",
