@@ -1,0 +1,86 @@
+{
+  "changedFixtures": 8,
+  "changedPairings": 8,
+  "rounds": [
+    5,
+    6,
+    27,
+    30
+  ],
+  "maxHomeAwayStreak": 4,
+  "matches": 240,
+  "teams": 16,
+  "matchesPerTeam": 30,
+  "meetingsPerPair": 2,
+  "resultsPreserved": 32,
+  "changes": [
+    {
+      "id": "d85f40cb-4e60-459e-a171-d506e816c855",
+      "date": "2026-11-25",
+      "time": "20:20",
+      "court": 1,
+      "before": "Buckle City vs Rinnai",
+      "after": "MTS FC vs Rinnai"
+    },
+    {
+      "id": "27291b93-73d1-4d3e-9195-7753f46fded3",
+      "date": "2026-11-25",
+      "time": "20:20",
+      "court": 2,
+      "before": "MTS FC vs King ADL",
+      "after": "Buckle City vs King ADL"
+    },
+    {
+      "id": "c6df7106-577d-4825-8399-0c44efda06f2",
+      "date": "2026-12-02",
+      "time": "19:00",
+      "court": 1,
+      "before": "MTS FC vs Pops",
+      "after": "Kawsar FC vs Pops"
+    },
+    {
+      "id": "d453af80-e152-4731-b91e-998a9efc71e9",
+      "date": "2026-12-02",
+      "time": "19:40",
+      "court": 2,
+      "before": "Kawsar FC vs King ADL",
+      "after": "MTS FC vs King ADL"
+    },
+    {
+      "id": "30dd8b38-9873-4b96-8a35-b69fc81e8251",
+      "date": "2027-05-12",
+      "time": "20:20",
+      "court": 1,
+      "before": "Buckle City vs King ADL",
+      "after": "Buckle City vs Rinnai"
+    },
+    {
+      "id": "270ca79c-c5a4-4526-b70e-df79b25d243f",
+      "date": "2027-05-12",
+      "time": "21:00",
+      "court": 2,
+      "before": "Rinnai vs Kawsar FC",
+      "after": "Kawsar FC vs King ADL"
+    },
+    {
+      "id": "cccf48d2-8945-4b06-ba18-daf00ec94f8a",
+      "date": "2027-06-02",
+      "time": "19:40",
+      "court": 1,
+      "before": "Kawsar FC vs Pops",
+      "after": "MTS FC vs Pops"
+    },
+    {
+      "id": "7391bf77-e2e0-4414-a253-868f378aee31",
+      "date": "2027-06-02",
+      "time": "21:00",
+      "court": 1,
+      "before": "MTS FC vs Rinnai",
+      "after": "Rinnai vs Kawsar FC"
+    }
+  ],
+  "applied": true,
+  "scope": "Only MTS FC/Buckle City swap on 25 November; Goldlink Up/AFG unchanged. Six future pairing repairs preserve every pair twice.",
+  "transactionId": 1844,
+  "verification": "Anonymous full readback matches all eight fixture changes; all 79 results, Monday and team profiles unchanged. Snapshot validation/check passed."
+}

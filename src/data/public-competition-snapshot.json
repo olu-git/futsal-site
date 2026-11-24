@@ -3188,7 +3188,7 @@
         "date": "2026-11-25",
         "time": "20:20",
         "court": 1,
-        "homeTeam": "wed-buckle-city",
+        "homeTeam": "wed-mts-fc",
         "awayTeam": "wed-rinnai",
         "status": "scheduled"
       },
@@ -3200,7 +3200,7 @@
         "date": "2026-11-25",
         "time": "20:20",
         "court": 2,
-        "homeTeam": "wed-mts-fc",
+        "homeTeam": "wed-buckle-city",
         "awayTeam": "wed-king-adl",
         "status": "scheduled"
       },
@@ -3236,7 +3236,7 @@
         "date": "2026-12-02",
         "time": "19:00",
         "court": 1,
-        "homeTeam": "wed-mts-fc",
+        "homeTeam": "wed-hazara-united",
         "awayTeam": "wed-pops",
         "status": "scheduled"
       },
@@ -3272,7 +3272,7 @@
         "date": "2026-12-02",
         "time": "19:40",
         "court": 2,
-        "homeTeam": "wed-hazara-united",
+        "homeTeam": "wed-mts-fc",
         "awayTeam": "wed-king-adl",
         "status": "scheduled"
       },
@@ -5301,7 +5301,7 @@
         "time": "20:20",
         "court": 1,
         "homeTeam": "wed-buckle-city",
-        "awayTeam": "wed-king-adl",
+        "awayTeam": "wed-rinnai",
         "status": "scheduled"
       },
       {
@@ -5336,8 +5336,8 @@
         "date": "2027-05-12",
         "time": "21:00",
         "court": 2,
-        "homeTeam": "wed-rinnai",
-        "awayTeam": "wed-hazara-united",
+        "homeTeam": "wed-hazara-united",
+        "awayTeam": "wed-king-adl",
         "status": "scheduled"
       },
       {
@@ -5564,7 +5564,7 @@
         "date": "2027-06-02",
         "time": "19:40",
         "court": 1,
-        "homeTeam": "wed-hazara-united",
+        "homeTeam": "wed-mts-fc",
         "awayTeam": "wed-pops",
         "status": "scheduled"
       },
@@ -5612,8 +5612,8 @@
         "date": "2027-06-02",
         "time": "21:00",
         "court": 1,
-        "homeTeam": "wed-mts-fc",
-        "awayTeam": "wed-rinnai",
+        "homeTeam": "wed-rinnai",
+        "awayTeam": "wed-hazara-united",
         "status": "scheduled"
       },
       {
