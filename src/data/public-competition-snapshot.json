@@ -914,7 +914,9 @@
         "court": 1,
         "homeTeam": "mon-black-magic",
         "awayTeam": "mon-wildcats",
-        "status": "scheduled"
+        "homeScore": 2,
+        "awayScore": 7,
+        "status": "completed"
       },
       {
         "id": "c8144a73-e440-41f1-bb00-5b2d0137223a",
@@ -926,7 +928,9 @@
         "court": 2,
         "homeTeam": "mon-xaywan",
         "awayTeam": "mon-kroos-kontrol",
-        "status": "scheduled"
+        "homeScore": 3,
+        "awayScore": 5,
+        "status": "completed"
       },
       {
         "id": "21057a98-6243-4d69-98ef-5fe1e0ed3629",
@@ -938,7 +942,9 @@
         "court": 1,
         "homeTeam": "mon-ghazni-united",
         "awayTeam": "mon-goldlink-up",
-        "status": "scheduled"
+        "homeScore": 7,
+        "awayScore": 7,
+        "status": "completed"
       },
       {
         "id": "14305e6c-3fa6-496c-8f2d-f3854ddafd8a",
@@ -950,7 +956,9 @@
         "court": 2,
         "homeTeam": "mon-salvos",
         "awayTeam": "mon-nassaji-fc",
-        "status": "scheduled"
+        "homeScore": 2,
+        "awayScore": 9,
+        "status": "completed"
       },
       {
         "id": "2716bf44-3cfa-4852-9a6c-0b02c7024703",
@@ -962,7 +970,9 @@
         "court": 1,
         "homeTeam": "mon-blue-dragons",
         "awayTeam": "mon-king-adl",
-        "status": "scheduled"
+        "homeScore": 5,
+        "awayScore": 8,
+        "status": "completed"
       },
       {
         "id": "987aa348-147b-4ee8-987c-35d4cb6f7349",
@@ -974,7 +984,9 @@
         "court": 2,
         "homeTeam": "mon-afg",
         "awayTeam": "mon-misfits",
-        "status": "scheduled"
+        "homeScore": 5,
+        "awayScore": 6,
+        "status": "completed"
       },
       {
         "id": "f8dbddd5-7fdb-401d-9de8-1aeff5e16889",
@@ -986,7 +998,9 @@
         "court": 2,
         "homeTeam": "mon-jaghori-fc",
         "awayTeam": "mon-hakims-team",
-        "status": "scheduled"
+        "homeScore": 4,
+        "awayScore": 3,
+        "status": "completed"
       },
       {
         "id": "8e7933e6-f8fe-4beb-8f19-cefaac3a1dec",
