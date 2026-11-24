@@ -3181,39 +3181,27 @@
         "status": "scheduled"
       },
       {
-        "id": "d85f40cb-4e60-459e-a171-d506e816c855",
-        "night": "wednesday",
-        "division": "A",
-        "round": 5,
-        "date": "2026-11-25",
-        "time": "20:20",
-        "court": 1,
-        "homeTeam": "wed-mts-fc",
-        "awayTeam": "wed-rinnai",
-        "status": "scheduled"
-      },
-      {
         "id": "27291b93-73d1-4d3e-9195-7753f46fded3",
         "night": "wednesday",
         "division": "A",
         "round": 5,
         "date": "2026-11-25",
         "time": "20:20",
-        "court": 2,
+        "court": 1,
         "homeTeam": "wed-buckle-city",
         "awayTeam": "wed-king-adl",
         "status": "scheduled"
       },
       {
-        "id": "dfeb5483-0ccc-47dc-8270-0c42aa51d172",
+        "id": "d85f40cb-4e60-459e-a171-d506e816c855",
         "night": "wednesday",
         "division": "A",
         "round": 5,
         "date": "2026-11-25",
-        "time": "21:00",
-        "court": 1,
-        "homeTeam": "wed-afg",
-        "awayTeam": "wed-umoja-stars",
+        "time": "20:20",
+        "court": 2,
+        "homeTeam": "wed-mts-fc",
+        "awayTeam": "wed-rinnai",
         "status": "scheduled"
       },
       {
@@ -3223,9 +3211,21 @@
         "round": 5,
         "date": "2026-11-25",
         "time": "21:00",
-        "court": 2,
+        "court": 1,
         "homeTeam": "wed-xaywan",
         "awayTeam": "wed-goldlink-up",
+        "status": "scheduled"
+      },
+      {
+        "id": "dfeb5483-0ccc-47dc-8270-0c42aa51d172",
+        "night": "wednesday",
+        "division": "A",
+        "round": 5,
+        "date": "2026-11-25",
+        "time": "21:00",
+        "court": 2,
+        "homeTeam": "wed-afg",
+        "awayTeam": "wed-umoja-stars",
         "status": "scheduled"
       },
       {
